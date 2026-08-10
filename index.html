@@ -170,6 +170,11 @@
 
     /* ─── PROJECTS ─── */
     .proj-rows { display: flex; flex-direction: column; gap: 2px; }
+    .proj-group-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; padding: 28px 36px 14px; margin-top: 38px; border-bottom: 1px solid var(--border); }
+    .proj-group-head:first-child { margin-top: 0; padding-top: 4px; }
+    .proj-group-title { font-family: 'Newsreader', 'Noto Serif SC', serif; font-size: 1.55rem; font-weight: 400; color: var(--text); letter-spacing: -0.01em; }
+    .proj-group-title em { color: var(--gold); font-style: italic; }
+    .proj-group-desc { max-width: 420px; color: var(--muted); font-size: 0.72rem; line-height: 1.65; text-align: right; }
     .proj-row { display: grid; grid-template-columns: 56px 1fr auto; align-items: start; gap: 28px; padding: 32px 36px; background: var(--card); border-left: 2px solid transparent; transition: border-color 0.3s, background 0.3s, padding-left 0.3s; position: relative; overflow: hidden; }
     .proj-row::before { content: ''; position: absolute; inset: 0; background: radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(201,168,108,0.04), transparent 70%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
     .proj-row:hover { background: #232219; border-left-color: var(--gold); padding-left: 40px; }
@@ -178,6 +183,11 @@
     .proj-body { min-width: 0; }
     .proj-cat { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
     .proj-name { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.2; }
+    .proj-name-row { display: flex; align-items: center; gap: 13px; margin-bottom: 10px; }
+    .proj-name-row .proj-name { margin-bottom: 0; }
+    .proj-logo { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; flex: 0 0 auto; position: relative; overflow: hidden; isolation: isolate; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 20px rgba(0,0,0,0.16); }
+    .proj-logo--app { background: #fff; }
+    .proj-logo--app img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); }
     .proj-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.75; margin-bottom: 12px; max-width: 580px; }
     .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; }
     .proj-tag { padding: 3px 9px; border: 1px solid var(--border); border-radius: 20px; font-size: 0.63rem; color: var(--muted); letter-spacing: 0.03em; }
@@ -438,11 +448,18 @@
       .rec-btn { font-size: 0.7rem; padding: 5px 12px; }
 
       /* ── Projects ── */
+      .proj-group-head { align-items: flex-start; flex-direction: column; gap: 6px; padding: 24px 20px 12px; margin-top: 26px; }
+      .proj-group-head:first-child { padding-top: 0; }
+      .proj-group-title { font-size: 1.3rem; }
+      .proj-group-desc { font-size: 0.68rem; text-align: left; }
       .proj-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 20px; }
       .proj-row:hover { padding-left: 20px; }
       .proj-num { display: none; }
       .proj-cat { font-size: 0.56rem; letter-spacing: 0.2em; }
       .proj-name { font-size: 1.25rem; margin-bottom: 6px; }
+      .proj-name-row { gap: 11px; margin-bottom: 8px; }
+      .proj-name-row .proj-name { margin-bottom: 0; }
+      .proj-logo { width: 46px; height: 46px; border-radius: 12px; }
       .proj-desc { font-size: 0.8rem; line-height: 1.7; margin-bottom: 10px; }
       .proj-tags { gap: 4px; }
       .proj-tag { font-size: 0.58rem; padding: 2px 7px; }
@@ -680,11 +697,11 @@
       <span data-lang="en" class="show">Master's student at SWUFE & Paris 1 Panthéon-Sorbonne. I navigate language, business, tech, and law — wherever the world needs a bridge built.</span>
       <span data-lang="fr">Étudiant en master à SWUFE et en échange à Paris 1 Panthéon-Sorbonne. Droit, commerce, tech, langues — je construis des ponts là où le monde en a besoin.</span>
       <span data-lang="es">Estudiante de máster en SWUFE y en intercambio en París 1 Panthéon-Sorbona. Derecho, negocios, tecnología e idiomas — construyo puentes donde el mundo los necesita.</span>
-      <span data-lang="zh">西南财经大学国际商务硕士，曾赴巴黎第一大学学习国际法。我穿梭于语言、商业、科技与法律之间，在不同世界之间搭建连接。</span>
+      <span data-lang="zh">在成都学国际商务，在巴黎读国际法，如今在深圳做云与商业。我喜欢进入陌生领域，也擅长把不同语言、技术和人连接起来。</span>
     </p>
     <div class="hero-actions">
       <a href="#about" class="btn-primary">
-        <span data-lang="en" class="show">View Profile</span><span data-lang="fr">Voir le profil</span><span data-lang="es">Ver perfil</span><span data-lang="zh">了解更多</span>
+        <span data-lang="en" class="show">View Profile</span><span data-lang="fr">Voir le profil</span><span data-lang="es">Ver perfil</span><span data-lang="zh">往下看看</span>
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <div class="hero-socials">
@@ -717,7 +734,7 @@
 <!-- ABOUT -->
 <section id="about" class="s">
   <div class="s-label reveal"><span data-lang="en" class="show">About Me</span><span data-lang="fr">À propos</span><span data-lang="es">Sobre mí</span><span data-lang="zh">关于我</span></div>
-  <h2 class="s-title reveal"><span data-lang="en" class="show">Three words.<br><em>One direction.</em></span><span data-lang="fr">Trois mots.<br><em>Une direction.</em></span><span data-lang="es">Tres palabras.<br><em>Una dirección.</em></span><span data-lang="zh">三个关键词。<br><em>同一个方向。</em></span></h2>
+  <h2 class="s-title reveal"><span data-lang="en" class="show">Three words.<br><em>One direction.</em></span><span data-lang="fr">Trois mots.<br><em>Une direction.</em></span><span data-lang="es">Tres palabras.<br><em>Una dirección.</em></span><span data-lang="zh">路走得很宽，<br><em>方向一直很清楚。</em></span></h2>
   <div class="about-grid">
     <div class="about-text reveal">
       <div data-lang="en" class="show">
@@ -733,8 +750,8 @@
         <p>He trabajado en una startup finlandesa de TIC, ventas de exportación, diplomacia cultural en Chengdu y captación de talento para IA en <strong>ByteDance</strong> — siempre en el idioma que el momento exigía.</p>
       </div>
       <div data-lang="zh">
-        <p>我是 Jack——<strong>跨语言、跨学科、跨行业</strong>。本科就读于浙江工商大学法语与跨境电子商务双专业，随后在西南财经大学攻读国际商务硕士，并赴巴黎第一大学系统学习国际法与欧洲法。</p>
-        <p>中文母语，英语和法语流利，也在持续学习西班牙语。我曾参与芬兰科技企业在华发展、法语区出口业务、中法文化交流，以及字节跳动与 TikTok 的全球 AI 人才招聘；如今在腾讯云连接技术、产品与商业。面对新的行业与语境，我擅长快速理解、建立连接并推动结果落地。</p>
+        <p>我是 Jack。<strong>语言是我的入口，商业是我的底盘，技术和法律让我看问题更立体。</strong>本科在杭州读法语和跨境电商，后来去成都学国际商务，也在巴黎第一大学泡过一整年的国际法。</p>
+        <p>我做过芬兰科技企业出海、法国客户销售、中法文化项目，也为字节跳动寻找全球 AI 人才。现在看起来跨度很大，其实一直在做同一件事：快速进入一个陌生世界，找到关键的人和问题，然后把事情往前推。</p>
       </div>
       <div class="lang-pills">
         <span class="lang-pill">🇨🇳 Native</span>
@@ -746,22 +763,22 @@
     <div class="stats-grid reveal" style="transition-delay:0.15s">
       <div class="stat-box">
         <div class="stat-num">3</div>
-        <div class="stat-desc"><span data-lang="en" class="show">Degrees across 3 universities</span><span data-lang="fr">Diplômes dans 3 universités</span><span data-lang="es">Títulos en 3 universidades</span><span data-lang="zh">求学于 3 所大学</span></div>
+        <div class="stat-desc"><span data-lang="en" class="show">Degrees across 3 universities</span><span data-lang="fr">Diplômes dans 3 universités</span><span data-lang="es">Títulos en 3 universidades</span><span data-lang="zh">3 所大学，3 种视角</span></div>
         <div class="stat-icons"><img src="images/paris1.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Paris 1"><img src="images/swufe.png" style="height:20px;object-fit:contain;opacity:0.75" alt="SWUFE"><img src="images/zjsu.png" style="height:20px;object-fit:contain;opacity:0.75" alt="ZJSU"></div>
       </div>
       <div class="stat-box">
         <div class="stat-num">6</div>
-        <div class="stat-desc"><span data-lang="en" class="show">Internships across 6 industries</span><span data-lang="fr">Stages dans 6 secteurs</span><span data-lang="es">Prácticas en 6 sectores</span><span data-lang="zh">6 段跨行业实习经历</span></div>
+        <div class="stat-desc"><span data-lang="en" class="show">Internships across 6 industries</span><span data-lang="fr">Stages dans 6 secteurs</span><span data-lang="es">Prácticas en 6 sectores</span><span data-lang="zh">在 6 个行业里做过事</span></div>
         <div class="stat-icons"><img src="images/bytedance.png" style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="ByteDance"><svg width="20" height="20" viewBox="0 0 32 32" style="border-radius:3px;flex-shrink:0;opacity:0.85"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg><img src="images/alliance.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Alliance"><img src="images/marketunion.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Market Union"><img src="images/mingle.png" style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="Mingle"></div>
       </div>
       <div class="stat-box">
         <div class="stat-num">4</div>
-        <div class="stat-desc"><span data-lang="en" class="show">Languages spoken</span><span data-lang="fr">Langues maîtrisées</span><span data-lang="es">Idiomas dominados</span><span data-lang="zh">掌握 4 种语言</span></div>
+        <div class="stat-desc"><span data-lang="en" class="show">Languages spoken</span><span data-lang="fr">Langues maîtrisées</span><span data-lang="es">Idiomas dominados</span><span data-lang="zh">用 4 种语言沟通</span></div>
         <div class="stat-icons" style="font-size:1.05rem;">🇨🇳 🇬🇧 🇫🇷 🇪🇸</div>
       </div>
       <div class="stat-box">
         <div class="stat-num">16</div>
-        <div class="stat-desc"><span data-lang="en" class="show">Countries visited</span><span data-lang="fr">Pays visités</span><span data-lang="es">Países visitados</span><span data-lang="zh">足迹遍布 16 个国家</span></div>
+        <div class="stat-desc"><span data-lang="en" class="show">Countries visited</span><span data-lang="fr">Pays visités</span><span data-lang="es">Países visitados</span><span data-lang="zh">脚步到过 16 个国家</span></div>
         <div class="stat-icons" style="font-size:0.9rem;">🇨🇳 🇫🇷 🇫🇮 🇩🇪 🇳🇱 🇧🇪 🇦🇹 🇨🇿 🇸🇰 🇭🇺 🇪🇸 🇮🇹 🇨🇭 🇳🇴 🇻🇦 🇱🇺</div>
       </div>
     </div>
@@ -771,8 +788,8 @@
 <!-- EDUCATION -->
 <div id="education" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div class="s-label reveal"><span data-lang="en" class="show">Education</span><span data-lang="fr">Formation</span><span data-lang="es">Formación</span><span data-lang="zh">教育背景</span></div>
-    <h2 class="s-title reveal"><span data-lang="en" class="show">Learning across<br><em>borders.</em></span><span data-lang="fr">Apprendre par-delà<br><em>les frontières.</em></span><span data-lang="es">Aprender sin<br><em>fronteras.</em></span><span data-lang="zh">跨越边界，<br><em>持续学习。</em></span></h2>
+    <div class="s-label reveal"><span data-lang="en" class="show">Education</span><span data-lang="fr">Formation</span><span data-lang="es">Formación</span><span data-lang="zh">学习经历</span></div>
+    <h2 class="s-title reveal"><span data-lang="en" class="show">Learning across<br><em>borders.</em></span><span data-lang="fr">Apprendre par-delà<br><em>les frontières.</em></span><span data-lang="es">Aprender sin<br><em>fronteras.</em></span><span data-lang="zh">课堂不止一种，<br><em>也不止一个国家。</em></span></h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
         <div class="edu-top">
@@ -808,8 +825,8 @@
 
 <!-- EXPERIENCE -->
 <section id="experience" class="s">
-  <div style="display:flex;align-items:center;justify-content:center;gap:16px;" class="reveal"><div class="s-label" style="margin-bottom:0"><span data-lang="en" class="show">Experience</span><span data-lang="fr">Expériences</span><span data-lang="es">Experiencia</span><span data-lang="zh">工作经历</span></div><a href="https://www.linkedin.com/in/Jack-zhujiake-career" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:20px;color:var(--muted);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></div>
-  <h2 class="s-title reveal"><span data-lang="en" class="show">Six industries.<br><em>One thread.</em></span><span data-lang="fr">Six secteurs.<br><em>Un fil conducteur.</em></span><span data-lang="es">Seis sectores.<br><em>Un mismo hilo.</em></span><span data-lang="zh">六个行业，<br><em>一条主线。</em></span></h2>
+  <div style="display:flex;align-items:center;justify-content:center;gap:16px;" class="reveal"><div class="s-label" style="margin-bottom:0"><span data-lang="en" class="show">Experience</span><span data-lang="fr">Expériences</span><span data-lang="es">Experiencia</span><span data-lang="zh">做过的事</span></div><a href="https://www.linkedin.com/in/Jack-zhujiake-career" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:20px;color:var(--muted);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></div>
+  <h2 class="s-title reveal"><span data-lang="en" class="show">Six industries.<br><em>One thread.</em></span><span data-lang="fr">Six secteurs.<br><em>Un fil conducteur.</em></span><span data-lang="es">Seis sectores.<br><em>Un mismo hilo.</em></span><span data-lang="zh">行业换了六次，<br><em>练的是同一种能力。</em></span></h2>
   <div class="timeline" id="timeline">
     <div class="tl-track"></div>
     <div class="tl-progress" id="tlProgress"></div>
@@ -821,15 +838,15 @@
           <span class="tl-logo tencent-logo-box" role="img" aria-label="Tencent"></span>
           <div>
             <div class="tl-company">Tencent Cloud</div>
-            <div class="tl-role"><span data-lang="en" class="show">Technical–Product–Business Trainee</span><span data-lang="fr">Trainee Technique–Produit–Business</span><span data-lang="es">Trainee Técnico–Producto–Negocio</span><span data-lang="zh">技术–产品–商务培训生</span></div>
+            <div class="tl-role"><span data-lang="en" class="show">Technical–Product–Business Trainee</span><span data-lang="fr">Trainee Technique–Produit–Business</span><span data-lang="es">Trainee Técnico–Producto–Negocio</span><span data-lang="zh">技术 · 产品 · 商务轮岗生</span></div>
           </div>
         </div>
         <div class="tl-period">2026.06 – Present · Shenzhen</div>
       </div>
       <ul class="tl-bullets">
-        <li><span data-lang="en" class="show">Rotate across technical, product, and business tracks to build full-stack fluency in enterprise cloud solution sales for media and broadcasting</span><span data-lang="fr">Rotation entre les fonctions techniques, produit et business pour maîtriser la vente de solutions cloud B2B destinées aux médias et à la diffusion</span><span data-lang="es">Rotación entre funciones técnicas, de producto y negocio para desarrollar una visión integral de la venta B2B de soluciones cloud para medios y radiodifusión</span><span data-lang="zh">在技术、产品与商务岗位间轮岗，系统理解面向传媒与广电行业的企业云解决方案销售</span></li>
-        <li><span data-lang="en" class="show">Work with direct enterprise clients across real-time communication, live streaming, video-on-demand, and media processing solutions</span><span data-lang="fr">Accompagnement de clients entreprises sur la communication en temps réel, le streaming, la vidéo à la demande et le traitement média</span><span data-lang="es">Trabajo con clientes empresariales en comunicación en tiempo real, streaming, vídeo bajo demanda y procesamiento multimedia</span><span data-lang="zh">服务企业直客，覆盖实时音视频、直播、点播及媒体处理等解决方案</span></li>
-        <li><span data-lang="en" class="show">Connect technical architecture, product positioning, and commercial strategy through structured rotations and mentor-guided projects</span><span data-lang="fr">Connexion entre architecture technique, positionnement produit et stratégie commerciale grâce à des rotations structurées et des projets mentorés</span><span data-lang="es">Conexión de arquitectura técnica, posicionamiento de producto y estrategia comercial mediante rotaciones estructuradas y proyectos con mentoría</span><span data-lang="zh">通过结构化轮岗与导师项目，打通技术架构、产品定位和商业策略</span></li>
+        <li><span data-lang="en" class="show">Rotate across technical, product, and business tracks to build full-stack fluency in enterprise cloud solution sales for media and broadcasting</span><span data-lang="fr">Rotation entre les fonctions techniques, produit et business pour maîtriser la vente de solutions cloud B2B destinées aux médias et à la diffusion</span><span data-lang="es">Rotación entre funciones técnicas, de producto y negocio para desarrollar una visión integral de la venta B2B de soluciones cloud para medios y radiodifusión</span><span data-lang="zh">在技术、产品和商务之间轮岗，补齐一套面向传媒与广电客户的云方案视角</span></li>
+        <li><span data-lang="en" class="show">Work with direct enterprise clients across real-time communication, live streaming, video-on-demand, and media processing solutions</span><span data-lang="fr">Accompagnement de clients entreprises sur la communication en temps réel, le streaming, la vidéo à la demande et le traitement média</span><span data-lang="es">Trabajo con clientes empresariales en comunicación en tiempo real, streaming, vídeo bajo demanda y procesamiento multimedia</span><span data-lang="zh">跟进实时音视频、直播、点播和媒体处理等场景，和企业客户一起把需求落到方案里</span></li>
+        <li><span data-lang="en" class="show">Connect technical architecture, product positioning, and commercial strategy through structured rotations and mentor-guided projects</span><span data-lang="fr">Connexion entre architecture technique, positionnement produit et stratégie commerciale grâce à des rotations structurées et des projets mentorés</span><span data-lang="es">Conexión de arquitectura técnica, posicionamiento de producto y estrategia comercial mediante rotaciones estructuradas y proyectos con mentoría</span><span data-lang="zh">一边学架构和产品，一边练定位与销售，试着把复杂技术讲成客户听得懂、也愿意买单的方案</span></li>
       </ul>
     </div>
 
@@ -843,14 +860,14 @@
         </div>
           <div>
             <div class="tl-company">ByteDance / TikTok</div>
-            <div class="tl-role"><span data-lang="en" class="show">Global Talent Acquisition</span><span data-lang="fr">Acquisition de Talents Internationaux</span><span data-lang="es">Atracción de Talento Global</span><span data-lang="zh">全球人才招聘</span></div>
+            <div class="tl-role"><span data-lang="en" class="show">Global Talent Acquisition</span><span data-lang="fr">Acquisition de Talents Internationaux</span><span data-lang="es">Atracción de Talento Global</span><span data-lang="zh">全球 AI 人才寻访</span></div>
           </div>
         </div>
         <div class="tl-period">2025.05 – 2025.08 · Chengdu / San Jose (Remote)</div>
       </div>
       <ul class="tl-bullets">
-        <li><span data-lang="en" class="show">Built an AI talent database covering 400+ professors, 900+ PhDs and 200+ Master's students for Seed AI Research Team</span><span data-lang="fr">Construit une base de données de talents IA de 400+ professeurs, 900+ doctorants et 200+ master pour l'équipe Seed AI Research</span><span data-lang="es">Construí una base de datos de talento IA con más de 400 profesores, 900 doctorandos y 200 másters para el equipo Seed AI Research</span><span data-lang="zh">为 Seed AI 研究团队搭建人才数据库，覆盖 400+ 教授、900+ 博士生及 200+ 硕士生</span></li>
-        <li><span data-lang="en" class="show">Supported TikTok LIVE talent sourcing across Germany, France and the UK; developed deep knowledge of European social media behavior</span><span data-lang="fr">Soutien au sourcing TikTok LIVE en Allemagne, France et Royaume-Uni ; connaissance approfondie des comportements européens sur les réseaux sociaux</span><span data-lang="es">Apoyé el sourcing de talento para TikTok LIVE en Alemania, Francia y Reino Unido; desarrollé conocimiento del comportamiento europeo en redes sociales</span><span data-lang="zh">支持 TikTok LIVE 在德国、法国和英国等市场的人才寻访，深入了解欧洲社交媒体生态</span></li>
+        <li><span data-lang="en" class="show">Built an AI talent database covering 400+ professors, 900+ PhDs and 200+ Master's students for Seed AI Research Team</span><span data-lang="fr">Construit une base de données de talents IA de 400+ professeurs, 900+ doctorants et 200+ master pour l'équipe Seed AI Research</span><span data-lang="es">Construí una base de datos de talento IA con más de 400 profesores, 900 doctorandos y 200 másters para el equipo Seed AI Research</span><span data-lang="zh">给 Seed AI 团队搭了一张全球人才地图：400+ 教授、900+ 博士和 200+ 硕士</span></li>
+        <li><span data-lang="en" class="show">Supported TikTok LIVE talent sourcing across Germany, France and the UK; developed deep knowledge of European social media behavior</span><span data-lang="fr">Soutien au sourcing TikTok LIVE en Allemagne, France et Royaume-Uni ; connaissance approfondie des comportements européens sur les réseaux sociaux</span><span data-lang="es">Apoyé el sourcing de talento para TikTok LIVE en Alemania, Francia y Reino Unido; desarrollé conocimiento del comportamiento europeo en redes sociales</span><span data-lang="zh">为 TikTok LIVE 在德国、法国和英国找人，也顺手摸清了欧洲用户怎么使用社交媒体</span></li>
       </ul>
       <button class="rec-btn" onclick="openModal('modal-bytedance-rec')">📄 <span data-lang="en" class="show">Recommendation Letter</span><span data-lang="fr">Lettre de recommandation</span><span data-lang="es">Carta de recomendación</span><span data-lang="zh">推荐信</span></button>
     </div>
@@ -862,14 +879,14 @@
           <img src="images/alliance.png" class="tl-logo" alt="Alliance Française">
           <div>
             <div class="tl-company">Alliance Française de Chengdu</div>
-            <div class="tl-role"><span data-lang="en" class="show">Sino-French Cultural Coordination</span><span data-lang="fr">Coordinateur culturel franco-chinois</span><span data-lang="es">Coordinador cultural sino-francés</span><span data-lang="zh">中法文化项目协调</span></div>
+            <div class="tl-role"><span data-lang="en" class="show">Sino-French Cultural Coordination</span><span data-lang="fr">Coordinateur culturel franco-chinois</span><span data-lang="es">Coordinador cultural sino-francés</span><span data-lang="zh">中法文化项目</span></div>
           </div>
         </div>
         <div class="tl-period">2024.09 – 2025.03 · Chengdu</div>
       </div>
       <ul class="tl-bullets">
-        <li><span data-lang="en" class="show">Planned and executed 5 Sino-French cultural exchange events, serving 800+ participants</span><span data-lang="fr">Planification et exécution de 5 événements d'échange culturel franco-chinois, avec 800+ participants</span><span data-lang="es">Planifiqué y ejecuté 5 eventos de intercambio cultural sino-francés con más de 800 participantes</span><span data-lang="zh">策划并落地 5 场中法文化交流活动，累计服务 800+ 参与者</span></li>
-        <li><span data-lang="en" class="show">Managed bilingual communications, customer relationships, and co-authored a Sino-French cultural handbook</span><span data-lang="fr">Gestion des communications bilingues, des relations clients et co-rédaction d'un manuel culturel franco-chinois</span><span data-lang="es">Gestioné comunicaciones bilingües, relaciones con clientes y co-redacté un manual cultural sino-francés</span><span data-lang="zh">负责双语沟通与客户关系维护，并参与编写中法文化手册</span></li>
+        <li><span data-lang="en" class="show">Planned and executed 5 Sino-French cultural exchange events, serving 800+ participants</span><span data-lang="fr">Planification et exécution de 5 événements d'échange culturel franco-chinois, avec 800+ participants</span><span data-lang="es">Planifiqué y ejecuté 5 eventos de intercambio cultural sino-francés con más de 800 participantes</span><span data-lang="zh">从策划到落地做了 5 场中法文化活动，来了 800 多位参与者</span></li>
+        <li><span data-lang="en" class="show">Managed bilingual communications, customer relationships, and co-authored a Sino-French cultural handbook</span><span data-lang="fr">Gestion des communications bilingues, des relations clients et co-rédaction d'un manuel culturel franco-chinois</span><span data-lang="es">Gestioné comunicaciones bilingües, relaciones con clientes y co-redacté un manual cultural sino-francés</span><span data-lang="zh">用中法双语和学员、合作方打交道，也一起写了一本中法文化手册</span></li>
       </ul>
       <button class="rec-btn" onclick="openModal('modal-alliance-rec')">📄 <span data-lang="en" class="show">Recommendation Letters</span><span data-lang="fr">Lettres de recommandation</span><span data-lang="es">Cartas de recomendación</span><span data-lang="zh">推荐信</span></button>
     </div>
@@ -887,8 +904,8 @@
         <div class="tl-period">2024.09 – 2025.03 · Ningbo</div>
       </div>
       <ul class="tl-bullets">
-        <li><span data-lang="en" class="show">Built long-term partnerships with 5+ French clients, facilitating over $1M in orders</span><span data-lang="fr">Développement de partenariats durables avec 5+ clients français, facilitant plus d'1 M$ de commandes</span><span data-lang="es">Desarrollé alianzas con más de 5 clientes franceses, facilitando pedidos por más de 1 millón de dólares</span><span data-lang="zh">与 5+ 法国客户建立长期合作，推动订单金额超过 100 万美元</span></li>
-        <li><span data-lang="en" class="show">Sourced and evaluated suppliers via 1688 and ERP systems; coordinated factory visits in Yiwu and Cixi</span><span data-lang="fr">Sourcing et évaluation de fournisseurs via 1688 et ERP ; coordination de visites d'usines à Yiwu et Cixi</span><span data-lang="es">Seleccioné y evalué proveedores con 1688 y ERP; coordiné visitas a fábricas en Yiwu y Cixi</span><span data-lang="zh">通过 1688 与 ERP 系统开发和评估供应商，并协调义乌、慈溪工厂考察</span></li>
+        <li><span data-lang="en" class="show">Built long-term partnerships with 5+ French clients, facilitating over $1M in orders</span><span data-lang="fr">Développement de partenariats durables avec 5+ clients français, facilitant plus d'1 M$ de commandes</span><span data-lang="es">Desarrollé alianzas con más de 5 clientes franceses, facilitando pedidos por más de 1 millón de dólares</span><span data-lang="zh">把 5+ 法国客户做成长线合作，累计推动超过 100 万美元的订单</span></li>
+        <li><span data-lang="en" class="show">Sourced and evaluated suppliers via 1688 and ERP systems; coordinated factory visits in Yiwu and Cixi</span><span data-lang="fr">Sourcing et évaluation de fournisseurs via 1688 et ERP ; coordination de visites d'usines à Yiwu et Cixi</span><span data-lang="es">Seleccioné y evalué proveedores con 1688 y ERP; coordiné visitas a fábricas en Yiwu y Cixi</span><span data-lang="zh">在 1688 和 ERP 里找供应商、比产品，也陪客户跑过义乌和慈溪的工厂</span></li>
       </ul>
     </div>
 
@@ -905,8 +922,8 @@
         <div class="tl-period">2023.11 – 2024.03 · Hangzhou</div>
       </div>
       <ul class="tl-bullets">
-        <li><span data-lang="en" class="show">Represented Business Finland; helped 8 Finnish ICT companies enter the Chinese market</span><span data-lang="fr">Représentation de Business Finland ; aide à l'entrée de 8 entreprises finlandaises ICT sur le marché chinois</span><span data-lang="es">Representé a Business Finland; ayudé a 8 empresas finlandesas de TIC a entrar al mercado chino</span><span data-lang="zh">代表芬兰国家商务促进局项目，协助 8 家芬兰 ICT 企业进入中国市场</span></li>
-        <li><span data-lang="en" class="show">Built and maintained EN/ZH/FI stakeholder communication across 3 time zones simultaneously</span><span data-lang="fr">Construction et maintien de la communication EN/ZH/FI entre parties prenantes dans 3 fuseaux horaires</span><span data-lang="es">Creación y mantenimiento de comunicación EN/ZH/FI entre partes interesadas en 3 zonas horarias</span><span data-lang="zh">同时协调三个时区的中、英、芬多方沟通</span></li>
+        <li><span data-lang="en" class="show">Represented Business Finland; helped 8 Finnish ICT companies enter the Chinese market</span><span data-lang="fr">Représentation de Business Finland ; aide à l'entrée de 8 entreprises finlandaises ICT sur le marché chinois</span><span data-lang="es">Representé a Business Finland; ayudé a 8 empresas finlandesas de TIC a entrar al mercado chino</span><span data-lang="zh">陪 8 家芬兰 ICT 公司进入中国市场，从找方向到对接资源一路跟进</span></li>
+        <li><span data-lang="en" class="show">Built and maintained EN/ZH/FI stakeholder communication across 3 time zones simultaneously</span><span data-lang="fr">Construction et maintien de la communication EN/ZH/FI entre parties prenantes dans 3 fuseaux horaires</span><span data-lang="es">Creación y mantenimiento de comunicación EN/ZH/FI entre partes interesadas en 3 zonas horarias</span><span data-lang="zh">横跨 3 个时区，用中、英、芬三种语言把人和事接起来</span></li>
       </ul>
     </div>
   </div>
@@ -915,85 +932,95 @@
 <!-- PROJECTS -->
 <div id="projects" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div class="s-label reveal"><span data-lang="en" class="show">AI Portfolio</span><span data-lang="fr">Projets IA</span><span data-lang="es">Proyectos IA</span><span data-lang="zh">AI 作品集</span></div>
-    <h2 class="s-title reveal"><span data-lang="en" class="show">Building with AI,<br><em>not just using it.</em></span><span data-lang="fr">Construire avec l'IA,<br><em>pas seulement l'utiliser.</em></span><span data-lang="es">Construir con IA,<br><em>no solo usarla.</em></span><span data-lang="zh">用 AI 创造，<br><em>不只是使用。</em></span></h2>
+    <div class="s-label reveal"><span data-lang="en" class="show">AI Portfolio</span><span data-lang="fr">Projets IA</span><span data-lang="es">Proyectos IA</span><span data-lang="zh">AI 作品</span></div>
+    <h2 class="s-title reveal"><span data-lang="en" class="show">Building with AI,<br><em>not just using it.</em></span><span data-lang="fr">Construire avec l'IA,<br><em>pas seulement l'utiliser.</em></span><span data-lang="es">Construir con IA,<br><em>no solo usarla.</em></span><span data-lang="zh">我不只用 AI，<br><em>也把它做成真正能用的东西。</em></span></h2>
     <div class="proj-rows">
+
+      <div class="proj-group-head reveal">
+        <div class="proj-group-title"><span data-lang="en" class="show">AI <em>Products</em></span><span data-lang="fr">Produits <em>IA</em></span><span data-lang="es">Productos de <em>IA</em></span><span data-lang="zh">可直接体验的 <em>AI 产品</em></span></div>
+        <div class="proj-group-desc"><span data-lang="en" class="show">Complete web apps built around real use cases.</span><span data-lang="fr">Des applications web complètes conçues pour des usages réels.</span><span data-lang="es">Aplicaciones web completas creadas para casos de uso reales.</span><span data-lang="zh">从真实场景出发，做成能打开、能使用的完整应用。</span></div>
+      </div>
 
       <div class="proj-row reveal spotlight-card">
         <div class="proj-num">01</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">AI Sales · Customer Workflow</span><span data-lang="fr">Vente IA · Suivi Client</span><span data-lang="es">Ventas IA · Gestión de Clientes</span><span data-lang="zh">AI 销售 · 客户推进工作流</span></div>
-          <div class="proj-name">Sales Buddy</div>
-          <p class="proj-desc"><span data-lang="en" class="show">An AI-powered customer progression workspace for individual B2B sellers. It turns natural-language or voice updates into structured account records, prioritizes next actions, maps key relationships, and exports complete customer reports.</span><span data-lang="fr">Un espace de pilotage client assisté par IA pour les commerciaux B2B. Il transforme les notes en langage naturel ou vocales en dossiers structurés, priorise les prochaines actions, cartographie les relations clés et exporte des rapports clients complets.</span><span data-lang="es">Un espacio de seguimiento de clientes con IA para vendedores B2B. Convierte notas de texto o voz en registros estructurados, prioriza próximas acciones, mapea relaciones clave y exporta informes completos.</span><span data-lang="zh">面向个人 ToB 销售的 AI 客户推进工作台。它能将自然语言或语音更新转化为结构化客户档案，排序下一步行动、梳理关键关系，并导出完整客户报告。</span></p>
+          <div class="proj-cat"><span data-lang="en" class="show">AI Sales · Customer Workflow</span><span data-lang="fr">Vente IA · Suivi Client</span><span data-lang="es">Ventas IA · Gestión de Clientes</span><span data-lang="zh">AI 销售助手 · 客户跟进</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Sales Buddy penguin app icon"><img src="images/sales-buddy-app-icon-v2.png" alt=""></span><div class="proj-name">Sales Buddy</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">An AI-powered customer progression workspace for individual B2B sellers. It turns natural-language or voice updates into structured account records, prioritizes next actions, maps key relationships, and exports complete customer reports.</span><span data-lang="fr">Un espace de pilotage client assisté par IA pour les commerciaux B2B. Il transforme les notes en langage naturel ou vocales en dossiers structurés, priorise les prochaines actions, cartographie les relations clés et exporte des rapports clients complets.</span><span data-lang="es">Un espacio de seguimiento de clientes con IA para vendedores B2B. Convierte notas de texto o voz en registros estructurados, prioriza próximas acciones, mapea relaciones clave y exporta informes completos.</span><span data-lang="zh">给一线 ToB 销售做的 AI 搭子。随口说一句客户进展，它就能整理档案、提醒下一步、画出关键关系，还能直接生成完整报告。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 AI Extraction</span><span class="proj-tag">🎯 Next Action</span><span class="proj-tag">📥 CRM Import</span><span class="proj-tag">🕸️ Relationship Map</span><span class="proj-tag">📄 PDF · Word</span></div>
         </div>
         <div class="proj-action">
-          <a href="https://jiakezhu.github.io/ai-sales-copilot/" target="_blank" rel="noopener" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">打开应用</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="https://jiakezhu.github.io/ai-sales-copilot/" target="_blank" rel="noopener" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">去体验</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.08s">
         <div class="proj-num">02</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">Habit &amp; Productivity · AI App</span><span data-lang="fr">Habitudes &amp; Productivité · App IA</span><span data-lang="es">Hábitos &amp; Productividad · App IA</span><span data-lang="zh">习惯与效率 · AI 应用</span></div>
-          <div class="proj-name">Jiake Orbit</div>
-          <p class="proj-desc"><span data-lang="en" class="show">A gamified habit & task app — streak check-ins unlock celestial rewards, built-in Spark mode captures fleeting ideas, and an evening journal closes each day. Full analytics show where your focus actually goes.</span><span data-lang="fr">Application de gestion des habitudes gamifiée — les séries débloquent des récompenses célestes, le mode Spark capture les idées fugaces, un journal du soir clôture chaque journée.</span><span data-lang="es">App de hábitos gamificada — rachas desbloquean recompensas celestes, el modo Spark captura ideas fugaces y un diario nocturno cierra cada día.</span><span data-lang="zh">一款游戏化习惯与任务应用：连续打卡解锁星球奖励，Spark 模式捕捉灵感，夜间日记完成每日复盘，数据面板展示时间和注意力的真实去向。</span></p>
-          <div class="proj-tags"><span class="proj-tag">✅ Habit Tracking</span><span class="proj-tag">🪐 Planet Rewards</span><span class="proj-tag">🏅 NFT Badges</span><span class="proj-tag">⚡ Spark Notes</span><span class="proj-tag">📊 Analytics</span></div>
+          <div class="proj-cat"><span data-lang="en" class="show">EdTech · Language Intelligence</span><span data-lang="fr">EdTech · Intelligence Linguistique</span><span data-lang="es">EdTech · Inteligencia Lingüística</span><span data-lang="zh">教育科技 · 语言与文化</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="LingoVibe multilingual app icon"><img src="images/lingovibe-app-icon-v3.png" alt=""></span><div class="proj-name">LingoVibe</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">A trilingual context engine decoding the cultural "vibe" behind English, French, and Spanish words in real time — moving beyond dictionaries to provide live cultural mapping. Built on Next.js + Supabase.</span><span data-lang="fr">Moteur de contexte trilingue décodant les vibes culturelles des mots en anglais, français et espagnol en temps réel. Construit sur Next.js + Supabase.</span><span data-lang="es">Motor de contexto trilingüe que decodifica el vibe cultural de palabras en tiempo real. Construido con Next.js + Supabase.</span><span data-lang="zh">它不只翻译一个词，还会解释这个词为什么听起来有“那个味道”。一套英、法、西三语语境引擎，用实时文化背景补上词典没说完的部分。</span></p>
+          <div class="proj-tags"><span class="proj-tag">⚡ Next.js App Router</span><span class="proj-tag">🗄️ Supabase</span><span class="proj-tag">🚀 Vercel CI/CD</span><span class="proj-tag">🇬🇧🇫🇷🇪🇸 EN·FR·ES</span><span class="proj-tag">📱 PWA</span></div>
         </div>
         <div class="proj-action">
-          <a href="https://habit-oribt.vercel.app/" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">打开应用</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="https://lingovibe-seven.vercel.app/" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">去体验</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.16s">
         <div class="proj-num">03</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Workflow Automation</span><span data-lang="fr">Agent IA · Automatisation</span><span data-lang="es">Agente IA · Automatización</span><span data-lang="zh">AI Agent · 工作流自动化</span></div>
-          <div class="proj-name">Tutoring Prep Agent</div>
-          <p class="proj-desc"><span data-lang="en" class="show">A local AI agent using Claude Desktop + filesystem MCP that automates my entire English tutoring workflow — from lesson planning to emailing students. Prep time cut from 30 min to under 5.</span><span data-lang="fr">Agent IA local avec Claude Desktop et filesystem MCP qui automatise toute ma préparation de cours. Temps réduit de 30 à 5 minutes.</span><span data-lang="es">Agente IA local con Claude Desktop y filesystem MCP que automatiza toda mi preparación de clases. Tiempo reducido de 30 a 5 minutos.</span><span data-lang="zh">基于 Claude Desktop 与 filesystem MCP 的本地 AI Agent，自动完成从备课到发送学生邮件的英语辅导流程，将准备时间从 30 分钟缩短到 5 分钟以内。</span></p>
-          <div class="proj-tags"><span class="proj-tag">🤖 Claude Desktop</span><span class="proj-tag">📂 Filesystem MCP</span><span class="proj-tag">📝 Auto Lesson Plan</span><span class="proj-tag">✉️ Auto Email</span><span class="proj-tag">⏱️ 30min → 5min</span></div>
+          <div class="proj-cat"><span data-lang="en" class="show">Habit &amp; Productivity · AI App</span><span data-lang="fr">Habitudes &amp; Productivité · App IA</span><span data-lang="es">Hábitos &amp; Productividad · App IA</span><span data-lang="zh">习惯养成 · 效率工具</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Jiake Orbit productivity app icon"><img src="images/jiake-orbit-app-icon-v2.png" alt=""></span><div class="proj-name">Jiake Orbit</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">A gamified habit & task app — streak check-ins unlock celestial rewards, built-in Spark mode captures fleeting ideas, and an evening journal closes each day. Full analytics show where your focus actually goes.</span><span data-lang="fr">Application de gestion des habitudes gamifiée — les séries débloquent des récompenses célestes, le mode Spark capture les idées fugaces, un journal du soir clôture chaque journée.</span><span data-lang="es">App de hábitos gamificada — rachas desbloquean recompensas celestes, el modo Spark captura ideas fugaces y un diario nocturno cierra cada día.</span><span data-lang="zh">把习惯养成做成一场星际游戏：连续打卡解锁星球，灵感随手记，晚上再用日记给一天收尾。数据面板会告诉你，时间和注意力到底去了哪里。</span></p>
+          <div class="proj-tags"><span class="proj-tag">✅ Habit Tracking</span><span class="proj-tag">🪐 Planet Rewards</span><span class="proj-tag">🏅 NFT Badges</span><span class="proj-tag">⚡ Spark Notes</span><span class="proj-tag">📊 Analytics</span></div>
         </div>
         <div class="proj-action">
-          <a href="images/agent-flowchart.html" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Flowchart</span><span data-lang="fr">Organigramme</span><span data-lang="es">Diagrama</span><span data-lang="zh">查看流程图</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="https://habit-oribt.vercel.app/" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">去体验</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
+      </div>
+
+      <div class="proj-group-head reveal">
+        <div class="proj-group-title"><span data-lang="en" class="show">Agents &amp; <em>Automations</em></span><span data-lang="fr">Agents &amp; <em>automatisations</em></span><span data-lang="es">Agentes y <em>automatizaciones</em></span><span data-lang="zh">AI Agent 与<em>自动化</em></span></div>
+        <div class="proj-group-desc"><span data-lang="en" class="show">Focused agents, reusable skills, and repeatable workflows.</span><span data-lang="fr">Des agents, skills et workflows réutilisables pour des tâches précises.</span><span data-lang="es">Agentes, skills y flujos reutilizables para tareas concretas.</span><span data-lang="zh">把重复工作交给 Agent，也把方法封装成可以复用的技能。</span></div>
       </div>
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.24s">
         <div class="proj-num">04</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">EdTech · Language Intelligence</span><span data-lang="fr">EdTech · Intelligence Linguistique</span><span data-lang="es">EdTech · Inteligencia Lingüística</span><span data-lang="zh">教育科技 · 语言智能</span></div>
-          <div class="proj-name">LingoVibe</div>
-          <p class="proj-desc"><span data-lang="en" class="show">A trilingual context engine decoding the cultural "vibe" behind English, French, and Spanish words in real time — moving beyond dictionaries to provide live cultural mapping. Built on Next.js + Supabase.</span><span data-lang="fr">Moteur de contexte trilingue décodant les vibes culturelles des mots en anglais, français et espagnol en temps réel. Construit sur Next.js + Supabase.</span><span data-lang="es">Motor de contexto trilingüe que decodifica el vibe cultural de palabras en tiempo real. Construido con Next.js + Supabase.</span><span data-lang="zh">一个英、法、西三语语境引擎，实时解释词语背后的文化语感，突破传统词典，提供动态文化映射。基于 Next.js 与 Supabase 构建。</span></p>
-          <div class="proj-tags"><span class="proj-tag">⚡ Next.js App Router</span><span class="proj-tag">🗄️ Supabase</span><span class="proj-tag">🚀 Vercel CI/CD</span><span class="proj-tag">🇬🇧🇫🇷🇪🇸 EN·FR·ES</span><span class="proj-tag">📱 PWA</span></div>
+          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Knowledge Retrieval</span><span data-lang="fr">Agent IA · Recherche de Connaissances</span><span data-lang="es">Agente IA · Recuperación de Conocimiento</span><span data-lang="zh">AI Agent · 知识库问答</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Feishu KB RAG knowledge search app icon"><img src="images/feishu-kb-app-icon-v3.png" alt=""></span><div class="proj-name">Feishu KB RAG</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">A Hermes Agent skill that turns Feishu/Lark knowledge bases into a queryable AI assistant — retrieval-augmented generation that searches, ranks, and summarizes internal documents in natural language.</span><span data-lang="fr">Skill d'agent Hermes transformant les bases de connaissances Feishu/Lark en assistant IA interrogeable — RAG qui recherche, classe et résume les documents internes en langage naturel.</span><span data-lang="es">Skill de agente Hermes que convierte bases de conocimiento Feishu/Lark en un asistente IA consultable — RAG que busca, clasifica y resume documentos internos en lenguaje natural.</span><span data-lang="zh">让飞书知识库不再只能靠目录翻。用自然语言提问，它会自己搜索、排序和总结，把散落的内部资料变成一个能对话的助手。</span></p>
+          <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">📚 RAG</span><span class="proj-tag">🔍 Semantic Search</span><span class="proj-tag">🚀 Feishu / Lark</span><span class="proj-tag">🗂️ Knowledge Base</span></div>
         </div>
         <div class="proj-action">
-          <a href="https://lingovibe-seven.vercel.app/" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Launch App</span><span data-lang="fr">Ouvrir</span><span data-lang="es">Abrir</span><span data-lang="zh">打开应用</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="https://github.com/jiakezhu/feishu-kb-rag" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">GitHub</span><span data-lang="fr">GitHub</span><span data-lang="es">GitHub</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
         </div>
       </div>
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.32s">
         <div class="proj-num">05</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Travel Planning</span><span data-lang="fr">Agent IA · Planification Voyage</span><span data-lang="es">Agente IA · Planificación de Viajes</span><span data-lang="zh">AI Agent · 旅行规划</span></div>
-          <div class="proj-name">Budget Travel Planner</div>
-          <p class="proj-desc"><span data-lang="en" class="show">A Hermes Agent skill for student budget travel — generates optimized itineraries, estimates daily costs, surfaces off-the-beaten-path spots, and adapts routes to flexible time and budget constraints.</span><span data-lang="fr">Skill d'agent Hermes pour les voyages étudiants à petit budget — génère des itinéraires optimisés, estime les coûts et suggère des lieux hors des sentiers battus selon vos contraintes.</span><span data-lang="es">Skill de agente Hermes para viajes estudiantiles con bajo presupuesto — genera itinerarios optimizados, estima costes y descubre lugares fuera de lo común según tus limitaciones.</span><span data-lang="zh">面向学生低预算旅行的 Hermes Agent 技能，可生成优化行程、估算每日花费、推荐小众目的地，并根据时间与预算灵活调整路线。</span></p>
-          <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">🧳 Travel Planning</span><span class="proj-tag">💰 Budget Optimizer</span><span class="proj-tag">🗺️ Route Generator</span><span class="proj-tag">🎒 Student-focused</span></div>
+          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Workflow Automation</span><span data-lang="fr">Agent IA · Automatisation</span><span data-lang="es">Agente IA · Automatización</span><span data-lang="zh">AI Agent · 自动备课</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Tutoring Prep Agent lesson workflow app icon"><img src="images/tutoring-prep-app-icon-v3.png" alt=""></span><div class="proj-name">Tutoring Prep Agent</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">A local AI agent using Claude Desktop + filesystem MCP that automates my entire English tutoring workflow — from lesson planning to emailing students. Prep time cut from 30 min to under 5.</span><span data-lang="fr">Agent IA local avec Claude Desktop et filesystem MCP qui automatise toute ma préparation de cours. Temps réduit de 30 à 5 minutes.</span><span data-lang="es">Agente IA local con Claude Desktop y filesystem MCP que automatiza toda mi preparación de clases. Tiempo reducido de 30 a 5 minutos.</span><span data-lang="zh">我把备课这件重复劳动交给了 Agent：从整理教案到给学生发邮件都能自动完成，原本 30 分钟的准备，现在 5 分钟内搞定。</span></p>
+          <div class="proj-tags"><span class="proj-tag">🤖 Claude Desktop</span><span class="proj-tag">📂 Filesystem MCP</span><span class="proj-tag">📝 Auto Lesson Plan</span><span class="proj-tag">✉️ Auto Email</span><span class="proj-tag">⏱️ 30min → 5min</span></div>
         </div>
         <div class="proj-action">
-          <a href="https://github.com/jiakezhu/student-budget-travel" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">GitHub</span><span data-lang="fr">GitHub</span><span data-lang="es">GitHub</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          <a href="images/agent-flowchart.html" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">Flowchart</span><span data-lang="fr">Organigramme</span><span data-lang="es">Diagrama</span><span data-lang="zh">看流程</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.4s">
         <div class="proj-num">06</div>
         <div class="proj-body">
-          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Knowledge Retrieval</span><span data-lang="fr">Agent IA · Recherche de Connaissances</span><span data-lang="es">Agente IA · Recuperación de Conocimiento</span><span data-lang="zh">AI Agent · 知识检索</span></div>
-          <div class="proj-name">Feishu KB RAG</div>
-          <p class="proj-desc"><span data-lang="en" class="show">A Hermes Agent skill that turns Feishu/Lark knowledge bases into a queryable AI assistant — retrieval-augmented generation that searches, ranks, and summarizes internal documents in natural language.</span><span data-lang="fr">Skill d'agent Hermes transformant les bases de connaissances Feishu/Lark en assistant IA interrogeable — RAG qui recherche, classe et résume les documents internes en langage naturel.</span><span data-lang="es">Skill de agente Hermes que convierte bases de conocimiento Feishu/Lark en un asistente IA consultable — RAG que busca, clasifica y resume documentos internos en lenguaje natural.</span><span data-lang="zh">将飞书 / Lark 知识库转化为可对话 AI 助手的 Hermes Agent 技能，通过 RAG 检索、排序并用自然语言总结内部文档。</span></p>
-          <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">📚 RAG</span><span class="proj-tag">🔍 Semantic Search</span><span class="proj-tag">🚀 Feishu / Lark</span><span class="proj-tag">🗂️ Knowledge Base</span></div>
+          <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Travel Planning</span><span data-lang="fr">Agent IA · Planification Voyage</span><span data-lang="es">Agente IA · Planificación de Viajes</span><span data-lang="zh">AI Agent · 穷游规划</span></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Budget Travel Planner route app icon"><img src="images/budget-travel-app-icon-v3.png" alt=""></span><div class="proj-name">Budget Travel Planner</div></div>
+          <p class="proj-desc"><span data-lang="en" class="show">A Hermes Agent skill for student budget travel — generates optimized itineraries, estimates daily costs, surfaces off-the-beaten-path spots, and adapts routes to flexible time and budget constraints.</span><span data-lang="fr">Skill d'agent Hermes pour les voyages étudiants à petit budget — génère des itinéraires optimisés, estime les coûts et suggère des lieux hors des sentiers battus selon vos contraintes.</span><span data-lang="es">Skill de agente Hermes para viajes estudiantiles con bajo presupuesto — genera itinerarios optimizados, estima costes y descubre lugares fuera de lo común según tus limitaciones.</span><span data-lang="zh">给学生党做的穷游搭子：会排路线、算每天要花多少钱、找不那么游客化的地方，还能跟着时间和预算随时改计划。</span></p>
+          <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">🧳 Travel Planning</span><span class="proj-tag">💰 Budget Optimizer</span><span class="proj-tag">🗺️ Route Generator</span><span class="proj-tag">🎒 Student-focused</span></div>
         </div>
         <div class="proj-action">
-          <a href="https://github.com/jiakezhu/feishu-kb-rag" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">GitHub</span><span data-lang="fr">GitHub</span><span data-lang="es">GitHub</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          <a href="https://github.com/jiakezhu/student-budget-travel" target="_blank" class="proj-btn"><span><span data-lang="en" class="show">GitHub</span><span data-lang="fr">GitHub</span><span data-lang="es">GitHub</span></span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
         </div>
       </div>
 
@@ -1003,11 +1030,11 @@
 
 <!-- HONORS -->
 <section id="honors" class="s">
-  <div class="s-label reveal"><span data-lang="en" class="show">Awards & Practice</span><span data-lang="fr">Prix et Pratique</span><span data-lang="es">Premios y Práctica</span><span data-lang="zh">荣誉与实践</span></div>
-  <h2 class="s-title reveal"><span data-lang="en" class="show">Honors &<br><em>Social Impact.</em></span><span data-lang="fr">Honneurs &<br><em>Impact Social.</em></span><span data-lang="es">Honores e<br><em>Impacto Social.</em></span><span data-lang="zh">荣誉，亦是<br><em>社会影响。</em></span></h2>
+  <div class="s-label reveal"><span data-lang="en" class="show">Awards & Practice</span><span data-lang="fr">Prix et Pratique</span><span data-lang="es">Premios y Práctica</span><span data-lang="zh">荣誉与行动</span></div>
+  <h2 class="s-title reveal"><span data-lang="en" class="show">Honors &<br><em>Social Impact.</em></span><span data-lang="fr">Honneurs &<br><em>Impact Social.</em></span><span data-lang="es">Honores e<br><em>Impacto Social.</em></span><span data-lang="zh">认真做过的事，<br><em>后来有了一些回响。</em></span></h2>
   <div class="honors-grid">
     <div class="reveal">
-      <div class="honors-h3">🏅 <span data-lang="en" class="show">Honors & Awards</span><span data-lang="fr">Prix et Distinctions</span><span data-lang="es">Premios y Distinciones</span><span data-lang="zh">荣誉与奖项</span></div>
+      <div class="honors-h3">🏅 <span data-lang="en" class="show">Honors & Awards</span><span data-lang="fr">Prix et Distinctions</span><span data-lang="es">Premios y Distinciones</span><span data-lang="zh">拿过的奖</span></div>
       <ul class="honor-list">
         <li class="honor-item"><div><div class="honor-name">National Scholarship</div><div class="honor-sub">Top 0.2% · Highest National Honor for Undergrads in China</div></div><div class="honor-date">2023.12</div></li>
         <li class="honor-item"><div><div class="honor-name">Zhejiang Provincial Scholarship</div><div class="honor-sub">Top 3% · Provincial Honors</div></div><div class="honor-date">2022.12</div></li>
@@ -1024,13 +1051,13 @@
       </ul>
     </div>
     <div class="reveal" style="transition-delay:0.15s">
-      <div class="honors-h3">🤝 <span data-lang="en" class="show">Social Practice</span><span data-lang="fr">Pratique Sociale</span><span data-lang="es">Práctica Social</span><span data-lang="zh">社会实践</span></div>
+      <div class="honors-h3">🤝 <span data-lang="en" class="show">Social Practice</span><span data-lang="fr">Pratique Sociale</span><span data-lang="es">Práctica Social</span><span data-lang="zh">做过的公益</span></div>
       <div class="vol-item"><img src="images/redcross.png" class="vol-logo" alt="Red Cross"><div><div class="vol-name">Cleft Lip and Palate Treatment Volunteer</div><div class="vol-org">China Red Cross Society</div><div class="vol-period">Mar 2021 – May 2022 · 1yr 3mos</div></div></div>
       <div class="vol-item"><img src="images/expo.png" class="vol-logo" alt="Expo"><div><div class="vol-name">Translator for Sino-Finnish Business</div><div class="vol-org">Global Digital Trade Expo</div><div class="vol-period">Oct 2023 – Nov 2023 · 2mos</div></div></div>
       <div class="vol-item"><img src="images/campusfrance.png" class="vol-logo" alt="Campus France"><div><div class="vol-name">French Higher Education Advocacy Volunteer</div><div class="vol-org">Campus France</div><div class="vol-period">Mar 2025 – Apr 2025 · 2mos</div></div></div>
       <div class="vol-item"><img src="images/swufe志愿.png" class="vol-logo" alt="SWUFE"><div><div class="vol-name">International Summer Camp Volunteer</div><div class="vol-org">Southwestern University of Finance and Economics</div><div class="vol-period">Jun 2025 · 1mo</div></div></div>
       <div style="margin-top:32px;">
-        <div class="honors-h3">📰 <span data-lang="en" class="show">Media Coverage</span><span data-lang="fr">Couverture Médiatique</span><span data-lang="es">Cobertura Mediática</span><span data-lang="zh">媒体报道</span></div>
+        <div class="honors-h3">📰 <span data-lang="en" class="show">Media Coverage</span><span data-lang="fr">Couverture Médiatique</span><span data-lang="es">Cobertura Mediática</span><span data-lang="zh">被报道过</span></div>
         <a href="https://mp.weixin.qq.com/s/b3C1MfxQLd0O6sAStjoPeQ" target="_blank" class="media-link"><div><div class="media-link-title">走进国奖生 | 会语言，通国别，精领域——朱佳科</div><div class="media-link-sub">WeChat Official Account · Click to read</div></div></a>
         <a href="https://mp.weixin.qq.com/s/gcootiU-UZd45aJz1gStqw" target="_blank" class="media-link"><div><div class="media-link-title">英语+法语+电子商务……他是商大"佳"科</div><div class="media-link-sub">WeChat Official Account · Click to read</div></div></a>
         <a href="https://mp.weixin.qq.com/s/w16OF2YSp6e_Pd1CSqCmQQ" target="_blank" class="media-link"><div><div class="media-link-title">了不起的国奖生 | 2023年浙江工商大学国家奖学金特别评选大会</div><div class="media-link-sub">WeChat Official Account · Click to read</div></div></a>
@@ -1042,8 +1069,8 @@
 <!-- JOURNEY -->
 <section id="journey" class="sf">
   <div class="si">
-    <div class="s-label reveal"><span data-lang="en" class="show">Footprint</span><span data-lang="fr">Empreintes</span><span data-lang="es">Huella</span><span data-lang="zh">人生足迹</span></div>
-    <h2 class="s-title reveal"><span data-lang="en" class="show">One origin.<br><em>Many roads.</em></span><span data-lang="fr">Une origine.<br><em>Mille chemins.</em></span><span data-lang="es">Un origen.<br><em>Muchos caminos.</em></span><span data-lang="zh">一个起点，<br><em>许多条路。</em></span></h2>
+    <div class="s-label reveal"><span data-lang="en" class="show">Footprint</span><span data-lang="fr">Empreintes</span><span data-lang="es">Huella</span><span data-lang="zh">走过的地方</span></div>
+    <h2 class="s-title reveal"><span data-lang="en" class="show">One origin.<br><em>Many roads.</em></span><span data-lang="fr">Une origine.<br><em>Mille chemins.</em></span><span data-lang="es">Un origen.<br><em>Muchos caminos.</em></span><span data-lang="zh">从宁波海边出发，<br><em>慢慢走到更远的地方。</em></span></h2>
   </div>
   <div class="map-tabs-wrap">
     <button class="map-tab-btn active" data-view="china" onclick="switchJourneyView('china')">🇨🇳 China</button>
@@ -1056,7 +1083,7 @@
 
       <!-- Left: Life Journey -->
       <div>
-        <div class="jp-section-label"><span data-lang="en" class="show">Life Journey</span><span data-lang="fr">Parcours de vie</span><span data-lang="es">Trayecto de vida</span><span data-lang="zh">人生轨迹</span></div>
+        <div class="jp-section-label"><span data-lang="en" class="show">Life Journey</span><span data-lang="fr">Parcours de vie</span><span data-lang="es">Trayecto de vida</span><span data-lang="zh">我的路线</span></div>
         <div class="jp-ms-list">
 
           <div class="jp-ms">
@@ -1064,7 +1091,7 @@
             <div class="jp-ms-period">2002 – 2020</div>
             <div class="jp-ms-place"><span data-lang="en" class="show">Xianxiang Town</span><span data-lang="fr">Bourg de Xianxiang</span><span data-lang="es">Pueblo de Xianxiang</span><span data-lang="zh">咸祥镇</span></div>
             <div class="jp-ms-school"><span data-lang="en" class="show">Yinzhou District, Ningbo</span><span data-lang="fr">District de Yinzhou, Ningbo</span><span data-lang="es">Distrito de Yinzhou, Ningbo</span><span data-lang="zh">宁波市鄞州区</span></div>
-            <div class="jp-ms-desc"><span data-lang="en" class="show">A coastal fishing town where boats go out at dawn — where this journey begins</span><span data-lang="fr">Un village de pêcheurs sur la côte de Ningbo — là où tout a commencé</span><span data-lang="es">Un pueblo pesquero costero en Ningbo — donde comenzó esta historia</span><span data-lang="zh">宁波海边的小镇，渔船在黎明出港——旅程从这里开始</span></div>
+            <div class="jp-ms-desc"><span data-lang="en" class="show">A coastal fishing town where boats go out at dawn — where this journey begins</span><span data-lang="fr">Un village de pêcheurs sur la côte de Ningbo — là où tout a commencé</span><span data-lang="es">Un pueblo pesquero costero en Ningbo — donde comenzó esta historia</span><span data-lang="zh">在宁波海边长大。渔船、海风和很早的清晨，是我最初认识世界的方式</span></div>
           </div>
 
           <div class="jp-ms">
@@ -1072,7 +1099,7 @@
             <div class="jp-ms-period">2020.09 – 2024.06</div>
             <div class="jp-ms-place"><span data-lang="en" class="show">ZJSU — Xiasha Campus</span><span data-lang="fr">ZJSU — Campus Xiasha</span><span data-lang="es">ZJSU — Campus Xiasha</span><span data-lang="zh">浙江工商大学 · 下沙校区</span></div>
             <div class="jp-ms-school"><span data-lang="en" class="show">Zhejiang Gongshang University · Hangzhou</span><span data-lang="fr">Université Gongshang du Zhejiang · Hangzhou</span><span data-lang="es">Universidad Gongshang de Zhejiang · Hangzhou</span><span data-lang="zh">浙江工商大学 · 杭州</span></div>
-            <div class="jp-ms-desc"><span data-lang="en" class="show">Double degree in French & cross-border e-commerce — stepping into a bigger world</span><span data-lang="fr">Double licence en français et e-commerce transfrontalier — vers un monde plus grand</span><span data-lang="es">Doble grado en francés y e-commerce transfronterizo — hacia un mundo más grande</span><span data-lang="zh">法语与跨境电子商务双专业——走向更大的世界</span></div>
+            <div class="jp-ms-desc"><span data-lang="en" class="show">Double degree in French & cross-border e-commerce — stepping into a bigger world</span><span data-lang="fr">Double licence en français et e-commerce transfrontalier — vers un monde plus grand</span><span data-lang="es">Doble grado en francés y e-commerce transfronterizo — hacia un mundo más grande</span><span data-lang="zh">第一次离开家去杭州，也从法语和跨境电商走进了更大的世界</span></div>
           </div>
 
           <div class="jp-ms">
@@ -1080,7 +1107,7 @@
             <div class="jp-ms-period">2024.09 – 2025.06</div>
             <div class="jp-ms-place"><span data-lang="en" class="show">SWUFE — Guanghua Campus</span><span data-lang="fr">SWUFE — Campus Guanghua</span><span data-lang="es">SWUFE — Campus Guanghua</span><span data-lang="zh">西南财经大学 · 光华校区</span></div>
             <div class="jp-ms-school"><span data-lang="en" class="show">Southwestern University of Finance &amp; Economics · Chengdu</span><span data-lang="fr">Université du Sud-Ouest des Finances et de l'Économie · Chengdu</span><span data-lang="es">Universidad del Suroeste de Finanzas y Economía · Chengdu</span><span data-lang="zh">西南财经大学 · 成都</span></div>
-            <div class="jp-ms-desc"><span data-lang="en" class="show">Master of International Business — from the East China Sea to the mountains of western Sichuan</span><span data-lang="fr">Master en Commerce International — de la mer de Chine aux montagnes du Sichuan</span><span data-lang="es">Máster en Comercio Internacional — del Mar de China a las montañas de Sichuan</span><span data-lang="zh">国际商务硕士——从东海之滨走向川西群山</span></div>
+            <div class="jp-ms-desc"><span data-lang="en" class="show">Master of International Business — from the East China Sea to the mountains of western Sichuan</span><span data-lang="fr">Master en Commerce International — de la mer de Chine aux montagnes du Sichuan</span><span data-lang="es">Máster en Comercio Internacional — del Mar de China a las montañas de Sichuan</span><span data-lang="zh">一路向西到成都读国际商务，离海更远，也离新的可能更近</span></div>
           </div>
 
         </div>
@@ -1089,7 +1116,7 @@
       <!-- Right: map + city tags -->
       <div class="jp-china-right">
         <div>
-          <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · China</span><span data-lang="fr">Villes visitées · Chine</span><span data-lang="es">Lugares visitados · China</span><span data-lang="zh">走过的地方 · 中国</span></div>
+          <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · China</span><span data-lang="fr">Villes visitées · Chine</span><span data-lang="es">Lugares visitados · China</span><span data-lang="zh">中国足迹</span></div>
           <div id="journey-map-china"></div>
         </div>
         <div>
@@ -1126,14 +1153,14 @@
             <div class="jp-eu-ms-period">2025.09 – 2026.06 · Exchange</div>
             <div class="jp-eu-ms-place"><span data-lang="en" class="show">Université Paris 1 Panthéon-Sorbonne</span><span data-lang="fr">Université Paris 1 Panthéon-Sorbonne</span><span data-lang="es">Universidad París 1 Panthéon-Sorbona</span><span data-lang="zh">巴黎第一大学</span></div>
             <div class="jp-eu-ms-school"><span data-lang="en" class="show">Panthéon Campus, Paris · International &amp; European Law</span><span data-lang="fr">Campus du Panthéon, Paris · Droit international et européen</span><span data-lang="es">Campus del Panteón, París · Derecho internacional y europeo</span><span data-lang="zh">巴黎先贤祠校区 · 国际法与欧洲法</span></div>
-            <div class="jp-eu-ms-desc"><span data-lang="en" class="show">Next to the Panthéon in the heart of the Latin Quarter — a year of international law, comparative systems, and discovering what it means to live a city.</span><span data-lang="fr">Au pied du Panthéon, au cœur du Quartier latin — une année de droit international, de droit comparé et de vie parisienne.</span><span data-lang="es">Junto al Panteón, en el corazón del Barrio Latino — un año de derecho internacional, sistemas comparados y vida parisina.</span><span data-lang="zh">在拉丁区中心、先贤祠旁，度过学习国际法与比较制度的一年，也真正进入一座城市的日常生活</span></div>
+            <div class="jp-eu-ms-desc"><span data-lang="en" class="show">Next to the Panthéon in the heart of the Latin Quarter — a year of international law, comparative systems, and discovering what it means to live a city.</span><span data-lang="fr">Au pied du Panthéon, au cœur du Quartier latin — une année de droit international, de droit comparé et de vie parisienne.</span><span data-lang="es">Junto al Panteón, en el corazón del Barrio Latino — un año de derecho internacional, sistemas comparados y vida parisina.</span><span data-lang="zh">住进拉丁区，在先贤祠旁上课，把国际法、比较制度和巴黎的日常一起过了一遍</span></div>
           </div>
         </div>
-        <div class="jp-section-label"><span data-lang="en" class="show">Map</span><span data-lang="fr">Carte</span><span data-lang="es">Mapa</span><span data-lang="zh">地图</span></div>
+        <div class="jp-section-label"><span data-lang="en" class="show">Map</span><span data-lang="fr">Carte</span><span data-lang="es">Mapa</span><span data-lang="zh">地图上看看</span></div>
         <div id="journey-map-europe"></div>
       </div>
       <div>
-        <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · Europe</span><span data-lang="fr">Villes visitées · Europe</span><span data-lang="es">Lugares visitados · Europa</span><span data-lang="zh">走过的地方 · 欧洲</span></div>
+        <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · Europe</span><span data-lang="fr">Villes visitées · Europe</span><span data-lang="es">Lugares visitados · Europa</span><span data-lang="zh">欧洲足迹</span></div>
         <div class="jp-cr-list">
           <div class="jp-cr"><span class="jp-cr-flag">🇫🇷</span><span class="jp-cr-name">France</span><span class="jp-cr-cities"><b>Paris</b> · Marseille · Lyon · Strasbourg · Nice · Menton · Antibes · Cannes · Bordeaux · Toulouse · Nantes · Rennes · Lille · Tours</span></div>
           <div class="jp-cr"><span class="jp-cr-flag">🇨🇭</span><span class="jp-cr-name">Switzerland</span><span class="jp-cr-cities">Zürich · Basel · Lucerne · Interlaken · Thun · Spiez · Lungern · Iseltwald · Rigi · Lauterbrunnen · Gimmelwald</span></div>
@@ -1160,8 +1187,8 @@
 <!-- LIFE -->
 <div id="life" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">生活</span></div>
-    <h2 class="s-title reveal"><span data-lang="en" class="show">Beyond the<br><em>résumé.</em></span><span data-lang="fr">Au-delà du<br><em>CV.</em></span><span data-lang="es">Más allá del<br><em>currículum.</em></span><span data-lang="zh">简历之外，<br><em>仍是生活。</em></span></h2>
+    <div class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">简历之外</span></div>
+    <h2 class="s-title reveal"><span data-lang="en" class="show">Beyond the<br><em>résumé.</em></span><span data-lang="fr">Au-delà du<br><em>CV.</em></span><span data-lang="es">Más allá del<br><em>currículum.</em></span><span data-lang="zh">简历写不下的，<br><em>我也放在这里。</em></span></h2>
     <div class="life-grid">
       <div class="life-card reveal" onclick="openModal('modal-reading')">
         <div class="life-card-head">
@@ -1174,8 +1201,8 @@
             <img src="images/AI&I.png" class="life-thumb" onerror="this.style.display='none'">
           </div>
         </div>
-        <p class="life-text"><span data-lang="en" class="show">Books and voices that shaped how I think — across economics, philosophy, and the art of paying attention.</span><span data-lang="fr">Livres et voix qui ont façonné ma pensée — entre économie, philosophie et l'art de faire attention.</span><span data-lang="es">Libros y voces que moldearon mi forma de pensar — entre economía, filosofía y el arte de prestar atención.</span><span data-lang="zh">塑造我思考方式的书籍与声音，横跨经济、哲学，以及如何真正保持注意力。</span></p>
-        <div class="life-cta"><span data-lang="en" class="show">View picks →</span><span data-lang="fr">Voir mes choix →</span><span data-lang="es">Ver selección →</span><span data-lang="zh">查看书单与播客 →</span></div>
+        <p class="life-text"><span data-lang="en" class="show">Books and voices that shaped how I think — across economics, philosophy, and the art of paying attention.</span><span data-lang="fr">Livres et voix qui ont façonné ma pensée — entre économie, philosophie et l'art de faire attention.</span><span data-lang="es">Libros y voces que moldearon mi forma de pensar — entre economía, filosofía y el arte de prestar atención.</span><span data-lang="zh">有些书帮我想明白问题，有些播客只是陪我走很长的路。经济、哲学，还有怎么把注意力放回真正重要的事。</span></p>
+        <div class="life-cta"><span data-lang="en" class="show">View picks →</span><span data-lang="fr">Voir mes choix →</span><span data-lang="es">Ver selección →</span><span data-lang="zh">翻翻我的书单 →</span></div>
       </div>
 
       <div class="life-card reveal" style="transition-delay:0.1s" onclick="openModal('modal-films')">
@@ -1189,8 +1216,8 @@
             <img src="images/纸牌屋.jpeg" class="life-thumb" onerror="this.style.display='none'">
           </div>
         </div>
-        <p class="life-text"><span data-lang="en" class="show">From French spy thrillers to Japanese slow cinema — my watchlist crosses borders just like I do.</span><span data-lang="fr">Des thrillers d'espionnage français au cinéma lent japonais — ma liste traverse les frontières comme moi.</span><span data-lang="es">De los thrillers de espionaje franceses al cine lento japonés — mi lista cruza fronteras igual que yo.</span><span data-lang="zh">从法国谍战剧到日本慢电影，我的片单和我的经历一样跨越边界。</span></p>
-        <div class="life-cta"><span data-lang="en" class="show">View picks →</span><span data-lang="fr">Voir mes choix →</span><span data-lang="es">Ver selección →</span><span data-lang="zh">查看片单 →</span></div>
+        <p class="life-text"><span data-lang="en" class="show">From French spy thrillers to Japanese slow cinema — my watchlist crosses borders just like I do.</span><span data-lang="fr">Des thrillers d'espionnage français au cinéma lent japonais — ma liste traverse les frontières comme moi.</span><span data-lang="es">De los thrillers de espionaje franceses al cine lento japonés — mi lista cruza fronteras igual que yo.</span><span data-lang="zh">从法国谍战剧看到日本慢电影，我的片单和我一样，很少老老实实待在一个国家。</span></p>
+        <div class="life-cta"><span data-lang="en" class="show">View picks →</span><span data-lang="fr">Voir mes choix →</span><span data-lang="es">Ver selección →</span><span data-lang="zh">看看我的片单 →</span></div>
       </div>
 
       <div class="life-card reveal" style="transition-delay:0.15s" onclick="openModal('modal-sport')">
@@ -1202,8 +1229,8 @@
             <img src="images/合照.png" class="life-thumb" onerror="this.style.display='none'">
           </div>
         </div>
-        <p class="life-text"><span data-lang="en" class="show">Former member of the university track and field team and college basketball team. The court and the road both teach the same thing — show up, stay consistent, trust the process.</span><span data-lang="fr">Ancien membre de l'équipe universitaire d'athlétisme et de basket-ball. Le terrain et la route enseignent la même chose — être présent, rester régulier, faire confiance au processus.</span><span data-lang="es">Ex miembro del equipo universitario de atletismo y de baloncesto. La cancha y la carretera enseñan lo mismo — aparecer, ser constante, confiar en el proceso.</span><span data-lang="zh">曾是校田径队与篮球队成员。球场与跑道教会我的其实是同一件事：准时出现、持续投入、相信过程。</span></p>
-        <div class="life-cta"><span data-lang="en" class="show">View photos →</span><span data-lang="fr">Voir photos →</span><span data-lang="es">Ver fotos →</span><span data-lang="zh">查看照片 →</span></div>
+        <p class="life-text"><span data-lang="en" class="show">Former member of the university track and field team and college basketball team. The court and the road both teach the same thing — show up, stay consistent, trust the process.</span><span data-lang="fr">Ancien membre de l'équipe universitaire d'athlétisme et de basket-ball. Le terrain et la route enseignent la même chose — être présent, rester régulier, faire confiance au processus.</span><span data-lang="es">Ex miembro del equipo universitario de atletismo y de baloncesto. La cancha y la carretera enseñan lo mismo — aparecer, ser constante, confiar en el proceso.</span><span data-lang="zh">以前在校田径队和篮球队。跑道和球场教会我的其实是同一件事：先出现，再坚持，慢慢就会有结果。</span></p>
+        <div class="life-cta"><span data-lang="en" class="show">View photos →</span><span data-lang="fr">Voir photos →</span><span data-lang="es">Ver fotos →</span><span data-lang="zh">看看球场与跑道 →</span></div>
       </div>
 
       <div class="life-card reveal" style="transition-delay:0.2s" onclick="openModal('modal-travel')">
@@ -1218,8 +1245,8 @@
           </div>
         </div>
         <div class="life-flags">🇨🇳 🇫🇷 🇫🇮 🇩🇪 🇳🇱 🇧🇪 🇦🇹 🇨🇿 🇸🇰 🇭🇺 🇪🇸 🇮🇹 🇨🇭 🇳🇴 🇻🇦 🇱🇺</div>
-        <p class="life-text"><span data-lang="en" class="show">16 countries and counting. Not just tourism — each trip is a field study in culture, language, and how people build their worlds.</span><span data-lang="fr">16 pays, et ce n'est pas fini. Chaque voyage est une étude de terrain sur la culture et la langue.</span><span data-lang="es">16 países y contando. Cada viaje es un estudio de campo sobre cultura, idioma y perspectivas.</span><span data-lang="zh">已经走过 16 个国家，而且还在继续。旅行不只是观光，更是关于文化、语言与人们如何构建自身世界的田野调查。</span></p>
-        <div class="life-cta"><span data-lang="en" class="show">View photos →</span><span data-lang="fr">Voir photos →</span><span data-lang="es">Ver fotos →</span><span data-lang="zh">查看照片 →</span></div>
+        <p class="life-text"><span data-lang="en" class="show">16 countries and counting. Not just tourism — each trip is a field study in culture, language, and how people build their worlds.</span><span data-lang="fr">16 pays, et ce n'est pas fini. Chaque voyage est une étude de terrain sur la culture et la langue.</span><span data-lang="es">16 países y contando. Cada viaje es un estudio de campo sobre cultura, idioma y perspectivas.</span><span data-lang="zh">已经走过 16 个国家，还没有停下来的打算。旅行对我不只是打卡，更像换一个地方观察人、语言和生活。</span></p>
+        <div class="life-cta"><span data-lang="en" class="show">View photos →</span><span data-lang="fr">Voir photos →</span><span data-lang="es">Ver fotos →</span><span data-lang="zh">看看我走过的地方 →</span></div>
       </div>
     </div>
   </div>
@@ -1261,10 +1288,10 @@
       <div class="media-card"><img src="images/因果报应.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">因果报应</div></div></div>
     </div>
     <div class="modal-sec" style="margin-top:28px;"><span data-lang="en" class="show">🎙️ Podcasts</span><span data-lang="fr">🎙️ Podcasts</span><span data-lang="es">🎙️ Podcasts</span><span data-lang="zh">🎙️ 播客</span></div>
-    <div class="podcast-item"><img src="images/十字路口 Crossing.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">十字路口 Crossing</div><div class="podcast-desc"><span data-lang="en" class="show">Cross-cultural perspectives on China and the world</span><span data-lang="fr">Perspectives transculturelles sur la Chine et le monde</span><span data-lang="es">Perspectivas interculturales sobre China y el mundo</span><span data-lang="zh">从跨文化视角理解中国与世界</span></div></div></div>
-    <div class="podcast-item"><img src="images/独树不成林.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">独树不成林</div><div class="podcast-desc"><span data-lang="en" class="show">Literary conversations beyond the mainstream</span><span data-lang="fr">Conversations littéraires hors des sentiers battus</span><span data-lang="es">Conversaciones literarias fuera de lo común</span><span data-lang="zh">主流之外的文学对谈</span></div></div></div>
-    <div class="podcast-item"><img src="images/张小珺商业访谈录.jpg" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">张小珺商业访谈录</div><div class="podcast-desc"><span data-lang="en" class="show">In-depth business interviews with Chinese entrepreneurs</span><span data-lang="fr">Entretiens approfondis avec des entrepreneurs chinois</span><span data-lang="es">Entrevistas empresariales con emprendedores chinos</span><span data-lang="zh">与中国创业者的深度商业访谈</span></div></div></div>
-    <div class="podcast-item"><img src="images/AI&I.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">AI&I</div><div class="podcast-desc"><span data-lang="en" class="show">Exploring the intersection of AI and human identity</span><span data-lang="fr">Explorer l'intersection entre l'IA et l'identité humaine</span><span data-lang="es">Explorando la intersección entre IA e identidad humana</span><span data-lang="zh">探索 AI 与人的身份认同交汇处</span></div></div></div>
+    <div class="podcast-item"><img src="images/十字路口 Crossing.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">十字路口 Crossing</div><div class="podcast-desc"><span data-lang="en" class="show">Cross-cultural perspectives on China and the world</span><span data-lang="fr">Perspectives transculturelles sur la Chine et le monde</span><span data-lang="es">Perspectivas interculturales sobre China y el mundo</span><span data-lang="zh">从文化差异聊中国，也聊世界</span></div></div></div>
+    <div class="podcast-item"><img src="images/独树不成林.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">独树不成林</div><div class="podcast-desc"><span data-lang="en" class="show">Literary conversations beyond the mainstream</span><span data-lang="fr">Conversations littéraires hors des sentiers battus</span><span data-lang="es">Conversaciones literarias fuera de lo común</span><span data-lang="zh">主流之外，认真聊文学</span></div></div></div>
+    <div class="podcast-item"><img src="images/张小珺商业访谈录.jpg" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">张小珺商业访谈录</div><div class="podcast-desc"><span data-lang="en" class="show">In-depth business interviews with Chinese entrepreneurs</span><span data-lang="fr">Entretiens approfondis avec des entrepreneurs chinois</span><span data-lang="es">Entrevistas empresariales con emprendedores chinos</span><span data-lang="zh">和中国创业者坐下来聊透一件事</span></div></div></div>
+    <div class="podcast-item"><img src="images/AI&I.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">AI&I</div><div class="podcast-desc"><span data-lang="en" class="show">Exploring the intersection of AI and human identity</span><span data-lang="fr">Explorer l'intersection entre l'IA et l'identité humaine</span><span data-lang="es">Explorando la intersección entre IA e identidad humana</span><span data-lang="zh">AI 变得越来越像人时，我们怎么理解自己</span></div></div></div>
   </div>
 </div>
 
@@ -1378,7 +1405,7 @@
     'Oct 2023 – Nov 2023 · 2mos': '2023.10 – 2023.11 · 2个月',
     'Mar 2025 – Apr 2025 · 2mos': '2025.03 – 2025.04 · 2个月',
     'Jun 2025 · 1mo': '2025.06 · 1个月',
-    'WeChat Official Account · Click to read': '微信公众号 · 点击阅读',
+    'WeChat Official Account · Click to read': '公众号报道 · 点开看看',
     'Tencent Cloud': '腾讯云',
     'ByteDance / TikTok': '字节跳动 / TikTok',
     'Alliance Française de Chengdu': '成都法语联盟',
@@ -1389,21 +1416,21 @@
     '2024.09 – 2025.03 · Chengdu': '2024.09 – 2025.03 · 成都',
     '2024.09 – 2025.03 · Ningbo': '2024.09 – 2025.03 · 宁波',
     '2023.11 – 2024.03 · Hangzhou': '2023.11 – 2024.03 · 杭州',
-    'Sales Buddy': 'Sales Buddy · AI 销售助手',
-    'Jiake Orbit': 'Jiake Orbit · 习惯星轨',
-    'Tutoring Prep Agent': '辅导备课智能体',
-    'LingoVibe': 'LingoVibe · 多语语境引擎',
-    'Budget Travel Planner': '低预算旅行规划助手',
-    'Feishu KB RAG': '飞书知识库 RAG',
-    '🤖 AI Extraction': '🤖 AI 信息提取', '🎯 Next Action': '🎯 下一步行动',
-    '📥 CRM Import': '📥 CRM 导入', '🕸️ Relationship Map': '🕸️ 关系图谱',
-    '✅ Habit Tracking': '✅ 习惯追踪', '🪐 Planet Rewards': '🪐 星球奖励',
-    '🏅 NFT Badges': '🏅 NFT 徽章', '⚡ Spark Notes': '⚡ 灵感速记', '📊 Analytics': '📊 数据分析',
-    '📝 Auto Lesson Plan': '📝 自动教案', '✉️ Auto Email': '✉️ 自动邮件', '⏱️ 30min → 5min': '⏱️ 30 分钟 → 5 分钟',
+    'Sales Buddy': 'Sales Buddy · 销售搭子',
+    'Jiake Orbit': 'Jiake Orbit · 习惯星球',
+    'Tutoring Prep Agent': 'Tutoring Prep Agent · 备课搭子',
+    'LingoVibe': 'LingoVibe · 词语的文化雷达',
+    'Budget Travel Planner': 'Budget Travel Planner · 学生穷游搭子',
+    'Feishu KB RAG': 'Feishu KB RAG · 知识库助手',
+    '🤖 AI Extraction': '🤖 AI 自动整理', '🎯 Next Action': '🎯 下一步提醒',
+    '📥 CRM Import': '📥 一键导入', '🕸️ Relationship Map': '🕸️ 关键关系图',
+    '✅ Habit Tracking': '✅ 连续打卡', '🪐 Planet Rewards': '🪐 星球奖励',
+    '🏅 NFT Badges': '🏅 成就徽章', '⚡ Spark Notes': '⚡ 灵感速记', '📊 Analytics': '📊 数据复盘',
+    '📝 Auto Lesson Plan': '📝 自动备课', '✉️ Auto Email': '✉️ 自动发邮件', '⏱️ 30min → 5min': '⏱️ 30 分钟 → 5 分钟',
     '🇬🇧🇫🇷🇪🇸 EN·FR·ES': '🇬🇧🇫🇷🇪🇸 英·法·西',
-    '🧳 Travel Planning': '🧳 旅行规划', '💰 Budget Optimizer': '💰 预算优化',
-    '🗺️ Route Generator': '🗺️ 路线生成', '🎒 Student-focused': '🎒 学生友好',
-    '🔍 Semantic Search': '🔍 语义搜索', '🗂️ Knowledge Base': '🗂️ 知识库',
+    '🧳 Travel Planning': '🧳 行程搭建', '💰 Budget Optimizer': '💰 精打细算',
+    '🗺️ Route Generator': '🗺️ 路线生成', '🎒 Student-focused': '🎒 学生党友好',
+    '🔍 Semantic Search': '🔍 语义搜索', '🗂️ Knowledge Base': '🗂️ 知识库问答',
     'Yinzhou District, Ningbo': '宁波市鄞州区',
     'Mandarin': '中文', 'English': '英语', 'Français': '法语', 'Español': '西班牙语',
     'International Business': '国际商务', 'European Law': '欧洲法', 'Cross-border E-commerce': '跨境电子商务',
@@ -1488,6 +1515,59 @@
   // ── Scroll reveal ──
   const revealObs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // ── Section title scramble ──
+  const titleScrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const titleScrambleState = new WeakMap();
+
+  function scrambleTitle(el, duration = 520) {
+    const activeTitle = el.querySelector(':scope > [data-lang].show') || el;
+    const previous = titleScrambleState.get(el);
+    if (previous) {
+      clearInterval(previous.interval);
+      previous.nodes.forEach(({ node, original }) => { node.textContent = original; });
+    }
+
+    const walker = document.createTreeWalker(activeTitle, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.textContent.trim()) nodes.push({ node, original: node.textContent });
+    }
+    if (!nodes.length) return;
+
+    let frame = 0;
+    const frames = Math.max(1, Math.round(duration / 16));
+    const interval = setInterval(() => {
+      const progress = frame / frames;
+      nodes.forEach(({ node: textNode, original }) => {
+        textNode.textContent = Array.from(original).map((char, index, chars) => {
+          if (/\s|[.,，。·&—–\-:：'’!?！？0-9]/.test(char)) return char;
+          if (progress > index / chars.length) return char;
+          return titleScrambleChars[Math.floor(Math.random() * titleScrambleChars.length)];
+        }).join('');
+      });
+      frame += 1;
+      if (frame > frames) {
+        nodes.forEach(({ node: textNode, original }) => { textNode.textContent = original; });
+        clearInterval(interval);
+        titleScrambleState.delete(el);
+      }
+    }, 16);
+    titleScrambleState.set(el, { interval, nodes });
+  }
+
+  const titleScrambleObs = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.scrambleSeen) {
+      entry.target.dataset.scrambleSeen = 'true';
+      setTimeout(() => scrambleTitle(entry.target), 140);
+    }
+  }), { threshold: 0.35 });
+
+  document.querySelectorAll('.s-title').forEach(title => {
+    titleScrambleObs.observe(title);
+    title.addEventListener('mouseenter', () => scrambleTitle(title, 480));
+  });
 
   // ── Timeline ──
   const tlObs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.15 });
