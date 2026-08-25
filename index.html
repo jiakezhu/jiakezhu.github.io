@@ -225,9 +225,9 @@
     .life-text { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
     .life-video-card { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr); gap: 0; padding: 0; overflow: hidden; text-decoration: none; color: inherit; cursor: pointer; }
     .life-video-card:hover { background: var(--card); }
-    .life-video-media { position: relative; min-height: 310px; overflow: hidden; background: #080808; }
+    .life-video-media { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #080808; }
     .life-video-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 48%, rgba(16,15,12,0.28) 100%); pointer-events: none; }
-    .life-video-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
+    .life-video-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 39%; transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
     .life-video-card:hover .life-video-media img { transform: scale(1.025); filter: brightness(0.82); }
     .life-video-play { position: absolute; left: 50%; top: 50%; z-index: 2; width: 68px; height: 68px; display: grid; place-items: center; transform: translate(-50%,-50%); border: 1px solid rgba(255,255,255,0.7); border-radius: 50%; color: #111; background: rgba(255,255,255,0.9); box-shadow: 0 14px 38px rgba(0,0,0,0.25); transition: transform 0.3s, background 0.3s; }
     .life-video-play svg { margin-left: 4px; }
@@ -1219,7 +1219,7 @@
     <div class="life-grid">
       <a class="life-card life-video-card reveal" href="https://youtu.be/aAvQUV6Mw7E?si=aSV_UdgNJbnuf3Q7" target="_blank" rel="noopener" aria-label="Watch Moving to Paris on YouTube">
         <div class="life-video-media">
-          <img src="images/paris-youtube-vlog.jpg" alt="Jiake recording an international student podcast in Paris">
+          <img src="images/paris-youtube-vlog.png" alt="Jiake recording an international student podcast with ISAP in Paris">
           <span class="life-video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
         <div class="life-video-copy">
