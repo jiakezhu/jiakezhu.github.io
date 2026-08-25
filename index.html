@@ -223,6 +223,21 @@
     .life-thumb-row { display: flex; gap: 4px; margin-left: auto; }
     .life-thumb { width: 28px; height: 40px; border-radius: 3px; object-fit: cover; border: 1px solid var(--border-s); }
     .life-text { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+    .life-video-card { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr); gap: 0; padding: 0; overflow: hidden; text-decoration: none; color: inherit; cursor: pointer; }
+    .life-video-card:hover { background: var(--card); }
+    .life-video-media { position: relative; min-height: 310px; overflow: hidden; background: #080808; }
+    .life-video-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 48%, rgba(16,15,12,0.28) 100%); pointer-events: none; }
+    .life-video-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
+    .life-video-card:hover .life-video-media img { transform: scale(1.025); filter: brightness(0.82); }
+    .life-video-play { position: absolute; left: 50%; top: 50%; z-index: 2; width: 68px; height: 68px; display: grid; place-items: center; transform: translate(-50%,-50%); border: 1px solid rgba(255,255,255,0.7); border-radius: 50%; color: #111; background: rgba(255,255,255,0.9); box-shadow: 0 14px 38px rgba(0,0,0,0.25); transition: transform 0.3s, background 0.3s; }
+    .life-video-play svg { margin-left: 4px; }
+    .life-video-card:hover .life-video-play { transform: translate(-50%,-50%) scale(1.08); background: #fff; }
+    .life-video-copy { display: flex; flex-direction: column; justify-content: center; padding: 38px; border-left: 1px solid var(--border-s); }
+    .life-video-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+    .life-video-meta span { padding: 4px 9px; border: 1px solid var(--border); border-radius: 20px; color: var(--sage); font-size: 0.61rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .life-video-title { margin: 0 0 14px; font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; color: var(--text); font-size: clamp(1.45rem, 2.2vw, 2rem); font-weight: 600; line-height: 1.15; }
+    .life-video-desc { margin: 0 0 24px; color: var(--muted); font-size: 0.82rem; line-height: 1.75; }
+    .life-video-cta { display: flex; align-items: center; gap: 9px; margin-top: auto; color: var(--gold); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
     .life-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 20px; border: 1px solid var(--gold); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 3px; position: relative; overflow: hidden; transition: color 0.3s; align-self: flex-start; }
     .life-cta::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); z-index: 0; }
     .life-cta:hover::before { transform: scaleX(1); }
@@ -493,6 +508,11 @@
       .life-thumb-row { gap: 3px; }
       .life-thumb { width: 24px; height: 34px; }
       .life-text { font-size: 0.82rem; line-height: 1.7; margin-bottom: 10px; }
+      .life-video-card { grid-template-columns: 1fr; }
+      .life-video-media { min-height: 0; aspect-ratio: 16 / 9; }
+      .life-video-copy { padding: 26px 22px; border-left: 0; border-top: 1px solid var(--border-s); }
+      .life-video-title { font-size: 1.45rem; }
+      .life-video-play { width: 58px; height: 58px; }
       .life-flags { font-size: 0.95rem; gap: 4px 6px; flex-wrap: wrap; }
       .life-cta { padding: 8px 16px; font-size: 0.66rem; }
 
@@ -1197,6 +1217,19 @@
     <div class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">简历之外</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">Beyond the<br><em>résumé.</em></span><span data-lang="fr">Au-delà du<br><em>CV.</em></span><span data-lang="es">Más allá del<br><em>currículum.</em></span><span data-lang="zh">简历写不下的，<br><em>我也放在这里。</em></span></h2>
     <div class="life-grid">
+      <a class="life-card life-video-card reveal" href="https://youtu.be/aAvQUV6Mw7E?si=aSV_UdgNJbnuf3Q7" target="_blank" rel="noopener" aria-label="Watch Moving to Paris on YouTube">
+        <div class="life-video-media">
+          <img src="images/paris-youtube-vlog.jpg" alt="Jiake recording an international student podcast in Paris">
+          <span class="life-video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="life-video-copy">
+          <div class="life-video-meta"><span>Paris</span><span>YouTube</span><span>EN / FR</span></div>
+          <h3 class="life-video-title">Moving to Paris: The Reality of International Student Life</h3>
+          <p class="life-video-desc"><span data-lang="en" class="show">A conversation I recorded in Paris about the less polished side of moving abroad — housing, language, university, culture shock, and the everyday reality behind international student life.</span><span data-lang="fr">Une conversation enregistrée à Paris sur la réalité moins lisse d'une installation à l'étranger : logement, langues, université, choc culturel et quotidien des étudiants internationaux.</span><span data-lang="es">Una conversación grabada en París sobre la cara menos idealizada de mudarse al extranjero: vivienda, idiomas, universidad, choque cultural y la vida cotidiana de los estudiantes internacionales.</span><span data-lang="zh">我在巴黎录的一期英法双语访谈。聊的不只是“来巴黎留学”，还有住房、语言、课堂、文化冲击，以及国际学生真正要面对的日常。</span></p>
+          <div class="life-video-cta"><span data-lang="en" class="show">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span><span data-lang="es">Ver en YouTube</span><span data-lang="zh">去 YouTube 看完整视频</span><span>↗</span></div>
+        </div>
+      </a>
+
       <div class="life-card reveal" onclick="openModal('modal-reading')">
         <div class="life-card-head">
           <div class="life-icon">📚</div>
