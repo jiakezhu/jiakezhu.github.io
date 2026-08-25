@@ -232,19 +232,15 @@
     .life-video-play { position: absolute; left: 50%; top: 50%; z-index: 2; width: 70px; height: 70px; display: grid; place-items: center; transform: translate(-50%,-50%); border: 1px solid rgba(255,255,255,0.58); border-radius: 50%; color: #fff; background: rgba(8,8,8,0.62); backdrop-filter: blur(12px); box-shadow: 0 14px 38px rgba(0,0,0,0.32); transition: transform 0.3s, background 0.3s, border-color 0.3s; }
     .life-video-play svg { margin-left: 4px; }
     .life-video-card:hover .life-video-play { transform: translate(-50%,-50%) scale(1.08); background: #ff0033; border-color: #ff4668; }
-    .life-video-copy { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 36px 34px 32px; border-left: 1px solid rgba(255,255,255,0.07); background: radial-gradient(circle at 100% 0%, rgba(255,255,255,0.07), transparent 42%), #0d0d0d; }
-    .life-video-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; color: rgba(255,255,255,0.55); font-size: 0.59rem; letter-spacing: 0.12em; text-transform: uppercase; }
-    .life-video-featured { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.78); }
-    .life-video-featured::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #ff0033; box-shadow: 0 0 0 4px rgba(255,0,51,0.12); }
-    .life-video-title { margin: 0 0 18px; font-family: 'DM Sans', 'Noto Sans SC', sans-serif; color: #fff; font-size: clamp(1.38rem, 1.95vw, 1.82rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.18; text-wrap: balance; }
-    .life-video-channel { display: flex; align-items: center; gap: 11px; padding: 14px 0; margin-bottom: 17px; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .life-video-avatar { width: 34px; height: 34px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #f2f2f2; color: #161616; font-size: 0.57rem; font-weight: 700; letter-spacing: -0.02em; }
-    .life-video-channel b { display: block; color: rgba(255,255,255,0.9); font-size: 0.75rem; font-weight: 500; line-height: 1.3; }
-    .life-video-channel small { display: block; margin-top: 2px; color: rgba(255,255,255,0.4); font-size: 0.62rem; letter-spacing: 0.02em; }
-    .life-video-desc { margin: 0 0 24px; color: rgba(255,255,255,0.5); font-size: 0.78rem; line-height: 1.72; }
-    .life-video-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: auto; padding: 11px 15px; border-radius: 8px; color: #fff; background: rgba(255,255,255,0.1); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.25s, transform 0.25s; }
+    .life-video-copy { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 42px 38px; border-left: 1px solid rgba(255,255,255,0.07); background: linear-gradient(135deg, #121212, #090909); }
+    .life-video-brand { margin-bottom: 11px; color: rgba(255,255,255,0.88); font-size: 0.61rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+    .life-video-title { margin: 0 0 17px; font-family: 'DM Sans', 'Noto Sans SC', sans-serif; color: #fff; font-size: clamp(1.5rem, 2.15vw, 2rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.14; text-wrap: balance; }
+    .life-video-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 20px; color: rgba(255,255,255,0.43); font-size: 0.61rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .life-video-meta span + span::before { content: '•'; margin-right: 8px; color: rgba(255,255,255,0.22); }
+    .life-video-desc { margin: 0 0 28px; color: rgba(255,255,255,0.52); font-size: 0.79rem; line-height: 1.72; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .life-video-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin-top: 0; padding: 10px 17px; border-radius: 999px; color: #111; background: #fff; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.04em; transition: background 0.25s, transform 0.25s; }
     .life-video-cta svg { flex: 0 0 auto; }
-    .life-video-card:hover .life-video-cta { background: #ff0033; transform: translateY(-1px); }
+    .life-video-card:hover .life-video-cta { background: #f0f0f0; transform: scale(1.025); }
     .life-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 20px; border: 1px solid var(--gold); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 3px; position: relative; overflow: hidden; transition: color 0.3s; align-self: flex-start; }
     .life-cta::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); z-index: 0; }
     .life-cta:hover::before { transform: scaleX(1); }
@@ -1230,9 +1226,9 @@
           <span class="life-video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
         <div class="life-video-copy">
-          <div class="life-video-meta"><span class="life-video-featured"><span data-lang="en" class="show">Featured video</span><span data-lang="fr">À la une</span><span data-lang="es">Vídeo destacado</span><span data-lang="zh">精选视频</span></span><span>EN / FR</span></div>
+          <div class="life-video-brand">ISAP Podcast</div>
           <h3 class="life-video-title">Moving to Paris: The Reality of International Student Life</h3>
-          <div class="life-video-channel"><span class="life-video-avatar">ISAP</span><span><b>International Student Association of Paris</b><small>ISAP Podcast · Episode 1 · Paris</small></span></div>
+          <div class="life-video-meta"><span>Episode 1</span><span>Paris</span><span>EN / FR</span></div>
           <p class="life-video-desc"><span data-lang="en" class="show">A conversation I recorded in Paris about the less polished side of moving abroad — housing, language, university, culture shock, and the everyday reality behind international student life.</span><span data-lang="fr">Une conversation enregistrée à Paris sur la réalité moins lisse d'une installation à l'étranger : logement, langues, université, choc culturel et quotidien des étudiants internationaux.</span><span data-lang="es">Una conversación grabada en París sobre la cara menos idealizada de mudarse al extranjero: vivienda, idiomas, universidad, choque cultural y la vida cotidiana de los estudiantes internacionales.</span><span data-lang="zh">我在巴黎录的一期英法双语访谈。聊的不只是“来巴黎留学”，还有住房、语言、课堂、文化冲击，以及国际学生真正要面对的日常。</span></p>
           <div class="life-video-cta"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-lang="en" class="show">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span><span data-lang="es">Ver en YouTube</span><span data-lang="zh">去 YouTube 看完整视频</span></div>
         </div>
