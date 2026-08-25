@@ -94,7 +94,8 @@
     .hero-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 60px 56px; }
     .hero-img-wrap { position: relative; width: 100%; max-width: 400px; opacity: 0; animation: fadeUp 1.1s ease 0.5s forwards; }
     .hero-img-frame { position: absolute; top: -16px; left: -16px; right: 16px; bottom: -16px; border: 1px solid var(--border); border-radius: 10px; pointer-events: none; }
-    .hero-photo { width: 100%; display: block; border-radius: 8px; object-fit: cover; object-position: center center; height: 72vh; max-height: 680px; position: relative; z-index: 1; }
+    .hero-photo-clip { width: 100%; height: 72vh; max-height: 680px; border-radius: 8px; overflow: hidden; position: relative; z-index: 1; line-height: 0; }
+    .hero-photo { width: 100%; height: calc(100% + 10px); display: block; object-fit: cover; object-position: center top; }
     .hero-badge { position: absolute; bottom: 32px; left: -20px; background: rgba(28,27,24,0.95); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; font-size: 0.76rem; color: var(--text); z-index: 2; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
     .badge-dot { width: 7px; height: 7px; background: var(--sage); border-radius: 50%; animation: pulse 2.2s ease-in-out infinite; flex-shrink: 0; }
     
@@ -374,7 +375,7 @@
       #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; }
       .hero-left { padding: 80px 40px 20px; }
       .hero-right { padding: 0 40px 30px; }
-      .hero-photo { height: 40vh; max-height: 360px; }
+      .hero-photo-clip { height: 40vh; max-height: 360px; }
       .hero-img-frame { display: none; }
       .hero-badge { left: 10px; bottom: 20px; }
       .about-grid, .honors-grid { grid-template-columns: 1fr; gap: 56px; }
@@ -404,7 +405,8 @@
       .hero-subtitle-wrap { order: 2; margin: 8px 20px 12px; height: 2rem; }
       .hero-right { order: 3; padding: 0 20px 12px; display: flex; }
       .hero-img-wrap { max-width: 100%; width: 100%; }
-      .hero-photo { height: 32vh; max-height: 240px; border-radius: 8px; width: 100%; }
+      .hero-photo-clip { height: 32vh; max-height: 240px; width: 100%; }
+      .hero-photo { height: calc(100% + 8px); }
       .hero-badge { font-size: 0.65rem; padding: 6px 10px; left: 6px; bottom: 10px; }
       .hero-img-frame { display: none; }
       .hero-tagline { order: 4; padding: 0 20px; font-size: 0.82rem; line-height: 1.6; margin-bottom: 16px; max-width: 100%; }
@@ -744,7 +746,7 @@
   <div class="hero-right">
     <div class="hero-img-wrap">
       <div class="hero-img-frame"></div>
-      <img src="images/hero.jpeg" class="hero-photo" alt="Jiake ZHU at the Colosseum, Rome">
+      <div class="hero-photo-clip"><img src="images/hero.jpeg" class="hero-photo" alt="Jiake ZHU at the Colosseum, Rome"></div>
       <div class="hero-badge"><div class="badge-dot"></div><span>📍 Colosseum, Rome</span></div>
     </div>
   </div></div>
