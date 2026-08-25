@@ -225,9 +225,9 @@
     .life-text { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
     .life-video-card { grid-column: 1 / -1; display: block; padding: 0; overflow: hidden; text-decoration: none; color: inherit; cursor: pointer; border-radius: 16px; background: #080808; box-shadow: 0 24px 70px rgba(0,0,0,0.28); }
     .life-video-card:hover { background: #080808; }
-    .life-video-media { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #080808; }
+    .life-video-media { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #080808; line-height: 0; }
     .life-video-media::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,0.04) 30%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.92) 100%); pointer-events: none; }
-    .life-video-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; transform: scale(1.03); transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
+    .life-video-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; transform: scale(1.03); transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
     .life-video-card:hover .life-video-media img { transform: scale(1.06); filter: brightness(0.82); }
     .life-video-play { position: absolute; right: 38px; top: 38px; z-index: 4; width: 62px; height: 62px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; color: #fff; background: rgba(10,10,10,0.45); backdrop-filter: blur(12px); box-shadow: 0 12px 32px rgba(0,0,0,0.28); transition: transform 0.3s, background 0.3s; }
     .life-video-play svg { margin-left: 4px; }
