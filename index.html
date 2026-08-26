@@ -94,7 +94,8 @@
     .hero-right { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 60px 56px; }
     .hero-img-wrap { position: relative; width: 100%; max-width: 400px; opacity: 0; animation: fadeUp 1.1s ease 0.5s forwards; }
     .hero-img-frame { position: absolute; top: -16px; left: -16px; right: 16px; bottom: -16px; border: 1px solid var(--border); border-radius: 10px; pointer-events: none; }
-    .hero-photo { width: 100%; display: block; border-radius: 8px; object-fit: cover; object-position: center center; height: 72vh; max-height: 680px; position: relative; z-index: 1; }
+    .hero-photo-clip { width: 100%; height: 72vh; max-height: 680px; border-radius: 8px; overflow: hidden; position: relative; z-index: 1; line-height: 0; }
+    .hero-photo { width: 100%; height: calc(100% + 10px); display: block; object-fit: cover; object-position: center top; }
     .hero-badge { position: absolute; bottom: 32px; left: -20px; background: rgba(28,27,24,0.95); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; font-size: 0.76rem; color: var(--text); z-index: 2; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
     .badge-dot { width: 7px; height: 7px; background: var(--sage); border-radius: 50%; animation: pulse 2.2s ease-in-out infinite; flex-shrink: 0; }
     
@@ -223,6 +224,23 @@
     .life-thumb-row { display: flex; gap: 4px; margin-left: auto; }
     .life-thumb { width: 28px; height: 40px; border-radius: 3px; object-fit: cover; border: 1px solid var(--border-s); }
     .life-text { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+    .life-video-card { grid-column: 1 / -1; display: block; padding: 0; overflow: hidden; text-decoration: none; color: inherit; cursor: pointer; border-radius: 16px; background: #080808; box-shadow: 0 24px 70px rgba(0,0,0,0.28); }
+    .life-video-card:hover { background: #080808; }
+    .life-video-media { position: relative; min-height: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #080808; line-height: 0; }
+    .life-video-media::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,0.04) 30%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.92) 100%); pointer-events: none; }
+    .life-video-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; transform: scale(1.03); transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.35s; }
+    .life-video-card:hover .life-video-media img { transform: scale(1.06); filter: brightness(0.82); }
+    .life-video-play { position: absolute; right: 38px; top: 38px; z-index: 4; width: 62px; height: 62px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; color: #fff; background: rgba(10,10,10,0.45); backdrop-filter: blur(12px); box-shadow: 0 12px 32px rgba(0,0,0,0.28); transition: transform 0.3s, background 0.3s; }
+    .life-video-play svg { margin-left: 4px; }
+    .life-video-card:hover .life-video-play { transform: scale(1.08); background: rgba(201,168,108,0.92); color: var(--bg); }
+    .life-video-copy { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px; padding: 46px 48px 42px; pointer-events: none; }
+    .life-video-meta { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 12px; color: rgba(255,255,255,0.62); font-size: 0.61rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .life-video-meta span + span::before { content: '·'; margin: 0 9px; color: rgba(255,255,255,0.35); }
+    .life-video-title { margin: 0 0 12px; color: #fff; text-align: left; }
+    .life-video-title-main { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.35rem, 4.3vw, 4.2rem); font-weight: 600; letter-spacing: -0.035em; line-height: 0.98; }
+    .life-video-title-sub { display: block; margin-top: 9px; font-family: 'DM Sans', 'Noto Sans SC', sans-serif; font-size: clamp(0.86rem, 1.25vw, 1.05rem); font-weight: 400; letter-spacing: -0.01em; line-height: 1.35; color: rgba(255,255,255,0.78); }
+    .life-video-desc { max-width: 650px; margin: 0; color: rgba(255,255,255,0.5); font-size: 0.76rem; line-height: 1.65; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+    .life-video-cta { display: flex; align-items: center; gap: 9px; padding-bottom: 2px; color: #fff; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; white-space: nowrap; }
     .life-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 20px; border: 1px solid var(--gold); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 3px; position: relative; overflow: hidden; transition: color 0.3s; align-self: flex-start; }
     .life-cta::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); z-index: 0; }
     .life-cta:hover::before { transform: scaleX(1); }
@@ -357,7 +375,7 @@
       #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 60px; }
       .hero-left { padding: 80px 40px 20px; }
       .hero-right { padding: 0 40px 30px; }
-      .hero-photo { height: 40vh; max-height: 360px; }
+      .hero-photo-clip { height: 40vh; max-height: 360px; }
       .hero-img-frame { display: none; }
       .hero-badge { left: 10px; bottom: 20px; }
       .about-grid, .honors-grid { grid-template-columns: 1fr; gap: 56px; }
@@ -387,7 +405,8 @@
       .hero-subtitle-wrap { order: 2; margin: 8px 20px 12px; height: 2rem; }
       .hero-right { order: 3; padding: 0 20px 12px; display: flex; }
       .hero-img-wrap { max-width: 100%; width: 100%; }
-      .hero-photo { height: 32vh; max-height: 240px; border-radius: 8px; width: 100%; }
+      .hero-photo-clip { height: 32vh; max-height: 240px; width: 100%; }
+      .hero-photo { height: calc(100% + 8px); }
       .hero-badge { font-size: 0.65rem; padding: 6px 10px; left: 6px; bottom: 10px; }
       .hero-img-frame { display: none; }
       .hero-tagline { order: 4; padding: 0 20px; font-size: 0.82rem; line-height: 1.6; margin-bottom: 16px; max-width: 100%; }
@@ -493,6 +512,14 @@
       .life-thumb-row { gap: 3px; }
       .life-thumb { width: 24px; height: 34px; }
       .life-text { font-size: 0.82rem; line-height: 1.7; margin-bottom: 10px; }
+      .life-video-card { border-radius: 12px; }
+      .life-video-media { min-height: 0; aspect-ratio: 16 / 9; }
+      .life-video-copy { grid-template-columns: 1fr; gap: 16px; padding: 26px 22px 22px; }
+      .life-video-title-main { font-size: clamp(2rem, 10vw, 3rem); }
+      .life-video-title-sub { max-width: 86%; font-size: 0.8rem; }
+      .life-video-desc { display: none; }
+      .life-video-cta { padding-bottom: 0; }
+      .life-video-play { right: 18px; top: 18px; width: 50px; height: 50px; }
       .life-flags { font-size: 0.95rem; gap: 4px 6px; flex-wrap: wrap; }
       .life-cta { padding: 8px 16px; font-size: 0.66rem; }
 
@@ -719,7 +746,7 @@
   <div class="hero-right">
     <div class="hero-img-wrap">
       <div class="hero-img-frame"></div>
-      <img src="images/hero.jpeg" class="hero-photo" alt="Jiake ZHU at the Colosseum, Rome">
+      <div class="hero-photo-clip"><img src="images/hero.jpeg" class="hero-photo" alt="Jiake ZHU at the Colosseum, Rome"></div>
       <div class="hero-badge"><div class="badge-dot"></div><span>📍 Colosseum, Rome</span></div>
     </div>
   </div></div>
@@ -1197,6 +1224,21 @@
     <div class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">简历之外</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">Beyond the<br><em>résumé.</em></span><span data-lang="fr">Au-delà du<br><em>CV.</em></span><span data-lang="es">Más allá del<br><em>currículum.</em></span><span data-lang="zh">简历写不下的，<br><em>我也放在这里。</em></span></h2>
     <div class="life-grid">
+      <a class="life-card life-video-card reveal" href="https://youtu.be/aAvQUV6Mw7E?si=aSV_UdgNJbnuf3Q7" target="_blank" rel="noopener" aria-label="Watch Moving to Paris on YouTube">
+        <div class="life-video-media">
+          <img src="images/paris-youtube-vlog.png" alt="Jiake recording an international student podcast with ISAP in Paris">
+          <span class="life-video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="life-video-copy">
+          <div class="life-video-info">
+            <div class="life-video-meta"><span>Episode 01</span><span>Paris</span><span>EN / FR</span></div>
+            <h3 class="life-video-title"><span class="life-video-title-main">Moving to Paris</span><span class="life-video-title-sub">The Reality of International Student Life</span></h3>
+            <p class="life-video-desc"><span data-lang="en" class="show">A conversation I recorded in Paris about the less polished side of moving abroad — housing, language, university, culture shock, and the everyday reality behind international student life.</span><span data-lang="fr">Une conversation enregistrée à Paris sur la réalité moins lisse d'une installation à l'étranger : logement, langues, université, choc culturel et quotidien des étudiants internationaux.</span><span data-lang="es">Una conversación grabada en París sobre la cara menos idealizada de mudarse al extranjero: vivienda, idiomas, universidad, choque cultural y la vida cotidiana de los estudiantes internacionales.</span><span data-lang="zh">我在巴黎录的一期英法双语访谈。聊的不只是“来巴黎留学”，还有住房、语言、课堂、文化冲击，以及国际学生真正要面对的日常。</span></p>
+          </div>
+          <div class="life-video-cta"><span data-lang="en" class="show">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span><span data-lang="es">Ver en YouTube</span><span data-lang="zh">去 YouTube 看完整视频</span><span>↗</span></div>
+        </div>
+      </a>
+
       <div class="life-card reveal" onclick="openModal('modal-reading')">
         <div class="life-card-head">
           <div class="life-icon">📚</div>
