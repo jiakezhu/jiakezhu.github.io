@@ -1,0 +1,9 @@
+# Keep authoring sources and dependencies out of branch-based GitHub Pages builds.
+# Source files in this public GitHub repository are still publicly readable.
+exclude:
+  - content
+  - scripts
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md

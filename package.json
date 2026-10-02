@@ -1,0 +1,7 @@
+{
+  "name": "jiake-personal-site",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node scripts/build-journal.mjs", "test": "node --test scripts/journal.test.mjs", "preview": "python3 -m http.server 4173"},
+  "devDependencies": {"gray-matter": "4.0.3", "markdown-it": "14.1.0"}
+}
