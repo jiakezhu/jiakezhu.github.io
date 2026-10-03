@@ -1,17 +1,31 @@
-/* The three pillars belong in the first reading, with their identities visible. */
+/* One pillar at a time, with its identities travelling together. */
 #hero { max-width:1200px; column-gap:48px; }
-.hero-subtitle-wrap { order:2; height:auto; margin:0 0 20px; display:flex; flex-direction:column; gap:0; }
+.hero-left { justify-content:center; }
+.hero-alias { margin-bottom:23px; }
+.hero-subtitle-wrap { order:2; position:relative; width:100%; height:90px; margin:0 0 24px; display:block; overflow:hidden; }
 .hero-tagline { order:3; }
-.cycle-word { position:relative; inset:auto; display:flex!important; align-items:center; justify-content:space-between; flex-wrap:wrap; width:100%; min-height:55px; padding:10px 0; border-bottom:1px solid var(--border-s); opacity:1!important; transform:none!important; animation:none!important; white-space:normal; text-transform:none; letter-spacing:0; gap:10px; }
-.cw-text { color:var(--text); font-size:1.2rem; font-weight:750; letter-spacing:-.02em; }
+.cycle-word { position:absolute; inset:0; display:flex!important; align-items:flex-start; justify-content:center; flex-direction:column; flex-wrap:nowrap; width:100%; min-height:0; padding:0; border:0; gap:12px; white-space:normal; text-transform:none; letter-spacing:0; opacity:0; animation:heroPillarCycle 9s ease-in-out infinite; }
+.cycle-word:nth-child(1) { animation-delay:0s; }
+.cycle-word:nth-child(2) { animation-delay:-6s; }
+.cycle-word:nth-child(3) { animation-delay:-3s; }
+.cw-text { color:var(--text); font-size:1.65rem; line-height:1.2; font-weight:750; letter-spacing:-.025em; }
 .cycle-word:first-child .cw-text { color:var(--gold); }
 .cycle-word:nth-child(2) .cw-text { color:var(--sage); }
-.cw-icons { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:7px; }
+.cw-icons { display:flex; align-items:center; justify-content:flex-start; flex-wrap:nowrap; gap:9px; height:29px; }
 .cw-icons img { height:27px; max-width:44px; width:auto; object-fit:contain; opacity:1; border-radius:4px; }
 .cw-icons svg { width:27px; height:27px; }
 .cw-icons .tencent-logo-mini { width:52px; height:27px; border-radius:4px; }
-.cw-flag { font-size:1.6rem; }
-.hero-photo-clip { height:540px; }
+.cw-flag { font-size:1.55rem; line-height:1; }
+.hero-img-wrap { position:relative; padding-right:38px; }
+.hero-photo-clip { height:clamp(420px,59vh,510px); }
+.hero-photo-motto { position:absolute; right:0; top:50%; display:flex; align-items:center; gap:14px; margin:0; transform:translateY(-50%) rotate(180deg); writing-mode:vertical-rl; white-space:nowrap; color:var(--gold); font:700 1rem/1.2 var(--sans); letter-spacing:.035em; }
+.hero-photo-motto .hero-status-dot { flex-shrink:0; }
+html.intro-playing .cycle-word { animation-play-state:paused; }
+@keyframes heroPillarCycle {
+  0%,28% { opacity:1; transform:translateY(0); }
+  32%,96% { opacity:0; transform:translateY(-16px); }
+  100% { opacity:1; transform:translateY(0); }
+}
 .cover-sales { display:block; background:transparent; aspect-ratio:16/9; cursor:zoom-in; }
 .proj-row.is-featured:has(.cover-sales) { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; gap:28px; }
 .proj-row.is-featured .cover-sales { min-height:0; align-self:center; border-radius:15px; box-shadow:0 16px 45px #0002; }
@@ -46,6 +60,19 @@ html[data-theme="light"] .sales-wordmark .sales-logo-light { display:block; }
 .portal-link { display:flex; justify-content:space-between; align-items:center; padding-top:20px; margin-top:12px; border-top:1px solid #f3f0e924; font-weight:650; font-size:.92rem; color:#d7ed8b; }
 .portal-meta { display:flex; align-items:center; flex-wrap:wrap; gap:18px; font-size:.75rem; color:#b2b5b8; margin:0; }
 .portal-meta time { font-variant-numeric:tabular-nums; }
-@media(max-width:960px) { #hero { column-gap:30px; }.cw-text { font-size:1.05rem; }.cw-icons { gap:5px; }.cw-icons img,.cw-icons svg { height:24px; }.hero-photo-clip { height:520px; } }
-@media(max-width:700px) { .hero-subtitle-wrap { order:3; margin:0 0 20px; height:auto; }.hero-tagline { order:4; }.hero-actions { order:5; }.cycle-word { min-height:52px; padding:11px 0; gap:8px; }.cw-text { font-size:1.1rem!important; }.cw-icons { max-width:65%; }.cw-icons img { height:25px; max-width:38px; }.cw-flag { font-size:1.4rem; }.hero-photo-clip { height:auto; }.reading-portals { grid-template-columns:1fr; gap:20px; }.writing-finale { padding:48px 0; }.portal-top { padding:22px 22px 0; }.portal-copy { padding:22px; }.portal-art { height:auto; }.reading-portal>a { grid-template-columns:1fr; grid-template-areas:"top" "art" "copy"; }.portal-art { max-height:240px; margin-top:12px; }.portal-copy h2 { font-size:1.5rem; } }
-@media(prefers-reduced-motion:reduce) { .cycle-word { display:flex!important; }.reading-portal:hover { transform:none; } }
+@media(max-width:960px) {
+  #hero { column-gap:30px; }
+  .cw-text { font-size:1.4rem; }
+  .cw-icons { gap:7px; }
+  .cw-icons img,.cw-icons svg { height:25px; }
+  .cw-icons .tencent-logo-mini { width:47px; height:25px; }
+  .hero-img-wrap { padding-right:32px; }
+  .hero-photo-motto { font-size:.9rem; }
+  .hero-photo-clip { height:440px; }
+}
+@media(max-width:700px) { .hero-subtitle-wrap { order:3; margin:0 0 20px; height:86px; }.hero-tagline { order:4; }.hero-actions { order:5; }.cycle-word { min-height:0; padding:0; gap:11px; }.cw-text { font-size:1.45rem!important; letter-spacing:-.025em!important; }.cw-icons { max-width:none; }.cw-icons img { height:25px; max-width:38px; }.cw-flag { font-size:1.4rem; }.hero-img-wrap { padding-right:30px; }.hero-photo-motto { font-size:.9rem; }.hero-photo-clip { height:auto; }.reading-portals { grid-template-columns:1fr; gap:20px; }.writing-finale { padding:48px 0; }.portal-top { padding:22px 22px 0; }.portal-copy { padding:22px; }.portal-art { height:auto; }.reading-portal>a { grid-template-columns:1fr; grid-template-areas:"top" "art" "copy"; }.portal-art { max-height:240px; margin-top:12px; }.portal-copy h2 { font-size:1.5rem; } }
+@media(prefers-reduced-motion:reduce) {
+  .hero-subtitle-wrap { height:auto; display:flex; flex-direction:column; gap:16px; }
+  .cycle-word { position:static; display:flex!important; opacity:1; transform:none; animation:none; }
+  .reading-portal:hover { transform:none; }
+}
