@@ -179,8 +179,10 @@ draft: false
 
 ### 成长漫画与开场
 
-`#story` 是个人成长漫画的预留板块，包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover.png` 是图像模型生成的空白漫画书封面，生成提示词保存在 `content/story/cover-prompt.md`。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
+成长故事和公开日志相邻放在首页最后，共用一个阅读区域。`#story` 是个人成长漫画的预留板块，包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
 
-`assets/intro.js` / `assets/intro.css` 提供轨道汇聚、姓名出现及幕帘揭幕动画。每个浏览器会话首次进入首页时播放，约 1.85 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
+`assets/intro.js` / `assets/intro.css` 提供姓名逐字入场、三张个人照片展开及五列分幕揭幕动画。每个浏览器会话首次进入首页时播放，约 2.72 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
 当前所有修改仅用于本地预览和本地提交。未得到作者后续明确发布指令前，不推送远端或部署。
+
+开场设计参考 Awwwards 收录的 [Giats Loading Animation](https://www.awwwards.com/inspiration/loading-animation-https-giats-me) 和 [Eduard Bodak Page transition](https://www.awwwards.com/inspiration/page-transition-eduard-bodak-portfolio)，以本站的圆润字体、真实旅行照片和配色重新设计。没有引入这些网站的媒体文件或代码。

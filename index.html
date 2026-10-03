@@ -672,17 +672,21 @@
   <script src="assets/theme.js"></script>
   <link rel="stylesheet" href="assets/refinement.css">
   <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/intro.css">
-  <link rel="stylesheet" href="assets/story.css">
+  <link rel="stylesheet" href="assets/intro.css?v=2">
+  <link rel="stylesheet" href="assets/story.css?v=2">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
 <dialog id="site-intro" class="site-intro" aria-label="开场动画 / Welcome animation">
+  <div class="intro-shutters" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="intro-grid" aria-hidden="true"></div>
-  <div class="intro-orbit" aria-hidden="true"></div><div class="intro-orbit intro-orbit--two" aria-hidden="true"></div><div class="intro-orbit intro-orbit--three" aria-hidden="true"></div>
-  <span class="intro-corner" aria-hidden="true">A little of my world /</span>
-  <div class="intro-center"><p class="intro-eyebrow"><span class="il en show">Ideas. Places. Stories.</span><span class="il fr">Idées. Voyages. Histoires.</span><span class="il es">Ideas. Lugares. Historias.</span><span class="il zh">想法，足迹，故事。</span></p><div class="intro-name">Jiake Zhu<span>.</span></div><div class="intro-line" aria-hidden="true"></div><p class="intro-signature">Always Day One.</p></div>
-  <button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button>
+  <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>ALWAYS DAY ONE.</span></div>
+  <div class="intro-stage">
+    <div class="intro-title" aria-label="Jiake Zhu"><div class="intro-word"><span>J</span><span>i</span><span>a</span><span>k</span><span>e</span></div><div class="intro-word intro-word--last"><span>Z</span><span>h</span><span>u</span><span class="intro-period">.</span></div></div>
+    <div class="intro-photos" aria-hidden="true"><div class="intro-photo intro-photo--back"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--middle"><img src="images/瑞士.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--front"><img src="images/hero.jpeg" alt="" decoding="async"></div></div>
+    <p class="intro-greeting">你好。 <span>Hello.</span> Bonjour. <span>Hola.</span></p>
+  </div>
+  <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
 
 <!-- NAV -->
@@ -690,12 +694,12 @@
   <a href="#hero" class="nav-logo">Jiake ZHU</a>
   <div class="nav-center" id="nav-links">
     <a href="#about" class="nav-link"><span class="il en show">About</span><span class="il fr">À propos</span><span class="il es">Sobre mí</span><span class="il zh">关于我</span></a>
-    <a href="#story" class="nav-link"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></a>
     <a href="#education" class="nav-link"><span class="il en show">Education</span><span class="il fr">Formation</span><span class="il es">Formación</span><span class="il zh">学习</span></a>
     <a href="#experience" class="nav-link"><span class="il en show">Experience</span><span class="il fr">Expériences</span><span class="il es">Experiencia</span><span class="il zh">工作</span></a>
     <a href="#projects" class="nav-link"><span class="il en show">AI Portfolio</span><span class="il fr">Portfolio IA</span><span class="il es">Portfolio IA</span><span class="il zh">AI作品集</span></a>
     <a href="#journey" class="nav-link"><span class="il en show">Journey</span><span class="il fr">Parcours</span><span class="il es">Trayecto</span><span class="il zh">足迹</span></a>
     <a href="#life" class="nav-link"><span class="il en show">Life</span><span class="il fr">Vie</span><span class="il es">Vida</span><span class="il zh">生活</span></a>
+    <a href="#story" class="nav-link"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></a>
     <a href="#journal" class="nav-link"><span class="il en show">Journal</span><span class="il fr">Journal</span><span class="il es">Diario</span><span class="il zh">日志</span></a>
   </div>
   <div class="lang-switcher">
@@ -846,38 +850,10 @@
   </div>
 </section>
 
-<!-- GROWTH COMIC: actual life stories will be supplied by the owner. -->
-<section id="story" class="sf story-section">
-  <div class="si">
-    <div data-chapter="02" class="s-label"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></div>
-    <h2 class="s-title"><span data-lang="en" class="show">Life, <em>frame by frame.</em></span><span data-lang="fr">Une vie, <em>case par case.</em></span><span data-lang="es">La vida, <em>viñeta a viñeta.</em></span><span data-lang="zh">我的成长，<em>画进漫画里。</em></span></h2>
-    <p class="story-intro"><span data-lang="en" class="show">From childhood to today, the moments that shape a person.<br>The pages are here. The stories will follow.</span><span data-lang="fr">De l’enfance à aujourd’hui, les moments qui nous façonnent.<br>Les pages sont là. Les histoires viendront.</span><span data-lang="es">De la infancia hasta hoy, los momentos que nos forman.<br>Las páginas están aquí. Las historias vendrán.</span><span data-lang="zh">从童年到现在，那些慢慢塑造我的片刻。<br>先留好书页，再把故事一页页写下。</span></p>
-    <div class="story-layout">
-      <button type="button" class="story-cover" aria-haspopup="dialog" aria-controls="story-dialog">
-        <span class="story-cover-label" aria-hidden="true"><span>LIFE IN FRAMES</span><span>THE UNWRITTEN PAGES</span></span>
-        <img class="story-cover-image" src="images/growth-comic-cover.png" width="1536" height="1024" loading="lazy" alt="空白漫画书的封面视觉，尚未填入个人经历">
-        <span class="story-cover-bottom"><span class="il en show">Preview the comic cover</span><span class="il fr">Voir la couverture</span><span class="il es">Ver la portada</span><span class="il zh">预览漫画封面</span><span class="story-cover-arrow" aria-hidden="true">↗</span></span>
-      </button>
-      <div class="story-chapters" role="group" aria-label="成长漫画章节 / Comic chapters">
-        <button type="button" class="story-chapter" aria-pressed="true"><span class="story-chapter-number" aria-hidden="true">01</span><span class="story-chapter-name">童年的章节</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">02</span><span class="story-chapter-name">少年的章节</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">03</span><span class="story-chapter-name">走向更大的世界</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">04</span><span class="story-chapter-name">此刻与以后</span><span class="story-chapter-status">故事待写</span></button>
-        <p class="story-waiting" id="story-selection" role="status" aria-live="polite">童年的章节 · 故事待写</p>
-      </div>
-    </div>
-  </div>
-</section>
-<dialog id="story-dialog" class="story-dialog" aria-labelledby="story-dialog-title">
-  <div class="story-dialog-header"><h2 id="story-dialog-title"><span class="il en show">Life in frames</span><span class="il fr">Une vie en images</span><span class="il es">La vida en viñetas</span><span class="il zh">我的成长漫画</span></h2><button type="button" class="story-dialog-close" aria-label="关闭封面预览 / Close cover preview">✕</button></div>
-  <img class="story-dialog-image" src="images/growth-comic-cover.png" width="1536" height="1024" loading="lazy" alt="空白的漫画分格，等待未来的故事">
-  <p><span class="il en show">A cover for the stories to come. No life stories have been added yet.</span><span class="il fr">Une couverture pour les histoires à venir. Le récit reste à écrire.</span><span class="il es">Una portada para las historias que vendrán. El relato está por escribir.</span><span class="il zh">这是未来故事的封面视觉。具体经历尚未填写。</span></p>
-</dialog>
-
 <!-- EDUCATION -->
 <div id="education" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div data-chapter="03" class="s-label reveal"><span data-lang="en" class="show">Education</span><span data-lang="fr">Formation</span><span data-lang="es">Formación</span><span data-lang="zh">学习经历</span></div>
+    <div data-chapter="02" class="s-label reveal"><span data-lang="en" class="show">Education</span><span data-lang="fr">Formation</span><span data-lang="es">Formación</span><span data-lang="zh">学习经历</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">Learning across<br><em>borders.</em></span><span data-lang="fr">Apprendre par-delà<br><em>les frontières.</em></span><span data-lang="es">Aprender sin<br><em>fronteras.</em></span><span data-lang="zh">课堂不止一种，<br><em>也不止一个国家。</em></span></h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
@@ -914,7 +890,7 @@
 
 <!-- EXPERIENCE -->
 <section id="experience" class="s">
-  <div class="experience-heading reveal"><div data-chapter="04" class="s-label" style="margin-bottom:0"><span data-lang="en" class="show">Experience</span><span data-lang="fr">Expériences</span><span data-lang="es">Experiencia</span><span data-lang="zh">做过的事</span></div><a href="https://www.linkedin.com/in/Jack-zhujiake-career" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:20px;color:var(--muted);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></div>
+  <div class="experience-heading reveal"><div data-chapter="03" class="s-label" style="margin-bottom:0"><span data-lang="en" class="show">Experience</span><span data-lang="fr">Expériences</span><span data-lang="es">Experiencia</span><span data-lang="zh">做过的事</span></div><a href="https://www.linkedin.com/in/Jack-zhujiake-career" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--border);border-radius:20px;color:var(--muted);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></div>
   <h2 class="s-title reveal"><span data-lang="en" class="show">Six industries.<br><em>One thread.</em></span><span data-lang="fr">Six secteurs.<br><em>Un fil conducteur.</em></span><span data-lang="es">Seis sectores.<br><em>Un mismo hilo.</em></span><span data-lang="zh">行业换了六次，<br><em>练的是同一种能力。</em></span></h2>
   <div class="timeline" id="timeline">
     <div class="tl-track"></div>
@@ -1021,7 +997,7 @@
 <!-- PROJECTS -->
 <div id="projects" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div data-chapter="05" class="s-label reveal"><span data-lang="en" class="show">AI Portfolio</span><span data-lang="fr">Projets IA</span><span data-lang="es">Proyectos IA</span><span data-lang="zh">AI 作品</span></div>
+    <div data-chapter="04" class="s-label reveal"><span data-lang="en" class="show">AI Portfolio</span><span data-lang="fr">Projets IA</span><span data-lang="es">Proyectos IA</span><span data-lang="zh">AI 作品</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">Ideas into<br><em>everyday tools.</em></span><span data-lang="fr">Des idées aux<br><em>outils du quotidien.</em></span><span data-lang="es">De ideas a<br><em>productos útiles.</em></span><span data-lang="zh">把想法，<br><em>做成好用的 AI 产品。</em></span></h2>
     <div class="proj-rows">
 
@@ -1123,7 +1099,7 @@
 
 <!-- HONORS -->
 <section id="honors" class="s">
-  <div data-chapter="06" class="s-label reveal"><span data-lang="en" class="show">Awards & Practice</span><span data-lang="fr">Prix et Pratique</span><span data-lang="es">Premios y Práctica</span><span data-lang="zh">荣誉与行动</span></div>
+  <div data-chapter="05" class="s-label reveal"><span data-lang="en" class="show">Awards & Practice</span><span data-lang="fr">Prix et Pratique</span><span data-lang="es">Premios y Práctica</span><span data-lang="zh">荣誉与行动</span></div>
   <h2 class="s-title reveal"><span data-lang="en" class="show">Honors &<br><em>Social Impact.</em></span><span data-lang="fr">Honneurs &<br><em>Impact Social.</em></span><span data-lang="es">Honores e<br><em>Impacto Social.</em></span><span data-lang="zh">认真做过的事，<br><em>后来有了一些回响。</em></span></h2>
   <div class="honors-grid">
     <div class="reveal">
@@ -1162,7 +1138,7 @@
 <!-- JOURNEY -->
 <section id="journey" class="sf">
   <div class="si">
-    <div data-chapter="07" class="s-label reveal"><span data-lang="en" class="show">Footprint</span><span data-lang="fr">Empreintes</span><span data-lang="es">Huella</span><span data-lang="zh">走过的地方</span></div>
+    <div data-chapter="06" class="s-label reveal"><span data-lang="en" class="show">Footprint</span><span data-lang="fr">Empreintes</span><span data-lang="es">Huella</span><span data-lang="zh">走过的地方</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">One origin.<br><em>Many roads.</em></span><span data-lang="fr">Une origine.<br><em>Mille chemins.</em></span><span data-lang="es">Un origen.<br><em>Muchos caminos.</em></span><span data-lang="zh">从宁波海边出发，<br><em>慢慢走到更远的地方。</em></span></h2>
   </div>
   <div class="map-tabs-wrap">
@@ -1280,7 +1256,7 @@
 <!-- LIFE -->
 <div id="life" class="sf" style="background:var(--surface);">
   <div class="si">
-    <div data-chapter="08" class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">简历之外</span></div>
+    <div data-chapter="07" class="s-label reveal"><span data-lang="en" class="show">Life</span><span data-lang="fr">Vie personnelle</span><span data-lang="es">Vida personal</span><span data-lang="zh">简历之外</span></div>
     <h2 class="s-title reveal"><span data-lang="en" class="show">Beyond the<br><em>résumé.</em></span><span data-lang="fr">Au-delà du<br><em>CV.</em></span><span data-lang="es">Más allá del<br><em>currículum.</em></span><span data-lang="zh">简历写不下的，<br><em>我也放在这里。</em></span></h2>
     <div class="life-grid">
       <a class="life-card life-video-card reveal" href="https://youtu.be/aAvQUV6Mw7E?si=aSV_UdgNJbnuf3Q7" target="_blank" rel="noopener" aria-label="Watch Moving to Paris on YouTube">
@@ -1360,6 +1336,36 @@
   </div>
 </div>
 
+<!-- STORIES & JOURNAL -->
+<div class="writing-finale">
+<!-- GROWTH COMIC: actual life stories will be supplied by the owner. -->
+<section id="story" class="sf story-section">
+  <div class="si">
+    <div data-chapter="08" class="s-label"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></div>
+    <h2 class="s-title"><span data-lang="en" class="show">Life, <em>frame by frame.</em></span><span data-lang="fr">Une vie, <em>case par case.</em></span><span data-lang="es">La vida, <em>viñeta a viñeta.</em></span><span data-lang="zh">我的成长，<em>画进漫画里。</em></span></h2>
+    <p class="story-intro"><span data-lang="en" class="show">From childhood to today, the moments that shape a person.<br>The pages are here. The stories will follow.</span><span data-lang="fr">De l’enfance à aujourd’hui, les moments qui nous façonnent.<br>Les pages sont là. Les histoires viendront.</span><span data-lang="es">De la infancia hasta hoy, los momentos que nos forman.<br>Las páginas están aquí. Las historias vendrán.</span><span data-lang="zh">从童年到现在，那些慢慢塑造我的片刻。<br>先留好书页，再把故事一页页写下。</span></p>
+    <div class="story-layout">
+      <button type="button" class="story-cover" aria-haspopup="dialog" aria-controls="story-dialog">
+        <span class="story-cover-label" aria-hidden="true"><span>LIFE, FRAME BY FRAME</span><span>STORIES TO COME</span></span>
+        <img class="story-cover-image" src="images/growth-comic-cover-v2.png" width="1672" height="941" loading="lazy" alt="折叠展开的空白漫画分镜，尚未填入个人经历">
+        <span class="story-cover-bottom"><span class="il en show">Preview the comic cover</span><span class="il fr">Voir la couverture</span><span class="il es">Ver la portada</span><span class="il zh">预览漫画封面</span><span class="story-cover-arrow" aria-hidden="true">↗</span></span>
+      </button>
+      <div class="story-chapters" role="group" aria-label="成长漫画章节 / Comic chapters">
+        <button type="button" class="story-chapter" aria-pressed="true"><span class="story-chapter-number" aria-hidden="true">01</span><span class="story-chapter-name">童年的章节</span><span class="story-chapter-status">故事待写</span></button>
+        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">02</span><span class="story-chapter-name">少年的章节</span><span class="story-chapter-status">故事待写</span></button>
+        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">03</span><span class="story-chapter-name">走向更大的世界</span><span class="story-chapter-status">故事待写</span></button>
+        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">04</span><span class="story-chapter-name">此刻与以后</span><span class="story-chapter-status">故事待写</span></button>
+        <p class="story-waiting" id="story-selection" role="status" aria-live="polite">童年的章节 · 故事待写</p>
+      </div>
+    </div>
+  </div>
+</section>
+<dialog id="story-dialog" class="story-dialog" aria-labelledby="story-dialog-title">
+  <div class="story-dialog-header"><h2 id="story-dialog-title"><span class="il en show">Life in frames</span><span class="il fr">Une vie en images</span><span class="il es">La vida en viñetas</span><span class="il zh">我的成长漫画</span></h2><button type="button" class="story-dialog-close" aria-label="关闭封面预览 / Close cover preview">✕</button></div>
+  <img class="story-dialog-image" src="images/growth-comic-cover-v2.png" width="1672" height="941" loading="lazy" alt="折叠展开的空白漫画分镜，等待未来的故事">
+  <p><span class="il en show">A cover for the stories to come. No life stories have been added yet.</span><span class="il fr">Une couverture pour les histoires à venir. Le récit reste à écrire.</span><span class="il es">Una portada para las historias que vendrán. El relato está por escribir.</span><span class="il zh">这是未来故事的封面视觉。具体经历尚未填写。</span></p>
+</dialog>
+
 <!-- JOURNAL -->
 <section id="journal" class="s journal-home">
   <div data-chapter="09" class="s-label"><span class="il en show">The journal</span><span class="il fr">Le journal</span><span class="il es">El diario</span><span class="il zh">公开日志</span></div>
@@ -1371,6 +1377,8 @@
 <a id="post-ai-compute-field-guide" class="journal-card" data-category="tech" href="journal/posts/ai-compute-field-guide/"><time datetime="2026-09-27">2026 / 09 / 27</time><div><div class="journal-meta"><span>技术博客</span><span>1 分钟阅读</span></div><h2>把 AI 算力知识整理成可检索的手册</h2><p>完成 34 组卡型资料、搜索筛选与三卡对比，把硬件知识和行业场景放进一套可持续更新的工具。</p><div class="journal-tags"><span># AI 算力</span><span># 知识工具</span><span># 产品开发</span></div></div><span class="journal-arrow" aria-hidden="true">↗</span></a>
 <!-- JOURNAL_PREVIEW_END --></div>
 </section>
+
+</div><!-- /writing-finale -->
 
 <!-- FOOTER -->
 <footer>
@@ -1992,7 +2000,7 @@
 </script>
 <script src="assets/navigation.js"></script>
 <script src="assets/interactions.js"></script>
-<script src="assets/story.js"></script>
-<script src="assets/intro.js"></script>
+<script src="assets/story.js?v=2"></script>
+<script src="assets/intro.js?v=2"></script>
 </body>
 </html>

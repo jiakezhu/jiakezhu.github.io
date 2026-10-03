@@ -3,6 +3,18 @@
   const status = document.getElementById('story-selection');
   const dialog = document.getElementById('story-dialog');
   const cover = document.querySelector('.story-cover');
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  cover.addEventListener('pointermove', event => {
+    if (!finePointer.matches || reducedMotion.matches) return;
+    const bounds = cover.getBoundingClientRect();
+    cover.style.setProperty('--cover-x', `${(0.5 - (event.clientY - bounds.top) / bounds.height) * 6}deg`);
+    cover.style.setProperty('--cover-y', `${((event.clientX - bounds.left) / bounds.width - 0.5) * 6}deg`);
+  });
+  cover.addEventListener('pointerleave', () => {
+    cover.style.removeProperty('--cover-x');
+    cover.style.removeProperty('--cover-y');
+  });
   const labels = {
     zh:['童年的章节','少年的章节','走向更大的世界','此刻与以后'],
     en:['The early chapters','Growing up','A wider world','Now, and what comes next'],

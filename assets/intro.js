@@ -3,7 +3,7 @@
   const replay = document.getElementById('intro-replay');
   const hero = document.getElementById('hero');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const key = 'jiake-intro-seen-v1';
+  const key = 'jiake-intro-seen-v2';
   let exitTimer, fallbackTimer;
   const seen = () => { try { return sessionStorage.getItem(key) === '1'; } catch { return false; } };
   function finish() {
@@ -20,9 +20,9 @@
     try { dialog.showModal(); } catch { finish(); return; }
     document.documentElement.classList.add('intro-playing');
     try { sessionStorage.setItem(key, '1'); } catch {}
-    exitTimer = setTimeout(() => dialog.classList.add('is-exiting'), 1250);
+    exitTimer = setTimeout(() => dialog.classList.add('is-exiting'), 1700);
     // A failed or cancelled CSS animation must never strand the reader.
-    fallbackTimer = setTimeout(finish, 2050);
+    fallbackTimer = setTimeout(finish, 3000);
   }
   dialog.querySelector('.intro-skip').addEventListener('click', finish);
   dialog.addEventListener('cancel', event => { event.preventDefault(); finish(); });
