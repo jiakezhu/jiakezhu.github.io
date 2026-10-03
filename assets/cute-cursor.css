@@ -1,0 +1,23 @@
+/* A small companion for desktop pointers. Its centre is the click position. */
+.cute-cursor { position:fixed; top:0; left:0; width:36px; height:36px; z-index:100001; pointer-events:none; opacity:0; visibility:hidden; transform:translate3d(-100px,-100px,0); --star-fill:#d7ed8b; --star-edge:#718447; }
+.cute-cursor.is-visible { opacity:1; visibility:visible; }
+.cute-cursor-character { display:block; width:36px; height:36px; transition:scale .2s ease,rotate .25s ease; filter:drop-shadow(0 2px 3px #0003); }
+.cute-cursor-star { fill:var(--star-fill); stroke:var(--star-edge); stroke-width:1.2; transition:fill .2s,stroke .2s; }
+.cute-cursor-face { fill:#364330; }
+.cute-cursor-smile { fill:none; stroke:#364330; stroke-width:1.25; stroke-linecap:round; }
+.cute-cursor-cheek { fill:#eaa39f; opacity:.8; }
+.cute-cursor-spark { fill:#c7b8ef; opacity:0; transform-origin:31px 7px; transition:opacity .2s,scale .2s; scale:.6; }
+.cute-cursor.is-hovering { --star-fill:#d1c2f3; --star-edge:#85709e; }
+.cute-cursor.is-hovering .cute-cursor-character { scale:1.22; rotate:12deg; }
+.cute-cursor.is-hovering .cute-cursor-spark { opacity:1; scale:1; }
+.cute-cursor.is-pressed .cute-cursor-character { scale:.84; rotate:-12deg; }
+.cute-cursor.is-pressed .cute-cursor-eye { transform:scaleY(.45); transform-origin:center; transform-box:fill-box; }
+@media(hover:hover) and (pointer:fine) {
+  html.cute-cursor-active,html.cute-cursor-active body,html.cute-cursor-active body *,html.cute-cursor-active body *::before,html.cute-cursor-active body *::after { cursor:none!important; }
+  html.cute-cursor-active #journey .jp-tag { cursor:none!important; }
+  html.cute-cursor-active input,html.cute-cursor-active textarea,html.cute-cursor-active [contenteditable="true"],html.cute-cursor-active [contenteditable="true"] * { cursor:text!important; }
+  html.cute-cursor-active select,html.cute-cursor-active iframe,html.cute-cursor-active dialog,html.cute-cursor-active dialog *,html.cute-cursor-active dialog::backdrop { cursor:auto!important; }
+  html.cute-cursor-active dialog button,html.cute-cursor-active dialog a { cursor:pointer!important; }
+}
+@media(hover:none),(pointer:coarse) { .cute-cursor { display:none!important; } }
+@media(prefers-reduced-motion:reduce) { .cute-cursor-character,.cute-cursor-star,.cute-cursor-spark { transition:none; }.cute-cursor.is-hovering .cute-cursor-character { rotate:0deg; } }
