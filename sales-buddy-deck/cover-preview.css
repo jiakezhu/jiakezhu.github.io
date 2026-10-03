@@ -2,8 +2,8 @@
 @font-face { font-family:'Jiake Rounded'; font-weight:400; src:url('../assets/fonts/jiake-rounded-regular.woff2') format('woff2'); font-display:swap; }
 html,body { font-family:'Jiake Rounded','Nunito',system-ui,sans-serif; }
 .chrome,.kicker,.cover-package-head { font-family:'Nunito','Jiake Rounded',system-ui,sans-serif; }
-/* The supplied white Buddy lettering needs a dark surface on the light slide. */
-.chrome .section::before { width:136px; height:70px; border-radius:9px; background:#0c203f url('../images/sales-buddy-deck/sales-buddy-logo-v3-transparent.png') center/120px auto no-repeat; }
-.cover-module.expert img { padding:5px; background:#0c203f; border-radius:7px; }
+/* Transparent blue wordmark for the original light slide. */
+.chrome .section::before { width:136px; height:70px; background:transparent url('../images/sales-buddy-deck/sales-buddy-logo-v4-light-transparent.png') center/120px auto no-repeat; }
+.cover-module.expert img { padding:5px; background:none; border-radius:0; }
 .slide .reveal,.slide .reveal-scale { opacity:1; transform:none; transition:none; }
 @media(prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important; } }

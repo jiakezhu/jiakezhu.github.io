@@ -1,4 +1,4 @@
-/* Three beats: personal photographs, pragmatic romantism, Always Day One. */
+/* Personal photographs, then two guiding phrases on one shared frame. */
 .site-intro {
   position:fixed; inset:0; width:100vw; max-width:none; height:100dvh; max-height:none;
   margin:0; padding:0; border:0; background:transparent; color:#f3f0e9; overflow:hidden;
@@ -41,15 +41,15 @@ html.intro-playing { overflow:hidden; }
 .intro-greeting { position:absolute; bottom:0; left:0; font-size:1rem; letter-spacing:.015em; animation:introGreeting 4.65s both; }
 .intro-greeting span { color:#b2b5b8; margin:0 10px; }
 .intro-title,.intro-photos { animation:introSequenceFade .35s 1.7s both; }
-.intro-philosophy,.intro-manifesto { position:absolute; z-index:3; top:48%; left:0; width:100%; margin:0; transform:translateY(-50%); }
-.intro-philosophy { animation:introPhilosophy 4.65s cubic-bezier(.16,1,.3,1) both; }
+.intro-credo { position:absolute; z-index:3; top:48%; left:0; width:100%; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:48px; transform:translateY(-50%); animation:introCreed .7s 1.85s cubic-bezier(.16,1,.3,1) both; }
+.intro-philosophy,.intro-manifesto { position:relative; min-width:0; margin:0; }
 .intro-philosophy-kicker,.intro-manifesto-kicker { display:block; color:#b2b5b8; font-size:.72rem; font-weight:650; letter-spacing:.16em; margin-bottom:24px; }
-.intro-philosophy p { margin:0; font:800 clamp(4.2rem,8.4vw,7.8rem)/1.05 var(--sans); letter-spacing:-.065em; }
+.intro-philosophy p { margin:0; font:800 clamp(3rem,5.7vw,5.8rem)/1.08 var(--sans); letter-spacing:-.06em; }
 .intro-philosophy p>span { display:block; }
-.intro-philosophy em { display:block; margin-left:11%; font-weight:600; font-style:italic; color:#b7b2ed; }
-.intro-philosophy-star { position:absolute; right:13%; top:20%; color:#d7ed8b; font-size:clamp(3rem,7vw,6rem); line-height:1; animation:introStar 4.65s linear both; }
-.intro-manifesto { animation:introManifesto 4.65s cubic-bezier(.16,1,.3,1) both; }
-.intro-manifesto p { margin:0; font:800 clamp(4.5rem,9vw,8rem)/1.05 var(--sans); letter-spacing:-.06em; }
+.intro-philosophy em { display:block; font-weight:600; font-style:italic; color:#b7b2ed; }
+.intro-philosophy-star { position:absolute; right:0; top:0; color:#d7ed8b; font-size:2.4rem; line-height:1; animation:introStar 4.65s linear both; }
+.intro-manifesto { padding-left:48px; border-left:1px solid #f3f0e930; }
+.intro-manifesto p { margin:0; font:800 clamp(3.2rem,6.6vw,6.4rem)/1.05 var(--sans); letter-spacing:-.06em; }
 .intro-manifesto p>span { display:block; color:#d7ed8b; }
 .intro-progress { position:absolute; left:5vw; right:5vw; bottom:100px; height:1px; background:#f3f0e91c; }
 .intro-progress i { display:block; width:100%; height:1px; background:linear-gradient(90deg,#b7b2ed,#d7ed8b); transform-origin:left; animation:introProgress 4.65s linear both; }
@@ -78,9 +78,8 @@ html.intro-playing #hero .hero-left>* { opacity:0; }
 @keyframes heroArrive { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
 @keyframes heroPhotoArrive { from { opacity:0; transform:translateY(18px) scale(.97); } to { opacity:1; transform:none; } }
 @keyframes introSequenceFade { from { opacity:1; } to { opacity:0; } }
-@keyframes introPhilosophy { 0%,39% { opacity:0; transform:translateY(calc(-50% + 26px)); filter:blur(6px); } 47%,63% { opacity:1; transform:translateY(-50%); filter:blur(0); } 70%,100% { opacity:0; transform:translateY(calc(-50% - 20px)); filter:blur(4px); } }
-@keyframes introManifesto { 0%,69% { opacity:0; transform:translateY(calc(-50% + 32px)); filter:blur(6px); } 79%,100% { opacity:1; transform:translateY(-50%); filter:blur(0); } }
-@keyframes introOrbit { 0%,36% { opacity:0; transform:rotate(-38deg) scaleY(.45) scale(.85); } 48%,65% { opacity:1; transform:rotate(-24deg) scaleY(.6); } 77%,100% { opacity:0; transform:rotate(-10deg) scaleY(.72) scale(1.1); } }
+@keyframes introCreed { from { opacity:0; transform:translateY(calc(-50% + 26px)); filter:blur(6px); } to { opacity:1; transform:translateY(-50%); filter:blur(0); } }
+@keyframes introOrbit { 0%,36% { opacity:0; transform:rotate(-38deg) scaleY(.45) scale(.85); } 48%,100% { opacity:1; transform:rotate(-24deg) scaleY(.6); } }
 @keyframes introStar { from { transform:rotate(-35deg); } to { transform:rotate(55deg); } }
 @keyframes introProgress { from { transform:scaleX(0); } to { transform:scaleX(1); } }
 @media(max-width:700px) {
@@ -93,11 +92,11 @@ html.intro-playing #hero .hero-left>* { opacity:0; }
   .intro-photo--middle { --shift:28px; --lift:12px; }
   .intro-greeting { bottom:0; font-size:.78rem; }
   .intro-greeting span { margin:0 5px; }
-  .intro-manifesto p { font-size:clamp(3.7rem,15vw,5.5rem); }
-  .intro-philosophy p { font-size:clamp(2.9rem,12.4vw,5rem); }
-  .intro-philosophy em { margin-left:4%; }
-  .intro-philosophy-kicker,.intro-manifesto-kicker { font-size:.6rem; margin-bottom:19px; }
-  .intro-philosophy-star { right:0; top:-10%; font-size:2.6rem; }
+  .intro-credo { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .intro-manifesto { padding:22px 0 0; border-left:0; border-top:1px solid #f3f0e930; }
+  .intro-manifesto p,.intro-philosophy p { font-size:clamp(2.4rem,11.8vw,3.3rem); }
+  .intro-philosophy-kicker,.intro-manifesto-kicker { font-size:.6rem; margin-bottom:12px; }
+  .intro-philosophy-star { right:4%; top:12px; font-size:1.8rem; }
   .intro-orbit { width:110vw; }
   .intro-progress { bottom:90px; }
   .intro-top { font-size:.61rem; gap:12px; }

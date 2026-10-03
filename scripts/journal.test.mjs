@@ -22,14 +22,18 @@ test('Markdown renders rich content and blocks HTML and executable links',()=>{
 test('build generates searchable static pages and removes withdrawn posts everywhere',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'jiake-journal-test-'));
   try {
-    fs.mkdirSync(path.join(dir,'content/posts'),{recursive:true});fs.mkdirSync(path.join(dir,'assets'));fs.mkdirSync(path.join(dir,'journal'));
+    fs.mkdirSync(path.join(dir,'content/posts'),{recursive:true});fs.mkdirSync(path.join(dir,'assets'));fs.mkdirSync(path.join(dir,'journal'));fs.mkdirSync(path.join(dir,'story'));
     fs.writeFileSync(path.join(dir,'index.html'),'<!-- JOURNAL_PREVIEW_START --><!-- JOURNAL_PREVIEW_END -->');
-    fs.writeFileSync(path.join(dir,'journal/index.html'),'<!-- JOURNAL_LIST_START --><!-- JOURNAL_LIST_END -->');
+    fs.writeFileSync(path.join(dir,'story/index.html'),'<!-- JOURNAL_LIST_START --><!-- JOURNAL_LIST_END -->');
     fs.writeFileSync(path.join(dir,'content/posts/example.md'),source());
     fs.writeFileSync(path.join(dir,'content/posts/secret.md'),source('draft: true','TOP_SECRET'));
     assert.equal(build(dir).length,1);
     assert(fs.readFileSync(path.join(dir,'journal/posts/example/index.html'),'utf8').includes('<h1 class="article-title">一篇记录</h1>'));
     assert(fs.readFileSync(path.join(dir,'assets/journal-data.js'),'utf8').includes('AI 实践'));
+    const story = fs.readFileSync(path.join(dir,'story/index.html'),'utf8');
+    assert(story.includes('../journal/posts/example/'));
+    assert(!story.includes('TOP_SECRET'));
+    assert(fs.readFileSync(path.join(dir,'journal/posts/example/index.html'),'utf8').includes('../../../story/#journal'));
     assert(!fs.readFileSync(path.join(dir,'assets/journal-data.js'),'utf8').includes('TOP_SECRET'));
     assert(fs.readFileSync(path.join(dir,'journal/feed.xml'),'utf8').includes('/posts/example/'));
     const homepage = fs.readFileSync(path.join(dir,'index.html'),'utf8');
@@ -39,6 +43,8 @@ test('build generates searchable static pages and removes withdrawn posts everyw
     fs.writeFileSync(path.join(dir,'content/posts/example.md'),source('draft: true'));
     assert.equal(build(dir).length,0);
     assert(!fs.existsSync(path.join(dir,'journal/posts/example/index.html')));
+    assert(!fs.readFileSync(path.join(dir,'story/index.html'),'utf8').includes('id="post-example"'));
+    assert(!fs.readFileSync(path.join(dir,'assets/journal-data.js'),'utf8').includes('一篇记录'));
     assert(!fs.readFileSync(path.join(dir,'journal/feed.xml'),'utf8').includes('/posts/example/'));
     assert(fs.readFileSync(path.join(dir,'index.html'),'utf8').includes('0 篇记录'));
   } finally {fs.rmSync(dir,{recursive:true,force:true});}

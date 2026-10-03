@@ -34,7 +34,7 @@ The site is a single-page application with seven navigation sections, served as 
 | **Experience** | Professional roles & key achievements · 工作经历与核心成就 |
 | **Projects** | Featured technical projects · 精选技术项目 |
 | **Life** | Travel, culture, interests · 旅行、文化与兴趣 |
-| **Journal** | Public technical blog and diary · 公开技术博客与日记 |
+| **Story** | Project journal, personal notes and growth comic · 项目日志、日记与成长漫画 |
 | **Language Toggle** | Switch between EN / FR / ES · 中英法西多语言切换 |
 
 Embedded recommendation letters and trilingual parallel content (EN / FR / ES) are featured throughout.
@@ -122,7 +122,7 @@ git push origin main
 
 ## 日志与日记 · Journal
 
-- `journal/`：统一的公开日志，支持技术博客 / 日记分类、标题 / 正文 / 标签搜索、可分享筛选链接。
+- `story/`：统一的 Story 阅读页，收录项目日志、日记与成长漫画；支持技术博客 / 日记分类、标题 / 正文 / 标签搜索、可分享筛选链接。旧 `journal/` 地址保留跳转，并传递搜索参数。
 - `journal/write.html`：写作台，实时 Markdown 预览、本机自动保存、导入与导出。它没有后台或发布权限；本机草稿仅保存在当前浏览器。
 - `journal/posts/<slug>/`：独立文章，正文和目录预先生成，不依赖 JavaScript 阅读。
 - `journal/feed.xml`：RSS 订阅。
@@ -154,7 +154,7 @@ draft: false
 
 `category` 为 `tech`（技术博客）或 `diary`（日记）。`slug` 可省略，默认使用 Markdown 文件名；必须为小写英文字母、数字及连字符。正文支持标题、段落、引用、列表、表格、图片和代码块。图片放在 `images/`，正文使用网站绝对路径，例如 `![说明](/images/photo.jpg)`。
 
-写作台导出的文件默认 `draft: true`。准备发布时改成 `false`，运行 `npm run build`，然后提交 Markdown 和生成的 `index.html`、`journal/`、`assets/journal-data.js` 等文件，推送到 `main`，沿用现有 GitHub Pages 发布方式。仅编辑静态页面无需运行构建。文章内容保持原文，主页的语言切换不会翻译文章。
+写作台导出的文件默认 `draft: true`。准备发布时改成 `false`，运行 `npm run build`，然后提交 Markdown 和生成的 `index.html`、`story/index.html`、`journal/`、`assets/journal-data.js` 等文件，推送到 `main`，沿用现有 GitHub Pages 发布方式。仅编辑静态页面无需运行构建。文章内容保持原文，主页的语言切换不会翻译文章。
 
 草稿与未来日期的文章不进入生成的阅读页、索引、主页预览或 RSS。日期以 Asia/Shanghai 为准；到日期后需要再次运行构建。修改文章为草稿或删除 Markdown 后再构建，会撤下此前生成的文章页。**公开仓库里的源码本身仍然可见；`draft` 不是私密权限，不要提交私人草稿。** 真正未发布的文字可先留在本机写作台，并导出备份。
 
@@ -179,9 +179,9 @@ draft: false
 
 ### 成长漫画与开场
 
-成长故事和公开日志的两个入口相邻放在首页最后，分别进入 `story/` 与 `journal/` 独立阅读页。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。`story/index.html` 包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
+首页最后保留一个 Story 入口，进入 `story/` 统一阅读项目日志、生活记录与成长漫画。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。文章永久地址与 RSS 保持兼容。`story/index.html` 包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
 
-`assets/intro.js` / `assets/intro.css` 提供三个段落：姓名与个人照片、作者指定的 pragmatic romantism、Always Day One。配合椭圆轨迹、旋转星形、播放进度及五列分幕揭幕。每个浏览器会话首次进入首页时播放，约 5.67 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
+`assets/intro.js` / `assets/intro.css` 提供两个画面：姓名与个人照片，以及同屏呈现的 Pragmatic Romantism 和 Always Day One。配合椭圆轨迹、旋转星形、播放进度及五列分幕揭幕。每个浏览器会话首次进入首页时播放，约 5.67 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
 当前所有修改仅用于本地预览和本地提交。未得到作者后续明确发布指令前，不推送远端或部署。
 
@@ -195,4 +195,8 @@ draft: false
 
 Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Downloads/deck`，来源记录见 `images/sales-buddy-deck/README.md`。项目页使用客户列表、单客作战、会议证据核对和全景报告素材，并引用路演中明确描述的 24 个情报字段、50 个结构化业务落点。手机语音演示使用原视频，`preload="none"`，由读者点击播放。
 
-2026-10-03 再按作者新提供的 Logo 图片制作透明版本；原图与内置图像模型的透明输出各自保存，提示词见 `content/brand/sales-buddy-logo-v3-prompt.md`。深色主题直接展示透明标识，浅色主题与浅色产品页面使用海军蓝底板，保留蓝色 Sales、白色 Buddy 的对比。首页 Sales Buddy 卡片右侧与介绍页首屏嵌入 `sales-buddy-deck/` 的真实 HTML 首页，来源为 deck 的第一张 cover-slide，保留原排布并等比缩放；可单独放大查看。
+2026-10-03 再按作者新提供的 Logo 图片制作透明版本；原图与内置图像模型的透明输出各自保存，提示词见 `content/brand/sales-buddy-logo-v3-prompt.md`。深色主题直接展示透明标识；浅色主题使用 Buddy 字样为深蓝色的透明版本，移除了所有深色底板。浅色版提示词见 `content/brand/sales-buddy-logo-v4-prompt.md`。首页 Sales Buddy 卡片右侧与介绍页首屏使用真实 HTML 首页的浏览器截图 `cover-v5.png`，没有外加 HTML 标签、顶栏或底栏；点击图片可打开 `sales-buddy-deck/` 的实际首屏。
+
+### Story 补充记录 · 2026-10-03
+
+此次从作者公开 GitHub 的项目说明与提交记录、近期公众号工作中补充 8 篇记录，目前共 11 篇。LingoVibe、Habit-Orbit、旅行 Skill 使用作者授权的旅行叙事，文末注明创作性还原；功能、阶段与日期依据实际项目记录。公众号一篇只记写作过程和个人思考，尚未标注为已发布。具体来源与筛选规则见 `content/story/project-sources.md`。
