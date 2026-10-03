@@ -3,7 +3,7 @@
   const replay = document.getElementById('intro-replay');
   const hero = document.getElementById('hero');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const key = 'jiake-intro-seen-v8';
+  const key = 'jiake-intro-seen-v9';
   let exitTimer, fallbackTimer;
   let phaseTimers = [];
   const clearTimers = () => {
@@ -27,8 +27,9 @@
     document.documentElement.classList.add('intro-playing');
     dialog.dataset.phase = 'portrait';
     phaseTimers = [
-      setTimeout(() => { dialog.dataset.phase = 'burst'; }, 1000),
-      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2100)
+      setTimeout(() => { dialog.dataset.phase = 'greeting'; }, 1150),
+      setTimeout(() => { dialog.dataset.phase = 'burst'; }, 1700),
+      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2800)
     ];
     try { sessionStorage.setItem(key, '1'); } catch {}
     exitTimer = setTimeout(() => {
@@ -36,9 +37,9 @@
       dialog.classList.add('is-exiting');
       document.documentElement.classList.add('intro-revealing');
       hero.classList.add('hero-arrived');
-    }, 3600);
+    }, 4300);
     // A failed or cancelled CSS animation must never strand the reader.
-    fallbackTimer = setTimeout(finish, 5400);
+    fallbackTimer = setTimeout(finish, 6100);
   }
   dialog.querySelector('.intro-skip').addEventListener('click', finish);
   dialog.addEventListener('cancel', event => { event.preventDefault(); finish(); });
