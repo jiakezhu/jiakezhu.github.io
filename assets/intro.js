@@ -3,7 +3,7 @@
   const replay = document.getElementById('intro-replay');
   const hero = document.getElementById('hero');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const key = 'jiake-intro-seen-v5';
+  const key = 'jiake-intro-seen-v6';
   let exitTimer, fallbackTimer;
   let phaseTimers = [];
   const clearTimers = () => {
@@ -27,7 +27,7 @@
     document.documentElement.classList.add('intro-playing');
     dialog.dataset.phase = 'portrait';
     phaseTimers = [
-      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2600)
+      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2750)
     ];
     try { sessionStorage.setItem(key, '1'); } catch {}
     exitTimer = setTimeout(() => { dialog.dataset.phase = 'reveal'; dialog.classList.add('is-exiting'); }, 4650);
