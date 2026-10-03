@@ -673,7 +673,7 @@
   <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
   <link rel="stylesheet" href="assets/intro.css?v=9">
-  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/home-v3.css?v=8"><link rel="stylesheet" href="assets/journey.css?v=4">
+  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/book-transition.css?v=1"><link rel="stylesheet" href="assets/home-v3.css?v=8"><link rel="stylesheet" href="assets/journey.css?v=5">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
@@ -1230,7 +1230,7 @@
       <div class="jp-china-right">
         <div>
           <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · China</span><span data-lang="fr">Villes visitées · Chine</span><span data-lang="es">Lugares visitados · China</span><span data-lang="zh">中国足迹</span></div>
-          <div class="atlas-frame"><div class="atlas-heading"><span>CHINA / FROM THE COAST</span><button class="atlas-reset" type="button" data-map-reset="china"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div id="journey-map-china" aria-label="China travel map"></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
+          <div class="atlas-frame atlas-frame--china"><div class="atlas-heading"><span><small>01 / THE TRAVEL ATLAS</small>CHINA / FROM THE COAST</span><button class="atlas-reset" type="button" data-map-reset="china"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div class="atlas-canvas"><div id="journey-map-china" aria-label="China travel map"></div><div class="atlas-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24"/><path d="M30 5V55M5 30H55M30 12L36 36L30 31L24 36Z"/></svg></div><div class="atlas-postmark" aria-hidden="true">FROM THE COAST<span>JIAKE’S FIELD NOTES</span></div></div><div class="atlas-focus-row"><button type="button" class="atlas-focus" data-map-focus="lingnan"><span class="il zh">岭南足迹</span><span class="il en show">Around Guangdong</span><span class="il fr">Le Guangdong</span><span class="il es">Guangdong</span> <span aria-hidden="true">↗</span></button></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
         </div>
         <div>
         <div class="jp-tags">
@@ -1248,6 +1248,12 @@
           <button type="button" class="jp-tag" data-place="West Sichuan"><div class="jp-tag-dot"></div><span class="jp-tag-label">West Sichuan</span></button>
           <button type="button" class="jp-tag" data-place="Changsha"><div class="jp-tag-dot"></div><span class="jp-tag-label">Changsha</span></button>
           <button type="button" class="jp-tag" data-place="Yinchuan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Yinchuan</span></button>
+          <button type="button" class="jp-tag" data-place="Foshan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Foshan</span></button>
+          <button type="button" class="jp-tag" data-place="Huizhou"><div class="jp-tag-dot"></div><span class="jp-tag-label">Huizhou</span></button>
+          <button type="button" class="jp-tag" data-place="Shenzhen"><div class="jp-tag-dot"></div><span class="jp-tag-label">Shenzhen</span></button>
+          <button type="button" class="jp-tag" data-place="Guangzhou"><div class="jp-tag-dot"></div><span class="jp-tag-label">Guangzhou</span></button>
+          <button type="button" class="jp-tag" data-place="Dongguan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Dongguan</span></button>
+          <button type="button" class="jp-tag" data-place="Taiwan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Taiwan</span></button>
         </div>
         </div>
       </div>
@@ -1270,12 +1276,12 @@
           </div>
         </div>
         <div class="jp-section-label"><span data-lang="en" class="show">Map</span><span data-lang="fr">Carte</span><span data-lang="es">Mapa</span><span data-lang="zh">地图上看看</span></div>
-        <div class="atlas-frame"><div class="atlas-heading"><span>EUROPE / A WIDER WORLD</span><button class="atlas-reset" type="button" data-map-reset="europe"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div id="journey-map-europe" aria-label="Europe travel map"></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
+        <div class="atlas-frame atlas-frame--europe"><div class="atlas-heading"><span><small>02 / THE TRAVEL ATLAS</small>EUROPE / A WIDER WORLD</span><button class="atlas-reset" type="button" data-map-reset="europe"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div class="atlas-canvas"><div id="journey-map-europe" aria-label="Europe travel map"></div><div class="atlas-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24"/><path d="M30 5V55M5 30H55M30 12L36 36L30 31L24 36Z"/></svg></div><div class="atlas-postmark" aria-hidden="true">A WIDER WORLD<span>JIAKE’S FIELD NOTES</span></div></div><div class="atlas-focus-row"><button type="button" class="atlas-focus" data-map-focus="mont"><span class="il zh">圣米歇尔山</span><span class="il en show">Mont-Saint-Michel</span><span class="il fr">Mont-Saint-Michel</span><span class="il es">Mont-Saint-Michel</span> <span aria-hidden="true">↗</span></button><button type="button" class="atlas-focus" data-map-focus="north"><span class="il zh">北欧足迹</span><span class="il en show">The northern stops</span><span class="il fr">Les étapes du Nord</span><span class="il es">Las paradas del norte</span> <span aria-hidden="true">↗</span></button></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
       </div>
       <div>
         <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · Europe</span><span data-lang="fr">Villes visitées · Europe</span><span data-lang="es">Lugares visitados · Europa</span><span data-lang="zh">欧洲足迹</span></div>
         <div class="jp-cr-list">
-          <div class="jp-cr"><span class="jp-cr-flag">🇫🇷</span><span class="jp-cr-name">France</span><span class="jp-cr-cities"><b>Paris</b> · Marseille · Lyon · Strasbourg · Nice · Menton · Antibes · Cannes · Bordeaux · Toulouse · Nantes · Rennes · Lille · Tours</span></div>
+          <div class="jp-cr"><span class="jp-cr-flag">🇫🇷</span><span class="jp-cr-name">France</span><span class="jp-cr-cities"><b>Paris</b> · Marseille · Lyon · Strasbourg · Nice · Menton · Antibes · Cannes · Bordeaux · Toulouse · Nantes · Rennes · Lille · Tours · Mont-Saint-Michel</span></div>
           <div class="jp-cr"><span class="jp-cr-flag">🇨🇭</span><span class="jp-cr-name">Switzerland</span><span class="jp-cr-cities">Zürich · Basel · Lucerne · Interlaken · Thun · Spiez · Lungern · Iseltwald · Rigi · Lauterbrunnen · Gimmelwald</span></div>
           <div class="jp-cr"><span class="jp-cr-flag">🇩🇪</span><span class="jp-cr-name">Germany</span><span class="jp-cr-cities">Berlin · Tübingen</span></div>
           <div class="jp-cr"><span class="jp-cr-flag">🇧🇪</span><span class="jp-cr-name">Belgium</span><span class="jp-cr-cities">Brussels</span></div>
@@ -1586,7 +1592,9 @@
     'Nanjing': '南京', 'Suzhou': '苏州', 'Shaoxing': '绍兴', 'Jiaxing': '嘉兴',
     'Huangshan': '黄山', 'Chongqing': '重庆', 'Chengdu': '成都', 'West Sichuan': '川西',
     'Changsha': '长沙', 'Yinchuan': '银川',
-    'Paris · Marseille · Lyon · Strasbourg · Nice · Menton · Antibes · Cannes · Bordeaux · Toulouse · Nantes · Rennes · Lille · Tours': '巴黎 · 马赛 · 里昂 · 斯特拉斯堡 · 尼斯 · 芒通 · 昂蒂布 · 戛纳 · 波尔多 · 图卢兹 · 南特 · 雷恩 · 里尔 · 图尔',
+    'Guangdong stops':'广东足迹', 'Explore Guangdong':'放大广东足迹', 'Lingnan':'岭南', 'Paris':'巴黎',
+    'Foshan':'佛山', 'Huizhou':'惠州', 'Shenzhen':'深圳', 'Guangzhou':'广州', 'Dongguan':'东莞', 'Taiwan':'台湾', 'Mont-Saint-Michel':'圣米歇尔山',
+    'Paris · Marseille · Lyon · Strasbourg · Nice · Menton · Antibes · Cannes · Bordeaux · Toulouse · Nantes · Rennes · Lille · Tours · Mont-Saint-Michel': '巴黎 · 马赛 · 里昂 · 斯特拉斯堡 · 尼斯 · 芒通 · 昂蒂布 · 戛纳 · 波尔多 · 图卢兹 · 南特 · 雷恩 · 里尔 · 图尔 · 圣米歇尔山',
     'Zürich · Basel · Lucerne · Interlaken · Thun · Spiez · Lungern · Iseltwald · Rigi · Lauterbrunnen · Gimmelwald': '苏黎世 · 巴塞尔 · 卢塞恩 · 因特拉肯 · 图恩 · 施皮茨 · 龙根 · 伊瑟尔特瓦尔德 · 瑞吉山 · 劳特布龙嫩 · 吉梅尔瓦尔德',
     'Berlin · Tübingen': '柏林 · 图宾根', 'Brussels': '布鲁塞尔',
     'Amsterdam · The Hague · Zaanse Schans': '阿姆斯特丹 · 海牙 · 赞世安斯风车村',
@@ -1898,7 +1906,8 @@
 </script>
 <script src="assets/navigation.js"></script>
 <script src="assets/interactions.js"></script>
-<script src="assets/journey.js?v=5"></script>
+<script src="assets/journey.js?v=8"></script>
 <script src="assets/intro.js?v=9"></script>
+<script src="assets/book-transition.js?v=2"></script>
 </body>
 </html>

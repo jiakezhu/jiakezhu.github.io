@@ -1,4 +1,12 @@
 (() => {
+  try {
+    const arrival = Number(sessionStorage.getItem('story-book-arrival'));
+    sessionStorage.removeItem('story-book-arrival');
+    if (arrival && Date.now()-arrival < 10000 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('story-arriving');
+      setTimeout(() => document.documentElement.classList.remove('story-arriving'),650);
+    }
+  } catch {}
   const chapters = [...document.querySelectorAll('.story-chapter')];
   const status = document.getElementById('story-selection');
   const dialog = document.getElementById('story-dialog');
