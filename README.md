@@ -181,7 +181,7 @@ draft: false
 
 成长故事和公开日志的两个入口相邻放在首页最后，分别进入 `story/` 与 `journal/` 独立阅读页。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。`story/index.html` 包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
 
-`assets/intro.js` / `assets/intro.css` 提供姓名逐字入场、三张个人照片展开、Always Day One 大字出场及五列分幕揭幕动画。每个浏览器会话首次进入首页时播放，约 3.87 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
+`assets/intro.js` / `assets/intro.css` 提供三个段落：姓名与个人照片、作者指定的 pragmatic romantism、Always Day One。配合椭圆轨迹、旋转星形、播放进度及五列分幕揭幕。每个浏览器会话首次进入首页时播放，约 5.67 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
 当前所有修改仅用于本地预览和本地提交。未得到作者后续明确发布指令前，不推送远端或部署。
 
@@ -194,3 +194,5 @@ draft: false
 `assets/journey.js` / `assets/journey.css` 使用本地 Natural Earth 国家边界与原有个人足迹坐标，去过的国家以浅紫突出，重要节点用荧绿连接。保留拖动、缩放、城市点击定位与还原视野；支持语言与主题切换。已移除失效的在线瓦片请求。数据来源和公共领域授权见 `assets/maps/README.md`；原有 Leaflet 1.9.4 保存在 `assets/vendor/`，包含许可证。
 
 Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Downloads/deck`，来源记录见 `images/sales-buddy-deck/README.md`。项目页使用客户列表、单客作战、会议证据核对和全景报告素材，并引用路演中明确描述的 24 个情报字段、50 个结构化业务落点。手机语音演示使用原视频，`preload="none"`，由读者点击播放。
+
+2026-10-03 再按作者新提供的 Logo 图片制作透明版本；原图与内置图像模型的透明输出各自保存，提示词见 `content/brand/sales-buddy-logo-v3-prompt.md`。深色主题直接展示透明标识，浅色主题与浅色产品页面使用海军蓝底板，保留蓝色 Sales、白色 Buddy 的对比。首页 Sales Buddy 卡片右侧与介绍页首屏嵌入 `sales-buddy-deck/` 的真实 HTML 首页，来源为 deck 的第一张 cover-slide，保留原排布并等比缩放；可单独放大查看。

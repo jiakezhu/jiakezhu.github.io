@@ -12,12 +12,27 @@
 .cw-icons .tencent-logo-mini { width:52px; height:27px; border-radius:4px; }
 .cw-flag { font-size:1.6rem; }
 .hero-photo-clip { height:540px; }
-.cover-sales { background:#0b1d3d; color:#c5d9fa; }
-.proj-row.is-featured .cover-sales { min-height:420px; }
-.cover-sales .cover-brand { width:200px; height:auto; max-height:115px; object-fit:contain; left:30px; top:30px; border-radius:0; transform:none; box-shadow:none; }
+.cover-sales { background:#0c203f; color:#c5d9fa; }
+.proj-row.is-featured:has(.cover-sales) { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; gap:28px; }
+.proj-row.is-featured .cover-sales { min-height:0; align-self:center; border-radius:15px; box-shadow:0 16px 45px #0002; }
 .cover-sales::before { display:none; }
-.cover-sales .cover-screen { width:88%; max-width:none; max-height:240px; object-fit:contain; left:6%; bottom:24px; transform:rotate(-2deg); }
-.proj-logo--app img[src*="penguin-stand"] { object-fit:contain; padding:1px; border-radius:0; background:none; }
+.sales-wordmark { display:block; width:184px; height:106px; object-fit:contain; border-radius:14px; padding:4px 0; }
+html[data-theme="light"] .sales-wordmark { background:#0c203f; padding:9px 12px; }
+.sales-name-label { position:absolute; width:1px; height:1px; margin:-1px; clip-path:inset(50%); overflow:hidden; white-space:nowrap; }
+.deck-preview-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:42px; padding:9px 16px; font:700 .57rem/1.4 var(--sans); letter-spacing:.1em; color:#c4d1e5; }
+.deck-preview-dots { display:flex; gap:5px; }
+.deck-preview-dots i { width:6px; height:6px; border-radius:50%; background:#5b7295; }
+.deck-preview-dots i:first-child { background:#d7ed8b; }.deck-preview-dots i:nth-child(2) { background:#b7b2ed; }
+.deck-preview-bar>a { font-size:1rem; color:#d7ed8b; text-decoration:none; padding:2px 5px; }
+.deck-preview-viewport { width:100%; aspect-ratio:16/9; overflow:hidden; background:#f4f7fb; }
+.deck-preview-viewport iframe { display:block; width:100%; height:100%; border:0; pointer-events:none; }
+.deck-preview-caption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin:0; padding:14px 16px; font-size:.64rem; line-height:1.5; }
+.deck-preview-caption>a { color:#d7ed8b; text-decoration:none; white-space:nowrap; }
+.deck-preview a:focus-visible { outline:2px solid #d7ed8b; outline-offset:3px; }
+@media(max-width:700px) {
+  .proj-row.is-featured .cover-sales { min-height:0; border-radius:0; align-self:stretch; }
+  .sales-wordmark { width:160px; height:94px; }
+}
 /* Two compact doors into the reading space. */
 .writing-finale { padding:80px 0; }
 .writing-finale #journal { padding-top:0; }

@@ -672,21 +672,23 @@
   <script src="assets/theme.js"></script>
   <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/intro.css?v=3">
-  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/home-v3.css?v=4"><link rel="stylesheet" href="assets/journey.css?v=4">
+  <link rel="stylesheet" href="assets/intro.css?v=4">
+  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/home-v3.css?v=5"><link rel="stylesheet" href="assets/journey.css?v=4">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
 <dialog id="site-intro" class="site-intro" aria-label="开场动画 / Welcome animation">
   <div class="intro-shutters" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="intro-grid" aria-hidden="true"></div>
+  <div class="intro-grid" aria-hidden="true"></div><div class="intro-orbit" aria-hidden="true"></div>
   <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>A LITTLE OF MY WORLD.</span></div>
   <div class="intro-stage">
     <div class="intro-title" aria-label="Jiake Zhu"><div class="intro-word"><span>J</span><span>i</span><span>a</span><span>k</span><span>e</span></div><div class="intro-word intro-word--last"><span>Z</span><span>h</span><span>u</span><span class="intro-period">.</span></div></div>
     <div class="intro-photos" aria-hidden="true"><div class="intro-photo intro-photo--back"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--middle"><img src="images/瑞士.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--front"><img src="images/hero.jpeg" alt="" decoding="async"></div></div>
-    <p class="intro-manifesto">Always<span>Day One.</span></p>
+    <div class="intro-philosophy" aria-label="pragmatic romantism"><span class="intro-philosophy-kicker">A WAY OF SEEING.</span><p><span>pragmatic</span><em>romantism.</em></p><span class="intro-philosophy-star" aria-hidden="true">✳</span></div>
+    <div class="intro-manifesto"><span class="intro-manifesto-kicker">KEEP BEGINNING.</span><p>Always<span>Day One.</span></p></div>
     <p class="intro-greeting">你好。 <span>Hello.</span> Bonjour. <span>Hola.</span></p>
   </div>
+  <div class="intro-progress" aria-hidden="true"><i></i></div>
   <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
 
@@ -1009,10 +1011,14 @@
 
       <div class="proj-row reveal spotlight-card">
         <div class="proj-num">01</div>
-        <div class="proj-visual cover-sales" aria-hidden="true"><span class="cover-caption">SALES BUDDY / AI WORKSPACE</span><img class="cover-icon cover-brand" src="images/sales-buddy-deck/sales-buddy-logo-dark-transparent.png" alt="" loading="lazy"><img class="cover-screen" src="images/sales-buddy-deck/04-customer-list.png" alt="" loading="lazy"><span class="cover-symbol">↗</span></div>
+        <div class="proj-visual cover-sales deck-preview">
+          <div class="deck-preview-bar"><span class="deck-preview-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SALES BUDDY / HTML</span><a href="sales-buddy-deck/" target="_blank" rel="noopener" aria-label="放大查看 Sales Buddy HTML 首页">↗</a></div>
+          <div class="deck-preview-viewport"><iframe src="sales-buddy-deck/" title="Sales Buddy 原版 HTML 首页预览" loading="lazy" sandbox="allow-scripts" tabindex="-1" aria-hidden="true"></iframe></div>
+          <p class="deck-preview-caption"><span data-lang="en" class="show">A closer look at Sales Buddy</span><span data-lang="zh">让每个销售定义自己的 AI 原生工作方式</span><span data-lang="fr">Découvrir Sales Buddy</span><span data-lang="es">Descubrir Sales Buddy</span><a href="sales-buddy-deck/" target="_blank" rel="noopener"><span data-lang="en" class="show">View ↗</span><span data-lang="zh">放大查看 ↗</span><span data-lang="fr">Voir ↗</span><span data-lang="es">Ver ↗</span></a></p>
+        </div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Sales · Customer Workflow</span><span data-lang="fr">Vente IA · Suivi Client</span><span data-lang="es">Ventas IA · Gestión de Clientes</span><span data-lang="zh">AI 销售助手 · 客户跟进</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Sales Buddy 标识"><img src="images/sales-buddy-deck/penguin-stand.png" alt=""></span><div class="proj-name">Sales Buddy</div></div>
+          <div class="proj-name-row proj-name-row--sales"><img class="sales-wordmark" src="images/sales-buddy-deck/sales-buddy-logo-v3-transparent.png" alt="Sales Buddy" loading="lazy"><div class="proj-name sales-name-label">Sales Buddy</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">An AI account-intelligence workspace built for frontline B2B sales. It converts voice or free-form updates into structured CRM records, maps stakeholders, prioritizes opportunities, recommends the next action, and produces a complete account report. I have used it to progress 40+ accounts and map over RMB 12M in IT scale; it won first place in the Marketing &amp; Customer Acquisition track of a Tencent Hackathon and advanced to the in-person showcase.</span><span data-lang="fr">Un cockpit d’intelligence client conçu pour les commerciaux B2B. À partir d’une note libre ou vocale, il structure le CRM, cartographie les décideurs, hiérarchise les opportunités, recommande la prochaine action et génère un rapport client complet. Je l’ai utilisé pour faire avancer plus de 40 comptes et qualifier plus de 12 M RMB de parc IT ; le projet a remporté le volet marketing et acquisition d’un Hackathon Tencent avant d’être retenu pour la finale présentielle.</span><span data-lang="es">Un centro de inteligencia de cuentas para ventas B2B. Convierte actualizaciones de voz o texto libre en registros de CRM, mapea a los decisores, prioriza oportunidades, propone la siguiente acción y genera un informe integral de cada cuenta. Lo he usado para impulsar más de 40 clientes y dimensionar más de 12 millones de RMB en infraestructura IT; ganó la categoría de marketing y captación de un Hackathon de Tencent y pasó a la presentación presencial.</span><span data-lang="zh">面向一线 ToB 销售的客户推进工作台。它把语音或自然语言进展转成结构化 CRM 记录，梳理关键人、判断机会优先级、给出下一步动作，并一键生成客户全景报告。我已经用它推进 40+ 客户、摸排 1200 万+ IT 体量；项目获腾讯 Hackathon 营销拓客赛道第一名，并入选线下路演。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 AI Extraction</span><span class="proj-tag">🎯 Next Action</span><span class="proj-tag">📥 CRM Import</span><span class="proj-tag">🕸️ Relationship Map</span><span class="proj-tag">📄 PDF · Word</span></div>
         </div>
@@ -1861,6 +1867,6 @@
 <script src="assets/navigation.js"></script>
 <script src="assets/interactions.js"></script>
 <script src="assets/journey.js?v=5"></script>
-<script src="assets/intro.js?v=3"></script>
+<script src="assets/intro.js?v=4"></script>
 </body>
 </html>
