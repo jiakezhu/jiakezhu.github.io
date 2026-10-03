@@ -179,10 +179,18 @@ draft: false
 
 ### 成长漫画与开场
 
-成长故事和公开日志相邻放在首页最后，共用一个阅读区域。`#story` 是个人成长漫画的预留板块，包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
+成长故事和公开日志的两个入口相邻放在首页最后，分别进入 `story/` 与 `journal/` 独立阅读页。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。`story/index.html` 包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
 
-`assets/intro.js` / `assets/intro.css` 提供姓名逐字入场、三张个人照片展开及五列分幕揭幕动画。每个浏览器会话首次进入首页时播放，约 2.72 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
+`assets/intro.js` / `assets/intro.css` 提供姓名逐字入场、三张个人照片展开、Always Day One 大字出场及五列分幕揭幕动画。每个浏览器会话首次进入首页时播放，约 3.87 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
 当前所有修改仅用于本地预览和本地提交。未得到作者后续明确发布指令前，不推送远端或部署。
 
 开场设计参考 Awwwards 收录的 [Giats Loading Animation](https://www.awwwards.com/inspiration/loading-animation-https-giats-me) 和 [Eduard Bodak Page transition](https://www.awwwards.com/inspiration/page-transition-eduard-bodak-portfolio)，以本站的圆润字体、真实旅行照片和配色重新设计。没有引入这些网站的媒体文件或代码。
+
+首屏的跨行业、跨学科、跨语言与对应标识同时显示在姓名下方。`assets/home-v3.css` 调整这些关键词及页尾入口的层级。
+
+### 足迹地图和 Sales Buddy 素材
+
+`assets/journey.js` / `assets/journey.css` 使用本地 Natural Earth 国家边界与原有个人足迹坐标，去过的国家以浅紫突出，重要节点用荧绿连接。保留拖动、缩放、城市点击定位与还原视野；支持语言与主题切换。已移除失效的在线瓦片请求。数据来源和公共领域授权见 `assets/maps/README.md`；原有 Leaflet 1.9.4 保存在 `assets/vendor/`，包含许可证。
+
+Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Downloads/deck`，来源记录见 `images/sales-buddy-deck/README.md`。项目页使用客户列表、单客作战、会议证据核对和全景报告素材，并引用路演中明确描述的 24 个情报字段、50 个结构化业务落点。手机语音演示使用原视频，`preload="none"`，由读者点击播放。

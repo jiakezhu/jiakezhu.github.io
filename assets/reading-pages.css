@@ -1,0 +1,12 @@
+.il,[data-lang] { display:none; }.il.show,[data-lang].show { display:inline; }
+.story-page { max-width:1248px; margin:auto; }
+.story-page-section { padding:70px 0 90px; }
+.story-page .story-cover { font-family:var(--sans); cursor:pointer; }
+.story-page .s-title { font-size:clamp(2.3rem,5vw,4.5rem); margin:0 0 18px; }
+.story-page .s-label { display:flex; }
+.story-page .story-intro { margin:0 0 40px; }
+.story-page .story-layout { margin-top:28px; }
+.story-dialog { color:var(--text); }
+.story-dialog-header h2 { margin:0; }
+.story-dialog-close { cursor:pointer; }
+@media(max-width:700px) { .story-page-section { padding:42px 0 60px; }.journal-nav { padding:20px 24px; gap:12px; }.journal-nav-links { gap:16px; }.journal-nav-links a { font-size:.76rem; }.story-page .s-title { font-size:2.1rem; }.story-page .story-intro { margin-bottom:24px; } }

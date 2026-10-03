@@ -667,23 +667,24 @@
       .jp-tag { padding: 5px 11px; font-size: 0.75rem; }
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="stylesheet" href="assets/vendor/leaflet.css" crossorigin=""/>
+  <script src="assets/vendor/leaflet.js" crossorigin=""></script>
   <script src="assets/theme.js"></script>
-  <link rel="stylesheet" href="assets/refinement.css">
+  <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/intro.css?v=2">
-  <link rel="stylesheet" href="assets/story.css?v=2">
+  <link rel="stylesheet" href="assets/intro.css?v=3">
+  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/home-v3.css?v=4"><link rel="stylesheet" href="assets/journey.css?v=4">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
 <dialog id="site-intro" class="site-intro" aria-label="开场动画 / Welcome animation">
   <div class="intro-shutters" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="intro-grid" aria-hidden="true"></div>
-  <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>ALWAYS DAY ONE.</span></div>
+  <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>A LITTLE OF MY WORLD.</span></div>
   <div class="intro-stage">
     <div class="intro-title" aria-label="Jiake Zhu"><div class="intro-word"><span>J</span><span>i</span><span>a</span><span>k</span><span>e</span></div><div class="intro-word intro-word--last"><span>Z</span><span>h</span><span>u</span><span class="intro-period">.</span></div></div>
     <div class="intro-photos" aria-hidden="true"><div class="intro-photo intro-photo--back"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--middle"><img src="images/瑞士.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--front"><img src="images/hero.jpeg" alt="" decoding="async"></div></div>
+    <p class="intro-manifesto">Always<span>Day One.</span></p>
     <p class="intro-greeting">你好。 <span>Hello.</span> Bonjour. <span>Hola.</span></p>
   </div>
   <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
@@ -699,8 +700,8 @@
     <a href="#projects" class="nav-link"><span class="il en show">AI Portfolio</span><span class="il fr">Portfolio IA</span><span class="il es">Portfolio IA</span><span class="il zh">AI作品集</span></a>
     <a href="#journey" class="nav-link"><span class="il en show">Journey</span><span class="il fr">Parcours</span><span class="il es">Trayecto</span><span class="il zh">足迹</span></a>
     <a href="#life" class="nav-link"><span class="il en show">Life</span><span class="il fr">Vie</span><span class="il es">Vida</span><span class="il zh">生活</span></a>
-    <a href="#story" class="nav-link"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></a>
-    <a href="#journal" class="nav-link"><span class="il en show">Journal</span><span class="il fr">Journal</span><span class="il es">Diario</span><span class="il zh">日志</span></a>
+    <a href="story/" class="nav-link"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></a>
+    <a href="journal/" class="nav-link"><span class="il en show">Journal</span><span class="il fr">Journal</span><span class="il es">Diario</span><span class="il zh">日志</span></a>
   </div>
   <div class="lang-switcher">
     <button class="lang-btn active" data-code="en" onclick="setLang('en')">🇬🇧 EN</button>
@@ -720,19 +721,7 @@
       <span class="hero-name-inner">Jiake <em>Zhu<span class="hero-period">.</span></em></span>
     </h1>
     <p class="hero-alias">朱佳科 <span>/ Jack Zhu</span></p>
-    <div class="hero-subtitle-wrap" id="hero-subtitle-wrap">
-      <span class="cycle-word">
-        <span class="cw-text" data-en="Multilingual" data-fr="Plurilingue" data-es="Plurilingüe" data-zh="跨语言">Multilingual</span>
-        <span class="cw-icons"><span class="cw-flag">🇨🇳</span><span class="cw-flag">🇬🇧</span><span class="cw-flag">🇫🇷</span><span class="cw-flag">🇪🇸</span></span>
-      </span>
-      <span class="cycle-word">
-        <span class="cw-text" data-en="Multidisciplinary" data-fr="Pluridisciplinaire" data-es="Multidisciplinar" data-zh="跨学科">Multidisciplinary</span>
-        <span class="cw-icons">
-          <img src="images/paris1.png" alt="Paris 1">
-          <img src="images/swufe.png" alt="SWUFE">
-          <img src="images/zjsu.png" alt="ZJSU">
-        </span>
-      </span>
+    <div class="hero-subtitle-wrap" id="hero-subtitle-wrap" aria-label="跨行业、跨学科、跨语言">
       <span class="cycle-word">
         <span class="cw-text" data-en="Multi-industry" data-fr="Multi-sectoriel" data-es="Multisectorial" data-zh="跨行业">Multi-industry</span>
         <span class="cw-icons">
@@ -743,6 +732,18 @@
           <img src="images/marketunion.png" alt="Market Union">
           <img src="images/mingle.png" alt="Mingle" style="background:#fff;padding:1px;">
         </span>
+      </span>
+          <span class="cycle-word">
+        <span class="cw-text" data-en="Multidisciplinary" data-fr="Pluridisciplinaire" data-es="Multidisciplinar" data-zh="跨学科">Multidisciplinary</span>
+        <span class="cw-icons">
+          <img src="images/paris1.png" alt="Paris 1">
+          <img src="images/swufe.png" alt="SWUFE">
+          <img src="images/zjsu.png" alt="ZJSU">
+        </span>
+      </span>
+      <span class="cycle-word">
+        <span class="cw-text" data-en="Multilingual" data-fr="Plurilingue" data-es="Plurilingüe" data-zh="跨语言">Multilingual</span>
+        <span class="cw-icons"><span class="cw-flag">🇨🇳</span><span class="cw-flag">🇬🇧</span><span class="cw-flag">🇫🇷</span><span class="cw-flag">🇪🇸</span></span>
       </span>
     </div>
     <p class="hero-tagline">
@@ -1008,10 +1009,10 @@
 
       <div class="proj-row reveal spotlight-card">
         <div class="proj-num">01</div>
-        <div class="proj-visual cover-sales" aria-hidden="true"><span class="cover-caption">SALES BUDDY / AI WORKSPACE</span><img class="cover-icon" src="images/sales-buddy-app-icon-v2.png" alt="" loading="lazy"><img class="cover-screen" src="images/sales-buddy-case/research.png" alt="" loading="lazy"><span class="cover-symbol">↗</span></div>
+        <div class="proj-visual cover-sales" aria-hidden="true"><span class="cover-caption">SALES BUDDY / AI WORKSPACE</span><img class="cover-icon cover-brand" src="images/sales-buddy-deck/sales-buddy-logo-dark-transparent.png" alt="" loading="lazy"><img class="cover-screen" src="images/sales-buddy-deck/04-customer-list.png" alt="" loading="lazy"><span class="cover-symbol">↗</span></div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Sales · Customer Workflow</span><span data-lang="fr">Vente IA · Suivi Client</span><span data-lang="es">Ventas IA · Gestión de Clientes</span><span data-lang="zh">AI 销售助手 · 客户跟进</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Sales Buddy penguin app icon"><img src="images/sales-buddy-app-icon-v2.png" alt=""></span><div class="proj-name">Sales Buddy</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Sales Buddy 标识"><img src="images/sales-buddy-deck/penguin-stand.png" alt=""></span><div class="proj-name">Sales Buddy</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">An AI account-intelligence workspace built for frontline B2B sales. It converts voice or free-form updates into structured CRM records, maps stakeholders, prioritizes opportunities, recommends the next action, and produces a complete account report. I have used it to progress 40+ accounts and map over RMB 12M in IT scale; it won first place in the Marketing &amp; Customer Acquisition track of a Tencent Hackathon and advanced to the in-person showcase.</span><span data-lang="fr">Un cockpit d’intelligence client conçu pour les commerciaux B2B. À partir d’une note libre ou vocale, il structure le CRM, cartographie les décideurs, hiérarchise les opportunités, recommande la prochaine action et génère un rapport client complet. Je l’ai utilisé pour faire avancer plus de 40 comptes et qualifier plus de 12 M RMB de parc IT ; le projet a remporté le volet marketing et acquisition d’un Hackathon Tencent avant d’être retenu pour la finale présentielle.</span><span data-lang="es">Un centro de inteligencia de cuentas para ventas B2B. Convierte actualizaciones de voz o texto libre en registros de CRM, mapea a los decisores, prioriza oportunidades, propone la siguiente acción y genera un informe integral de cada cuenta. Lo he usado para impulsar más de 40 clientes y dimensionar más de 12 millones de RMB en infraestructura IT; ganó la categoría de marketing y captación de un Hackathon de Tencent y pasó a la presentación presencial.</span><span data-lang="zh">面向一线 ToB 销售的客户推进工作台。它把语音或自然语言进展转成结构化 CRM 记录，梳理关键人、判断机会优先级、给出下一步动作，并一键生成客户全景报告。我已经用它推进 40+ 客户、摸排 1200 万+ IT 体量；项目获腾讯 Hackathon 营销拓客赛道第一名，并入选线下路演。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 AI Extraction</span><span class="proj-tag">🎯 Next Action</span><span class="proj-tag">📥 CRM Import</span><span class="proj-tag">🕸️ Relationship Map</span><span class="proj-tag">📄 PDF · Word</span></div>
         </div>
@@ -1186,24 +1187,24 @@
       <div class="jp-china-right">
         <div>
           <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · China</span><span data-lang="fr">Villes visitées · Chine</span><span data-lang="es">Lugares visitados · China</span><span data-lang="zh">中国足迹</span></div>
-          <div id="journey-map-china"></div>
+          <div class="atlas-frame"><div class="atlas-heading"><span>CHINA / FROM THE COAST</span><button class="atlas-reset" type="button" data-map-reset="china"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div id="journey-map-china" aria-label="China travel map"></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
         </div>
         <div>
         <div class="jp-tags">
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Beijing</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Shanghai</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Hangzhou</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Ningbo</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Nanjing</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Suzhou</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Shaoxing</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Jiaxing</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Huangshan</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Chongqing</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Chengdu</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">West Sichuan</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Changsha</span></div>
-          <div class="jp-tag"><div class="jp-tag-dot"></div><span class="jp-tag-label">Yinchuan</span></div>
+          <button type="button" class="jp-tag" data-place="Beijing"><div class="jp-tag-dot"></div><span class="jp-tag-label">Beijing</span></button>
+          <button type="button" class="jp-tag" data-place="Shanghai"><div class="jp-tag-dot"></div><span class="jp-tag-label">Shanghai</span></button>
+          <button type="button" class="jp-tag" data-place="Hangzhou"><div class="jp-tag-dot"></div><span class="jp-tag-label">Hangzhou</span></button>
+          <button type="button" class="jp-tag" data-place="Ningbo"><div class="jp-tag-dot"></div><span class="jp-tag-label">Ningbo</span></button>
+          <button type="button" class="jp-tag" data-place="Nanjing"><div class="jp-tag-dot"></div><span class="jp-tag-label">Nanjing</span></button>
+          <button type="button" class="jp-tag" data-place="Suzhou"><div class="jp-tag-dot"></div><span class="jp-tag-label">Suzhou</span></button>
+          <button type="button" class="jp-tag" data-place="Shaoxing"><div class="jp-tag-dot"></div><span class="jp-tag-label">Shaoxing</span></button>
+          <button type="button" class="jp-tag" data-place="Jiaxing"><div class="jp-tag-dot"></div><span class="jp-tag-label">Jiaxing</span></button>
+          <button type="button" class="jp-tag" data-place="Huangshan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Huangshan</span></button>
+          <button type="button" class="jp-tag" data-place="Chongqing"><div class="jp-tag-dot"></div><span class="jp-tag-label">Chongqing</span></button>
+          <button type="button" class="jp-tag" data-place="Chengdu"><div class="jp-tag-dot"></div><span class="jp-tag-label">Chengdu</span></button>
+          <button type="button" class="jp-tag" data-place="West Sichuan"><div class="jp-tag-dot"></div><span class="jp-tag-label">West Sichuan</span></button>
+          <button type="button" class="jp-tag" data-place="Changsha"><div class="jp-tag-dot"></div><span class="jp-tag-label">Changsha</span></button>
+          <button type="button" class="jp-tag" data-place="Yinchuan"><div class="jp-tag-dot"></div><span class="jp-tag-label">Yinchuan</span></button>
         </div>
         </div>
       </div>
@@ -1226,7 +1227,7 @@
           </div>
         </div>
         <div class="jp-section-label"><span data-lang="en" class="show">Map</span><span data-lang="fr">Carte</span><span data-lang="es">Mapa</span><span data-lang="zh">地图上看看</span></div>
-        <div id="journey-map-europe"></div>
+        <div class="atlas-frame"><div class="atlas-heading"><span>EUROPE / A WIDER WORLD</span><button class="atlas-reset" type="button" data-map-reset="europe"><span class="il en show">Reset view</span><span class="il fr">Réinitialiser</span><span class="il es">Restablecer</span><span class="il zh">还原视野</span> <span aria-hidden="true">↗</span></button></div><div id="journey-map-europe" aria-label="Europe travel map"></div><div class="atlas-legend"><span><i class="atlas-dot atlas-dot--life"></i><span class="il en show">Life chapters</span><span class="il fr">Étapes de vie</span><span class="il es">Etapas de vida</span><span class="il zh">重要节点</span></span><span><i class="atlas-dot"></i><span class="il en show">Places visited</span><span class="il fr">Lieux visités</span><span class="il es">Lugares visitados</span><span class="il zh">去过的地方</span></span><span class="atlas-hint"><span class="il en show">Drag · zoom · explore</span><span class="il fr">Déplacer · zoomer</span><span class="il es">Mover · ampliar</span><span class="il zh">拖动、缩放，探索每一站</span></span></div></div>
       </div>
       <div>
         <div class="jp-section-label"><span data-lang="en" class="show">Places Visited · Europe</span><span data-lang="fr">Villes visitées · Europe</span><span data-lang="es">Lugares visitados · Europa</span><span data-lang="zh">欧洲足迹</span></div>
@@ -1337,48 +1338,20 @@
 </div>
 
 <!-- STORIES & JOURNAL -->
-<div class="writing-finale">
-<!-- GROWTH COMIC: actual life stories will be supplied by the owner. -->
-<section id="story" class="sf story-section">
-  <div class="si">
-    <div data-chapter="08" class="s-label"><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span><span class="il zh">成长历程</span></div>
-    <h2 class="s-title"><span data-lang="en" class="show">Life, <em>frame by frame.</em></span><span data-lang="fr">Une vie, <em>case par case.</em></span><span data-lang="es">La vida, <em>viñeta a viñeta.</em></span><span data-lang="zh">我的成长，<em>画进漫画里。</em></span></h2>
-    <p class="story-intro"><span data-lang="en" class="show">From childhood to today, the moments that shape a person.<br>The pages are here. The stories will follow.</span><span data-lang="fr">De l’enfance à aujourd’hui, les moments qui nous façonnent.<br>Les pages sont là. Les histoires viendront.</span><span data-lang="es">De la infancia hasta hoy, los momentos que nos forman.<br>Las páginas están aquí. Las historias vendrán.</span><span data-lang="zh">从童年到现在，那些慢慢塑造我的片刻。<br>先留好书页，再把故事一页页写下。</span></p>
-    <div class="story-layout">
-      <button type="button" class="story-cover" aria-haspopup="dialog" aria-controls="story-dialog">
-        <span class="story-cover-label" aria-hidden="true"><span>LIFE, FRAME BY FRAME</span><span>STORIES TO COME</span></span>
-        <img class="story-cover-image" src="images/growth-comic-cover-v2.png" width="1672" height="941" loading="lazy" alt="折叠展开的空白漫画分镜，尚未填入个人经历">
-        <span class="story-cover-bottom"><span class="il en show">Preview the comic cover</span><span class="il fr">Voir la couverture</span><span class="il es">Ver la portada</span><span class="il zh">预览漫画封面</span><span class="story-cover-arrow" aria-hidden="true">↗</span></span>
-      </button>
-      <div class="story-chapters" role="group" aria-label="成长漫画章节 / Comic chapters">
-        <button type="button" class="story-chapter" aria-pressed="true"><span class="story-chapter-number" aria-hidden="true">01</span><span class="story-chapter-name">童年的章节</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">02</span><span class="story-chapter-name">少年的章节</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">03</span><span class="story-chapter-name">走向更大的世界</span><span class="story-chapter-status">故事待写</span></button>
-        <button type="button" class="story-chapter" aria-pressed="false"><span class="story-chapter-number" aria-hidden="true">04</span><span class="story-chapter-name">此刻与以后</span><span class="story-chapter-status">故事待写</span></button>
-        <p class="story-waiting" id="story-selection" role="status" aria-live="polite">童年的章节 · 故事待写</p>
-      </div>
-    </div>
-  </div>
-</section>
-<dialog id="story-dialog" class="story-dialog" aria-labelledby="story-dialog-title">
-  <div class="story-dialog-header"><h2 id="story-dialog-title"><span class="il en show">Life in frames</span><span class="il fr">Une vie en images</span><span class="il es">La vida en viñetas</span><span class="il zh">我的成长漫画</span></h2><button type="button" class="story-dialog-close" aria-label="关闭封面预览 / Close cover preview">✕</button></div>
-  <img class="story-dialog-image" src="images/growth-comic-cover-v2.png" width="1672" height="941" loading="lazy" alt="折叠展开的空白漫画分镜，等待未来的故事">
-  <p><span class="il en show">A cover for the stories to come. No life stories have been added yet.</span><span class="il fr">Une couverture pour les histoires à venir. Le récit reste à écrire.</span><span class="il es">Una portada para las historias que vendrán. El relato está por escribir.</span><span class="il zh">这是未来故事的封面视觉。具体经历尚未填写。</span></p>
-</dialog>
-
-<!-- JOURNAL -->
-<section id="journal" class="s journal-home">
-  <div data-chapter="09" class="s-label"><span class="il en show">The journal</span><span class="il fr">Le journal</span><span class="il es">El diario</span><span class="il zh">公开日志</span></div>
-  <div class="journal-preview-heading"><h2 class="s-title"><span data-lang="en" class="show">Building. Living. <em>Writing.</em></span><span data-lang="fr">Créer. Vivre. <em>Écrire.</em></span><span data-lang="es">Crear. Vivir. <em>Escribir.</em></span><span data-lang="zh">实践，生活，<em>记录。</em></span></h2><a href="journal/"><span class="il en show">All entries ↗</span><span class="il fr">Tous les articles ↗</span><span class="il es">Todas las entradas ↗</span><span class="il zh">全部日志 ↗</span></a></div>
-  <p class="journal-intro"><span data-lang="en" class="show">Technical explorations and everyday notes, in one place.</span><span data-lang="fr">Explorations techniques et notes du quotidien, au même endroit.</span><span data-lang="es">Exploraciones técnicas y notas cotidianas, en un mismo lugar.</span><span data-lang="zh">写技术实践，也写日常片刻。把值得留下的东西，慢慢记录下来。</span></p>
-  <div><!-- JOURNAL_PREVIEW_START -->
-<a id="post-language-house-preparation" class="journal-card" data-category="diary" href="journal/posts/language-house-preparation/"><time datetime="2026-10-02">2026 / 10 / 02</time><div><div class="journal-meta"><span>日记</span><span>1 分钟阅读</span></div><h2>Language House：把筹备收拢到三个重点</h2><p>把此前的想法与研究整理成独立项目，当前围绕 AI 备课台、学生管理系统和前期调研推进。</p><div class="journal-tags"><span># Language House</span><span># 项目筹备</span><span># 英语学习</span></div></div><span class="journal-arrow" aria-hidden="true">↗</span></a>
-<a id="post-lessonfold-workflow" class="journal-card" data-category="tech" href="journal/posts/lessonfold-workflow/"><time datetime="2026-10-02">2026 / 10 / 02</time><div><div class="journal-meta"><span>技术博客</span><span>2 分钟阅读</span></div><h2>Lessonfold：让备课成为一条完整流程</h2><p>从一节示例课出发，完善材料生成、教师审核和讲义阅读，继续推进与学生管理系统的连接。</p><div class="journal-tags"><span># Lessonfold</span><span># AI 教育</span><span># 产品开发</span></div></div><span class="journal-arrow" aria-hidden="true">↗</span></a>
-<a id="post-ai-compute-field-guide" class="journal-card" data-category="tech" href="journal/posts/ai-compute-field-guide/"><time datetime="2026-09-27">2026 / 09 / 27</time><div><div class="journal-meta"><span>技术博客</span><span>1 分钟阅读</span></div><h2>把 AI 算力知识整理成可检索的手册</h2><p>完成 34 组卡型资料、搜索筛选与三卡对比，把硬件知识和行业场景放进一套可持续更新的工具。</p><div class="journal-tags"><span># AI 算力</span><span># 知识工具</span><span># 产品开发</span></div></div><span class="journal-arrow" aria-hidden="true">↗</span></a>
-<!-- JOURNAL_PREVIEW_END --></div>
-</section>
-
-</div><!-- /writing-finale -->
+<div class="writing-finale"><div class="si"><div class="reading-portals">
+<section id="story" class="reading-portal reading-portal--story"><a href="story/">
+<div class="portal-top"><span>08 / MY STORY</span><span class="portal-arrow" aria-hidden="true">↗</span></div>
+<img class="portal-art" src="images/growth-comic-cover-v2.png" width="1672" height="941" loading="lazy" alt="折叠展开的空白漫画书页">
+<div class="portal-copy"><h2><span class="il en show">Life, frame by frame.</span><span class="il fr">Une vie en images.</span><span class="il es">La vida en viñetas.</span><span class="il zh">成长，画进漫画里。</span></h2><p><span class="il en show">The chapters that shape a life.</span><span class="il fr">Les chapitres qui façonnent une vie.</span><span class="il es">Los capítulos que nos forman.</span><span class="il zh">那些慢慢塑造我的片刻。</span></p><span class="portal-link"><span class="il en show">Open my story</span><span class="il fr">Ouvrir mon histoire</span><span class="il es">Abrir mi historia</span><span class="il zh">翻开成长故事</span> <span aria-hidden="true">↗</span></span></div>
+</a></section>
+<section id="journal" class="reading-portal reading-portal--journal"><a href="journal/">
+<div class="portal-top"><span>09 / THE JOURNAL</span><span class="portal-arrow" aria-hidden="true">↗</span></div>
+<div class="portal-journal-art" aria-hidden="true"><span class="portal-book"><i></i><i></i><i></i><i></i></span><span class="portal-art-caption">IDEAS / PRACTICE / LIFE</span></div>
+<div class="portal-copy"><h2><span class="il en show">Think. Build. Write.</span><span class="il fr">Penser. Créer. Écrire.</span><span class="il es">Pensar. Crear. Escribir.</span><span class="il zh">实践，生活，记录。</span></h2><p><span class="il en show">Notes on technology and everyday life.</span><span class="il fr">Notes sur la technologie et le quotidien.</span><span class="il es">Notas de tecnología y de la vida diaria.</span><span class="il zh">写技术实践，也写日常片刻。</span></p><div class="portal-meta"><!-- JOURNAL_PREVIEW_START -->
+<span class="il en show">3 entries</span><span class="il zh">3 篇记录</span><span class="il fr">3 notes</span><span class="il es">3 entradas</span><time datetime="2026-10-02">2026 / 10 / 02</time>
+<!-- JOURNAL_PREVIEW_END --></div><span class="portal-link"><span class="il en show">Read the journal</span><span class="il fr">Lire le journal</span><span class="il es">Leer el diario</span><span class="il zh">走进我的日志</span> <span aria-hidden="true">↗</span></span></div>
+</a></section>
+</div></div></div>
 
 <!-- FOOTER -->
 <footer>
@@ -1493,10 +1466,10 @@
   // ── Language ──
   let lang = 'en';
   const subtitleTexts = {
-    en: ['Multilingual','Multidisciplinary','Multi-industry'],
-    fr: ['Plurilingue','Pluridisciplinaire','Multi-sectoriel'],
-    es: ['Plurilingüe','Multidisciplinar','Multisectorial'],
-    zh: ['跨语言','跨学科','跨行业']
+    en: ['Multi-industry','Multidisciplinary','Multilingual'],
+    fr: ['Multi-sectoriel','Pluridisciplinaire','Plurilingue'],
+    es: ['Multisectorial','Multidisciplinar','Plurilingüe'],
+    zh: ['跨行业','跨学科','跨语言']
   };
 
   const staticZhText = {
@@ -1699,119 +1672,6 @@
     el.classList.add('spotlight-card');
   });
 
-  // ── Journey Maps ──
-  (function() {
-    let chinaMap = null;
-    let europeMap = null;
-    const journeyLabel = text => lang === 'zh' ? (staticZhText[text] || text) : text;
-
-    function dotIcon(gold) {
-      const cls = gold ? 'map-dot-ms' : 'map-dot';
-      return L.divIcon({ className:'', html:`<div class="${cls}"></div>`, iconSize:[gold?11:8,gold?11:8], iconAnchor:[gold?5:4,gold?5:4], tooltipAnchor:[0,gold?-8:-6] });
-    }
-    function hideCursor(el) {
-      const d = document.querySelector('.cursor-dot'), r = document.querySelector('.cursor-ring');
-      if (d && r) { el.addEventListener('mouseenter',()=>{d.style.opacity='0';r.style.opacity='0';}); el.addEventListener('mouseleave',()=>{d.style.opacity='';r.style.opacity='';}); }
-    }
-
-    function initChinaMap() {
-      const el = document.getElementById('journey-map-china');
-      if (!el || el._init || !window.L) return; el._init = true;
-      const map = chinaMap = L.map('journey-map-china',{zoomControl:true,scrollWheelZoom:false}).setView([33,110],4);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OSM</a> © <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:19}).addTo(map);
-      const ms=[
-        {lat:29.739,lng:121.783,label:'Xianxiang · Ningbo',dir:'right'},
-        {lat:30.307,lng:120.422,label:'ZJSU · Hangzhou',dir:'top'},
-        {lat:30.720,lng:103.836,label:'SWUFE · Chengdu',dir:'top'},
-      ];
-      ms.forEach(m=>{ L.marker([m.lat,m.lng],{icon:dotIcon(true)}).bindTooltip(journeyLabel(m.label),{permanent:true,direction:m.dir,offset:m.dir==='right'?[8,0]:[0,-8],className:'map-lbl map-lbl-gold'}).addTo(map); });
-      L.polyline([[29.739,121.783],[30.307,120.422],[30.720,103.836]],{color:'#c9a86c',weight:1.5,opacity:0.4,dashArray:'7 5'}).addTo(map);
-      const cities=[
-        {lat:39.909,lng:116.397,label:'Beijing',dir:'top'},
-        {lat:31.230,lng:121.474,label:'Shanghai',dir:'right'},
-        {lat:32.062,lng:118.796,label:'Nanjing',dir:'left'},
-        {lat:31.299,lng:120.585,label:'Suzhou',dir:'top'},
-        {lat:30.003,lng:120.582,label:'Shaoxing',dir:'bottom'},
-        {lat:30.752,lng:120.753,label:'Jiaxing',dir:'left'},
-        {lat:29.874,lng:121.551,label:'Ningbo',dir:'bottom'},
-        {lat:30.130,lng:118.176,label:'Huangshan',dir:'bottom'},
-        {lat:29.563,lng:106.551,label:'Chongqing',dir:'bottom'},
-        {lat:31.900,lng:102.200,label:'W. Sichuan',dir:'top'},
-        {lat:28.228,lng:112.939,label:'Changsha',dir:'bottom'},
-        {lat:38.487,lng:106.232,label:'Yinchuan',dir:'top'},
-      ];
-      cities.forEach(c=>{ L.marker([c.lat,c.lng],{icon:dotIcon(false)}).bindTooltip(journeyLabel(c.label),{permanent:true,direction:c.dir,offset:c.dir==='right'?[7,0]:c.dir==='left'?[-7,0]:c.dir==='bottom'?[0,6]:[0,-6],className:'map-lbl'}).addTo(map); });
-      hideCursor(el);
-    }
-
-    function initEuropeMap() {
-      const el = document.getElementById('journey-map-europe');
-      if (!el || el._init || !window.L) return; el._init = true;
-      const map = europeMap = L.map('journey-map-europe',{zoomControl:true,scrollWheelZoom:false}).setView([52,12],4);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OSM</a> © <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:19}).addTo(map);
-      L.marker([48.846,2.346],{icon:dotIcon(true)}).bindTooltip(journeyLabel('Paris 1 Panthéon'),{permanent:true,direction:'right',offset:[8,0],className:'map-lbl map-lbl-gold'}).addTo(map);
-      const cities=[
-        {lat:43.300,lng:5.370,label:'Marseille',dir:'bottom'},{lat:48.580,lng:7.750,label:'Strasbourg',dir:'right'},
-        {lat:43.710,lng:7.260,label:'Nice',dir:'right'},{lat:43.778,lng:7.503,label:'Menton',dir:'top'},
-        {lat:48.110,lng:-1.680,label:'Rennes',dir:'left'},{lat:47.394,lng:0.690,label:'Tours',dir:'bottom'},
-        {lat:50.630,lng:3.070,label:'Lille',dir:'top'},{lat:43.580,lng:7.130,label:'Antibes',dir:'left'},
-        {lat:43.550,lng:7.020,label:'Cannes',dir:'bottom'},{lat:47.218,lng:-1.553,label:'Nantes',dir:'bottom'},
-        {lat:44.837,lng:-0.580,label:'Bordeaux',dir:'left'},{lat:45.750,lng:4.835,label:'Lyon',dir:'right'},
-        {lat:43.600,lng:1.440,label:'Toulouse',dir:'bottom'},
-        {lat:47.376,lng:8.541,label:'Zürich',dir:'right'},{lat:47.558,lng:7.589,label:'Basel',dir:'top'},
-        {lat:46.686,lng:7.864,label:'Interlaken',dir:'top'},{lat:46.758,lng:7.628,label:'Thun',dir:'left'},
-        {lat:46.690,lng:7.671,label:'Spiez',dir:'bottom'},{lat:46.784,lng:8.167,label:'Lungern',dir:'right'},
-        {lat:46.711,lng:7.974,label:'Iseltwald',dir:'right'},{lat:47.050,lng:8.310,label:'Lucerne',dir:'top'},
-        {lat:47.056,lng:8.490,label:'Rigi',dir:'right'},{lat:46.593,lng:7.909,label:'Lauterbrunnen',dir:'left'},
-        {lat:46.555,lng:7.901,label:'Gimmelwald',dir:'bottom'},
-        {lat:52.520,lng:13.405,label:'Berlin',dir:'top'},{lat:48.521,lng:9.057,label:'Tübingen',dir:'right'},
-        {lat:50.851,lng:4.352,label:'Brussels',dir:'top'},{lat:41.387,lng:2.170,label:'Barcelona',dir:'bottom'},
-        {lat:41.902,lng:12.496,label:'Rome',dir:'right'},{lat:44.407,lng:8.934,label:'Genoa',dir:'left'},
-        {lat:41.903,lng:12.453,label:'Vatican',dir:'left'},
-        {lat:52.079,lng:4.312,label:'The Hague',dir:'left'},{lat:52.374,lng:4.898,label:'Amsterdam',dir:'top'},
-        {lat:52.474,lng:4.817,label:'Zaanse Schans',dir:'right'},
-        {lat:50.075,lng:14.438,label:'Prague',dir:'top'},{lat:48.810,lng:14.317,label:'Č. Krumlov',dir:'right'},
-        {lat:48.208,lng:16.373,label:'Vienna',dir:'right'},{lat:47.498,lng:19.040,label:'Budapest',dir:'right'},
-        {lat:69.650,lng:18.957,label:'Tromsø',dir:'bottom'},{lat:60.169,lng:24.938,label:'Helsinki',dir:'right'},
-        {lat:48.148,lng:17.107,label:'Bratislava',dir:'bottom'},{lat:49.611,lng:6.131,label:'Luxembourg',dir:'left'},
-      ];
-      cities.forEach(c=>{
-        const off=c.dir==='right'?[7,0]:c.dir==='left'?[-7,0]:c.dir==='bottom'?[0,6]:[0,-6];
-        L.marker([c.lat,c.lng],{icon:dotIcon(false)}).bindTooltip(journeyLabel(c.label),{permanent:true,direction:c.dir,offset:off,className:'map-lbl'}).addTo(map);
-      });
-      hideCursor(el);
-    }
-
-    // Init China map when section enters view
-    const sec = document.getElementById('journey');
-    if (sec) {
-      const obs = new IntersectionObserver(e=>{ if(e[0].isIntersecting){ initChinaMap(); obs.disconnect(); } },{threshold:0.05});
-      obs.observe(sec);
-    }
-
-    // Expose so switchJourneyView can call them
-    window._initChinaMap = initChinaMap;
-    window._initEuropeMap = initEuropeMap;
-    window._refreshJourneyMaps = function() {
-      const hadMap = !!chinaMap || !!europeMap;
-      if (chinaMap) { chinaMap.remove(); chinaMap = null; }
-      if (europeMap) { europeMap.remove(); europeMap = null; }
-      const chinaEl = document.getElementById('journey-map-china');
-      const europeEl = document.getElementById('journey-map-europe');
-      if (chinaEl) chinaEl._init = false;
-      if (europeEl) europeEl._init = false;
-      if (!hadMap) return;
-      const activeView = document.querySelector('.map-tab-btn.active')?.dataset.view || 'china';
-      setTimeout(activeView === 'europe' ? initEuropeMap : initChinaMap, 0);
-    };
-  })();
-
-  // ── Journey Panels ──
-  window.switchJourneyView = function(view) {
-    document.querySelectorAll('.map-tab-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
-    document.querySelectorAll('.journey-panel').forEach(p => p.classList.toggle('active', p.id === 'jp-' + view));
-    setTimeout(view === 'europe' ? window._initEuropeMap : window._initChinaMap, 60);
-  };
   // ── (Leaflet map removed) ──
   (function() {
     return; // no-op
@@ -2000,7 +1860,7 @@
 </script>
 <script src="assets/navigation.js"></script>
 <script src="assets/interactions.js"></script>
-<script src="assets/story.js?v=2"></script>
-<script src="assets/intro.js?v=2"></script>
+<script src="assets/journey.js?v=5"></script>
+<script src="assets/intro.js?v=3"></script>
 </body>
 </html>

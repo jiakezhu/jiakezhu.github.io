@@ -37,6 +37,9 @@ html.intro-playing { overflow:hidden; }
 .intro-photo--front img { object-position:center; }
 .intro-greeting { position:absolute; bottom:0; left:0; font-size:1rem; letter-spacing:.015em; animation:introGreeting .8s .6s both; }
 .intro-greeting span { color:#b2b5b8; margin:0 10px; }
+.intro-title,.intro-photos { animation:introSequenceFade .4s 1.7s both; }
+.intro-manifesto { position:absolute; z-index:3; top:46%; left:0; width:100%; transform:translateY(-50%); margin:0; font:800 clamp(4.5rem,9vw,8rem)/1.05 var(--sans); letter-spacing:-.06em; animation:introManifesto .75s 1.85s cubic-bezier(.16,1,.3,1) both; }
+.intro-manifesto span { display:block; color:#d7ed8b; }
 .intro-skip { display:inline-flex; align-items:center; background:none; color:#f3f0e9; border:1px solid #f3f0e950; border-radius:30px; padding:11px 20px; font:600 .85rem var(--sans); transition:background .2s,color .2s; }
 .intro-skip:hover { background:#d7ed8b; color:#151719; border-color:#d7ed8b; }
 .site-intro.is-exiting { animation:introCurtain 1.02s linear forwards; }
@@ -60,6 +63,8 @@ html.intro-playing #hero .hero-left>* { opacity:0; }
 @keyframes introCurtain { 0%,98% { opacity:1; } to { opacity:0; } }
 @keyframes heroArrive { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
 @keyframes heroPhotoArrive { from { opacity:0; transform:translateY(18px) scale(.97); } to { opacity:1; transform:none; } }
+@keyframes introSequenceFade { from { opacity:1; } to { opacity:0; } }
+@keyframes introManifesto { from { opacity:0; transform:translateY(calc(-50% + 30px)); filter:blur(8px); } to { opacity:1; transform:translateY(-50%); filter:blur(0); } }
 @media(max-width:700px) {
   .intro-stage { width:86vw; height:min(510px,66dvh); }
   .intro-title { font-size:clamp(5rem,21vw,8rem); }
@@ -70,6 +75,7 @@ html.intro-playing #hero .hero-left>* { opacity:0; }
   .intro-photo--middle { --shift:28px; --lift:12px; }
   .intro-greeting { bottom:0; font-size:.78rem; }
   .intro-greeting span { margin:0 5px; }
+  .intro-manifesto { font-size:clamp(3.7rem,15vw,5.5rem); top:48%; }
   .intro-top { font-size:.61rem; gap:12px; }
   .intro-bottom p { font-size:.78rem; max-width:45%; }
   .intro-skip { font-size:.78rem; padding:9px 14px; }

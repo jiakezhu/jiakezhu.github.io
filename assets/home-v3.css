@@ -1,0 +1,50 @@
+/* The three pillars belong in the first reading, with their identities visible. */
+#hero { max-width:1200px; column-gap:48px; }
+.hero-subtitle-wrap { order:2; height:auto; margin:0 0 20px; display:flex; flex-direction:column; gap:0; }
+.hero-tagline { order:3; }
+.cycle-word { position:relative; inset:auto; display:flex!important; align-items:center; justify-content:space-between; flex-wrap:wrap; width:100%; min-height:55px; padding:10px 0; border-bottom:1px solid var(--border-s); opacity:1!important; transform:none!important; animation:none!important; white-space:normal; text-transform:none; letter-spacing:0; gap:10px; }
+.cw-text { color:var(--text); font-size:1.2rem; font-weight:750; letter-spacing:-.02em; }
+.cycle-word:first-child .cw-text { color:var(--gold); }
+.cycle-word:nth-child(2) .cw-text { color:var(--sage); }
+.cw-icons { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:7px; }
+.cw-icons img { height:27px; max-width:44px; width:auto; object-fit:contain; opacity:1; border-radius:4px; }
+.cw-icons svg { width:27px; height:27px; }
+.cw-icons .tencent-logo-mini { width:52px; height:27px; border-radius:4px; }
+.cw-flag { font-size:1.6rem; }
+.hero-photo-clip { height:540px; }
+.cover-sales { background:#0b1d3d; color:#c5d9fa; }
+.proj-row.is-featured .cover-sales { min-height:420px; }
+.cover-sales .cover-brand { width:200px; height:auto; max-height:115px; object-fit:contain; left:30px; top:30px; border-radius:0; transform:none; box-shadow:none; }
+.cover-sales::before { display:none; }
+.cover-sales .cover-screen { width:88%; max-width:none; max-height:240px; object-fit:contain; left:6%; bottom:24px; transform:rotate(-2deg); }
+.proj-logo--app img[src*="penguin-stand"] { object-fit:contain; padding:1px; border-radius:0; background:none; }
+/* Two compact doors into the reading space. */
+.writing-finale { padding:80px 0; }
+.writing-finale #journal { padding-top:0; }
+.reading-portals { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.reading-portal { scroll-margin-top:100px; border:1px solid var(--border-s); border-radius:24px; overflow:hidden; background:var(--surface); transition:border-color .3s,transform .3s; }
+.reading-portal:hover { border-color:var(--gold); transform:translateY(-4px); }
+.reading-portal>a { display:flex; flex-direction:column; height:100%; text-decoration:none; }
+.portal-top { display:flex; align-items:center; justify-content:space-between; padding:24px 28px 0; color:var(--muted); font-size:.68rem; font-weight:700; letter-spacing:.08em; }
+.portal-arrow { display:grid; place-items:center; width:34px; height:34px; border:1px solid var(--border-s); border-radius:50%; font-size:1.1rem; color:var(--gold); transition:transform .3s; }
+.reading-portal:hover .portal-arrow { transform:rotate(45deg); }
+.portal-art { display:block; width:100%; height:230px; object-fit:contain; background:#151719; margin-top:18px; }
+.reading-portal--story { background:#151719; color:#f3f0e9; }
+.reading-portal--story .portal-copy p,.reading-portal--story .portal-top { color:#b2b5b8; }
+.reading-portal--story .portal-arrow { color:#d7ed8b; border-color:#f3f0e930; }
+.portal-copy { padding:26px 28px 30px; flex:1; display:flex; flex-direction:column; }
+.portal-copy h2 { font-size:clamp(1.4rem,2.4vw,2rem); font-weight:700; line-height:1.4; letter-spacing:-.025em; margin:0 0 10px; }
+.portal-copy p { font-size:.94rem; color:var(--muted); margin:0 0 18px; }
+.portal-link { margin-top:auto; display:flex; justify-content:space-between; align-items:center; padding-top:20px; font-weight:650; font-size:.92rem; color:var(--gold); }
+.reading-portal--story .portal-link { color:#d7ed8b; }
+.portal-meta { display:flex; align-items:center; gap:18px; font-size:.75rem; color:var(--muted); margin:0 0 8px; }
+.portal-meta time { font-variant-numeric:tabular-nums; }
+.portal-journal-art { height:230px; margin-top:18px; display:grid; place-items:center; position:relative; overflow:hidden; background:radial-gradient(ellipse at center,color-mix(in srgb,var(--sage) 17%,var(--surface)),var(--surface)); }
+.portal-book { position:relative; display:flex; flex-direction:column; gap:16px; width:180px; height:160px; padding:34px 30px; border:1px solid var(--sage); border-radius:6px; transform:rotate(-9deg); background:var(--surface); box-shadow:12px 12px 0 color-mix(in srgb,var(--sage) 13%,transparent); transition:transform .4s; }
+.portal-book i { display:block; height:2px; background:var(--sage); opacity:.6; width:100%; }
+.portal-book i:nth-child(2) { width:76%; }.portal-book i:nth-child(4) { width:53%; }
+.reading-portal:hover .portal-book { transform:rotate(-3deg) translateY(-3px); }
+.portal-art-caption { position:absolute; right:24px; bottom:20px; font-size:.6rem; letter-spacing:.12em; color:var(--muted); }
+@media(max-width:960px) { #hero { column-gap:30px; }.cw-text { font-size:1.05rem; }.cw-icons { gap:5px; }.cw-icons img,.cw-icons svg { height:24px; }.hero-photo-clip { height:520px; } }
+@media(max-width:700px) { .hero-subtitle-wrap { order:3; margin:0 0 20px; height:auto; }.hero-tagline { order:4; }.hero-actions { order:5; }.cycle-word { min-height:52px; padding:11px 0; gap:8px; }.cw-text { font-size:1.1rem!important; }.cw-icons { max-width:65%; }.cw-icons img { height:25px; max-width:38px; }.cw-flag { font-size:1.4rem; }.hero-photo-clip { height:auto; }.reading-portals { grid-template-columns:1fr; gap:20px; }.writing-finale { padding:48px 0; }.portal-top { padding:22px 22px 0; }.portal-copy { padding:22px; }.portal-art,.portal-journal-art { height:190px; }.portal-copy h2 { font-size:1.5rem; } }
+@media(prefers-reduced-motion:reduce) { .cycle-word { display:flex!important; }.reading-portal:hover,.reading-portal:hover .portal-book { transform:none; } }

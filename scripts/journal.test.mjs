@@ -32,9 +32,14 @@ test('build generates searchable static pages and removes withdrawn posts everyw
     assert(fs.readFileSync(path.join(dir,'assets/journal-data.js'),'utf8').includes('AI 实践'));
     assert(!fs.readFileSync(path.join(dir,'assets/journal-data.js'),'utf8').includes('TOP_SECRET'));
     assert(fs.readFileSync(path.join(dir,'journal/feed.xml'),'utf8').includes('/posts/example/'));
+    const homepage = fs.readFileSync(path.join(dir,'index.html'),'utf8');
+    assert(homepage.includes('1 篇记录'));
+    assert(!homepage.includes('一篇记录'));
+    assert(!homepage.includes('AI 实践'));
     fs.writeFileSync(path.join(dir,'content/posts/example.md'),source('draft: true'));
     assert.equal(build(dir).length,0);
     assert(!fs.existsSync(path.join(dir,'journal/posts/example/index.html')));
     assert(!fs.readFileSync(path.join(dir,'journal/feed.xml'),'utf8').includes('/posts/example/'));
+    assert(fs.readFileSync(path.join(dir,'index.html'),'utf8').includes('0 篇记录'));
   } finally {fs.rmSync(dir,{recursive:true,force:true});}
 });

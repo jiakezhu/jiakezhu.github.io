@@ -73,7 +73,8 @@ export function build(base = root) {
   const publicData = posts.map(({html, headings, ...p})=>p);
   fs.writeFileSync(path.join(base,'assets/journal-data.js'),'window.JOURNAL_POSTS = '+JSON.stringify(publicData).replaceAll('<','\\u003c')+';\n');
   replaceRegion(path.join(base,'journal/index.html'),'JOURNAL_LIST',posts.length ? posts.map(p=>card(p)).join('\n') : empty.replace('{{HOME}}','../'));
-  replaceRegion(path.join(base,'index.html'),'JOURNAL_PREVIEW',posts.length ? posts.slice(0,3).map(p=>card(p,'journal/posts/')).join('\n') : empty.replace('{{HOME}}',''));
+  const homeSummary = `<span class="il en show">${posts.length} entries</span><span class="il zh">${posts.length} 篇记录</span><span class="il fr">${posts.length} notes</span><span class="il es">${posts.length} entradas</span>${posts.length ? `<time datetime="${posts[0].date}">${posts[0].date.replaceAll('-',' / ')}</time>` : ''}`;
+  replaceRegion(path.join(base,'index.html'),'JOURNAL_PREVIEW',homeSummary);
   const items = posts.map(p=>`<item><title>${escape(p.title)}</title><link>${origin}/journal/posts/${p.slug}/</link><guid isPermaLink="true">${origin}/journal/posts/${p.slug}/</guid><description>${escape(p.summary)}</description><category>${categoryName(p)}</category><pubDate>${new Date(p.date+'T00:00:00+08:00').toUTCString()}</pubDate></item>`).join('');
   fs.writeFileSync(path.join(base,'journal/feed.xml'),`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Jiake Zhu · 日志</title><link>${origin}/journal/</link><description>技术实践与日常记录</description><language>zh-CN</language>${items}</channel></rss>\n`);
   fs.copyFileSync(path.join(root,'node_modules/markdown-it/dist/markdown-it.min.js'),path.join(base,'assets/markdown-it.min.js'));

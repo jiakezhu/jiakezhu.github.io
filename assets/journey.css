@@ -1,0 +1,39 @@
+.jp-china-grid { grid-template-columns:.85fr 1.15fr; gap:44px; }
+.map-tabs-wrap { gap:10px; }
+.map-tab-btn { font-size:.9rem; padding:11px 24px; letter-spacing:0; }
+.jp-section-label { font-size:.76rem; letter-spacing:.04em; }
+.jp-ms-list { padding-left:30px; }
+.jp-ms-period { font-size:.76rem; letter-spacing:.025em; }
+.jp-ms { padding:0 0 34px; }
+.jp-tags { gap:8px; }
+.jp-tag { border-radius:30px; font:600 .8rem var(--sans); padding:8px 13px; }
+.jp-tag:focus-visible,.jp-tag[aria-pressed="true"] { color:var(--gold); border-color:var(--gold); }
+.atlas-frame { border:1px solid var(--border-s); border-radius:22px; overflow:hidden; background:var(--surface); }
+.atlas-heading { padding:18px 22px; display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:.67rem; font-weight:750; letter-spacing:.06em; border-bottom:1px solid var(--border-s); }
+.atlas-reset { border:0; border-radius:20px; padding:7px 11px; font:600 .76rem var(--sans); background:var(--card); color:var(--muted); }
+.atlas-reset:hover { color:var(--gold); }
+#journey-map-china,#journey-map-europe { height:440px; border:0; border-radius:0; background:var(--bg)!important; }
+#journey .leaflet-container { background:var(--bg)!important; }
+.atlas-legend { display:flex; flex-wrap:wrap; align-items:center; gap:18px; padding:17px 22px; border-top:1px solid var(--border-s); font-size:.73rem; color:var(--muted); }
+.atlas-legend>span { display:flex; align-items:center; gap:7px; }
+.atlas-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--sage); }
+.atlas-dot--life { background:var(--gold); box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 15%,transparent); }
+.atlas-hint { margin-left:auto; font-size:.64rem; }
+.atlas-marker { background:none; border:0; }
+.atlas-marker i { display:block; width:9px; height:9px; margin:7px; border-radius:50%; background:var(--sage); border:2px solid var(--bg); box-shadow:0 0 0 2px color-mix(in srgb,var(--sage) 25%,transparent); transition:transform .2s; }
+.atlas-marker--life i { width:13px; height:13px; margin:5px; background:var(--gold); box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 15%,transparent); }
+.atlas-marker:hover i { transform:scale(1.35); }
+#journey .atlas-tooltip { border:1px solid var(--border-s); border-radius:8px; background:var(--surface); color:var(--text); font:600 .8rem var(--sans); padding:7px 11px; box-shadow:0 6px 20px #0002; }
+#journey .atlas-tooltip::before { display:none; }
+.atlas-label { color:var(--muted); font:750 .74rem var(--sans); text-align:center; letter-spacing:.05em; white-space:nowrap; opacity:.6; }
+.atlas-route { animation:atlasRoute 20s linear infinite; }
+@keyframes atlasRoute { to { stroke-dashoffset:-120; } }
+#journey .leaflet-control-zoom { border:1px solid var(--border-s); border-radius:20px; overflow:hidden; box-shadow:none; margin:14px; }
+#journey .leaflet-control-zoom a { width:34px; height:34px; line-height:34px; background:var(--surface)!important; color:var(--text)!important; border-color:var(--border-s)!important; }
+#journey .leaflet-control-attribution { font-size:.55rem!important; background:var(--bg)!important; }
+.jp-eu-ms { border-radius:16px; padding:24px; }
+.jp-cr { gap:12px; grid-template-columns:22px 84px 1fr; padding:12px 0; }
+.jp-cr-name { font-size:.75rem; letter-spacing:0; }.jp-cr-cities { font-size:.82rem; }
+@media(max-width:960px) { .jp-china-grid,.jp-eu-body { gap:30px; }.atlas-hint { width:100%; margin-left:0; } }
+@media(max-width:700px) { .jp-china-grid,.jp-eu-body { grid-template-columns:1fr; gap:30px; }.atlas-heading { padding:15px 16px; font-size:.6rem; }.atlas-legend { padding:15px 16px; gap:14px; }#journey-map-china,#journey-map-europe { height:340px; }.jp-cr { grid-template-columns:22px 70px 1fr; gap:8px; }.jp-cr-name { font-size:.68rem; }.atlas-reset { font-size:.7rem; }.map-tab-btn { font-size:.84rem; } }
+@media(prefers-reduced-motion:reduce) { .atlas-route { animation:none; } }
