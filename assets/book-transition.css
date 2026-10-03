@@ -20,7 +20,8 @@
 .book-cover { z-index:4; animation:bookCoverTurn 1.35s .12s cubic-bezier(.22,.65,.2,1) both; }
 .book-cover-front { display:flex; flex-direction:column; padding:26px 25px; color:#f4f2e8; background:linear-gradient(100deg,#293b34,#526452 80%,#3d5141); border:1px solid #aab79730; box-shadow:inset 9px 0 12px #0004,6px 8px 0 #182b23; }
 .book-cover-front .book-page-kicker { color:#d7ed8b; margin-bottom:23px; }
-.book-cover-front h2 { font-size:clamp(2.4rem,6vw,4.3rem); letter-spacing:-.04em; margin-bottom:auto; }
+.book-cover-front h2 { font-size:clamp(1.8rem,4.4vw,3.1rem); letter-spacing:-.04em; margin-bottom:auto; line-height:1.22; text-wrap:balance; }
+html[lang="zh"] .book-page h2 { font-size:clamp(1.3rem,3.4vw,2.35rem); letter-spacing:-.06em; }
 .book-cover-front img { width:100%; aspect-ratio:1.65; object-fit:cover; border-radius:3px; margin:12px 0 20px; border:1px solid #f3f1e92b; opacity:.92; }
 .book-cover-author { color:#e4e8d8; font-size:.59rem; letter-spacing:.1em; }
 .book-cover-back { transform:rotateY(180deg); display:flex; flex-direction:column; justify-content:center; background:linear-gradient(270deg,#e0dacb,#f5f1e7 15%); }

@@ -1,0 +1,48 @@
+/* One visual language for the homepage invitation and the story masthead. */
+.story-scene { position:relative; width:100%; max-width:470px; height:365px; margin:auto; isolation:isolate; }
+.story-scene::before { content:""; position:absolute; inset:22px 18px 20px; z-index:-1; border:1px solid color-mix(in srgb,var(--sage) 25%,transparent); border-radius:50%; transform:rotate(-20deg); }
+.story-scene::after { content:""; position:absolute; inset:28px 34px; z-index:-2; border-radius:50%; background:radial-gradient(ellipse,color-mix(in srgb,var(--gold) 10%,transparent),transparent 70%); }
+.story-photo { position:absolute; margin:0; padding:9px 9px 0; background:#f5f1e7; color:#555c4d; box-shadow:0 18px 40px #0002; transition:transform .6s var(--ease); }
+.story-photo img { display:block; width:100%; height:calc(100% - 29px); object-fit:cover; }
+.story-photo figcaption { display:flex; align-items:center; justify-content:space-between; height:29px; font:700 .57rem/1 var(--sans); letter-spacing:.1em; }
+.story-photo--landscape figcaption { justify-content:flex-end; gap:10px; }
+.story-photo--portrait { left:5%; top:27px; width:48%; height:294px; z-index:2; transform:rotate(-8deg); }
+.story-photo--portrait img { object-position:center 42%; }
+.story-photo--landscape { right:4%; top:40px; width:49%; height:255px; z-index:1; transform:rotate(9deg); }
+.story-photo--portrait::before { content:""; position:absolute; width:70px; height:23px; top:-11px; left:calc(50% - 35px); background:#dcd8badb; transform:rotate(-5deg); backdrop-filter:blur(3px); }
+.story-scene-note { position:absolute; right:10%; bottom:14px; z-index:3; color:var(--sage); font:650 1.15rem/1.25 var(--sans); letter-spacing:-.035em; transform:rotate(-6deg); }
+.story-scene-note span { display:block; font-size:.63rem; color:var(--muted); letter-spacing:.06em; margin-top:6px; }
+.story-scene-star { position:absolute; right:4%; top:4px; z-index:3; width:42px; height:42px; color:var(--gold); transform:rotate(8deg); }
+.story-scene-sticker { position:absolute; bottom:13px; left:44%; z-index:4; width:62px; height:62px; border:5px solid #f5f1e7; border-radius:50%; object-fit:cover; transform:rotate(12deg); box-shadow:0 8px 18px #0002; }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+  .story-scene:hover .story-photo--portrait,.story-invitation>a:hover .story-photo--portrait { transform:rotate(-5deg) translateY(-5px); }
+  .story-scene:hover .story-photo--landscape,.story-invitation>a:hover .story-photo--landscape { transform:rotate(5deg) translate(4px,-3px); }
+}
+.writing-finale { padding:86px 0 92px; background:var(--bg); }
+.story-invitation { position:relative; border-top:1px solid var(--border-s); scroll-margin-top:100px; }
+.story-invitation>a { display:grid; grid-template-columns:1.1fr 1fr; gap:50px; align-items:center; padding:50px 0 12px; color:var(--text); text-decoration:none; }
+.story-invitation .portal-copy { display:block; grid-area:auto; padding:0; min-width:0; }
+.story-invitation .portal-eyebrow { display:block; margin:0 0 22px; color:var(--sage); font:600 .71rem/1.5 var(--sans); letter-spacing:.1em; }
+.story-invitation h2 { margin:0 0 20px; font:750 clamp(2.9rem,5.4vw,4.6rem)/1.18 var(--sans); letter-spacing:-.055em; text-wrap:balance; }
+.story-invitation h2::after { content:"."; color:var(--gold); }
+.story-invitation .portal-copy>p { margin:0 0 24px; max-width:460px; color:var(--muted); font-size:1rem; line-height:1.9; }
+.portal-chapters { display:flex; align-items:center; gap:0; margin:0 0 28px; color:var(--text); font:600 .77rem/1.5 var(--sans); flex-wrap:wrap; }
+.portal-chapters>span+span::before { content:"/"; margin:0 12px; color:var(--sage); opacity:.65; }
+.story-invitation .portal-bottom { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+.story-invitation .portal-link { display:inline-flex; gap:24px; align-items:center; border:0; margin:0; padding:12px 19px; border-radius:50px; background:var(--gold); color:var(--bg); font:700 .86rem/1.5 var(--sans); transition:gap .3s,box-shadow .3s; }
+.story-invitation .portal-link>span:last-child { font-size:1.15rem; }
+.story-invitation>a:hover .portal-link { gap:32px; box-shadow:0 6px 22px color-mix(in srgb,var(--gold) 12%,transparent); }
+.story-invitation .portal-meta { display:grid; gap:3px; color:var(--muted); font-size:.7rem; line-height:1.5; }
+.story-invitation .portal-meta time { font-size:.61rem; opacity:.8; }
+.story-invitation>a:focus-visible { outline:2px solid var(--gold); outline-offset:10px; border-radius:8px; }
+@media(max-width:960px) { .story-invitation>a { gap:26px; }.story-scene { height:330px; }.story-photo--portrait { height:270px; }.story-photo--landscape { height:235px; }.story-invitation h2 { font-size:3.1rem; } }
+@media(max-width:700px) {
+  .writing-finale { padding:40px 0 58px; }.story-invitation>a { grid-template-columns:1fr; gap:20px; padding-top:34px; }
+  .story-invitation .portal-eyebrow { margin-bottom:16px; }.story-invitation h2 { font-size:2.8rem; margin-bottom:16px; }
+  .story-invitation .portal-copy>p { font-size:.94rem; margin-bottom:20px; }.portal-chapters { font-size:.75rem; margin-bottom:24px; }
+  .story-invitation .portal-bottom { gap:20px; }.story-scene { max-width:390px; height:320px; margin-top:10px; }
+  .story-photo--portrait { height:262px; width:46%; top:25px; left:6%; }.story-photo--landscape { height:226px; top:40px; right:5%; }
+  .story-scene-note { font-size:1rem; bottom:12px; }.story-scene-sticker { width:55px; height:55px; bottom:16px; }.story-scene-star { right:6%; }
+}
+@media(max-width:390px) { .story-scene { height:290px; }.story-photo--portrait { height:238px; }.story-photo--landscape { height:207px; }.story-scene-note { right:7%; bottom:8px; font-size:.95rem; }.story-scene-sticker { width:48px; height:48px; bottom:11px; } }
+@media(prefers-reduced-motion:reduce) { .story-photo,.story-invitation .portal-link { transition:none; } }

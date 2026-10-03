@@ -1,6 +1,6 @@
 window.STORY_I18N = {
   zh: {
-    skip:'跳到故事', home:'个人主页', all:'全部', tech:'技术博客', diary:'日记', search:'搜索',
+    skip:'跳到故事', home:'个人主页', storyName:'我的故事', all:'全部', tech:'技术博客', diary:'日记', search:'搜索',
     searchPlaceholder:'项目、城市或一个想法', searchLabel:'搜索故事与日志',
     emptyTitle:'还没有找到这一篇。', emptyHint:'试试其他关键词，或切换到「全部」。', reset:'清除筛选 ↗', waiting:'等待第一篇记录',
     accountType:'公众号 · 个人写作', wechatSummary1:'从一次面试问题出发，重新思考 RSI、AI Fear 和人的控制权。',
@@ -9,7 +9,7 @@ window.STORY_I18N = {
     rssHelp:'用 RSS 阅读器订阅，新的项目与日常记录会自动出现在你的阅读器里。', rssLink:'打开订阅源 ↗'
   },
   en: {
-    skip:'Skip to stories', home:'Home', all:'All', tech:'Building', diary:'Life notes', search:'Search',
+    skip:'Skip to stories', home:'Home', storyName:'My story', all:'All', tech:'Building', diary:'Life notes', search:'Search',
     searchPlaceholder:'A project, city or idea', searchLabel:'Search stories and notes',
     emptyTitle:'No matching notes yet.', emptyHint:'Try another keyword or choose All.', reset:'Clear filters ↗', waiting:'The first note is on its way',
     accountType:'WeChat · Personal essays', wechatSummary1:'An interview question opens a reflection on RSI, AI Fear and human control.',
@@ -18,7 +18,7 @@ window.STORY_I18N = {
     rssHelp:'Subscribe with an RSS reader to receive new project notes and journal entries in your reader.', rssLink:'Open the feed ↗'
   },
   fr: {
-    skip:'Aller aux récits', home:'Accueil', all:'Tout', tech:'Projets', diary:'Au quotidien', search:'Rechercher',
+    skip:'Aller aux récits', home:'Accueil', storyName:'Mon histoire', all:'Tout', tech:'Projets', diary:'Au quotidien', search:'Rechercher',
     searchPlaceholder:'Un projet, une ville, une idée', searchLabel:'Rechercher dans les récits et notes',
     emptyTitle:'Aucune note trouvée.', emptyHint:'Essayez un autre mot-clé ou choisissez Tout.', reset:'Effacer les filtres ↗', waiting:'La première note arrive bientôt',
     accountType:'WeChat · Essais personnels', wechatSummary1:'Une question d’entretien ouvre une réflexion sur le RSI, AI Fear et le contrôle humain.',
@@ -27,7 +27,7 @@ window.STORY_I18N = {
     rssHelp:'Abonnez-vous avec un lecteur RSS pour y recevoir mes nouvelles notes et mes récits.', rssLink:'Ouvrir le flux ↗'
   },
   es: {
-    skip:'Ir a las historias', home:'Inicio', all:'Todo', tech:'Proyectos', diary:'Diario', search:'Buscar',
+    skip:'Ir a las historias', home:'Inicio', storyName:'Mi historia', all:'Todo', tech:'Proyectos', diary:'Diario', search:'Buscar',
     searchPlaceholder:'Un proyecto, una ciudad, una idea', searchLabel:'Buscar historias y notas',
     emptyTitle:'Todavía no hay notas que coincidan.', emptyHint:'Prueba otra palabra o elige Todo.', reset:'Borrar filtros ↗', waiting:'La primera nota está en camino',
     accountType:'WeChat · Ensayos personales', wechatSummary1:'Una pregunta de entrevista lleva a reflexionar sobre RSI, AI Fear y el control humano.',

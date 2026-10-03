@@ -5,6 +5,7 @@
   function setLanguage(language) {
     if (!supported.includes(language)) language = 'zh';
     document.documentElement.lang = language;
+    document.title = (copy[language]?.storyName || '我的故事') + ' · Jiake Zhu';
     document.querySelectorAll('[data-lang]').forEach(element => element.classList.toggle('show',element.dataset.lang === language));
     document.querySelectorAll('.il').forEach(element => element.classList.toggle('show',element.classList.contains(language)));
     buttons.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.language === language)));
