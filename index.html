@@ -672,14 +672,14 @@
   <script src="assets/theme.js"></script>
   <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/intro.css?v=6">
+  <link rel="stylesheet" href="assets/intro.css?v=8">
   <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/home-v3.css?v=7"><link rel="stylesheet" href="assets/journey.css?v=4">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
 <dialog id="site-intro" class="site-intro" aria-label="开场动画 / Welcome animation">
-  <div class="intro-shutters" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="intro-grid" aria-hidden="true"></div><div class="intro-orbit" aria-hidden="true"></div>
+  <div class="intro-backdrop" aria-hidden="true"><div class="intro-grid"></div><div class="intro-orbit"></div></div>
+  <div class="intro-shockwave" aria-hidden="true"></div>
   <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>A LITTLE OF MY WORLD.</span></div>
   <div class="intro-stage">
     <div class="intro-portrait">
@@ -687,7 +687,26 @@
         <div class="intro-title" aria-label="Jiake Zhu"><div class="intro-word"><span>J</span><span>i</span><span>a</span><span>k</span><span>e</span></div><div class="intro-word intro-word--last"><span>Z</span><span>h</span><span>u</span><span class="intro-period">.</span></div></div>
         <p class="intro-greeting">你好。 <span>Hello.</span> Bonjour. <span>Hola.</span></p>
       </div>
-      <div class="intro-photos" aria-hidden="true"><div class="intro-photo intro-photo--back"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--middle"><img src="images/瑞士.jpg" alt="" decoding="async"></div><div class="intro-photo intro-photo--front"><img src="images/hero.jpeg" alt="" decoding="async"></div></div>
+    </div>
+    <div class="intro-collage" aria-hidden="true">
+        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><img src="images/sales-buddy-deck/cover-v5.png" alt="" decoding="async"><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><img src="images/挪威.jpg" alt="" decoding="async"><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><img src="images/篮球.jpg" alt="" decoding="async"><figcaption>LIFE / ON THE COURT</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><img src="images/瑞士.jpg" alt="" decoding="async"><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><img src="images/hero.jpeg" alt="" decoding="async"><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--paris intro-fragment--badge"><img src="images/paris1.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--swufe intro-fragment--badge"><img src="images/swufe.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--zjsu intro-fragment--badge"><img src="images/zjsu.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--tencent intro-fragment--wordmark"><img src="images/tencent.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--lingo intro-fragment--app"><img src="images/lingovibe-app-icon-v3.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--orbit intro-fragment--app"><img src="images/jiake-orbit-app-icon-v2.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><img src="images/捷克.jpg" alt="" decoding="async"><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><img src="images/布达佩斯.jpg" alt="" decoding="async"><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--bytedance intro-fragment--badge"><img src="images/bytedance.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--alliance intro-fragment--badge"><img src="images/alliance.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--feishu intro-fragment--app"><img src="images/feishu-kb-app-icon-v3.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--travel intro-fragment--app"><img src="images/budget-travel-app-icon-v3.png" alt="" decoding="async"></figure>
     </div>
     <div class="intro-credo">
       <div class="intro-manifesto" aria-label="Always Day One"><p><span class="intro-credo-word"><span>Always</span></span><span class="intro-credo-word intro-credo-word--accent"><span>Day One.</span></span></p></div>
@@ -1865,6 +1884,6 @@
 <script src="assets/navigation.js"></script>
 <script src="assets/interactions.js"></script>
 <script src="assets/journey.js?v=5"></script>
-<script src="assets/intro.js?v=6"></script>
+<script src="assets/intro.js?v=8"></script>
 </body>
 </html>

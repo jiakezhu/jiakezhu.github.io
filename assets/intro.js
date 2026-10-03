@@ -3,7 +3,7 @@
   const replay = document.getElementById('intro-replay');
   const hero = document.getElementById('hero');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const key = 'jiake-intro-seen-v6';
+  const key = 'jiake-intro-seen-v8';
   let exitTimer, fallbackTimer;
   let phaseTimers = [];
   const clearTimers = () => {
@@ -14,7 +14,7 @@
   function finish() {
     clearTimers();
     if (dialog.open) dialog.close();
-    document.documentElement.classList.remove('intro-playing');
+    document.documentElement.classList.remove('intro-playing', 'intro-revealing');
     dialog.classList.remove('is-exiting');
     delete dialog.dataset.phase;
     hero.classList.add('hero-arrived');
@@ -27,21 +27,27 @@
     document.documentElement.classList.add('intro-playing');
     dialog.dataset.phase = 'portrait';
     phaseTimers = [
-      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2750)
+      setTimeout(() => { dialog.dataset.phase = 'burst'; }, 1000),
+      setTimeout(() => { dialog.dataset.phase = 'credo'; }, 2100)
     ];
     try { sessionStorage.setItem(key, '1'); } catch {}
-    exitTimer = setTimeout(() => { dialog.dataset.phase = 'reveal'; dialog.classList.add('is-exiting'); }, 4650);
+    exitTimer = setTimeout(() => {
+      dialog.dataset.phase = 'reveal';
+      dialog.classList.add('is-exiting');
+      document.documentElement.classList.add('intro-revealing');
+      hero.classList.add('hero-arrived');
+    }, 3600);
     // A failed or cancelled CSS animation must never strand the reader.
-    fallbackTimer = setTimeout(finish, 6100);
+    fallbackTimer = setTimeout(finish, 5400);
   }
   dialog.querySelector('.intro-skip').addEventListener('click', finish);
   dialog.addEventListener('cancel', event => { event.preventDefault(); finish(); });
   dialog.addEventListener('close', () => {
-    document.documentElement.classList.remove('intro-playing');
+    document.documentElement.classList.remove('intro-playing', 'intro-revealing');
     clearTimers();
   });
   dialog.addEventListener('animationend', event => {
-    if (event.target === dialog && event.animationName === 'introCurtain') finish();
+    if (event.target === dialog && event.animationName === 'introDismiss') finish();
   });
   replay.addEventListener('click', start);
   function updateMotion() { replay.disabled = motion.matches; if (motion.matches) finish(); }
