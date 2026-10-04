@@ -50,7 +50,7 @@
   }
   buttons.forEach(button => button.addEventListener('click',() => setLanguage(button.dataset.language)));
   window.addEventListener('storage',event => { if (event.key === 'jiake-language') setLanguage(event.newValue); });
-  let language = navigator.language.startsWith('zh') ? 'zh' : 'en';
+  let language = 'en';
   try { language = localStorage.getItem('jiake-language') || language; } catch {}
   const requested = new URLSearchParams(location.search).get('lang');
   if(supported.includes(requested)) language = requested;

@@ -19,6 +19,7 @@
     if(measuring) return;
     measuring=true;
     const language=document.documentElement.lang;
+    const initialScroll=scrollY;
     const anchor=readingAnchor();
     components.forEach(el=>el.style.removeProperty('min-block-size'));
     const heights=new Map();
@@ -34,6 +35,8 @@
       applyLanguage(language,{persist:false,refresh:false});
       for(const [el,height] of heights) el.style.minBlockSize=`${height}px`;
       keepAnchor(anchor);
+      // Reserving translated text must not let browser anchoring skip the window.
+      if(!anchor&&initialScroll===0)window.scrollTo({top:0,behavior:'instant'});
       measuring=false;
     }
   }

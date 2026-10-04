@@ -1101,6 +1101,31 @@
           "bytes": 13650
         }
       ]
+    },
+    "images/station/orbital-library-comic-source.png": {
+      "width": 1672,
+      "height": 941,
+      "originalBytes": 3136470,
+      "variants": [
+        {
+          "src": "images/web/f6716f50e5ef-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 69148
+        },
+        {
+          "src": "images/web/f6716f50e5ef-1120.webp",
+          "width": 1120,
+          "height": 630,
+          "bytes": 200336
+        },
+        {
+          "src": "images/web/f6716f50e5ef-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "bytes": 301440
+        }
+      ]
     }
   }
 }

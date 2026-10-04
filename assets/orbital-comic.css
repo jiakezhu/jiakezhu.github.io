@@ -1,0 +1,131 @@
+/* The station is drawn like a graphic novel. Text and controls stay live. */
+:root { --bg:#101e2e; --surface:#192e40; --card:#213a4b; --text:#fff0d4; --muted:#b6c9ce; --gold:#f1bd78; --sage:#8ccac6; --coral:#efa28a; --border:rgba(241,189,120,.5); --border-s:rgba(240,224,193,.26); --ink:#081421; --panel-line:#9bb6bd; --station-serif:var(--sans); }
+:root[data-theme="light"] { --bg:#f7eedc; --surface:#fff9ee; --card:#f1e2c9; --text:#23394b; --muted:#5a7079; --gold:#ad6237; --sage:#417e86; --coral:#b5573f; --border:rgba(35,57,75,.58); --border-s:rgba(35,57,75,.26); --ink:#23394b; --panel-line:#23394b; }
+.orbital-theme { --comic-shadow:4px 5px 0 color-mix(in srgb,var(--ink) 75%,transparent); }
+.orbital-theme::selection { background:var(--gold); color:var(--bg); }
+.orbital-theme nav { border-bottom:2px solid var(--panel-line); }
+.orbital-theme .nav-logo { font-weight:850; letter-spacing:-.025em; }
+.orbital-theme .nav-link::after { height:2px; transform-origin:center; }
+.orbital-theme .lang-btn,.orbital-theme .theme-toggle,.orbital-theme .music-details { border-radius:5px; }
+.orbital-theme .lang-btn.active,.orbital-theme .story-languages button[aria-pressed="true"],.orbital-theme .article-languages button[aria-pressed="true"] { border:1px solid var(--panel-line); box-shadow:2px 2px 0 var(--ink); background:var(--card); }
+.orbital-theme .station-brand { stroke-width:1.6; }
+body.orbital-home #hero { min-height:950px; padding-top:clamp(440px,40vw,580px); scroll-margin-top:var(--nav-height,78px); overflow-anchor:none; }
+.station-vista { inset:82px 16px auto; height:calc(100% - 82px); border:2px solid var(--panel-line); border-radius:4px; max-height:840px; }
+.station-vista .hero-photo { scale:1.01; object-position:center 24%; }
+.station-vista::after { background:linear-gradient(180deg,#101e2e00 0%,#101e2e00 28%,#101e2e25 46%,#101e2ee0 69%,var(--bg) 91%); }
+html[data-theme="light"] .station-vista::after { background:linear-gradient(180deg,#f7eedc00 0%,#f7eedc00 28%,#f7eedc38 46%,#f7eedceb 68%,var(--bg) 91%); }
+.station-welcome { top:111px; }
+.station-welcome p { display:inline-flex; justify-content:center; color:#23394b; background:#fff4de; border:2px solid #23394b; box-shadow:3px 3px 0 #23394b; padding:10px 17px; transform:rotate(-1deg); border-radius:4px; text-shadow:none; font-size:.62rem; letter-spacing:.075em; }
+.station-welcome small { width:max-content; max-width:90%; margin:15px auto 0; background:#ecc581; color:#23394b; padding:5px 14px; font:700 .86rem/1.4 var(--sans); border:1px solid #23394b; transform:rotate(1deg); text-shadow:none; }
+.station-beacon { background:#b9693e; box-shadow:none; }
+.station-identity-label { color:var(--sage); font-weight:750; font-size:.61rem; }
+#hero .hero-name,html[lang="zh"] #hero .hero-name { font:850 clamp(3.6rem,6.3vw,5.6rem)/1.1 var(--sans); letter-spacing:-.05em; text-shadow:3px 3px 0 var(--ink); }
+html[data-theme="light"] #hero .hero-name { text-shadow:2px 3px 0 #ddcbaa; }
+#hero .hero-name .hero-period { color:var(--gold); }
+#hero .hero-line { font-weight:800; }
+#hero .hero-actions { animation:none; opacity:1; transform:none; }
+#hero .hero-right,html[data-theme="light"] #hero .hero-right { backdrop-filter:none; background:var(--surface); border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); }
+.station-panel-label { font-weight:750; color:var(--sage); }
+.station-orbit-art { stroke-width:1.4; opacity:.15; }
+#hero .cycle-word { padding-block:13px; }
+#hero .cw-text { font-weight:800; }
+#hero .btn-primary,.orbital-theme .proj-btn { border:2px solid var(--ink); border-radius:5px; box-shadow:3px 3px 0 var(--ink); font-weight:800; }
+#hero .hero-socials a { background:var(--surface); border:1px solid var(--panel-line); box-shadow:1px 2px 0 var(--ink); font-weight:750; }
+#hero .hero-socials a:hover { transform:translateY(-2px) rotate(-1deg); }
+#hero .hero-footer { padding-top:18px; }
+.station-directory { margin-top:16px; gap:18px; }
+.station-door { background:var(--surface); border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); }
+.station-door:nth-child(2) { rotate:-.5deg; }
+.station-door svg { stroke-width:1.6; }
+.station-door strong { font-weight:800; }
+.station-door:hover { background:var(--card); border-color:var(--gold); }
+.orbital-home .marquee-wrap { border-block:1px dashed var(--panel-line); background:var(--surface); }
+.orbital-home .s-label { font-weight:800; color:var(--sage); }
+.orbital-home .s-label::before,.orbital-home .s-label::after { height:2px; background:currentColor; width:25px; border-radius:60%; }
+.orbital-home .s-title,html[lang="zh"] .orbital-home .s-title,#journey .atlas-intro .s-title { font:800 clamp(2.5rem,4.5vw,3.6rem)/1.22 var(--sans); letter-spacing:-.035em; text-wrap:balance; }
+html[lang="zh"] .orbital-home .s-title,html[lang="zh"] #journey .atlas-intro .s-title { font-size:clamp(2.2rem,3.7vw,3rem); letter-spacing:.01em; line-height:1.35; }
+.orbital-home .s-title em { font-style:normal; color:var(--gold); background:linear-gradient(transparent 83%,color-mix(in srgb,var(--gold) 23%,transparent) 83% 95%,transparent 95%); }
+.orbital-home .stat-box,.orbital-home .edu-card,.orbital-home .tl-item,.orbital-home .proj-row,.orbital-home .life-card { background:var(--surface); border:1.5px solid var(--panel-line); border-radius:5px; box-shadow:3px 4px 0 color-mix(in srgb,var(--ink) 70%,transparent); }
+.orbital-home .stats-grid,.orbital-home .edu-grid,.orbital-home .life-grid { gap:17px; }
+.crew-portrait { background:var(--card); border:1.5px solid var(--panel-line); border-radius:6px; box-shadow:3px 4px 0 var(--ink); }
+.crew-portrait img { border-radius:8px; border:2px solid var(--ink); outline:none; }
+.crew-portrait small { font:700 .84rem/1.5 var(--sans); }
+.orbital-home .stat-num { font-weight:750; color:var(--gold); }
+.orbital-home .tl-dot { border-color:var(--gold); background:var(--bg); box-shadow:2px 2px 0 var(--ink); }
+.orbital-home .proj-row.is-featured { border:2px solid var(--gold); }
+.orbital-home .proj-group-title,.orbital-home .honors-h3 { font-family:var(--sans); font-weight:800; font-size:1.45rem; }
+.orbital-home .atlas-frame,.orbital-home .atlas-postcard { border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); }
+.orbital-home .atlas-heading,.orbital-home .atlas-legend { background:var(--surface); }
+.orbital-home #journey>.si>.atlas-stops::before { display:none; }
+.station-globe-panel { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:28px; align-items:center; margin:0 0 35px; padding:22px 34px; border:2px solid var(--panel-line); border-radius:5px; background:var(--surface); box-shadow:var(--comic-shadow); }
+.station-globe-wrap { width:100%; max-width:340px; margin:auto; position:relative; }
+.station-globe-wrap::after { content:'✦'; position:absolute; top:10%; right:6%; font-size:28px; color:var(--gold); rotate:15deg; pointer-events:none; }
+#station-globe { display:block; width:100%; aspect-ratio:1; cursor:grab!important; touch-action:pan-y; }
+#station-globe:active { cursor:grabbing!important; }
+.station-chart-copy { min-width:0; }
+.station-chart-copy>small { font-size:.58rem; color:var(--sage); letter-spacing:.09em; font-weight:800; text-transform:uppercase; }
+.station-chart-copy>h3 { font:800 clamp(1.5rem,2.5vw,2rem)/1.25 var(--sans); margin:12px 0 16px; letter-spacing:-.025em; text-wrap:balance; }
+.station-chart-copy>p { color:var(--muted); font-size:.82rem; line-height:1.8; margin:0 0 14px; }
+.station-chart-copy .atlas-stops { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:20px 0 0; }
+.station-chart-copy .atlas-stops::before { display:none; }
+.station-chart-copy .atlas-stops button { border:1px solid var(--border); padding:11px 9px; justify-content:flex-start; border-radius:4px; background:var(--bg); gap:8px; font-size:.73rem; }
+.station-chart-copy .atlas-stops button::before { position:static; flex-shrink:0; width:5px; height:5px; margin-right:1px; box-shadow:none; }
+.station-chart-copy .atlas-stops button[aria-pressed="true"] { background:var(--card); color:var(--gold); border-color:var(--gold); }
+.station-chart-copy .atlas-stops button>span:first-child { display:none; }
+.station-chart-hint { display:block; margin-top:16px; font-size:.6rem; color:var(--muted); }
+.orbital-home .writing-finale { border-top:2px solid var(--panel-line); }
+.orbital-theme .story-invitation { border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); background:var(--surface); }
+.orbital-theme .story-invitation h2,html[lang="zh"] .orbital-theme .story-invitation h2 { font:800 clamp(2.8rem,5vw,4rem)/1.15 var(--sans); letter-spacing:-.035em; }
+.orbital-theme .story-photo { border:1.5px solid #23394b; border-radius:3px; box-shadow:4px 5px 0 #23394b; }
+.orbital-theme .story-scene-note { font-family:var(--sans); font-size:1.3rem; font-weight:800; }
+.orbital-theme .story-scene-sticker { border:2px solid #23394b; border-radius:50%; box-shadow:2px 3px 0 #23394b; }
+.orbital-theme .portal-chapters>span { border:1px dashed var(--panel-line); border-radius:3px; }
+.station-next h2 { font-family:var(--sans); font-weight:800; font-size:clamp(2rem,4vw,3.1rem); }
+.station-next p { font-weight:750; color:var(--sage); }
+.orbital-theme .footer-links a { border:1px solid var(--panel-line); border-radius:4px!important; background:var(--surface); }
+.orbital-theme .music-panel,.orbital-theme .music-notice,.orbital-theme .contact-dialog { border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); background:var(--surface); }
+.orbital-library .story-hub-header { background:var(--surface); border:2px solid var(--panel-line); border-radius:5px; box-shadow:var(--comic-shadow); }
+.orbital-library .story-hub-header h1,html[lang="zh"] .orbital-library .story-hub-header h1 { font:850 clamp(3.2rem,7vw,5.5rem)/1.15 var(--sans); letter-spacing:-.045em; }
+.orbital-library .story-hub-header::before { border:1px dashed var(--border); box-shadow:0 0 0 28px color-mix(in srgb,var(--gold) 5%,transparent),0 0 0 30px var(--border-s); }
+.orbital-library .story-tabs>button,.orbital-library .journal-card,.orbital-theme .wechat-article-card { border:1.5px solid var(--panel-line); border-radius:5px; box-shadow:3px 4px 0 var(--ink); }
+.orbital-library .journal-card h3 { font-weight:800; }
+.orbital-library .journal-card-cover { background:var(--card); }
+.orbital-theme.article-page .article-title,.orbital-theme .comic-intro h1 { font-family:var(--sans); font-weight:800; }
+.orbital-theme .article-toc,.orbital-theme .comic-page { border:1.5px solid var(--panel-line); border-radius:4px; }
+.orbital-theme .book-cover-front { background:#1b3b4b; border:2px solid #091c2a; box-shadow:inset 0 0 0 5px #e3ba7c; }
+.orbital-theme .book-page { border:1px solid #23394b; }
+.orbital-theme .book-transition::before { border-style:dashed; }
+@media(max-width:850px) {
+  body.orbital-home #hero { padding-top:390px; min-height:0; }
+  .station-vista { height:700px; }
+  .station-directory { gap:12px; }
+  .station-globe-panel { padding:22px; gap:20px; }
+  #hero .hero-name,html[lang="zh"] #hero .hero-name { font-size:clamp(3.3rem,10vw,5.2rem); }
+}
+@media(max-width:600px) {
+  body.orbital-home #hero { padding-top:335px; }
+  .station-vista { inset:79px 10px auto; height:560px; }
+  .station-welcome { top:104px; }
+  .station-welcome p { padding:8px 10px; font-size:.49rem; letter-spacing:.035em; }
+  .station-welcome small { margin-top:10px; font-size:.73rem; padding:4px 10px; }
+  #hero .hero-name,html[lang="zh"] #hero .hero-name { font-size:clamp(2.9rem,13vw,4.5rem); }
+  .orbital-home .s-title,html[lang="zh"] .orbital-home .s-title,#journey .atlas-intro .s-title,html[lang="zh"] #journey .atlas-intro .s-title { font-size:clamp(1.9rem,7.5vw,2.7rem); line-height:1.35; }
+  .station-directory { gap:12px; }
+  .station-globe-panel { grid-template-columns:1fr; padding:18px 20px 25px; gap:10px; }
+  .station-globe-wrap { max-width:235px; }
+  .station-chart-copy>h3 { font-size:1.6rem; }
+  .station-chart-copy>p { font-size:.8rem; }
+  .station-chart-copy .atlas-stops button { font-size:.69rem; }
+  .orbital-library .story-hub-header { border-radius:5px; }
+  .orbital-library .story-hub-header h1 { font-size:3.2rem; }
+}
+@media(max-width:360px) {
+  body.orbital-home #nav,body.orbital-home #nav.scrolled { gap:3px; padding-inline:10px; }
+  #nav .nav-logo { gap:5px; font-size:.8rem; }
+  #nav .station-brand { width:18px; height:18px; }
+  #nav .lang-btn { min-inline-size:23px!important; padding-inline:3px; }
+  #nav .nav-tools { gap:4px; }
+  #nav .theme-toggle,#nav .music-details { width:24px; height:28px; }
+  #nav .nav-menu-button { min-width:36px; padding-inline:5px; font-size:.65rem; }
+}
+@media(prefers-reduced-motion:reduce) { .station-directory .station-door { rotate:none; } }

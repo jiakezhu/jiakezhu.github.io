@@ -26,7 +26,7 @@
   buttons.forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.articleLanguage)));
   let initial=new URLSearchParams(location.search).get('lang');
   if(!supported.includes(initial)){try{initial=localStorage.getItem('jiake-language');}catch{}}
-  if(!supported.includes(initial))initial=navigator.language.startsWith('zh')?'zh':'en';
+  if(!supported.includes(initial))initial='en';
   setLanguage(initial,false);
   const hash=location.hash.replace(/^#(?:zh|en|fr|es)-/,'');if(hash.startsWith('section-'))document.getElementById(initial+'-'+hash)?.scrollIntoView({behavior:'instant'});
   window.addEventListener('storage',event=>{if(event.key==='jiake-language')setLanguage(event.newValue,false);});

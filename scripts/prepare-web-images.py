@@ -19,7 +19,7 @@ for item in config["images"]:
             height = round(image.height * width / image.width)
             resized = image.resize((width, height), Image.Resampling.LANCZOS)
             destination = output / f"{stem}-{width}.webp"
-            resized.save(destination, "WEBP", quality=85, method=6)
+            resized.save(destination, "WEBP", quality=item.get("quality", 85), method=6)
             variants.append({"src": str(destination.relative_to(root)), "width": width, "height": height, "bytes": destination.stat().st_size})
         images[item["source"]] = {"width": image.width, "height": image.height, "originalBytes": source.stat().st_size, "variants": variants}
 

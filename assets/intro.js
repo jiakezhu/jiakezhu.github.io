@@ -4,7 +4,7 @@
   const hero = () => document.getElementById('hero');
   const boot = window.JIAKE_HOME_BOOT;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const key = 'jiake-intro-seen-v9';
+  const key = 'jiake-intro-seen-v10';
   let exitTimer, fallbackTimer;
   let phaseTimers = [];
   const clearTimers = () => {
@@ -27,7 +27,7 @@
     if (motion.matches || !dialog.showModal || dialog.open) { boot?.releaseIntro(); return; }
     hero()?.classList.remove('hero-arrived');
     dialog.classList.remove('is-exiting');
-    // Returning visitors fetch this small collage only if they replay the intro.
+    // Optional intro assets are requested only when the animation actually starts.
     dialog.querySelectorAll('[data-intro-src]').forEach(image => {
       image.src=image.dataset.introSrc;
       delete image.dataset.introSrc;

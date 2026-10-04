@@ -66,7 +66,7 @@ Deployed via GitHub Pages (automatic from main branch)
 ```
 
 - **Static publishing** — build Markdown posts locally and commit the generated files · 本地生成文章，提交静态页面即可发布
-- **Trilingual content** — EN / FR / ES toggled via vanilla JS · 三语内容由原生 JS 切换
+- **Four-language content** — EN / CN / FR / ES toggled via vanilla JS · 中英法西四语内容由原生 JS 切换
 - **Responsive layout** — works on mobile and desktop · 响应式布局，移动端与桌面端均适配
 - **Embedded assets** — recommendation letters rendered inline · 推荐信等资产内嵌渲染
 
@@ -163,13 +163,17 @@ draft: false
 构建前校验日期、分类、标签、链接名称和重复 slug；Markdown 的原始 HTML 与执行脚本链接不会被渲染。`assets/markdown-it.min.js` 随构建复制，保留上游 MIT 版权信息，写作预览无需外部 CDN。
 
 
-### 互动界面
+### 漫画空间站主题
 
-统一采用石墨黑 / 暖白 / 黄绿色主色，辅以淡紫和珊瑚色，并支持本机记忆的深浅主题。主页提供作品分类与介绍展开、滚动阅读进度、返回顶部、数值入场、轻量粒子背景、按钮与卡片反馈。四种语言切换同步更新交互控件。首页按姓名、身份介绍、作品入口和最近项目组织阅读顺序，配合圆角照片。通过编号章节、统一字阶和阅读宽度组织其他内容。产品封面复用原有图标和截图。手机使用单列作品，平板使用双列；背景动效离屏或切到后台后暂停，并尊重系统减少动态效果设置。
+网站采用私人空间站与星际图书馆的漫画设定，墨线边框、暖白纸张与青绿 / 赭色组成深浅两套配色。首页的观景窗插画保存在 `images/station/`，正式页面根据屏幕大小加载 640 / 1120 / 1440px WebP。原始大图不会进入首页请求。生成方式、最终提示词和维护路径见 [design/orbital-library.md](design/orbital-library.md)。
 
-首页右侧固定展示多学科、多语言、多行业及相应 Logo；姓名下方的头衔和简短座右铭自动逐项切换，搭配各自的颜色和图标。Journey 使用本地 Leaflet 和打包的地理数据，提供世界、中国与欧洲视图、求学路线、地点卡片和全部足迹索引；地图靠近视口时才加载数据，地点照片按需加载。更新地图原始数据后运行 `npm run build` 生成 `assets/maps/atlas-data.js`。
+首页右侧展示多学科、多语言、多行业及相应 Logo；姓名下方的头衔和简短座右铭自动逐项切换，搭配各自的颜色和图标。三个舱室入口分别通往 Journey、AI 作品集与 Story。章节标题居中，保留文字入场、数字增长和卡片滚动动效。四种语言同步切换，首次访问默认英文，之后记住选择。
 
-排版参考 Cynthia Ugwu 的个人作品集（[Awwwards Honorable Mention 官方记录](https://www.awwwards.com/websites/General%20Sans/)），吸收字阶对比和留白节奏，再按个人网站的阅读需求调整。
+Journey 的漫画地球与现有 Leaflet 地图共用本地地理数据。点选城市同步转动地球并打开城市卡片；球面只连接宁波、杭州、成都、巴黎的求学路线。地图保留世界、中国与欧洲视图以及全部足迹索引。地理数据接近视口时才加载，照片按需请求。桌面可以横向拖动地球或用方向键，手机保留纵向阅读手势。更新原始地图数据后运行 `npm run build`。
+
+Story、文章和成长漫画沿用同一套纸张配色与漫画框线。成长漫画旁白仍为可切换的真实文本。旧版网站归档保持原样，主题变化记录在同一篇改版日志中。
+
+轨道开场不请求照片。星空与地球在后台暂停，并尊重系统减少动态效果设置。隐藏弹窗中的图片在打开时加载。图片尺寸配置在 `assets/web-image-sources.json`；使用 Pillow 运行 `python3 scripts/prepare-web-images.py` 后执行构建与测试。
 
 ### 圆润字体
 

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-journal.mjs && node scripts/build-comic.mjs && node scripts/build-atlas.mjs",
-    "test": "node --test scripts/journal.test.mjs scripts/comic.test.mjs scripts/atlas-history.test.mjs scripts/home-startup.test.mjs scripts/image-budget.test.mjs",
+    "test": "node --test scripts/journal.test.mjs scripts/comic.test.mjs scripts/atlas-history.test.mjs scripts/home-startup.test.mjs scripts/image-budget.test.mjs scripts/orbital-geometry.test.mjs",
     "preview": "python3 -m http.server 4173"
   },
   "devDependencies": {
