@@ -12,12 +12,14 @@
   };
   const seen = () => { try { return sessionStorage.getItem(key) === '1'; } catch { return false; } };
   function finish() {
+    const wasPlaying=dialog.open||document.documentElement.classList.contains('intro-playing');
     clearTimers();
     if (dialog.open) dialog.close();
     document.documentElement.classList.remove('intro-playing', 'intro-revealing');
     dialog.classList.remove('is-exiting');
     delete dialog.dataset.phase;
     hero.classList.add('hero-arrived');
+    if(wasPlaying)document.dispatchEvent(new CustomEvent('jiake:introend'));
   }
   function start() {
     if (motion.matches || !dialog.showModal || dialog.open) return;
@@ -25,6 +27,7 @@
     dialog.classList.remove('is-exiting');
     try { dialog.showModal(); } catch { finish(); return; }
     document.documentElement.classList.add('intro-playing');
+    document.dispatchEvent(new CustomEvent('jiake:introstart'));
     dialog.dataset.phase = 'portrait';
     phaseTimers = [
       setTimeout(() => { dialog.dataset.phase = 'greeting'; }, 1150),

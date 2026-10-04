@@ -1,0 +1,734 @@
+{
+  "version": 1,
+  "title": "I Wanted to See the World",
+  "language": "en",
+  "chapters": [
+    {
+      "title": "From the Coast",
+      "start": 1,
+      "end": 3
+    },
+    {
+      "title": "Finding My Way",
+      "start": 4,
+      "end": 8
+    },
+    {
+      "title": "Turning a Corner",
+      "start": 9,
+      "end": 11
+    },
+    {
+      "title": "A Wider World",
+      "start": 12,
+      "end": 16
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "The First Journeys",
+      "captions": [
+        "I grew up in a coastal village in Xianxiang, Ningbo.",
+        "As a child, I often stayed in my dad's truck and travelled with him on deliveries.",
+        "That was my first glimpse of the world beyond home."
+      ],
+      "layout": "strips3",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0,
+          "y": 0.3333333333333333,
+          "w": 1,
+          "h": 0.2916666666666667
+        },
+        {
+          "x": 0,
+          "y": 0.625,
+          "w": 1,
+          "h": 0.375
+        }
+      ],
+      "alt": [
+        "A cargo truck on a road through a coastal village in Ningbo.",
+        "A boy riding beside his father in the cab of a truck.",
+        "The boy looking out of the truck window at the road beyond."
+      ],
+      "image": "page-01.webp",
+      "smallImage": "page-01-small.webp"
+    },
+    {
+      "page": 2,
+      "title": "A World Beyond Home",
+      "captions": [
+        "Visits to relatives at Chinese New Year were my chance to see city life.",
+        "My sister would take me out to play. Those are some of my warmest childhood memories.",
+        "I came to believe that studying hard was my way out.",
+        "A good university could open up more possibilities."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A family visiting relatives during Chinese New Year.",
+        "An older sister playing with her younger brother.",
+        "The boy studying at a desk at home.",
+        "The boy looking up from a book toward the window."
+      ],
+      "image": "page-02.webp",
+      "smallImage": "page-02-small.webp"
+    },
+    {
+      "page": 3,
+      "title": "Running, Jumping, Playing",
+      "captions": [
+        "In fourth grade, I represented Xianxiang and won the Yinzhou district high jump competition.",
+        "I also came fourth in the 800 metres.",
+        "I kept training. In junior high, I often won the school's 400- and 800-metre races.",
+        "I started basketball in third grade. By sixth grade, I could do a between-the-legs layup."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A schoolboy clearing the bar in a high jump competition.",
+        "The boy running an 800-metre race.",
+        "A junior-high student crossing the finish line.",
+        "A boy performing a basketball layup."
+      ],
+      "image": "page-03.webp",
+      "smallImage": "page-03-small.webp"
+    },
+    {
+      "page": 4,
+      "title": "The Door I Almost Reached",
+      "captions": [
+        "My grades were uneven in my first two years of junior high.",
+        "In my final year, I caught up.",
+        "I qualified for a top provincial high school's special admissions exam.",
+        "But I fell short of the minimum score."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A junior-high student facing several school subjects.",
+        "The student revising with growing concentration.",
+        "The student looking hopeful about an admissions opportunity.",
+        "The student looking quietly disappointed by exam results."
+      ],
+      "image": "page-04.webp",
+      "smallImage": "page-04-small.webp"
+    },
+    {
+      "page": 5,
+      "title": "Back to the Desk",
+      "captions": [
+        "That setback hit me hard. Its shadow stayed with me for years.",
+        "Under enormous pressure, I returned to preparing for the regular high school entrance exam.",
+        "In the end, I finished first in my class.",
+        "I entered Zhengshi High School in Ningbo, still some way from what I had hoped for."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A student sitting alone after a disappointing exam.",
+        "The student returning to his entrance-exam revision.",
+        "The student holding his class results.",
+        "The student entering a high-school campus in Ningbo."
+      ],
+      "image": "page-05.webp",
+      "smallImage": "page-05-small.webp"
+    },
+    {
+      "page": 6,
+      "title": "Under Other People's Gaze",
+      "captions": [
+        "As I grew through high school, my underbite became severe.",
+        "I was given hurtful nicknames and mocked.",
+        "I became painfully aware of how others saw me. My confidence faded.",
+        "Being around people gradually became stressful."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A high-school student seeing his pronounced underbite in the mirror.",
+        "The student feeling self-conscious in a school corridor.",
+        "The student standing apart from a group.",
+        "The student walking alone toward his dormitory."
+      ],
+      "image": "page-06.webp",
+      "smallImage": "page-06-small.webp"
+    },
+    {
+      "page": 7,
+      "title": "A Light in the Night",
+      "captions": [
+        "Some nights, I hid in the dormitory bathroom and cried.",
+        null,
+        "I woke early, stayed up late, and poured much of my time into studying.",
+        "In my last two years of high school, I often ranked first in my year. English had always come naturally to me."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A quiet dormitory corridor and a student at the bathroom doorway.",
+        "The student wiping away tears, with his pre-surgery jaw visible.",
+        "The student studying under a warm desk lamp at night.",
+        "The student concentrating on an English book."
+      ],
+      "image": "page-07.webp",
+      "smallImage": "page-07-small.webp"
+    },
+    {
+      "page": 8,
+      "title": "Learning and Teaching",
+      "captions": [
+        "My university entrance exam did not go as well as I had hoped.",
+        "I chose Zhejiang Gongshang University over a Project 211 university outside Zhejiang.",
+        "I began teaching English after high school. I have kept teaching ever since.",
+        "I loved languages and trusted my ability to learn them, so I chose to major in French.",
+        "University gave me more freedom, but the distress over my jaw remained."
+      ],
+      "layout": "grid5",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0,
+          "y": 0.3333333333333333,
+          "w": 0.5,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0.5,
+          "y": 0.3333333333333333,
+          "w": 0.5,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0,
+          "y": 0.6666666666666666,
+          "w": 1,
+          "h": 0.3333333333333333
+        }
+      ],
+      "alt": [
+        "A high-school graduate considering his university exam results.",
+        "The graduate weighing his university choices.",
+        "The young man beginning to teach English.",
+        "An undergraduate opening a French coursebook.",
+        "The undergraduate walking across campus before jaw surgery."
+      ],
+      "image": "page-08.webp",
+      "smallImage": "page-08-small.webp"
+    },
+    {
+      "page": 9,
+      "title": "My Family Beside Me",
+      "captions": [
+        "My family took me to Shanghai Ninth People's Hospital for a consultation.",
+        "I decided to have corrective jaw surgery.",
+        "Before surgery, I needed orthodontic treatment.",
+        "It lasted more than two years, much longer than I had expected."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "A young man and his family in a hospital waiting area.",
+        "The family listening to a doctor during a consultation.",
+        "An orthodontic appointment before jaw surgery.",
+        "Calendar pages suggesting the long wait during treatment."
+      ],
+      "image": "page-09.webp",
+      "smallImage": "page-09-small.webp"
+    },
+    {
+      "page": 10,
+      "title": "After the Long Wait",
+      "captions": [
+        "During treatment, my underbite became more pronounced, and the emotional strain grew.",
+        "I withdrew from social life and focused on studying. I consistently ranked first in my major, academically and overall.",
+        "In the second semester of my junior year, I finally had surgery.",
+        null
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "An undergraduate sitting alone during orthodontic treatment.",
+        "The undergraduate studying, his pre-surgery jaw clearly visible.",
+        "The young man with a family member before surgery.",
+        "The young man resting by a hospital window after surgery."
+      ],
+      "image": "page-10.webp",
+      "smallImage": "page-10-small.webp"
+    },
+    {
+      "page": 11,
+      "title": "A Brighter Chapter",
+      "captions": [
+        "Surgery changed my appearance. I began to regain the confidence to face everyday life.",
+        "Two months later, I secured recommended admission to the School of International Business at Southwestern University of Finance and Economics.",
+        "I also received the National Scholarship. After so much pressure and waiting, it was a bright moment in my life."
+      ],
+      "layout": "strips3",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0,
+          "y": 0.3333333333333333,
+          "w": 1,
+          "h": 0.3333333333333333
+        },
+        {
+          "x": 0,
+          "y": 0.6666666666666666,
+          "w": 1,
+          "h": 0.3333333333333333
+        }
+      ],
+      "alt": [
+        "A university student walking on campus after jaw surgery.",
+        "The student receiving news of postgraduate admission.",
+        "The student standing in warm campus light with a folder."
+      ],
+      "image": "page-11.webp",
+      "smallImage": "page-11-small.webp"
+    },
+    {
+      "page": 12,
+      "title": "Into the Working World",
+      "captions": [
+        "After securing my postgraduate place, I interned at Mingle Advisors, a Finnish firm in Hangzhou.",
+        "After graduation, I worked in French-speaking overseas sales at Market Union in Ningbo, helping close nearly US$1 million in orders.",
+        "Then I moved to Chengdu for graduate school.",
+        "Chengdu was a happy chapter. I studied, interned at Alliance Française, and continued teaching English."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "An internship in a small company office in Hangzhou.",
+        "Working in overseas sales in Ningbo.",
+        "Arriving in Chengdu for graduate study.",
+        "Studying and preparing language lessons in Chengdu."
+      ],
+      "image": "page-12.webp",
+      "smallImage": "page-12-small.webp"
+    },
+    {
+      "page": 13,
+      "title": "Choosing to Go",
+      "captions": [
+        "Then came another choice: should I study abroad?",
+        "Going would mean delaying graduation.",
+        "I thought about it for a long time. Since childhood, I had wanted to see the world.",
+        "I chose a one-year exchange at Paris 1 Panthéon-Sorbonne University."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "Reading about an overseas exchange programme.",
+        "Weighing the exchange against a later graduation.",
+        "A window scene echoing the childhood truck journeys.",
+        "Preparing exchange application papers and a travel bag."
+      ],
+      "image": "page-13.webp",
+      "smallImage": "page-13-small.webp"
+    },
+    {
+      "page": 14,
+      "title": "A New Direction",
+      "captions": [
+        "Before leaving, I spent four months in overseas talent recruitment at ByteDance in Chengdu.",
+        "I helped ByteDance's Seed AI team recruit top talent in North America.",
+        "That experience drew me into AI and pushed me to learn more.",
+        "With a new direction taking shape, I left for Paris."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "An overseas recruitment internship in Chengdu.",
+        "Supporting a remote talent recruitment conversation.",
+        "Learning about AI through books and notes.",
+        "Looking out of an airplane window on the way to Paris."
+      ],
+      "image": "page-14.webp",
+      "smallImage": "page-14-small.webp"
+    },
+    {
+      "page": 15,
+      "title": "The Limits of My World",
+      "captions": [
+        "During my year in Paris, I also spent a year learning Spanish.",
+        "I have always loved languages. I explored Paris, France, and other parts of Europe.",
+        "The limits of my language are the limits of my world."
+      ],
+      "closingCaption": "The child who wanted to see the world had finally made it.",
+      "layout": "strips3",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.328125
+        },
+        {
+          "x": 0,
+          "y": 0.330078125,
+          "w": 1,
+          "h": 0.32421875
+        },
+        {
+          "x": 0,
+          "y": 0.6569010416666666,
+          "w": 1,
+          "h": 0.3430989583333333
+        }
+      ],
+      "alt": [
+        "An exchange student taking notes in a Spanish-language class in Paris.",
+        "The student exploring a European street with a day bag.",
+        "The student walking along a sunlit Paris street."
+      ],
+      "image": "page-15.webp",
+      "smallImage": "page-15-small.webp"
+    },
+    {
+      "page": 16,
+      "title": "Still Exploring",
+      "captions": [
+        "After returning from Paris, I joined Tencent Cloud as a direct sales intern.",
+        "My experience with AI helped me find my direction. I keep building with AI and learning more about cloud computing.",
+        "I have taught English since leaving high school. Years of experience have only deepened my enthusiasm for teaching.",
+        "Languages opened up my world. And there is still so much I want to explore."
+      ],
+      "layout": "grid4",
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        },
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "w": 0.5,
+          "h": 0.5
+        }
+      ],
+      "alt": [
+        "Starting work in cloud sales.",
+        "Building and learning with AI on a laptop.",
+        "Teaching English with confidence and enthusiasm.",
+        "Looking through a window, with books and a laptop nearby."
+      ],
+      "image": "page-16.webp",
+      "smallImage": "page-16-small.webp"
+    }
+  ]
+}

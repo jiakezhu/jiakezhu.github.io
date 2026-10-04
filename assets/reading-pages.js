@@ -13,6 +13,12 @@
       const value = copy[language]?.[element.dataset.i18n];
       if (value) element.textContent = value;
     });
+    for(const [attribute,key] of [['aria-label','i18nAria'],['alt','i18nAlt']]) {
+      document.querySelectorAll(attribute==='alt'?'[data-i18n-alt]':'[data-i18n-aria]').forEach(element=>{
+        const value=copy[language]?.[element.dataset[key]];
+        if(value) element.setAttribute(attribute,value);
+      });
+    }
     const search = document.getElementById('journal-search');
     if (search && copy[language]) {
       search.placeholder = copy[language].searchPlaceholder;
@@ -30,6 +36,15 @@
         tag.textContent = '# ' + (window.STORY_TAG_TRANSLATIONS?.[tag.dataset.original]?.[language] || tag.dataset.original);
       });
     });
+    document.querySelectorAll('a[href]').forEach(link => {
+      const target = new URL(link.href);
+      if(target.origin !== location.origin || !/\.html$|\/$/.test(target.pathname)) return;
+      target.searchParams.set('lang',language);
+      link.href = target.href;
+    });
+    const url = new URL(location.href);
+    url.searchParams.set('lang',language);
+    history.replaceState(null,'',url);
     try { localStorage.setItem('jiake-language',language); } catch {}
     document.dispatchEvent(new CustomEvent('jiake:languagechange',{detail:{language}}));
   }
@@ -37,5 +52,7 @@
   window.addEventListener('storage',event => { if (event.key === 'jiake-language') setLanguage(event.newValue); });
   let language = navigator.language.startsWith('zh') ? 'zh' : 'en';
   try { language = localStorage.getItem('jiake-language') || language; } catch {}
+  const requested = new URLSearchParams(location.search).get('lang');
+  if(supported.includes(requested)) language = requested;
   setLanguage(language);
 })();

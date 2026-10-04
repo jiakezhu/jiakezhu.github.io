@@ -37,69 +37,17 @@ window.STORY_I18N = {
   }
 };
 
-// Card translations keep the original Chinese article as the reading destination.
-window.STORY_POST_TRANSLATIONS = {
-  'wechat-ai-and-philosophy': {
-    en:['Writing on WeChat: AI brings me back to being human','Building AI tools while writing about RSI and AI Fear. An interview question leads me to rethink people, goals and control.'],
-    fr:['Écrire sur WeChat : l’IA me ramène à l’humain','Entre outils d’IA, RSI et AI Fear, une question d’entretien me fait repenser les personnes, les objectifs et le contrôle.'],
-    es:['Escribir en WeChat: la IA me devuelve a lo humano','Entre herramientas de IA, RSI y AI Fear, una pregunta de entrevista me lleva a repensar las personas, los objetivos y el control.']
-  },
-  'language-house-preparation': {
-    en:['Language House: three priorities for getting started','Bringing earlier ideas and research into one project, with a focus on AI lesson preparation, student management and early research.'],
-    fr:['Language House : trois priorités pour commencer','Réunir les idées et recherches autour de trois axes : la préparation des cours par IA, la gestion des élèves et l’étude des besoins.'],
-    es:['Language House: tres prioridades para empezar','Reunir ideas e investigación en un proyecto centrado en preparar clases con IA, gestionar estudiantes y estudiar las necesidades.']
-  },
-  'lessonfold-workflow': {
-    en:['Lessonfold: making lesson preparation a complete workflow','Starting with a sample lesson, refining materials, teacher review and handout reading, and planning the link to student management.'],
-    fr:['Lessonfold : une préparation de cours de bout en bout','À partir d’un cours exemple, améliorer les supports, la relecture par l’enseignant et la connexion à la gestion des élèves.'],
-    es:['Lessonfold: un proceso completo para preparar clases','A partir de una clase de ejemplo, mejorar los materiales, la revisión docente y las fichas, y avanzar en la conexión con la gestión de estudiantes.']
-  },
-  'ai-compute-field-guide': {
-    en:['An AI compute guide you can search and compare','Organizing 34 accelerator profiles, filters and three-way comparisons into a tool that connects hardware knowledge with real use cases.'],
-    fr:['Un guide de calcul IA à explorer et comparer','34 profils d’accélérateurs, des filtres et une comparaison de trois cartes pour relier les connaissances matérielles aux usages concrets.'],
-    es:['Una guía de cómputo de IA para buscar y comparar','34 perfiles de aceleradores, filtros y comparaciones de tres tarjetas para conectar el conocimiento del hardware con casos de uso reales.']
-  },
-  'sales-buddy-next-action': {
-    en:['Sales Buddy: after the meeting, what comes next?','From shared customer records to a sales workspace that connects research, conversations and the next action.'],
-    fr:['Sales Buddy : après la réunion, quelle est la suite ?','Des fiches clients partagées à un espace qui relie recherche, échanges et prochaine action.'],
-    es:['Sales Buddy: después de la reunión, ¿qué sigue?','De los registros de clientes compartidos a un espacio que conecta investigación, conversaciones y la siguiente acción.']
-  },
-  'cloud-sales-shared-record': {
-    en:['One shared memory for four sales Skills','Company research, meeting notes and solution planning each have a role. Start by giving them one common customer record.'],
-    fr:['Une mémoire commune pour quatre Skills de vente','Recherche d’entreprise, notes de réunion et propositions ont chacun leur rôle. D’abord, leur donner une fiche client commune.'],
-    es:['Una memoria compartida para cuatro Skills de ventas','La investigación, las notas de reuniones y las propuestas cumplen distintos papeles. El primer paso es compartir un registro de cliente.']
-  },
-  'feishu-notes-find-again': {
-    en:['A Skill to find the things I have already written','As notes pile up, remembering that something exists is easier than finding it. Let an agent search, read and answer with sources.'],
-    fr:['Un Skill pour retrouver ce que j’ai déjà écrit','Quand les notes s’accumulent, on se souvient mieux d’avoir écrit que du texte lui-même. Un agent cherche, lit et répond avec ses sources.'],
-    es:['Un Skill para encontrar lo que ya escribí','Al acumular notas, es más fácil recordar que algo existe que encontrarlo. Un agente busca, lee y responde con fuentes.']
-  },
-  'habit-orbit-small-days': {
-    en:['In Paris, turning ordinary days into planets','Can learning, focus, exercise and evening notes leave visible traces? I built a small universe of habits.'],
-    fr:['À Paris, transformer les jours ordinaires en planètes','Apprendre, se concentrer, bouger, écrire le soir : ces gestes peuvent-ils laisser des traces visibles ? J’ai créé un petit univers d’habitudes.'],
-    es:['En París, convertir los días cotidianos en planetas','¿Pueden el aprendizaje, la concentración, el ejercicio y el diario dejar huellas visibles? Construí un pequeño universo de hábitos.']
-  },
-  'lesson-prep-continuity': {
-    en:['After one lesson, where should the next begin?','Carrying vocabulary mistakes, key points and teacher notes into the next lesson plan—the earliest idea behind the teaching workbench.'],
-    fr:['Après un cours, où commencer le suivant ?','Transmettre les erreurs de vocabulaire, les points clés et les remarques au prochain cours : le premier fil de l’atelier pédagogique.'],
-    es:['Después de una clase, ¿dónde empieza la siguiente?','Llevar los errores de vocabulario, los puntos clave y las notas docentes al próximo plan: el origen del taller de enseñanza.']
-  },
-  'train-window-travel-skill': {
-    en:['On a train to Lyon, I wanted a lighter travel guide','The scenery kept moving while the guides on my phone kept multiplying. I turned that friction into a student travel-planning Skill.'],
-    fr:['Dans le train pour Lyon, l’envie d’un guide plus léger','Le paysage défilait, les guides sur mon téléphone s’accumulaient. J’en ai fait un Skill de voyage pour étudiants.'],
-    es:['En el tren a Lyon, quería una guía de viaje más ligera','El paisaje avanzaba mientras las guías del móvil se multiplicaban. Convertí esa dificultad en un Skill de viajes para estudiantes.']
-  },
-  'lingovibe-paris-language': {
-    en:['In Paris, wondering what a word really feels like','A dictionary gives the meaning; a conversation brings tone, distance and culture. So I built a context tool for English, French and Spanish.'],
-    fr:['À Paris, comprendre ce qu’un mot fait ressentir','Le dictionnaire donne le sens ; la conversation ajoute le ton, la distance et la culture. D’où un outil de contexte en anglais, français et espagnol.'],
-    es:['En París, entender qué se siente detrás de una palabra','El diccionario da el significado; la conversación añade tono, distancia y cultura. Así nació una herramienta de contexto en inglés, francés y español.']
-  }
-};
-document.querySelectorAll('.journal-card').forEach(card => {
-  const translation = window.STORY_POST_TRANSLATIONS[card.id.replace('post-','')];
-  if (translation) translation.zh = [card.querySelector('h3').textContent,card.querySelector('p').textContent];
-});
+// The listing and full articles share one translation source.
+window.STORY_POST_TRANSLATIONS = Object.fromEntries((window.JOURNAL_POSTS || []).map(post => [post.slug, {
+  zh:[post.title,post.summary],
+  ...Object.fromEntries(Object.entries(post.translations || {}).map(([language,t]) => [language,[t.title,t.summary]]))
+}]));
 window.STORY_TAG_TRANSLATIONS = {
+  '个人网站':{en:'Personal website',fr:'Site personnel',es:'Sitio personal'},
+  '版本记录':{en:'Version history',fr:'Historique des versions',es:'Historial de versiones'},
+  '成长':{en:'Growth',fr:'Parcours',es:'Crecimiento'},
+  'AI 构建':{en:'Building with AI',fr:'Créer avec l’IA',es:'Crear con IA'},
+  '多语言':{en:'Multilingual',fr:'Multilingue',es:'Multilingüe'},
   '公众号':{en:'WeChat',fr:'WeChat',es:'WeChat'}, '哲学':{en:'Philosophy',fr:'Philosophie',es:'Filosofía'},
   '写作':{en:'Writing',fr:'Écriture',es:'Escritura'}, '项目筹备':{en:'Preparation',fr:'Préparation',es:'Preparación'},
   '英语学习':{en:'English learning',fr:'Apprendre l’anglais',es:'Aprender inglés'}, 'AI 教育':{en:'AI education',fr:'IA et éducation',es:'IA y educación'},

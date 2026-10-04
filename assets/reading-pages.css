@@ -73,6 +73,12 @@
 .journal-card--orbit { --cover-color:#e2e0f0!important; }
 .journal-card--travel { --cover-color:#efe5d3!important; }
 .journal-card--language { --cover-color:#e6dff1!important; }
+.journal-card--history { --cover-color:#252622!important; }
+.journal-card--history .journal-card-cover::before,.journal-card--history .journal-card-cover::after { display:none; }
+.journal-card--history .journal-card-cover { padding:35px 14px 14px; }
+.journal-card--history .journal-card-cover img { width:100%; height:auto; max-height:100%; object-fit:contain; border-radius:5px; transform:none; box-shadow:0 12px 25px #0003; }
+.journal-card--history:hover .journal-card-cover img { transform:scale(1.02); }
+.journal-card--history .journal-cover-label { color:#dfdacb; }
 .journal-card-content { display:flex; flex-direction:column; flex:1; padding:22px 23px 24px; min-width:0; }
 .story-journal .journal-card time { display:block; margin-bottom:13px; padding:0; font-size:.62rem; letter-spacing:.06em; color:var(--muted); }
 .story-journal .journal-meta { margin:0 0 10px; gap:10px; font-size:.62rem; line-height:1.5; letter-spacing:.02em; }

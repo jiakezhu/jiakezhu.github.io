@@ -1,4 +1,4 @@
-# Jiake ZHU · 朱佳科
+# Jiake ZHU
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen?logo=github)](https://jiakezhu.github.io)
 [![Status](https://img.shields.io/badge/status-live-success)](https://jiakezhu.github.io)
@@ -15,7 +15,7 @@
 
 **[jiakezhu.github.io](https://jiakezhu.github.io)** is the personal portfolio of Jiake ZHU, a professional who combines technical fluency with deep international experience. Educated across China and France — double bachelor's in French Language & Cross-border E-commerce (ZJSU), Master's in International Business (SWUFE), and an exchange year in International & European Law at Paris 1 Panthéon-Sorbonne — Jiake brings a rare blend of coding ability and cross-cultural expertise to every project.
 
-**[jiakezhu.github.io](https://jiakezhu.github.io)** 是朱佳科个人作品集网站。他拥有浙江工商大学法语与跨境电商双学位、西南财经大学国际商务硕士学位，并曾赴巴黎第一大学（先贤祠-索邦）交换学习国际与欧盟法。他将技术能力与跨文化国际经验相结合，是连接中西方的复合型人才。
+**[jiakezhu.github.io](https://jiakezhu.github.io)** 是 Jack Zhu 的个人作品集网站。他拥有浙江工商大学法语与跨境电商双学位、西南财经大学国际商务硕士学位，并曾赴巴黎第一大学（先贤祠-索邦）交换学习国际与欧盟法。他将技术能力与跨文化国际经验相结合，是连接中西方的复合型人才。
 
 **Languages · 语言能力:** Native Mandarin · IELTS 7.5 English · DALF C1 French · A2–B1 Spanish · 16+ countries visited
 
@@ -154,9 +154,11 @@ draft: false
 
 `category` 为 `tech`（技术博客）或 `diary`（日记）。`slug` 可省略，默认使用 Markdown 文件名；必须为小写英文字母、数字及连字符。正文支持标题、段落、引用、列表、表格、图片和代码块。图片放在 `images/`，正文使用网站绝对路径，例如 `![说明](/images/photo.jpg)`。
 
-写作台导出的文件默认 `draft: true`。准备发布时改成 `false`，运行 `npm run build`，然后提交 Markdown 和生成的 `index.html`、`story/index.html`、`journal/`、`assets/journal-data.js` 等文件，推送到 `main`，沿用现有 GitHub Pages 发布方式。仅编辑静态页面无需运行构建。文章内容保持原文，主页的语言切换不会翻译文章。
+写作台导出的文件默认 `draft: true`。准备发布时改成 `false`，运行 `npm run build`，然后提交 Markdown 和生成的 `index.html`、`story/index.html`、`journal/`、`assets/journal-data.js` 等文件，推送到 `main`，沿用现有 GitHub Pages 发布方式。仅编辑静态页面无需运行构建。文章标题、摘要、全文、目录和返回链接支持中、英、法、西四种语言，语言选择会随页面导航保留。
 
 草稿与未来日期的文章不进入生成的阅读页、索引、主页预览或 RSS。日期以 Asia/Shanghai 为准；到日期后需要再次运行构建。修改文章为草稿或删除 Markdown 后再构建，会撤下此前生成的文章页。**公开仓库里的源码本身仍然可见；`draft` 不是私密权限，不要提交私人草稿。** 真正未发布的文字可先留在本机写作台，并导出备份。
+
+每篇公开文章还需要 `content/post-translations/<slug>.json`，包含 `en`、`fr`、`es` 三个对象；每个对象提供 `title`、`summary` 和 Markdown 格式的 `body`。中文继续以 `content/posts/` 的 Markdown 为来源。构建会在写入之前检查译文是否齐全，草稿与未来日期的文章无需译文。正文在本地生成，不使用在线翻译请求。
 
 构建前校验日期、分类、标签、链接名称和重复 slug；Markdown 的原始 HTML 与执行脚本链接不会被渲染。`assets/markdown-it.min.js` 随构建复制，保留上游 MIT 版权信息，写作预览无需外部 CDN。
 
@@ -165,7 +167,7 @@ draft: false
 
 统一采用石墨黑 / 暖白 / 黄绿色主色，辅以淡紫和珊瑚色，并支持本机记忆的深浅主题。主页提供作品分类与介绍展开、滚动阅读进度、返回顶部、数值入场、轻量粒子背景、按钮与卡片反馈。四种语言切换同步更新交互控件。首页按姓名、身份介绍、作品入口和最近项目组织阅读顺序，配合圆角照片。通过编号章节、统一字阶和阅读宽度组织其他内容。产品封面复用原有图标和截图。手机使用单列作品，平板使用双列；背景动效离屏或切到后台后暂停，并尊重系统减少动态效果设置。
 
-首页的跨行业、跨学科、跨语言在固定高度区域逐个切换，各自的公司、学校 Logo 与语言旗帜随关键词一起出现；每轮约 9 秒。Always Day One 放在首页照片侧边，介绍区与照片高度相应收紧。系统开启减少动态效果时三个关键词改为静态展示。其余板块保持原样。
+首页右侧固定展示多学科、多语言、多行业及相应 Logo；姓名下方的头衔和简短座右铭自动逐项切换，搭配各自的颜色和图标。Journey 使用本地 Leaflet 和打包的地理数据，提供世界、中国与欧洲视图、求学路线、地点卡片和全部足迹索引；地图靠近视口时才加载数据，地点照片按需加载。更新地图原始数据后运行 `npm run build` 生成 `assets/maps/atlas-data.js`。
 
 排版参考 Cynthia Ugwu 的个人作品集（[Awwwards Honorable Mention 官方记录](https://www.awwwards.com/websites/General%20Sans/)），吸收字阶对比和留白节奏，再按个人网站的阅读需求调整。
 
@@ -181,15 +183,29 @@ draft: false
 
 ### 成长漫画与开场
 
-首页最后保留一个 Story 入口，进入 `story/` 统一阅读项目日志、生活记录与成长漫画。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。文章永久地址与 RSS 保持兼容。`story/index.html` 包含四个阶段入口及可放大的封面。按作者要求，现阶段没有填写具体经历、人物、日期或故事。`images/growth-comic-cover-v2.png` 是内置图像模型生成的折叠漫画分镜封面，生成提示词保存在 `content/story/cover-v2-prompt.md`；鼠标移入时有轻微的立体倾斜反馈。后续由作者提供事实素材，再制作分镜和漫画，不根据简历自行补写经历。目前没有浏览器内的模型调用接口或公开 API Key。
+首页最后保留一个 Story 入口，进入 `story/` 统一阅读项目日志、生活记录与成长漫画。首页不展示章节或文章列表；日志构建仅更新记录数量与最新日期。文章永久地址与 RSS 保持兼容。
+
+成长漫画《I Wanted to See the World》由作者在本次对话中提供的口述经历制作，包括高中毕业后持续教英语、巴黎一年的西班牙语学习，以及作者已确认的五阶段人物形象。高中至大学术前保留严重地包天的视觉特征；当前人物采用作者确认的漫画化便装形象。场景为根据口述设计的插画，不声称复原真实旧照片、证书或病历。
+
+`story/` 的成长漫画标签接入四个章节入口；`story/comic/` 是完整16页的正式网页阅读器，`story/comic/transcript.html` 是完整文字版。漫画入口、旁白、标题、章节导航、替代文字与文字版均支持中、英、法、西四种语言，跟随网站的 `jiake-language` 偏好；阅读途中切换保留当前页与图片地址。旁白作为真实 HTML 文字紧贴对应画格，只展示一次，支持复制、检索与屏幕阅读器。图片不包含旁白。禁用 JavaScript 时可阅读完整英文文字版。
+
+`content/story/comic-manifest.json` 保存英文原文、章节和画格边界；`content/story/comic-translations.json` 保存其余三种语言的完整翻译及四语言控件。`scripts/build-comic.mjs` 与 `scripts/localize-comic.mjs` 生成静态阅读页和语言字典，并更新现有 Story 入口，保留日志和公众号内容；缺失翻译会阻止生成不完整页面。`assets/growth-comic-language.js` 接入全站语言偏好。`npm run build` 同时构建日志与漫画。每个画稿文件包含多个画格，网页通过 CSS 展示对应区域，使用相同图片地址避免重复下载。只有当前页会设置图片地址；直接进入 `#page-15` 时不会提前请求其他漫画页。
+
+`images/comic/` 存放1400像素以内的 WebP 与640像素的响应式版本，随网站代码提交即可沿用 GitHub Pages 静态托管。高分辨率PNG原稿与完整生成提示词保存在网站 checkout 外的本地 `漫画素材/`，不参与网页加载。需要重新编码时，可运行 `scripts/prepare-comic-images.py`；正常构建直接使用仓库里的WebP。旧折叠封面和中文试画保留为设计参考。浏览器不调用图像模型，也不需要公开 API Key。
 
 `assets/intro.js` / `assets/intro.css` 使用真实素材组成爆开式开场：36 种语言的问候组成 168 个文字片段铺满首帧，姓名位于最前层并保持清晰；照片、学校与公司标识、项目截图在姓名后方交叠，约 1.7 秒时同时向四周爆开，围住同屏的 Always Day One 和 Pragmatic Romantism；约 4.3 秒时再次向外飞出，背景随之退去，主页在下方同步入场。桌面共 18 张，手机保留 12 张，均来自作者现有本地素材。理念仍使用居中海报排版，首字母大写；配合扩散光圈、椭圆轨迹和播放进度。每个浏览器会话首次进入首页时播放，约 5.4 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
 当前所有修改仅用于本地预览和本地提交。未得到作者后续明确发布指令前，不推送远端或部署。
 
+首页右上角、主题切换旁的 `assets/music.js` / `assets/music.css` 已使用作者提供的完整 Sunflower MP3，保存为 `assets/audio/sunflower.mp3`（约3.7 MiB，约162秒）。首页脚本的 `data-audio-src` 指向仓库内音频；默认在开场时尝试播放，浏览器阻止有声自动播放时，在首次真实点击、触摸或按键后继续。开场结束后，右上角出现音乐提示：播放时可关闭，关闭时可开启，浏览器阻止播放时可点击播放。即使之前记住了关闭偏好，也显示开启入口；12秒后自动收起。支持单曲循环、关闭偏好与音量记忆、真实进度及四语言控件；主动关闭后不会在后续点击或刷新时重新开启。已经移除 SoundCloud 试听及 Widget API。切换语言不会重载音频，进入另一个静态页面会停止当前页的播放。
+
 开场设计参考 Awwwards 收录的 [Giats Loading Animation](https://www.awwwards.com/inspiration/loading-animation-https-giats-me) 和 [Eduard Bodak Page transition](https://www.awwwards.com/inspiration/page-transition-eduard-bodak-portfolio)，以本站的圆润字体、真实旅行照片和配色重新设计。没有引入这些网站的媒体文件或代码。
 
-首屏的跨行业、跨学科、跨语言与对应标识同时显示在姓名下方。`assets/home-v3.css` 调整这些关键词及页尾入口的层级。
+首屏的多学科、多语言、多行业按此顺序同时显示，标识位于各关键词右侧。`assets/home-v3.css` 调整这些关键词及页尾入口的层级。
+
+首页四语言使用一致的标题字阶。`assets/home-language-layout.js` 在当前屏宽与字体下预先测量四种语言，为正文、卡片与按钮保留最长译文所需的空间；切换时保留当前阅读位置、作品筛选和展开状态。导航链接按当前译文宽度排列。字体加载、窗口变化或展开内容时会重新测量，正常切换不重新测量整页，也不会持久保存测量过程中的临时语言。
+
+`assets/book-transition.js` / `assets/book-transition.css` 的书本过场包含三章目录、LingoVibe 项目手记、罗马旅行照片、语言短句及成长漫画首页插画，内页文字随网站语言切换。沿用本地素材，翻页后短暂停留，总时长约 2.1 秒；支持跳过、Escape 与浏览器返回，系统减少动态效果时直接进入故事页。
 
 ### 足迹地图和 Sales Buddy 素材
 
@@ -202,3 +218,21 @@ Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Dow
 ### Story 补充记录 · 2026-10-03
 
 此次从作者公开 GitHub 的项目说明与提交记录、近期公众号工作中补充 8 篇记录，目前共 11 篇。LingoVibe、Habit-Orbit、旅行 Skill 使用作者授权的旅行叙事，文末注明创作性还原；功能、阶段与日期依据实际项目记录。公众号一篇只记写作过程和个人思考，尚未标注为已发布。具体来源与筛选规则见 `content/story/project-sources.md`。
+
+首页三个关键词按“多学科、多语言、多行业”排列，对应标识位于右侧。姓名与关键词之间的六个头衔与两句座右铭每3.2秒逐条轮换；系统减少动态效果时取消切换动画。`assets/home-personality.js` 接入四语言姓名：中文 Jiake Zhu、英文 Jack Zhu、法文 Jake Zhu、西文 Jacobo Zhu；左上角保留固定 Jiake ZHU。四语言主标题均沿用 Nunito；开场姓名始终为 Jiake ZHU，不随语言改变。Email、LinkedIn、WeChat、GitHub、Instagram、X 均显示文字名称。首页及页尾的微信按钮打开同一个可键盘操作的原生对话框，包含个人微信号 Acoolcopper 与公众号“小朱还在想”，支持复制、搜索指引和跳转公众号文章。当前项目位于照片下方。首页到 Story、Story 到漫画、漫画返回和日志返回均使用明确的 index.html 链接，兼容静态文件直接打开和 GitHub Pages；书本过场同时识别目录与明确文件地址。
+
+音乐图标打开向下的面板，可控制播放、音量和进度；播放时图标高亮，点击外部或按 Escape 收起面板。
+
+头衔区采用粗体无衬线字和简短色条，逐条自动向上切换；已移除“写作者”、手动按钮、序号和进度线。中文采用系统苹方等无衬线字体，拉丁文字采用 Helvetica Neue / Arial；鼠标停留时暂停，减少动态效果时取消动画。桌面导航保持单行，850px 以下使用带文字的导航菜单，开关与语言同步。中文语言按钮统一使用 CN；首页四面国旗在桌面与手机均保留。
+
+`assets/home-classic.css` 参考归档旧版的章节节奏，将大标题和章节标签居中；中文标题使用宋体，拉丁文字与数字使用本地 Instrument Serif，重新调整留白与标题层级。中文导航单独增加字阶、点击区和链接间距，仍保持桌面一行。`assets/home-motion.js` 恢复旧版标题的随机字符逐步还原效果，滚入视口和鼠标移入时触发，离屏或切换语言时恢复完整原文。`assets/interactions.js` 的数字入场延迟220ms后从零增长，避免在卡片还未显现时就结束；离开后再返回可重新触发。章节和卡片仍在进入视口时浮入，照片随滚动轻微位移。离屏与后台停止相关计算，并遵循系统减少动态效果设置。
+
+### 城市介绍与网站历史 · 2026-10-04
+
+`assets/maps/city-guide.json` 为全部 65 个已有地点提供中、英、法、西四语名称与简短介绍，并保留官方旅游、政府或 UNESCO 的资料入口。地理文化介绍与作者已有的个人记忆分开呈现，不新增未经提供的旅行经历。咸祥的沿海村庄背景与大学经历来自作者口述；其他地点简介为资料的简短改写。更新介绍后运行 `npm run build`。
+
+公开旧版已保存至 `history/2026-08-26/site/`，对应 `main` 提交 `6a98c9919e5b3316fd119eaddaf90409b32d0aec`；保存时已确认首页与线上一致。64 个原始 HTML/图片文件保持原样，SHA-256 清单位于 `snapshot.json`。入口页 `history/2026-08-26/index.html` 带四语提示及返回链接；外部字体、地图和链接保持原目的地。历史页面仅在读者打开入口时加载。
+
+网站新旧记录按作者要求合并为一篇 `personal-website-redesign`《我的个人网站：留下旧版，继续向前》，配新旧真实浏览器截图、旧版入口及四语完整正文。归档入口的返回链接指向这篇文章，不再展示单独的归档日志。此次共有 12 篇日志，生成页面、漫画、音频与旧版归档一起纳入网站版本控制。`npm test` 校验 65 地点四语覆盖、归档完整性、合并文章的内部链接，以及列表、搜索和 RSS 均只保留一个网站记录。
+
+首页章节高亮由 `assets/navigation.js` 根据各章节起始位置更新，支持很长的作品集区域，不依赖整块章节的可见比例；选中项带 `aria-current="location"`。作品集标题沿用归档旧版的四语文本，首页所有联系按钮使用相同颜色。

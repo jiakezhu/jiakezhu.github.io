@@ -68,7 +68,7 @@
       name.replaceChildren(main,note);
     });
   }
-  new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});translate();
+  document.addEventListener('jiake:languagechange',translate);translate();
 
   // Brief tactile feedback on buttons; pointer effects are desktop-only.
   document.querySelectorAll('.btn-primary,.proj-btn,.project-filter,.journal-filter').forEach(el=>{
@@ -83,14 +83,24 @@
     button.addEventListener('pointermove',e=>{if(motion.matches||!finePointer.matches)return;const r=button.getBoundingClientRect();button.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px)`;});
     button.addEventListener('pointerleave',()=>button.style.transform='');
   });
+  const counters=new Map([...document.querySelectorAll('.stat-num')].map(el=>[el,{final:Number(el.textContent.trim()),frame:0,timer:0}]));
+  function restoreCounter(el){const data=counters.get(el);clearTimeout(data.timer);cancelAnimationFrame(data.frame);el.textContent=data.final;el.classList.remove('is-counting');}
   const counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-    if(!entry.isIntersecting)return;counterObserver.unobserve(entry.target);
-    const el=entry.target,final=Number(el.textContent.trim());if(motion.matches||!Number.isFinite(final))return;
-    let start;
-    function count(time){start??=time;const fraction=Math.min(1,(time-start)/900);el.textContent=Math.round(final*(1-Math.pow(1-fraction,3)));if(fraction<1&&!motion.matches)requestAnimationFrame(count);else el.textContent=final;}
-    requestAnimationFrame(count);
-  }),{threshold:.75});
-  document.querySelectorAll('.stat-num').forEach(el=>counterObserver.observe(el));
+    const el=entry.target,data=counters.get(el);restoreCounter(el);
+    if(entry.intersectionRatio<.65||motion.matches||document.hidden||!Number.isFinite(data.final))return;
+    el.textContent='0';el.classList.add('is-counting');let start;
+    function count(time){
+      if(motion.matches||document.hidden){restoreCounter(el);return;}
+      start??=time;const fraction=Math.min(1,(time-start)/1200);
+      el.textContent=Math.round(data.final*(1-Math.pow(1-fraction,2)));
+      if(fraction<1)data.frame=requestAnimationFrame(count);else restoreCounter(el);
+    }
+    // Let the enclosing card become visible before its small numbers settle.
+    data.timer=setTimeout(()=>{data.frame=requestAnimationFrame(count);},220);
+  }),{threshold:.65});
+  counters.forEach((_,el)=>counterObserver.observe(el));
+  motion.addEventListener('change',()=>counters.forEach((_,el)=>restoreCounter(el)));
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)counters.forEach((_,el)=>restoreCounter(el));});
 
   // Accessible existing life panels: keyboard opening and focus containment.
   document.querySelectorAll('.life-card[onclick]').forEach(card=>{

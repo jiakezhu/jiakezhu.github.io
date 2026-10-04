@@ -1,0 +1,22 @@
+.article-page .journal-nav { max-width:1184px; padding-top:20px; padding-bottom:20px; }
+.article-nav-tools { display:flex; align-items:center; gap:20px; }
+.article-story-link { font-size:.78rem; color:var(--muted); }
+.article-languages { display:flex; gap:3px; }
+.article-languages button { border:1px solid transparent; padding:6px 9px; color:var(--muted); background:transparent; border-radius:6px; font:650 .76rem var(--sans); }
+.article-languages button[aria-pressed="true"] { color:var(--text); border-color:var(--border-s); background:var(--card); }
+.article-page .article-shell { max-width:860px; padding-top:48px; }
+.article-page .article-header { margin:35px 0 28px; }
+.article-page .article-title { font:750 clamp(2.1rem,4vw,3.2rem)/1.25 var(--sans); letter-spacing:-.035em; max-width:780px; }
+.article-page .article-summary { font-size:1rem; line-height:1.85; margin-top:24px; max-width:700px; }
+.article-page .article-toc { padding:18px 22px; margin:30px 0 42px; border:1px solid var(--border-s); border-radius:12px; font-size:.85rem; background:color-mix(in srgb,var(--sage) 4%,transparent); }
+.article-page .article-toc summary { color:var(--text); font-weight:650; }
+.article-page .article-toc ul { margin:15px 0 0; padding-left:18px; }
+.article-page .article-toc li { margin-top:8px; }
+.article-page .article-toc a { color:var(--muted); text-decoration:none; }
+.article-page .article-body { font-size:1.04rem; line-height:1.95; }
+.article-page .article-body p { margin:0 0 24px; }
+.article-page .article-body h2 { font:750 1.55rem/1.4 var(--sans); letter-spacing:-.025em; margin:48px 0 22px; scroll-margin-top:30px; }
+.article-page .article-body h3 { scroll-margin-top:30px; }
+.article-page .article-body a { color:var(--gold); overflow-wrap:anywhere; }
+.article-page .article-body em { color:var(--muted); font-size:.87rem; }
+@media(max-width:700px) { .article-page .journal-nav { padding:18px 20px; }.article-nav-tools { gap:10px; }.article-story-link { display:none; }.article-languages button { padding:6px 7px; }.article-page .article-shell { padding:30px 22px 60px; }.article-page .article-title { font-size:2rem; }.article-page .article-body { font-size:.96rem; line-height:1.9; }.article-page .article-body h2 { font-size:1.35rem; }.article-page .article-summary { font-size:.9rem; } }

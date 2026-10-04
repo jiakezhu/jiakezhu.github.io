@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "width": 1024,
+      "height": 1536,
+      "smallWidth": 640,
+      "smallHeight": 960,
+      "bytes": 431182,
+      "smallBytes": 181062
+    },
+    {
+      "page": 2,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 299238,
+      "smallBytes": 103942
+    },
+    {
+      "page": 3,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 268544,
+      "smallBytes": 100060
+    },
+    {
+      "page": 4,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 223956,
+      "smallBytes": 79574
+    },
+    {
+      "page": 5,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 248874,
+      "smallBytes": 83768
+    },
+    {
+      "page": 6,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 274292,
+      "smallBytes": 93712
+    },
+    {
+      "page": 7,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 236704,
+      "smallBytes": 76442
+    },
+    {
+      "page": 8,
+      "width": 1024,
+      "height": 1536,
+      "smallWidth": 640,
+      "smallHeight": 960,
+      "bytes": 278048,
+      "smallBytes": 132874
+    },
+    {
+      "page": 9,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 220424,
+      "smallBytes": 77278
+    },
+    {
+      "page": 10,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 246584,
+      "smallBytes": 85716
+    },
+    {
+      "page": 11,
+      "width": 1024,
+      "height": 1536,
+      "smallWidth": 640,
+      "smallHeight": 960,
+      "bytes": 252110,
+      "smallBytes": 126962
+    },
+    {
+      "page": 12,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 289746,
+      "smallBytes": 102790
+    },
+    {
+      "page": 13,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 276712,
+      "smallBytes": 97098
+    },
+    {
+      "page": 14,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 262052,
+      "smallBytes": 89322
+    },
+    {
+      "page": 15,
+      "width": 1024,
+      "height": 1536,
+      "smallWidth": 640,
+      "smallHeight": 960,
+      "bytes": 418904,
+      "smallBytes": 193738
+    },
+    {
+      "page": 16,
+      "width": 1254,
+      "height": 1254,
+      "smallWidth": 640,
+      "smallHeight": 640,
+      "bytes": 246158,
+      "smallBytes": 86808
+    }
+  ],
+  "totalBytes": 4473528,
+  "totalSmallBytes": 1711146
+}

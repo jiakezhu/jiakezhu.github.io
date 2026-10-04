@@ -1,0 +1,331 @@
+{
+  "source": "https://github.com/jiakezhu/jiakezhu.github.io",
+  "commit": "6a98c9919e5b3316fd119eaddaf90409b32d0aec",
+  "versionDate": "2026-08-26",
+  "capturedOn": "2026-10-04",
+  "liveHomepage": "https://jiakezhu.github.io/",
+  "liveHomepageMatched": true,
+  "homepageSha256": "1e5f0a11e22c68308da553ecd2c9a8e5d35931d54b24b7c0a6eaa30319b94fbe",
+  "files": [
+    {
+      "path": "site/images/1984.png",
+      "bytes": 118174,
+      "sha256": "fb1a53c00ae6610c1084edcef210a08f344e28164043550b6b59872069a18c74"
+    },
+    {
+      "path": "site/images/AI&I.png",
+      "bytes": 123305,
+      "sha256": "988825be23b154e03c0841783fe9c9da767c829bdb87c3e9d9f2d9394e41c76b"
+    },
+    {
+      "path": "site/images/agent-flowchart.html",
+      "bytes": 36471,
+      "sha256": "1772fb3a85a35c1b1c00c566a8c8902be9d7f7baf3e3f3c3c1b75598f377e560"
+    },
+    {
+      "path": "site/images/alliance.png",
+      "bytes": 24279,
+      "sha256": "91c02e7623bfffe8bef714e65d90209724c8141d242a4613a1aeda820a1e01fb"
+    },
+    {
+      "path": "site/images/alliancefranciase1.jpeg",
+      "bytes": 121752,
+      "sha256": "1119bfd0ac9bfe99f7f6410644f37e2413d9713c9bd6e1212d10836d5f1c51f3"
+    },
+    {
+      "path": "site/images/alliancefranciase2.jpeg",
+      "bytes": 138492,
+      "sha256": "92146afe9b4582ad2ff30020a0e100522372b8536bc6d534e24a2e0d2fc6697b"
+    },
+    {
+      "path": "site/images/budget-travel-app-icon-v3.png",
+      "bytes": 148005,
+      "sha256": "c70e1bc739f57d0b0054918ef9bc67fd9628fd83321495f67397e5f4b64edd8e"
+    },
+    {
+      "path": "site/images/bytedance.png",
+      "bytes": 9006,
+      "sha256": "f38130f6b3420714f73a56b5468fe9f4b27c191a7ca7c6a3f84a0b00d69017ea"
+    },
+    {
+      "path": "site/images/bytedance1.jpeg",
+      "bytes": 180248,
+      "sha256": "e30aba495e79a43d75d08619b0550d80531b190d71b7ee7ef02fb8dc56dc5ad8"
+    },
+    {
+      "path": "site/images/campusfrance.png",
+      "bytes": 12038,
+      "sha256": "726b235211551574bfd5cf79b543bbcf640d0153617431924251f4d5bb4b0df0"
+    },
+    {
+      "path": "site/images/expo.png",
+      "bytes": 14609,
+      "sha256": "6263fa4d137dfdb6fb7a124616ff110d6b7a5841b025966a9a6c957e0b673ec7"
+    },
+    {
+      "path": "site/images/feishu-kb-app-icon-v3.png",
+      "bytes": 141657,
+      "sha256": "275c82eee565f077ca863ee2c3d08562bd443a1028b269326524550a01e6fc20"
+    },
+    {
+      "path": "site/images/hero.jpeg",
+      "bytes": 1539432,
+      "sha256": "8b3f7274e0b2c4e1e708122234ece5c58efcab419c52e128ef71004702ca662c"
+    },
+    {
+      "path": "site/images/jiake-orbit-app-icon-v2.png",
+      "bytes": 148899,
+      "sha256": "63b0140f28fb1580bc07c5f37e795bd3efe1199acae5f95e1ba73d3388a67ea7"
+    },
+    {
+      "path": "site/images/lingovibe-app-icon-v3.png",
+      "bytes": 168339,
+      "sha256": "54882ecd243ef8d720f092b402bb0fcf8b049cd529476ee9d6f45f25e4da96fb"
+    },
+    {
+      "path": "site/images/marketunion.png",
+      "bytes": 27091,
+      "sha256": "aa336f2ed97e5e9f5c377d80bc8fface1f1d6fc749af18572f0442128ddfa6af"
+    },
+    {
+      "path": "site/images/mingle.png",
+      "bytes": 14016,
+      "sha256": "4011eee74cb0a6b94926bf4097a9d242245c29180ed5157e0c9653efb1a477a2"
+    },
+    {
+      "path": "site/images/paris-youtube-vlog.png",
+      "bytes": 1629102,
+      "sha256": "aec14836e20179792e34237e9c3de32e95b1c012ee5de96cb4b434bfd85fe120"
+    },
+    {
+      "path": "site/images/paris1.png",
+      "bytes": 18093,
+      "sha256": "c41cc50df4d9174b723c242f267213a186446806ed7d8772593f089da33489ff"
+    },
+    {
+      "path": "site/images/redcross.png",
+      "bytes": 17013,
+      "sha256": "b4385e11a9448a4662d5944d24e4bc74a1ddcedf168507c191a3778fc971109c"
+    },
+    {
+      "path": "site/images/sales-buddy-app-icon-v2.png",
+      "bytes": 170510,
+      "sha256": "a42f32d5c7e6f9dd26b7c539690d94faceceecfdaa928e1b501b467c8b7ecacb"
+    },
+    {
+      "path": "site/images/sales-buddy-case/account.jpg",
+      "bytes": 68591,
+      "sha256": "4d532abf2d6a154d10611c82743731fd251bc4a056c8a5259ccc729354dfc0a6"
+    },
+    {
+      "path": "site/images/sales-buddy-case/analytics.jpg",
+      "bytes": 65658,
+      "sha256": "0beb09d0ba7f36a045174b767e43326decf6bb88cca8b67dca89844015d9e50e"
+    },
+    {
+      "path": "site/images/sales-buddy-case/customers.jpg",
+      "bytes": 57745,
+      "sha256": "e0c7df9121e753272ab14b4922adca323fbc97e163ff85516f6f1e79f5d57dfa"
+    },
+    {
+      "path": "site/images/sales-buddy-case/expert.png",
+      "bytes": 135406,
+      "sha256": "20ae94b51f32be3aac05181b5ff15793c769c69dc7558d96a76ad1255bb45c7a"
+    },
+    {
+      "path": "site/images/sales-buddy-case/extraction.png",
+      "bytes": 483493,
+      "sha256": "256c5bb0dc275fc8a808bfbd302fbc40b17f1efa05a9aa8f5300d9412d07e3a2"
+    },
+    {
+      "path": "site/images/sales-buddy-case/prospecting.png",
+      "bytes": 30763,
+      "sha256": "29cea1067837d431e0590f4a885050106e3b29bb5f5d5402abeb202e24b12cfb"
+    },
+    {
+      "path": "site/images/sales-buddy-case/report.png",
+      "bytes": 877095,
+      "sha256": "04cc91ae936f1189bd4ff124bad7b7bf676551ce0136ab650d19f01c406235a7"
+    },
+    {
+      "path": "site/images/sales-buddy-case/research.png",
+      "bytes": 27711,
+      "sha256": "4377f3e45485dba532a9b7393c5d59725c8587f15a9d7abfbae98d15e665b09b"
+    },
+    {
+      "path": "site/images/sales-buddy-case/voice.jpg",
+      "bytes": 645632,
+      "sha256": "e97c1748f35bc1fdc15468643c9a021b330b51d6686a5616289345aa5f175fe3"
+    },
+    {
+      "path": "site/images/swufe.png",
+      "bytes": 60677,
+      "sha256": "1ccf9568aa55622d0357cbe77c1889d3ca8d3d2957f114efa75113230f5568b9"
+    },
+    {
+      "path": "site/images/swufe志愿.png",
+      "bytes": 60677,
+      "sha256": "1ccf9568aa55622d0357cbe77c1889d3ca8d3d2957f114efa75113230f5568b9"
+    },
+    {
+      "path": "site/images/tencent-word.png",
+      "bytes": 86880,
+      "sha256": "2cc13a72f662517133361359cb7fd56be0c9c99a7fb89e03752e3438615643ee"
+    },
+    {
+      "path": "site/images/tencent.png",
+      "bytes": 99674,
+      "sha256": "ceac8b3005bfe401edc8b157f400ce48e3e2dab910cf4b33b40a50e9c2d39a64"
+    },
+    {
+      "path": "site/images/tutoring-prep-app-icon-v3.png",
+      "bytes": 151245,
+      "sha256": "5cf9945b3fb6b3c4aaca79ea844b1c521ea5c30797bd85bf16ad5cc292c7e31c"
+    },
+    {
+      "path": "site/images/zjsu.png",
+      "bytes": 50480,
+      "sha256": "96665a53891797ce96387b75711fb3af78bb228098f7609fbbf09f0205f064fa"
+    },
+    {
+      "path": "site/images/东京八平米.png",
+      "bytes": 44138,
+      "sha256": "64e03e19abfad1c11acfca0374913450706310c358b40cd8f84761fa9539719a"
+    },
+    {
+      "path": "site/images/传奇办公室.png",
+      "bytes": 163017,
+      "sha256": "0703c750d282351f9fc43d095b16d0bbbec11a7ce61dc8f414b1d4f2d7c058f2"
+    },
+    {
+      "path": "site/images/像水一样吧朋友.png",
+      "bytes": 170683,
+      "sha256": "a9523a040330ab19d56a8ad424c16c2b5f11dca873de6677c95b0e08c607dfed"
+    },
+    {
+      "path": "site/images/刺猬的优雅.png",
+      "bytes": 212534,
+      "sha256": "3d286890a67e4faaed6f90ea93937f5c3e24622c2b6beea359a9554a11d780b4"
+    },
+    {
+      "path": "site/images/十字路口 Crossing.png",
+      "bytes": 3474437,
+      "sha256": "6ba166dc498a09f59ca1f375b99ef319874581eddb31f19f0775d8bcd4fe57bc"
+    },
+    {
+      "path": "site/images/合照.png",
+      "bytes": 234073,
+      "sha256": "e150474a6094d55228d19f605b3532c81b5eec6b0b045a1e6390cc51e7c926ed"
+    },
+    {
+      "path": "site/images/因果报应.png",
+      "bytes": 160649,
+      "sha256": "5794c2d91715c258718d0de4a93166f9b76933624f3c5ceb2408ca2d894393bf"
+    },
+    {
+      "path": "site/images/坠落的审判.png",
+      "bytes": 724712,
+      "sha256": "e6fd9e7abf9281b0c705fa0cc5dc3d16202328355be58dfce4bfabf9b3687642"
+    },
+    {
+      "path": "site/images/布达佩斯.jpg",
+      "bytes": 124757,
+      "sha256": "82033d0a376e38d08bd8e688223e903eb3e9c638eba8e7faaf3571bd8eb34bee"
+    },
+    {
+      "path": "site/images/张小珺商业访谈录.jpg",
+      "bytes": 78806,
+      "sha256": "2ca34f1289e8924fc1a488d56cb9d2621be50cf167d50292ec608b94fd5e48fd"
+    },
+    {
+      "path": "site/images/挪威.jpg",
+      "bytes": 59977,
+      "sha256": "27bf367621068b5996ad3b207584fb715c2de70f47c6c21341a72853e3c6bbcf"
+    },
+    {
+      "path": "site/images/挪威2.jpg",
+      "bytes": 167795,
+      "sha256": "7a2abfdae5417f67695ed1d77c866ff20a44e5a9b9918e05aaa0776be3157d48"
+    },
+    {
+      "path": "site/images/捷克.jpg",
+      "bytes": 194381,
+      "sha256": "e5932aac136754141363759bdfd7904e0bc15e139f7cf3743485994fdeabbb56"
+    },
+    {
+      "path": "site/images/梵蒂冈.jpg",
+      "bytes": 111217,
+      "sha256": "00e670048b3b2f77249ebee664837821fcf045c50f17f8e23f8f1ea83c5ced31"
+    },
+    {
+      "path": "site/images/独树不成林.png",
+      "bytes": 2952830,
+      "sha256": "85cc45495323ca575954b221a22920a9b7345c8a83e27f13661777e31b2cd282"
+    },
+    {
+      "path": "site/images/献给阿尔吉侬的花束.png",
+      "bytes": 226491,
+      "sha256": "03d89ba6f93a56e0b74d06a5b2b250a1b15a40cded44ca070fa490bfed5bdb7d"
+    },
+    {
+      "path": "site/images/瑞士.jpg",
+      "bytes": 461233,
+      "sha256": "852bf879b7044c5222713094cc7139482f29af4065a79f92e409de4e3ff424d8"
+    },
+    {
+      "path": "site/images/百分之十.png",
+      "bytes": 137366,
+      "sha256": "cfd7732e5316a07ae78a4ee74319fbf3c8b583c3276b66a54e629e4c0034c636"
+    },
+    {
+      "path": "site/images/筋疲力尽.png",
+      "bytes": 600593,
+      "sha256": "17bb18666fd2794d1ef91ce629857a57bf70fce353d828f98944b48109def81c"
+    },
+    {
+      "path": "site/images/篮球.jpg",
+      "bytes": 226559,
+      "sha256": "480a94528007102f47b633d2b80d50661387e49ee76bcb0c2dc51323633d33c1"
+    },
+    {
+      "path": "site/images/纸牌屋.jpeg",
+      "bytes": 761935,
+      "sha256": "6a18c8c12c56d705d03d6978424375ceb78b422b430d59f1c221f42e2162ca4b"
+    },
+    {
+      "path": "site/images/置身事内.png",
+      "bytes": 150094,
+      "sha256": "0131a06dc2b056532a927c2ed94f26ae34a6b542c4cf954cd6cba5d84b12cef2"
+    },
+    {
+      "path": "site/images/西西弗斯神话.png",
+      "bytes": 112644,
+      "sha256": "b0bf501006072696f630453c15010f71efcb9195d140de039d289bcfd27d55f8"
+    },
+    {
+      "path": "site/images/跑步.jpg",
+      "bytes": 85904,
+      "sha256": "2e09f9c94f2d879d1afebc6f4558c3a0ba4a52ace2ff58661b56e7e61eb34167"
+    },
+    {
+      "path": "site/images/阿姆斯特丹.jpg",
+      "bytes": 104329,
+      "sha256": "7999dda421fede0da71a67be55b950e7192244132fa2606a1cb361a81298f055"
+    },
+    {
+      "path": "site/images/黎明的一切.png",
+      "bytes": 122169,
+      "sha256": "ea266ebc903acf14f696ef3c416b1f0904a48b15cea4d94c053fe2926e79f3b5"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 194247,
+      "sha256": "1e5f0a11e22c68308da553ecd2c9a8e5d35931d54b24b7c0a6eaa30319b94fbe"
+    },
+    {
+      "path": "site/sales-buddy.html",
+      "bytes": 41296,
+      "sha256": "faa9d67fb41164fd59c4632277617f3d616cde24b2ab6a01906732c71998ada2"
+    }
+  ]
+}

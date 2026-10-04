@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex"><title>2026.08 · Website archive · Jiake Zhu</title>
+  <script src="../../assets/theme.js?v=5"></script>
+  <style>
+    :root{color-scheme:light dark;--paper:#f5f2ec;--ink:#272820;--line:#27282024;--accent:#827044}
+    :root[data-theme="dark"]{--paper:#181916;--ink:#eeeae1;--line:#eeeae12b;--accent:#cab382}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,sans-serif}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 28px;border-bottom:1px solid var(--line)}
+    .identity{display:grid;gap:6px}.identity strong{font-size:18px;letter-spacing:-.04em}.identity span{font-size:11px;color:var(--accent);letter-spacing:.04em}
+    .tools{display:flex;align-items:center;gap:18px}a{color:inherit;text-decoration:none;font-size:12px}a:hover{color:var(--accent)}
+    .languages{display:flex;gap:3px}button{background:none;color:inherit;border:1px solid transparent;border-radius:6px;padding:6px 8px;cursor:pointer;font:600 11px system-ui}
+    button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+    .context{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:12px 28px;font-size:12px;line-height:1.6}
+    .context p{margin:0;max-width:900px;opacity:.72}.context a{white-space:nowrap;border-bottom:1px solid var(--line);padding-bottom:3px}
+    iframe{display:block;border:0;border-top:1px solid var(--line);width:100%;height:calc(100svh - 139px);min-height:540px;background:#161510}
+    @media(max-width:700px){header{padding:14px 16px;gap:12px;flex-wrap:wrap}.tools{gap:12px;flex-wrap:wrap}.context{padding:12px 16px;align-items:start;flex-direction:column;gap:6px}iframe{height:calc(100svh - 190px);min-height:560px}.identity strong{font-size:16px}}
+  </style>
+</head>
+<body>
+  <header><div class="identity"><strong>Jiake ZHU / <span data-copy="title">网站旧版</span></strong><span data-copy="version">版本：2026.08.26 · 保存：2026.10.04</span></div><div class="tools"><a data-back href="../../journal/posts/personal-website-redesign/index.html">← 返回日志</a><div class="languages" aria-label="Language"><button type="button" data-lang="zh">CN</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="fr">FR</button><button type="button" data-lang="es">ES</button></div><a data-home href="../../index.html" data-copy="home">现在的网站 ↗</a></div></header>
+  <div class="context"><p data-copy="note">这是改版前公开网站的原貌，文字、布局与交互按当时版本保留。下方可以继续浏览；部分外部服务取决于网络连接。</p><a href="site/index.html" target="_blank" rel="noopener" data-copy="open">独立打开旧版 ↗</a></div>
+  <iframe src="site/index.html" title="Archived personal website" id="snapshot"></iframe>
+  <script>
+    (()=>{
+      const copy={
+        zh:{title:'网站旧版',version:'版本：2026.08.26 · 保存：2026.10.04',back:'← 返回日志',home:'现在的网站 ↗',note:'这是改版前公开网站的原貌，文字、布局与交互按当时版本保留。下方可以继续浏览；部分外部服务取决于网络连接。',open:'独立打开旧版 ↗'},
+        en:{title:'Website archive',version:'Version: 2026.08.26 · Saved: 2026.10.04',back:'← Back to the journal',home:'Today’s website ↗',note:'The public website before the redesign, with its original writing, layout and interactions preserved. Browse below; some external services require an internet connection.',open:'Open original in a new tab ↗'},
+        fr:{title:'Archives du site',version:'Version : 26.08.2026 · Sauvegarde : 04.10.2026',back:'← Retour au journal',home:'Le site actuel ↗',note:'Le site public avant la refonte, avec ses textes, sa mise en page et ses interactions d’origine. Parcourez-le ci-dessous ; certains services externes nécessitent une connexion.',open:'Ouvrir l’original dans un onglet ↗'},
+        es:{title:'Archivo del sitio',version:'Versión: 26.08.2026 · Guardada: 04.10.2026',back:'← Volver al diario',home:'El sitio actual ↗',note:'El sitio público anterior al rediseño, con sus textos, diseño e interacciones originales. Puedes explorarlo aquí; algunos servicios externos necesitan conexión.',open:'Abrir el original en otra pestaña ↗'}
+      };
+      const frame=document.getElementById('snapshot');let language=new URLSearchParams(location.search).get('lang');
+      if(!copy[language]){try{language=localStorage.getItem('jiake-language');}catch{}}
+      if(!copy[language])language='en';
+      const syncFrame=()=>{try{if(typeof frame.contentWindow.setLang==='function')frame.contentWindow.setLang(language);}catch{}};
+      function setLanguage(next){
+        language=copy[next]?next:'en';document.documentElement.lang=language;
+        document.querySelectorAll('[data-copy]').forEach(el=>el.textContent=copy[language][el.dataset.copy]);
+        document.querySelector('[data-back]').textContent=copy[language].back;
+        document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===language)));
+        for(const selector of ['[data-back]','[data-home]']){const a=document.querySelector(selector),url=new URL(a.href);url.searchParams.set('lang',language);a.href=url.href;}
+        document.title=copy[language].title+' · 2026.08 · Jiake Zhu';frame.title=copy[language].title;
+        const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);
+        try{localStorage.setItem('jiake-language',language);}catch{}syncFrame();
+      }
+      document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+      frame.addEventListener('load',syncFrame);setLanguage(language);
+    })();
+  </script>
+</body>
+</html>

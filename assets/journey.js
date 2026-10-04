@@ -1,176 +1,118 @@
 (() => {
-  const maps = new Map();
-  let dataPromise;
-  const visited = new Set(['CHN','FRA','CHE','DEU','BEL','NLD','ESP','ITA','VAT','CZE','AUT','HUN','SVK','LUX','NOR','FIN']);
-  const visitedProvinces = new Set(['Beijing','Shanghai','Jiangsu','Zhejiang','Anhui','Chongqing','Sichuan','Hunan','Ningxia','Guangdong']);
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const colors = () => {
-    const style = getComputedStyle(document.documentElement);
-    return Object.fromEntries(['bg','surface','text','muted','gold','sage','coral','border-s'].map(name => [name,style.getPropertyValue('--'+name).trim()]));
+  const section=document.getElementById('journey');
+  if(!section) return;
+  const baseURL=new URL('.',document.currentScript.src);
+  const container=document.getElementById('journey-atlas');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const visited=new Set(['CHN','FRA','CHE','DEU','BEL','NLD','ESP','ITA','VAT','CZE','AUT','HUN','SVK','LUX','NOR','FIN']);
+  const copy={
+    zh:{world:'世界 / 继续探索',china:'中国 / 从海边出发',europe:'欧洲 / 巴黎之外',place:'旅途中的一站',note:'在这里留下过足迹。地图记录我去过的地方；求学路线单独连接，不推断旅行先后。',story:'读读路上的故事 ↗',loading:'正在展开地图…',error:'地图暂时未能加载。下方仍可选择地点，阅读足迹。',map:'可交互的个人旅行地图'},
+    en:{world:'WORLD / STILL EXPLORING',china:'CHINA / FROM THE COAST',europe:'EUROPE / BEYOND PARIS',place:'A stop along the way',note:'A place I have visited. The atlas records places; the connected line follows my studies, without inventing a travel itinerary.',story:'Read a story from the road ↗',loading:'Opening the atlas…',error:'The map could not load. You can still select the featured stops below.',map:'Interactive personal travel atlas'},
+    fr:{world:'MONDE / CONTINUER À EXPLORER',china:'CHINE / DEPUIS LA CÔTE',europe:'EUROPE / AU-DELÀ DE PARIS',place:'Une étape du voyage',note:'Un lieu où je suis passé. La carte rassemble mes étapes ; la ligne relie mes études, sans inventer un ordre de voyage.',story:'Lire un récit du voyage ↗',loading:'La carte se déploie…',error:'La carte n’a pas pu se charger. Les étapes ci-dessous restent accessibles.',map:'Carte interactive de mes voyages'},
+    es:{world:'MUNDO / SEGUIR EXPLORANDO',china:'CHINA / DESDE LA COSTA',europe:'EUROPA / MÁS ALLÁ DE PARÍS',place:'Una parada del camino',note:'Un lugar que he visitado. El mapa reúne mis paradas; la línea conecta mis estudios sin inventar un itinerario de viaje.',story:'Leer una historia del camino ↗',loading:'Abriendo el atlas…',error:'No se pudo cargar el mapa. Puedes seguir eligiendo las paradas de abajo.',map:'Mapa interactivo de mis viajes'}
   };
-  const label = text => document.documentElement.lang === 'zh' ? (staticZhText[text] || text) : text;
-  const countryStyle = feature => {
-    const palette = colors(), highlighted = visited.has(feature.properties.iso) || feature.properties.iso === 'TWN';
-    return {color:highlighted ? palette.sage : palette.muted,weight:highlighted ? 1.1 : .6,opacity:highlighted ? .6 : .22,fillColor:highlighted ? palette.sage : palette.muted,fillOpacity:highlighted ? .19 : .045};
+  const stories={
+    'Xianxiang · Ningbo':{icon:'🌊',period:'2002–2020',href:'story/comic/index.html#page-01',names:['咸祥 · 宁波','Xianxiang · Ningbo','Xianxiang · Ningbo','Xianxiang · Ningbo'],captions:['故事的起点','Where it began','Le point de départ','Donde empezó todo'],notes:['小时候住在父亲的货车上，跟他一起运货。那时，走出去的愿望比地图上的世界更早出现。','As a child, I often stayed in my father’s truck and travelled with him on deliveries. The wish to go beyond home came before I knew how wide the world was.','Enfant, je vivais souvent dans le camion de mon père et l’accompagnais dans ses livraisons. L’envie de partir est née avant que je mesure l’étendue du monde.','De niño, a menudo me quedaba en el camión de mi padre y lo acompañaba en sus entregas. El deseo de salir llegó antes de saber lo grande que era el mundo.']},
+    'ZJSU · Hangzhou':{image:'images/zjsu.png',academic:true,period:'2020–2024',href:'story/comic/index.html#page-09',names:['杭州 · 浙江工商大学','Hangzhou · ZJSU','Hangzhou · ZJSU','Hangzhou · ZJSU'],captions:['语言开始打开世界','Languages opened the door','Les langues ouvrent la porte','Los idiomas abrieron la puerta'],notes:['在这里选择法语，继续教英语，也经历了改变人生的手术。学习、教学和慢慢找回自信，发生在同一段日子里。','Here I chose French, continued teaching English and underwent the surgery that changed my life. Study, teaching and gradually rebuilding confidence belonged to the same chapter.','J’y ai choisi le français, continué à enseigner l’anglais et vécu l’opération qui a changé ma vie. Études, enseignement et confiance retrouvée appartiennent au même chapitre.','Aquí elegí francés, seguí enseñando inglés y pasé por la cirugía que cambió mi vida. Los estudios, la enseñanza y recuperar la confianza fueron parte de la misma etapa.']},
+    'SWUFE · Chengdu':{image:'images/swufe.png',academic:true,period:'2024–2027',href:'story/comic/index.html#page-13',names:['成都 · 西南财经大学','Chengdu · SWUFE','Chengdu · SWUFE','Chengdu · SWUFE'],captions:['向西，也向新的可能','Westward, towards possibility','Vers l’ouest et de nouvelles voies','Al oeste, hacia nuevas posibilidades'],notes:['读国际商务，在法语联盟实习，又为字节的 AI 团队寻找海外人才。在成都，语言、商业和 AI 开始真正相遇。','International business, an internship at Alliance Française and overseas talent work for ByteDance’s AI team. In Chengdu, languages, business and AI began to meet.','Commerce international, stage à l’Alliance française et recherche de talents pour l’équipe IA de ByteDance : à Chengdu, langues, affaires et IA se rencontrent.','Comercio internacional, prácticas en la Alianza Francesa y búsqueda de talento para el equipo de IA de ByteDance. En Chengdu se encontraron los idiomas, los negocios y la IA.']},
+    'Paris 1 Panthéon':{image:'images/paris1.png',academic:true,period:'2025–2026',href:'journal/posts/lingovibe-paris-language/index.html',names:['巴黎 · 巴黎第一大学','Paris · Panthéon-Sorbonne','Paris · Panthéon-Sorbonne','París · Panthéon-Sorbonne'],captions:['小时候想看的世界','The world I wanted to see','Le monde que je rêvais de voir','El mundo que soñaba ver'],notes:['选择延毕，换来一年的巴黎交换。在这里学国际法，也学了一年西班牙语；然后从巴黎出发，走向法国和欧洲。','I chose to extend my studies for a year in Paris. I studied international law, learned Spanish for a year and used Paris as the starting point for exploring France and Europe.','J’ai prolongé mes études pour une année d’échange à Paris. Droit international, un an d’espagnol, puis des voyages en France et en Europe au départ de Paris.','Decidí alargar mis estudios para pasar un año de intercambio en París. Estudié derecho internacional, aprendí español durante un año y exploré Francia y Europa desde allí.']},
+    'Amsterdam':{image:'images/阿姆斯特丹.jpg',names:['阿姆斯特丹','Amsterdam','Amsterdam','Ámsterdam'],captions:['换一座城市，换一种目光','A different city, a different view','Une autre ville, un autre regard','Otra ciudad, otra mirada'],notes:['旅途中留下的一张照片。走出熟悉的语境，也是在练习用新的角度看普通生活。','A photograph from my travels. Stepping outside a familiar context is also a way of learning to see ordinary life differently.','Une photo de mes voyages. Sortir de son cadre habituel, c’est aussi apprendre à regarder autrement la vie ordinaire.','Una foto de mis viajes. Salir del contexto conocido también enseña a mirar de otra manera la vida cotidiana.']},
+    'Rome':{image:'images/hero.jpeg',names:['罗马','Rome','Rome','Roma'],captions:['站在更大的时间里','Inside a longer history','Dans un temps plus vaste','Dentro de una historia más larga'],notes:['首页这张照片拍在罗马斗兽场。它提醒我：曾经觉得遥远的地方，后来也能成为自己站过的地方。','The homepage photograph was taken at the Colosseum. It reminds me that places which once felt distant can become places where I have stood.','La photo de l’accueil a été prise au Colisée. Elle me rappelle qu’un lieu longtemps lointain peut devenir un endroit où l’on s’est tenu.','La foto de la portada se tomó en el Coliseo. Me recuerda que los lugares que parecían lejanos pueden acabar siendo lugares donde hemos estado.']},
+    'Rigi':{image:'images/瑞士.jpg',names:['瑞士 · 瑞吉山','Switzerland · Rigi','Suisse · Rigi','Suiza · Rigi'],captions:['把目光放远一点','Let the view open up','Laisser le regard s’élargir','Dejar que se abra la mirada'],notes:['瑞士的山间，是欧洲旅行的一部分。语言让路上的交流变得容易，也让我更愿意走进陌生的地方。','The Swiss mountains were part of my European travels. Languages made encounters easier and encouraged me to step into unfamiliar places.','Les montagnes suisses font partie de mes voyages européens. Les langues facilitent les rencontres et donnent envie d’entrer dans des lieux inconnus.','Las montañas suizas fueron parte de mis viajes europeos. Los idiomas facilitaron los encuentros y me animaron a entrar en lugares desconocidos.']},
+    'Tromsø':{image:'images/挪威.jpg',names:['挪威 · 特罗姆瑟','Norway · Tromsø','Norvège · Tromsø','Noruega · Tromsø'],captions:['地图上的更北方','Further north on the map','Plus au nord sur la carte','Más al norte en el mapa'],notes:['从宁波海边，到欧洲更北的地方。每走到一站，我都更确信：世界仍然有很多值得亲眼看看的东西。','From Ningbo’s coast to the north of Europe. Every stop makes me more certain that there is still so much worth seeing for myself.','De la côte de Ningbo au nord de l’Europe. Chaque étape me rappelle tout ce qui mérite encore d’être vu de mes propres yeux.','De la costa de Ningbo al norte de Europa. Cada parada me recuerda cuánto queda todavía por ver con mis propios ojos.']}
   };
-  const provinceStyle = feature => {
-    const palette = colors(), name = feature.properties.name;
-    const hue = [...name].reduce((sum,char) => sum + char.charCodeAt(0),0) % 3;
-    return {color:palette.sage,weight:.7,opacity:.33,fillColor:palette[['sage','gold','coral'][hue]],fillOpacity:visitedProvinces.has(name) ? .2 : .075};
-  };
-  const drawings = {
-    mountains:'<path d="M4 66L29 20L55 66M39 66L63 31L86 66M20 36L29 40L36 34M55 45L63 48L69 43M7 74H82"/>',
-    boat:'<path d="M14 58H75L64 72H27ZM44 12V58M38 20L18 49H38ZM50 23L69 50H50M9 79Q19 73 29 79T49 79T69 79T89 79"/>',
-    pagoda:'<path d="M18 72H72M26 72V54H64V72M24 53H66L60 46H30ZM30 46V32H60V46M25 32H65L54 24H36ZM38 24V15H52V24M45 6V15M38 61V72M52 61V72"/>',
-    abbey:'<path d="M8 72L18 62H27V47H34V37H41V22L45 8L49 22V37H56V47H63V62H73L84 72ZM20 62V55H27M63 55H71V65M34 47H56M41 37H49M40 57V68H50V57ZM45 3V11M41 7H49M6 80Q17 74 28 80T50 80T72 80T88 80"/>',
-    windmill:'<path d="M33 40L27 74H61L55 40ZM43 23V40M37 56H49V74M43 30L17 14L12 23L39 35M43 30L62 6L70 13L48 35M43 30L67 48L61 56L40 35M43 30L25 55L17 49L39 25M12 79H77"/>'
-  };
-  const drawing = name => `<svg viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${drawings[name]}</svg>`;
-  const loadData = () => dataPromise ||= Promise.all([
-    fetch('assets/maps/countries.geojson').then(response => {if(!response.ok) throw new Error('Map geometry unavailable');return response.json();}),
-    fetch('assets/maps/places.json?v=2').then(response => {if(!response.ok) throw new Error('Places unavailable');return response.json();}),
-    fetch('assets/maps/china-provinces.geojson?v=1').then(response => {if(!response.ok) throw new Error('Province geometry unavailable');return response.json();}).catch(() => null)
-  ]).catch(error => {dataPromise = null;throw error;});
-  function reset(view) {
-    const entry = maps.get(view);
-    if (!entry) return;
-    if (entry.selectionCallback) entry.map.off('moveend',entry.selectionCallback);
-    entry.selectionCallback=null;
-    entry.pins.forEach(({pin}) => { if (!pin.getTooltip()?.options.permanent) pin.closeTooltip(); });
-    const options = {animate:!reducedMotion.matches,padding:[32,35],maxZoom:5};
-    entry.map.fitBounds(view === 'china' ? [[21.5,100],[41.5,124]] : [[40,-5],[58,24]],options);
-    document.querySelectorAll('.jp-tag').forEach(button => button.setAttribute('aria-pressed','false'));
-    document.querySelectorAll('[data-map-focus]').forEach(button => button.setAttribute('aria-pressed','false'));
-    entry.pins.forEach(({pin}) => pin.getElement()?.classList.remove('is-selected'));
+  let map,geometry,provinces,pinLayer,routeLayer,gridLayer,data,ready,view='world',selected='Xianxiang · Ningbo';
+  const pins=new Map();
+  const language=()=>['zh','en','fr','es'].includes(document.documentElement.lang)?document.documentElement.lang:'en';
+  const localIndex=()=>['zh','en','fr','es'].indexOf(language());
+  const palette=()=>{const s=getComputedStyle(document.documentElement);return Object.fromEntries(['bg','surface','text','muted','gold','sage','coral'].map(k=>[k,s.getPropertyValue('--'+k).trim()]));};
+  function placeName(point){
+    if(stories[point.label]) return stories[point.label].names[localIndex()];
+    if(data?.guide[point.label]) return data.guide[point.label].names[localIndex()];
+    if(language()==='zh'&&typeof staticZhText!=='undefined') return staticZhText[point.label]||point.label;
+    return point.label;
   }
-  function marker(point,view,milestone) {
-    const entry = maps.get(view), name = label(point.label);
-    const landmark = point.landmark;
-    const icon = L.divIcon({className:'atlas-marker'+(milestone?' atlas-marker--life':'')+(landmark?' atlas-marker--landmark':'')+(point.region?' atlas-marker--region':''),html:landmark?drawing(landmark):'<i></i>',iconSize:landmark?[44,48]:[24,24],iconAnchor:landmark?[22,43]:[12,12]});
-    const pin = L.marker([point.lat,point.lng],{icon,title:name,keyboard:true});
-    const isHangzhou = point.label.startsWith('ZJSU');
-    const shortName = milestone ? label(point.label.includes('Ningbo')?'Ningbo':isHangzhou?'Hangzhou':point.label.includes('Chengdu')?'Chengdu':'Paris') : name;
-    pin.bindTooltip(shortName,{permanent:(milestone || landmark) && innerWidth>700,direction:isHangzhou?'left':'right',offset:landmark?[20,-12]:milestone?[12,isHangzhou?-15:12]:[10,0],className:'atlas-tooltip'});
-    pin.on('add',() => pin.getElement()?.setAttribute('aria-label',name));
-    pin.on('click',() => pin.openTooltip());
-    pin.addTo(entry.map);
-    entry.pins.set(point.label,{point,pin});
+  function allPoints(){return data?Object.entries(data.places).flatMap(([region,p])=>[...p.milestones.map(point=>({...point,region,milestone:true})),...p.cities.map(point=>({...point,region}))]):Object.keys(stories).map(label=>({label}));}
+  function postcard(){
+    const i=localIndex(),t=copy[language()],story=stories[selected],guide=data?.guide[selected],point=allPoints().find(p=>p.label===selected)||{label:selected};
+    const art=section.querySelector('[data-atlas-art]');art.replaceChildren();art.classList.toggle('is-academic',Boolean(story?.academic));
+    if(story?.image){const img=new Image();img.src=story.image;img.alt=story.names[i];img.loading='lazy';img.decoding='async';art.append(img);}
+    else {const icon=document.createElement('span');icon.textContent=story?.icon||'🧭';icon.setAttribute('aria-hidden','true');art.append(icon);}
+    section.querySelector('[data-atlas-kicker]').textContent=story?.period||t.place;
+    section.querySelector('[data-atlas-place]').textContent=placeName(point);
+    const caption=section.querySelector('[data-atlas-caption]');caption.textContent=story?.captions[i]||'';caption.hidden=!story;
+    section.querySelector('[data-atlas-intro]').textContent=guide?.intro[i]||'';
+    const source=section.querySelector('[data-atlas-source]');source.hidden=!guide;
+    if(guide){source.href=guide.source.url;source.textContent=['了解这个地方 ↗','About this place ↗','Découvrir ce lieu ↗','Conocer este lugar ↗'][i];}
+    const memory=section.querySelector('[data-atlas-memory]');memory.hidden=!story;
+    section.querySelector('[data-atlas-memory-label]').textContent=['我的这一站','My stop here','Mon passage ici','Mi paso por aquí'][i];
+    section.querySelector('[data-atlas-note]').textContent=story?.notes[i]||'';
+    const link=section.querySelector('[data-atlas-story]');link.hidden=!story;
+    if(story){const url=new URL(story.href,location.href);url.searchParams.set('lang',language());link.href=url.href;link.textContent=t.story;}
+    section.querySelector('.atlas-postcard').classList.toggle('is-place-only',!story);
+    section.querySelector('.atlas-postcard').setAttribute('aria-label',placeName(point));
+    section.querySelectorAll('[data-atlas-stop]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.atlasStop===selected)));
   }
-  async function init(view) {
-    if (!window.L) return;
-    const existing = maps.get(view);
-    if (existing) {existing.map.invalidateSize();await existing.ready?.catch(() => {});return;}
-    const container = document.getElementById('journey-map-'+view);
-    if (!container) return;
-    const map = L.map(container,{zoomControl:false,scrollWheelZoom:false,minZoom:2,maxZoom:8,zoomSnap:.5}).setView(view==='china'?[33,112]:[50,9],4);
-    const entry = {map,pins:new Map(),grid:[],base:null,decorations:[]};
-    maps.set(view,entry);
-    map.attributionControl.setPrefix(false);
-    map.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>');
-    L.control.zoom({position:'bottomright'}).addTo(map);
-    reset(view);
-    try {
-      entry.ready = loadData();
-      const [geography,places,provinces] = await entry.ready;
-      // A language switch can replace a map while its shared data is loading.
-      if (maps.get(view) !== entry) return;
-      entry.baseStyle = feature => view === 'china' && provinces && feature.properties.iso === 'CHN' ? {opacity:0,fillOpacity:0} : countryStyle(feature);
-      entry.base = L.geoJSON(geography,{style:entry.baseStyle,interactive:false}).addTo(map);
-      if (view === 'china' && provinces) entry.provinces = L.geoJSON(provinces,{style:provinceStyle,interactive:false}).addTo(map);
-      const palette = colors();
-      for (let longitude=-180;longitude<=180;longitude+=10) entry.grid.push(L.polyline([[-80,longitude],[80,longitude]],{interactive:false,color:palette.muted,weight:.5,opacity:.1}).addTo(map));
-      for (let latitude=-70;latitude<=70;latitude+=10) entry.grid.push(L.polyline([[latitude,-180],[latitude,180]],{interactive:false,color:palette.muted,weight:.5,opacity:.1}).addTo(map));
-      const {milestones,cities} = places[view];
-      if (view === 'china') {
-        entry.route = L.polyline(milestones.map(point => [point.lat,point.lng]),{color:palette.gold,weight:2,opacity:.8,dashArray:'5 7',className:'atlas-route',interactive:false}).addTo(map);
-        L.marker([37,109],{interactive:false,keyboard:false,icon:L.divIcon({className:'atlas-label',html:document.documentElement.lang==='zh'?'中国 / CHINA':'CHINA',iconSize:[110,24]})}).addTo(map);
-      }
-      const sketches = view === 'china' ? [['mountains',33,99.8],['boat',28,126],['pagoda',27.5,107.5]] : [['mountains',45.5,9.6],['boat',44,-4],['windmill',54,5]];
-      sketches.forEach(([name,lat,lng]) => entry.decorations.push(L.marker([lat,lng],{interactive:false,keyboard:false,icon:L.divIcon({className:'atlas-sketch atlas-sketch--'+name,html:drawing(name),iconSize:[70,70],iconAnchor:[35,35]})}).addTo(map)));
-      cities.forEach(point => marker(point,view,false));
-      milestones.forEach(point => marker(point,view,true));
-      if (view === 'china') {
-        entry.cluster = L.marker([22.95,113.75],{title:label('Guangdong stops'),icon:L.divIcon({className:'atlas-cluster',html:'<span>5</span><small>'+label('Lingnan')+'</small>',iconSize:[64,54],iconAnchor:[32,27]})});
-        entry.cluster.on('add',() => entry.cluster.getElement()?.setAttribute('aria-label',label('Explore Guangdong')));
-        entry.cluster.on('click',() => focus('lingnan'));
-      }
-      const updateZoom = () => {
-        const close = map.getZoom() >= 6;
-        entry.decorations.forEach(pin => {if(close && map.hasLayer(pin)) map.removeLayer(pin);else if(!close && !map.hasLayer(pin)) pin.addTo(map);});
-        if (!entry.cluster) return;
-        entry.pins.forEach(({point,pin}) => {if(point.group !== 'lingnan') return;if(close && !map.hasLayer(pin)) pin.addTo(map);else if(!close && map.hasLayer(pin)) map.removeLayer(pin);});
-        if (close && map.hasLayer(entry.cluster)) map.removeLayer(entry.cluster);
-        else if (!close && !map.hasLayer(entry.cluster)) entry.cluster.addTo(map);
-      };
-      map.on('zoomend',updateZoom);updateZoom();
-    } catch {
-      if (maps.get(view) !== entry) return;
-      const notice = document.createElement('p');
-      notice.className = 'atlas-load-error';
-      notice.textContent = document.documentElement.lang==='zh'?'地图暂时未能加载，足迹列表仍可阅读。':'The map could not load. The list of places is still available.';
-      container.append(notice);
+  function updateLabels(){
+    const t=copy[language()];section.querySelector('[data-atlas-title]').textContent=t[view];container.setAttribute('aria-label',t.map);
+    pins.forEach(({point,pin})=>{pin.setTooltipContent(placeName(point));const element=pin.getElement();element?.setAttribute('aria-label',placeName(point));element?.setAttribute('title',placeName(point));});
+    section.querySelectorAll('[data-atlas-index] [data-atlas-stop]').forEach(b=>{const point=allPoints().find(p=>p.label===b.dataset.atlasStop);if(point)b.textContent=placeName(point);});
+    postcard();
+  }
+  function loadData(){
+    if(window.JIAKE_ATLAS_DATA)return Promise.resolve(window.JIAKE_ATLAS_DATA);
+    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=2',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
+  }
+  function styleCountry(feature){const p=palette(),seen=visited.has(feature.properties.iso)||feature.properties.iso==='TWN';return {color:seen?p.sage:p.muted,weight:seen?1.1:.55,opacity:seen?.85:.3,fillColor:seen?p.sage:p.muted,fillOpacity:seen?.3:.07};}
+  function styleProvince(){return {color:palette().sage,weight:.7,opacity:.35,fillOpacity:0};}
+  function reset(){if(!map)return;pins.forEach(({pin})=>pin.closeTooltip());const bounds={world:[[-27,-30],[73,155]],china:[[20,99],[42,126]],europe:[[38,-9],[71,29]]};map.invalidateSize();map.fitBounds(bounds[view],{padding:[22,22],animate:!reduced.matches,maxZoom:view==='world'?2.5:5});}
+  function redrawPins(){
+    if(!map||!data)return;pinLayer.clearLayers();pins.clear();const p=palette();
+    allPoints().filter(point=>view==='world'||point.region===view).forEach(point=>{
+      const pin=L.marker([point.lat,point.lng],{keyboard:true,title:placeName(point),icon:L.divIcon({className:'atlas-marker'+(point.milestone?' atlas-marker--life':''),html:'<i></i>',iconSize:[24,24],iconAnchor:[12,12]})}).bindTooltip(placeName(point),{direction:'top',className:'atlas-tooltip'}).addTo(pinLayer);
+      pin.on('click',()=>select(point.label,false));pin.on('add',()=>pin.getElement()?.setAttribute('aria-label',placeName(point)));pins.set(point.label,{point,pin});
+    });
+    routeLayer.clearLayers();if(view!=='europe'){
+      const life=[...data.places.china.milestones,...(view==='world'?data.places.europe.milestones:[])];
+      const route=[];for(let i=0;i<life.length-1;i++){const a=life[i],b=life[i+1];for(let step=0;step<=40;step++){const f=step/40;route.push([a.lat+(b.lat-a.lat)*f+Math.sin(Math.PI*f)*(i===2?14:1),a.lng+(b.lng-a.lng)*f]);}}
+      L.polyline(route,{color:p.gold,weight:2,opacity:.9,dashArray:'4 7',interactive:false,className:'atlas-route'}).addTo(routeLayer);
     }
+    pins.get(selected)?.pin.getElement()?.classList.add('is-selected');
   }
-  window.switchJourneyView = view => {
-    if (!['china','europe'].includes(view)) return;
-    document.querySelectorAll('.map-tab-btn').forEach(button => {button.classList.toggle('active',button.dataset.view===view);button.setAttribute('aria-pressed',String(button.dataset.view===view));});
-    document.querySelectorAll('.journey-panel').forEach(panel => panel.classList.toggle('active',panel.id==='jp-'+view));
-    init(view);
-  };
-  window._refreshJourneyMaps = () => {
-    const hadMaps = maps.size > 0;
-    maps.forEach(entry => entry.map.remove());maps.clear();
-    if (hadMaps) init(document.querySelector('.map-tab-btn.active')?.dataset.view || 'china');
-  };
-  document.querySelectorAll('[data-map-reset]').forEach(button => button.addEventListener('click',() => reset(button.dataset.mapReset)));
-  async function focus(place) {
-    const view = place === 'lingnan' ? 'china' : 'europe';
-    await init(view);
-    const entry = maps.get(view);
-    if (!entry) return;
-    if (entry.selectionCallback) entry.map.off('moveend',entry.selectionCallback);
-    entry.selectionCallback=null;
-    document.querySelectorAll('.jp-tag').forEach(button => button.setAttribute('aria-pressed','false'));
-    entry.pins.forEach(({pin}) => pin.getElement()?.classList.remove('is-selected'));
-    if (place === 'lingnan') {
-      entry.map.fitBounds([[22.5,113.05],[23.22,114.42]],{padding:[55,55],maxZoom:8,animate:!reducedMotion.matches});
-    } else if (place === 'north') entry.map.fitBounds([[59,16],[70.3,26]],{padding:[40,40],maxZoom:5,animate:!reducedMotion.matches});
-    else {
-      const selected = entry.pins.get('Mont-Saint-Michel');
-      if (selected) {entry.map.setView([selected.point.lat,selected.point.lng],6,{animate:!reducedMotion.matches});selected.pin.openTooltip();}
-    }
-    document.querySelectorAll('[data-map-focus]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.mapFocus === place)));
+  async function init(){
+    if(map)return map;if(ready)return ready;
+    ready=(async()=>{try{
+      if(!window.L)throw new Error('Map library unavailable');data=await loadData();
+      map=L.map(container,{zoomControl:false,scrollWheelZoom:false,minZoom:1.5,maxZoom:9,zoomSnap:.25,worldCopyJump:true}).setView([33,55],2);
+      map.attributionControl.setPrefix(false);map.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>');L.control.zoom({position:'bottomright'}).addTo(map);
+      geometry=L.geoJSON(data.countries,{style:styleCountry,interactive:false}).addTo(map);
+      provinces=L.geoJSON(data.provinces,{style:styleProvince,interactive:false});if(view==='china')provinces.addTo(map);
+      pinLayer=L.layerGroup().addTo(map);routeLayer=L.layerGroup().addTo(map);gridLayer=L.layerGroup().addTo(map);
+      const p=palette();for(let lon=-180;lon<=180;lon+=20)L.polyline([[-80,lon],[80,lon]],{color:p.muted,weight:.5,opacity:.1,interactive:false}).addTo(gridLayer);for(let lat=-60;lat<=80;lat+=20)L.polyline([[lat,-180],[lat,180]],{color:p.muted,weight:.5,opacity:.1,interactive:false}).addTo(gridLayer);
+      const index=section.querySelector('[data-atlas-index]');allPoints().forEach(point=>{const b=document.createElement('button');b.type='button';b.dataset.atlasStop=point.label;b.textContent=placeName(point);b.setAttribute('aria-pressed',String(point.label===selected));index.append(b);});
+      map.on('move',()=>{const c=map.getCenter();section.querySelector('.atlas-position').textContent=`${Math.abs(c.lat).toFixed(3)}° ${c.lat>=0?'N':'S'} · ${Math.abs(c.lng).toFixed(3)}° ${c.lng>=0?'E':'W'}`;});
+      section.querySelector('[data-atlas-loading]').hidden=true;redrawPins();reset();updateLabels();return map;
+    }catch(error){section.querySelector('[data-atlas-loading]').textContent=copy[language()].error;ready=null;return null;}})();return ready;
   }
-  document.querySelectorAll('[data-map-focus]').forEach(button => button.addEventListener('click',() => focus(button.dataset.mapFocus)));
-  document.querySelectorAll('.jp-tag').forEach(button => {
-    button.setAttribute('aria-pressed','false');
-    button.addEventListener('click',async () => {
-      await init('china');
-      const entry = maps.get('china');
-      const aliases = {'West Sichuan':'W. Sichuan','Hangzhou':'ZJSU · Hangzhou','Chengdu':'SWUFE · Chengdu'};
-      const selected = entry?.pins.get(aliases[button.dataset.place] || button.dataset.place);
-      if (!selected) return;
-      document.querySelectorAll('[data-map-focus]').forEach(button => button.setAttribute('aria-pressed','false'));
-      document.querySelectorAll('.jp-tag').forEach(chip => chip.setAttribute('aria-pressed',String(chip===button)));
-      const highlight = () => {
-        entry.map.off('moveend',highlight);entry.selectionCallback=null;
-        selected.pin.openTooltip();
-        entry.pins.forEach(({pin}) => pin.getElement()?.classList.toggle('is-selected',pin===selected.pin));
-      };
-      if (entry.selectionCallback) entry.map.off('moveend',entry.selectionCallback);
-      entry.selectionCallback=highlight;entry.map.once('moveend',highlight);
-      entry.map.setView([selected.point.lat,selected.point.lng],selected.point.region?5.5:selected.point.group?8:6,{animate:!reducedMotion.matches});
-      // setView may be a no-op when a selected place is already centred.
-      if (entry.map.hasLayer(selected.pin)) highlight();
+  async function select(name,zoom=true){
+    selected=name;postcard();await init();const item=pins.get(name)||allPoints().find(p=>p.label===name);
+    if(map&&item){const point=item.point||item;if(view!=='world'&&point.region!==view)await switchView(point.region);if(zoom)map.flyTo([point.lat,point.lng],point.milestone?5:6,{animate:!reduced.matches,duration:.8});pins.forEach(({pin},label)=>{pin.getElement()?.classList.toggle('is-selected',label===name);if(label!==name)pin.closeTooltip();});pins.get(name)?.pin.openTooltip();}
+    postcard();
+  }
+  async function switchView(next){if(!['world','china','europe'].includes(next))return;view=next;section.querySelectorAll('.map-tab-btn').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-pressed',String(b.dataset.view===view));});updateLabels();await init();if(provinces&&map){if(view==='china')provinces.addTo(map);else map.removeLayer(provinces);}redrawPins();reset();}
+  section.querySelectorAll('.map-tab-btn').forEach(b=>b.addEventListener('click',()=>switchView(b.dataset.view)));
+  section.querySelector('[data-atlas-reset]').addEventListener('click',reset);
+  section.addEventListener('click',event=>{
+    const button=event.target.closest('[data-atlas-stop]');if(!button)return;
+    select(button.dataset.atlasStop).then(()=>{
+      if(button.closest('[data-atlas-index]'))section.querySelector(innerWidth<=700?'.atlas-postcard':'.atlas-explorer').scrollIntoView({block:innerWidth<=700?'center':'start',behavior:reduced.matches?'instant':'smooth'});
     });
   });
-  new MutationObserver(() => {
-    const palette = colors();
-    maps.forEach(entry => {entry.base?.setStyle(entry.baseStyle);entry.provinces?.setStyle(provinceStyle);entry.grid.forEach(line => line.setStyle({color:palette.muted}));entry.route?.setStyle({color:palette.gold});});
-  }).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-  const section = document.getElementById('journey');
-  if (section) {
-    const observer = new IntersectionObserver(entries => {if(entries[0].isIntersecting){init(document.querySelector('.map-tab-btn.active')?.dataset.view || 'china');observer.disconnect();}},{threshold:.05});
-    observer.observe(section);
-  }
+  section.querySelector('.atlas-index').addEventListener('toggle',()=>{if(section.querySelector('.atlas-index').open)init();});
+  window._refreshJourneyMaps=updateLabels;
+  document.addEventListener('jiake:languagechange',updateLabels);
+  new MutationObserver(()=>{geometry?.setStyle(styleCountry);provinces?.setStyle(styleProvince);if(map)redrawPins();}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  new ResizeObserver(()=>map?.invalidateSize()).observe(container);
+  const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){init();observer.disconnect();}},{rootMargin:'150px'});observer.observe(section);
+  updateLabels();
 })();

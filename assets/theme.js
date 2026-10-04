@@ -29,7 +29,9 @@
       try { localStorage.setItem('jiake-theme',theme); } catch {}
       refresh();
     });
-    nav.insertBefore(button, nav.querySelector('.nav-menu-button'));
+    const tools = nav.querySelector('.nav-tools');
+    if (tools) tools.append(button);
+    else nav.insertBefore(button, nav.querySelector('.nav-menu-button'));
     refresh();
   });
 })();
