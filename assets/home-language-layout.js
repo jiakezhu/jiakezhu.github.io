@@ -5,7 +5,7 @@
   // Measure only on load, font readiness, resize, or a portfolio layout change.
   const selector='.s-title,.hero-name,.hero-tagline,.hero-actions,.hero-contact,.hero-now,.hero-footer,.about-text,.stat-box,.edu-card,.tl-item,.project-controls,.proj-group-head,.proj-body,.proj-action,.project-proof,#honors .honors-grid,.journey-panel,.life-card,.jp-ms,.jp-eu-ms,.portal-copy,.footer-sub';
   const components=[...document.querySelectorAll(selector)];
-  let measuring=false, resizeTimer;
+  let measuring=false, resizeTimer, scheduled=false;
   function readingAnchor() {
     if(scrollY<100) return null;
     const elements=[...document.querySelectorAll('#hero,main section,body>section,body>.sf,#story')];
@@ -42,10 +42,17 @@
     applyLanguage(language);
     keepAnchor(anchor);
   };
-  window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(measure,120);});
-  document.querySelector('.project-controls')?.addEventListener('click',measure);
-  document.querySelectorAll('.project-expand').forEach(button=>button.addEventListener('click',measure));
-  document.querySelector('.map-tabs-wrap')?.addEventListener('click',measure);
-  measure();
-  document.fonts.ready.then(measure);
+  function scheduleMeasure() {
+    if(scheduled||document.documentElement.classList.contains('intro-playing')) return;
+    scheduled=true;
+    const run=()=>{scheduled=false;if(!document.documentElement.classList.contains('intro-playing')) measure();};
+    if('requestIdleCallback' in window) window.requestIdleCallback(run,{timeout:500});
+    else setTimeout(run,0);
+  }
+  window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(scheduleMeasure,120);});
+  document.querySelector('.project-controls')?.addEventListener('click',scheduleMeasure);
+  document.querySelectorAll('.project-expand').forEach(button=>button.addEventListener('click',scheduleMeasure));
+  document.querySelector('.map-tabs-wrap')?.addEventListener('click',scheduleMeasure);
+  document.addEventListener('jiake:introend',scheduleMeasure);
+  document.fonts.ready.then(scheduleMeasure);
 })();

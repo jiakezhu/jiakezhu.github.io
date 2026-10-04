@@ -1,7 +1,8 @@
 (() => {
   const dialog = document.getElementById('site-intro');
-  const replay = document.getElementById('intro-replay');
-  const hero = document.getElementById('hero');
+  // Run as soon as the intro markup is parsed, before the homepage.
+  const hero = () => document.getElementById('hero');
+  const boot = window.JIAKE_HOME_BOOT;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const key = 'jiake-intro-seen-v9';
   let exitTimer, fallbackTimer;
@@ -18,15 +19,18 @@
     document.documentElement.classList.remove('intro-playing', 'intro-revealing');
     dialog.classList.remove('is-exiting');
     delete dialog.dataset.phase;
-    hero.classList.add('hero-arrived');
+    boot?.releaseIntro();
+    hero()?.classList.add('hero-arrived');
     if(wasPlaying)document.dispatchEvent(new CustomEvent('jiake:introend'));
   }
   function start() {
-    if (motion.matches || !dialog.showModal || dialog.open) return;
-    hero.classList.remove('hero-arrived');
+    if (motion.matches || !dialog.showModal || dialog.open) { boot?.releaseIntro(); return; }
+    hero()?.classList.remove('hero-arrived');
     dialog.classList.remove('is-exiting');
+    dialog.querySelectorAll('.il').forEach(el => el.classList.toggle('show',el.classList.contains(document.documentElement.lang)));
     try { dialog.showModal(); } catch { finish(); return; }
     document.documentElement.classList.add('intro-playing');
+    boot?.releaseIntro();
     document.dispatchEvent(new CustomEvent('jiake:introstart'));
     dialog.dataset.phase = 'portrait';
     phaseTimers = [
@@ -39,7 +43,7 @@
       dialog.dataset.phase = 'reveal';
       dialog.classList.add('is-exiting');
       document.documentElement.classList.add('intro-revealing');
-      hero.classList.add('hero-arrived');
+      hero()?.classList.add('hero-arrived');
     }, 4300);
     // A failed or cancelled CSS animation must never strand the reader.
     fallbackTimer = setTimeout(finish, 6100);
@@ -53,9 +57,19 @@
   dialog.addEventListener('animationend', event => {
     if (event.target === dialog && event.animationName === 'introDismiss') finish();
   });
-  replay.addEventListener('click', start);
-  function updateMotion() { replay.disabled = motion.matches; if (motion.matches) finish(); }
+  function updateMotion() {
+    const replay=document.getElementById('intro-replay');
+    if(replay) replay.disabled=motion.matches;
+    if(motion.matches) finish();
+  }
   motion.addEventListener('change', updateMotion);
   updateMotion();
-  if (!seen() && !location.hash) start();
+  if (boot ? boot.introPending : !seen()&&!location.hash) start();
+  function bindHomepage() {
+    document.getElementById('intro-replay')?.addEventListener('click',start);
+    updateMotion();
+    if(!dialog.open) hero()?.classList.add('hero-arrived');
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bindHomepage,{once:true});
+  else bindHomepage();
 })();

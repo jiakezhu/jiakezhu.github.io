@@ -3,6 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html.intro-pending { overflow:hidden; background:#151719; }
+    html.intro-pending::before { content:""; position:fixed; inset:0; z-index:2147483646; background:#151719; }
+    html.intro-pending::after { content:"Jiake ZHU."; position:fixed; inset:0; z-index:2147483646; display:grid; place-items:center; color:#f3f0e9; font:800 clamp(3rem,8vw,7rem)/1 system-ui,sans-serif; letter-spacing:-.055em; }
+  </style>
+  <script id="home-bootstrap">
+    (() => {
+      const root=document.documentElement;
+      const languages=['en','zh','fr','es'];
+      let language='en';
+      try { const saved=localStorage.getItem('jiake-language'); if(languages.includes(saved)) language=saved; } catch {}
+      const requested=new URLSearchParams(location.search).get('lang');
+      if(languages.includes(requested)) language=requested;
+      root.lang=language;
+      let seen=false;
+      try { seen=sessionStorage.getItem('jiake-intro-seen-v9')==='1'; } catch {}
+      const introPending=!seen&&!location.hash&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&typeof HTMLDialogElement!=='undefined'&&'showModal' in HTMLDialogElement.prototype;
+      let timer;
+      const boot=window.JIAKE_HOME_BOOT={language,introPending,releaseIntro(){
+        clearTimeout(timer);
+        boot.introPending=false;
+        root.classList.remove('intro-pending');
+      }};
+      if(introPending) {
+        root.classList.add('intro-pending');
+        // If the controller fails to load, show the page and never start a late intro.
+        timer=setTimeout(boot.releaseIntro,5000);
+      }
+    })();
+  </script>
   <template id="__bundler_thumbnail" data-bg-color="#151719">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="800" fill="#151719"/>
@@ -555,7 +585,8 @@
       .stat-icons img { height: 16px !important; }
 
       /* ── Experience header logos ── */
-      .tl-head > div:first-child { flex-wrap: wrap; }
+      .tl-meta { display:grid; grid-template-columns:max-content minmax(0,1fr); align-items:start; width:100%; }
+      .tl-meta > div { min-width:0; }
     }
 
     /* ── Extra small screens (iPhone SE etc) ── */
@@ -668,13 +699,12 @@
     }
   </style>
   <link rel="stylesheet" href="assets/vendor/leaflet.css"/>
-  <script src="assets/vendor/leaflet.js"></script>
   <script src="assets/theme.js?v=5"></script>
   <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
   <link rel="stylesheet" href="assets/intro.css?v=9">
   <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/book-transition.css?v=5"><link rel="stylesheet" href="assets/home-v3.css?v=23"><link rel="stylesheet" href="assets/journey.css?v=8"><link rel="stylesheet" href="assets/story-entrance.css?v=1">
-  <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/home-classic.css?v=6">
+  <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/home-classic.css?v=7">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
@@ -732,6 +762,7 @@
   <div class="intro-progress" aria-hidden="true"><i></i></div>
   <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
+<script src="assets/intro.js?v=11"></script>
 
 <!-- NAV -->
 <nav id="nav">
@@ -1574,7 +1605,7 @@
     document.dispatchEvent(new CustomEvent('jiake:languagechange', {detail:{language:l}}));
     if (refresh && window._refreshJourneyMaps) window._refreshJourneyMaps();
   }
-  let initialLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+  let initialLang = window.JIAKE_HOME_BOOT?.language || 'en';
   try { const saved = localStorage.getItem('jiake-language'); if (['en','zh','fr','es'].includes(saved)) initialLang = saved; } catch {}
   const requestedLang = new URLSearchParams(location.search).get('lang');
   if (['en','zh','fr','es'].includes(requestedLang)) initialLang = requestedLang;
@@ -1638,9 +1669,10 @@
 <script src="assets/navigation.js?v=4"></script>
 <script src="assets/interactions.js?v=3"></script>
 <script src="assets/home-personality.js?v=9"></script>
-<script src="assets/home-language-layout.js?v=5"></script>
+<script src="assets/home-language-layout.js?v=6"></script>
+<script src="assets/vendor/leaflet.js"></script>
 <script src="assets/journey.js?v=13"></script>
-<script src="assets/intro.js?v=10"></script><script src="assets/home-motion.js?v=3"></script>
+<script src="assets/home-motion.js?v=3"></script>
 <script src="assets/book-transition.js?v=7"></script>
 <script src="assets/music.js?v=12" data-audio-src="assets/audio/sunflower.mp3"></script>
 </body>
