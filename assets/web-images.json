@@ -1,0 +1,1106 @@
+{
+  "baseline": {
+    "homepageEagerUniqueBytes": 16797129,
+    "homepageEagerUniqueCount": 50
+  },
+  "images": {
+    "images/1984.png": {
+      "width": 270,
+      "height": 405,
+      "originalBytes": 118174,
+      "variants": [
+        {
+          "src": "images/web/9a40850396cb-160.webp",
+          "width": 160,
+          "height": 240,
+          "bytes": 5380
+        },
+        {
+          "src": "images/web/9a40850396cb-270.webp",
+          "width": 270,
+          "height": 405,
+          "bytes": 10372
+        }
+      ]
+    },
+    "images/AI&I.png": {
+      "width": 300,
+      "height": 300,
+      "originalBytes": 123305,
+      "variants": [
+        {
+          "src": "images/web/1d3a23aaeaa5-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 5074
+        },
+        {
+          "src": "images/web/1d3a23aaeaa5-300.webp",
+          "width": 300,
+          "height": 300,
+          "bytes": 13608
+        }
+      ]
+    },
+    "images/alliance.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 24279,
+      "variants": [
+        {
+          "src": "images/web/f2c33593ae7e-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 2802
+        },
+        {
+          "src": "images/web/f2c33593ae7e-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 3828
+        }
+      ]
+    },
+    "images/alliancefranciase1.jpeg": {
+      "width": 989,
+      "height": 1280,
+      "originalBytes": 121752,
+      "variants": [
+        {
+          "src": "images/web/a9c0ed3162cf-400.webp",
+          "width": 400,
+          "height": 518,
+          "bytes": 25628
+        },
+        {
+          "src": "images/web/a9c0ed3162cf-800.webp",
+          "width": 800,
+          "height": 1035,
+          "bytes": 72938
+        },
+        {
+          "src": "images/web/a9c0ed3162cf-989.webp",
+          "width": 989,
+          "height": 1280,
+          "bytes": 98748
+        }
+      ]
+    },
+    "images/alliancefranciase2.jpeg": {
+      "width": 1280,
+      "height": 1844,
+      "originalBytes": 138492,
+      "variants": [
+        {
+          "src": "images/web/049110743366-400.webp",
+          "width": 400,
+          "height": 576,
+          "bytes": 24074
+        },
+        {
+          "src": "images/web/049110743366-800.webp",
+          "width": 800,
+          "height": 1152,
+          "bytes": 70438
+        },
+        {
+          "src": "images/web/049110743366-1200.webp",
+          "width": 1200,
+          "height": 1729,
+          "bytes": 127274
+        }
+      ]
+    },
+    "images/budget-travel-app-icon-v3.png": {
+      "width": 384,
+      "height": 384,
+      "originalBytes": 148005,
+      "variants": [
+        {
+          "src": "images/web/9bb764f5d19a-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 2696
+        },
+        {
+          "src": "images/web/9bb764f5d19a-384.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 6798
+        }
+      ]
+    },
+    "images/bytedance.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 9006,
+      "variants": [
+        {
+          "src": "images/web/61246f8f85b6-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 886
+        },
+        {
+          "src": "images/web/61246f8f85b6-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 994
+        }
+      ]
+    },
+    "images/bytedance1.jpeg": {
+      "width": 876,
+      "height": 1280,
+      "originalBytes": 180248,
+      "variants": [
+        {
+          "src": "images/web/64132b292ab9-400.webp",
+          "width": 400,
+          "height": 584,
+          "bytes": 38414
+        },
+        {
+          "src": "images/web/64132b292ab9-800.webp",
+          "width": 800,
+          "height": 1169,
+          "bytes": 124658
+        },
+        {
+          "src": "images/web/64132b292ab9-876.webp",
+          "width": 876,
+          "height": 1280,
+          "bytes": 150584
+        }
+      ]
+    },
+    "images/campusfrance.png": {
+      "width": 100,
+      "height": 100,
+      "originalBytes": 12038,
+      "variants": [
+        {
+          "src": "images/web/235f076b781f-100.webp",
+          "width": 100,
+          "height": 100,
+          "bytes": 2488
+        }
+      ]
+    },
+    "images/expo.png": {
+      "width": 100,
+      "height": 100,
+      "originalBytes": 14609,
+      "variants": [
+        {
+          "src": "images/web/06b155d8183f-100.webp",
+          "width": 100,
+          "height": 100,
+          "bytes": 2938
+        }
+      ]
+    },
+    "images/feishu-kb-app-icon-v3.png": {
+      "width": 384,
+      "height": 384,
+      "originalBytes": 141657,
+      "variants": [
+        {
+          "src": "images/web/4a98ccad9a72-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 3284
+        },
+        {
+          "src": "images/web/4a98ccad9a72-384.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 7704
+        }
+      ]
+    },
+    "images/hero.jpeg": {
+      "width": 1082,
+      "height": 914,
+      "originalBytes": 1539432,
+      "variants": [
+        {
+          "src": "images/web/8bd883eb83b8-400.webp",
+          "width": 400,
+          "height": 338,
+          "bytes": 39680
+        },
+        {
+          "src": "images/web/8bd883eb83b8-800.webp",
+          "width": 800,
+          "height": 676,
+          "bytes": 120040
+        },
+        {
+          "src": "images/web/8bd883eb83b8-1082.webp",
+          "width": 1082,
+          "height": 914,
+          "bytes": 175152
+        }
+      ]
+    },
+    "images/jiake-orbit-app-icon-v2.png": {
+      "width": 384,
+      "height": 384,
+      "originalBytes": 148899,
+      "variants": [
+        {
+          "src": "images/web/8646e4f7ea6c-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 3116
+        },
+        {
+          "src": "images/web/8646e4f7ea6c-384.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 7836
+        }
+      ]
+    },
+    "images/lingovibe-app-icon-v3.png": {
+      "width": 384,
+      "height": 384,
+      "originalBytes": 168339,
+      "variants": [
+        {
+          "src": "images/web/ae9c3e3303cb-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 4684
+        },
+        {
+          "src": "images/web/ae9c3e3303cb-384.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 12708
+        }
+      ]
+    },
+    "images/marketunion.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 27091,
+      "variants": [
+        {
+          "src": "images/web/100b8a34ac48-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 2318
+        },
+        {
+          "src": "images/web/100b8a34ac48-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 2756
+        }
+      ]
+    },
+    "images/mingle.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 14016,
+      "variants": [
+        {
+          "src": "images/web/19ac34bda4cb-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 2092
+        },
+        {
+          "src": "images/web/19ac34bda4cb-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 3034
+        }
+      ]
+    },
+    "images/paris-youtube-vlog.png": {
+      "width": 1600,
+      "height": 1234,
+      "originalBytes": 1629102,
+      "variants": [
+        {
+          "src": "images/web/58ded8615c6d-400.webp",
+          "width": 400,
+          "height": 308,
+          "bytes": 24630
+        },
+        {
+          "src": "images/web/58ded8615c6d-800.webp",
+          "width": 800,
+          "height": 617,
+          "bytes": 67010
+        },
+        {
+          "src": "images/web/58ded8615c6d-1200.webp",
+          "width": 1200,
+          "height": 926,
+          "bytes": 107430
+        }
+      ]
+    },
+    "images/paris1.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 18093,
+      "variants": [
+        {
+          "src": "images/web/e787c9d9f92e-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 1650
+        },
+        {
+          "src": "images/web/e787c9d9f92e-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 2060
+        }
+      ]
+    },
+    "images/redcross.png": {
+      "width": 100,
+      "height": 100,
+      "originalBytes": 17013,
+      "variants": [
+        {
+          "src": "images/web/e93694ee6d94-100.webp",
+          "width": 100,
+          "height": 100,
+          "bytes": 2646
+        }
+      ]
+    },
+    "images/sales-buddy-deck/cover-v5.png": {
+      "width": 1280,
+      "height": 720,
+      "originalBytes": 85298,
+      "variants": [
+        {
+          "src": "images/web/cd8312dc7864-400.webp",
+          "width": 400,
+          "height": 225,
+          "bytes": 10934
+        },
+        {
+          "src": "images/web/cd8312dc7864-800.webp",
+          "width": 800,
+          "height": 450,
+          "bytes": 28522
+        },
+        {
+          "src": "images/web/cd8312dc7864-1200.webp",
+          "width": 1200,
+          "height": 675,
+          "bytes": 51560
+        }
+      ]
+    },
+    "images/sales-buddy-deck/sales-buddy-logo-v3-transparent.png": {
+      "width": 1639,
+      "height": 960,
+      "originalBytes": 881838,
+      "variants": [
+        {
+          "src": "images/web/0837591d16a3-160.webp",
+          "width": 160,
+          "height": 94,
+          "bytes": 7216
+        },
+        {
+          "src": "images/web/0837591d16a3-400.webp",
+          "width": 400,
+          "height": 234,
+          "bytes": 23272
+        }
+      ]
+    },
+    "images/sales-buddy-deck/sales-buddy-logo-v4-light-transparent.png": {
+      "width": 1639,
+      "height": 960,
+      "originalBytes": 873106,
+      "variants": [
+        {
+          "src": "images/web/b627812e10b9-160.webp",
+          "width": 160,
+          "height": 94,
+          "bytes": 7810
+        },
+        {
+          "src": "images/web/b627812e10b9-400.webp",
+          "width": 400,
+          "height": 234,
+          "bytes": 24434
+        }
+      ]
+    },
+    "images/swufe.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 60677,
+      "variants": [
+        {
+          "src": "images/web/f7cdd3926a9e-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 6958
+        },
+        {
+          "src": "images/web/f7cdd3926a9e-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 9180
+        }
+      ]
+    },
+    "images/swufe志愿.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 60677,
+      "variants": [
+        {
+          "src": "images/web/a66496d14cf3-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 6958
+        },
+        {
+          "src": "images/web/a66496d14cf3-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 9180
+        }
+      ]
+    },
+    "images/tencent-word.png": {
+      "width": 2050,
+      "height": 430,
+      "originalBytes": 86880,
+      "variants": [
+        {
+          "src": "images/web/6945a9ec5c4d-160.webp",
+          "width": 160,
+          "height": 34,
+          "bytes": 4294
+        },
+        {
+          "src": "images/web/6945a9ec5c4d-400.webp",
+          "width": 400,
+          "height": 84,
+          "bytes": 11152
+        }
+      ]
+    },
+    "images/tencent.png": {
+      "width": 2953,
+      "height": 889,
+      "originalBytes": 99674,
+      "variants": [
+        {
+          "src": "images/web/4bd9c7b576d1-160.webp",
+          "width": 160,
+          "height": 48,
+          "bytes": 3994
+        },
+        {
+          "src": "images/web/4bd9c7b576d1-400.webp",
+          "width": 400,
+          "height": 120,
+          "bytes": 12242
+        }
+      ]
+    },
+    "images/tutoring-prep-app-icon-v3.png": {
+      "width": 384,
+      "height": 384,
+      "originalBytes": 151245,
+      "variants": [
+        {
+          "src": "images/web/63878dfe7d00-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 3176
+        },
+        {
+          "src": "images/web/63878dfe7d00-384.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 7244
+        }
+      ]
+    },
+    "images/xiaozhu-brand/avatar-reading-pig.png": {
+      "width": 1254,
+      "height": 1254,
+      "originalBytes": 1424260,
+      "variants": [
+        {
+          "src": "images/web/6e20cca2315e-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 3934
+        },
+        {
+          "src": "images/web/6e20cca2315e-400.webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 12710
+        }
+      ]
+    },
+    "images/zjsu.png": {
+      "width": 200,
+      "height": 200,
+      "originalBytes": 50480,
+      "variants": [
+        {
+          "src": "images/web/2cfe86fe3b56-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 5238
+        },
+        {
+          "src": "images/web/2cfe86fe3b56-200.webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 6602
+        }
+      ]
+    },
+    "images/东京八平米.png": {
+      "width": 270,
+      "height": 357,
+      "originalBytes": 44138,
+      "variants": [
+        {
+          "src": "images/web/4428a071faf6-160.webp",
+          "width": 160,
+          "height": 212,
+          "bytes": 3528
+        },
+        {
+          "src": "images/web/4428a071faf6-270.webp",
+          "width": 270,
+          "height": 357,
+          "bytes": 7822
+        }
+      ]
+    },
+    "images/传奇办公室.png": {
+      "width": 270,
+      "height": 397,
+      "originalBytes": 163017,
+      "variants": [
+        {
+          "src": "images/web/982734314096-160.webp",
+          "width": 160,
+          "height": 235,
+          "bytes": 10824
+        },
+        {
+          "src": "images/web/982734314096-270.webp",
+          "width": 270,
+          "height": 397,
+          "bytes": 21758
+        }
+      ]
+    },
+    "images/像水一样吧朋友.png": {
+      "width": 270,
+      "height": 396,
+      "originalBytes": 170683,
+      "variants": [
+        {
+          "src": "images/web/d7200468e8d9-160.webp",
+          "width": 160,
+          "height": 235,
+          "bytes": 8516
+        },
+        {
+          "src": "images/web/d7200468e8d9-270.webp",
+          "width": 270,
+          "height": 396,
+          "bytes": 24102
+        }
+      ]
+    },
+    "images/刺猬的优雅.png": {
+      "width": 270,
+      "height": 366,
+      "originalBytes": 212534,
+      "variants": [
+        {
+          "src": "images/web/1252b39bdff2-160.webp",
+          "width": 160,
+          "height": 217,
+          "bytes": 14626
+        },
+        {
+          "src": "images/web/1252b39bdff2-270.webp",
+          "width": 270,
+          "height": 366,
+          "bytes": 36852
+        }
+      ]
+    },
+    "images/十字路口 Crossing.png": {
+      "width": 1620,
+      "height": 1620,
+      "originalBytes": 3474437,
+      "variants": [
+        {
+          "src": "images/web/c161ff0f1a88-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 7970
+        },
+        {
+          "src": "images/web/c161ff0f1a88-400.webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 34392
+        }
+      ]
+    },
+    "images/合照.png": {
+      "width": 1798,
+      "height": 1200,
+      "originalBytes": 234073,
+      "variants": [
+        {
+          "src": "images/web/6e8da13a2077-400.webp",
+          "width": 400,
+          "height": 267,
+          "bytes": 34204
+        },
+        {
+          "src": "images/web/6e8da13a2077-800.webp",
+          "width": 800,
+          "height": 534,
+          "bytes": 94520
+        },
+        {
+          "src": "images/web/6e8da13a2077-1200.webp",
+          "width": 1200,
+          "height": 801,
+          "bytes": 158942
+        }
+      ]
+    },
+    "images/因果报应.png": {
+      "width": 270,
+      "height": 405,
+      "originalBytes": 160649,
+      "variants": [
+        {
+          "src": "images/web/e9694657d709-160.webp",
+          "width": 160,
+          "height": 240,
+          "bytes": 8442
+        },
+        {
+          "src": "images/web/e9694657d709-270.webp",
+          "width": 270,
+          "height": 405,
+          "bytes": 19884
+        }
+      ]
+    },
+    "images/坠落的审判.png": {
+      "width": 793,
+      "height": 1080,
+      "originalBytes": 724712,
+      "variants": [
+        {
+          "src": "images/web/e38ea8334f05-160.webp",
+          "width": 160,
+          "height": 218,
+          "bytes": 6452
+        },
+        {
+          "src": "images/web/e38ea8334f05-400.webp",
+          "width": 400,
+          "height": 545,
+          "bytes": 25840
+        }
+      ]
+    },
+    "images/布达佩斯.jpg": {
+      "width": 1440,
+      "height": 1080,
+      "originalBytes": 124757,
+      "variants": [
+        {
+          "src": "images/web/4a99a3dd6722-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 19942
+        },
+        {
+          "src": "images/web/4a99a3dd6722-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 64366
+        },
+        {
+          "src": "images/web/4a99a3dd6722-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 127566
+        }
+      ]
+    },
+    "images/张小珺商业访谈录.jpg": {
+      "width": 1280,
+      "height": 1280,
+      "originalBytes": 78806,
+      "variants": [
+        {
+          "src": "images/web/4cc49b8611d4-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 5408
+        },
+        {
+          "src": "images/web/4cc49b8611d4-400.webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 17602
+        }
+      ]
+    },
+    "images/挪威.jpg": {
+      "width": 1920,
+      "height": 1440,
+      "originalBytes": 59977,
+      "variants": [
+        {
+          "src": "images/web/a11f415b67d3-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 3882
+        },
+        {
+          "src": "images/web/a11f415b67d3-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 9796
+        },
+        {
+          "src": "images/web/a11f415b67d3-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 17668
+        }
+      ]
+    },
+    "images/捷克.jpg": {
+      "width": 1080,
+      "height": 1440,
+      "originalBytes": 194381,
+      "variants": [
+        {
+          "src": "images/web/95f482e7a80e-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 60414
+        },
+        {
+          "src": "images/web/95f482e7a80e-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 205824
+        },
+        {
+          "src": "images/web/95f482e7a80e-1080.webp",
+          "width": 1080,
+          "height": 1440,
+          "bytes": 315680
+        }
+      ]
+    },
+    "images/梵蒂冈.jpg": {
+      "width": 1080,
+      "height": 1440,
+      "originalBytes": 111217,
+      "variants": [
+        {
+          "src": "images/web/7968408f6875-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 32586
+        },
+        {
+          "src": "images/web/7968408f6875-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 96864
+        },
+        {
+          "src": "images/web/7968408f6875-1080.webp",
+          "width": 1080,
+          "height": 1440,
+          "bytes": 142854
+        }
+      ]
+    },
+    "images/独树不成林.png": {
+      "width": 1620,
+      "height": 1620,
+      "originalBytes": 2952830,
+      "variants": [
+        {
+          "src": "images/web/8eaeaea4f9b7-160.webp",
+          "width": 160,
+          "height": 160,
+          "bytes": 6810
+        },
+        {
+          "src": "images/web/8eaeaea4f9b7-400.webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 28848
+        }
+      ]
+    },
+    "images/献给阿尔吉侬的花束.png": {
+      "width": 270,
+      "height": 390,
+      "originalBytes": 226491,
+      "variants": [
+        {
+          "src": "images/web/b158279e5048-160.webp",
+          "width": 160,
+          "height": 231,
+          "bytes": 14906
+        },
+        {
+          "src": "images/web/b158279e5048-270.webp",
+          "width": 270,
+          "height": 390,
+          "bytes": 35500
+        }
+      ]
+    },
+    "images/瑞士.jpg": {
+      "width": 1920,
+      "height": 2560,
+      "originalBytes": 461233,
+      "variants": [
+        {
+          "src": "images/web/2f7469959f73-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 38616
+        },
+        {
+          "src": "images/web/2f7469959f73-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 119458
+        },
+        {
+          "src": "images/web/2f7469959f73-1200.webp",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 224168
+        }
+      ]
+    },
+    "images/百分之十.png": {
+      "width": 270,
+      "height": 359,
+      "originalBytes": 137366,
+      "variants": [
+        {
+          "src": "images/web/19ee2e122409-160.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 9092
+        },
+        {
+          "src": "images/web/19ee2e122409-270.webp",
+          "width": 270,
+          "height": 359,
+          "bytes": 17886
+        }
+      ]
+    },
+    "images/筋疲力尽.png": {
+      "width": 600,
+      "height": 800,
+      "originalBytes": 600593,
+      "variants": [
+        {
+          "src": "images/web/94eeb5a74230-160.webp",
+          "width": 160,
+          "height": 213,
+          "bytes": 7352
+        },
+        {
+          "src": "images/web/94eeb5a74230-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 52310
+        }
+      ]
+    },
+    "images/篮球.jpg": {
+      "width": 1706,
+      "height": 1279,
+      "originalBytes": 226559,
+      "variants": [
+        {
+          "src": "images/web/66c4a64eea45-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 29094
+        },
+        {
+          "src": "images/web/66c4a64eea45-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 94722
+        },
+        {
+          "src": "images/web/66c4a64eea45-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 181228
+        }
+      ]
+    },
+    "images/纸牌屋.jpeg": {
+      "width": 1382,
+      "height": 2048,
+      "originalBytes": 761935,
+      "variants": [
+        {
+          "src": "images/web/44514de908c6-160.webp",
+          "width": 160,
+          "height": 237,
+          "bytes": 6868
+        },
+        {
+          "src": "images/web/44514de908c6-400.webp",
+          "width": 400,
+          "height": 593,
+          "bytes": 23176
+        }
+      ]
+    },
+    "images/置身事内.png": {
+      "width": 270,
+      "height": 395,
+      "originalBytes": 150094,
+      "variants": [
+        {
+          "src": "images/web/e4699d89f087-160.webp",
+          "width": 160,
+          "height": 234,
+          "bytes": 9562
+        },
+        {
+          "src": "images/web/e4699d89f087-270.webp",
+          "width": 270,
+          "height": 395,
+          "bytes": 25086
+        }
+      ]
+    },
+    "images/西西弗斯神话.png": {
+      "width": 270,
+      "height": 382,
+      "originalBytes": 112644,
+      "variants": [
+        {
+          "src": "images/web/259ad4a5303c-160.webp",
+          "width": 160,
+          "height": 226,
+          "bytes": 5068
+        },
+        {
+          "src": "images/web/259ad4a5303c-270.webp",
+          "width": 270,
+          "height": 382,
+          "bytes": 15682
+        }
+      ]
+    },
+    "images/跑步.jpg": {
+      "width": 1080,
+      "height": 742,
+      "originalBytes": 85904,
+      "variants": [
+        {
+          "src": "images/web/54ef05583aa0-400.webp",
+          "width": 400,
+          "height": 275,
+          "bytes": 25512
+        },
+        {
+          "src": "images/web/54ef05583aa0-800.webp",
+          "width": 800,
+          "height": 550,
+          "bytes": 65200
+        },
+        {
+          "src": "images/web/54ef05583aa0-1080.webp",
+          "width": 1080,
+          "height": 742,
+          "bytes": 93292
+        }
+      ]
+    },
+    "images/阿姆斯特丹.jpg": {
+      "width": 1440,
+      "height": 1080,
+      "originalBytes": 104329,
+      "variants": [
+        {
+          "src": "images/web/be48c97a5125-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 17468
+        },
+        {
+          "src": "images/web/be48c97a5125-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 58196
+        },
+        {
+          "src": "images/web/be48c97a5125-1200.webp",
+          "width": 1200,
+          "height": 900,
+          "bytes": 114752
+        }
+      ]
+    },
+    "images/黎明的一切.png": {
+      "width": 270,
+      "height": 382,
+      "originalBytes": 122169,
+      "variants": [
+        {
+          "src": "images/web/0f3999a89531-160.webp",
+          "width": 160,
+          "height": 226,
+          "bytes": 6784
+        },
+        {
+          "src": "images/web/0f3999a89531-270.webp",
+          "width": 270,
+          "height": 382,
+          "bytes": 13650
+        }
+      ]
+    }
+  }
+}

@@ -24,7 +24,7 @@
       <label><span data-contact-text="id"></span><input id="contact-wechat-id" type="text" value="Acoolcopper" readonly></label>
       <button class="contact-copy" type="button" data-copy-from="contact-wechat-id" data-copy-label="copyId"></button>
     </section>
-    <section class="contact-card contact-account"><img src="images/xiaozhu-brand/avatar-reading-pig.png" width="68" height="68" alt="" loading="lazy"><div><p class="contact-card-label" data-contact-text="account"></p>
+    <section class="contact-card contact-account"><img src="images/web/6e20cca2315e-160.webp" width="68" height="68" alt="" loading="lazy"><div><p class="contact-card-label" data-contact-text="account"></p>
       <input id="contact-account-name" class="contact-account-input" type="text" value="小朱还在想" readonly aria-label="小朱还在想"><p class="contact-signature">Start small and cast wide</p></div>
       <p class="contact-search" data-contact-text="search"></p>
       <div class="contact-account-actions"><button class="contact-copy" type="button" data-copy-from="contact-account-name" data-copy-label="copyAccount"></button><a href="story/index.html#wechat" data-contact-text="read"></a></div>

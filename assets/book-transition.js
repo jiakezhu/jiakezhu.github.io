@@ -2,8 +2,8 @@
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const asset = file => new URL(`../images/${file}`,document.currentScript.src).href;
   const coverUrl = asset('comic/page-01-small.webp');
-  const portraitUrl = asset('hero.jpeg');
-  const projectUrl = asset('lingovibe-app-icon-v3.png');
+  const portraitUrl = asset('web/8bd883eb83b8-400.webp');
+  const projectUrl = asset('web/ae9c3e3303cb-160.webp');
   let overlay, timer, destination;
   const copy = {
     zh:['翻开我的故事','跳过动画','项目与日常','成长漫画','一路走着，也一路做着。','把路上的想法，一页页收好。','我的故事','公众号'],

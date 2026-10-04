@@ -1,0 +1,401 @@
+{
+  "baseline": {
+    "homepageEagerUniqueBytes": 16797129,
+    "homepageEagerUniqueCount": 50
+  },
+  "images": [
+    {
+      "source": "images/1984.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/AI&I.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/alliance.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/alliancefranciase1.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/alliancefranciase2.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/budget-travel-app-icon-v3.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/bytedance.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/bytedance1.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/campusfrance.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/expo.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/feishu-kb-app-icon-v3.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/hero.jpeg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/jiake-orbit-app-icon-v2.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/lingovibe-app-icon-v3.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/marketunion.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/mingle.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/paris-youtube-vlog.png",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/paris1.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/redcross.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/sales-buddy-deck/cover-v5.png",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/sales-buddy-deck/sales-buddy-logo-v3-transparent.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/sales-buddy-deck/sales-buddy-logo-v4-light-transparent.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/swufe.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/swufe志愿.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/tencent-word.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/tencent.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/tutoring-prep-app-icon-v3.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/xiaozhu-brand/avatar-reading-pig.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/zjsu.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/东京八平米.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/传奇办公室.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/像水一样吧朋友.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/刺猬的优雅.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/十字路口 Crossing.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/合照.png",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/因果报应.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/坠落的审判.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/布达佩斯.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/张小珺商业访谈录.jpg",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/挪威.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/捷克.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/梵蒂冈.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/独树不成林.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/献给阿尔吉侬的花束.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/瑞士.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/百分之十.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/筋疲力尽.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/篮球.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/纸牌屋.jpeg",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/置身事内.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/西西弗斯神话.png",
+      "widths": [
+        160,
+        400
+      ]
+    },
+    {
+      "source": "images/跑步.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/阿姆斯特丹.jpg",
+      "widths": [
+        400,
+        800,
+        1200
+      ]
+    },
+    {
+      "source": "images/黎明的一切.png",
+      "widths": [
+        160,
+        400
+      ]
+    }
+  ]
+}

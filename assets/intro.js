@@ -27,6 +27,11 @@
     if (motion.matches || !dialog.showModal || dialog.open) { boot?.releaseIntro(); return; }
     hero()?.classList.remove('hero-arrived');
     dialog.classList.remove('is-exiting');
+    // Returning visitors fetch this small collage only if they replay the intro.
+    dialog.querySelectorAll('[data-intro-src]').forEach(image => {
+      image.src=image.dataset.introSrc;
+      delete image.dataset.introSrc;
+    });
     dialog.querySelectorAll('.il').forEach(el => el.classList.toggle('show',el.classList.contains(document.documentElement.lang)));
     try { dialog.showModal(); } catch { finish(); return; }
     document.documentElement.classList.add('intro-playing');

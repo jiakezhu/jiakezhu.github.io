@@ -5,6 +5,7 @@ import MarkdownIt from 'markdown-it';
 import matter from 'gray-matter';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const webImages=JSON.parse(fs.readFileSync(path.join(root,'assets/web-images.json'),'utf8')).images;
 const origin = 'https://jiakezhu.github.io';
 export const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function renderMarkdown(content) {
@@ -58,7 +59,9 @@ const covers = {
 };
 export function card(post, prefix='./posts/') {
   const [style,image,label,type='Notes',subtitle='A PERSONAL COLLECTION'] = covers[post.slug] || ['notes',null,'A NEW NOTE'];
-  const visual = image ? `<img src="../images/${image}" width="512" height="512" loading="lazy" decoding="async" alt="">` : `<span class="journal-cover-type">${type}<small>${subtitle}</small></span>`;
+  const candidates=webImages[`images/${image}`]?.variants;
+  const optimized=candidates?.find(item=>item.width>=400)||candidates?.at(-1);
+  const visual = image ? `<img src="../${optimized?.src||`images/${image}`}" width="${optimized?.width||512}" height="${optimized?.height||512}" loading="lazy" decoding="async" alt="">` : `<span class="journal-cover-type">${type}<small>${subtitle}</small></span>`;
   return `<a id="post-${post.slug}" class="journal-card journal-card--${style}" data-category="${post.category}" href="${prefix}${post.slug}/index.html"><div class="journal-card-cover" aria-hidden="true"><span class="journal-cover-label">${label}</span>${visual}</div><div class="journal-card-content"><time datetime="${post.date}">${post.date.replaceAll('-',' / ')}</time><div class="journal-meta"><span>${categoryName(post)}</span><span>${post.minutes} 分钟阅读</span></div><h3>${escape(post.title)}</h3><p>${escape(post.summary)}</p><div class="journal-tags">${post.tags.map(t=>`<span># ${escape(t)}</span>`).join('')}</div></div><span class="journal-arrow" aria-hidden="true">↗</span></a>`;
 }
 const empty = `<div class="journal-empty"><div><p class="journal-eyebrow">A page to begin</p><h2>下一篇，<br>从一个想法开始。</h2><p>这里将收录技术博客与日常日记。第一篇记录还在路上，先看看我正在做的项目。</p><a href="{{HOME}}#projects">探索 AI 作品集 ↗</a></div><div class="empty-art" aria-hidden="true"><div class="art-number">01 /</div><div class="art-line"></div><div class="art-line"></div><div class="art-caption">Notes on building & living</div></div></div>`;

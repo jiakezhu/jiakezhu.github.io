@@ -33,6 +33,7 @@
       }
     })();
   </script>
+  <link rel="preload" as="image" type="image/webp" href="images/web/8bd883eb83b8-800.webp" imagesrcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" imagesizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px" fetchpriority="high">
   <template id="__bundler_thumbnail" data-bg-color="#151719">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="800" fill="#151719"/>
@@ -160,8 +161,9 @@
     .stat-num { font-family: var(--sans); font-size: 3.5rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 6px; }
     .stat-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
     .stat-icons { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; align-items: center; }
-    .stats-grid .stat-box:nth-child(2) .stat-icons::before { content: ''; width: 20px; height: 20px; box-sizing: border-box; border-radius: 3px; background-color: #fff; background-image: url('images/tencent-word.png'); background-repeat: no-repeat; background-position: center; background-size: 92% auto; flex-shrink: 0; }
-    .tencent-logo-box { display: inline-block; background-color: #fff !important; background-image: url('images/tencent-word.png') !important; background-repeat: no-repeat !important; background-position: center !important; background-size: 92% auto !important; }
+    .stat-icons img { width:auto; }
+    .stats-grid .stat-box:nth-child(2) .stat-icons::before { content: ''; width: 20px; height: 20px; box-sizing: border-box; border-radius: 3px; background-color: #fff; background-image: url('images/web/6945a9ec5c4d-160.webp'); background-repeat: no-repeat; background-position: center; background-size: 92% auto; flex-shrink: 0; }
+    .tencent-logo-box { display: inline-block; background-color: #fff !important; background-image: url('images/web/6945a9ec5c4d-160.webp') !important; background-repeat: no-repeat !important; background-position: center !important; background-size: 92% auto !important; }
     .tencent-logo-mini { width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; }
 
     /* ─── EDUCATION ─── */
@@ -294,13 +296,13 @@
     .media-card { border-radius: 8px; overflow: hidden; background: var(--card); border: 1px solid var(--border); transition: transform 0.2s; }
     .media-card:hover { transform: translateY(-3px); }
     .media-card.featured { border-color: var(--gold); }
-    .media-card img { width: 100%; aspect-ratio: 2/3; object-fit: cover; display: block; }
+    .media-card img { width: 100%; height:auto; aspect-ratio: 2/3; object-fit: cover; display: block; }
     .media-info { padding: 8px 10px; }
     .media-info-title { font-size: 0.72rem; color: var(--text); line-height: 1.35; }
     .media-tag { font-size: 0.62rem; color: var(--gold); margin-top: 3px; }
     .photo-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(180px,1fr)); gap: 10px; }
     .photo-grid-item { position: relative; border-radius: 8px; overflow: hidden; }
-    .photo-grid-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.3s; }
+    .photo-grid-item img { width: 100%; height:auto; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.3s; }
     .photo-grid-item:hover img { transform: scale(1.04); }
     .photo-label { position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.65); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; }
     .podcast-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px; background: var(--card); border-radius: 10px; margin-bottom: 10px; }
@@ -309,7 +311,7 @@
     .podcast-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
     .rec-img-wrap { margin-bottom: 24px; }
     .rec-img-wrap a { display: block; }
-    .rec-img-wrap img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
+    .rec-img-wrap img { width: 100%; height:auto; border-radius: 8px; border: 1px solid var(--border); }
 
     /* ─── FOOTER ─── */
     footer { background: var(--surface); border-top: 1px solid var(--border-s); padding: 64px 80px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px; }
@@ -735,24 +737,24 @@
       </div>
     </div>
     <div class="intro-collage" aria-hidden="true">
-        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><img src="images/阿姆斯特丹.jpg" alt="" decoding="async"><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><img src="images/sales-buddy-deck/cover-v5.png" alt="" decoding="async"><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><img src="images/挪威.jpg" alt="" decoding="async"><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><img src="images/篮球.jpg" alt="" decoding="async"><figcaption>LIFE / ON THE COURT</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><img src="images/瑞士.jpg" alt="" decoding="async"><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><img src="images/hero.jpeg" alt="" decoding="async"><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--paris intro-fragment--badge"><img src="images/paris1.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--swufe intro-fragment--badge"><img src="images/swufe.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--zjsu intro-fragment--badge"><img src="images/zjsu.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--tencent intro-fragment--wordmark"><img src="images/tencent.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--lingo intro-fragment--app"><img src="images/lingovibe-app-icon-v3.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--orbit intro-fragment--app"><img src="images/jiake-orbit-app-icon-v2.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><img src="images/捷克.jpg" alt="" decoding="async"><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><img src="images/布达佩斯.jpg" alt="" decoding="async"><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--bytedance intro-fragment--badge"><img src="images/bytedance.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--alliance intro-fragment--badge"><img src="images/alliance.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--feishu intro-fragment--app"><img src="images/feishu-kb-app-icon-v3.png" alt="" decoding="async"></figure>
-        <figure class="intro-fragment intro-fragment--travel intro-fragment--app"><img src="images/budget-travel-app-icon-v3.png" alt="" decoding="async"></figure>
+        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><img alt="" data-intro-src="images/web/be48c97a5125-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><img alt="" data-intro-src="images/web/cd8312dc7864-400.webp" width="400" height="225" decoding="async" loading="eager"><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><img alt="" data-intro-src="images/web/a11f415b67d3-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><img alt="" data-intro-src="images/web/66c4a64eea45-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>LIFE / ON THE COURT</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><img alt="" data-intro-src="images/web/2f7469959f73-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><img alt="" data-intro-src="images/web/8bd883eb83b8-400.webp" width="400" height="338" decoding="async" loading="eager"><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--paris intro-fragment--badge"><img alt="" data-intro-src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--swufe intro-fragment--badge"><img alt="" data-intro-src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--zjsu intro-fragment--badge"><img alt="" data-intro-src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--tencent intro-fragment--wordmark"><img alt="" data-intro-src="images/web/4bd9c7b576d1-160.webp" width="160" height="48" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--lingo intro-fragment--app"><img alt="" data-intro-src="images/web/ae9c3e3303cb-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--orbit intro-fragment--app"><img alt="" data-intro-src="images/web/8646e4f7ea6c-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><img alt="" data-intro-src="images/web/95f482e7a80e-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><img alt="" data-intro-src="images/web/4a99a3dd6722-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--bytedance intro-fragment--badge"><img alt="" data-intro-src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--alliance intro-fragment--badge"><img alt="" data-intro-src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--feishu intro-fragment--app"><img alt="" data-intro-src="images/web/4a98ccad9a72-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--travel intro-fragment--app"><img alt="" data-intro-src="images/web/9bb764f5d19a-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
     </div>
     <div class="intro-credo">
       <div class="intro-manifesto" aria-label="Always Day One"><p><span class="intro-credo-word"><span>Always</span></span><span class="intro-credo-word intro-credo-word--accent"><span>Day One.</span></span></p></div>
@@ -762,7 +764,7 @@
   <div class="intro-progress" aria-hidden="true"><i></i></div>
   <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
-<script src="assets/intro.js?v=11"></script>
+<script src="assets/intro.js?v=12"></script>
 
 <!-- NAV -->
 <nav id="nav">
@@ -797,9 +799,9 @@
       <span class="cycle-word">
         <span class="cw-text" data-en="Multidisciplinary" data-fr="Pluridisciplinaire" data-es="Multidisciplinar" data-zh="多学科">Multidisciplinary</span>
         <span class="cw-icons">
-          <img src="images/paris1.png" alt="Paris 1">
-          <img src="images/swufe.png" alt="SWUFE">
-          <img src="images/zjsu.png" alt="ZJSU">
+          <img alt="Paris 1" src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="SWUFE" src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="ZJSU" src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager">
         </span>
       </span>
       <span class="cycle-word">
@@ -810,11 +812,11 @@
         <span class="cw-text" data-en="Multi-industry" data-fr="Multi-sectoriel" data-es="Multisectorial" data-zh="多行业">Multi-industry</span>
         <span class="cw-icons">
           <span class="tencent-logo-box tencent-logo-mini" role="img" aria-label="Tencent"></span>
-          <img src="images/bytedance.png" alt="ByteDance" style="background:#fff;padding:1px;">
+          <img alt="ByteDance" style="background:#fff;padding:1px;" src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager">
           <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="border-radius:3px;flex-shrink:0;"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg>
-          <img src="images/alliance.png" alt="Alliance">
-          <img src="images/marketunion.png" alt="Market Union">
-          <img src="images/mingle.png" alt="Mingle" style="background:#fff;padding:1px;">
+          <img alt="Alliance" src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="Market Union" src="images/web/100b8a34ac48-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="Mingle" style="background:#fff;padding:1px;" src="images/web/19ac34bda4cb-160.webp" width="160" height="160" decoding="async" loading="eager">
         </span>
       </span>
     </div>
@@ -852,7 +854,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap">
-      <div class="hero-photo-clip"><img src="images/hero.jpeg" class="hero-photo" alt="At the Colosseum, Rome"></div>
+      <div class="hero-photo-clip"><img class="hero-photo" alt="At the Colosseum, Rome" src="images/web/8bd883eb83b8-800.webp" width="800" height="676" decoding="async" loading="eager" fetchpriority="high" srcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px"></div>
       <p class="hero-photo-motto"><span class="hero-status-dot" aria-hidden="true"></span>Always Day One.</p>
       <div class="hero-badge"><span>📍 Colosseum, Rome</span><span class="hero-photo-caption"><span class="il en show">On the road</span><span class="il fr">En voyage</span><span class="il es">De viaje</span><span class="il zh">旅途中的我</span></span></div>
     </div>
@@ -913,12 +915,12 @@
       <div class="stat-box">
         <div class="stat-num">3</div>
         <div class="stat-desc"><span data-lang="en" class="show">3 universities, 3 lenses</span><span data-lang="fr">3 universités, 3 regards</span><span data-lang="es">3 universidades, 3 miradas</span><span data-lang="zh">3 所大学，3 种视角</span></div>
-        <div class="stat-icons"><img src="images/paris1.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Paris 1"><img src="images/swufe.png" style="height:20px;object-fit:contain;opacity:0.75" alt="SWUFE"><img src="images/zjsu.png" style="height:20px;object-fit:contain;opacity:0.75" alt="ZJSU"></div>
+        <div class="stat-icons"><img style="height:20px;object-fit:contain;opacity:0.75" alt="Paris 1" src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="lazy"><img style="height:20px;object-fit:contain;opacity:0.75" alt="SWUFE" src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="lazy"><img style="height:20px;object-fit:contain;opacity:0.75" alt="ZJSU" src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="lazy"></div>
       </div>
       <div class="stat-box">
         <div class="stat-num">6</div>
         <div class="stat-desc"><span data-lang="en" class="show">6 industries, one through line</span><span data-lang="fr">6 secteurs, un même fil rouge</span><span data-lang="es">6 sectores, un mismo hilo</span><span data-lang="zh">在 6 个行业里做过事</span></div>
-        <div class="stat-icons"><img src="images/bytedance.png" style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="ByteDance"><svg width="20" height="20" viewBox="0 0 32 32" style="border-radius:3px;flex-shrink:0;opacity:0.85"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg><img src="images/alliance.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Alliance"><img src="images/marketunion.png" style="height:20px;object-fit:contain;opacity:0.75" alt="Market Union"><img src="images/mingle.png" style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="Mingle"></div>
+        <div class="stat-icons"><img style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="ByteDance" src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="lazy"><svg width="20" height="20" viewBox="0 0 32 32" style="border-radius:3px;flex-shrink:0;opacity:0.85"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg><img style="height:20px;object-fit:contain;opacity:0.75" alt="Alliance" src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="lazy"><img style="height:20px;object-fit:contain;opacity:0.75" alt="Market Union" src="images/web/100b8a34ac48-160.webp" width="160" height="160" decoding="async" loading="lazy"><img style="height:20px;object-fit:contain;opacity:0.75;background:#fff;border-radius:3px;padding:1px" alt="Mingle" src="images/web/19ac34bda4cb-160.webp" width="160" height="160" decoding="async" loading="lazy"></div>
       </div>
       <div class="stat-box">
         <div class="stat-num">4</div>
@@ -942,7 +944,7 @@
     <div class="edu-grid">
       <div class="edu-card reveal">
         <div class="edu-top">
-          <img src="images/paris1.png" class="edu-logo" alt="Paris 1">
+          <img class="edu-logo" alt="Paris 1" src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div class="edu-period">2025.09 – 2026.06</div>
         </div>
         <div class="edu-school edu-static">Université Paris 1 Panthéon-Sorbonne</div>
@@ -952,7 +954,7 @@
       </div>
       <div class="edu-card reveal" style="transition-delay:0.1s">
         <div class="edu-top">
-          <img src="images/swufe.png" class="edu-logo" alt="SWUFE">
+          <img class="edu-logo" alt="SWUFE" src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div class="edu-period">2024.09 – 2027.06</div>
         </div>
         <div class="edu-school"><span data-lang="en" class="show">Southwestern University of Finance & Economics (SWUFE)</span><span data-lang="fr">Université du Sud-Ouest des Finances et de l'Économie (SWUFE)</span><span data-lang="es">Universidad del Suroeste de Finanzas y Economía (SWUFE)</span><span data-lang="zh">西南财经大学（SWUFE）</span></div>
@@ -961,7 +963,7 @@
       </div>
       <div class="edu-card reveal" style="transition-delay:0.2s">
         <div class="edu-top">
-          <img src="images/zjsu.png" class="edu-logo" alt="ZJSU">
+          <img class="edu-logo" alt="ZJSU" src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div class="edu-period">2020.09 – 2024.06</div>
         </div>
         <div class="edu-school"><span data-lang="en" class="show">Zhejiang Gongshang University (ZJSU)</span><span data-lang="fr">Université Gongshang du Zhejiang (ZJSU)</span><span data-lang="es">Universidad Gongshang de Zhejiang (ZJSU)</span><span data-lang="zh">浙江工商大学（ZJSU）</span></div>
@@ -1004,7 +1006,7 @@
       <div class="tl-head">
         <div class="tl-meta">
           <div style="display:flex;gap:6px;align-items:center;">
-          <img src="images/bytedance.png" class="tl-logo" alt="ByteDance" style="background:#fff">
+          <img class="tl-logo" alt="ByteDance" style="background:#fff" src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="border-radius:6px;border:1px solid var(--border-s);flex-shrink:0;"><rect width="32" height="32" fill="#010101" rx="6"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(1,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.5,0)"/></svg>
         </div>
           <div>
@@ -1025,7 +1027,7 @@
       <div class="tl-dot"></div>
       <div class="tl-head">
         <div class="tl-meta">
-          <img src="images/alliance.png" class="tl-logo" alt="Alliance Française">
+          <img class="tl-logo" alt="Alliance Française" src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div>
             <div class="tl-company">Alliance Française de Chengdu</div>
             <div class="tl-role"><span data-lang="en" class="show">Sino-French Cultural Coordination</span><span data-lang="fr">Coordinateur culturel franco-chinois</span><span data-lang="es">Coordinador cultural sino-francés</span><span data-lang="zh">中法文化项目</span></div>
@@ -1044,7 +1046,7 @@
       <div class="tl-dot"></div>
       <div class="tl-head">
         <div class="tl-meta">
-          <img src="images/marketunion.png" class="tl-logo" alt="Market Union">
+          <img class="tl-logo" alt="Market Union" src="images/web/100b8a34ac48-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div>
             <div class="tl-company">Market Union</div>
             <div class="tl-role"><span data-lang="en" class="show">French-speaking Export Sales</span><span data-lang="fr">Chargée d'export francophone</span><span data-lang="es">Ejecutiva de exportación francófona</span><span data-lang="zh">法语区外贸销售</span></div>
@@ -1062,7 +1064,7 @@
       <div class="tl-dot"></div>
       <div class="tl-head">
         <div class="tl-meta">
-          <img src="images/mingle.png" class="tl-logo" alt="Mingle Advisors" style="background:#fff">
+          <img class="tl-logo" alt="Mingle Advisors" style="background:#fff" src="images/web/19ac34bda4cb-160.webp" width="160" height="160" decoding="async" loading="lazy">
           <div>
             <div class="tl-company">Mingle Advisors</div>
             <div class="tl-role"><span data-lang="en" class="show">Sino-Finnish Project Manager</span><span data-lang="fr">Chargée de projet sino-finlandais</span><span data-lang="es">Gestora de proyectos sino-finlandeses</span><span data-lang="zh">中芬项目经理</span></div>
@@ -1093,11 +1095,11 @@
       <div class="proj-row reveal spotlight-card">
         <div class="proj-num">01</div>
         <a class="proj-visual cover-sales" href="sales-buddy-deck/" target="_blank" rel="noopener" aria-label="放大查看 Sales Buddy 产品首页">
-          <img class="sales-cover-image" src="images/sales-buddy-deck/cover-v5.png" width="1280" height="720" alt="Sales Buddy 产品首页：AI 原生工作方式与客户工作区" loading="lazy" decoding="async">
+          <img class="sales-cover-image" alt="Sales Buddy 产品首页：AI 原生工作方式与客户工作区" src="images/web/cd8312dc7864-800.webp" width="800" height="450" decoding="async" loading="lazy" srcset="images/web/cd8312dc7864-400.webp 400w, images/web/cd8312dc7864-800.webp 800w, images/web/cd8312dc7864-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 900px">
         </a>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Sales · Customer Workflow</span><span data-lang="fr">Vente IA · Suivi Client</span><span data-lang="es">Ventas IA · Gestión de Clientes</span><span data-lang="zh">AI 销售助手 · 客户跟进</span></div>
-          <div class="proj-name-row proj-name-row--sales"><span class="sales-wordmark"><img class="sales-logo-dark" src="images/sales-buddy-deck/sales-buddy-logo-v3-transparent.png" alt="Sales Buddy" loading="lazy"><img class="sales-logo-light" src="images/sales-buddy-deck/sales-buddy-logo-v4-light-transparent.png" alt="Sales Buddy" loading="lazy"></span><div class="proj-name sales-name-label">Sales Buddy</div></div>
+          <div class="proj-name-row proj-name-row--sales"><span class="sales-wordmark"><img class="sales-logo-dark" alt="Sales Buddy" src="images/web/0837591d16a3-400.webp" width="400" height="234" decoding="async" loading="lazy"><img class="sales-logo-light" alt="Sales Buddy" src="images/web/b627812e10b9-400.webp" width="400" height="234" decoding="async" loading="lazy"></span><div class="proj-name sales-name-label">Sales Buddy</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">An AI account-intelligence workspace built for frontline B2B sales. It converts voice or free-form updates into structured CRM records, maps stakeholders, prioritizes opportunities, recommends the next action, and produces a complete account report. I have used it to progress 40+ accounts and map over RMB 12M in IT scale; it won first place in the Marketing &amp; Customer Acquisition track of a Tencent Hackathon and advanced to the in-person showcase.</span><span data-lang="fr">Un cockpit d’intelligence client conçu pour les commerciaux B2B. À partir d’une note libre ou vocale, il structure le CRM, cartographie les décideurs, hiérarchise les opportunités, recommande la prochaine action et génère un rapport client complet. Je l’ai utilisé pour faire avancer plus de 40 comptes et qualifier plus de 12 M RMB de parc IT ; le projet a remporté le volet marketing et acquisition d’un Hackathon Tencent avant d’être retenu pour la finale présentielle.</span><span data-lang="es">Un centro de inteligencia de cuentas para ventas B2B. Convierte actualizaciones de voz o texto libre en registros de CRM, mapea a los decisores, prioriza oportunidades, propone la siguiente acción y genera un informe integral de cada cuenta. Lo he usado para impulsar más de 40 clientes y dimensionar más de 12 millones de RMB en infraestructura IT; ganó la categoría de marketing y captación de un Hackathon de Tencent y pasó a la presentación presencial.</span><span data-lang="zh">面向一线 ToB 销售的客户推进工作台。它把语音或自然语言进展转成结构化 CRM 记录，梳理关键人、判断机会优先级、给出下一步动作，并一键生成客户全景报告。我已经用它推进 40+ 客户、摸排 1200 万+ IT 体量；项目获腾讯 Hackathon 营销拓客赛道第一名，并入选线下路演。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 AI Extraction</span><span class="proj-tag">🎯 Next Action</span><span class="proj-tag">📥 CRM Import</span><span class="proj-tag">🕸️ Relationship Map</span><span class="proj-tag">📄 PDF · Word</span></div>
         </div>
@@ -1109,10 +1111,10 @@
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.08s">
         <div class="proj-num">02</div>
-        <div class="proj-visual cover-lingo" aria-hidden="true"><span class="cover-caption">WORDS WITHOUT BORDERS</span><div class="cover-words"><span>Hello.</span><span>Bonjour.</span><span>Hola.</span></div><img class="cover-icon" src="images/lingovibe-app-icon-v3.png" alt="" loading="lazy"><span class="cover-symbol">↗</span></div>
+        <div class="proj-visual cover-lingo" aria-hidden="true"><span class="cover-caption">WORDS WITHOUT BORDERS</span><div class="cover-words"><span>Hello.</span><span>Bonjour.</span><span>Hola.</span></div><img class="cover-icon" alt="" src="images/web/ae9c3e3303cb-384.webp" width="384" height="384" decoding="async" loading="lazy"><span class="cover-symbol">↗</span></div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">EdTech · Language Intelligence</span><span data-lang="fr">EdTech · Intelligence Linguistique</span><span data-lang="es">EdTech · Inteligencia Lingüística</span><span data-lang="zh">教育科技 · 语言与文化</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="LingoVibe multilingual app icon"><img src="images/lingovibe-app-icon-v3.png" alt=""></span><div class="proj-name">LingoVibe</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="LingoVibe multilingual app icon"><img alt="" src="images/web/ae9c3e3303cb-160.webp" width="160" height="160" decoding="async" loading="lazy"></span><div class="proj-name">LingoVibe</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">The hardest part of learning a language is often not knowing what a word means, but knowing how it will land. LingoVibe brings definition, tone, social setting, cultural associations, and cross-language differences into one view for learners of English, French, and Spanish. Whether writing an email, joining a conversation, or decoding online language, users can see when a phrase feels natural, when it may sound awkward or offensive, and how the same intent travels across cultures — moving from correct translation to confident expression.</span><span data-lang="fr">Le plus difficile dans une langue n’est souvent pas de comprendre un mot, mais de savoir comment il sera reçu. LingoVibe réunit sens, registre, contexte social, références culturelles et différences entre l’anglais, le français et l’espagnol. Pour écrire un e-mail, participer à une conversation ou décoder une expression en ligne, l’utilisateur comprend ce qui sonne naturel, maladroit ou potentiellement offensant, et comment une même intention voyage d’une culture à l’autre — au-delà de la traduction correcte, vers une expression vraiment sûre.</span><span data-lang="es">Lo más difícil de aprender un idioma no siempre es saber qué significa una palabra, sino entender cómo va a sonar. LingoVibe reúne significado, tono, contexto social, asociaciones culturales y diferencias entre inglés, francés y español. Al escribir un correo, entrar en una conversación o descifrar una expresión de internet, el usuario puede saber qué resulta natural, qué puede sonar extraño u ofensivo y cómo cambia una misma intención entre culturas — pasando de traducir correctamente a expresarse con seguridad.</span><span data-lang="zh">学语言最难的，往往不是“不认识”，而是不知道一个词在真实交流里听起来是什么感觉。LingoVibe 面向英、法、西三语学习者，把词义、语气强弱、使用场景、文化联想和跨语言差异放在同一个页面里。无论是写邮件、聊天，还是理解网络表达，用户都能判断一个词什么时候自然、什么时候可能显得生硬或冒犯，以及同一种意思换一种语言该怎么说——从“翻译正确”走到“表达得体”。</span></p>
           <div class="proj-tags"><span class="proj-tag">🗣️ Tone &amp; Register</span><span class="proj-tag">🌍 Cultural Context</span><span class="proj-tag">🔁 Cross-language Comparison</span><span class="proj-tag">💬 Real-world Usage</span></div>
         </div>
@@ -1123,10 +1125,10 @@
 
       <div class="proj-row reveal spotlight-card" style="transition-delay:0.16s">
         <div class="proj-num">03</div>
-        <div class="proj-visual cover-orbit" aria-hidden="true"><span class="cover-caption">SMALL STEPS. YOUR OWN ORBIT.</span><div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div><img class="cover-icon" src="images/jiake-orbit-app-icon-v2.png" alt="" loading="lazy"><span class="orbit-dot"></span><span class="cover-symbol">↗</span></div>
+        <div class="proj-visual cover-orbit" aria-hidden="true"><span class="cover-caption">SMALL STEPS. YOUR OWN ORBIT.</span><div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div><img class="cover-icon" alt="" src="images/web/8646e4f7ea6c-384.webp" width="384" height="384" decoding="async" loading="lazy"><span class="orbit-dot"></span><span class="cover-symbol">↗</span></div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">Habit &amp; Productivity · AI App</span><span data-lang="fr">Habitudes &amp; Productivité · App IA</span><span data-lang="es">Hábitos &amp; Productividad · App IA</span><span data-lang="zh">习惯养成 · 效率工具</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Jiake Orbit productivity app icon"><img src="images/jiake-orbit-app-icon-v2.png" alt=""></span><div class="proj-name">Jiake Orbit</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Jiake Orbit productivity app icon"><img alt="" src="images/web/8646e4f7ea6c-160.webp" width="160" height="160" decoding="async" loading="lazy"></span><div class="proj-name">Jiake Orbit</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">Most productivity tools only record whether something got done. Jiake Orbit is designed to reveal what keeps a person moving and where their attention actually goes. It brings habits, tasks, quick ideas, and evening reflection into one daily rhythm: define the next action, capture thoughts in Spark before they disappear, then review the day with evidence rather than memory. Streaks grow a personal universe and badges make long-term progress visible — not to push users to do more, but to help them discover what is worth sustaining and build a rhythm that genuinely fits.</span><span data-lang="fr">La plupart des outils de productivité se contentent de noter si une tâche est faite. Jiake Orbit cherche plutôt à montrer ce qui entretient l’élan et où part réellement l’attention. Habitudes, tâches, idées rapides et bilan du soir suivent un même rythme quotidien : définir la prochaine action, saisir une pensée dans Spark avant qu’elle ne disparaisse, puis relire sa journée à partir de traces concrètes. Les séries font grandir un univers personnel et les badges rendent les progrès visibles — non pour en faire toujours plus, mais pour comprendre ce qui mérite de durer et construire un rythme qui nous ressemble.</span><span data-lang="es">La mayoría de las herramientas de productividad solo registran si algo se hizo. Jiake Orbit busca mostrar qué mantiene el impulso y dónde va realmente la atención. Hábitos, tareas, ideas rápidas y reflexión nocturna forman un mismo ritmo diario: definir la siguiente acción, guardar una idea en Spark antes de perderla y revisar el día con datos en lugar de memoria. Las rachas hacen crecer un universo personal y las insignias vuelven visible el progreso a largo plazo — no para hacer más por hacer, sino para descubrir qué merece continuidad y construir un ritmo propio.</span><span data-lang="zh">很多效率工具只记录“做没做”，Jiake Orbit 更想回答：什么让人持续行动，注意力到底去了哪里。它把习惯、任务、灵感捕捉和晚间复盘放进一条日常节奏里：先明确下一步，白天用 Spark 接住稍纵即逝的想法，晚上再根据真实记录回看一天。连续行动会推进自己的星球，成就徽章让长期变化变得看得见——不是催你做得更多，而是帮你发现什么值得坚持，慢慢形成真正适合自己的节奏。</span></p>
           <div class="proj-tags"><span class="proj-tag">✅ Habit Tracking</span><span class="proj-tag">🪐 Planet Rewards</span><span class="proj-tag">🏅 NFT Badges</span><span class="proj-tag">⚡ Spark Notes</span><span class="proj-tag">📊 Analytics</span></div>
         </div>
@@ -1144,7 +1146,7 @@
         <div class="proj-num">04</div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Knowledge Retrieval</span><span data-lang="fr">Agent IA · Recherche de Connaissances</span><span data-lang="es">Agente IA · Recuperación de Conocimiento</span><span data-lang="zh">AI Agent · 知识库问答</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Feishu KB RAG knowledge search app icon"><img src="images/feishu-kb-app-icon-v3.png" alt=""></span><div class="proj-name">Feishu KB RAG</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Feishu KB RAG knowledge search app icon"><img alt="" src="images/web/4a98ccad9a72-160.webp" width="160" height="160" decoding="async" loading="lazy"></span><div class="proj-name">Feishu KB RAG</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">A reusable Hermes Agent skill that turns a Feishu/Lark knowledge base into a practical retrieval layer. A natural-language question triggers semantic search, relevance ranking, and synthesis across internal documents, replacing manual folder-hunting with a concise answer grounded in the team’s own material.</span><span data-lang="fr">Un skill réutilisable pour Hermes Agent qui transforme une base Feishu/Lark en véritable couche de recherche. Une question en langage naturel déclenche recherche sémantique, classement par pertinence et synthèse de plusieurs documents internes — sans avoir à fouiller les dossiers un par un.</span><span data-lang="es">Un skill reutilizable para Hermes Agent que convierte una base de Feishu/Lark en una capa de recuperación útil. Una pregunta en lenguaje natural activa búsqueda semántica, ranking por relevancia y síntesis de documentos internos, sustituyendo la búsqueda manual entre carpetas por una respuesta basada en el conocimiento del equipo.</span><span data-lang="zh">把飞书知识库变成真正可调用的检索层。用户用自然语言提问后，Hermes Agent 会依次完成语义搜索、相关性排序和跨文档总结，把“翻目录、找旧文档”的过程压缩成一条基于内部资料的答案；整个能力被封装为可复用 Skill。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">📚 RAG</span><span class="proj-tag">🔍 Semantic Search</span><span class="proj-tag">🚀 Feishu / Lark</span><span class="proj-tag">🗂️ Knowledge Base</span></div>
         </div>
@@ -1157,7 +1159,7 @@
         <div class="proj-num">05</div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Workflow Automation</span><span data-lang="fr">Agent IA · Automatisation</span><span data-lang="es">Agente IA · Automatización</span><span data-lang="zh">AI Agent · 自动备课</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Tutoring Prep Agent lesson workflow app icon"><img src="images/tutoring-prep-app-icon-v3.png" alt=""></span><div class="proj-name">Tutoring Prep Agent</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Tutoring Prep Agent lesson workflow app icon"><img alt="" src="images/web/63878dfe7d00-160.webp" width="160" height="160" decoding="async" loading="lazy"></span><div class="proj-name">Tutoring Prep Agent</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">A local agent that runs the full tutoring-prep pipeline with Claude Desktop and filesystem MCP: read the student context and teaching materials, assemble a structured lesson plan, save the deliverables, and draft the follow-up email. The workflow cuts repetitive preparation from roughly 30 minutes to under 5 while keeping the teacher in control of the final output.</span><span data-lang="fr">Un agent local qui exécute toute la préparation avec Claude Desktop et filesystem MCP : lecture du contexte élève et des supports, création d’un plan de cours structuré, sauvegarde des livrables et rédaction de l’e-mail de suivi. Le temps consacré aux tâches répétitives passe d’environ 30 minutes à moins de 5, tout en laissant la validation finale au professeur.</span><span data-lang="es">Un agente local que ejecuta todo el flujo de preparación con Claude Desktop y filesystem MCP: lee el contexto del alumno y los materiales, crea un plan de clase estructurado, guarda los entregables y redacta el correo de seguimiento. Reduce el trabajo repetitivo de unos 30 minutos a menos de 5, manteniendo al profesor al mando del resultado final.</span><span data-lang="zh">用 Claude Desktop + filesystem MCP 跑通一条本地备课流水线：读取学生情况和教学材料，生成结构化教案，保存交付文件，再起草课后邮件。重复准备时间从约 30 分钟降到 5 分钟以内，同时保留老师对最终内容的审核权。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 Claude Desktop</span><span class="proj-tag">📂 Filesystem MCP</span><span class="proj-tag">📝 Auto Lesson Plan</span><span class="proj-tag">✉️ Auto Email</span><span class="proj-tag">⏱️ 30min → 5min</span></div>
         </div>
@@ -1170,7 +1172,7 @@
         <div class="proj-num">06</div>
         <div class="proj-body">
           <div class="proj-cat"><span data-lang="en" class="show">AI Agent · Travel Planning</span><span data-lang="fr">Agent IA · Planification Voyage</span><span data-lang="es">Agente IA · Planificación de Viajes</span><span data-lang="zh">AI Agent · 穷游规划</span></div>
-          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Budget Travel Planner route app icon"><img src="images/budget-travel-app-icon-v3.png" alt=""></span><div class="proj-name">Budget Travel Planner</div></div>
+          <div class="proj-name-row"><span class="proj-logo proj-logo--app" role="img" aria-label="Budget Travel Planner route app icon"><img alt="" src="images/web/9bb764f5d19a-160.webp" width="160" height="160" decoding="async" loading="lazy"></span><div class="proj-name">Budget Travel Planner</div></div>
           <p class="proj-desc"><span data-lang="en" class="show">A Hermes Agent skill for turning a loose travel idea into an executable student-budget itinerary. It balances dates, budget, transport, and interests; estimates daily spend, builds a sensible route, surfaces less touristy alternatives, and recalculates the plan when time or money changes.</span><span data-lang="fr">Un skill Hermes Agent qui transforme une envie de voyage encore floue en itinéraire étudiant réellement exécutable. Il arbitre entre dates, budget, transport et centres d’intérêt, estime les dépenses quotidiennes, construit un parcours cohérent, propose des alternatives moins touristiques et recalcule le tout dès qu’une contrainte change.</span><span data-lang="es">Un skill de Hermes Agent que convierte una idea de viaje todavía vaga en un itinerario estudiantil que se puede ejecutar. Equilibra fechas, presupuesto, transporte e intereses, estima el gasto diario, diseña una ruta coherente, propone alternativas menos turísticas y recalcula el plan cuando cambian el tiempo o el dinero.</span><span data-lang="zh">把一句模糊的旅行想法变成能直接执行的学生预算行程。Agent 会同时权衡日期、预算、交通和兴趣，估算每日花费、排出合理路线、补充不那么游客化的备选点；时间或预算一变，也能重新计算整套计划。</span></p>
           <div class="proj-tags"><span class="proj-tag">🤖 Hermes Agent</span><span class="proj-tag">🧳 Travel Planning</span><span class="proj-tag">💰 Budget Optimizer</span><span class="proj-tag">🗺️ Route Generator</span><span class="proj-tag">🎒 Student-focused</span></div>
         </div>
@@ -1207,10 +1209,10 @@
     </div>
     <div class="reveal" style="transition-delay:0.15s">
       <div class="honors-h3">🤝 <span data-lang="en" class="show">Social Practice</span><span data-lang="fr">Pratique Sociale</span><span data-lang="es">Práctica Social</span><span data-lang="zh">做过的公益</span></div>
-      <div class="vol-item"><img src="images/redcross.png" class="vol-logo" alt="Red Cross"><div><div class="vol-name">Cleft Lip and Palate Treatment Volunteer</div><div class="vol-org">China Red Cross Society</div><div class="vol-period">Mar 2021 – May 2022 · 1yr 3mos</div></div></div>
-      <div class="vol-item"><img src="images/expo.png" class="vol-logo" alt="Expo"><div><div class="vol-name">Translator for Sino-Finnish Business</div><div class="vol-org">Global Digital Trade Expo</div><div class="vol-period">Oct 2023 – Nov 2023 · 2mos</div></div></div>
-      <div class="vol-item"><img src="images/campusfrance.png" class="vol-logo" alt="Campus France"><div><div class="vol-name">French Higher Education Advocacy Volunteer</div><div class="vol-org">Campus France</div><div class="vol-period">Mar 2025 – Apr 2025 · 2mos</div></div></div>
-      <div class="vol-item"><img src="images/swufe志愿.png" class="vol-logo" alt="SWUFE"><div><div class="vol-name">International Summer Camp Volunteer</div><div class="vol-org">Southwestern University of Finance and Economics</div><div class="vol-period">Jun 2025 · 1mo</div></div></div>
+      <div class="vol-item"><img class="vol-logo" alt="Red Cross" src="images/web/e93694ee6d94-100.webp" width="100" height="100" decoding="async" loading="lazy"><div><div class="vol-name">Cleft Lip and Palate Treatment Volunteer</div><div class="vol-org">China Red Cross Society</div><div class="vol-period">Mar 2021 – May 2022 · 1yr 3mos</div></div></div>
+      <div class="vol-item"><img class="vol-logo" alt="Expo" src="images/web/06b155d8183f-100.webp" width="100" height="100" decoding="async" loading="lazy"><div><div class="vol-name">Translator for Sino-Finnish Business</div><div class="vol-org">Global Digital Trade Expo</div><div class="vol-period">Oct 2023 – Nov 2023 · 2mos</div></div></div>
+      <div class="vol-item"><img class="vol-logo" alt="Campus France" src="images/web/235f076b781f-100.webp" width="100" height="100" decoding="async" loading="lazy"><div><div class="vol-name">French Higher Education Advocacy Volunteer</div><div class="vol-org">Campus France</div><div class="vol-period">Mar 2025 – Apr 2025 · 2mos</div></div></div>
+      <div class="vol-item"><img class="vol-logo" alt="SWUFE" src="images/web/a66496d14cf3-160.webp" width="160" height="160" decoding="async" loading="lazy"><div><div class="vol-name">International Summer Camp Volunteer</div><div class="vol-org">Southwestern University of Finance and Economics</div><div class="vol-period">Jun 2025 · 1mo</div></div></div>
       <div style="margin-top:32px;">
         <div class="honors-h3">📰 <span data-lang="en" class="show">Media Coverage</span><span data-lang="fr">Couverture Médiatique</span><span data-lang="es">Cobertura Mediática</span><span data-lang="zh">被报道过</span></div>
         <a href="https://mp.weixin.qq.com/s/b3C1MfxQLd0O6sAStjoPeQ" target="_blank" class="media-link"><div><div class="media-link-title">走进国奖生 | 会语言，通国别，精领域——</div><div class="media-link-sub">WeChat Official Account · Click to read</div></div></a>
@@ -1246,7 +1248,7 @@
     <div class="life-grid">
       <a class="life-card life-video-card reveal" href="https://youtu.be/aAvQUV6Mw7E?si=aSV_UdgNJbnuf3Q7" target="_blank" rel="noopener" aria-label="Watch Moving to Paris on YouTube">
         <div class="life-video-media">
-          <img src="images/paris-youtube-vlog.png" alt="Jiake recording an international student podcast with ISAP in Paris">
+          <img alt="Jiake recording an international student podcast with ISAP in Paris" src="images/web/58ded8615c6d-800.webp" width="800" height="617" decoding="async" loading="lazy" srcset="images/web/58ded8615c6d-400.webp 400w, images/web/58ded8615c6d-800.webp 800w, images/web/58ded8615c6d-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 900px">
           <span class="life-video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
         <div class="life-video-copy">
@@ -1264,10 +1266,10 @@
           <div class="life-icon">📚</div>
           <div class="life-card-title"><span data-lang="en" class="show">Reading & Podcasts</span><span data-lang="fr">Lecture & Podcasts</span><span data-lang="es">Lectura y Podcasts</span><span data-lang="zh">阅读与播客</span></div>
           <div class="life-thumb-row">
-            <img src="images/1984.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/像水一样吧朋友.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/独树不成林.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/AI&I.png" class="life-thumb" onerror="this.style.display='none'">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/9a40850396cb-160.webp" width="160" height="240" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/d7200468e8d9-160.webp" width="160" height="235" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/8eaeaea4f9b7-160.webp" width="160" height="160" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/1d3a23aaeaa5-160.webp" width="160" height="160" decoding="async" loading="lazy">
           </div>
         </div>
         <p class="life-text"><span data-lang="en" class="show">Books and voices that shaped how I think — across economics, philosophy, and the art of paying attention.</span><span data-lang="fr">Livres et voix qui ont façonné ma pensée — entre économie, philosophie et l'art de faire attention.</span><span data-lang="es">Libros y voces que moldearon mi forma de pensar — entre economía, filosofía y el arte de prestar atención.</span><span data-lang="zh">有些书帮我想明白问题，有些播客只是陪我走很长的路。经济、哲学，还有怎么把注意力放回真正重要的事。</span></p>
@@ -1279,10 +1281,10 @@
           <div class="life-icon">🎬</div>
           <div class="life-card-title"><span data-lang="en" class="show">Films & Series</span><span data-lang="fr">Cinéma & Séries</span><span data-lang="es">Cine y Series</span><span data-lang="zh">电影与剧集</span></div>
           <div class="life-thumb-row">
-            <img src="images/传奇办公室.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/黎明的一切.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/筋疲力尽.png" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/纸牌屋.jpeg" class="life-thumb" onerror="this.style.display='none'">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/982734314096-160.webp" width="160" height="235" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/0f3999a89531-160.webp" width="160" height="226" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/94eeb5a74230-160.webp" width="160" height="213" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/44514de908c6-160.webp" width="160" height="237" decoding="async" loading="lazy">
           </div>
         </div>
         <p class="life-text"><span data-lang="en" class="show">From French spy thrillers to Japanese slow cinema — my watchlist crosses borders just like I do.</span><span data-lang="fr">Des thrillers d'espionnage français au cinéma lent japonais — ma liste traverse les frontières comme moi.</span><span data-lang="es">De los thrillers de espionaje franceses al cine lento japonés — mi lista cruza fronteras igual que yo.</span><span data-lang="zh">从法国谍战剧看到日本慢电影，我的片单和我一样，很少老老实实待在一个国家。</span></p>
@@ -1294,8 +1296,8 @@
           <div class="life-icon">🏀</div>
           <div class="life-card-title"><span data-lang="en" class="show">Basketball & Running</span><span data-lang="fr">Basket & Course</span><span data-lang="es">Baloncesto y Running</span><span data-lang="zh">篮球与跑步</span></div>
           <div class="life-thumb-row">
-            <img src="images/篮球.jpg" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/合照.png" class="life-thumb" onerror="this.style.display='none'">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/66c4a64eea45-400.webp" width="400" height="300" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/6e8da13a2077-400.webp" width="400" height="267" decoding="async" loading="lazy">
           </div>
         </div>
         <p class="life-text"><span data-lang="en" class="show">Former member of the university track and field team and college basketball team. The court and the road both teach the same thing — show up, stay consistent, trust the process.</span><span data-lang="fr">Ancien membre de l'équipe universitaire d'athlétisme et de basket-ball. Le terrain et la route enseignent la même chose — être présent, rester régulier, faire confiance au processus.</span><span data-lang="es">Ex miembro del equipo universitario de atletismo y de baloncesto. La cancha y la carretera enseñan lo mismo — aparecer, ser constante, confiar en el proceso.</span><span data-lang="zh">以前在校田径队和篮球队。跑道和球场教会我的其实是同一件事：先出现，再坚持，慢慢就会有结果。</span></p>
@@ -1307,10 +1309,10 @@
           <div class="life-icon">✈️</div>
           <div class="life-card-title"><span data-lang="en" class="show">Travel</span><span data-lang="fr">Voyages</span><span data-lang="es">Viajes</span><span data-lang="zh">旅行</span></div>
           <div class="life-thumb-row">
-            <img src="images/瑞士.jpg" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/阿姆斯特丹.jpg" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/布达佩斯.jpg" class="life-thumb" onerror="this.style.display='none'">
-            <img src="images/梵蒂冈.jpg" class="life-thumb" onerror="this.style.display='none'">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/2f7469959f73-400.webp" width="400" height="533" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/be48c97a5125-400.webp" width="400" height="300" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/4a99a3dd6722-400.webp" width="400" height="300" decoding="async" loading="lazy">
+            <img class="life-thumb" onerror="this.style.display='none'" src="images/web/7968408f6875-400.webp" width="400" height="533" decoding="async" loading="lazy">
           </div>
         </div>
         <div class="life-flags">🇨🇳 🇫🇷 🇫🇮 🇩🇪 🇳🇱 🇧🇪 🇦🇹 🇨🇿 🇸🇰 🇭🇺 🇪🇸 🇮🇹 🇨🇭 🇳🇴 🇻🇦 🇱🇺</div>
@@ -1334,10 +1336,10 @@
 <!-- JOURNAL_PREVIEW_END --></div></div>
 </div>
 <div class="story-scene">
-  <figure class="story-photo story-photo--portrait"><img src="images/hero.jpeg" width="1082" height="914" loading="lazy" decoding="async" alt="在罗马斗兽场前的旅行照片"><figcaption><span>ROME, ITALY</span><span>↗</span></figcaption></figure>
-  <figure class="story-photo story-photo--landscape"><img src="images/瑞士.jpg" width="1920" height="2560" loading="lazy" decoding="async" alt="瑞士雪山与湖面上的金色日落"><figcaption><span>SWITZERLAND</span><span>✧</span></figcaption></figure>
+  <figure class="story-photo story-photo--portrait"><img alt="在罗马斗兽场前的旅行照片" src="images/web/8bd883eb83b8-400.webp" width="400" height="338" decoding="async" loading="lazy" srcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" sizes="(max-width: 600px) 48vw, (max-width: 1000px) 27vw, 300px"><figcaption><span>ROME, ITALY</span><span>↗</span></figcaption></figure>
+  <figure class="story-photo story-photo--landscape"><img alt="瑞士雪山与湖面上的金色日落" src="images/web/2f7469959f73-400.webp" width="400" height="533" decoding="async" loading="lazy" srcset="images/web/2f7469959f73-400.webp 400w, images/web/2f7469959f73-800.webp 800w, images/web/2f7469959f73-1200.webp 1200w" sizes="(max-width: 600px) 48vw, (max-width: 1000px) 27vw, 300px"><figcaption><span>SWITZERLAND</span><span>✧</span></figcaption></figure>
   <svg class="story-scene-star" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3c0 14-7 21-21 21 14 0 21 7 21 21 0-14 7-21 21-21-14 0-21-7-21-21Z" stroke="currentColor" stroke-width="1.5"/></svg>
-  <img class="story-scene-sticker" src="images/xiaozhu-brand/avatar-reading-pig.png" width="512" height="512" loading="lazy" alt="" aria-hidden="true">
+  <img class="story-scene-sticker" alt="" aria-hidden="true" src="images/web/6e20cca2315e-160.webp" width="160" height="160" decoding="async" loading="lazy">
   <div class="story-scene-note" aria-hidden="true">Keep wondering.<span>ALWAYS DAY ONE</span></div>
 </div>
 </a></section>
@@ -1369,20 +1371,20 @@
   <div class="modal-body">
     <div class="modal-sec"><span data-lang="en" class="show">📖 Books</span><span data-lang="fr">📖 Livres</span><span data-lang="es">📖 Libros</span><span data-lang="zh">📖 书籍</span></div>
     <div class="media-grid">
-      <div class="media-card"><img src="images/东京八平米.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">東京八平米</div></div></div>
-      <div class="media-card"><img src="images/献给阿尔吉侬的花束.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Flowers for Algernon</div></div></div>
-      <div class="media-card"><img src="images/西西弗斯神话.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Le Mythe de Sisyphe</div></div></div>
-      <div class="media-card"><img src="images/1984.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">1984</div></div></div>
-      <div class="media-card"><img src="images/像水一样吧朋友.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Be Water, My Friend</div></div></div>
-      <div class="media-card"><img src="images/置身事内.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">置身事内</div></div></div>
-      <div class="media-card"><img src="images/刺猬的优雅.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Le Hérisson</div></div></div>
-      <div class="media-card"><img src="images/因果报应.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">因果报应</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/4428a071faf6-270.webp" width="270" height="357" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">東京八平米</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/b158279e5048-270.webp" width="270" height="390" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Flowers for Algernon</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/259ad4a5303c-270.webp" width="270" height="382" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Le Mythe de Sisyphe</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/9a40850396cb-270.webp" width="270" height="405" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">1984</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/d7200468e8d9-270.webp" width="270" height="396" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Be Water, My Friend</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/e4699d89f087-270.webp" width="270" height="395" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">置身事内</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/1252b39bdff2-270.webp" width="270" height="366" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Le Hérisson</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/e9694657d709-270.webp" width="270" height="405" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">因果报应</div></div></div>
     </div>
     <div class="modal-sec" style="margin-top:28px;"><span data-lang="en" class="show">🎙️ Podcasts</span><span data-lang="fr">🎙️ Podcasts</span><span data-lang="es">🎙️ Podcasts</span><span data-lang="zh">🎙️ 播客</span></div>
-    <div class="podcast-item"><img src="images/十字路口 Crossing.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">十字路口 Crossing</div><div class="podcast-desc"><span data-lang="en" class="show">Cross-cultural perspectives on China and the world</span><span data-lang="fr">Perspectives transculturelles sur la Chine et le monde</span><span data-lang="es">Perspectivas interculturales sobre China y el mundo</span><span data-lang="zh">从文化差异聊中国，也聊世界</span></div></div></div>
-    <div class="podcast-item"><img src="images/独树不成林.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">独树不成林</div><div class="podcast-desc"><span data-lang="en" class="show">Literary conversations beyond the mainstream</span><span data-lang="fr">Conversations littéraires hors des sentiers battus</span><span data-lang="es">Conversaciones literarias fuera de lo común</span><span data-lang="zh">主流之外，认真聊文学</span></div></div></div>
-    <div class="podcast-item"><img src="images/张小珺商业访谈录.jpg" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">张小珺商业访谈录</div><div class="podcast-desc"><span data-lang="en" class="show">In-depth business interviews with Chinese entrepreneurs</span><span data-lang="fr">Entretiens approfondis avec des entrepreneurs chinois</span><span data-lang="es">Entrevistas empresariales con emprendedores chinos</span><span data-lang="zh">和中国创业者坐下来聊透一件事</span></div></div></div>
-    <div class="podcast-item"><img src="images/AI&I.png" class="podcast-img" onerror="this.style.display='none'"><div><div class="podcast-name">AI&I</div><div class="podcast-desc"><span data-lang="en" class="show">Exploring the intersection of AI and human identity</span><span data-lang="fr">Explorer l'intersection entre l'IA et l'identité humaine</span><span data-lang="es">Explorando la intersección entre IA e identidad humana</span><span data-lang="zh">AI 变得越来越像人时，我们怎么理解自己</span></div></div></div>
+    <div class="podcast-item"><img class="podcast-img" onerror="this.style.display='none'" data-modal-src="images/web/c161ff0f1a88-160.webp" width="160" height="160" decoding="async" loading="lazy"><div><div class="podcast-name">十字路口 Crossing</div><div class="podcast-desc"><span data-lang="en" class="show">Cross-cultural perspectives on China and the world</span><span data-lang="fr">Perspectives transculturelles sur la Chine et le monde</span><span data-lang="es">Perspectivas interculturales sobre China y el mundo</span><span data-lang="zh">从文化差异聊中国，也聊世界</span></div></div></div>
+    <div class="podcast-item"><img class="podcast-img" onerror="this.style.display='none'" data-modal-src="images/web/8eaeaea4f9b7-160.webp" width="160" height="160" decoding="async" loading="lazy"><div><div class="podcast-name">独树不成林</div><div class="podcast-desc"><span data-lang="en" class="show">Literary conversations beyond the mainstream</span><span data-lang="fr">Conversations littéraires hors des sentiers battus</span><span data-lang="es">Conversaciones literarias fuera de lo común</span><span data-lang="zh">主流之外，认真聊文学</span></div></div></div>
+    <div class="podcast-item"><img class="podcast-img" onerror="this.style.display='none'" data-modal-src="images/web/4cc49b8611d4-160.webp" width="160" height="160" decoding="async" loading="lazy"><div><div class="podcast-name">张小珺商业访谈录</div><div class="podcast-desc"><span data-lang="en" class="show">In-depth business interviews with Chinese entrepreneurs</span><span data-lang="fr">Entretiens approfondis avec des entrepreneurs chinois</span><span data-lang="es">Entrevistas empresariales con emprendedores chinos</span><span data-lang="zh">和中国创业者坐下来聊透一件事</span></div></div></div>
+    <div class="podcast-item"><img class="podcast-img" onerror="this.style.display='none'" data-modal-src="images/web/1d3a23aaeaa5-160.webp" width="160" height="160" decoding="async" loading="lazy"><div><div class="podcast-name">AI&I</div><div class="podcast-desc"><span data-lang="en" class="show">Exploring the intersection of AI and human identity</span><span data-lang="fr">Explorer l'intersection entre l'IA et l'identité humaine</span><span data-lang="es">Explorando la intersección entre IA e identidad humana</span><span data-lang="zh">AI 变得越来越像人时，我们怎么理解自己</span></div></div></div>
   </div>
 </div>
 
@@ -1391,14 +1393,14 @@
   <div class="modal-header"><div class="modal-title">🎬 <span data-lang="en" class="show">Films & Series</span><span data-lang="fr">Cinéma & Séries</span><span data-lang="es">Cine y Series</span><span data-lang="zh">电影与剧集</span></div><button class="modal-close" onclick="closeAllModals()">✕</button></div>
   <div class="modal-body">
     <div class="media-grid">
-      <div class="media-card featured"><img src="images/传奇办公室.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Le Bureau des Légendes</div><div class="media-tag">⭐ Favourite</div></div></div>
-      <div class="media-card"><img src="images/纸牌屋.jpeg" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">House of Cards</div></div></div>
-      <div class="media-card"><img src="images/黎明的一切.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">夜明けのすべて</div></div></div>
-      <div class="media-card"><img src="images/刺猬的优雅.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Le Hérisson</div></div></div>
-      <div class="media-card"><img src="images/百分之十.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Dix Pour Cent</div></div></div>
-      <div class="media-card"><img src="images/因果报应.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Maharaja</div></div></div>
-      <div class="media-card"><img src="images/筋疲力尽.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">À bout de souffle</div></div></div>
-      <div class="media-card"><img src="images/坠落的审判.png" onerror="this.style.display='none'"><div class="media-info"><div class="media-info-title">Anatomie d'une chute</div></div></div>
+      <div class="media-card featured"><img onerror="this.style.display='none'" data-modal-src="images/web/982734314096-270.webp" width="270" height="397" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Le Bureau des Légendes</div><div class="media-tag">⭐ Favourite</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/44514de908c6-400.webp" width="400" height="593" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">House of Cards</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/0f3999a89531-270.webp" width="270" height="382" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">夜明けのすべて</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/1252b39bdff2-270.webp" width="270" height="366" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Le Hérisson</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/19ee2e122409-270.webp" width="270" height="359" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Dix Pour Cent</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/e9694657d709-270.webp" width="270" height="405" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Maharaja</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/94eeb5a74230-400.webp" width="400" height="533" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">À bout de souffle</div></div></div>
+      <div class="media-card"><img onerror="this.style.display='none'" data-modal-src="images/web/e38ea8334f05-400.webp" width="400" height="545" decoding="async" loading="lazy"><div class="media-info"><div class="media-info-title">Anatomie d'une chute</div></div></div>
     </div>
   </div>
 </div>
@@ -1408,9 +1410,9 @@
   <div class="modal-header"><div class="modal-title">🏀 <span data-lang="en" class="show">Basketball & Running</span><span data-lang="fr">Basket & Course</span><span data-lang="es">Baloncesto y Running</span><span data-lang="zh">篮球与跑步</span></div><button class="modal-close" onclick="closeAllModals()">✕</button></div>
   <div class="modal-body">
     <div class="photo-grid">
-      <div class="photo-grid-item"><img src="images/篮球.jpg" alt="Basketball"><div class="photo-label">🏀 Basketball</div></div>
-      <div class="photo-grid-item"><img src="images/跑步.jpg" alt="Running"><div class="photo-label">🏃 Running</div></div>
-      <div class="photo-grid-item"><img src="images/合照.png" alt="Team photo"><div class="photo-label">👥 Team</div></div>
+      <div class="photo-grid-item"><img alt="Basketball" data-modal-src="images/web/66c4a64eea45-800.webp" width="800" height="600" decoding="async" loading="lazy" data-modal-srcset="images/web/66c4a64eea45-400.webp 400w, images/web/66c4a64eea45-800.webp 800w, images/web/66c4a64eea45-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">🏀 Basketball</div></div>
+      <div class="photo-grid-item"><img alt="Running" data-modal-src="images/web/54ef05583aa0-800.webp" width="800" height="550" decoding="async" loading="lazy" data-modal-srcset="images/web/54ef05583aa0-400.webp 400w, images/web/54ef05583aa0-800.webp 800w, images/web/54ef05583aa0-1080.webp 1080w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">🏃 Running</div></div>
+      <div class="photo-grid-item"><img alt="Team photo" data-modal-src="images/web/6e8da13a2077-800.webp" width="800" height="534" decoding="async" loading="lazy" data-modal-srcset="images/web/6e8da13a2077-400.webp 400w, images/web/6e8da13a2077-800.webp 800w, images/web/6e8da13a2077-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">👥 Team</div></div>
     </div>
   </div>
 </div>
@@ -1420,12 +1422,12 @@
   <div class="modal-header"><div class="modal-title">✈️ <span data-lang="en" class="show">Travel</span><span data-lang="fr">Voyages</span><span data-lang="es">Viajes</span><span data-lang="zh">旅行</span></div><button class="modal-close" onclick="closeAllModals()">✕</button></div>
   <div class="modal-body">
     <div class="photo-grid">
-      <div class="photo-grid-item"><img src="images/阿姆斯特丹.jpg" alt="Amsterdam"><div class="photo-label">📍 Amsterdam</div></div>
-      <div class="photo-grid-item"><img src="images/布达佩斯.jpg" alt="Budapest"><div class="photo-label">📍 Budapest</div></div>
-      <div class="photo-grid-item"><img src="images/梵蒂冈.jpg" alt="Vatican"><div class="photo-label">📍 Vatican</div></div>
-      <div class="photo-grid-item"><img src="images/捷克.jpg" alt="Czech Republic"><div class="photo-label">📍 Czech Republic</div></div>
-      <div class="photo-grid-item"><img src="images/挪威.jpg" alt="Norway"><div class="photo-label">📍 Norway</div></div>
-      <div class="photo-grid-item"><img src="images/瑞士.jpg" alt="Switzerland"><div class="photo-label">📍 Switzerland</div></div>
+      <div class="photo-grid-item"><img alt="Amsterdam" data-modal-src="images/web/be48c97a5125-800.webp" width="800" height="600" decoding="async" loading="lazy" data-modal-srcset="images/web/be48c97a5125-400.webp 400w, images/web/be48c97a5125-800.webp 800w, images/web/be48c97a5125-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Amsterdam</div></div>
+      <div class="photo-grid-item"><img alt="Budapest" data-modal-src="images/web/4a99a3dd6722-800.webp" width="800" height="600" decoding="async" loading="lazy" data-modal-srcset="images/web/4a99a3dd6722-400.webp 400w, images/web/4a99a3dd6722-800.webp 800w, images/web/4a99a3dd6722-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Budapest</div></div>
+      <div class="photo-grid-item"><img alt="Vatican" data-modal-src="images/web/7968408f6875-800.webp" width="800" height="1067" decoding="async" loading="lazy" data-modal-srcset="images/web/7968408f6875-400.webp 400w, images/web/7968408f6875-800.webp 800w, images/web/7968408f6875-1080.webp 1080w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Vatican</div></div>
+      <div class="photo-grid-item"><img alt="Czech Republic" data-modal-src="images/web/95f482e7a80e-800.webp" width="800" height="1067" decoding="async" loading="lazy" data-modal-srcset="images/web/95f482e7a80e-400.webp 400w, images/web/95f482e7a80e-800.webp 800w, images/web/95f482e7a80e-1080.webp 1080w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Czech Republic</div></div>
+      <div class="photo-grid-item"><img alt="Norway" data-modal-src="images/web/a11f415b67d3-800.webp" width="800" height="600" decoding="async" loading="lazy" data-modal-srcset="images/web/a11f415b67d3-400.webp 400w, images/web/a11f415b67d3-800.webp 800w, images/web/a11f415b67d3-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Norway</div></div>
+      <div class="photo-grid-item"><img alt="Switzerland" data-modal-src="images/web/2f7469959f73-800.webp" width="800" height="1067" decoding="async" loading="lazy" data-modal-srcset="images/web/2f7469959f73-400.webp 400w, images/web/2f7469959f73-800.webp 800w, images/web/2f7469959f73-1200.webp 1200w" sizes="(max-width: 600px) 60vw, 420px"><div class="photo-label">📍 Switzerland</div></div>
     </div>
   </div>
 </div>
@@ -1434,7 +1436,7 @@
 <div id="modal-bytedance-rec" class="life-modal">
   <div class="modal-header"><div class="modal-title">📄 <span data-lang="en" class="show">Recommendation Letter — ByteDance</span><span data-lang="fr">Lettre de recommandation — ByteDance</span><span data-lang="es">Carta de recomendación — ByteDance</span><span data-lang="zh">推荐信 · 字节跳动</span></div><button class="modal-close" onclick="closeAllModals()">✕</button></div>
   <div class="modal-body" style="text-align:center;">
-    <div class="rec-img-wrap"><a href="images/bytedance1.jpeg" target="_blank"><img src="images/bytedance1.jpeg" alt="ByteDance recommendation"></a></div>
+    <div class="rec-img-wrap"><a href="images/bytedance1.jpeg" target="_blank"><img alt="ByteDance recommendation" data-modal-src="images/web/64132b292ab9-876.webp" width="876" height="1280" decoding="async" loading="lazy" data-modal-srcset="images/web/64132b292ab9-400.webp 400w, images/web/64132b292ab9-800.webp 800w, images/web/64132b292ab9-876.webp 876w" sizes="(max-width: 600px) 90vw, 650px"></a></div>
     <p style="font-size:0.8rem;color:var(--muted);"><span data-lang="en" class="show">Click image to view full size</span><span data-lang="fr">Cliquez sur l'image pour voir en taille réelle</span><span data-lang="es">Haz clic en la imagen para verla en tamaño completo</span><span data-lang="zh">点击图片查看原图</span></p>
   </div>
 </div>
@@ -1443,8 +1445,8 @@
 <div id="modal-alliance-rec" class="life-modal">
   <div class="modal-header"><div class="modal-title">📄 <span data-lang="en" class="show">Recommendation Letters — Alliance Française</span><span data-lang="fr">Lettres de recommandation — Alliance Française</span><span data-lang="es">Cartas de recomendación — Alliance Française</span><span data-lang="zh">推荐信 · 成都法语联盟</span></div><button class="modal-close" onclick="closeAllModals()">✕</button></div>
   <div class="modal-body" style="text-align:center;">
-    <div class="rec-img-wrap"><a href="images/alliancefranciase1.jpeg" target="_blank"><img src="images/alliancefranciase1.jpeg" alt="Alliance rec 1"></a></div>
-    <div class="rec-img-wrap"><a href="images/alliancefranciase2.jpeg" target="_blank"><img src="images/alliancefranciase2.jpeg" alt="Alliance Française recommendation letter 2"></a></div>
+    <div class="rec-img-wrap"><a href="images/alliancefranciase1.jpeg" target="_blank"><img alt="Alliance rec 1" data-modal-src="images/web/a9c0ed3162cf-989.webp" width="989" height="1280" decoding="async" loading="lazy" data-modal-srcset="images/web/a9c0ed3162cf-400.webp 400w, images/web/a9c0ed3162cf-800.webp 800w, images/web/a9c0ed3162cf-989.webp 989w" sizes="(max-width: 600px) 90vw, 650px"></a></div>
+    <div class="rec-img-wrap"><a href="images/alliancefranciase2.jpeg" target="_blank"><img alt="Alliance Française recommendation letter 2" data-modal-src="images/web/049110743366-1200.webp" width="1200" height="1729" decoding="async" loading="lazy" data-modal-srcset="images/web/049110743366-400.webp 400w, images/web/049110743366-800.webp 800w, images/web/049110743366-1200.webp 1200w" sizes="(max-width: 600px) 90vw, 650px"></a></div>
     <p style="font-size:0.8rem;color:var(--muted);"><span data-lang="en" class="show">Click images to view full size</span><span data-lang="fr">Cliquez sur les images pour voir en taille réelle</span><span data-lang="es">Haz clic en las imágenes para verlas en tamaño completo</span><span data-lang="zh">点击图片查看原图</span></p>
   </div>
 </div>
@@ -1634,6 +1636,11 @@
     document.getElementById('modal-overlay').classList.add('open');
     const panel = document.getElementById(id);
     panel.classList.add('open');
+    panel.querySelectorAll('[data-modal-src]').forEach(image => {
+      if(image.dataset.modalSrcset) { image.srcset=image.dataset.modalSrcset; delete image.dataset.modalSrcset; }
+      image.src=image.dataset.modalSrc;
+      delete image.dataset.modalSrc;
+    });
     requestAnimationFrame(() => panel.querySelector('button, a[href]')?.focus());
     document.body.style.overflow = 'hidden';
   }
@@ -1668,12 +1675,12 @@
 </script>
 <script src="assets/navigation.js?v=4"></script>
 <script src="assets/interactions.js?v=3"></script>
-<script src="assets/home-personality.js?v=9"></script>
+<script src="assets/home-personality.js?v=10"></script>
 <script src="assets/home-language-layout.js?v=6"></script>
 <script src="assets/vendor/leaflet.js"></script>
-<script src="assets/journey.js?v=13"></script>
+<script src="assets/journey.js?v=14"></script>
 <script src="assets/home-motion.js?v=3"></script>
-<script src="assets/book-transition.js?v=7"></script>
+<script src="assets/book-transition.js?v=8"></script>
 <script src="assets/music.js?v=12" data-audio-src="assets/audio/sunflower.mp3"></script>
 </body>
 </html>
