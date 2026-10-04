@@ -396,15 +396,6 @@
         160,
         400
       ]
-    },
-    {
-      "source": "images/station/orbital-library-comic-source.png",
-      "widths": [
-        640,
-        1120,
-        1440
-      ],
-      "quality": 80
     }
   ]
 }

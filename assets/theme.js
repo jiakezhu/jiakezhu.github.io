@@ -17,13 +17,11 @@
     const button = document.createElement('button');
     button.className = 'theme-toggle';
     button.type = 'button';
-    const labels={en:['Switch to dark theme','Switch to light theme'],zh:['切换深色主题','切换浅色主题'],fr:['Passer au thème sombre','Passer au thème clair'],es:['Cambiar al tema oscuro','Cambiar al tema claro']};
     function refresh() {
       const light = document.documentElement.dataset.theme === 'light';
       button.textContent = light ? '☾' : '☀';
-      const label=(labels[document.documentElement.lang]||labels.en)[light?0:1];
-      button.setAttribute('aria-label',label);
-      button.setAttribute('title',label);
+      button.setAttribute('aria-label', light ? '切换深色主题 / Dark theme' : '切换浅色主题 / Light theme');
+      button.setAttribute('title', light ? '深色 / Dark' : '浅色 / Light');
     }
     button.addEventListener('click', () => {
       const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
@@ -34,7 +32,6 @@
     const tools = nav.querySelector('.nav-tools');
     if (tools) tools.append(button);
     else nav.insertBefore(button, nav.querySelector('.nav-menu-button'));
-    document.addEventListener('jiake:languagechange',refresh);
     refresh();
   });
 })();

@@ -118,7 +118,6 @@
 
   // Lightweight ambient constellation, paused offscreen and in background tabs.
   const hero=document.getElementById('hero'),canvas=document.getElementById('hero-canvas');
-  if(!hero||!canvas)return;
   const ctx=canvas.getContext('2d');if(!ctx)return;
   let width=0,height=0,points=[],animation=0,visible=true,lastTime=0;
   const pointer={x:-1000,y:-1000};

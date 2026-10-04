@@ -61,8 +61,7 @@
   }
   function loadData(){
     if(window.JIAKE_ATLAS_DATA)return Promise.resolve(window.JIAKE_ATLAS_DATA);
-    if(window.JIAKE_ATLAS_LOADING)return window.JIAKE_ATLAS_LOADING;
-    return window.JIAKE_ATLAS_LOADING=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=2',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
+    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=2',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
   }
   function styleCountry(feature){const p=palette(),seen=visited.has(feature.properties.iso)||feature.properties.iso==='TWN';return {color:seen?p.sage:p.muted,weight:seen?1.1:.55,opacity:seen?.85:.3,fillColor:seen?p.sage:p.muted,fillOpacity:seen?.3:.07};}
   function styleProvince(){return {color:palette().sage,weight:.7,opacity:.35,fillOpacity:0};}
@@ -99,8 +98,6 @@
     selected=name;postcard();await init();const item=pins.get(name)||allPoints().find(p=>p.label===name);
     if(map&&item){const point=item.point||item;if(view!=='world'&&point.region!==view)await switchView(point.region);if(zoom)map.flyTo([point.lat,point.lng],point.milestone?5:6,{animate:!reduced.matches,duration:.8});pins.forEach(({pin},label)=>{pin.getElement()?.classList.toggle('is-selected',label===name);if(label!==name)pin.closeTooltip();});pins.get(name)?.pin.openTooltip();}
     postcard();
-    const point=item?.point||item;
-    if(point?.lat!==undefined)document.dispatchEvent(new CustomEvent('jiake:placechange',{detail:{label:name,lat:point.lat,lng:point.lng}}));
   }
   async function switchView(next){if(!['world','china','europe'].includes(next))return;view=next;section.querySelectorAll('.map-tab-btn').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-pressed',String(b.dataset.view===view));});updateLabels();await init();if(provinces&&map){if(view==='china')provinces.addTo(map);else map.removeLayer(provinces);}redrawPins();reset();}
   section.querySelectorAll('.map-tab-btn').forEach(b=>b.addEventListener('click',()=>switchView(b.dataset.view)));

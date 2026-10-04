@@ -41,7 +41,7 @@ test('first-screen images including the intro stay below 450 KB at the largest r
 
 test('hidden intro and modal pictures have no image source before the visitor opens them',()=>{
   const deferred=tags.filter(tag=>attribute(tag,'data-intro-src')||attribute(tag,'data-modal-src'));
-  assert.equal(deferred.length,32);
+  assert.equal(deferred.length,50);
   for(const tag of deferred) {
     assert(!attribute(tag,'src'),tag);
     assert(!attribute(tag,'srcset'),tag);

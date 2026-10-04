@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html.intro-pending { overflow:hidden; background:#080f1b; }
-    html.intro-pending::before { content:""; position:fixed; inset:0; z-index:2147483646; background:#080f1b; }
-    html.intro-pending::after { content:"Jiake ZHU."; position:fixed; inset:0; z-index:2147483646; display:grid; place-items:center; color:#fff0d4; font:850 clamp(3rem,8vw,7rem)/1 Nunito,Arial,sans-serif; letter-spacing:-.055em; }
+    html.intro-pending { overflow:hidden; background:#151719; }
+    html.intro-pending::before { content:""; position:fixed; inset:0; z-index:2147483646; background:#151719; }
+    html.intro-pending::after { content:"Jiake ZHU."; position:fixed; inset:0; z-index:2147483646; display:grid; place-items:center; color:#f3f0e9; font:800 clamp(3rem,8vw,7rem)/1 system-ui,sans-serif; letter-spacing:-.055em; }
   </style>
   <script id="home-bootstrap">
     (() => {
@@ -18,7 +18,7 @@
       if(languages.includes(requested)) language=requested;
       root.lang=language;
       let seen=false;
-      try { seen=sessionStorage.getItem('jiake-intro-seen-v10')==='1'; } catch {}
+      try { seen=sessionStorage.getItem('jiake-intro-seen-v9')==='1'; } catch {}
       const introPending=!seen&&!location.hash&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&typeof HTMLDialogElement!=='undefined'&&'showModal' in HTMLDialogElement.prototype;
       let timer;
       const boot=window.JIAKE_HOME_BOOT={language,introPending,releaseIntro(){
@@ -33,7 +33,7 @@
       }
     })();
   </script>
-  <link rel="preload" as="image" type="image/webp" href="images/web/f6716f50e5ef-1120.webp" imagesrcset="images/web/f6716f50e5ef-640.webp 640w, images/web/f6716f50e5ef-1120.webp 1120w, images/web/f6716f50e5ef-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="images/web/8bd883eb83b8-800.webp" imagesrcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" imagesizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px" fetchpriority="high">
   <template id="__bundler_thumbnail" data-bg-color="#151719">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="800" fill="#151719"/>
@@ -701,28 +701,70 @@
     }
   </style>
   <link rel="stylesheet" href="assets/vendor/leaflet.css"/>
-  <script src="assets/theme.js?v=6"></script>
+  <script src="assets/theme.js?v=5"></script>
   <link rel="stylesheet" href="assets/refinement.css?v=3">
   <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/orbital-intro.css?v=1">
+  <link rel="stylesheet" href="assets/intro.css?v=9">
   <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/book-transition.css?v=5"><link rel="stylesheet" href="assets/home-v3.css?v=23"><link rel="stylesheet" href="assets/journey.css?v=8"><link rel="stylesheet" href="assets/story-entrance.css?v=1">
   <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/home-classic.css?v=7">
-  <link rel="stylesheet" href="assets/orbital.css?v=1"><link rel="stylesheet" href="assets/orbital-comic.css?v=1">
 </head>
-<body class="portfolio-page orbital-theme orbital-home">
+<body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
-<dialog id="site-intro" class="site-intro" aria-label="Welcome aboard / 欢迎登站">
-  <div class="intro-backdrop" aria-hidden="true"></div><div class="intro-aperture" aria-hidden="true"></div>
-  <div class="intro-top"><span>JZ / ORBITAL LIBRARY</span><span>ALWAYS DAY ONE.</span></div>
+<dialog id="site-intro" class="site-intro" aria-label="开场动画 / Welcome animation">
+  <div class="intro-backdrop" aria-hidden="true"><div class="intro-grid"></div><div class="intro-orbit"></div></div>
+  <div class="intro-shockwave" aria-hidden="true"></div>
+  <div class="intro-hellos" aria-hidden="true">
+    <div class="intro-hello-row"><span lang="zh" dir="auto">你好</span><span lang="de" dir="auto">Hallo</span><span lang="hi" dir="auto">नमस्ते</span><span lang="vi" dir="auto">Xin chào</span><span lang="id" dir="auto">Halo</span><span lang="haw" dir="auto">Aloha</span><span lang="nl" dir="auto">Hallo</span><span lang="zu" dir="auto">Sawubona</span><span lang="ja" dir="auto">こんにちは</span><span lang="pt" dir="auto">Olá</span><span lang="tr" dir="auto">Merhaba</span><span lang="hu" dir="auto">Szia</span></div>
+    <div class="intro-hello-row"><span lang="ru" dir="auto">Привет</span><span lang="pl" dir="auto">Cześć</span><span lang="sv" dir="auto">Hej</span><span lang="sw" dir="auto">Jambo</span><span lang="da" dir="auto">Hej</span><span lang="zh" dir="auto">你好</span><span lang="de" dir="auto">Hallo</span><span lang="hi" dir="auto">नमस्ते</span><span lang="vi" dir="auto">Xin chào</span><span lang="id" dir="auto">Halo</span><span lang="haw" dir="auto">Aloha</span><span lang="nl" dir="auto">Hallo</span></div>
+    <div class="intro-hello-row"><span lang="fi" dir="auto">Hei</span><span lang="tl" dir="auto">Kumusta</span><span lang="no" dir="auto">Hei</span><span lang="en" dir="auto">Hello</span><span lang="ar" dir="auto">مرحبا</span><span lang="ru" dir="auto">Привет</span><span lang="pl" dir="auto">Cześć</span><span lang="sv" dir="auto">Hej</span><span lang="sw" dir="auto">Jambo</span><span lang="da" dir="auto">Hej</span><span lang="zh" dir="auto">你好</span><span lang="de" dir="auto">Hallo</span></div>
+    <div class="intro-hello-row"><span lang="bn" dir="auto">নমস্কার</span><span lang="fr" dir="auto">Bonjour</span><span lang="it" dir="auto">Ciao</span><span lang="el" dir="auto">Γεια σου</span><span lang="th" dir="auto">สวัสดี</span><span lang="fi" dir="auto">Hei</span><span lang="tl" dir="auto">Kumusta</span><span lang="no" dir="auto">Hei</span><span lang="en" dir="auto">Hello</span><span lang="ar" dir="auto">مرحبا</span><span lang="ru" dir="auto">Привет</span><span lang="pl" dir="auto">Cześć</span></div>
+    <div class="intro-hello-row"><span lang="ko" dir="auto">안녕하세요</span><span lang="he" dir="auto">שלום</span><span lang="cs" dir="auto">Ahoj</span><span lang="uk" dir="auto">Привіт</span><span lang="fa" dir="auto">سلام</span><span lang="bn" dir="auto">নমস্কার</span><span lang="fr" dir="auto">Bonjour</span><span lang="it" dir="auto">Ciao</span><span lang="el" dir="auto">Γεια σου</span><span lang="th" dir="auto">สวัสดี</span><span lang="fi" dir="auto">Hei</span><span lang="tl" dir="auto">Kumusta</span></div>
+    <div class="intro-hello-row"><span lang="hu" dir="auto">Szia</span><span lang="mi" dir="auto">Kia ora</span><span lang="ro" dir="auto">Salut</span><span lang="ta" dir="auto">வணக்கம்</span><span lang="es" dir="auto">Hola</span><span lang="ko" dir="auto">안녕하세요</span><span lang="he" dir="auto">שלום</span><span lang="cs" dir="auto">Ahoj</span><span lang="uk" dir="auto">Привіт</span><span lang="fa" dir="auto">سلام</span><span lang="bn" dir="auto">নমস্কার</span><span lang="fr" dir="auto">Bonjour</span></div>
+    <div class="intro-hello-row"><span lang="nl" dir="auto">Hallo</span><span lang="zu" dir="auto">Sawubona</span><span lang="ja" dir="auto">こんにちは</span><span lang="pt" dir="auto">Olá</span><span lang="tr" dir="auto">Merhaba</span><span lang="hu" dir="auto">Szia</span><span lang="mi" dir="auto">Kia ora</span><span lang="ro" dir="auto">Salut</span><span lang="ta" dir="auto">வணக்கம்</span><span lang="es" dir="auto">Hola</span><span lang="ko" dir="auto">안녕하세요</span><span lang="he" dir="auto">שלום</span></div>
+    <div class="intro-hello-row"><span lang="de" dir="auto">Hallo</span><span lang="hi" dir="auto">नमस्ते</span><span lang="vi" dir="auto">Xin chào</span><span lang="id" dir="auto">Halo</span><span lang="haw" dir="auto">Aloha</span><span lang="nl" dir="auto">Hallo</span><span lang="zu" dir="auto">Sawubona</span><span lang="ja" dir="auto">こんにちは</span><span lang="pt" dir="auto">Olá</span><span lang="tr" dir="auto">Merhaba</span><span lang="hu" dir="auto">Szia</span><span lang="mi" dir="auto">Kia ora</span></div>
+    <div class="intro-hello-row"><span lang="pl" dir="auto">Cześć</span><span lang="sv" dir="auto">Hej</span><span lang="sw" dir="auto">Jambo</span><span lang="da" dir="auto">Hej</span><span lang="zh" dir="auto">你好</span><span lang="de" dir="auto">Hallo</span><span lang="hi" dir="auto">नमस्ते</span><span lang="vi" dir="auto">Xin chào</span><span lang="id" dir="auto">Halo</span><span lang="haw" dir="auto">Aloha</span><span lang="nl" dir="auto">Hallo</span><span lang="zu" dir="auto">Sawubona</span></div>
+    <div class="intro-hello-row"><span lang="tl" dir="auto">Kumusta</span><span lang="no" dir="auto">Hei</span><span lang="en" dir="auto">Hello</span><span lang="ar" dir="auto">مرحبا</span><span lang="ru" dir="auto">Привет</span><span lang="pl" dir="auto">Cześć</span><span lang="sv" dir="auto">Hej</span><span lang="sw" dir="auto">Jambo</span><span lang="da" dir="auto">Hej</span><span lang="zh" dir="auto">你好</span><span lang="de" dir="auto">Hallo</span><span lang="hi" dir="auto">नमस्ते</span></div>
+    <div class="intro-hello-row"><span lang="fr" dir="auto">Bonjour</span><span lang="it" dir="auto">Ciao</span><span lang="el" dir="auto">Γεια σου</span><span lang="th" dir="auto">สวัสดี</span><span lang="fi" dir="auto">Hei</span><span lang="tl" dir="auto">Kumusta</span><span lang="no" dir="auto">Hei</span><span lang="en" dir="auto">Hello</span><span lang="ar" dir="auto">مرحبا</span><span lang="ru" dir="auto">Привет</span><span lang="pl" dir="auto">Cześć</span><span lang="sv" dir="auto">Hej</span></div>
+    <div class="intro-hello-row"><span lang="he" dir="auto">שלום</span><span lang="cs" dir="auto">Ahoj</span><span lang="uk" dir="auto">Привіт</span><span lang="fa" dir="auto">سلام</span><span lang="bn" dir="auto">নমস্কার</span><span lang="fr" dir="auto">Bonjour</span><span lang="it" dir="auto">Ciao</span><span lang="el" dir="auto">Γεια σου</span><span lang="th" dir="auto">สวัสดี</span><span lang="fi" dir="auto">Hei</span><span lang="tl" dir="auto">Kumusta</span><span lang="no" dir="auto">Hei</span></div>
+    <div class="intro-hello-row"><span lang="mi" dir="auto">Kia ora</span><span lang="ro" dir="auto">Salut</span><span lang="ta" dir="auto">வணக்கம்</span><span lang="es" dir="auto">Hola</span><span lang="ko" dir="auto">안녕하세요</span><span lang="he" dir="auto">שלום</span><span lang="cs" dir="auto">Ahoj</span><span lang="uk" dir="auto">Привіт</span><span lang="fa" dir="auto">سلام</span><span lang="bn" dir="auto">নমস্কার</span><span lang="fr" dir="auto">Bonjour</span><span lang="it" dir="auto">Ciao</span></div>
+    <div class="intro-hello-row"><span lang="zu" dir="auto">Sawubona</span><span lang="ja" dir="auto">こんにちは</span><span lang="pt" dir="auto">Olá</span><span lang="tr" dir="auto">Merhaba</span><span lang="hu" dir="auto">Szia</span><span lang="mi" dir="auto">Kia ora</span><span lang="ro" dir="auto">Salut</span><span lang="ta" dir="auto">வணக்கம்</span><span lang="es" dir="auto">Hola</span><span lang="ko" dir="auto">안녕하세요</span><span lang="he" dir="auto">שלום</span><span lang="cs" dir="auto">Ahoj</span></div>
+  </div>
+  <div class="intro-top"><span>JZ / PERSONAL WEBSITE</span><span>A LITTLE OF MY WORLD.</span></div>
   <div class="intro-stage">
-    <div class="intro-title"><span><span class="il en show">WELCOME ABOARD</span><span class="il zh">欢迎登站</span><span class="il fr">BIENVENUE À BORD</span><span class="il es">BIENVENIDO A BORDO</span></span>Jiake ZHU.</div>
-    <div class="intro-greetings" aria-hidden="true"><span lang="zh">你好</span><span lang="en">Hello</span><span lang="fr">Bonjour</span><span lang="es">Hola</span></div>
-    <div class="intro-credo"><p>Always <em>Day One.</em></p><small><span class="il en show">A world still opening.</span><span class="il zh">世界，仍在向我展开。</span><span class="il fr">Un monde qui s’ouvre encore.</span><span class="il es">Un mundo que sigue abriéndose.</span></small></div>
+    <div class="intro-portrait">
+      <div class="intro-identity">
+        <div class="intro-title" aria-label="Jiake ZHU"><div class="intro-word"><span>J</span><span>i</span><span>a</span><span>k</span><span>e</span></div><div class="intro-word intro-word--last"><span>Z</span><span>H</span><span>U</span><span class="intro-period">.</span></div></div>
+      </div>
+    </div>
+    <div class="intro-collage" aria-hidden="true">
+        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><img alt="" data-intro-src="images/web/be48c97a5125-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><img alt="" data-intro-src="images/web/cd8312dc7864-400.webp" width="400" height="225" decoding="async" loading="eager"><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><img alt="" data-intro-src="images/web/a11f415b67d3-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><img alt="" data-intro-src="images/web/66c4a64eea45-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>LIFE / ON THE COURT</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><img alt="" data-intro-src="images/web/2f7469959f73-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><img alt="" data-intro-src="images/web/8bd883eb83b8-400.webp" width="400" height="338" decoding="async" loading="eager"><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--paris intro-fragment--badge"><img alt="" data-intro-src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--swufe intro-fragment--badge"><img alt="" data-intro-src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--zjsu intro-fragment--badge"><img alt="" data-intro-src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--tencent intro-fragment--wordmark"><img alt="" data-intro-src="images/web/4bd9c7b576d1-160.webp" width="160" height="48" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--lingo intro-fragment--app"><img alt="" data-intro-src="images/web/ae9c3e3303cb-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--orbit intro-fragment--app"><img alt="" data-intro-src="images/web/8646e4f7ea6c-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><img alt="" data-intro-src="images/web/95f482e7a80e-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><img alt="" data-intro-src="images/web/4a99a3dd6722-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--bytedance intro-fragment--badge"><img alt="" data-intro-src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--alliance intro-fragment--badge"><img alt="" data-intro-src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--feishu intro-fragment--app"><img alt="" data-intro-src="images/web/4a98ccad9a72-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+        <figure class="intro-fragment intro-fragment--travel intro-fragment--app"><img alt="" data-intro-src="images/web/9bb764f5d19a-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
+    </div>
+    <div class="intro-credo">
+      <div class="intro-manifesto" aria-label="Always Day One"><p><span class="intro-credo-word"><span>Always</span></span><span class="intro-credo-word intro-credo-word--accent"><span>Day One.</span></span></p></div>
+      <div class="intro-philosophy" aria-label="Pragmatic Romantism"><p><span>Pragmatic</span> <em>Romantism.</em></p></div>
+    </div>
   </div>
   <div class="intro-progress" aria-hidden="true"><i></i></div>
-  <div class="intro-bottom"><p><span class="il en show">A private space station. An orbital library.</span><span class="il zh">私人空间站，一座星际图书馆。</span><span class="il fr">Une station privée. Une bibliothèque orbitale.</span><span class="il es">Una estación privada. Una biblioteca orbital.</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il zh">跳过开场 ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span></button></div>
+  <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
-<script src="assets/intro.js?v=13"></script>
+<script src="assets/intro.js?v=12"></script>
 
 <!-- NAV -->
 <nav id="nav">
@@ -748,13 +790,36 @@
 
 <!-- HERO -->
 <div id="hero">
-  <div class="station-vista" aria-hidden="true"><img class="hero-photo" src="images/web/f6716f50e5ef-1120.webp" srcset="images/web/f6716f50e5ef-640.webp 640w, images/web/f6716f50e5ef-1120.webp 1120w, images/web/f6716f50e5ef-1440.webp 1440w" sizes="100vw" width="1120" height="630" loading="eager" decoding="async" fetchpriority="high" alt=""></div>
-  <div class="station-welcome"><p><span class="station-beacon" aria-hidden="true"></span><span data-station-copy="welcome">A private space station · An orbital library</span></p><small data-station-copy="horizon">A world still opening.</small></div>
+  <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-left">
-    <p class="station-identity-label" data-station-copy="identity">Curiosity, in orbit</p>
     <h1 class="hero-name">
       <span class="hero-name-inner"><span data-local-name>Jack Zhu</span><span class="hero-period">.</span></span>
     </h1>
+    <div class="hero-subtitle-wrap" id="hero-subtitle-wrap" aria-label="多学科、多语言、多行业">
+      <span class="cycle-word">
+        <span class="cw-text" data-en="Multidisciplinary" data-fr="Pluridisciplinaire" data-es="Multidisciplinar" data-zh="多学科">Multidisciplinary</span>
+        <span class="cw-icons">
+          <img alt="Paris 1" src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="SWUFE" src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="ZJSU" src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager">
+        </span>
+      </span>
+      <span class="cycle-word">
+        <span class="cw-text" data-en="Multilingual" data-fr="Plurilingue" data-es="Plurilingüe" data-zh="多语言">Multilingual</span>
+        <span class="cw-icons"><span class="cw-flag">🇨🇳</span><span class="cw-flag">🇬🇧</span><span class="cw-flag">🇫🇷</span><span class="cw-flag">🇪🇸</span></span>
+      </span>
+      <span class="cycle-word">
+        <span class="cw-text" data-en="Multi-industry" data-fr="Multi-sectoriel" data-es="Multisectorial" data-zh="多行业">Multi-industry</span>
+        <span class="cw-icons">
+          <span class="tencent-logo-box tencent-logo-mini" role="img" aria-label="Tencent"></span>
+          <img alt="ByteDance" style="background:#fff;padding:1px;" src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="border-radius:3px;flex-shrink:0;"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg>
+          <img alt="Alliance" src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="Market Union" src="images/web/100b8a34ac48-160.webp" width="160" height="160" decoding="async" loading="eager">
+          <img alt="Mingle" style="background:#fff;padding:1px;" src="images/web/19ac34bda4cb-160.webp" width="160" height="160" decoding="async" loading="eager">
+        </span>
+      </span>
+    </div>
     <div class="hero-tagline" aria-label="Roles & mottos">
       <div class="hero-role-window">
       <p class="hero-line is-active" data-hero-line data-kind="role" aria-hidden="false" data-tone="cloud"><span class="hero-role-icon" aria-hidden="true">☁️</span><span class="il en show">Tencent Cloud Sales</span><span class="il fr">Commercial chez Tencent Cloud</span><span class="il es">Ventas en Tencent Cloud</span><span class="il zh">腾讯云销售</span></p>
@@ -788,32 +853,10 @@
 
   </div>
   <div class="hero-right">
-    <svg class="station-orbit-art" viewBox="0 0 280 280" aria-hidden="true"><circle cx="140" cy="140" r="104"/><circle cx="140" cy="140" r="78"/><ellipse cx="140" cy="140" rx="128" ry="45" transform="rotate(-35 140 140)"/><circle cx="212" cy="65" r="4"/></svg>
-    <p class="station-panel-label"><span data-station-copy="coordinates">Three coordinates</span><span aria-hidden="true">✧</span></p>
-    <div class="hero-subtitle-wrap" id="hero-subtitle-wrap" aria-label="多学科、多语言、多行业">
-      <span class="cycle-word">
-        <span class="cw-text" data-en="Multidisciplinary" data-fr="Pluridisciplinaire" data-es="Multidisciplinar" data-zh="多学科">Multidisciplinary</span>
-        <span class="cw-icons">
-          <img alt="Paris 1" src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager">
-          <img alt="SWUFE" src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager">
-          <img alt="ZJSU" src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager">
-        </span>
-      </span>
-      <span class="cycle-word">
-        <span class="cw-text" data-en="Multilingual" data-fr="Plurilingue" data-es="Plurilingüe" data-zh="多语言">Multilingual</span>
-        <span class="cw-icons"><span class="cw-flag">🇨🇳</span><span class="cw-flag">🇬🇧</span><span class="cw-flag">🇫🇷</span><span class="cw-flag">🇪🇸</span></span>
-      </span>
-      <span class="cycle-word">
-        <span class="cw-text" data-en="Multi-industry" data-fr="Multi-sectoriel" data-es="Multisectorial" data-zh="多行业">Multi-industry</span>
-        <span class="cw-icons">
-          <span class="tencent-logo-box tencent-logo-mini" role="img" aria-label="Tencent"></span>
-          <img alt="ByteDance" style="background:#fff;padding:1px;" src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager">
-          <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="border-radius:3px;flex-shrink:0;"><rect width="32" height="32" fill="#010101" rx="4"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#fe2c55"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="#25f4ee" transform="translate(.8,0)"/><path d="M21 9.5c-.9-1-1.4-2.4-1.4-3.8h-2.7V19c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.2 0 .4 0 .6.1v-2.8c-.2 0-.4-.1-.6-.1-2.9 0-5.3 2.4-5.3 5.3s2.4 5.3 5.3 5.3 5.3-2.4 5.3-5.3V13c1 .7 2.2 1.1 3.5 1.1v-2.7c-.9 0-1.7-.7-2.2-1.9z" fill="white" transform="translate(.4,0)"/></svg>
-          <img alt="Alliance" src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager">
-          <img alt="Market Union" src="images/web/100b8a34ac48-160.webp" width="160" height="160" decoding="async" loading="eager">
-          <img alt="Mingle" style="background:#fff;padding:1px;" src="images/web/19ac34bda4cb-160.webp" width="160" height="160" decoding="async" loading="eager">
-        </span>
-      </span>
+    <div class="hero-img-wrap">
+      <div class="hero-photo-clip"><img class="hero-photo" alt="At the Colosseum, Rome" src="images/web/8bd883eb83b8-800.webp" width="800" height="676" decoding="async" loading="eager" fetchpriority="high" srcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px"></div>
+      <p class="hero-photo-motto"><span class="hero-status-dot" aria-hidden="true"></span>Always Day One.</p>
+      <div class="hero-badge"><span>📍 Colosseum, Rome</span><span class="hero-photo-caption"><span class="il en show">On the road</span><span class="il fr">En voyage</span><span class="il es">De viaje</span><span class="il zh">旅途中的我</span></span></div>
     </div>
     <a class="hero-now" href="journal/posts/lessonfold-workflow/index.html">
       <span class="hero-now-label"><span class="il en show">Currently building</span><span class="il fr">En cours</span><span class="il es">En desarrollo</span><span class="il zh">最近在做</span><time datetime="2026-10-02">2026.10.02</time></span>
@@ -822,16 +865,9 @@
   </div>
   <div class="hero-footer">
   <a class="hero-scroll" href="#about"><span aria-hidden="true"><i></i></span><span class="il en show">SCROLL TO EXPLORE</span><span class="il fr">EXPLORER</span><span class="il es">EXPLORAR</span><span class="il zh">往下探索</span></a>
-  <span class="station-horizon" data-station-copy="compass">Earth below. Possibility ahead.</span>
   <button class="intro-replay" id="intro-replay" type="button"><span aria-hidden="true">✦</span><span class="il en show">Replay the intro</span><span class="il fr">Revoir l’intro</span><span class="il es">Repetir la intro</span><span class="il zh">重播开场</span></button>
 
   </div>
-</div>
-
-<div class="station-directory" aria-label="Explore the station">
-  <a class="station-door" href="#journey"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><ellipse cx="16" cy="16" rx="15" ry="5" transform="rotate(-32 16 16)"/><path d="M16 6v20M6 16h20"/></svg><span><strong data-station-copy="observatory">Observatory</strong><small data-station-copy="observatoryNote">Places, routes & encounters</small></span><b aria-hidden="true">↗</b></a>
-  <a class="station-door" href="#projects"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 4h8M14 4v10L6 25q-1 3 3 3h14q4 0 3-3l-8-11V4M10 20h12"/><circle cx="16" cy="23" r="1"/></svg><span><strong data-station-copy="laboratory">The laboratory</strong><small data-station-copy="laboratoryNote">Ideas made into useful things</small></span><b aria-hidden="true">↗</b></a>
-  <a class="station-door" href="story/index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9Q9 4 3 7v19q7-3 13 1 6-4 13-1V7q-6-3-13 2Zm0 0v18M6 12q4-1 7 1M19 13q3-2 7-1"/></svg><span><strong data-station-copy="library">The orbital library</strong><small data-station-copy="libraryNote">Stories, essays & life in frames</small></span><b aria-hidden="true">↗</b></a>
 </div>
 
 <!-- MARQUEE -->
@@ -848,7 +884,6 @@
   <h2 class="s-title reveal"><span data-lang="en" class="show">Many paths.<br><em>One clear direction.</em></span><span data-lang="fr">Un parcours pluriel.<br><em>Un cap très clair.</em></span><span data-lang="es">Muchos caminos.<br><em>Un rumbo claro.</em></span><span data-lang="zh">路走得很宽，<br><em>方向一直很清楚。</em></span></h2>
   <div class="about-grid">
     <div class="about-text reveal">
-<figure class="crew-portrait"><img src="images/web/8bd883eb83b8-400.webp" width="400" height="338" loading="lazy" decoding="async" alt="At the Colosseum, Rome"><figcaption><strong data-station-copy="portrait">A face from the road</strong><small data-station-copy="portraitMotto">Still curious. Always moving.</small></figcaption></figure>
       <div data-lang="en" class="show">
         <p><strong>Multilingual.</strong> IELTS 7.5 in English, DALF C1 in French, and Spanish at A2–B1. English and French are both working languages for me — I have used each in client conversations and business negotiations.</p>
         <p><strong>Multidisciplinary.</strong> I studied French and cross-border e-commerce as an undergraduate, moved into International Business for my master's, then spent a year studying International Law at Paris 1. I have always believed economics, management, and law belong in the same conversation: languages help me work with people, business and law show me how things run, and technology lets me build ideas with my own hands.</p>
@@ -1192,11 +1227,7 @@
 <section id="journey" class="sf"><div class="si">
   <div data-chapter="06" class="s-label reveal"><span class="il zh">走过的地方</span><span class="il en show">Out into the world</span><span class="il fr">À la découverte du monde</span><span class="il es">A explorar el mundo</span></div>
   <div class="atlas-intro"><h2 class="s-title reveal"><span class="il zh">从海边出发，<br><em>世界慢慢展开。</em></span><span class="il en show">From the coast.<br><em>Into the world.</em></span><span class="il fr">Depuis la côte.<br><em>Vers le monde.</em></span><span class="il es">Desde la costa.<br><em>Hacia el mundo.</em></span></h2><p><span class="il zh">语言的边界，就是我世界的边界。<br>点击地图上的一站，看看我在那里学过什么、做过什么。</span><span class="il en show">The limits of my languages are the limits of my world.<br>Pick a stop to explore the places, ideas and projects along the way.</span><span class="il fr">Les limites de mes langues sont celles de mon monde.<br>Choisissez une étape pour découvrir les lieux, idées et projets du voyage.</span><span class="il es">Los límites de mis idiomas son los de mi mundo.<br>Elige una parada y descubre los lugares, ideas y proyectos del camino.</span></p></div>
-  <div class="station-globe-panel">
- <div class="station-globe-wrap"><canvas id="station-globe" width="320" height="320" role="img" tabindex="0" aria-label="Illustrated Earth with my study route"></canvas></div>
- <div class="station-chart-copy"><small data-station-copy="earthLabel">Earth / A personal atlas</small><h3 data-station-copy="earthTitle">My world keeps getting wider.</h3><p data-station-copy="earthQuote">The limits of my language are the limits of my world.</p><div class="atlas-stops" role="group" aria-label="Study chapters"><button type="button" data-atlas-stop="Xianxiang · Ningbo" aria-pressed="true"><span>01</span><span class="il zh">宁波 · 起点</span><span class="il en show">Ningbo · Origins</span><span class="il fr">Ningbo · Origines</span><span class="il es">Ningbo · Origen</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="ZJSU · Hangzhou" aria-pressed="false"><span>02</span><span class="il zh">杭州 · 语言</span><span class="il en show">Hangzhou · Languages</span><span class="il fr">Hangzhou · Langues</span><span class="il es">Hangzhou · Idiomas</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="SWUFE · Chengdu" aria-pressed="false"><span>03</span><span class="il zh">成都 · 新方向</span><span class="il en show">Chengdu · New paths</span><span class="il fr">Chengdu · Nouveaux chemins</span><span class="il es">Chengdu · Nuevos caminos</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Paris 1 Panthéon" aria-pressed="false"><span>04</span><span class="il zh">巴黎 · 梦想成真</span><span class="il en show">Paris · A dream realised</span><span class="il fr">Paris · Le rêve réalisé</span><span class="il es">París · Un sueño cumplido</span><span aria-hidden="true">↗</span></button></div><span class="station-chart-hint">Choose a stop to turn the globe and read its story.</span></div>
-</div>
-<div class="atlas-toolbar"><div class="map-tabs-wrap"><button type="button" class="map-tab-btn active" data-view="world" aria-pressed="true"><span class="il zh">🌍 世界</span><span class="il en show">🌍 World</span><span class="il fr">🌍 Monde</span><span class="il es">🌍 Mundo</span></button><button type="button" class="map-tab-btn" data-view="china" aria-pressed="false"><span class="il zh">🇨🇳 中国</span><span class="il en show">🇨🇳 China</span><span class="il fr">🇨🇳 Chine</span><span class="il es">🇨🇳 China</span></button><button type="button" class="map-tab-btn" data-view="europe" aria-pressed="false"><span class="il zh">🇪🇺 欧洲</span><span class="il en show">🇪🇺 Europe</span><span class="il fr">🇪🇺 Europe</span><span class="il es">🇪🇺 Europa</span></button></div><div class="atlas-stats"><span><strong>16</strong> <span class="il zh">个国家</span><span class="il en show">countries</span><span class="il fr">pays</span><span class="il es">países</span></span><span><strong>4</strong> <span class="il zh">种语言</span><span class="il en show">languages</span><span class="il fr">langues</span><span class="il es">idiomas</span></span></div></div>
+  <div class="atlas-toolbar"><div class="map-tabs-wrap"><button type="button" class="map-tab-btn active" data-view="world" aria-pressed="true"><span class="il zh">🌍 世界</span><span class="il en show">🌍 World</span><span class="il fr">🌍 Monde</span><span class="il es">🌍 Mundo</span></button><button type="button" class="map-tab-btn" data-view="china" aria-pressed="false"><span class="il zh">🇨🇳 中国</span><span class="il en show">🇨🇳 China</span><span class="il fr">🇨🇳 Chine</span><span class="il es">🇨🇳 China</span></button><button type="button" class="map-tab-btn" data-view="europe" aria-pressed="false"><span class="il zh">🇪🇺 欧洲</span><span class="il en show">🇪🇺 Europe</span><span class="il fr">🇪🇺 Europe</span><span class="il es">🇪🇺 Europa</span></button></div><div class="atlas-stats"><span><strong>16</strong> <span class="il zh">个国家</span><span class="il en show">countries</span><span class="il fr">pays</span><span class="il es">países</span></span><span><strong>4</strong> <span class="il zh">种语言</span><span class="il en show">languages</span><span class="il fr">langues</span><span class="il es">idiomas</span></span></div></div>
   <div class="atlas-explorer">
     <div class="atlas-frame"><div class="atlas-heading"><span><small>JIAKE / A PERSONAL ATLAS</small><strong data-atlas-title>WORLD / STILL EXPLORING</strong></span><button type="button" class="atlas-reset" data-atlas-reset><span class="il zh">回到总览 ↗</span><span class="il en show">Reset view ↗</span><span class="il fr">Vue d’ensemble ↗</span><span class="il es">Vista general ↗</span></button></div>
       <div class="atlas-canvas"><div id="journey-atlas" aria-label="Interactive travel atlas"></div><div class="atlas-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24"/><path d="M30 5V55M5 30H55M30 12L36 36L30 31L24 36Z"/></svg></div><div class="atlas-position" aria-hidden="true">29.739° N · 121.783° E</div><p class="atlas-loading" data-atlas-loading><span class="il zh">正在展开地图…</span><span class="il en show">Opening the atlas…</span><span class="il fr">La carte se déploie…</span><span class="il es">Abriendo el atlas…</span></p></div>
@@ -1204,7 +1235,7 @@
     <aside class="atlas-postcard" aria-label="Selected place"><div class="atlas-card-art" data-atlas-art><span aria-hidden="true">🌊</span></div><div class="atlas-card-copy"><p class="atlas-card-kicker" data-atlas-kicker></p><h3 data-atlas-place></h3><p class="atlas-card-caption" data-atlas-caption></p><p class="atlas-card-intro" data-atlas-intro></p><a class="atlas-card-source" data-atlas-source target="_blank" rel="noopener" hidden></a><div class="atlas-card-memory" data-atlas-memory><h4 data-atlas-memory-label></h4><p class="atlas-card-note" data-atlas-note></p></div><a class="atlas-card-story" data-atlas-story href="story/comic/index.html#page-01"></a></div></aside>
   </div>
   <div class="atlas-stops" aria-label="Featured stops">
-<button type="button" data-atlas-stop="Amsterdam" aria-pressed="false"><span>05</span><span class="il zh">阿姆斯特丹</span><span class="il en show">Amsterdam</span><span class="il fr">Amsterdam</span><span class="il es">Ámsterdam</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Rome" aria-pressed="false"><span>06</span><span class="il zh">罗马</span><span class="il en show">Rome</span><span class="il fr">Rome</span><span class="il es">Roma</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Rigi" aria-pressed="false"><span>07</span><span class="il zh">瑞士 · 山间</span><span class="il en show">Switzerland · Mountains</span><span class="il fr">Suisse · Montagnes</span><span class="il es">Suiza · Montañas</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Tromsø" aria-pressed="false"><span>08</span><span class="il zh">挪威 · 北方</span><span class="il en show">Norway · The north</span><span class="il fr">Norvège · Le Nord</span><span class="il es">Noruega · El norte</span><span aria-hidden="true">↗</span></button>
+<button type="button" data-atlas-stop="Xianxiang · Ningbo" aria-pressed="true"><span>01</span><span class="il zh">宁波 · 起点</span><span class="il en show">Ningbo · Origins</span><span class="il fr">Ningbo · Origines</span><span class="il es">Ningbo · Origen</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="ZJSU · Hangzhou" aria-pressed="false"><span>02</span><span class="il zh">杭州 · 语言</span><span class="il en show">Hangzhou · Languages</span><span class="il fr">Hangzhou · Langues</span><span class="il es">Hangzhou · Idiomas</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="SWUFE · Chengdu" aria-pressed="false"><span>03</span><span class="il zh">成都 · 新方向</span><span class="il en show">Chengdu · New paths</span><span class="il fr">Chengdu · Nouveaux chemins</span><span class="il es">Chengdu · Nuevos caminos</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Paris 1 Panthéon" aria-pressed="false"><span>04</span><span class="il zh">巴黎 · 梦想成真</span><span class="il en show">Paris · A dream realised</span><span class="il fr">Paris · Le rêve réalisé</span><span class="il es">París · Un sueño cumplido</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Amsterdam" aria-pressed="false"><span>05</span><span class="il zh">阿姆斯特丹</span><span class="il en show">Amsterdam</span><span class="il fr">Amsterdam</span><span class="il es">Ámsterdam</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Rome" aria-pressed="false"><span>06</span><span class="il zh">罗马</span><span class="il en show">Rome</span><span class="il fr">Rome</span><span class="il es">Roma</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Rigi" aria-pressed="false"><span>07</span><span class="il zh">瑞士 · 山间</span><span class="il en show">Switzerland · Mountains</span><span class="il fr">Suisse · Montagnes</span><span class="il es">Suiza · Montañas</span><span aria-hidden="true">↗</span></button><button type="button" data-atlas-stop="Tromsø" aria-pressed="false"><span>08</span><span class="il zh">挪威 · 北方</span><span class="il en show">Norway · The north</span><span class="il fr">Norvège · Le Nord</span><span class="il es">Noruega · El norte</span><span aria-hidden="true">↗</span></button>
   </div>
   <details class="atlas-index"><summary><span class="il zh">展开全部足迹</span><span class="il en show">Explore all my stops</span><span class="il fr">Explorer toutes les étapes</span><span class="il es">Explorar todas las paradas</span> <span aria-hidden="true">＋</span></summary><div class="atlas-place-index" data-atlas-index></div></details>
 </div></section>
@@ -1296,7 +1327,6 @@
 <div class="writing-finale"><div class="si"><div class="reading-portals">
 <section id="story" class="story-invitation"><a href="story/index.html">
 <div class="portal-copy">
-  <p class="station-library-label" data-station-copy="libraryEyebrow">The orbital library</p>
   <span class="portal-eyebrow">08 / <span class="il zh">我的故事</span><span class="il en show">MY STORY</span><span class="il fr">MON HISTOIRE</span><span class="il es">MI HISTORIA</span></span>
   <h2><span class="il zh">我的故事</span><span class="il en show">My story</span><span class="il fr">Mon histoire</span><span class="il es">Mi historia</span></h2>
   <p><span class="il zh">一路走着，也一路做着。<br>收好路上的片刻，和那些后来成真的念头。</span><span class="il en show">A life in the making.<br>Moments from the road, and the ideas they become.</span><span class="il fr">Une vie qui se construit.<br>Des instants du chemin, et les idées qui en naissent.</span><span class="il es">Una vida en construcción.<br>Momentos del camino y las ideas que nacen de ellos.</span></p>
@@ -1317,7 +1347,6 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="station-next"><p data-station-copy="next">The voyage continues</p><h2 data-station-copy="nextTitle">The next chapter is still unwritten.</h2></div>
   <div>
     <div class="footer-name">Always Day One.</div>
     <div class="footer-sub"><span data-lang="en" class="show">Multidisciplinary · Multilingual · Multi-industry</span><span data-lang="fr">Pluridisciplinaire · Plurilingue · Multi-sectoriel</span><span data-lang="es">Multidisciplinar · Plurilingüe · Multisectorial</span><span data-lang="zh">多学科 · 多语言 · 多行业</span></div>
@@ -1575,7 +1604,7 @@
       if (l === 'zh') el.textContent = staticZhText[el.dataset.baseText] || el.dataset.baseText;
       else el.innerHTML = el.dataset.baseHtml;
     });
-    document.dispatchEvent(new CustomEvent('jiake:languagechange', {detail:{language:l,measurement:!refresh}}));
+    document.dispatchEvent(new CustomEvent('jiake:languagechange', {detail:{language:l}}));
     if (refresh && window._refreshJourneyMaps) window._refreshJourneyMaps();
   }
   let initialLang = window.JIAKE_HOME_BOOT?.language || 'en';
@@ -1645,15 +1674,13 @@
 
 </script>
 <script src="assets/navigation.js?v=4"></script>
-<script src="assets/interactions.js?v=4"></script>
+<script src="assets/interactions.js?v=3"></script>
 <script src="assets/home-personality.js?v=10"></script>
-<script src="assets/home-language-layout.js?v=7"></script>
+<script src="assets/home-language-layout.js?v=6"></script>
 <script src="assets/vendor/leaflet.js"></script>
-<script src="assets/journey.js?v=15"></script>
+<script src="assets/journey.js?v=14"></script>
 <script src="assets/home-motion.js?v=3"></script>
 <script src="assets/book-transition.js?v=8"></script>
 <script src="assets/music.js?v=12" data-audio-src="assets/audio/sunflower.mp3"></script>
-<script src="assets/orbital.js?v=1"></script>
-<script type="module" src="assets/orbital-globe.js?v=1"></script>
 </body>
 </html>
