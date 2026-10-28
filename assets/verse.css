@@ -1,0 +1,105 @@
+/* Site-wide Spider-Verse layer — see assets/verse.js. */
+.verse-fx { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:480; }
+.verse-buddy-hit { position:fixed; top:0; left:0; z-index:481; width:56px; height:72px; padding:0; border:0; border-radius:28px; background:transparent; cursor:pointer; visibility:hidden; }
+.verse-buddy-hit:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+html.verse-buddy-on .back-to-top { display:none; }
+
+/* Cobwebs spin up in a card's top-right corner on hover. */
+.verse-corner { position:absolute; top:0; right:0; z-index:1; width:48px; height:48px; color:var(--muted); opacity:.6; pointer-events:none; }
+.verse-corner svg { display:block; width:100%; height:100%; overflow:visible; }
+.verse-corner path { fill:none; stroke:currentColor; stroke-width:.7; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset 1.1s var(--ease, ease); }
+.verse-has-web:hover .verse-corner path, .verse-has-web:focus-within .verse-corner path { stroke-dashoffset:0; }
+
+/* One card hides a tiny spider that drops in on hover. */
+.verse-tiny { position:absolute; top:0; right:20px; z-index:3; width:16px; height:16px; padding:0; border:0; background:none; color:var(--text); cursor:pointer; opacity:0; transform:translateY(-22px); transition:transform .8s cubic-bezier(.3,1.5,.5,1) .4s, opacity .25s .4s; }
+.verse-tiny::before { content:''; position:absolute; left:50%; bottom:100%; width:1px; height:34px; background:currentColor; opacity:.4; }
+.verse-tiny svg { display:block; width:16px; height:16px; }
+.verse-has-web:hover .verse-tiny { opacity:1; transform:translateY(30px); }
+.verse-tiny:hover svg { animation:verseWiggle .4s ease-in-out infinite alternate; }
+.verse-has-web .verse-tiny.is-fleeing { opacity:0; transform:translateY(-34px); transition-delay:0s; }
+@keyframes verseWiggle { to { transform:rotate(12deg); } }
+
+/* Chapter titles land like a misregistered comic print. */
+.verse-print { animation:versePrint .95s linear both; }
+@keyframes versePrint {
+  0% { text-shadow:-7px 0 rgba(255,61,110,.9),7px 0 rgba(47,198,255,.9); }
+  18% { text-shadow:-3px 2px rgba(255,61,110,.85),4px -2px rgba(47,198,255,.85); }
+  34% { text-shadow:-5px -1px rgba(255,61,110,.7),3px 1px rgba(47,198,255,.7); }
+  55% { text-shadow:-2px 0 rgba(255,61,110,.55),2px 0 rgba(47,198,255,.55); }
+  78% { text-shadow:-1px 0 rgba(255,61,110,.3),1px 0 rgba(47,198,255,.3); }
+  100% { text-shadow:none; }
+}
+
+/* The hero's web-slinger tugs "Explore my work" while he rests. */
+.btn-primary.verse-tug { translate:-3px -3px; rotate:-1.5deg; transition:translate .3s var(--ease, ease), rotate .3s var(--ease, ease); }
+
+.verse-toast { position:fixed; left:20px; bottom:20px; z-index:600; max-width:min(440px,calc(100vw - 40px)); padding:10px 16px; border:1px solid var(--border); border-radius:999px; background:var(--card); color:var(--text); font:600 .82rem/1.4 var(--sans, system-ui); box-shadow:0 10px 30px rgba(0,0,0,.25); opacity:0; transform:translateY(16px); transition:opacity .3s, transform .3s; pointer-events:none; }
+.verse-toast.is-on { opacity:1; transform:none; }
+
+.verse-eggs { position:relative; flex-shrink:0; }
+.verse-eggs > button { padding:6px 11px; border:1px solid var(--border-s); border-radius:999px; background:transparent; color:var(--muted); font:600 .75rem/1 var(--sans, system-ui); cursor:pointer; transition:color .2s, border-color .2s; }
+.verse-eggs > button:hover, .verse-eggs > button[aria-expanded="true"] { color:var(--text); border-color:var(--gold); }
+.verse-eggs-list { position:absolute; right:0; bottom:calc(100% + 10px); z-index:20; width:min(300px,80vw); padding:14px 16px; border:1px solid var(--border-s); border-radius:12px; background:var(--card); color:var(--muted); font-size:.78rem; line-height:1.55; text-align:left; box-shadow:0 12px 32px rgba(0,0,0,.28); }
+.verse-eggs-list strong { color:var(--text); }
+.verse-eggs-list ul { display:grid; gap:6px; margin:8px 0 0; padding:0; list-style:none; }
+.verse-eggs-list .is-found { color:var(--gold); }
+@media (max-width:700px) { .verse-eggs-list { right:auto; left:0; } }
+
+@media (prefers-reduced-motion:reduce) {
+  .verse-print { animation:none; }
+  .verse-corner path, .verse-tiny { transition:none; }
+}
+
+/* ── Scenery (assets/verse-scenes.js) ── */
+.verse-host { position:relative; }
+.verse-strip { position:absolute; left:0; bottom:0; z-index:0; display:block; width:100%; pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 45%), linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(180deg,transparent,#000 45%), linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-composite:intersect; }
+.verse-strip.is-above { bottom:100%; }
+.verse-bigweb { position:absolute; top:14px; z-index:0; width:150px; height:150px; color:var(--muted); pointer-events:none; animation:verseSway 7s ease-in-out infinite alternate; }
+.verse-bigweb.is-left { left:14px; transform-origin:0 0; }
+.verse-bigweb.is-right { right:14px; transform-origin:100% 0; }
+.verse-bigweb.is-right svg { transform:scaleX(-1); }
+.verse-bigweb svg { display:block; width:100%; height:100%; overflow:visible; }
+.verse-bigweb path { fill:none; stroke:currentColor; stroke-width:.8; stroke-linecap:round; opacity:.45; }
+.verse-dew { fill:var(--text); opacity:.25; animation:verseDew 4.2s ease-in-out infinite; }
+.verse-dangle { position:absolute; top:62px; width:20px; height:20px; color:var(--text); animation:verseBob 3.2s ease-in-out infinite; }
+.verse-bigweb.is-left .verse-dangle { left:58px; }
+.verse-bigweb.is-right .verse-dangle { right:58px; }
+.verse-dangle::before { content:''; position:absolute; left:50%; bottom:65%; width:1px; height:44px; background:currentColor; opacity:.4; }
+.verse-dangle svg { display:block; width:100%; height:100%; }
+.verse-rappel { position:absolute; left:50%; bottom:-20px; width:20px; height:20px; margin-left:-10px; color:var(--gold); animation:verseBob 2.6s ease-in-out infinite; pointer-events:none; }
+.verse-rappel svg { display:block; width:100%; height:100%; }
+@keyframes verseSway { from { rotate:-1.6deg; } to { rotate:1.6deg; } }
+@keyframes verseBob { 0%,100% { translate:0 0; } 50% { translate:0 9px; } }
+@keyframes verseDew { 0%,100% { opacity:.18; } 50% { opacity:.75; } }
+@media (max-width:760px) { .verse-bigweb { display:none; } }
+@media (prefers-reduced-motion:reduce) { .verse-bigweb, .verse-dangle, .verse-rappel, .verse-dew { animation:none; } }
+
+/* Ambient sky behind every page; sections with a solid background sit above it. */
+.verse-ambient { position:fixed; inset:0; z-index:-1; width:100%; height:100%; pointer-events:none; }
+body { isolation:isolate; }
+.verse-flight { position:absolute; top:0; left:0; z-index:0; display:block; width:100%; pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); }
+
+/* Comic burst that pops from a card's corner on hover. */
+.verse-has-burst { overflow:visible !important; }
+.verse-burst { position:absolute; top:-14px; right:18px; z-index:4; padding:7px 13px 6px; font:italic 900 .82rem/1 "Arial Black", Impact, var(--sans, sans-serif); letter-spacing:.02em; color:#1a1322; background:#ffd84a; border:2px solid #1a1322; box-shadow:3px 3px 0 #1a1322;
+  clip-path:polygon(0 18%,9% 0,22% 14%,36% 0,50% 12%,64% 0,78% 14%,91% 0,100% 18%,94% 50%,100% 82%,91% 100%,78% 86%,64% 100%,50% 88%,36% 100%,22% 86%,9% 100%,0 82%,6% 50%);
+  pointer-events:none; opacity:0; transform:rotate(var(--tilt)) scale(.3); transition:opacity .18s, transform .35s cubic-bezier(.3,1.8,.5,1); }
+.verse-has-burst:nth-of-type(3n+1) .verse-burst { background:#ff6b8b; }
+.verse-has-burst:nth-of-type(3n+2) .verse-burst { background:#5fd4ff; }
+.verse-has-burst:hover .verse-burst, .verse-has-burst:focus-visible .verse-burst { opacity:1; transform:rotate(var(--tilt)) scale(1); }
+
+.verse-sparkle { position:absolute; z-index:5; width:18px; height:18px; margin:-9px; pointer-events:none; background:var(--gold);
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%); animation:verseSparkle .8s ease-out forwards; }
+.verse-sparkle:nth-child(2n) { background:#ffb52e; }
+@keyframes verseSparkle { 0% { transform:translate(0,0) scale(0) rotate(0); opacity:1; } 60% { opacity:1; } 100% { transform:translate(var(--dx),var(--dy)) scale(var(--s)) rotate(90deg); opacity:0; } }
+
+/* Reading progress on pages without the home bar: a web thread and its spider. */
+.verse-progress { position:fixed; left:0; right:0; top:0; z-index:499; height:3px; pointer-events:none; }
+.verse-progress i { position:absolute; left:0; top:1px; height:1px; width:calc(var(--p,0) * 100%); background:var(--text); opacity:.55; }
+.verse-progress span { position:absolute; top:-2px; left:calc(var(--p,0) * 100%); width:14px; height:14px; margin-left:-7px; color:var(--gold); transform:rotate(-90deg); }
+.verse-progress span svg { display:block; width:100%; height:100%; }
+
+@media (prefers-reduced-motion:reduce) { .verse-burst { transition:none; } .verse-sparkle { display:none; } }

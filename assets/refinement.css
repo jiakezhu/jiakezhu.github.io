@@ -75,7 +75,10 @@ nav.scrolled { padding-top:13px; padding-bottom:13px; }
   overflow:hidden; isolation:isolate; position:relative;
 }
 #hero::before { content:''; position:absolute; z-index:-1; width:440px; height:440px; border-radius:50%; right:-30%; top:30%; background:color-mix(in srgb,var(--gold) 5%,transparent); filter:blur(70px); pointer-events:none; }
-.hero-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:-1; opacity:.35; pointer-events:none; }
+.hero-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:-1; opacity:.9; pointer-events:none; }
+:root[data-theme="light"] .hero-canvas { opacity:.8; }
+/* Feather all four edges so the backdrop never shows the hero container's box. */
+.hero-canvas { -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,transparent,#000 12%,#000 85%,transparent); -webkit-mask-composite:source-in; mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent),linear-gradient(180deg,transparent,#000 12%,#000 85%,transparent); mask-composite:intersect; }
 .hero-left { padding:0; display:flex; flex-direction:column; align-items:start; justify-content:center; min-width:0; }
 .hero-kicker { display:flex; align-items:center; gap:10px; margin:0 0 19px; font-size:.83rem; font-weight:600; letter-spacing:.015em; text-transform:none; color:var(--muted); }
 .hero-status-dot { width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px color-mix(in srgb,var(--gold) 8%,transparent); }

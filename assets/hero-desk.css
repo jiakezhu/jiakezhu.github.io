@@ -1,0 +1,84 @@
+/* Hero desk scene (assets/hero-desk.js): a chibi Jiake typing at his monitor. */
+.hero-photo-clip.has-desk { position:relative; background:var(--surface); }
+.desk-scene { position:absolute; inset:0; display:block; width:100%; height:100%; transition:opacity .6s var(--ease, ease); user-select:none; -webkit-user-select:none; }
+.hero-photo-clip.has-desk .hero-photo { position:absolute; inset:0; opacity:0; pointer-events:none; transition:opacity .6s var(--ease, ease); }
+.hero-img-wrap.is-real .desk-scene { opacity:0; pointer-events:none; }
+.hero-img-wrap.is-real .hero-photo { opacity:1; pointer-events:auto; }
+
+.desk-scene {
+  --dk-wall:#221e2b; --dk-wall-dot:rgba(255,255,255,.04); --dk-warm:1;
+  --dk-sky-top:#2a2557; --dk-sky-mid:#6d4f9c; --dk-sky-bot:#e2685a; --dk-city:#17141c; --dk-city-light:#ffcf73;
+  --dk-frame:#3a3345; --dk-sill:#4a4256; --dk-desk:#6b4a3a; --dk-desk-edge:#523629; --dk-under:#15121b;
+  --dk-bezel:#1b1822; --dk-stand:#2b2733; --dk-glow:.85; --dk-chair:#4b4470; --dk-chair-stitch:#6c63a0;
+  --dk-moon:#f3f0ff; --dk-stars:1; --dk-cloud:0; --dk-wire:#5a5266;
+}
+:root[data-theme="light"] .desk-scene {
+  --dk-wall:#f6efe4; --dk-wall-dot:rgba(90,70,40,.06); --dk-warm:.45;
+  --dk-sky-top:#7cc0f0; --dk-sky-mid:#bfe3fb; --dk-sky-bot:#fff2d9; --dk-city:#9fb0d0; --dk-city-light:#eef6ff;
+  --dk-frame:#ffffff; --dk-sill:#e8dccb; --dk-desk:#d9b48a; --dk-desk-edge:#c09466; --dk-under:#eadfcf;
+  --dk-bezel:#2a2733; --dk-stand:#cfc6ba; --dk-glow:.25; --dk-chair:#b7b2ed; --dk-chair-stitch:#9690d6;
+  --dk-moon:#ffc93c; --dk-stars:0; --dk-cloud:1; --dk-wire:#cbbfae;
+}
+.dk-wall { fill:var(--dk-wall); } .dk-wall-dot { fill:var(--dk-wall-dot); } .dk-warm { opacity:var(--dk-warm); }
+.dk-sky-top { stop-color:var(--dk-sky-top); } .dk-sky-mid { stop-color:var(--dk-sky-mid); } .dk-sky-bot { stop-color:var(--dk-sky-bot); }
+.dk-window-frame { fill:var(--dk-frame); } .dk-window-bars { stroke:var(--dk-frame); stroke-width:5; fill:none; } .dk-sill { fill:var(--dk-sill); }
+.dk-stars circle { fill:#fff4dc; opacity:var(--dk-stars); } .dk-moon { fill:var(--dk-moon); } .dk-cloud { fill:#fff; opacity:var(--dk-cloud); }
+.dk-city { fill:var(--dk-city); } .dk-city-lights rect { fill:var(--dk-city-light); }
+.dk-wire { fill:none; stroke:var(--dk-wire); stroke-width:1.4; }
+.dk-desk { fill:var(--dk-desk); } .dk-desk-edge { fill:var(--dk-desk-edge); } .dk-under { fill:var(--dk-under); }
+.dk-stand { fill:var(--dk-stand); } .dk-bezel { fill:var(--dk-bezel); }
+.dk-tab, .dk-file { font:600 7px/1 system-ui, sans-serif; fill:#d4d8e6; }
+.dk-file { fill:#8a91a8; }
+.dk-code text { font:6.4px/1 ui-monospace, "SF Mono", Menlo, monospace; fill:#d4d8e6; white-space:pre; }
+.dk-code .ln { fill:#4f5670; text-anchor:end; }
+.dk-code .c { fill:#7f9a83; font-style:italic; } .dk-code .k { fill:#ff7ab6; } .dk-code .s { fill:#ffd36b; } .dk-code .f { fill:#7cc7ff; }
+.dk-code .caret { fill:#d7ed8b; }
+.dk-flash { opacity:0; transition:opacity .25s; } .dk-screen.is-flash .dk-flash { opacity:.35; transition:none; }
+.dk-screen-glow { opacity:var(--dk-glow); mix-blend-mode:screen; pointer-events:none; }
+.dk-note rect { fill:#ffe066; } .dk-note--pink rect { fill:#ffb3c7; }
+.dk-note text { font:700 9px/1 "Comic Sans MS", "Chalkboard SE", system-ui, sans-serif; fill:#3a2c1d; text-anchor:middle; }
+.dk-spider { transform:translate(262px,124px); animation:dkSpider 3.4s ease-in-out infinite; }
+.dk-spider line { stroke:#d4d8e6; stroke-width:.8; } .dk-spider-body { fill:#e33a3f; stroke:#1a1322; stroke-width:1; } .dk-spider-legs { stroke:#1a1322; stroke-width:1.2; fill:none; stroke-linecap:round; }
+@keyframes dkSpider { 0%,100% { transform:translate(262px,124px); } 50% { transform:translate(262px,134px); } }
+.dk-keyboard > path { fill:#2b2833; } .dk-keys rect { fill:#45414f; transition:fill .12s; } .dk-keys rect.is-down { fill:#d7ed8b; transition:none; }
+.dk-mouse ellipse { fill:#2b2833; } .dk-mouse path { stroke:#45414f; stroke-width:1.2; }
+.dk-mug-body { fill:#f6f0e4; stroke:#1a1322; stroke-width:2; } .dk-mug-handle { fill:none; stroke:#1a1322; stroke-width:5; } .dk-mug-heart { fill:#e33a3f; }
+.dk-steam { fill:none; stroke:#fff; stroke-width:2.4; stroke-linecap:round; opacity:0; animation:dkSteam 3.2s ease-in-out infinite; }
+.dk-steam--2 { animation-delay:1.6s; }
+@keyframes dkSteam { 0% { opacity:0; transform:translateY(8px); } 30% { opacity:.45; } 100% { opacity:0; transform:translateY(-16px); } }
+.dk-book { fill:#5f8f3a; } .dk-book--2 { fill:#2f62d8; }
+.dk-pot { fill:#c8643f; stroke:#1a1322; stroke-width:2; } .dk-pot-rim { fill:#de7a52; stroke:#1a1322; stroke-width:2; }
+.dk-stem { fill:none; stroke:#4f8a34; stroke-width:4; stroke-linecap:round; } .dk-leaf { fill:#5f9e3e; }
+.dk-flower { transform-origin:64px 282px; transform-box:view-box; cursor:pointer; }
+.dk-chair { fill:var(--dk-chair); } .dk-chair-stitch { fill:none; stroke:var(--dk-chair-stitch); stroke-width:2; stroke-dasharray:5 5; }
+
+/* Jiake: dark hair and the grey hoodie from the photo, plus red headphones. */
+.dk-hoodie { fill:#c5c8cf; } .dk-hoodie-shade { fill:#b2b6bf; } .dk-hood { fill:#aeb2bb; } .dk-hood-in { fill:#8f939d; }
+.dk-sleeve { fill:none; stroke:#c5c8cf; stroke-width:30; stroke-linecap:round; } .dk-sleeve--far { stroke:#a9adb6; stroke-width:27; }
+.dk-hand, .dk-skin, .dk-neck, .dk-palm circle { fill:#ffdcc4; } .dk-palm path { stroke:#ffdcc4; stroke-width:6; stroke-linecap:round; }
+.dk-neck { fill:#f2c8ad; }
+.dk-hair { fill:#2a2230; } .dk-hair-shine { fill:none; stroke:#4a3d55; stroke-width:4; stroke-linecap:round; } .dk-lash { fill:none; stroke:#2a2230; stroke-width:2.6; stroke-linecap:round; }
+.dk-blush { fill:#ff9fb2; opacity:.55; }
+.dk-eye { fill:#2a2230; } .dk-eye-hi { fill:#fff; } .dk-mouth { fill:#c0394d; stroke:#2a2230; stroke-width:2; stroke-linejoin:round; }
+.dk-band { fill:none; stroke:#f6f0e4; stroke-width:9; stroke-linecap:round; } .dk-cup { fill:#e33a3f; stroke:#1a1322; stroke-width:2.4; }
+.dk-head { transform-origin:178px 380px; transform-box:view-box; }
+.dk-hand { transform-box:fill-box; transform-origin:center; }
+.dk-wave { opacity:0; transform-origin:108px 418px; transform-box:view-box; transition:opacity .2s; }
+.dk-head-front { opacity:0; transition:opacity .18s; } .dk-head-back { transition:opacity .18s; }
+.desk-scene.is-turned .dk-head-front, .desk-scene.is-turned .dk-wave { opacity:1; }
+.desk-scene.is-turned .dk-head-back, .desk-scene.is-turned .dk-hand--l { opacity:0; }
+.dk-notes text { font:700 16px/1 system-ui, sans-serif; fill:#ffd84a; stroke:#1a1322; stroke-width:.8; paint-order:stroke; }
+.dk-bubble { opacity:0; transform:translateY(6px); transition:opacity .2s, transform .25s cubic-bezier(.3,1.6,.5,1); pointer-events:none; }
+.dk-bubble path { fill:#fff; stroke:#1a1322; stroke-width:2; }
+.dk-bubble text { font:800 14px/1 var(--sans, system-ui), sans-serif; fill:#1a1322; text-anchor:middle; }
+.desk-scene.is-turned .dk-bubble { opacity:1; transform:none; }
+
+/* Badge toggle between the drawing and the real photo. */
+.hero-real-toggle { display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border:1px solid var(--border-s); border-radius:999px; background:transparent; color:var(--muted); font:inherit; cursor:pointer; transition:color .2s, border-color .2s; }
+.hero-real-toggle:hover, .hero-real-toggle[aria-pressed="true"] { color:var(--text); border-color:var(--gold); }
+
+@media (prefers-reduced-motion:reduce) { .dk-spider, .dk-steam { animation:none; } .dk-steam { opacity:.3; } }
+
+/* The badge's language spans follow the page's .il convention. */
+.hero-badge .il { display:none; } .hero-badge .il.show { display:inline; }
+html[lang="zh"] .hero-badge .il.show { display:none; } html[lang="zh"] .hero-badge .il.zh { display:inline; }

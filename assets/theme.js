@@ -10,6 +10,9 @@
     document.head.append(stylesheet);
   }
   loadCursor();desktop.addEventListener('change',loadCursor);
+  // Site-wide Spider-Verse extras: the web-slinger buddy, cobwebs, misprints and easter eggs.
+  const verseStyle=document.createElement('link');verseStyle.rel='stylesheet';verseStyle.href=new URL('verse.css?v=3',assets).href;document.head.append(verseStyle);
+  const verseScript=document.createElement('script');verseScript.src=new URL('verse.js?v=4',assets).href;document.head.append(verseScript);
   try { document.documentElement.dataset.theme = localStorage.getItem('jiake-theme') === 'light' ? 'light' : 'dark'; } catch { document.documentElement.dataset.theme = 'dark'; }
   document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');

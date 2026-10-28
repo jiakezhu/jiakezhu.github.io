@@ -116,19 +116,4 @@
     else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}
   });
 
-  // Lightweight ambient constellation, paused offscreen and in background tabs.
-  const hero=document.getElementById('hero'),canvas=document.getElementById('hero-canvas');
-  const ctx=canvas.getContext('2d');if(!ctx)return;
-  let width=0,height=0,points=[],animation=0,visible=true,lastTime=0;
-  const pointer={x:-1000,y:-1000};
-  function resize(){const r=hero.getBoundingClientRect();width=r.width;height=r.height;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=width*dpr;canvas.height=height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);points=Array.from({length:width<700?18:35},()=>({x:Math.random()*width,y:Math.random()*height,vx:(Math.random()-.5)*.15,vy:(Math.random()-.5)*.15}));}
-  function draw(time){animation=0;if(!visible||document.hidden||motion.matches)return;if(time-lastTime<32){animation=requestAnimationFrame(draw);return;}lastTime=time;ctx.clearRect(0,0,width,height);const color=getComputedStyle(hero).getPropertyValue('--gold').trim();
-    points.forEach(p=>{p.x=(p.x+p.vx+width)%width;p.y=(p.y+p.vy+height)%height;ctx.globalAlpha=.22;ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,1.6,0,Math.PI*2);ctx.fill();const distance=Math.hypot(p.x-pointer.x,p.y-pointer.y);if(distance<160){ctx.globalAlpha=(1-distance/160)*.18;ctx.strokeStyle=color;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pointer.x,pointer.y);ctx.stroke();}});ctx.globalAlpha=1;animation=requestAnimationFrame(draw);
-  }
-  function restart(){cancelAnimationFrame(animation);animation=0;if(visible&&!document.hidden&&!motion.matches)animation=requestAnimationFrame(draw);else ctx.clearRect(0,0,width,height);}
-  hero.addEventListener('pointermove',e=>{if(!finePointer.matches)return;const r=hero.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;});
-  hero.addEventListener('pointerleave',()=>{pointer.x=pointer.y=-1000;});
-  new ResizeObserver(()=>{resize();restart();}).observe(hero);
-  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;restart();}).observe(hero);
-  document.addEventListener('visibilitychange',restart);motion.addEventListener('change',restart);resize();restart();
 })();
