@@ -64,7 +64,7 @@ test('desk illustration is preloaded while the optional real portrait stays defe
 
 test('all desk lighting and pose assets are genuine WebP and together stay under 400 KB',()=>{
   let bytes=0;
-  for(const name of ['night','day','cat-night','cat-day','wave-night','wave-day']) {
+  for(const name of ['night','day','cat-night','cat-day','wave-night','wave-day','personal-night','personal-day']) {
     const data=fs.readFileSync(path.join(root,'images/web/desk',name+'.webp'));
     assert.equal(data.subarray(0,4).toString(),'RIFF',name);
     assert.equal(data.subarray(8,12).toString(),'WEBP',name);

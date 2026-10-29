@@ -3,7 +3,7 @@
   const scene=document.querySelector('.desk-scene'),wrap=scene?.closest('.hero-img-wrap');
   if(!scene||!wrap)return;
   const root=document.documentElement,$=selector=>scene.querySelector(selector);
-  const stage=$('.dk-stage'),room=$('.dk-room'),mug=$('.dk-mug-cleanup'),cat=$('.dk-cat'),greeting=$('.dk-wave');
+  const stage=$('.dk-stage'),room=$('.dk-room'),props=$('.dk-personal-props'),cat=$('.dk-cat'),greeting=$('.dk-wave');
   const screen=$('.dk-screen'),code=$('.dk-code'),preview=$('.dk-preview-image');
   const motion=matchMedia('(prefers-reduced-motion: reduce)'),rig=window.HeroDeskMotion?.create(scene);
   const keyLights=[...scene.querySelectorAll('.dk-key-light')],base='images/web/desk/';
@@ -97,12 +97,12 @@
   }
   async function syncTheme(){
     const own=++themeTicket,theme=root.dataset.theme==='light'?'day':'night';
-    if(theme===activeTheme&&cat.getAttribute('src')&&greeting.getAttribute('src')&&mug?.getAttribute('src'))return;
-    const [background,eyes,head,ceramic]=await Promise.all([preload(base+theme+'.webp'),preload(base+'cat-'+theme+'.webp?v=2'),preload(base+'wave-'+theme+'.webp?v=2'),preload(base+'mug-'+theme+'.webp')]);
+    if(theme===activeTheme&&cat.getAttribute('src')&&greeting.getAttribute('src')&&props?.dataset.ready)return;
+    const [background,eyes,head,personal]=await Promise.all([preload(base+theme+'.webp'),preload(base+'cat-'+theme+'.webp?v=2'),preload(base+'wave-'+theme+'.webp?v=2'),preload(base+'personal-'+theme+'.webp')]);
     if(own!==themeTicket||!background)return;
     await rig?.setSources({room:background,cat:eyes,wave:head});
     if(own!==themeTicket)return;
-    room.src=background;if(mug){mug.hidden=!ceramic;if(ceramic)mug.src=ceramic;}if(eyes)cat.src=eyes;if(head)greeting.src=head;
+    room.src=background;if(props){props.hidden=!personal;if(personal){props.querySelectorAll('img').forEach(img=>img.src=personal);props.dataset.ready='true';}}if(eyes)cat.src=eyes;if(head)greeting.src=head;
     activeTheme=theme;scene.dataset.theme=theme;
     rig?.setState({theme,turned,blinking:scene.classList.contains('is-blinking')});
   }

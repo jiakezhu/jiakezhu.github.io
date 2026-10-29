@@ -6,8 +6,9 @@ const read=name=>JSON.parse(fs.readFileSync(path.join(root,'assets/maps',name),'
 const data={countries:read('countries.geojson'),provinces:read('china-provinces.geojson'),places:read('places.json'),guide:read('city-guide.json')};
 for(const region of Object.values(data.places)) for(const point of [...region.milestones,...region.cities]) {
   const guide=data.guide[point.label];
-  if(!guide||['names','intro'].some(key=>!Array.isArray(guide[key])||guide[key].length!==4||guide[key].some(text=>typeof text!=='string'||!text.trim()))||!guide.source?.url?.startsWith('https://')) throw new Error(`Incomplete city guide: ${point.label}`);
+  if(!guide||['names','intro','summary'].some(key=>!Array.isArray(guide[key])||guide[key].length!==4||guide[key].some(text=>typeof text!=='string'||!text.trim()))||!guide.source?.url?.startsWith('https://')) throw new Error(`Incomplete city guide: ${point.label}`);
   if(!Array.isArray(guide.country)||guide.country.length!==4||guide.country.some(text=>!text.trim())||!Array.isArray(guide.highlights)||guide.highlights.length!==4||guide.highlights.some(items=>!Array.isArray(items)||items.length!==3||items.some(text=>!text.trim()))) throw new Error(`Incomplete place details: ${point.label}`);
+  if(guide.summary.some((text,index)=>text.trim().length<8||text.length>[48,150,160,160][index])) throw new Error(`Postcard summary too long or empty: ${point.label}`);
   for(const image of [guide.image,...(guide.personalImage?[guide.personalImage]:[])]) {
   if(!image||!['personal','reference'].includes(image.kind)||!Array.isArray(image.alt)||image.alt.length!==4||image.alt.some(text=>!text.trim())||image.width<400||image.height<300||!image.src.startsWith('images/')) throw new Error(`Incomplete place photo: ${point.label}`);
   const file=path.resolve(root,image.src);

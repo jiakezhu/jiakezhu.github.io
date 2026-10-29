@@ -13,7 +13,9 @@ test('every travel stop has a sourced introduction in all four site languages',(
   assert.deepEqual(Object.keys(guide).sort(),labels.sort());
   for(const label of labels){
     assert.equal(guide[label].names.length,4,label);assert.equal(guide[label].intro.length,4,label);
-    for(const text of guide[label].intro)assert(text.trim().length>30,`${label}: meaningful introduction`);
+    for(const text of guide[label].intro)assert(text.trim().length>=16,`${label}: factual introduction`);
+    assert.equal(guide[label].summary.length,4,label);
+    guide[label].summary.forEach((text,index)=>assert(text.trim().length>=8&&text.length<=[48,150,160,160][index],`${label}: concise translated summary`));
     for(const text of guide[label].names)assert(text.trim(),`${label}: translated place name`);
     assert.equal(new URL(guide[label].source.url).protocol,'https:');
     assert.equal(guide[label].country.length,4,label);
