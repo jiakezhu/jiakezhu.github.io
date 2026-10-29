@@ -136,28 +136,70 @@
     const dpr = Math.min(devicePixelRatio || 1, 2), w = f.canvas.clientWidth || innerWidth;
     f.width = w; f.canvas.width = Math.round(w * dpr); f.canvas.height = Math.round(f.height * dpr); f.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
-  function paintFlight(f, time) {
-    const c = f.ctx, w = f.width, h = f.height, ink = City.theme() === 'light' ? '#5e6f99' : '#c9b8e8';
-    c.clearRect(0, 0, w, h);
-    const path = x => h * .55 + Math.sin(x / w * TAU * 1.5) * h * .22;
-    const period = 14, k = (time % period) / period, px = -40 + k * (w + 80);
-    // The dotted trail behind the plane fades out over a third of the width.
-    c.fillStyle = ink;
-    for (let x = px - 8; x > px - w * .35 && x > 0; x -= 10) { c.globalAlpha = .5 * (1 - (px - x) / (w * .35)); c.beginPath(); c.arc(x, path(x), 1.4, 0, TAU); c.fill(); }
-    // Pins for the places on the route: China, France, Spain.
-    c.globalAlpha = .7;
-    [['🇨🇳', .18], ['🇫🇷', .5], ['🇪🇸', .82]].forEach(([flag, t]) => {
-      const x = w * t, y = path(x);
-      c.strokeStyle = ink; c.lineWidth = 1; c.beginPath(); c.arc(x, y, 4, 0, TAU); c.stroke();
-      c.font = '13px system-ui'; c.textAlign = 'center'; c.fillText(flag, x, y - 9);
-    });
-    c.globalAlpha = 1;
-    const y = path(px), slope = Math.atan2(path(px + 2) - y, 2);
-    c.save(); c.translate(px, y); c.rotate(slope);
-    c.fillStyle = City.theme() === 'light' ? '#ffffff' : '#f6f0e4'; c.strokeStyle = '#1a1322'; c.lineWidth = 1.2; c.lineJoin = 'round';
-    c.beginPath(); c.moveTo(14, 0); c.lineTo(-10, -9); c.lineTo(-5, 0); c.lineTo(-10, 8); c.closePath(); c.fill(); c.stroke();
-    c.beginPath(); c.moveTo(14, 0); c.lineTo(-5, 0); c.lineTo(-7, 4); c.closePath(); c.fillStyle = City.theme() === 'light' ? '#d9e5f6' : '#c9b8e8'; c.fill(); c.stroke();
+  // ── Folded-paper flight with precise route markers ───────────────────────
+  function flightY(x,w,h) {return h*.74-Math.sin(clamp(x/w,0,1)*Math.PI)*h*.17;}
+  function routePath(c,from,to,w,h,offset=0) {
+    c.beginPath();c.moveTo(from,flightY(from,w,h)+offset);
+    for(let x=from+6;x<to;x+=6)c.lineTo(x,flightY(x,w,h)+offset);
+    c.lineTo(to,flightY(to,w,h)+offset);
+  }
+  function flightBox(c,x,y,w,h,r) {
+    c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
+  }
+  function flagStar(c,x,y,r,rotation=-Math.PI/2) {
+    c.beginPath();for(let i=0;i<10;i++){const a=rotation+i*Math.PI/5,s=i%2?r*.382:r;(i?c.lineTo.bind(c):c.moveTo.bind(c))(x+Math.cos(a)*s,y+Math.sin(a)*s);}c.closePath();c.fill();
+  }
+  function routeFlag(c,code,x,y) {
+    const w=16,h=10.67;c.save();flightBox(c,x,y,w,h,1.6);c.clip();
+    if(code==='CN') {
+      c.fillStyle='#de2910';c.fillRect(x,y,w,h);c.fillStyle='#ffde00';flagStar(c,x+3.1,y+3.1,1.7);
+      [[5.5,1.2],[6.5,2.5],[6.5,4.2],[5.4,5.5]].forEach(([sx,sy])=>flagStar(c,x+sx,y+sy,.58,Math.atan2(3.1-sy,3.1-sx)));
+    }else if(code==='FR') {
+      ['#0055a4','#fff','#ef4135'].forEach((color,i)=>{c.fillStyle=color;c.fillRect(x+i*w/3,y,w/3+.1,h);});
+    }else{
+      c.fillStyle='#aa151b';c.fillRect(x,y,w,h);c.fillStyle='#f1bf00';c.fillRect(x,y+h/4,w,h/2);
+      c.fillStyle='#ae6a38';c.fillRect(x+4.4,y+4,1.7,2.8);c.fillStyle='#f5d27e';c.fillRect(x+4.8,y+4.5,.7,1.6);
+    }
+    const sheen=c.createLinearGradient(x,y,x+w,y+h);sheen.addColorStop(0,'rgba(255,255,255,.2)');sheen.addColorStop(.45,'rgba(255,255,255,0)');sheen.addColorStop(1,'rgba(0,0,0,.16)');c.fillStyle=sheen;c.fillRect(x,y,w,h);c.restore();
+  }
+  function routeBadge(c,code,x,y,light,proximity) {
+    const bw=62,bh=24,by=y-42,bx=x-bw/2;
+    c.strokeStyle=light?'rgba(87,111,144,.24)':'rgba(159,190,225,.22)';c.lineWidth=.7;
+    c.beginPath();c.moveTo(x,by+bh+3);c.lineTo(x,y-4);c.stroke();
+    c.save();c.shadowColor=light?'rgba(29,52,82,.08)':'rgba(3,8,16,.25)';c.shadowBlur=8;c.shadowOffsetY=2;
+    flightBox(c,bx,by,bw,bh,7);const glass=c.createLinearGradient(bx,by,bx,by+bh);
+    glass.addColorStop(0,light?'rgba(255,255,255,.92)':'rgba(44,57,75,.92)');glass.addColorStop(1,light?'rgba(240,245,251,.84)':'rgba(21,29,41,.94)');c.fillStyle=glass;c.fill();c.restore();
+    flightBox(c,bx+.5,by+.5,bw-1,bh-1,6.5);c.strokeStyle=light?'rgba(99,126,162,.27)':`rgba(170,200,236,${.25+proximity*.25})`;c.stroke();
+    c.strokeStyle=light?'rgba(255,255,255,.9)':'rgba(226,239,255,.18)';c.beginPath();c.moveTo(bx+8,by+1);c.lineTo(bx+bw-8,by+1);c.stroke();
+    routeFlag(c,code,bx+9,by+6.7);c.font='600 10px system-ui,sans-serif';c.textAlign='left';c.textBaseline='middle';c.fillStyle=light?'#425871':'#dce7f5';c.fillText(code,bx+34,by+12.3);
+    c.save();c.shadowColor=light?'#7894b3':'#b9d7ff';c.shadowBlur=proximity*7;c.fillStyle=light?'#7f98b5':'#bad4f2';c.beginPath();c.arc(x,y,1.6+proximity*.25,0,TAU);c.fill();c.restore();
+  }
+  function foldedPlane(c,x,y,angle,time,light) {
+    const bank=Math.sin(time*.7)*.22;
+    const point=([px,py,pz])=>{const yy=py*Math.cos(bank)-pz*Math.sin(bank),zz=py*Math.sin(bank)+pz*Math.cos(bank),perspective=1+zz*.012;return [px*perspective,yy*perspective];};
+    const nose=point([26,0,1]),left=point([-20,-12,0]),ridge=point([-7,0,6]),right=point([-20,12,-1]),keel=point([-8,5,-4]);
+    c.save();c.translate(x,y);c.rotate(angle);c.lineJoin='round';
+    const face=(vertices,colors)=>{const fill=c.createLinearGradient(-18,-12,22,12);fill.addColorStop(0,colors[0]);fill.addColorStop(1,colors[1]);c.beginPath();vertices.forEach((p,i)=>(i?c.lineTo.bind(c):c.moveTo.bind(c))(...p));c.closePath();c.fillStyle=fill;c.fill();};
+    c.shadowColor=light?'rgba(62,87,122,.12)':'rgba(177,215,255,.22)';c.shadowBlur=9;
+    face([nose,left,ridge],light?['#ffffff','#d8e3f0']:['#f7fbff','#b5c9e2']);
+    c.shadowBlur=0;face([nose,ridge,right],light?['#b8c9df','#7188a6']:['#b7d0ec','#5e789c']);face([ridge,keel,right],light?['#8299b7','#536b8a']:['#718fb3','#3e5675']);
+    c.lineWidth=.7;c.strokeStyle=light?'rgba(255,255,255,.95)':'rgba(245,251,255,.9)';c.beginPath();c.moveTo(...left);c.lineTo(...nose);c.lineTo(...right);c.stroke();
+    c.strokeStyle=light?'rgba(75,104,143,.48)':'rgba(208,230,255,.7)';c.beginPath();c.moveTo(...nose);c.lineTo(...ridge);c.lineTo(...keel);c.stroke();
     c.restore();
+  }
+  function paintFlight(f,time) {
+    const c=f.ctx,w=f.width,h=f.height,light=City.theme()==='light';c.clearRect(0,0,w,h);
+    const progress=(time%18)/18,k=progress-Math.sin(progress*TAU)*.025,px=-65+k*(w+130);
+    const accent=light?'99,127,160':'169,201,237';
+    c.lineWidth=.65;c.strokeStyle=`rgba(${accent},${light?.18:.14})`;routePath(c,w*.06,w*.94,w,h);c.stroke();
+    const tail=Math.max(0,px-Math.min(210,w*.25)),head=Math.min(w,px-12);
+    if(head>tail){
+      const trail=c.createLinearGradient(tail,0,head,0);trail.addColorStop(0,`rgba(${accent},0)`);trail.addColorStop(.55,`rgba(${accent},.18)`);trail.addColorStop(1,`rgba(${accent},.7)`);
+      c.strokeStyle=trail;c.lineWidth=1.1;c.shadowColor=`rgba(${accent},.2)`;c.shadowBlur=5;routePath(c,tail,head,w,h);c.stroke();c.shadowBlur=0;
+      c.lineWidth=.45;c.globalAlpha=.35;routePath(c,tail+8,head-7,w,h,2.4);c.stroke();c.globalAlpha=1;
+    }
+    [['CN',.18],['FR',.5],['ES',.82]].forEach(([code,t])=>{const x=w*t;routeBadge(c,code,x,flightY(x,w,h),light,Math.exp(-(((px-x)/45)**2)));});
+    const py=flightY(px,w,h),angle=Math.atan2(flightY(px+2,w,h)-py,2);foldedPlane(c,px,py,angle,time,light);
   }
 
   // ── Cobwebs in chapter corners, with dew and a dangling spider ────────────

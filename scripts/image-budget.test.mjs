@@ -50,12 +50,25 @@ test('hidden intro and modal pictures have no image source before the visitor op
   }
 });
 
-test('hero preload and image select the same responsive source without duplicate downloads',()=>{
-  const hero=tags.find(tag=>attribute(tag,'class')==='hero-photo');
+test('desk illustration is preloaded while the optional real portrait stays deferred',()=>{
+  const hero=tags.find(tag=>attribute(tag,'class')==='dk-room');
+  const photo=tags.find(tag=>attribute(tag,'class')==='hero-photo');
   const preload=[...homepage.matchAll(/<link\b[^>]*>/g)].map(m=>m[0]).find(tag=>attribute(tag,'as')==='image');
   assert.equal(attribute(hero,'loading'),'eager');
   assert.equal(attribute(hero,'fetchpriority'),'high');
-  assert.equal(attribute(hero,'srcset'),attribute(preload,'imagesrcset'));
-  assert.equal(attribute(hero,'sizes'),attribute(preload,'imagesizes'));
   assert.equal(attribute(hero,'src'),attribute(preload,'href'));
+  assert.equal(attribute(photo,'src'),undefined);
+  assert.equal(attribute(photo,'loading'),'lazy');
+  assert(fs.existsSync(path.join(root,attribute(photo,'data-src'))));
+});
+
+test('all desk lighting and pose assets are genuine WebP and together stay under 400 KB',()=>{
+  let bytes=0;
+  for(const name of ['night','day','cat-night','cat-day','wave-night','wave-day']) {
+    const data=fs.readFileSync(path.join(root,'images/web/desk',name+'.webp'));
+    assert.equal(data.subarray(0,4).toString(),'RIFF',name);
+    assert.equal(data.subarray(8,12).toString(),'WEBP',name);
+    bytes+=data.length;
+  }
+  assert(bytes<400*1024,bytes+' bytes exceeds the complete desk asset budget');
 });

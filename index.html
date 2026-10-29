@@ -700,12 +700,13 @@
     }
   </style>
   <link rel="stylesheet" href="assets/vendor/leaflet.css"/>
-  <script src="assets/theme.js?v=9"></script>
+  <script src="assets/theme.js?v=10"></script>
   <link rel="stylesheet" href="assets/refinement.css?v=5">
   <link rel="stylesheet" href="assets/journal.css">
   <link rel="stylesheet" href="assets/intro.css?v=9">
   <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/book-transition.css?v=5"><link rel="stylesheet" href="assets/home-v3.css?v=23"><link rel="stylesheet" href="assets/journey.css?v=8"><link rel="stylesheet" href="assets/story-entrance.css?v=1">
-  <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/hero-desk.css?v=2"><link rel="stylesheet" href="assets/home-classic.css?v=7">
+  <link rel="preload" as="image" href="images/web/desk/night.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/hero-desk.css?v=6"><link rel="stylesheet" href="assets/home-classic.css?v=7">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
@@ -854,129 +855,31 @@
   <div class="hero-right">
     <div class="hero-img-wrap">
       <div class="hero-photo-clip has-desk">
-      <svg class="desk-scene" viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="desk-title">
-        <title id="desk-title">Illustration: Jiake typing at his desk while his projects scroll by on the monitor</title>
-        <defs>
-          <linearGradient id="dk-sky" x1="0" y1="0" x2="0" y2="1"><stop class="dk-sky-top" offset="0"/><stop class="dk-sky-mid" offset=".62"/><stop class="dk-sky-bot" offset="1"/></linearGradient>
-          <radialGradient id="dk-glow" cx=".65" cy=".38" r=".55"><stop offset="0" stop-color="#8fb8ff" stop-opacity=".5"/><stop offset="1" stop-color="#8fb8ff" stop-opacity="0"/></radialGradient>
-          <radialGradient id="dk-warm" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#ffc56b" stop-opacity=".35"/><stop offset="1" stop-color="#ffc56b" stop-opacity="0"/></radialGradient>
-          <pattern id="dk-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle class="dk-wall-dot" cx="9" cy="9" r="1.3"/></pattern>
-          <clipPath id="dk-window-clip"><rect x="34" y="40" width="158" height="168" rx="6"/></clipPath>
-          <clipPath id="dk-screen-clip"><rect x="250" y="106" width="284" height="172" rx="4"/></clipPath>
-          <clipPath id="dk-feed-clip"><rect x="250" y="120" width="170" height="158"/></clipPath>
-          <clipPath id="dk-code-clip"><rect x="422" y="120" width="112" height="158"/></clipPath>
-        </defs>
-
-        <rect class="dk-wall" width="600" height="520"/>
-        <rect width="600" height="520" fill="url(#dk-dots)"/>
-        <rect class="dk-warm" width="600" height="360" fill="url(#dk-warm)"/>
-
-        <!-- Window onto the same city as the hero backdrop. -->
-        <g class="dk-window">
-          <rect class="dk-window-frame" x="26" y="32" width="174" height="184" rx="12"/>
-          <g clip-path="url(#dk-window-clip)">
-            <rect x="34" y="40" width="158" height="168" fill="url(#dk-sky)"/>
-            <g class="dk-stars"><circle cx="58" cy="62" r="1.2"/><circle cx="96" cy="54" r=".9"/><circle cx="150" cy="70" r="1.3"/><circle cx="176" cy="52" r=".8"/><circle cx="122" cy="88" r="1"/><circle cx="70" cy="98" r=".8"/></g>
-            <circle class="dk-moon" cx="152" cy="80" r="15"/>
-            <g class="dk-cloud"><ellipse cx="78" cy="78" rx="22" ry="9"/><ellipse cx="94" cy="72" rx="14" ry="11"/><ellipse cx="64" cy="75" rx="10" ry="8"/></g>
-            <path class="dk-city" d="M34 208V160h14v-18h12v26h10v-40h16v52h8v-30h14v-14h10v44h12v-58h16v58h10v-22h14v8h12v62z"/>
-            <g class="dk-city-lights"><rect x="52" y="148" width="3" height="4"/><rect x="74" y="136" width="3" height="4"/><rect x="80" y="152" width="3" height="4"/><rect x="112" y="166" width="3" height="4"/><rect x="138" y="140" width="3" height="4"/><rect x="144" y="160" width="3" height="4"/><rect x="138" y="176" width="3" height="4"/><rect x="170" y="180" width="3" height="4"/></g>
-          </g>
-          <path class="dk-window-bars" d="M113 40v168M34 124h158"/>
-          <rect class="dk-sill" x="18" y="212" width="190" height="11" rx="4"/>
-        </g>
-
-        <!-- Fairy lights that pulse on the beat. -->
-        <path class="dk-wire" d="M-4 24Q300 92 604 30"/>
-        <g class="dk-bulbs"></g>
-
-        <!-- Desk -->
-        <path class="dk-desk" d="M0 326h600v50H0z"/>
-        <rect class="dk-desk-edge" y="376" width="600" height="12"/>
-        <rect class="dk-under" y="388" width="600" height="132"/>
-
-        <!-- Monitor -->
-        <ellipse class="dk-stand" cx="392" cy="338" rx="58" ry="9"/>
-        <rect class="dk-stand" x="381" y="288" width="22" height="50" rx="4"/>
-        <rect class="dk-bezel" x="236" y="92" width="312" height="200" rx="13"/>
-        <g class="dk-screen" clip-path="url(#dk-screen-clip)">
-          <rect x="250" y="106" width="284" height="172" fill="#0f1117"/>
-          <g clip-path="url(#dk-feed-clip)"><rect x="250" y="120" width="172" height="158" fill="#e9ecf3"/><g class="dk-feed"></g></g>
-          <rect x="422" y="120" width="112" height="158" fill="#161926"/>
-          <rect x="422" y="120" width="13" height="158" fill="#1c2030"/>
-          <g clip-path="url(#dk-code-clip)"><g class="dk-code"></g></g>
-          <rect x="250" y="106" width="284" height="14" fill="#262a3a"/>
-          <circle cx="258" cy="113" r="2.5" fill="#ff5f57"/><circle cx="266" cy="113" r="2.5" fill="#febc2e"/><circle cx="274" cy="113" r="2.5" fill="#28c840"/>
-          <rect x="284" y="108.5" width="92" height="11" rx="3" fill="#353a50"/>
-          <text class="dk-tab" x="290" y="116.6">Sales Buddy</text>
-          <text class="dk-file" x="428" y="116.6">me.js</text>
-          <rect class="dk-flash" x="250" y="106" width="284" height="172" fill="#fff"/>
-          <path d="M250 106h120l-80 172h-40z" fill="#fff" opacity=".05"/>
-        </g>
-        <g class="dk-note dk-note--yellow" transform="translate(520 84) rotate(9)"><rect width="38" height="32" rx="2"/><text x="19" y="20">Hola!</text></g>
-        <g class="dk-note dk-note--pink" transform="translate(527 214) rotate(-7)"><rect width="34" height="30" rx="2"/><text x="17" y="19">你好</text></g>
-        <!-- A tiny spider on a thread from the bezel. -->
-        <g class="dk-spider"><line x1="0" y1="-30" x2="0" y2="0"/><circle class="dk-spider-body" cx="0" cy="5" r="5"/><circle cx="-1.8" cy="4" r="1.3" fill="#fff"/><circle cx="1.8" cy="4" r="1.3" fill="#fff"/><path class="dk-spider-legs" d="M-4 6l-5-3M-4 8l-6 1M-4 9.5l-4 4M4 6l5-3M4 8l6 1M4 9.5l4 4"/></g>
-
-        <!-- Desk things -->
-        <g class="dk-keyboard"><path d="M262 340h170l10 24H252z"/><g class="dk-keys"></g></g>
-        <g class="dk-mouse"><ellipse cx="470" cy="352" rx="11" ry="14"/><path d="M470 340v7"/></g>
-        <g class="dk-mug"><path class="dk-steam" d="M550 296c-6-8 6-12 0-20s6-12 0-18"/><path class="dk-steam dk-steam--2" d="M562 296c-6-8 6-12 0-20s6-12 0-18"/><path class="dk-mug-handle" d="M572 314c12 0 12 20 0 20"/><rect class="dk-mug-body" x="540" y="302" width="34" height="40" rx="6"/><ellipse cx="557" cy="303" rx="16" ry="4" fill="#4a2c1d"/><path class="dk-mug-heart" d="M557 324c-5-4-9-7-9-10a4 4 0 0 1 9-2a4 4 0 0 1 9 2c0 3-4 6-9 10z"/></g>
-        <g class="dk-plant">
-          <rect class="dk-book" x="26" y="328" width="72" height="10" rx="2"/><rect class="dk-book dk-book--2" x="32" y="318" width="62" height="10" rx="2"/>
-          <path class="dk-pot" d="M42 286h44l-6 32H48z"/><rect class="dk-pot-rim" x="39" y="281" width="50" height="9" rx="3"/>
-          <g class="dk-flower">
-            <path class="dk-stem" d="M64 282C62 262 66 246 64 228"/>
-            <path class="dk-leaf" d="M64 262c-14-4-18-14-18-14s12-2 18 8zM64 252c12-6 18-2 20 2s-12 4-20-2z"/>
-            <g class="dk-bloom" transform="translate(64 222)"></g>
-          </g>
-        </g>
-
-        <rect class="dk-screen-glow" width="600" height="520" fill="url(#dk-glow)"/>
-
-        <!-- Jiake -->
-        <g class="dk-me">
-          <path class="dk-sleeve dk-sleeve--far" d="M222 404C246 398 262 384 286 360"/>
-          <ellipse class="dk-hand dk-hand--l" cx="290" cy="356" rx="10" ry="7.5"/>
-          <path class="dk-hoodie" d="M90 530C86 456 104 402 172 392C240 402 258 456 254 530Z"/>
-          <path class="dk-hoodie-shade" d="M90 530C86 456 104 402 172 392C128 410 116 460 122 530Z"/>
-          <path class="dk-hood" d="M118 404C126 380 214 380 226 404C214 420 132 420 118 404Z"/>
-          <path class="dk-hood-in" d="M134 402C146 390 200 390 210 402C196 410 148 410 134 402Z"/>
-          <path class="dk-sleeve dk-sleeve--near" d="M238 414C276 420 318 392 346 360"/>
-          <ellipse class="dk-hand dk-hand--r" cx="350" cy="356" rx="10.5" ry="8"/>
-          <g class="dk-wave"><path class="dk-sleeve dk-sleeve--wave" d="M108 418Q88 388 82 346"/><g class="dk-palm"><circle cx="81" cy="336" r="11"/><path d="M73 330l-4-9M79 326l-1-10M85 326l2-10M90 331l5-7"/></g></g>
-          <rect class="dk-neck" x="164" y="366" width="26" height="22" rx="8"/>
-          <g class="dk-head">
-            <g class="dk-head-back">
-              <ellipse class="dk-hair" cx="178" cy="316" rx="67" ry="62"/>
-              <path class="dk-skin" d="M210 362C226 356 238 342 242 324C246 340 240 360 222 372C214 374 208 370 210 362Z"/>
-              <ellipse class="dk-blush" cx="232" cy="348" rx="7" ry="4.5"/>
-              <path class="dk-lash" d="M238 330q5 1 7 5"/>
-              <path class="dk-hair" d="M146 366q8 10 14 2q6 9 12 1q6 9 12 1q6 9 12 0q6 8 12-2l-6-12h-50z"/>
-              <path class="dk-hair-shine" d="M128 286C140 266 168 258 190 262"/>
-              <path class="dk-hair-shine" d="M126 302C130 296 136 292 142 290"/>
-              <path class="dk-hair" d="M170 258c-6-18 6-30 22-28c-12 4-14 16-10 26z"/>
-            </g>
-            <g class="dk-head-front">
-              <ellipse class="dk-skin" cx="178" cy="318" rx="66" ry="60"/>
-              <ellipse class="dk-eye" cx="154" cy="326" rx="10" ry="13"/><ellipse class="dk-eye" cx="202" cy="326" rx="10" ry="13"/>
-              <circle class="dk-eye-hi" cx="157" cy="320" r="3.6"/><circle class="dk-eye-hi" cx="205" cy="320" r="3.6"/>
-              <ellipse class="dk-blush" cx="136" cy="346" rx="10" ry="6"/><ellipse class="dk-blush" cx="220" cy="346" rx="10" ry="6"/>
-              <path class="dk-mouth" d="M168 346q10 12 20 0z"/>
-              <path class="dk-hair" d="M112 318C106 270 140 250 178 252C216 254 248 272 244 318C238 300 230 294 224 300C222 288 210 284 204 296C198 284 186 284 182 296C174 284 160 286 156 298C150 288 136 292 134 304C126 298 116 304 112 318Z"/>
-              <path class="dk-hair" d="M170 254c-6-18 6-30 22-28c-12 4-14 16-10 26z"/>
-            </g>
-            <path class="dk-band" d="M114 322C108 262 248 262 242 322"/>
-            <ellipse class="dk-cup" cx="114" cy="328" rx="11" ry="18"/>
-            <ellipse class="dk-cup" cx="242" cy="326" rx="12" ry="19"/>
-          </g>
-          <path class="dk-chair" d="M82 470Q82 446 120 446H226Q262 446 262 470V540H82Z"/>
-          <path class="dk-chair-stitch" d="M100 470Q100 460 124 460H220Q244 460 244 470"/>
-        </g>
-        <g class="dk-notes"></g>
-        <g class="dk-bubble"><path d="M232 232h92a12 12 0 0 1 12 12v20a12 12 0 0 1-12 12h-58l-14 12 2-12h-22a12 12 0 0 1-12-12v-20a12 12 0 0 1 12-12z"/><text x="278" y="259"></text></g>
-      </svg>
-      <img class="hero-photo" alt="At the Colosseum, Rome" data-src="images/web/8bd883eb83b8-800.webp" width="800" height="676" decoding="async" loading="lazy" data-srcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px"></div>
+      <div class="desk-scene" role="group" aria-label="Jiake writing code at his desk with a resting cat">
+        <div class="dk-stage">
+          <button class="dk-screen" type="button" aria-label="Next project preview · Sales Buddy">
+            <span class="dk-toolbar" aria-hidden="true"><i></i><i></i><i></i><span class="dk-tab">Sales Buddy</span><span class="dk-workspace-label">workspace</span></span>
+            <span class="dk-workspace" aria-hidden="true">
+              <span class="dk-editor"><span class="dk-editor-file">next-actions.js</span><code class="dk-code">const nextActions = tasks.filter(task =&gt; task.status !== 'done');</code></span>
+              <span class="dk-preview"><span class="dk-preview-label">PREVIEW</span><span class="dk-preview-window"><img class="dk-preview-image" src="images/web/desk/portfolio-sales.webp" width="640" height="215" alt=""><span class="dk-workflow" hidden></span></span><span class="dk-preview-title">Sales Buddy</span><span class="dk-preview-note">AI account workspace</span></span>
+            </span>
+            <span class="dk-status" aria-hidden="true"><span><i></i>Ready</span><span class="dk-project-count">01 / 06</span></span>
+          </button>
+          <img class="dk-room" src="images/web/desk/night.webp" width="1024" height="1024" alt="" decoding="async" loading="eager" fetchpriority="high" aria-hidden="true">
+          <img class="dk-pose dk-wave" width="512" height="690" alt="" aria-hidden="true">
+          <img class="dk-pose dk-cat" width="284" height="184" alt="" aria-hidden="true">
+          <svg class="dk-atmosphere" viewBox="0 0 1024 1024" aria-hidden="true">
+            <g transform="translate(898 648)"><path class="dk-steam-line" d="M-9 0c-9-13 8-17 0-30s7-18 2-27"/><path class="dk-steam-line" d="M9 0c-8-12 9-17 3-28s7-17 3-24"/></g>
+            <g><path class="dk-key-light" d="m538 689 13 2-3 5-13-2z"/><path class="dk-key-light" d="m438 658 12 2-3 5-12-2z"/><path class="dk-key-light" d="m523 667 12 2-3 5-12-2z"/><path class="dk-key-light" d="m425 645 12 2-3 5-12-2z"/></g>
+            <ellipse class="dk-flower-halo" cx="958" cy="377" rx="61" ry="61"/>
+          </svg>
+          <span class="dk-bubble" aria-hidden="true">Hi there! 👋</span>
+          <button class="dk-hit dk-wave-hit" type="button" aria-label="Say hello to Jiake"></button>
+          <button class="dk-hit dk-cat-hit" type="button" aria-label="Let the cat blink"></button>
+          <button class="dk-hit dk-flower-hit" type="button" aria-label="A little sunshine"></button>
+        </div>
+      </div>
+      <img class="hero-photo" aria-hidden="true" alt="At the Colosseum, Rome" data-src="images/web/8bd883eb83b8-800.webp" width="800" height="676" decoding="async" loading="lazy" data-srcset="images/web/8bd883eb83b8-400.webp 400w, images/web/8bd883eb83b8-800.webp 800w, images/web/8bd883eb83b8-1082.webp 1082w" sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1200px) 42vw, 560px"></div>
       <p class="hero-photo-motto"><span class="hero-status-dot" aria-hidden="true"></span>Always Day One.</p>
       <div class="hero-badge"><span><span class="il en show">💻 Vibe coding at my desk</span><span class="il fr">💻 En train de coder</span><span class="il es">💻 Programando en mi escritorio</span><span class="il zh">💻 正在敲代码</span></span><button class="hero-real-toggle" type="button" aria-pressed="false"><span class="il en show">📷 See the real me</span><span class="il fr">📷 La vraie photo</span><span class="il es">📷 Ver la foto real</span><span class="il zh">📷 看看真人</span></button></div>
     </div>
@@ -1800,7 +1703,8 @@
 <script src="assets/verse-figure.js?v=5" defer></script>
 <script src="assets/verse-city.js?v=2" defer></script>
 <script src="assets/hero-scene.js?v=9" defer></script>
-<script src="assets/hero-desk.js?v=2" defer></script>
+<script src="assets/hero-desk-motion.js?v=2" defer></script>
+<script src="assets/hero-desk.js?v=6" defer></script>
 <script src="assets/interactions.js?v=4"></script>
 <script src="assets/home-personality.js?v=10"></script>
 <script src="assets/home-language-layout.js?v=6"></script>

@@ -360,7 +360,7 @@
     await load('verse-figure.js?v=5', () => window.VerseFigure);
     boot();
     await load('verse-city.js?v=2', () => window.VerseCity);
-    await load('verse-scenes.js?v=2', () => window.__jiakeScenes);
+    await load('verse-scenes.js?v=3', () => window.__jiakeScenes);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true }); else start();
 })();

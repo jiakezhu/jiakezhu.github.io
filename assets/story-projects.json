@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1",
+    "title": "Sales Buddy",
+    "image": "../images/web/desk/portfolio-sales.webp",
+    "description": {
+      "en": "An AI account-intelligence workspace built for frontline B2B sales. It converts voice or free-form updates into structured CRM records, maps stakeholders, prioritizes opportunities, recommends the next action, and produces a complete account report. I have used it to progress 40+ accounts and map over RMB 12M in IT scale; it won first place in the Marketing & Customer Acquisition track of a Tencent Hackathon and advanced to the in-person showcase.",
+      "fr": "Un cockpit d’intelligence client conçu pour les commerciaux B2B. À partir d’une note libre ou vocale, il structure le CRM, cartographie les décideurs, hiérarchise les opportunités, recommande la prochaine action et génère un rapport client complet. Je l’ai utilisé pour faire avancer plus de 40 comptes et qualifier plus de 12 M RMB de parc IT ; le projet a remporté le volet marketing et acquisition d’un Hackathon Tencent avant d’être retenu pour la finale présentielle.",
+      "es": "Un centro de inteligencia de cuentas para ventas B2B. Convierte actualizaciones de voz o texto libre en registros de CRM, mapea a los decisores, prioriza oportunidades, propone la siguiente acción y genera un informe integral de cada cuenta. Lo he usado para impulsar más de 40 clientes y dimensionar más de 12 millones de RMB en infraestructura IT; ganó la categoría de marketing y captación de un Hackathon de Tencent y pasó a la presentación presencial.",
+      "zh": "面向一线 ToB 销售的客户推进工作台。它把语音或自然语言进展转成结构化 CRM 记录，梳理关键人、判断机会优先级、给出下一步动作，并一键生成客户全景报告。我已经用它推进 40+ 客户、摸排 1200 万+ IT 体量；项目获腾讯 Hackathon 营销拓客赛道第一名，并入选线下路演。"
+    },
+    "href": "https://jiakezhu.github.io/ai-sales-copilot/",
+    "tags": "AI account workspace"
+  },
+  {
+    "id": "2",
+    "title": "LingoVibe",
+    "image": "../images/web/desk/portfolio-lingovibe.webp",
+    "description": {
+      "en": "The hardest part of learning a language is often not knowing what a word means, but knowing how it will land. LingoVibe brings definition, tone, social setting, cultural associations, and cross-language differences into one view for learners of English, French, and Spanish. Whether writing an email, joining a conversation, or decoding online language, users can see when a phrase feels natural, when it may sound awkward or offensive, and how the same intent travels across cultures — moving from correct translation to confident expression.",
+      "fr": "Le plus difficile dans une langue n’est souvent pas de comprendre un mot, mais de savoir comment il sera reçu. LingoVibe réunit sens, registre, contexte social, références culturelles et différences entre l’anglais, le français et l’espagnol. Pour écrire un e-mail, participer à une conversation ou décoder une expression en ligne, l’utilisateur comprend ce qui sonne naturel, maladroit ou potentiellement offensant, et comment une même intention voyage d’une culture à l’autre — au-delà de la traduction correcte, vers une expression vraiment sûre.",
+      "es": "Lo más difícil de aprender un idioma no siempre es saber qué significa una palabra, sino entender cómo va a sonar. LingoVibe reúne significado, tono, contexto social, asociaciones culturales y diferencias entre inglés, francés y español. Al escribir un correo, entrar en una conversación o descifrar una expresión de internet, el usuario puede saber qué resulta natural, qué puede sonar extraño u ofensivo y cómo cambia una misma intención entre culturas — pasando de traducir correctamente a expresarse con seguridad.",
+      "zh": "学语言最难的，往往不是“不认识”，而是不知道一个词在真实交流里听起来是什么感觉。LingoVibe 面向英、法、西三语学习者，把词义、语气强弱、使用场景、文化联想和跨语言差异放在同一个页面里。无论是写邮件、聊天，还是理解网络表达，用户都能判断一个词什么时候自然、什么时候可能显得生硬或冒犯，以及同一种意思换一种语言该怎么说——从“翻译正确”走到“表达得体”。"
+    },
+    "href": "https://lingovibe-seven.vercel.app/",
+    "tags": "English · French · Spanish"
+  },
+  {
+    "id": "3",
+    "title": "Jiake Orbit",
+    "image": "../images/web/desk/portfolio-orbit.webp",
+    "description": {
+      "en": "Most productivity tools only record whether something got done. Jiake Orbit is designed to reveal what keeps a person moving and where their attention actually goes. It brings habits, tasks, quick ideas, and evening reflection into one daily rhythm: define the next action, capture thoughts in Spark before they disappear, then review the day with evidence rather than memory. Streaks grow a personal universe and badges make long-term progress visible — not to push users to do more, but to help them discover what is worth sustaining and build a rhythm that genuinely fits.",
+      "fr": "La plupart des outils de productivité se contentent de noter si une tâche est faite. Jiake Orbit cherche plutôt à montrer ce qui entretient l’élan et où part réellement l’attention. Habitudes, tâches, idées rapides et bilan du soir suivent un même rythme quotidien : définir la prochaine action, saisir une pensée dans Spark avant qu’elle ne disparaisse, puis relire sa journée à partir de traces concrètes. Les séries font grandir un univers personnel et les badges rendent les progrès visibles — non pour en faire toujours plus, mais pour comprendre ce qui mérite de durer et construire un rythme qui nous ressemble.",
+      "es": "La mayoría de las herramientas de productividad solo registran si algo se hizo. Jiake Orbit busca mostrar qué mantiene el impulso y dónde va realmente la atención. Hábitos, tareas, ideas rápidas y reflexión nocturna forman un mismo ritmo diario: definir la siguiente acción, guardar una idea en Spark antes de perderla y revisar el día con datos en lugar de memoria. Las rachas hacen crecer un universo personal y las insignias vuelven visible el progreso a largo plazo — no para hacer más por hacer, sino para descubrir qué merece continuidad y construir un ritmo propio.",
+      "zh": "很多效率工具只记录“做没做”，Jiake Orbit 更想回答：什么让人持续行动，注意力到底去了哪里。它把习惯、任务、灵感捕捉和晚间复盘放进一条日常节奏里：先明确下一步，白天用 Spark 接住稍纵即逝的想法，晚上再根据真实记录回看一天。连续行动会推进自己的星球，成就徽章让长期变化变得看得见——不是催你做得更多，而是帮你发现什么值得坚持，慢慢形成真正适合自己的节奏。"
+    },
+    "href": "https://habit-oribt.vercel.app/",
+    "tags": "Habits · focus · reflection"
+  },
+  {
+    "id": "4",
+    "title": "Feishu KB RAG",
+    "image": "../images/web/4a98ccad9a72-160.webp",
+    "description": {
+      "en": "A reusable Hermes Agent skill that turns a Feishu/Lark knowledge base into a practical retrieval layer. A natural-language question triggers semantic search, relevance ranking, and synthesis across internal documents, replacing manual folder-hunting with a concise answer grounded in the team’s own material.",
+      "fr": "Un skill réutilisable pour Hermes Agent qui transforme une base Feishu/Lark en véritable couche de recherche. Une question en langage naturel déclenche recherche sémantique, classement par pertinence et synthèse de plusieurs documents internes — sans avoir à fouiller les dossiers un par un.",
+      "es": "Un skill reutilizable para Hermes Agent que convierte una base de Feishu/Lark en una capa de recuperación útil. Una pregunta en lenguaje natural activa búsqueda semántica, ranking por relevancia y síntesis de documentos internos, sustituyendo la búsqueda manual entre carpetas por una respuesta basada en el conocimiento del equipo.",
+      "zh": "把飞书知识库变成真正可调用的检索层。用户用自然语言提问后，Hermes Agent 会依次完成语义搜索、相关性排序和跨文档总结，把“翻目录、找旧文档”的过程压缩成一条基于内部资料的答案；整个能力被封装为可复用 Skill。"
+    },
+    "href": "https://github.com/jiakezhu/feishu-kb-rag",
+    "tags": "Knowledge retrieval"
+  },
+  {
+    "id": "5",
+    "title": "Tutoring Prep Agent",
+    "image": "../images/web/63878dfe7d00-160.webp",
+    "description": {
+      "en": "A local agent that runs the full tutoring-prep pipeline with Claude Desktop and filesystem MCP: read the student context and teaching materials, assemble a structured lesson plan, save the deliverables, and draft the follow-up email. The workflow cuts repetitive preparation from roughly 30 minutes to under 5 while keeping the teacher in control of the final output.",
+      "fr": "Un agent local qui exécute toute la préparation avec Claude Desktop et filesystem MCP : lecture du contexte élève et des supports, création d’un plan de cours structuré, sauvegarde des livrables et rédaction de l’e-mail de suivi. Le temps consacré aux tâches répétitives passe d’environ 30 minutes à moins de 5, tout en laissant la validation finale au professeur.",
+      "es": "Un agente local que ejecuta todo el flujo de preparación con Claude Desktop y filesystem MCP: lee el contexto del alumno y los materiales, crea un plan de clase estructurado, guarda los entregables y redacta el correo de seguimiento. Reduce el trabajo repetitivo de unos 30 minutos a menos de 5, manteniendo al profesor al mando del resultado final.",
+      "zh": "用 Claude Desktop + filesystem MCP 跑通一条本地备课流水线：读取学生情况和教学材料，生成结构化教案，保存交付文件，再起草课后邮件。重复准备时间从约 30 分钟降到 5 分钟以内，同时保留老师对最终内容的审核权。"
+    },
+    "href": "../images/agent-flowchart.html",
+    "tags": "Lesson preparation"
+  },
+  {
+    "id": "6",
+    "title": "Budget Travel Planner",
+    "image": "../images/web/9bb764f5d19a-160.webp",
+    "description": {
+      "en": "A Hermes Agent skill for turning a loose travel idea into an executable student-budget itinerary. It balances dates, budget, transport, and interests; estimates daily spend, builds a sensible route, surfaces less touristy alternatives, and recalculates the plan when time or money changes.",
+      "fr": "Un skill Hermes Agent qui transforme une envie de voyage encore floue en itinéraire étudiant réellement exécutable. Il arbitre entre dates, budget, transport et centres d’intérêt, estime les dépenses quotidiennes, construit un parcours cohérent, propose des alternatives moins touristiques et recalcule le tout dès qu’une contrainte change.",
+      "es": "Un skill de Hermes Agent que convierte una idea de viaje todavía vaga en un itinerario estudiantil que se puede ejecutar. Equilibra fechas, presupuesto, transporte e intereses, estima el gasto diario, diseña una ruta coherente, propone alternativas menos turísticas y recalcula el plan cuando cambian el tiempo o el dinero.",
+      "zh": "把一句模糊的旅行想法变成能直接执行的学生预算行程。Agent 会同时权衡日期、预算、交通和兴趣，估算每日花费、排出合理路线、补充不那么游客化的备选点；时间或预算一变，也能重新计算整套计划。"
+    },
+    "href": "https://github.com/jiakezhu/student-budget-travel",
+    "tags": "Student-budget routes"
+  },
+  {
+    "id": "7",
+    "title": "Life in Frames",
+    "image": "../images/comic/page-01-small.webp",
+    "href": "./comic/index.html",
+    "tags": "16 pages · 4 languages",
+    "description": {
+      "zh": "从宁波的海边村庄，到杭州、成都和巴黎。十六页成长漫画，记录语言、学习和走向世界的故事。",
+      "en": "Sixteen illustrated chapters, from a coastal village in Ningbo to Hangzhou, Chengdu and Paris. Languages, learning and a life in the making.",
+      "fr": "Seize chapitres illustrés, d’un village côtier de Ningbo à Hangzhou, Chengdu et Paris. Langues, apprentissage et parcours personnel.",
+      "es": "Dieciséis capítulos ilustrados, desde un pueblo costero de Ningbo hasta Hangzhou, Chengdu y París. Idiomas, aprendizaje y una vida en construcción."
+    }
+  },
+  {
+    "id": "8",
+    "title": "Projects & Notes",
+    "image": "../images/web/63878dfe7d00-384.webp",
+    "action": "journal",
+    "tags": "12 entries · journal",
+    "description": {
+      "zh": "产品、代码与普通日常。保留全部项目记录、日记、分类、搜索和四语文章，在阅读目录中继续浏览。",
+      "en": "Projects, code and everyday notes. Read all twelve entries, with categories, search and four-language articles.",
+      "fr": "Projets, code et notes du quotidien. Douze textes avec catégories, recherche et articles en quatre langues.",
+      "es": "Proyectos, código y notas cotidianas. Doce entradas con categorías, búsqueda y artículos en cuatro idiomas."
+    }
+  }
+]
