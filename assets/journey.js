@@ -97,7 +97,9 @@
     if(guide?.personalImage){const names=[['地方实景','我的照片'],['The place','My photo'],['Le lieu','Ma photo'],['El lugar','Mi foto']][i];['place','personal'].forEach((value,n)=>{const b=document.createElement('button');b.type='button';b.dataset.atlasPhotoVariant=value;b.textContent=names[n];b.setAttribute('aria-pressed',String(photoVariant===value));choices.append(b);});}
     section.querySelector('[data-atlas-kicker]').textContent=story?.period?(story.period+(guide?.country[i]?' · '+guide.country[i]:'')):(guide?.country[i]||t.place);
     section.querySelector('[data-atlas-place]').textContent=placeName(point);
-    section.querySelector('[data-atlas-intro]').textContent=guide?.summary[i]||'';
+    section.querySelector('[data-atlas-intro]').textContent=guide?.intro[i]||'';
+    const highlights=section.querySelector('[data-atlas-highlights]');highlights.replaceChildren();
+    for(const text of guide?.highlights[i]||[]){const li=document.createElement('li');li.textContent=text;highlights.append(li);}
     const memory=section.querySelector('[data-atlas-memory]');memory.hidden=!story;
     section.querySelector('[data-atlas-note]').textContent=personalPreviews[selected]?.[i]||'';
     const more=section.querySelector('[data-atlas-details]');more.textContent=readerCopy[language()].open+' ↗';more.setAttribute('aria-label',readerCopy[language()].open+' · '+placeName(point));more.disabled=!guide;
@@ -114,7 +116,7 @@
   }
   function loadData(){
     if(window.JIAKE_ATLAS_DATA)return Promise.resolve(window.JIAKE_ATLAS_DATA);
-    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=4',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
+    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=5',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
   }
   function styleCountry(feature){const p=palette(),seen=visited.has(feature.properties.iso)||feature.properties.iso==='TWN';return {color:seen?p.sage:p.muted,weight:seen?1.1:.55,opacity:seen?.85:.3,fillColor:seen?p.sage:p.muted,fillOpacity:seen?.3:.07};}
   function styleProvince(){return {color:palette().sage,weight:.7,opacity:.35,fillOpacity:0};}

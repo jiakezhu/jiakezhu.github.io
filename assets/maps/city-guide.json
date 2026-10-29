@@ -7,10 +7,10 @@
       "Xianxiang · Ningbo"
     ],
     "intro": [
-      "咸祥是宁波鄞州的沿海小镇。村庄与海岸，是我成长故事最初的风景。",
-      "Xianxiang is a coastal town in Ningbo’s Yinzhou district. Its villages and coastline form the starting landscape of my story.",
-      "Xianxiang est un bourg côtier du district de Yinzhou, à Ningbo. Ses villages et son littoral sont le premier paysage de mon histoire.",
-      "Xianxiang es un pueblo costero del distrito de Yinzhou, en Ningbo. Sus aldeas y su costa son el primer paisaje de mi historia."
+      "咸祥位于宁波鄞州东南，面向象山港，山地与海岸在这里相接。横山码头、沿海村落和水产养殖，记录着小镇与海的联系。码头上的渔船与菜场里的海产，也是当地生产和日常生活的具体一面。",
+      "Xianxiang lies in southeastern Yinzhou, Ningbo, where hills meet Xiangshan Bay. Hengshan Wharf, coastal villages and aquaculture reflect its ties to the sea. Fishing boats and seafood markets bring this maritime economy into everyday life.",
+      "À Xianxiang, au sud-est de Yinzhou à Ningbo, les collines rejoignent la baie de Xiangshan. Le quai de Hengshan, les villages côtiers et l’aquaculture témoignent des liens avec la mer. Bateaux de pêche et marchés de poissons ancrent cette économie maritime dans le quotidien.",
+      "Xianxiang está al sureste de Yinzhou, en Ningbo, donde las colinas llegan a la bahía de Xiangshan. El muelle de Hengshan, los pueblos costeros y la acuicultura muestran su vínculo con el mar. Barcos pesqueros y mercados de pescado llevan esta economía marítima a la vida cotidiana."
     ],
     "source": {
       "url": "https://www.ningbo.gov.cn/col/col1229172807/index.html"
@@ -44,8 +44,8 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/xianxiang-ningbo.webp",
-      "width": 959,
+      "src": "images/atlas/editorial-xianxiang-ningbo-95b007f8.webp",
+      "width": 1280,
       "height": 960,
       "alt": [
         "咸祥 · 宁波 · 地点实景图",
@@ -55,17 +55,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Glabb",
-        "url": "https://commons.wikimedia.org/wiki/File:The_Xiangshan_Harbor_Bridge_1.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Cz4523",
+        "url": "https://commons.wikimedia.org/wiki/File:Xiangshan_Harbor_Bridge_(Line_12,_Ningbo_Rail_Transit),_2026-10-18_04.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
       "position": "50% 50%",
       "caption": [
-        "宁波沿海 · 象山港大桥（区域参考）",
-        "Ningbo coast · Xiangshan Harbor Bridge (regional view)",
-        "Côte de Ningbo · pont de Xiangshan (vue de la région)",
-        "Costa de Ningbo · puente de Xiangshan (vista regional)"
+        "象山港海岸与跨海桥（区域参考）",
+        "Xiangshan Bay coast and bridge (regional reference)",
+        "Baie de Xiangshan et pont (vue régionale de référence)",
+        "Costa y puente de la bahía de Xiangshan (referencia regional)"
       ]
     },
     "summary": [
@@ -83,10 +83,10 @@
       "Hangzhou · ZJSU"
     ],
     "intro": [
-      "杭州的城市气质连着西湖、运河与江南山水，也连着今天的数字产业。浙江工商大学是我学习法语的起点。",
-      "Hangzhou brings together West Lake, the Grand Canal and a growing digital economy. Zhejiang Gongshang University was where I began studying French.",
-      "Hangzhou réunit le lac de l’Ouest, le Grand Canal et l’économie numérique. L’université du Zhejiang Gongshang est le lieu où j’ai commencé le français.",
-      "Hangzhou reúne el Lago del Oeste, el Gran Canal y la economía digital. En la Universidad Zhejiang Gongshang empecé a estudiar francés."
+      "杭州的城市风景由西湖、运河与周围山地共同构成。湖岸园林、堤桥和雷峰塔展现江南山水，大运河沿线则保留着街巷与商贸记忆。历史景观之外，数字产业与大学生活也是今天杭州的重要组成。",
+      "Hangzhou brings together West Lake, the Grand Canal and surrounding hills. Lakeside gardens, causeways and Leifeng Pagoda shape its scenery, while canal neighbourhoods preserve a trading past. Universities and digital industries are part of the city today.",
+      "Hangzhou réunit le lac de l’Ouest, le Grand Canal et les collines voisines. Jardins, digues et pagode Leifeng composent le paysage du lac ; les quartiers du canal gardent une mémoire marchande. Universités et industrie numérique font aussi partie de la ville actuelle.",
+      "Hangzhou reúne el Lago del Oeste, el Gran Canal y las colinas cercanas. Jardines, diques y la pagoda Leifeng forman el paisaje del lago; los barrios del canal conservan su pasado comercial. Las universidades y la industria digital también definen la ciudad actual."
     ],
     "source": {
       "url": "https://www.ehangzhou.gov.cn/"
@@ -120,9 +120,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/zjsu-hangzhou.webp",
-      "width": 960,
-      "height": 611,
+      "src": "images/atlas/editorial-zjsu-hangzhou-5e7ea70b.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "杭州 · 浙江工商大学 · 地点实景图",
         "Hangzhou · ZJSU · place photograph",
@@ -131,17 +131,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Vaykaaris",
-        "url": "https://commons.wikimedia.org/wiki/File:Urban_Landscape_of_Hangzhou_from_Pinghu_Qiuyue.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Bjoertvedt",
+        "url": "https://commons.wikimedia.org/wiki/File:West_Lake_IMG_8793_leifeng_pagoda.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
       "position": "50% 50%",
       "caption": [
-        "杭州 · 西湖城市风景",
-        "Hangzhou · West Lake cityscape",
-        "Hangzhou · paysage du lac de l’Ouest",
-        "Hangzhou · paisaje del lago del Oeste"
+        "杭州 · 西湖与雷峰塔（城市风景）",
+        "Hangzhou · West Lake and Leifeng Pagoda (city view)",
+        "Hangzhou · lac de l’Ouest et pagode Leifeng (vue de la ville)",
+        "Hangzhou · Lago del Oeste y pagoda Leifeng (vista urbana)"
       ]
     },
     "summary": [
@@ -159,10 +159,10 @@
       "Chengdu · SWUFE"
     ],
     "intro": [
-      "成都以川菜与大熊猫闻名，日常生活也有自己的从容节奏。西南财经大学是我攻读国际商务研究生的地方。",
-      "Chengdu is known for Sichuan cuisine and giant pandas, alongside an easygoing everyday rhythm. SWUFE is where I pursued postgraduate studies in international business.",
-      "Chengdu est connue pour la cuisine du Sichuan, les pandas et son rythme de vie paisible. J’y ai poursuivi mes études de commerce international à SWUFE.",
-      "Chengdu es conocida por la cocina de Sichuan, los pandas y su ritmo de vida tranquilo. Allí cursé mis estudios de posgrado en comercio internacional en SWUFE."
+      "成都坐落在四川盆地，川菜、茶馆与大熊猫是广为人知的城市名片。锦江穿过街区，安顺廊桥把传统建筑与河岸夜景连在一起。公园绿地、大学与不断发展的产业，又让这座城市保持着活跃的日常。",
+      "Chengdu sits in the Sichuan Basin and is known for Sichuan cuisine, teahouses and giant pandas. The Jin River runs through its neighbourhoods, with Anshun Bridge marking the evening waterfront. Parks, universities and growing industries also shape urban life.",
+      "Dans le bassin du Sichuan, Chengdu est connue pour sa cuisine, ses maisons de thé et les pandas géants. La rivière Jin traverse les quartiers ; le pont Anshun marque les rives illuminées. Parcs, universités et activités économiques façonnent aussi la vie urbaine.",
+      "En la cuenca de Sichuan, Chengdu es conocida por su cocina, sus casas de té y los pandas gigantes. El río Jin atraviesa sus barrios y el puente Anshun destaca en la ribera nocturna. Parques, universidades e industrias en desarrollo completan la vida urbana."
     ],
     "source": {
       "url": "https://www.gochengdu.cn/en/article/food/308"
@@ -235,10 +235,10 @@
       "Pekín"
     ],
     "intro": [
-      "北京的街巷连接着故宫、胡同与现代城市生活，是理解中国历史与当代文化的一扇窗口。",
-      "Beijing connects the Forbidden City and hutong lanes with modern urban life, offering a window into Chinese history and contemporary culture.",
-      "Pékin fait dialoguer la Cité interdite, les ruelles des hutongs et la vie moderne : une fenêtre sur l’histoire et la culture chinoises.",
-      "Pekín une la Ciudad Prohibida y los callejones hutong con la vida moderna, abriendo una ventana a la historia y la cultura china."
+      "北京的历史中心围绕中轴线展开，故宫的宫殿、院落与角楼保存着帝都的建筑格局。胡同和四合院呈现另一种街巷生活。宫墙之外，现代商务区、大学与文化场馆，共同构成今天北京的城市面貌。",
+      "Beijing’s historic centre follows its central axis, with the Forbidden City’s halls, courtyards and corner towers preserving an imperial layout. Hutongs and courtyard homes show another side of the city. Business districts, universities and cultural venues complete the picture.",
+      "Le centre historique de Pékin suit son axe central : palais, cours et tours d’angle de la Cité interdite conservent le plan impérial. Hutongs et maisons à cour montrent une autre vie de quartier. Quartiers d’affaires, universités et lieux culturels complètent la ville.",
+      "El centro histórico de Pekín sigue su eje central: los palacios, patios y torres de la Ciudad Prohibida conservan el trazado imperial. Los hutongs y las casas con patio muestran otra vida de barrio. Zonas de negocios, universidades y espacios culturales completan la ciudad."
     ],
     "source": {
       "url": "https://english.beijing.gov.cn/"
@@ -272,9 +272,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/beijing.webp",
-      "width": 960,
-      "height": 480,
+      "src": "images/atlas/editorial-beijing-7997a504.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "北京 · 地点实景图",
         "Beijing · place photograph",
@@ -283,12 +283,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Pixelflake",
-        "url": "https://commons.wikimedia.org/wiki/File:The_Forbidden_City_-_View_from_Coal_Hill.jpg",
+        "author": "User:kallgan",
+        "url": "https://commons.wikimedia.org/wiki/File:Sunset_of_the_Forbidden_City_2006.JPG",
         "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "北京 · 故宫与护城河",
+        "Beijing · Forbidden City and moat",
+        "Pékin · Cité interdite et douves",
+        "Pekín · Ciudad Prohibida y foso"
+      ]
     },
     "summary": [
       "北京的街巷连接着故宫、胡同与现代城市生活，是理解中国历史与当代文化的一扇窗口。",
@@ -305,10 +311,10 @@
       "Shanghái"
     ],
     "intro": [
-      "上海坐落在黄浦江两岸，外滩的历史建筑与浦东天际线相望，呈现这座港口城市的不同年代。",
-      "Across Shanghai’s Huangpu River, the historic Bund faces Pudong’s skyline, bringing different eras of this port city into one view.",
-      "À Shanghai, les bâtiments historiques du Bund font face aux tours de Pudong, de part et d’autre du Huangpu : plusieurs époques d’une ville portuaire.",
-      "En Shanghái, los edificios históricos del Bund miran al perfil de Pudong a través del Huangpu, mostrando distintas épocas de esta ciudad portuaria."
+      "上海沿黄浦江两岸展开，外滩历史建筑与陆家嘴高楼隔江相望。东方明珠、上海中心等地标构成醒目的浦东天际线，滨江步道则把城市重新带回水边。港口贸易与国际交流，是理解上海的重要线索。",
+      "Shanghai stretches along the Huangpu River, where the Bund’s historic buildings face Lujiazui’s towers. The Oriental Pearl and Shanghai Tower define the Pudong skyline, while riverside paths reconnect the city with the water. Port trade and international exchange run through its history.",
+      "À Shanghai, les bâtiments historiques du Bund font face aux tours de Lujiazui, de l’autre côté du Huangpu. La Perle de l’Orient et la tour Shanghai dessinent Pudong ; les promenades rendent les rives accessibles. Commerce portuaire et échanges internationaux traversent son histoire.",
+      "En Shanghái, los edificios históricos del Bund miran hacia las torres de Lujiazui al otro lado del Huangpu. La Perla Oriental y la Torre de Shanghái dibujan Pudong; los paseos acercan la ciudad al agua. El comercio portuario y los intercambios internacionales recorren su historia."
     ],
     "source": {
       "url": "https://english.shanghai.gov.cn/"
@@ -342,9 +348,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/shanghai.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-shanghai-08062d22.webp",
+      "width": 1280,
+      "height": 640,
       "alt": [
         "上海 · 地点实景图",
         "Shanghai · place photograph",
@@ -353,12 +359,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "钉钉",
-        "url": "https://commons.wikimedia.org/wiki/File:The_Bund_2.jpg",
+        "author": "King of Hearts",
+        "url": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_HDR_panorama.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "上海 · 浦东天际线与黄浦江",
+        "Shanghai · Pudong skyline and Huangpu River",
+        "Shanghai · silhouette de Pudong et Huangpu",
+        "Shanghái · perfil de Pudong y río Huangpu"
+      ]
     },
     "summary": [
       "上海坐落在黄浦江两岸，外滩的历史建筑与浦东天际线相望，呈现这座港口城市的不同年代。",
@@ -375,10 +387,10 @@
       "Nankín"
     ],
     "intro": [
-      "南京的古城墙与秦淮河，保存着这座历史名城的层层记忆；河边街巷适合慢慢读懂它。",
-      "Nanjing’s city walls and Qinhuai River preserve layers of the city’s history, which unfolds through its riverside lanes.",
-      "Les remparts et la rivière Qinhuai conservent les mémoires de Nankin, à découvrir au fil des ruelles riveraines.",
-      "Las murallas y el río Qinhuai conservan las memorias de Nankín, que se descubren recorriendo sus calles junto al agua."
+      "南京临长江而建，明城墙、玄武湖与秦淮河构成鲜明的历史地理线索。城墙沿山水起伏，秦淮河畔的街巷则集中呈现传统建筑与市井生活。鸡鸣寺等地标与现代城区相邻，让古都的不同年代在一座城市里相遇。",
+      "Nanjing stands beside the Yangtze, with its Ming city walls, Xuanwu Lake and Qinhuai River marking its geography. The walls follow the terrain, while riverside streets retain traditional buildings. Landmarks such as Jiming Temple sit alongside the modern city.",
+      "Nankin borde le Yangtsé ; ses remparts Ming, le lac Xuanwu et la rivière Qinhuai structurent son paysage. Les murs suivent le relief, tandis que les rues riveraines conservent des bâtiments traditionnels. Le temple Jiming côtoie les quartiers de la ville moderne.",
+      "Nankín se extiende junto al Yangtsé; sus murallas Ming, el lago Xuanwu y el río Qinhuai marcan el paisaje. Las murallas siguen el relieve y las calles ribereñas conservan edificios tradicionales. Monumentos como el templo Jiming conviven con la ciudad moderna."
     ],
     "source": {
       "url": "https://dfz.nanjing.gov.cn/gzdt/202511/t20251103_5681793.html"
@@ -412,9 +424,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/nanjing.webp",
-      "width": 640,
-      "height": 960,
+      "src": "images/atlas/editorial-nanjing-3bc592c3.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "南京 · 地点实景图",
         "Nanjing · place photograph",
@@ -423,12 +435,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "xiquinhosilva",
-        "url": "https://commons.wikimedia.org/wiki/File:Nanjing_City_Wall_05.jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Windmemories",
+        "url": "https://commons.wikimedia.org/wiki/File:20260803_Xuanwu_Lake,_Jiming_Temple_and_Nanjing_City_Wall.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "南京 · 玄武湖与鸡鸣寺",
+        "Nanjing · Xuanwu Lake and Jiming Temple",
+        "Nankin · lac Xuanwu et temple Jiming",
+        "Nankín · lago Xuanwu y templo Jiming"
+      ]
     },
     "summary": [
       "南京的古城墙与秦淮河，保存着这座历史名城的层层记忆；河边街巷适合慢慢读懂它。",
@@ -445,10 +463,10 @@
       "Suzhou"
     ],
     "intro": [
-      "苏州的古典园林把山水浓缩进庭院，运河与老街则延续着江南水城的日常。",
-      "Suzhou’s classical gardens draw miniature landscapes into courtyards, while canals and old streets keep its waterside character alive.",
-      "Les jardins classiques de Suzhou concentrent montagnes et eaux dans leurs cours ; les canaux et les vieilles rues prolongent la vie de cette cité d’eau.",
-      "Los jardines clásicos de Suzhou condensan paisajes en patios, mientras los canales y las calles antiguas mantienen su carácter junto al agua."
+      "苏州以古典园林和水巷闻名，拙政园等园林用池水、假山、廊桥与亭榭组织庭院。运河穿行老城，石桥与临水街屋延续着江南水城的格局。园林之外，日常街巷也是认识苏州的重要部分。",
+      "Suzhou is known for classical gardens and waterways. Gardens such as the Humble Administrator’s Garden combine ponds, rockeries, covered walks and pavilions. Canals, stone bridges and waterside houses preserve the old city’s layout beyond the garden walls.",
+      "Suzhou est connue pour ses jardins classiques et ses voies d’eau. Le jardin du Modeste Administrateur associe bassins, rocailles, galeries et pavillons. Canaux, ponts de pierre et maisons au bord de l’eau prolongent le plan de la vieille ville au-delà des jardins.",
+      "Suzhou es conocida por sus jardines clásicos y sus canales. El Jardín del Administrador Humilde combina estanques, rocallas, galerías y pabellones. Canales, puentes de piedra y casas junto al agua conservan el trazado de la ciudad antigua más allá de los jardines."
     ],
     "source": {
       "url": "https://ylj.suzhou.gov.cn/szsylj/ylgk/nav_wztt.shtml"
@@ -515,10 +533,10 @@
       "Shaoxing"
     ],
     "intro": [
-      "绍兴的古运河、石桥与黄酒，构成了一座江南水城独特的风味与节奏。",
-      "Ancient canals, stone bridges and rice wine give Shaoxing its distinctive flavour and waterside rhythm.",
-      "Canaux anciens, ponts de pierre et vin de riz donnent à Shaoxing sa saveur et son rythme de ville d’eau.",
-      "Los canales antiguos, los puentes de piedra y el vino de arroz dan a Shaoxing su sabor y su ritmo propios."
+      "绍兴的古运河、石桥与临水街屋，保留着江南水城清晰的生活格局。八字桥一带可以看到河道与街巷相交的老城风景。黄酒酿造与水乡文化相伴，建筑、河流和地方饮食共同构成绍兴的辨识度。",
+      "Shaoxing’s old canals, stone bridges and waterside houses preserve the layout of a Jiangnan water town. Around Bazi Bridge, waterways meet the streets of the old city. Yellow rice wine links local food traditions with this landscape of buildings and water.",
+      "Canaux anciens, ponts de pierre et maisons riveraines dessinent la ville d’eau de Shaoxing. Autour du pont Bazi, les voies d’eau croisent les rues de la vieille ville. Le vin jaune de riz relie les traditions culinaires à ce paysage de bâtiments et de canaux.",
+      "Los canales antiguos, puentes de piedra y casas ribereñas dibujan la ciudad acuática de Shaoxing. Alrededor del puente Bazi, los canales se cruzan con las calles del casco antiguo. El vino amarillo de arroz une la tradición culinaria con este paisaje de agua y edificios."
     ],
     "source": {
       "url": "https://www.ezhejiang.gov.cn/2025-10/10/c_1140489.htm"
@@ -552,9 +570,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/shaoxing.webp",
-      "width": 960,
-      "height": 638,
+      "src": "images/atlas/editorial-shaoxing-1a010f45.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "绍兴 · 地点实景图",
         "Shaoxing · place photograph",
@@ -563,12 +581,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "猫猫的日记本",
-        "url": "https://commons.wikimedia.org/wiki/File:Rongguang_Bridge_19_2019-03.jpg",
+        "author": "Zhangzhugang",
+        "url": "https://commons.wikimedia.org/wiki/File:Shaoxing_Bazi_Qiao_2017.12.09_16-16-06.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "绍兴 · 八字桥一带的水巷",
+        "Shaoxing · waterways around Bazi Bridge",
+        "Shaoxing · canaux près du pont Bazi",
+        "Shaoxing · canales junto al puente Bazi"
+      ]
     },
     "summary": [
       "绍兴的古运河、石桥与黄酒，构成了一座江南水城独特的风味与节奏。",
@@ -585,10 +609,10 @@
       "Jiaxing"
     ],
     "intro": [
-      "嘉兴位于江南水网之间，南湖、大运河与环城河把城市生活串联起来，处处可以读到水乡的印记。",
-      "Jiaxing sits within Jiangnan’s network of waterways. South Lake, the Grand Canal and the ring river shape its waterside urban life.",
-      "Jiaxing s’inscrit dans le réseau d’eau du Jiangnan : le lac du Sud, le Grand Canal et la rivière entourant la ville façonnent son quotidien.",
-      "Jiaxing se encuentra entre los cursos de agua de Jiangnan. El Lago del Sur, el Gran Canal y el río circular dan forma a su vida urbana."
+      "嘉兴位于江南水网之间，南湖、大运河与环城河把城市连接起来。湖上的岛屿、园林与桥梁构成南湖风景，运河沿线则留下水运与商贸的历史。城市的许多公共空间，也围绕河岸和湖岸展开。",
+      "Jiaxing lies within Jiangnan’s network of waterways, linked by South Lake, the Grand Canal and the river around the old city. Islands, gardens and bridges shape the lake scenery. Canal-side districts preserve traces of shipping and trade, with public spaces along the water.",
+      "Jiaxing appartient au réseau d’eau du Jiangnan : lac du Sud, Grand Canal et rivière entourant la vieille ville. Îles, jardins et ponts composent le paysage du lac. Les quartiers du canal gardent des traces du transport fluvial et du commerce, avec des espaces publics sur les rives.",
+      "Jiaxing forma parte de la red acuática de Jiangnan: el Lago del Sur, el Gran Canal y el río que rodea el casco antiguo. Islas, jardines y puentes forman el paisaje del lago. Los barrios del canal conservan huellas del transporte y el comercio, con espacios públicos junto al agua."
     ],
     "source": {
       "url": "https://jsj.jiaxing.gov.cn/art/2018/1/16/art_1633723_39592009.html"
@@ -622,9 +646,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/jiaxing.webp",
-      "width": 960,
-      "height": 641,
+      "src": "images/atlas/editorial-jiaxing-aa168ff4.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "嘉兴 · 地点实景图",
         "Jiaxing · place photograph",
@@ -633,12 +657,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Siyuwj",
-        "url": "https://commons.wikimedia.org/wiki/File:%E5%98%89%E5%85%B4%E5%8D%97%E6%B9%96,_2021-10-30_03.jpg",
+        "author": "钉钉",
+        "url": "https://commons.wikimedia.org/wiki/File:South_Lake_(Jiaxing).jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "嘉兴 · 南湖桥景",
+        "Jiaxing · bridge at South Lake",
+        "Jiaxing · pont du lac du Sud",
+        "Jiaxing · puente del Lago del Sur"
+      ]
     },
     "summary": [
       "嘉兴位于江南水网之间，南湖、大运河与环城河把城市生活串联起来，处处可以读到水乡的印记。",
@@ -655,10 +685,10 @@
       "Ningbo"
     ],
     "intro": [
-      "宁波是一座面向东海的港口城市。天一阁的藏书传统与沿海生活，让这里既有向外的视野，也有深厚的地方记忆。",
-      "Ningbo is a port city facing the East China Sea. Tianyi Pavilion’s book collections and coastal life bring together outward horizons and local memory.",
-      "Ningbo est une ville portuaire tournée vers la mer de Chine orientale. La bibliothèque du pavillon Tianyi et la vie côtière relient ouverture et mémoire locale.",
-      "Ningbo es una ciudad portuaria frente al mar de China Oriental. La biblioteca Tianyi y la vida costera unen horizontes abiertos y memoria local."
+      "宁波是一座面向东海的港口城市，江河、海岸与商贸共同塑造了地方历史。天一阁保存着深厚的藏书传统，庭园和古建筑也是认识这座城市的入口。港口的向外联结与老城的文化积累，在这里并存。",
+      "Ningbo faces the East China Sea, with rivers, coastlines and trade shaping its history as a port city. Tianyi Pavilion preserves a long tradition of book collecting, alongside gardens and historic buildings. Maritime connections coexist with the cultural heritage of the old city.",
+      "Tournée vers la mer de Chine orientale, Ningbo doit son histoire portuaire aux fleuves, au littoral et au commerce. Le pavillon Tianyi conserve une longue tradition de bibliophilie, avec jardins et bâtiments anciens. Liens maritimes et patrimoine de la vieille ville y coexistent.",
+      "Ningbo mira al mar de China Oriental, con una historia portuaria marcada por los ríos, la costa y el comercio. El pabellón Tianyi conserva una larga tradición de coleccionismo de libros, junto a jardines y edificios antiguos. Los vínculos marítimos conviven con el patrimonio urbano."
     ],
     "source": {
       "url": "https://www.ezhejiang.gov.cn/2016-08/05/c_55075.htm"
@@ -692,9 +722,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/ningbo.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-ningbo-c0322abe.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "宁波 · 地点实景图",
         "Ningbo · place photograph",
@@ -703,12 +733,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Gisling",
-        "url": "https://commons.wikimedia.org/wiki/File:Tian_Yi_Chamber.JPG",
-        "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "author": "钉钉",
+        "url": "https://commons.wikimedia.org/wiki/File:Tianyi_Pavilion_Museum_Garden_3.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "宁波 · 天一阁庭园",
+        "Ningbo · Tianyi Pavilion garden",
+        "Ningbo · jardin du pavillon Tianyi",
+        "Ningbo · jardín del pabellón Tianyi"
+      ]
     },
     "summary": [
       "宁波是一座面向东海的港口城市。",
@@ -725,10 +761,10 @@
       "Huangshan"
     ],
     "intro": [
-      "黄山以花岗岩峰林、奇松与云海著称。",
-      "Huangshan is known for granite peaks, mountain pines and seas of clouds.",
-      "Le Huangshan est connu pour ses pics de granite, ses pins et ses mers de nuages.",
-      "Huangshan destaca por sus picos de granito, pinos de montaña y mares de nubes."
+      "黄山位于安徽南部，以花岗岩峰林、奇松和云海著称。松树扎根岩隙，山径与石阶连接不同山峰，天气变化让群峰时而清晰、时而藏在云雾中。它既是山地自然景观，也是中国山水绘画的重要灵感来源。",
+      "Huangshan, in southern Anhui, is known for granite peaks, distinctive pines and seas of cloud. Trees root in rock crevices, and stepped paths connect the summits as changing weather reveals or conceals them. This mountain landscape has long inspired Chinese landscape painting.",
+      "Au sud de l’Anhui, Huangshan est connue pour ses pics de granite, ses pins et ses mers de nuages. Les arbres prennent racine dans les fissures ; des chemins à marches relient les sommets, révélés ou cachés par la météo. Ces montagnes ont inspiré la peinture de paysage chinoise.",
+      "Huangshan, al sur de Anhui, es conocida por sus picos de granito, pinos singulares y mares de nubes. Los árboles arraigan en grietas y los senderos escalonados unen cumbres que el tiempo revela u oculta. Este paisaje montañoso ha inspirado la pintura de paisajes china."
     ],
     "source": {
       "url": "https://whc.unesco.org/en/list/547/"
@@ -795,10 +831,10 @@
       "Chongqing"
     ],
     "intro": [
-      "重庆建在山地之上，长江与嘉陵江在此交汇。坡道、桥梁与立体街区，是山城最鲜明的城市语言。",
-      "Chongqing rises across hills where the Yangtze and Jialing rivers meet. Slopes, bridges and layered streets define its mountain-city character.",
-      "Chongqing s’étage sur les collines à la rencontre du Yangtsé et du Jialing. Pentes, ponts et rues superposées composent son langage urbain.",
-      "Chongqing se eleva sobre colinas donde confluyen el Yangtsé y el Jialing. Cuestas, puentes y calles a distintos niveles definen su carácter."
+      "重庆建在长江与嘉陵江交汇的山地上，桥梁、坡道与阶梯把高低不同的街区连接起来。洪崖洞一带的层叠建筑与两江夜景，凸显山城的立体面貌。沿江的道路和跨江交通，也让水与山始终出现在城市生活里。",
+      "Chongqing rises where the Yangtze and Jialing rivers meet. Bridges, sloping roads and stairways connect neighbourhoods at different heights. Hongya Cave’s stacked buildings and illuminated waterfront make this terrain visible, while river crossings remain part of everyday urban life.",
+      "Chongqing s’élève au confluent du Yangtsé et du Jialing. Ponts, routes en pente et escaliers relient des quartiers à différentes hauteurs. Les bâtiments étagés de Hongya et les rives éclairées révèlent ce relief ; les traversées des fleuves appartiennent au quotidien urbain.",
+      "Chongqing se alza donde confluyen el Yangtsé y el Jialing. Puentes, calles en pendiente y escaleras unen barrios a distintas alturas. Los edificios escalonados de Hongya y las riberas iluminadas muestran este relieve; cruzar los ríos forma parte de la vida urbana cotidiana."
     ],
     "source": {
       "url": "https://www.cq.gov.cn/zjcq/sqgk/cqsq/202412/t20241231_14378525.html"
@@ -865,10 +901,10 @@
       "Sichuan occidental"
     ],
     "intro": [
-      "川西的高原与山地交错，雪峰、草坡和谷地构成了不同于四川盆地的景观。",
-      "Western Sichuan brings together high plateaus, snowy peaks, meadows and valleys beyond the Sichuan Basin.",
-      "L’ouest du Sichuan réunit hauts plateaux, sommets enneigés, prairies et vallées au-delà du bassin du Sichuan.",
-      "Sichuan occidental reúne mesetas, cumbres nevadas, praderas y valles más allá de la cuenca de Sichuan."
+      "川西处在四川盆地向高原过渡的山地地带，雪峰、森林、草甸与深切河谷相互交错。四姑娘山是其中醒目的雪山地标之一。不同地区的海拔和植被差异明显，河谷聚落与高山草甸呈现不同的生活环境。",
+      "Western Sichuan forms a mountainous transition from the Sichuan Basin towards the plateau. Snow peaks, forests, alpine meadows and deep valleys alternate, with Mount Siguniang among its landmarks. Altitude and terrain vary greatly across this wider region.",
+      "L’ouest du Sichuan forme une transition montagneuse entre le bassin du Sichuan et le plateau. Pics enneigés, forêts, prairies d’altitude et vallées profondes s’y succèdent ; le mont Siguniang est l’un de ses repères. Altitude et relief varient fortement selon les secteurs.",
+      "El oeste de Sichuan es una transición montañosa entre la cuenca de Sichuan y la meseta. Alterna cumbres nevadas, bosques, praderas alpinas y valles profundos; el monte Siguniang es uno de sus hitos. La altitud y el relieve cambian mucho a lo largo de esta extensa región."
     ],
     "source": {
       "url": "https://www.sc.gov.cn/10462/10778/10876/2022/7/8/57f745e2c9f74c66a606f4c88cbe96db/files/484782a06c0144d39954782ac50d7696.pdf"
@@ -941,10 +977,10 @@
       "Changsha"
     ],
     "intro": [
-      "湘江穿过长沙，橘子洲与岳麓山隔江相望，为这座城市提供了亲近江水与山林的空间。",
-      "The Xiang River runs through Changsha, with Orange Isle and Yuelu Mountain bringing riverside and woodland landscapes into the city.",
-      "Le Xiang traverse Changsha ; l’île des Orangers et le mont Yuelu font entrer les paysages d’eau et de forêt dans la ville.",
-      "El río Xiang atraviesa Changsha; la Isla de las Naranjas y el monte Yuelu acercan el paisaje fluvial y los bosques a la ciudad."
+      "湘江穿过长沙，橘子洲与岳麓山隔江相望，形成城市鲜明的山水格局。江岸步道与洲上的绿地提供了亲近水边的公共空间。河流两侧的城区不断延伸，传统街巷、大学和现代商业共同构成长沙的日常。",
+      "The Xiang River runs through Changsha, with Orange Isle facing Mount Yuelu across the water. Riverside paths and green spaces bring the river into public life. On both banks, older streets, universities and modern commercial districts form the everyday city.",
+      "La rivière Xiang traverse Changsha ; l’île aux Orangers fait face au mont Yuelu. Promenades riveraines et espaces verts donnent une place à l’eau dans la vie publique. Sur les deux rives, rues anciennes, universités et quartiers commerçants composent la ville quotidienne.",
+      "El río Xiang atraviesa Changsha y la Isla de las Naranjas mira al monte Yuelu desde el agua. Paseos ribereños y zonas verdes acercan el río a la vida pública. A ambos lados, calles antiguas, universidades y barrios comerciales forman la ciudad cotidiana."
     ],
     "source": {
       "url": "https://hunan.gov.cn/hnszf/c101474/202108/t20210827_20403826.html"
@@ -978,9 +1014,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/changsha.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-changsha-7e692f87.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "长沙 · 地点实景图",
         "Changsha · place photograph",
@@ -989,12 +1025,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "EditQ",
-        "url": "https://commons.wikimedia.org/wiki/File:Orange_Isle,_Changsha_8.jpg",
+        "author": "JULIANISME",
+        "url": "https://commons.wikimedia.org/wiki/File:Xiang_River_and_Orange_Isle,_Changsha.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "长沙 · 湘江与橘子洲",
+        "Changsha · Xiang River and Orange Isle",
+        "Changsha · rivière Xiang et île aux Orangers",
+        "Changsha · río Xiang e Isla de las Naranjas"
+      ]
     },
     "summary": [
       "湘江穿过长沙，橘子洲与岳麓山隔江相望，为这座城市提供了亲近江水与山林的空间。",
@@ -1011,10 +1053,10 @@
       "Yinchuan"
     ],
     "intro": [
-      "银川平原与贺兰山相邻，西夏陵留下了认识西夏历史的重要线索，也让这片西北风景更有纵深。",
-      "Yinchuan’s plain lies beside the Helan Mountains. The Western Xia tombs add a historical dimension to its northwestern landscapes.",
-      "La plaine de Yinchuan borde les monts Helan. Les tombeaux des Xia occidentaux donnent une profondeur historique à ces paysages du nord-ouest.",
-      "La llanura de Yinchuan está junto a las montañas Helan. Las tumbas de Xia Occidental añaden una dimensión histórica a sus paisajes del noroeste."
+      "银川位于宁夏平原，西侧的贺兰山为城市提供了鲜明的地理背景。山麓的西夏陵保留着夯土陵冢与遗址，是认识西夏历史的重要地点。平原、山地与遗址相邻，使这里的风景同时具有自然与历史的特征。",
+      "Yinchuan lies on the Ningxia Plain, with the Helan Mountains rising to its west. At their foot, the Western Xia mausoleums preserve earthen tomb mounds and archaeological remains. The proximity of plain, mountains and historic sites gives the area its distinctive landscape.",
+      "Yinchuan se trouve dans la plaine du Ningxia, à l’est des monts Helan. À leur pied, les mausolées des Xia occidentaux conservent des tertres de terre et des vestiges archéologiques. La proximité de la plaine, des montagnes et des sites historiques caractérise ce paysage.",
+      "Yinchuan está en la llanura de Ningxia, al este de las montañas Helan. A sus pies, los mausoleos de Xia Occidental conservan túmulos de tierra y restos arqueológicos. La cercanía de la llanura, las montañas y los yacimientos da al entorno un paisaje propio."
     ],
     "source": {
       "url": "https://www.yinchuan.gov.cn/sshc/lyjd/zdwbcs/202511/t20251125_5090985.html"
@@ -1048,9 +1090,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/yinchuan.webp",
-      "width": 960,
-      "height": 640,
+      "src": "images/atlas/editorial-yinchuan-63a0eaf3.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "银川 · 地点实景图",
         "Yinchuan · place photograph",
@@ -1059,12 +1101,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "xiquinhosilva",
-        "url": "https://commons.wikimedia.org/wiki/File:Xi_Xia_Imperial_Tombs_(54154641924).jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Thebrainchamber1",
+        "url": "https://commons.wikimedia.org/wiki/File:Western_Xia_mausoleums_15.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "银川 · 西夏陵与贺兰山",
+        "Yinchuan · Western Xia mausoleums and Helan Mountains",
+        "Yinchuan · mausolées Xia occidentaux et monts Helan",
+        "Yinchuan · mausoleos de Xia Occidental y montañas Helan"
+      ]
     },
     "summary": [
       "银川平原与贺兰山相邻，西夏陵留下了认识西夏历史的重要线索，也让这片西北风景更有纵深。",
@@ -1081,10 +1129,10 @@
       "Foshan"
     ],
     "intro": [
-      "佛山的岭南文化可以从武术、醒狮与石湾陶艺读起，传统技艺仍然是这座城市鲜明的一部分。",
-      "Foshan’s Lingnan culture comes alive through martial arts, lion dancing and Shiwan ceramics, traditions that remain part of the city’s identity.",
-      "La culture lingnan de Foshan se découvre à travers les arts martiaux, la danse du lion et les céramiques de Shiwan.",
-      "La cultura lingnan de Foshan se descubre en las artes marciales, la danza del león y la cerámica de Shiwan."
+      "佛山的岭南文化可以从祖庙古建筑、武术醒狮与石湾陶艺读起。祖庙的屋脊、雕刻与庭院，保存着传统建筑和地方工艺的细节。历史街区与今天的城市生活相邻，让这些文化并不只停留在展柜里。",
+      "Foshan’s Lingnan culture is visible in the Ancestral Temple, martial arts, lion dancing and Shiwan ceramics. Decorated roof ridges, carvings and courtyards preserve details of local architecture and craftsmanship. Historic districts sit alongside the life of the present-day city.",
+      "À Foshan, le temple ancestral, les arts martiaux, la danse du lion et la céramique de Shiwan expriment la culture du Lingnan. Faîtages décorés, sculptures et cours témoignent des savoir-faire locaux. Les quartiers historiques côtoient la vie de la ville actuelle.",
+      "En Foshan, el Templo Ancestral, las artes marciales, la danza del león y la cerámica de Shiwan expresan la cultura de Lingnan. Los tejados decorados, tallas y patios conservan los oficios locales. Los barrios históricos conviven con la vida de la ciudad actual."
     ],
     "source": {
       "url": "https://www.newsgd.com/node_99363c4f3b/854f20adfc.shtml"
@@ -1118,9 +1166,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/foshan.webp",
-      "width": 960,
-      "height": 639,
+      "src": "images/atlas/editorial-foshan-e400395d.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "佛山 · 地点实景图",
         "Foshan · place photograph",
@@ -1129,12 +1177,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "xiquinhosilva",
-        "url": "https://commons.wikimedia.org/wiki/File:Foshan_Ancestral_Temple_39545-Foshan_(49042476728).jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "钉钉",
+        "url": "https://commons.wikimedia.org/wiki/File:Foshan_Ancestral_Temple_2.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "佛山 · 祖庙古建筑",
+        "Foshan · Ancestral Temple architecture",
+        "Foshan · architecture du temple ancestral",
+        "Foshan · arquitectura del Templo Ancestral"
+      ]
     },
     "summary": [
       "佛山的岭南文化可以从武术、醒狮与石湾陶艺读起，传统技艺仍然是这座城市鲜明的一部分。",
@@ -1151,10 +1205,10 @@
       "Huizhou"
     ],
     "intro": [
-      "惠州的西湖与苏东坡留下的文化记忆紧密相连，山水与诗文共同构成了城市的另一种气质。",
-      "Huizhou’s West Lake is closely linked to the memory of poet Su Dongpo, bringing landscape and literature into the city’s identity.",
-      "Le lac de l’Ouest de Huizhou est lié à la mémoire du poète Su Dongpo : paysages et littérature y façonnent le caractère de la ville.",
-      "El Lago del Oeste de Huizhou está ligado a la memoria del poeta Su Dongpo, uniendo paisaje y literatura en la identidad de la ciudad."
+      "惠州的西湖由湖面、堤桥与周围山地共同组成，是城市醒目的山水地标。苏东坡的经历与诗文，为这里留下持续至今的文化记忆。沿湖步道连接园林、亭榭与城区，湖岸风景也因此融入日常生活。",
+      "Huizhou’s West Lake combines open water, causeways, bridges and surrounding hills as a landmark within the city. Su Dongpo’s life and writing left a lasting cultural memory here. Lakeside paths connect gardens and pavilions with the neighbouring urban streets.",
+      "À Huizhou, le lac de l’Ouest réunit eau, digues, ponts et collines au sein de la ville. La vie et les écrits de Su Dongpo y ont laissé une mémoire culturelle durable. Les promenades du lac relient jardins et pavillons aux rues des quartiers voisins.",
+      "En Huizhou, el Lago del Oeste reúne agua, diques, puentes y colinas dentro de la ciudad. La vida y los escritos de Su Dongpo dejaron aquí una memoria cultural duradera. Los paseos del lago conectan jardines y pabellones con las calles de los barrios cercanos."
     ],
     "source": {
       "url": "https://mzj.huizhou.gov.cn/zwgk/mzdt/content/post_5440520.html"
@@ -1188,9 +1242,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/huizhou.webp",
-      "width": 960,
-      "height": 640,
+      "src": "images/atlas/editorial-huizhou-68468cea.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "惠州 · 地点实景图",
         "Huizhou · place photograph",
@@ -1199,12 +1253,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Windmemories",
-        "url": "https://commons.wikimedia.org/wiki/File:20240111_View_of_Huicheng_District,_Huizhou_01.jpg",
+        "author": "Zhangzhugang",
+        "url": "https://commons.wikimedia.org/wiki/File:Huizhou_Sizhou_Ta_2013.09.20_10-19-13.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "惠州 · 西湖泗洲塔",
+        "Huizhou · Sizhou Pagoda at West Lake",
+        "Huizhou · pagode Sizhou du lac de l’Ouest",
+        "Huizhou · pagoda Sizhou del Lago del Oeste"
+      ]
     },
     "summary": [
       "惠州的西湖与苏东坡留下的文化记忆紧密相连，山水与诗文共同构成了城市的另一种气质。",
@@ -1221,10 +1281,10 @@
       "Shenzhen"
     ],
     "intro": [
-      "深圳的科技产业与滨海空间彼此相邻，从华强北到海边绿道，城市展示着快速生长的活力。",
-      "Shenzhen brings technology districts and coastal spaces close together, from Huaqiangbei’s electronics scene to waterfront paths.",
-      "Shenzhen rapproche quartiers technologiques et espaces côtiers, de l’électronique de Huaqiangbei aux promenades du littoral.",
-      "Shenzhen reúne distritos tecnológicos y espacios costeros, desde la electrónica de Huaqiangbei hasta los paseos junto al mar."
+      "深圳的科技产业、制造网络与滨海空间紧密相邻，现代天际线是城市最醒目的外观。华强北呈现电子产业与交易的一面，海边绿道和城市公园则提供另一种节奏。高楼、海岸与公共空间，共同构成今天的深圳。",
+      "Shenzhen combines technology industries, manufacturing networks and a coastal setting beneath a modern skyline. Huaqiangbei reflects its electronics trade, while waterfront greenways and urban parks offer a different pace. Towers, coastlines and public spaces define the city together.",
+      "Shenzhen associe industries technologiques, réseaux de production et littoral sous une silhouette de tours modernes. Huaqiangbei reflète le commerce de produits électroniques ; voies vertes côtières et parcs offrent un autre rythme. Tours, côte et espaces publics composent ensemble la ville.",
+      "Shenzhen reúne industrias tecnológicas, redes de fabricación y un entorno costero bajo un perfil de torres modernas. Huaqiangbei refleja el comercio de electrónica; las vías verdes y los parques ofrecen otro ritmo. Edificios, costa y espacios públicos forman la ciudad."
     ],
     "source": {
       "url": "https://www.sz.gov.cn/en_szgov/travel/guide/"
@@ -1274,7 +1334,7 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 8%"
     },
     "summary": [
       "深圳的科技产业与滨海空间彼此相邻，从华强北到海边绿道，城市展示着快速生长的活力。",
@@ -1291,10 +1351,10 @@
       "Cantón"
     ],
     "intro": [
-      "广州沿珠江展开，是岭南文化与商贸交流的重要城市；粤语、饮食与江边生活构成了鲜明的地方气质。",
-      "Guangzhou stretches along the Pearl River, bringing together Lingnan culture, commerce, Cantonese language and a distinctive food tradition.",
-      "Canton s’étend le long de la rivière des Perles et réunit culture lingnan, commerce, langue cantonaise et traditions culinaires.",
-      "Cantón se extiende junto al río de las Perlas y reúne cultura lingnan, comercio, lengua cantonesa y tradiciones gastronómicas."
+      "广州沿珠江两岸展开，广州塔与现代商务区构成清楚的城市地标。骑楼街巷、粤语与广府饮食，则保存着岭南商都的地方特色。江边步道和跨江桥梁，把历史城区与不断生长的新城区连接起来。",
+      "Guangzhou extends along the Pearl River, with Canton Tower and modern business districts forming clear landmarks. Arcade-lined streets, Cantonese and local food preserve the character of this Lingnan trading city. Riverside paths and bridges connect older and newer districts.",
+      "Guangzhou s’étend le long de la rivière des Perles, repérée par la tour de Canton et ses quartiers d’affaires. Rues à arcades, langue cantonaise et cuisine locale conservent le caractère de cette ville marchande du Lingnan. Promenades et ponts relient anciens et nouveaux quartiers.",
+      "Guangzhou se extiende junto al río de las Perlas, con la Torre de Cantón y los distritos de negocios como hitos. Calles porticadas, cantonés y cocina local conservan el carácter comercial de Lingnan. Paseos y puentes conectan los barrios antiguos con los nuevos."
     ],
     "source": {
       "url": "https://www.gz.gov.cn/guangzhouinternational/"
@@ -1328,9 +1388,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/guangzhou.webp",
-      "width": 508,
-      "height": 960,
+      "src": "images/atlas/editorial-guangzhou-b5c16363.webp",
+      "width": 1280,
+      "height": 883,
       "alt": [
         "广州 · 地点实景图",
         "Guangzhou · place photograph",
@@ -1339,12 +1399,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Tim Wu",
-        "url": "https://commons.wikimedia.org/wiki/File:Canton_Tower_20241027_(cropped).jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "jo.sau",
+        "url": "https://commons.wikimedia.org/wiki/File:Guangzhou_skyline.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       },
-      "position": "50% 50%"
+      "position": "50% 15%",
+      "caption": [
+        "广州 · 城市天际线",
+        "Guangzhou · city skyline",
+        "Guangzhou · silhouette urbaine",
+        "Guangzhou · perfil urbano"
+      ]
     },
     "summary": [
       "珠江、粤语和岭南饮食，构成广州鲜明的城市气质。",
@@ -1361,10 +1427,10 @@
       "Dongguan"
     ],
     "intro": [
-      "东莞位于珠三角的制造业网络中，从传统生产到高技术产业，能在这里看到产业持续转型的轨迹。",
-      "Dongguan sits within the Pearl River Delta’s manufacturing network, tracing a shift from established production towards high-tech industries.",
-      "Dongguan appartient au réseau industriel du delta de la rivière des Perles, où la production évolue vers les hautes technologies.",
-      "Dongguan forma parte de la red industrial del delta del río de las Perlas, donde la producción evoluciona hacia sectores de alta tecnología."
+      "东莞位于珠三角，是制造业与产业转型联系紧密的城市。可园的水池、亭榭与紧凑庭院，保留了岭南园林的另一种城市面貌。传统园林与现代产业网络并存，使这里既能读到地方文化，也能看到生产与技术的变化。",
+      "Dongguan belongs to the Pearl River Delta’s manufacturing network and industrial transformation. Keyuan Garden’s ponds, pavilions and compact courtyards preserve another side of the city. Traditional gardens coexist with modern production, linking local culture to technological change.",
+      "Dongguan appartient au réseau industriel du delta de la rivière des Perles. Bassins, pavillons et cours compactes du jardin Keyuan conservent une autre facette de la ville. Jardins traditionnels et production moderne y coexistent, entre culture locale et transformations techniques.",
+      "Dongguan forma parte de la red manufacturera del delta del río de las Perlas. Los estanques, pabellones y patios compactos del jardín Keyuan conservan otra faceta urbana. Jardines tradicionales y producción moderna conviven entre la cultura local y el cambio tecnológico."
     ],
     "source": {
       "url": "https://www.newsgd.com/node_5c070fdd03/5499e09aeb.shtml"
@@ -1398,9 +1464,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/dongguan.webp",
-      "width": 640,
-      "height": 960,
+      "src": "images/atlas/editorial-dongguan-23a4b5f1.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "东莞 · 地点实景图",
         "Dongguan · place photograph",
@@ -1410,11 +1476,17 @@
       "kind": "reference",
       "credit": {
         "author": "Windmemories",
-        "url": "https://commons.wikimedia.org/wiki/File:20160210_Keyuan,_Dongguan_05.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:20160210_Keyuan,_Dongguan_01.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "东莞 · 可园水榭",
+        "Dongguan · waterside pavilions at Keyuan",
+        "Dongguan · pavillons au bord de l’eau à Keyuan",
+        "Dongguan · pabellones junto al agua en Keyuan"
+      ]
     },
     "summary": [
       "东莞位于珠三角的制造业网络中，从传统生产到高技术产业，能在这里看到产业持续转型的轨迹。",
@@ -1431,10 +1503,10 @@
       "Taiwán"
     ],
     "intro": [
-      "台湾的山地、湖泊与海岸相互交错，城市夜市则保留着热闹的日常生活。",
-      "Taiwan combines mountains, lakes and coastlines with the everyday life of its city night markets.",
-      "Taïwan réunit montagnes, lacs et littoraux, avec la vie quotidienne animée de ses marchés de nuit.",
-      "Taiwán reúne montañas, lagos y costas con la animada vida cotidiana de sus mercados nocturnos."
+      "台湾的山脉、湖泊与海岸构成多样的地理景观，日月潭是其中具有代表性的湖区。城市街区与夜市呈现另一面的日常生活。内陆湖区聚落、沿海城镇与西部平原上的城市，也有着不同的建筑和生活环境。",
+      "Taiwan’s mountains, lakes and coastlines create varied landscapes, with Sun Moon Lake among its representative lake districts. Urban neighbourhoods and night markets show another side of daily life. Inland lake settlements, coastal towns and cities on the western plains offer different settings.",
+      "Montagnes, lacs et littoraux composent les paysages variés de Taïwan ; le lac du Soleil et de la Lune en est un exemple. Quartiers et marchés nocturnes montrent le quotidien urbain. Villages lacustres, villes côtières et cités des plaines de l’ouest offrent des cadres différents.",
+      "Montañas, lagos y costas forman los paisajes diversos de Taiwán; el Lago del Sol y la Luna es uno de sus ejemplos. Los barrios y mercados nocturnos muestran el día a día urbano. Pueblos lacustres, ciudades costeras y urbes de las llanuras occidentales ofrecen entornos diferentes."
     ],
     "source": {
       "url": "https://eng.taiwan.net.tw/att/files/Time%20for%20Taiwan_ENG.pdf"
@@ -1468,7 +1540,7 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/taiwan.webp",
+      "src": "images/atlas/editorial-taiwan-e6b1aa63.webp",
       "width": 960,
       "height": 720,
       "alt": [
@@ -1479,17 +1551,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Alankang",
-        "url": "https://commons.wikimedia.org/wiki/File:Sun_Moon_Lake,_2016-09-11.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "David Stanley from Nanaimo, Canada",
+        "url": "https://commons.wikimedia.org/wiki/File:Sun_Moon_Lake_(40201321874).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       },
       "position": "50% 50%",
       "caption": [
-        "日月潭 · 台湾地区风景参考",
-        "Sun Moon Lake · regional landscape",
-        "Lac du Soleil et de la Lune · paysage de la région",
-        "Lago del Sol y la Luna · paisaje de la región"
+        "台湾 · 日月潭（地区参考图）",
+        "Taiwan · Sun Moon Lake (regional reference)",
+        "Taïwan · lac du Soleil et de la Lune (vue régionale de référence)",
+        "Taiwán · Lago del Sol y la Luna (referencia regional)"
       ]
     },
     "summary": [
@@ -1507,10 +1579,10 @@
       "París · Panthéon-Sorbonne"
     ],
     "intro": [
-      "巴黎的塞纳河、博物馆与大学街区，让艺术、历史与学习融在日常里。巴黎第一大学是我一年交换生活的中心。",
-      "Paris brings art, history and study into everyday life through the Seine, museums and university neighbourhoods. Panthéon-Sorbonne anchored my exchange year.",
-      "La Seine, les musées et les quartiers universitaires font entrer l’art, l’histoire et les études dans le quotidien parisien. Paris 1 a été le cœur de mon année d’échange.",
-      "El Sena, los museos y los barrios universitarios integran arte, historia y estudios en la vida parisina. París 1 fue el centro de mi año de intercambio."
+      "塞纳河把巴黎的河岸、桥梁和博物馆串在一起，拉丁区则聚集着大学、书店与咖啡馆。先贤祠的穹顶从街道尽头升起，和周围的石砌建筑一起，构成这座城市鲜明的历史轮廓。",
+      "The Seine links Paris’s riverbanks, bridges and museums, while the Latin Quarter brings together universities, bookshops and cafés. At the end of Rue Soufflot, the Panthéon’s dome rises above stone façades, giving the district a distinctive historic landmark.",
+      "La Seine relie les quais, les ponts et les musées de Paris. Au Quartier latin, universités, librairies et cafés se côtoient ; au bout de la rue Soufflot, le dôme du Panthéon se détache au-dessus des façades de pierre et marque le paysage du quartier.",
+      "El Sena enlaza las riberas, los puentes y los museos de París. En el Barrio Latino conviven universidades, librerías y cafés; al final de la rue Soufflot, la cúpula del Panteón sobresale entre las fachadas de piedra y da al barrio un hito inconfundible."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/paris/"
@@ -1544,9 +1616,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/paris-1-panth-on.webp",
-      "width": 960,
-      "height": 721,
+      "src": "images/atlas/editorial-paris-1-panth-on-fc782514.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "巴黎 · 巴黎第一大学 · 地点实景图",
         "Paris · Panthéon-Sorbonne · place photograph",
@@ -1555,17 +1627,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Moonik",
-        "url": "https://commons.wikimedia.org/wiki/File:Pantheon_of_Paris_007.JPG",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Juanedc from Zaragoza, España",
+        "url": "https://commons.wikimedia.org/wiki/File:Panth%C3%A9on_and_Rue_Soufflot,_Paris_2011.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       },
-      "position": "50% 50%",
+      "position": "50% 20%",
       "caption": [
-        "巴黎 · 先贤祠广场",
-        "Paris · Place du Panthéon",
-        "Paris · place du Panthéon",
-        "París · plaza del Panteón"
+        "巴黎 · 先贤祠与苏弗洛街",
+        "Paris · Panthéon and Rue Soufflot",
+        "Paris · Panthéon et rue Soufflot",
+        "París · Panteón y rue Soufflot"
       ]
     },
     "summary": [
@@ -1583,10 +1655,10 @@
       "Marsella"
     ],
     "intro": [
-      "马赛面向地中海，老港连接着城市的海洋历史与今天的街头生活，是法国南方的一种鲜明表情。",
-      "Marseille faces the Mediterranean, its Old Port connecting maritime history with the city’s everyday street life.",
-      "Tournée vers la Méditerranée, Marseille relie son histoire maritime à la vie quotidienne autour du Vieux-Port.",
-      "Marsella mira al Mediterráneo; su Puerto Viejo conecta la historia marítima con la vida cotidiana de sus calles."
+      "马赛面向地中海，老港的码头、船只与沿岸街区记录着这座城市的海洋历史。港湾内密集的桅杆与连绵屋顶相接，往外便是开阔海面；海港至今仍是认识马赛城市生活的重要起点。",
+      "Marseille faces the Mediterranean, with the Old Port’s quays, boats and waterfront streets reflecting its maritime history. Masts and rooftops crowd the sheltered harbour, then give way to open sea; the port remains a natural starting point for understanding the city.",
+      "Marseille s’ouvre sur la Méditerranée. Les quais, les bateaux et les rues du Vieux-Port racontent son histoire maritime ; les mâts et les toits entourent le bassin avant de laisser place au large. Le port reste un point de départ pour découvrir la ville.",
+      "Marsella mira al Mediterráneo. Los muelles, barcos y calles del Puerto Viejo reflejan su historia marítima; los mástiles y tejados rodean la dársena antes de dar paso al mar abierto. El puerto sigue siendo un buen punto de partida para conocer la ciudad."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/marseille/"
@@ -1620,9 +1692,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/marseille.webp",
-      "width": 960,
-      "height": 371,
+      "src": "images/atlas/editorial-marseille-6ffbefbc.webp",
+      "width": 1280,
+      "height": 458,
       "alt": [
         "马赛 · 地点实景图",
         "Marseille · place photograph",
@@ -1631,12 +1703,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Ingo Mehling",
-        "url": "https://commons.wikimedia.org/wiki/File:Marseille_Old_Port.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Chensiyuan",
+        "url": "https://commons.wikimedia.org/wiki/File:1_marseille_vieux_port_pano.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "马赛 · 老港全景",
+        "Marseille · Old Port panorama",
+        "Marseille · panorama du Vieux-Port",
+        "Marsella · panorámica del Puerto Viejo"
+      ]
     },
     "summary": [
       "马赛面向地中海，老港连接着城市的海洋历史与今天的街头生活，是法国南方的一种鲜明表情。",
@@ -1653,10 +1731,10 @@
       "Estrasburgo"
     ],
     "intro": [
-      "斯特拉斯堡的运河与木筋屋记录着阿尔萨斯文化，也让这座欧洲城市保留了亲切的街区尺度。",
-      "Strasbourg’s canals and half-timbered houses reflect Alsatian culture and give this European city an intimate neighbourhood feel.",
-      "Les canaux et les maisons à colombages de Strasbourg racontent l’Alsace et donnent une échelle familière à cette ville européenne.",
-      "Los canales y las casas con entramado de madera de Estrasburgo reflejan la cultura alsaciana y el ambiente cercano de sus barrios."
+      "斯特拉斯堡的老城分布着运河、桥梁与阿尔萨斯木筋屋，尖屋顶和外露木梁让街景很容易辨认。小法兰西的房屋紧邻水面，河岸花卉与水中倒影相映，也保留着这片街区独特的历史面貌。",
+      "Canals, bridges and Alsatian half-timbered houses shape Strasbourg’s old town. Steep roofs and exposed beams make the streets instantly recognisable; in Petite France, riverside flowers and reflections frame houses standing close to the water.",
+      "Canaux, ponts et maisons à pans de bois alsaciennes composent le vieux Strasbourg. Les toits pentus et les poutres apparentes lui donnent une silhouette reconnaissable ; dans la Petite France, fleurs des berges et reflets accompagnent les maisons au bord de l’eau.",
+      "Los canales, puentes y casas alsacianas de entramado de madera definen el casco antiguo de Estrasburgo. Los tejados inclinados y las vigas vistas lo hacen reconocible; en la Petite France, flores y reflejos acompañan las casas situadas junto al agua."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/strasbourg/"
@@ -1723,10 +1801,10 @@
       "Niza"
     ],
     "intro": [
-      "尼斯把地中海、英国人散步大道与老城连接在一起，是蔚蓝海岸鲜明的海边城市。",
-      "Nice brings together the Mediterranean, the Promenade des Anglais and its old town, capturing the seaside character of the French Riviera.",
-      "Nice réunit Méditerranée, promenade des Anglais et vieille ville : un paysage emblématique de la Côte d’Azur.",
-      "Niza une el Mediterráneo, el Paseo de los Ingleses y el casco antiguo, reflejando el carácter costero de la Riviera francesa."
+      "英国人漫步大道沿尼斯海湾展开，一侧是地中海，一侧是海滨建筑与棕榈树。老城的狭窄街道、暖色外墙与海岸形成鲜明对照；从海湾弧线到街巷细节，都能辨认出这座蔚蓝海岸城市的面貌。",
+      "Nice’s Promenade des Anglais follows the bay between the Mediterranean and a line of seafront buildings and palms. The old town offers a different setting of narrow streets and warm-coloured façades, giving this Riviera city two distinct but connected faces.",
+      "À Nice, la promenade des Anglais suit la baie entre la Méditerranée, les immeubles du front de mer et les palmiers. Le Vieux-Nice présente un autre décor : rues étroites et façades aux tons chauds complètent la grande courbe du littoral de cette ville de la Riviera.",
+      "En Niza, el paseo de los Ingleses recorre la bahía entre el Mediterráneo, los edificios frente al mar y las palmeras. El casco antiguo ofrece otro paisaje de calles estrechas y fachadas cálidas, que completa la amplia curva costera de esta ciudad de la Riviera."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/nice/"
@@ -1793,10 +1871,10 @@
       "Menton"
     ],
     "intro": [
-      "芒通位于法国与意大利交界附近，彩色老城与柠檬文化为这座海边小城添上了温暖的辨识度。",
-      "Menton lies near the Italian border, with a colourful old town and a lemon-growing tradition that give it a warm coastal identity.",
-      "Près de la frontière italienne, Menton associe vieille ville colorée et culture du citron, qui font son identité littorale.",
-      "Menton está cerca de la frontera italiana; su casco antiguo de colores y la tradición del limón definen su identidad costera."
+      "芒通靠近法国与意大利的边界，彩色房屋沿山坡密集排列，圣米歇尔钟楼从老城屋顶间突出。海湾把建筑立面与水中倒影连接起来，当地的柠檬文化也让这座地中海小城有了鲜明的地方特色。",
+      "Near the French–Italian border, Menton’s colourful houses climb the hillside, with Saint-Michel’s bell tower rising above the old town. The bay brings together waterfront façades and their reflections, while local lemon traditions give the town another distinctive identity.",
+      "Près de la frontière franco-italienne, les maisons colorées de Menton s’étagent sur la colline, dominées par le clocher Saint-Michel. La baie relie les façades du bord de mer à leurs reflets ; les traditions liées au citron ajoutent une autre identité à la ville.",
+      "Cerca de la frontera franco-italiana, las casas de colores de Menton suben por la ladera y el campanario de Saint-Michel destaca sobre el casco antiguo. La bahía refleja las fachadas costeras, mientras la tradición del limón aporta otra seña de identidad local."
     ],
     "source": {
       "url": "https://www.menton-riviera-merveilles.fr/"
@@ -1830,9 +1908,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/menton.webp",
-      "width": 960,
-      "height": 640,
+      "src": "images/atlas/editorial-menton-ed3c57ea.webp",
+      "width": 1280,
+      "height": 688,
       "alt": [
         "芒通 · 地点实景图",
         "Menton · place photograph",
@@ -1841,12 +1919,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Le poulpe ambidextre",
-        "url": "https://commons.wikimedia.org/wiki/File:Menton_february_13.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Tobi 87",
+        "url": "https://commons.wikimedia.org/wiki/File:Menton-C%C3%B4te_d%27Azur.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "芒通 · 老城海岸",
+        "Menton · old town and coast",
+        "Menton · vieille ville et front de mer",
+        "Menton · casco antiguo y costa"
+      ]
     },
     "summary": [
       "芒通位于法国与意大利交界附近，彩色老城与柠檬文化为这座海边小城添上了温暖的辨识度。",
@@ -1863,10 +1947,10 @@
       "Rennes"
     ],
     "intro": [
-      "雷恩是布列塔尼的重要城市，老城中的木筋屋保存着当地历史，也为街道增添了鲜明的色彩。",
-      "Rennes is a major city in Brittany, where the old town’s half-timbered houses preserve local history and colour its streets.",
-      "Rennes, grande ville bretonne, conserve dans son centre ancien des maisons à pans de bois qui racontent son histoire.",
-      "Rennes es una importante ciudad de Bretaña; las casas con entramado de madera de su casco antiguo conservan su historia local."
+      "雷恩的老城保存着布列塔尼特色鲜明的木筋屋，外露木梁、彩色墙面与高低不同的山墙组成了独特街景。尚雅凯广场周围的建筑集中呈现这种风格，也让城市的历史面貌延续在今天的步行街区里。",
+      "Rennes’s old town preserves Breton half-timbered houses, with exposed beams, coloured walls and varied gables giving its streets a distinctive appearance. The buildings around Place du Champ-Jacquet bring this architecture together within today’s walkable city centre.",
+      "Le vieux Rennes conserve des maisons à pans de bois bretonnes : poutres apparentes, murs colorés et pignons variés donnent leur caractère aux rues. Autour de la place du Champ-Jacquet, ces façades réunissent ce patrimoine au cœur du centre-ville piéton d’aujourd’hui.",
+      "El casco antiguo de Rennes conserva casas bretonas de entramado de madera, con vigas vistas, muros de colores y frontones variados. Los edificios de la plaza del Champ-Jacquet reúnen este patrimonio en pleno centro urbano, que hoy se recorre a pie."
     ],
     "source": {
       "url": "https://www.tourisme-rennes.com/decouvrir-rennes/histoire/maisons-pans-de-bois/"
@@ -1900,9 +1984,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/rennes.webp",
-      "width": 960,
-      "height": 721,
+      "src": "images/atlas/editorial-rennes-95c5c5f2.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "雷恩 · 地点实景图",
         "Rennes · place photograph",
@@ -1911,12 +1995,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Zairon",
-        "url": "https://commons.wikimedia.org/wiki/File:Rennes_Place_du_Champ-Jacquet_4.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Sokoljan",
+        "url": "https://commons.wikimedia.org/wiki/File:Rennes_pl_Ch-Jacquet_DSCN1770.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 20%",
+      "caption": [
+        "雷恩 · 尚雅凯广场",
+        "Rennes · Place du Champ-Jacquet",
+        "Rennes · place du Champ-Jacquet",
+        "Rennes · plaza del Champ-Jacquet"
+      ]
     },
     "summary": [
       "雷恩是布列塔尼的重要城市，老城中的木筋屋保存着当地历史，也为街道增添了鲜明的色彩。",
@@ -1933,10 +2023,10 @@
       "Tours"
     ],
     "intro": [
-      "图尔位于卢瓦尔河地区，老城与普吕默罗广场的木筋屋，让这座城市适合用步行慢慢认识。",
-      "Tours lies in the Loire region, with an old town and half-timbered houses around Place Plumereau best discovered on foot.",
-      "Dans la région de la Loire, Tours se découvre à pied, entre vieille ville et maisons à pans de bois de la place Plumereau.",
-      "Tours está en la región del Loira; su casco antiguo y las casas de entramado de madera de la plaza Plumereau invitan a caminar."
+      "图尔位于卢瓦尔河地区，老城的石砌建筑与木筋屋共同记录着城市历史。普吕姆罗广场周围的尖顶房屋排列紧密，底层咖啡馆与相连的步行街巷，让这片历史街区一直保持着日常生活的气息。",
+      "Tours lies in the Loire region, where stone buildings and half-timbered houses share the old town. Closely spaced gabled houses surround Place Plumereau; cafés on the ground floors and adjoining pedestrian streets keep this historic quarter connected to everyday life.",
+      "Dans la région de la Loire, le vieux Tours associe bâtiments de pierre et maisons à pans de bois. Des façades à pignons serrés entourent la place Plumereau ; les cafés du rez-de-chaussée et les rues piétonnes voisines maintiennent la vie quotidienne au cœur du quartier historique.",
+      "En la región del Loira, el casco antiguo de Tours reúne edificios de piedra y casas de entramado de madera. Las fachadas con hastiales rodean la plaza Plumereau; los cafés y las calles peatonales próximas mantienen la vida cotidiana dentro del barrio histórico."
     ],
     "source": {
       "url": "https://www.tours-tourisme.fr/preparez-votre-sejour/visites-guidees/visite-guidee-du-vieux-tours/"
@@ -1970,9 +2060,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/tours.webp",
-      "width": 960,
-      "height": 657,
+      "src": "images/atlas/editorial-tours-5d9fba3b.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "图尔 · 地点实景图",
         "Tours · place photograph",
@@ -1981,12 +2071,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Jules78120",
-        "url": "https://commons.wikimedia.org/wiki/File:Tram_et_h%C3%B4tel_de_ville_de_Tours.JPG",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Benjamin Smith",
+        "url": "https://commons.wikimedia.org/wiki/File:Tours_-_Place_Plumereau_-_1.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 15%",
+      "caption": [
+        "图尔 · 普吕姆罗广场",
+        "Tours · Place Plumereau",
+        "Tours · place Plumereau",
+        "Tours · plaza Plumereau"
+      ]
     },
     "summary": [
       "图尔位于卢瓦尔河地区，老城与普吕默罗广场的木筋屋，让这座城市适合用步行慢慢认识。",
@@ -2003,10 +2099,10 @@
       "Lille"
     ],
     "intro": [
-      "里尔位于法国北部，佛兰德风格的建筑与老城街区，呈现了不同于法国南方的城市气质。",
-      "Lille, in northern France, reveals its Flemish influence through the architecture and streets of the old town.",
-      "Dans le nord de la France, Lille révèle ses influences flamandes à travers l’architecture et les rues du Vieux-Lille.",
-      "Lille, en el norte de Francia, muestra su influencia flamenca en la arquitectura y las calles del casco antiguo."
+      "里尔位于法国北部，大广场周围的山墙、砖石立面与钟楼展现出鲜明的佛兰德建筑特色。走进老城，还能看到连续排列的彩色建筑与石铺街道；它们共同构成了不同于法国南方的城市景观。",
+      "In northern France, Lille’s Grand Place displays Flemish influences through decorative gables, brick-and-stone façades and its prominent tower. The old town continues this architectural character with rows of colourful buildings and stone-paved streets.",
+      "Dans le nord de la France, la Grand-Place de Lille montre ses influences flamandes à travers pignons décoratifs, façades de brique et de pierre et tour dominante. Le Vieux-Lille prolonge ce caractère architectural avec ses maisons colorées et ses rues pavées.",
+      "En el norte de Francia, la Grand-Place de Lille muestra influencias flamencas en sus frontones decorativos, fachadas de ladrillo y piedra y torre destacada. El casco antiguo prolonga ese carácter con hileras de edificios de colores y calles empedradas."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/lille/"
@@ -2056,7 +2152,7 @@
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 25%"
     },
     "summary": [
       "里尔位于法国北部，佛兰德风格的建筑与老城街区，呈现了不同于法国南方的城市气质。",
@@ -2073,10 +2169,10 @@
       "Antibes"
     ],
     "intro": [
-      "昂蒂布的城墙面向地中海，老城、港口与毕加索博物馆，让历史和艺术在海边相遇。",
-      "Antibes looks out over the Mediterranean from its ramparts, bringing together an old town, harbour and Picasso Museum.",
-      "À Antibes, les remparts dominent la Méditerranée ; vieille ville, port et musée Picasso font se rencontrer histoire et art.",
-      "Antibes mira al Mediterráneo desde sus murallas, reuniendo casco antiguo, puerto y Museo Picasso."
+      "昂蒂布的海边城墙把老城与地中海分隔开，石砌防御建筑、沿岸房屋和港口共同勾勒出城市轮廓。毕加索博物馆也在老城中，使海岸风景之外，多了一条与现代艺术相连的城市线索。",
+      "Antibes’s seaside ramparts separate the old town from the Mediterranean. Stone defences, waterfront houses and the harbour define its outline; the Picasso Museum adds a connection to modern art within the old town, alongside the city’s coastal scenery.",
+      "À Antibes, les remparts séparent la vieille ville de la Méditerranée. Fortifications de pierre, maisons du littoral et port dessinent son profil ; le musée Picasso ajoute, au cœur de la vieille ville, un lien avec l’art moderne qui complète le paysage côtier.",
+      "En Antibes, las murallas separan el casco antiguo del Mediterráneo. Las defensas de piedra, las casas costeras y el puerto dibujan su perfil; el Museo Picasso añade una conexión con el arte moderno en pleno casco antiguo, junto al paisaje marítimo de la ciudad."
     ],
     "source": {
       "url": "https://www.antibesjuanlespins.com/decouvrir/les-incontournables/antibes-la-cite-des-remparts"
@@ -2143,10 +2239,10 @@
       "Cannes"
     ],
     "intro": [
-      "戛纳以电影节闻名，克鲁瓦塞特海滨大道与苏凯老城，则构成了银幕之外的城市风景。",
-      "Cannes is known for its film festival, while the Croisette waterfront and Le Suquet old town reveal the city beyond the screen.",
-      "Connue pour son festival de cinéma, Cannes se découvre aussi sur la Croisette et dans les ruelles du Suquet.",
-      "Cannes es conocida por su festival de cine; el paseo de la Croisette y el barrio antiguo Le Suquet muestran la ciudad más allá de la pantalla."
+      "戛纳的电影节声名之外，克鲁瓦塞特大道串起海滨建筑、棕榈树与海湾。苏凯老城位于高处，从这里可以把红色屋顶、老港的船只和海岸一并收入视野，看见这座城市由山坡延伸到海边的完整轮廓。",
+      "Beyond its film festival, Cannes is shaped by the Croisette’s seafront buildings, palms and bay. From the elevated old quarter of Le Suquet, red rooftops, boats in the Old Port and the coastline can be seen together, revealing the city’s passage from hillside to sea.",
+      "Au-delà du festival de cinéma, Cannes se dessine autour des immeubles, des palmiers et de la baie de la Croisette. Depuis les hauteurs du Suquet, toits rouges, bateaux du Vieux-Port et littoral apparaissent ensemble, montrant la ville entre colline et mer.",
+      "Más allá de su festival de cine, Cannes se define por los edificios costeros, las palmeras y la bahía de la Croisette. Desde el antiguo barrio elevado de Le Suquet se ven juntos los tejados rojos, los barcos del Puerto Viejo y la costa, de la colina al mar."
     ],
     "source": {
       "url": "https://www.cannes.com/fr/discover-cannes/visiter-cannes.html"
@@ -2180,9 +2276,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/cannes.webp",
-      "width": 482,
-      "height": 361,
+      "src": "images/atlas/editorial-cannes-cd6ebf72.webp",
+      "width": 1280,
+      "height": 346,
       "alt": [
         "戛纳 · 地点实景图",
         "Cannes · place photograph",
@@ -2191,12 +2287,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Nikita~commonswiki",
-        "url": "https://commons.wikimedia.org/wiki/File:CANNES_(festival1).jpg",
-        "license": "CC BY-SA 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+        "author": "Spike",
+        "url": "https://commons.wikimedia.org/wiki/File:Cannes_from_Suquet_Tower_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "65% 50%",
+      "caption": [
+        "戛纳 · 苏凯塔俯瞰老港",
+        "Cannes · Old Port seen from Le Suquet",
+        "Cannes · Vieux-Port vu du Suquet",
+        "Cannes · Puerto Viejo desde Le Suquet"
+      ]
     },
     "summary": [
       "戛纳以电影节闻名，克鲁瓦塞特海滨大道与苏凯老城，则构成了银幕之外的城市风景。",
@@ -2213,10 +2315,10 @@
       "Nantes"
     ],
     "intro": [
-      "南特沿卢瓦尔河展开，港口历史与公共艺术相互交织，机械岛也为城市留下了富有想象力的景观。",
-      "Nantes unfolds along the Loire, weaving port history with public art and the imaginative machines of the Île de Nantes.",
-      "Nantes se déploie sur la Loire, entre histoire portuaire, art public et machines imaginaires de l’île de Nantes.",
-      "Nantes se extiende junto al Loira, combinando historia portuaria, arte público y las máquinas imaginativas de la isla de Nantes."
+      "南特沿卢瓦尔河发展，港口历史与今天的城市文化紧密相连。布列塔尼公爵城堡的城墙和庭院保存着历史地标，岛上的机械装置与公共艺术则提供另一种面貌，让古老建筑与当代创意出现在同一座城市里。",
+      "Nantes grew along the Loire, and its maritime history remains part of its urban identity. The walls and courtyard of the Castle of the Dukes of Brittany form a historic landmark, while the island’s mechanical creations and public art show the city’s contemporary imagination.",
+      "Nantes s’est développée le long de la Loire, et son histoire portuaire marque encore la ville. Les remparts et la cour du château des ducs de Bretagne en sont un repère historique ; les créations mécaniques de l’île et l’art public montrent une autre facette, contemporaine.",
+      "Nantes creció junto al Loira y su historia portuaria sigue presente en la ciudad. Las murallas y el patio del Castillo de los Duques de Bretaña forman un hito histórico; las creaciones mecánicas de la isla y el arte público muestran su faceta contemporánea."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/nantes/"
@@ -2283,10 +2385,10 @@
       "Burdeos"
     ],
     "intro": [
-      "波尔多的葡萄酒文化与加龙河岸相连，历史建筑和滨河空间让这座城市兼具厚重与开阔。",
-      "Bordeaux pairs wine culture with the Garonne waterfront, where historic architecture meets open riverside spaces.",
-      "Bordeaux associe culture du vin et quais de la Garonne, entre architecture historique et espaces ouverts sur le fleuve.",
-      "Burdeos une la cultura del vino con las orillas del Garona, donde la arquitectura histórica convive con espacios abiertos junto al río."
+      "波尔多沿加龙河展开，交易所广场的石砌立面与水镜倒影构成了极具代表性的城市画面。河岸把历史建筑和滨河步道连接起来，葡萄酒文化则从周边产区延伸进城市，与这片建筑景观共同塑造了波尔多的形象。",
+      "Bordeaux stretches along the Garonne, with the stone façades of Place de la Bourse reflected in the Water Mirror. Historic buildings and riverside walks meet on the quays, while wine traditions from the surrounding region add another defining part of the city’s identity.",
+      "Bordeaux s’étend le long de la Garonne, où les façades de pierre de la place de la Bourse se reflètent dans le Miroir d’eau. Les quais relient monuments et promenades ; la culture du vin, venue des vignobles voisins, complète ce paysage urbain emblématique.",
+      "Burdeos se extiende junto al Garona, donde las fachadas de piedra de la plaza de la Bolsa se reflejan en el Espejo de Agua. Los muelles unen edificios históricos y paseos ribereños; la cultura del vino de los viñedos cercanos completa la identidad de la ciudad."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/bordeaux/"
@@ -2320,9 +2422,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/bordeaux.webp",
-      "width": 960,
-      "height": 642,
+      "src": "images/atlas/editorial-bordeaux-3228a4e5.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "波尔多 · 地点实景图",
         "Bordeaux · place photograph",
@@ -2331,12 +2433,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Phillip Maiwald (Nikopol)",
-        "url": "https://commons.wikimedia.org/wiki/File:Bordeaux_place_de_la_bourse_with_tram.JPG",
+        "author": "Patrick Despoix",
+        "url": "https://commons.wikimedia.org/wiki/File:139_-_Place_de_la_Bourse_et_le_miroir_d%27eau_-_Bordeaux.jpg",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "波尔多 · 交易所广场与水镜",
+        "Bordeaux · Place de la Bourse and Water Mirror",
+        "Bordeaux · place de la Bourse et Miroir d’eau",
+        "Burdeos · plaza de la Bolsa y Espejo de Agua"
+      ]
     },
     "summary": [
       "波尔多的葡萄酒文化与加龙河岸相连，历史建筑和滨河空间让这座城市兼具厚重与开阔。",
@@ -2353,10 +2461,10 @@
       "Lyon"
     ],
     "intro": [
-      "里昂汇聚历史街区与浓厚的美食传统，从老城街巷到餐桌，都能感受到这座城市的层次。",
-      "Lyon brings together historic neighbourhoods and a rich food tradition, revealing its character through old streets and local tables.",
-      "Lyon réunit quartiers historiques et traditions gastronomiques : son caractère se lit dans les ruelles comme à table.",
-      "Lyon reúne barrios históricos y una rica tradición gastronómica; su carácter se descubre en las calles antiguas y en la mesa."
+      "里昂的老城沿索恩河展开，圣让主教座堂与密集的红色屋顶组成鲜明的城市景观。河岸、桥梁和历史街巷把不同街区连接起来；当地浓厚的美食传统，也让老城不止是一片供人观赏的历史建筑群。",
+      "Lyon’s old town follows the Saône, with Saint-Jean Cathedral standing among closely packed red rooftops. Riverbanks, bridges and historic streets link its neighbourhoods; a strong local food tradition keeps this architectural setting part of the city’s everyday life.",
+      "Le Vieux-Lyon longe la Saône, avec la cathédrale Saint-Jean au milieu des toits rouges serrés. Quais, ponts et rues historiques relient les quartiers ; une forte tradition gastronomique inscrit cet ensemble architectural dans la vie quotidienne de la ville.",
+      "El casco antiguo de Lyon sigue el Saona, con la catedral de Saint-Jean entre tejados rojos muy próximos. Las riberas, los puentes y las calles históricas enlazan sus barrios; la tradición gastronómica mantiene este patrimonio unido a la vida cotidiana de la ciudad."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/lyon/"
@@ -2390,9 +2498,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/lyon.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-lyon-0524e78a.webp",
+      "width": 1280,
+      "height": 881,
       "alt": [
         "里昂 · 地点实景图",
         "Lyon · place photograph",
@@ -2401,12 +2509,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Karldupart",
-        "url": "https://commons.wikimedia.org/wiki/File:Vieuxlyon_saintjean_toits.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Tournasol7",
+        "url": "https://commons.wikimedia.org/wiki/File:View_of_Lyon_(6).jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "里昂 · 圣让主教座堂与老城",
+        "Lyon · Saint-Jean Cathedral and old town",
+        "Lyon · cathédrale Saint-Jean et vieille ville",
+        "Lyon · catedral de Saint-Jean y casco antiguo"
+      ]
     },
     "summary": [
       "里昂汇聚历史街区与浓厚的美食传统，从老城街巷到餐桌，都能感受到这座城市的层次。",
@@ -2423,10 +2537,10 @@
       "Toulouse"
     ],
     "intro": [
-      "图卢兹因砖建筑的色泽被称为“玫瑰之城”，历史街区与航空航天产业共同塑造了它的气质。",
-      "Toulouse’s brick buildings give it the name “Pink City”, while historic neighbourhoods and aerospace shape its character.",
-      "Les briques de Toulouse lui valent le nom de « ville rose » ; quartiers historiques et aéronautique façonnent son identité.",
-      "Los edificios de ladrillo de Toulouse le dan el nombre de «Ciudad Rosa»; sus barrios históricos y la industria aeroespacial definen su carácter."
+      "图卢兹因砖建筑的暖色被称为“玫瑰之城”，广场、街巷与加龙河岸都能看到这种鲜明的材料色彩。历史建筑与航空航天产业并存，让城市既保留南法老城的面貌，也与当代科技紧密相连。",
+      "Toulouse is known as the Pink City for the warm tones of its brick buildings, visible around its squares, streets and Garonne riverbanks. Historic architecture coexists with an aerospace industry, connecting the character of an old southern French city with modern technology.",
+      "Toulouse doit son surnom de Ville rose aux tons chauds de ses briques, visibles sur les places, dans les rues et le long de la Garonne. Son architecture historique côtoie l’industrie aéronautique et spatiale, reliant le visage d’une ville du Midi aux technologies actuelles.",
+      "Toulouse es conocida como la Ciudad Rosa por los tonos cálidos de sus edificios de ladrillo, presentes en plazas, calles y riberas del Garona. La arquitectura histórica convive con la industria aeroespacial y une el carácter del sur de Francia con la tecnología actual."
     ],
     "source": {
       "url": "https://www.france.fr/fr/destination/toulouse/"
@@ -2460,9 +2574,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/toulouse.webp",
-      "width": 960,
-      "height": 641,
+      "src": "images/atlas/editorial-toulouse-047ddd44.webp",
+      "width": 1280,
+      "height": 761,
       "alt": [
         "图卢兹 · 地点实景图",
         "Toulouse · place photograph",
@@ -2471,12 +2585,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Didier Descouens",
-        "url": "https://commons.wikimedia.org/wiki/File:Le_Pont-Neuf_de_Toulouse.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Frédéric Neupont",
+        "url": "https://commons.wikimedia.org/wiki/File:Capitole-27.jpg",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
       },
-      "position": "50% 50%"
+      "position": "50% 20%",
+      "caption": [
+        "图卢兹 · 市政厅广场",
+        "Toulouse · Capitole and square",
+        "Toulouse · Capitole et sa place",
+        "Toulouse · Capitole y su plaza"
+      ]
     },
     "summary": [
       "图卢兹因砖建筑的色泽被称为“玫瑰之城”，历史街区与航空航天产业共同塑造了它的气质。",
@@ -2493,10 +2613,10 @@
       "Zúrich"
     ],
     "intro": [
-      "苏黎世围绕湖泊与利马特河展开，老城街道与现代城市生活紧密相连。",
-      "Zurich gathers around its lake and the Limmat River, bringing old-town streets into close contact with modern city life.",
-      "Zurich s’organise autour de son lac et de la Limmat, où les rues anciennes côtoient la vie urbaine contemporaine.",
-      "Zúrich se organiza alrededor de su lago y del río Limmat, uniendo calles antiguas y vida urbana contemporánea."
+      "苏黎世沿着苏黎世湖与利马特河展开，河岸老城和开阔湖面彼此相接。两岸的街屋、教堂尖顶与桥梁构成了城市最鲜明的景色，博物馆、商店和水边步道则把历史街区接进今天的日常。",
+      "Zürich stretches along Lake Zürich and the Limmat, where the old town meets open water. Riverside houses, church spires and bridges define the view, while museums, shops and waterside paths keep the historic centre part of everyday city life.",
+      "Zurich se déploie entre le lac et la Limmat, au contact de la vieille ville. Maisons riveraines, clochers et ponts dessinent le paysage ; musées, boutiques et promenades au bord de l’eau prolongent les rues historiques dans la vie quotidienne.",
+      "Zúrich se extiende junto al lago y al río Limmat, donde el casco antiguo se abre al agua. Casas ribereñas, campanarios y puentes definen la vista; museos, tiendas y paseos junto al agua mantienen el centro histórico dentro de la vida cotidiana."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-ch/destinations/zurich/"
@@ -2563,10 +2683,10 @@
       "Basilea"
     ],
     "intro": [
-      "巴塞尔坐落在莱茵河畔，以博物馆与艺术生活著称，河岸也构成了城市重要的公共空间。",
-      "Basel sits on the Rhine and is known for its museums and art scene, with the riverbanks forming an important part of city life.",
-      "Bâle, sur le Rhin, est connue pour ses musées et sa vie artistique ; les rives font partie du quotidien de la ville.",
-      "Basilea está junto al Rin y es conocida por sus museos y su vida artística; las orillas forman parte importante de la vida urbana."
+      "巴塞尔的老城与街区分布在莱茵河两岸，河流始终是认识这座城市的一条线索。教堂、桥梁和临水建筑勾勒出河岸风景，丰富的博物馆与艺术空间，则让历史城区拥有活跃的当代文化生活。",
+      "Basel’s old town and neighbourhoods line both banks of the Rhine. Churches, bridges and waterfront buildings shape its river views, while a rich museum and art scene brings contemporary cultural life into the historic city.",
+      "À Bâle, vieille ville et quartiers bordent les deux rives du Rhin. Églises, ponts et façades composent le paysage fluvial ; la richesse des musées et des lieux d’art fait aussi du centre historique un espace de culture contemporaine.",
+      "El casco antiguo y los barrios de Basilea se reparten a ambos lados del Rin. Iglesias, puentes y fachadas dibujan el paisaje del río, mientras sus numerosos museos y espacios de arte mantienen viva la cultura contemporánea en la ciudad histórica."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-us/destinations/basel/"
@@ -2633,10 +2753,10 @@
       "Interlaken"
     ],
     "intro": [
-      "因特拉肯位于图恩湖与布里恩茨湖之间，是走向伯尔尼高地山岳风景的一处门户。",
-      "Interlaken lies between Lakes Thun and Brienz, serving as a gateway to the mountain landscapes of the Bernese Oberland.",
-      "Entre les lacs de Thoune et de Brienz, Interlaken ouvre sur les paysages montagneux de l’Oberland bernois.",
-      "Interlaken está entre los lagos de Thun y Brienz y sirve de puerta a los paisajes montañosos del Oberland bernés."
+      "因特拉肯位于图恩湖与布里恩茨湖之间，城镇四周就是伯尔尼高地的山岳风景。湖水、河道与山脚下的街区在这里相连，既能看见瑞士湖区的开阔，也能以此为起点继续走向更高处的山村与群峰。",
+      "Interlaken lies between Lakes Thun and Brienz, surrounded by the mountains of the Bernese Oberland. Lakes, waterways and streets at the foot of the slopes meet here, making the town a base for both lakeside scenery and higher Alpine villages.",
+      "Interlaken se situe entre les lacs de Thoune et de Brienz, au pied des Alpes bernoises. Eaux, rivières et rues se rejoignent dans la vallée : la ville permet de découvrir les paysages lacustres puis de poursuivre vers les villages et sommets alpins.",
+      "Interlaken se encuentra entre los lagos de Thun y Brienz, rodeada por las montañas del Oberland bernés. Lagos, canales y calles al pie de las laderas se unen aquí; la localidad sirve de base para explorar las orillas, las aldeas alpinas y las cumbres."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-ch/destinations/interlaken/"
@@ -2703,10 +2823,10 @@
       "Thun"
     ],
     "intro": [
-      "图恩位于同名湖泊附近，城堡与老城俯瞰河流，把湖区风景和历史街区连接在一起。",
-      "Thun brings together a castle, an old town and riverside streets close to its namesake lake.",
-      "Près du lac qui porte son nom, Thoune réunit château, vieille ville et rues au bord de l’eau.",
-      "Thun reúne un castillo, un casco antiguo y calles junto al río cerca del lago que lleva su nombre."
+      "图恩把阿勒河、湖岸和历史老城连在一起，城堡高踞在街区上方。河道两边的彩色建筑、桥梁与临水步道，让小城的历史面貌十分具体；从老城走向图恩湖，又能看见远处山地与湖面相接的景色。",
+      "Thun brings together the Aare, a historic old town and the shores of Lake Thun, with its castle above the streets. Colourful riverside buildings, bridges and waterfront paths lead from the centre towards views of the lake and surrounding mountains.",
+      "Thoune réunit l’Aar, une vieille ville historique et les rives du lac, sous la silhouette du château. Façades colorées, ponts et promenades longent la rivière ; en quittant le centre pour le lac, le paysage s’ouvre sur les montagnes environnantes.",
+      "Thun reúne el río Aare, un casco antiguo histórico y la orilla del lago, con el castillo sobre las calles. Las fachadas de colores, los puentes y los paseos ribereños conectan el centro con las vistas del agua y de las montañas que lo rodean."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en/destinations/thun/"
@@ -2740,9 +2860,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/thun.webp",
-      "width": 960,
-      "height": 685,
+      "src": "images/atlas/editorial-thun-b0666bf5.webp",
+      "width": 1280,
+      "height": 957,
       "alt": [
         "图恩 · 地点实景图",
         "Thun · place photograph",
@@ -2751,12 +2871,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "chensiyuan",
-        "url": "https://commons.wikimedia.org/wiki/File:1_thun_castle_view_2012.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "url": "https://commons.wikimedia.org/wiki/File:Thun_Ferries_Wheel_and_Aare_River.jpg",
+        "author": "Fabi Fuu 76",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "图恩 · 阿勒河与老城",
+        "Thun · Aare and old town",
+        "Thoune · Aar et vieille ville",
+        "Thun · río Aare y casco antiguo"
+      ]
     },
     "summary": [
       "图恩位于同名湖泊附近，城堡与老城俯瞰河流，把湖区风景和历史街区连接在一起。",
@@ -2773,10 +2899,10 @@
       "Spiez"
     ],
     "intro": [
-      "施皮茨坐落在图恩湖的一处海湾，城堡、葡萄园与远山相伴，呈现瑞士湖区安静的一面。",
-      "Spiez sits in a bay on Lake Thun, where a castle, vineyards and mountain views reveal a quieter side of the Swiss lakes.",
-      "Spiez occupe une baie du lac de Thoune : château, vignobles et montagnes révèlent une facette paisible des lacs suisses.",
-      "Spiez ocupa una bahía del lago de Thun; castillo, viñedos y montañas muestran un lado tranquilo de los lagos suizos."
+      "施皮茨坐落在图恩湖的一处海湾，城堡、港湾与山坡上的葡萄园彼此相邻。远山是湖畔建筑的背景，帆船和岸边步道则带来亲近水面的视角，展现出瑞士湖区兼具历史建筑与自然风景的一面。",
+      "Spiez sits in a bay on Lake Thun, where the castle, harbour and hillside vineyards are close neighbours. Mountains rise behind the waterfront buildings, while sailing boats and lakeside paths bring the historic setting down to the water’s edge.",
+      "Spiez occupe une baie du lac de Thoune, entre château, port et vignobles sur les pentes. Les montagnes se dressent derrière les bâtiments riverains ; voiliers et sentiers au bord de l’eau relient ce cadre historique au paysage du lac.",
+      "Spiez ocupa una bahía del lago de Thun, entre el castillo, el puerto y los viñedos de la ladera. Las montañas enmarcan los edificios de la orilla; los veleros y los senderos junto al agua unen el paisaje del lago con su patrimonio histórico."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-ch/destinations/spiez/"
@@ -2810,9 +2936,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/spiez.webp",
-      "width": 600,
-      "height": 700,
+      "src": "images/atlas/editorial-spiez-be8109f9.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "施皮茨 · 地点实景图",
         "Spiez · place photograph",
@@ -2821,12 +2947,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Spiez Marketing AG",
-        "url": "https://commons.wikimedia.org/wiki/File:Schloss_Spiez.jpg",
-        "license": "Public domain",
-        "licenseUrl": ""
+        "url": "https://commons.wikimedia.org/wiki/File:Schloss_Spiez_und_Hafen_Spiez.jpg",
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 72%",
+      "caption": [
+        "施皮茨 · 城堡、港湾与图恩湖",
+        "Spiez · castle, harbour and Lake Thun",
+        "Spiez · château, port et lac de Thoune",
+        "Spiez · castillo, puerto y lago de Thun"
+      ]
     },
     "summary": [
       "施皮茨坐落在图恩湖的一处海湾，城堡、葡萄园与远山相伴，呈现瑞士湖区安静的一面。",
@@ -2843,10 +2975,10 @@
       "Lungern"
     ],
     "intro": [
-      "龙疆位于卢塞恩与因特拉肯之间，湖水与周围山地为小村庄围出一片清透的风景。",
-      "Lungern lies between Lucerne and Interlaken, its lake and surrounding mountains framing a small village landscape.",
-      "Entre Lucerne et Interlaken, Lungern est un village encadré par son lac et les montagnes environnantes.",
-      "Lungern está entre Lucerna e Interlaken, con un lago y montañas que enmarcan el paisaje del pequeño pueblo."
+      "龙疆位于卢塞恩与因特拉肯之间，村庄依着湖岸与山谷铺开。清透的湖水、湖边草坡和山坡上的住宅构成了这里鲜明的景色，四周的山地与树林把村落环抱起来，也让湖区风景多了一份安静的生活气息。",
+      "Lungern lies between Lucerne and Interlaken, with its village spread along a lake and valley. Clear water, grassy shores and hillside houses define the scene, enclosed by wooded mountains that give this lake landscape a quiet, lived-in character.",
+      "Lungern se trouve entre Lucerne et Interlaken, le long d’un lac et de sa vallée. Eau claire, prairies riveraines et maisons sur les pentes composent le paysage ; montagnes boisées et village y dessinent un cadre lacustre paisible et habité.",
+      "Lungern está entre Lucerna e Interlaken, con el pueblo extendido junto al lago y el valle. El agua clara, las praderas de la orilla y las casas de la ladera forman un paisaje rodeado de montañas y bosques, tranquilo y a la vez habitado."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-us/destinations/lungern/"
@@ -2913,10 +3045,10 @@
       "Iseltwald"
     ],
     "intro": [
-      "伊瑟尔特瓦尔德是一座布里恩茨湖畔村庄，湖岸与木屋构成了伯尔尼高地细腻而宁静的风景。",
-      "Iseltwald is a village on Lake Brienz, with a shoreline and wooden houses that reveal an intimate side of the Bernese Oberland.",
-      "Iseltwald est un village au bord du lac de Brienz, dont les rives et les maisons de bois composent un paysage intime de l’Oberland bernois.",
-      "Iseltwald es un pueblo junto al lago de Brienz; sus orillas y casas de madera muestran un lado íntimo del Oberland bernés."
+      "伊瑟尔特瓦尔德依着布里恩茨湖的湖岸展开，木屋、船坞与临水建筑组成紧凑的村落。湖面另一侧是山坡与树林，近处则能看见小村与水相接的细节，呈现出伯尔尼高地湖区安静而鲜明的风景。",
+      "Iseltwald follows the shore of Lake Brienz, where wooden houses, boathouses and waterfront buildings form a compact village. Wooded slopes rise across the lake; up close, the meeting of village and water gives the Bernese Oberland a quieter face.",
+      "Iseltwald longe le lac de Brienz, avec ses maisons en bois, hangars à bateaux et bâtiments riverains. Des pentes boisées se dressent sur l’autre rive ; au premier plan, les liens entre village et eau révèlent un visage paisible des Alpes bernoises.",
+      "Iseltwald se extiende por la orilla del lago de Brienz, entre casas de madera, embarcaderos y edificios junto al agua. Al otro lado se alzan laderas boscosas; de cerca, el encuentro del pueblo con el lago muestra el lado tranquilo del Oberland bernés."
     ],
     "source": {
       "url": "https://www.interlaken.swiss/en/destinations/lake-brienz/boenigen-iseltwald"
@@ -2950,9 +3082,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/iseltwald.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-iseltwald-142d683e.webp",
+      "width": 1280,
+      "height": 854,
       "alt": [
         "伊瑟尔特瓦尔德 · 地点实景图",
         "Iseltwald · place photograph",
@@ -2961,12 +3093,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Andrew Bossi",
-        "url": "https://commons.wikimedia.org/wiki/File:5902_-_Iseltwald.JPG",
-        "license": "CC BY-SA 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+        "url": "https://commons.wikimedia.org/wiki/File:Iseltwald_am_Brienzersee.JPG",
+        "author": "Fanny88 und Sheepy86",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "伊瑟尔特瓦尔德 · 布里恩茨湖畔城堡",
+        "Iseltwald · lakeside castle on Lake Brienz",
+        "Iseltwald · château au bord du lac de Brienz",
+        "Iseltwald · castillo junto al lago de Brienz"
+      ]
     },
     "summary": [
       "伊瑟尔特瓦尔德是一座布里恩茨湖畔村庄，湖岸与木屋构成了伯尔尼高地细腻而宁静的风景。",
@@ -2983,10 +3121,10 @@
       "Lucerna"
     ],
     "intro": [
-      "卢塞恩的老城与卡佩尔廊桥临水而立，湖泊和近处山岳让城市与自然保持着很短的距离。",
-      "Lucerne’s old town and Chapel Bridge stand beside the water, with the lake and nearby mountains keeping nature close to city life.",
-      "La vieille ville et le pont de la Chapelle bordent l’eau à Lucerne ; lac et montagnes gardent la nature proche de la ville.",
-      "El casco antiguo y el Puente de la Capilla de Lucerna están junto al agua; el lago y las montañas acercan la naturaleza a la ciudad."
+      "卢塞恩的老城、河道与湖泊紧密相连，卡佩尔廊桥是最容易辨认的城市地标。桥边的临水街屋与历史建筑保留了老城面貌，开阔的卢塞恩湖和远处山岳，又让城市街景始终与瑞士湖区的自然风景相伴。",
+      "Lucerne links its old town, waterways and lake, with the Chapel Bridge as its most recognisable landmark. Waterfront houses and historic buildings line the centre, while Lake Lucerne and the mountains beyond keep the city close to its Alpine setting.",
+      "Lucerne relie vieille ville, cours d’eau et lac autour du célèbre pont de la Chapelle. Maisons riveraines et bâtiments historiques bordent le centre ; le lac et les montagnes en arrière-plan associent constamment la ville au paysage alpin.",
+      "Lucerna conecta el casco antiguo, los cursos de agua y el lago alrededor del reconocible Puente de la Capilla. Casas ribereñas y edificios históricos recorren el centro, mientras el lago y las montañas mantienen la ciudad unida a su paisaje alpino."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-au/destinations/lucerne/"
@@ -3020,9 +3158,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/lucerne.webp",
+      "src": "images/atlas/editorial-lucerne-77fec358.webp",
       "width": 960,
-      "height": 638,
+      "height": 540,
       "alt": [
         "卢塞恩 · 地点实景图",
         "Lucerne · place photograph",
@@ -3031,12 +3169,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Simon Koopmann",
-        "url": "https://commons.wikimedia.org/wiki/File:Kapellbruecke.JPG",
-        "license": "CC BY-SA 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+        "author": "NOTE: This image is a panorama  consisting of multiple frames that were merged or stitched in software. As a result, this image necessarily underwent some form of digital manipulation. These manipulations may include blending, blurring, cloning, and color and perspective adjustments. As a result of these adjustments, the image content may be slightly different from reality at the points where multiple images were combined. This manipulation is often required due to lens, perspective, and parallax distortions.",
+        "url": "https://commons.wikimedia.org/wiki/File:CH.LU.Luzern_Kapellbr%C3%BCcke_01_16x9-R_16384x9216.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 35%",
+      "caption": [
+        "卢塞恩 · 卡佩尔廊桥、水塔与河岸老城",
+        "Lucerne · Chapel Bridge, Water Tower and old town",
+        "Lucerne · pont de la Chapelle, tour de l’Eau et vieille ville",
+        "Lucerna · Puente de la Capilla, torre del Agua y casco antiguo"
+      ]
     },
     "summary": [
       "卢塞恩的老城与卡佩尔廊桥临水而立，湖泊和近处山岳让城市与自然保持着很短的距离。",
@@ -3053,10 +3197,10 @@
       "Rigi"
     ],
     "intro": [
-      "瑞吉山是一处山岳目的地，位于卢塞恩湖一带；湖面、山坡与开阔的远景，是这里的主角。",
-      "Rigi is a mountain destination near Lake Lucerne, where lakes, slopes and broad horizons define the view.",
-      "Le Rigi est une destination de montagne près du lac des Quatre-Cantons, entre eaux, versants et vastes horizons.",
-      "Rigi es un destino de montaña cerca del lago de Lucerna, con lagos, laderas y amplios horizontes como protagonistas."
+      "瑞吉山位于卢塞恩湖一带，山坡、步道与周围湖泊共同构成这里的风景。登高后能看见湖岸线在群山之间延伸，近处是草坡和山间建筑，远处则是层层展开的山脊，让瑞士湖区呈现出更完整的面貌。",
+      "Rigi rises in the Lake Lucerne region, among mountain paths, grassy slopes and surrounding lakes. From higher ground, shorelines stretch between the mountains, with Alpine buildings nearby and successive ridges revealing the wider Swiss lake landscape.",
+      "Le Rigi se situe dans la région du lac des Quatre-Cantons, entre sentiers, prairies et lacs. En altitude, les rives se prolongent entre les montagnes ; bâtiments alpins au premier plan et crêtes lointaines révèlent l’ensemble du paysage lacustre suisse.",
+      "El Rigi se alza en la región del lago de Lucerna, entre senderos, praderas y lagos. Desde lo alto, las orillas se extienden entre las montañas; los edificios alpinos cercanos y las crestas lejanas permiten apreciar el conjunto del paisaje lacustre suizo."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-ch/destinations/rigi/"
@@ -3090,9 +3234,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/rigi.webp",
-      "width": 960,
-      "height": 636,
+      "src": "images/atlas/editorial-rigi-91fa1aa8.webp",
+      "width": 1280,
+      "height": 700,
       "alt": [
         "瑞吉山 · 地点实景图",
         "Rigi · place photograph",
@@ -3101,12 +3245,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Marcin Białek",
-        "url": "https://commons.wikimedia.org/wiki/File:Rigi_Kulm_east_slope_2012.JPG",
+        "url": "https://commons.wikimedia.org/wiki/File:Zugersee_from_Rigi_panorama_20210905.jpg",
+        "author": "Daniel Kraft",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "瑞吉山 · 眺望楚格湖",
+        "Rigi · view towards Lake Zug",
+        "Rigi · vue sur le lac de Zoug",
+        "Rigi · vista hacia el lago de Zug"
+      ]
     },
     "personalImage": {
       "src": "images/web/2f7469959f73-800.webp",
@@ -3147,10 +3297,10 @@
       "Lauterbrunnen"
     ],
     "intro": [
-      "劳特布龙嫩位于陡峭岩壁围成的山谷中，瀑布与村庄让阿尔卑斯风景有了鲜明的纵深。",
-      "Lauterbrunnen lies in a valley framed by steep rock walls, where waterfalls and villages give the Alpine landscape its depth.",
-      "Lauterbrunnen occupe une vallée entourée de parois abruptes ; cascades et villages donnent toute sa profondeur au paysage alpin.",
-      "Lauterbrunnen está en un valle rodeado de paredes rocosas; cascadas y pueblos dan profundidad al paisaje alpino."
+      "劳特布龙嫩坐落在陡峭岩壁围成的阿尔卑斯山谷，村庄与草坡沿谷底展开。瀑布从高处落下，木屋、树林与远处群峰共同构成鲜明的山岳景色；这里最特别的，是日常村落与巨大岩壁相邻的景象。",
+      "Lauterbrunnen sits in an Alpine valley enclosed by steep cliffs, with its village and meadows along the valley floor. Waterfalls descend from the rock walls, while chalets, woods and distant peaks place everyday village life beside immense mountain scenery.",
+      "Lauterbrunnen occupe une vallée alpine bordée de falaises abruptes, où village et prairies suivent le fond de la vallée. Des cascades descendent des parois ; chalets, forêts et sommets font voisiner la vie du village avec l’immensité de la montagne.",
+      "Lauterbrunnen ocupa un valle alpino entre paredes rocosas, con el pueblo y los prados al fondo. Las cascadas caen desde los acantilados; casas de madera, bosques y cumbres sitúan la vida cotidiana de la aldea junto a un paisaje montañoso monumental."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en/destinations/lauterbrunnen/"
@@ -3217,10 +3367,10 @@
       "Gimmelwald"
     ],
     "intro": [
-      "吉梅尔瓦尔德是一座山间村庄，位于劳特布龙嫩地区；木屋、草坡与高山构成了这里朴素的风景。",
-      "Gimmelwald is a mountain village in the Lauterbrunnen area, with wooden houses and grassy slopes set against Alpine peaks.",
-      "Gimmelwald est un village de montagne dans la région de Lauterbrunnen, entre maisons de bois, prairies et sommets alpins.",
-      "Gimmelwald es un pueblo de montaña en la zona de Lauterbrunnen, con casas de madera y praderas frente a los picos alpinos."
+      "吉梅尔瓦尔德是劳特布龙嫩地区的一座山间村庄，木屋与草坡依着山势散开。山间道路穿过村落与牧草地，四周能看见陡峭岩壁和伯尔尼高地的群峰，保留了阿尔卑斯山村朴素而具体的生活景象。",
+      "Gimmelwald is a mountain village in the Lauterbrunnen region, with wooden chalets spread across grassy slopes. Paths pass between the houses and meadows, surrounded by steep rock faces and Bernese Oberland peaks that frame a simple Alpine village landscape.",
+      "Gimmelwald est un village de montagne de la région de Lauterbrunnen, aux chalets dispersés sur les prairies. Les chemins traversent maisons et pâturages, entourés de falaises et de sommets bernois qui composent un paysage villageois alpin sans artifice.",
+      "Gimmelwald es una aldea de montaña de la región de Lauterbrunnen, con casas de madera repartidas por las praderas. Los caminos pasan entre viviendas y pastos, rodeados de paredes rocosas y cumbres del Oberland bernés: un paisaje alpino sencillo y habitado."
     ],
     "source": {
       "url": "https://www.myswitzerland.com/en-us/destinations/gimmelwald/"
@@ -3287,10 +3437,10 @@
       "Berlín"
     ],
     "intro": [
-      "柏林的历史遗迹与当代艺术相互叠加，不同街区呈现出这座城市不断变化的文化面貌。",
-      "Berlin layers historical landmarks with contemporary art, its neighbourhoods revealing a constantly changing cultural landscape.",
-      "Berlin superpose lieux historiques et art contemporain ; ses quartiers révèlent une culture en mouvement.",
-      "Berlín combina lugares históricos y arte contemporáneo; sus barrios muestran un paisaje cultural en constante cambio."
+      "柏林把历史遗迹、纪念性建筑与当代艺术放在同一座城市里。勃兰登堡门等地标记录着城市的历史，不同街区里的博物馆、艺术空间和街头创作，则展现出它持续变化、容纳多种文化的另一面。",
+      "Berlin brings historic landmarks, monuments and contemporary art into the same city. Places such as the Brandenburg Gate mark its past, while museums, art spaces and street creativity across its neighbourhoods reveal a city shaped by many cultures.",
+      "Berlin réunit lieux historiques, monuments et art contemporain. La porte de Brandebourg et d’autres repères racontent son passé ; musées, espaces artistiques et créations de rue montrent, d’un quartier à l’autre, une ville façonnée par plusieurs cultures.",
+      "Berlín reúne lugares históricos, monumentos y arte contemporáneo. La Puerta de Brandeburgo y otros hitos hablan de su pasado; los museos, espacios artísticos y creaciones callejeras de sus barrios muestran una ciudad en la que conviven muchas culturas."
     ],
     "source": {
       "url": "https://www.visitberlin.de/en"
@@ -3340,7 +3490,7 @@
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 10%"
     },
     "summary": [
       "柏林的历史遗迹与当代艺术相互叠加，不同街区呈现出这座城市不断变化的文化面貌。",
@@ -3357,10 +3507,10 @@
       "Tubinga"
     ],
     "intro": [
-      "图宾根是一座内卡河畔大学城，木筋屋与老城街巷，让学术生活拥有亲切而具体的背景。",
-      "Tübingen is a university town on the Neckar, where half-timbered houses and old streets give student life an intimate setting.",
-      "Tübingen est une ville universitaire sur le Neckar ; maisons à colombages et ruelles anciennes forment le décor de la vie étudiante.",
-      "Tubinga es una ciudad universitaria junto al Neckar; sus casas de entramado de madera y calles antiguas enmarcan la vida estudiantil."
+      "图宾根是一座内卡河畔的大学城，彩色木筋屋沿着河岸排列，老城街巷就在建筑背后延伸。河上的桥梁把两岸连接起来，也提供了看街屋立面的好角度；历史街区与大学生活，让这座小城一直保有活力。",
+      "Tübingen is a university town on the Neckar, where colourful half-timbered houses line the river and old-town lanes run behind them. Bridges connect the banks and open views of the façades, while university life keeps the historic centre lively.",
+      "Tübingen est une ville universitaire sur le Neckar, bordé de maisons à colombages colorées et de ruelles anciennes. Les ponts relient les rives et donnent à voir les façades ; la vie universitaire apporte son animation au centre historique.",
+      "Tubinga es una ciudad universitaria junto al Neckar, con casas de entramado de colores frente al río y callejuelas detrás. Los puentes unen las orillas y permiten ver las fachadas; la vida universitaria mantiene animado el centro histórico."
     ],
     "source": {
       "url": "https://www.tuebingen-info.de"
@@ -3394,9 +3544,9 @@
       "Alemania"
     ],
     "image": {
-      "src": "images/atlas/t-bingen.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/editorial-t-bingen-d55ffe1b.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "图宾根 · 地点实景图",
         "Tübingen · place photograph",
@@ -3405,12 +3555,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Dktue",
-        "url": "https://commons.wikimedia.org/wiki/File:Altstadt-tuebingen-1.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Eberhardsbr%C3%BCcke_.jpeg",
+        "author": "Subramaniam.kv",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "图宾根 · 内卡河畔彩色街屋",
+        "Tübingen · colourful houses on the Neckar",
+        "Tübingen · maisons colorées du Neckar",
+        "Tubinga · casas de colores junto al Neckar"
+      ]
     },
     "summary": [
       "图宾根是一座内卡河畔大学城，木筋屋与老城街巷，让学术生活拥有亲切而具体的背景。",
@@ -3427,10 +3583,10 @@
       "Bruselas"
     ],
     "intro": [
-      "布鲁塞尔的大广场、漫画文化与欧洲机构，展现了这座城市在历史、日常与国际交流之间的多重身份。",
-      "Brussels brings together the Grand Place, comic culture and European institutions, balancing heritage, everyday life and international exchange.",
-      "Bruxelles réunit Grand-Place, bande dessinée et institutions européennes, entre patrimoine, quotidien et échanges internationaux.",
-      "Bruselas reúne la Grand Place, la cultura del cómic y las instituciones europeas, entre patrimonio, vida cotidiana e intercambio internacional."
+      "布鲁塞尔的大广场以精细的建筑立面、山墙与市政厅形成鲜明的城市地标。离开广场，漫画文化和街区日常展现出另一种亲切面貌；欧洲机构的存在，又让这座历史城市成为国际交流的重要舞台。",
+      "Brussels’ Grand Place is defined by ornate façades, gables and the town hall. Beyond this architectural landmark, comics and neighbourhood life give the city a more informal character, while its European institutions add an international role.",
+      "La Grand-Place de Bruxelles se reconnaît à ses façades ouvragées, pignons et hôtel de ville. Au-delà de cet ensemble, bande dessinée et vie de quartier offrent un visage familier ; les institutions européennes lui donnent aussi un rôle international.",
+      "La Grand Place de Bruselas destaca por sus fachadas ornamentadas, sus frontones y el ayuntamiento. Fuera de la plaza, los cómics y la vida de barrio muestran un lado cercano; las instituciones europeas añaden una dimensión internacional a la ciudad."
     ],
     "source": {
       "url": "https://www.visit.brussels/en/visitors"
@@ -3464,9 +3620,9 @@
       "Bélgica"
     ],
     "image": {
-      "src": "images/atlas/brussels.webp",
-      "width": 960,
-      "height": 546,
+      "src": "images/atlas/editorial-brussels-01fdd961.webp",
+      "width": 1280,
+      "height": 856,
       "alt": [
         "布鲁塞尔 · 地点实景图",
         "Brussels · place photograph",
@@ -3475,12 +3631,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Celuici",
-        "url": "https://commons.wikimedia.org/wiki/File:Grand-Place,_Brussels_-_panorama,_June_2018.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Edificios_en_la_Grand-Place,_Bruselas,_B%C3%A9lgica,_2021-12-15,_DD_184-186_HDR.jpg",
+        "author": "Diego Delso",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "布鲁塞尔 · 大广场建筑立面",
+        "Brussels · façades on the Grand Place",
+        "Bruxelles · façades de la Grand-Place",
+        "Bruselas · fachadas de la Grand Place"
+      ]
     },
     "summary": [
       "大广场、漫画与欧洲机构，构成布鲁塞尔的多重身份。",
@@ -3497,10 +3659,10 @@
       "Barcelona"
     ],
     "intro": [
-      "巴塞罗那面向地中海，加泰罗尼亚文化与现代主义建筑，为街道和城市生活带来鲜明的创造力。",
-      "Barcelona faces the Mediterranean, with Catalan culture and Modernista architecture shaping its creative urban character.",
-      "Tournée vers la Méditerranée, Barcelone puise son caractère créatif dans la culture catalane et l’architecture moderniste.",
-      "Barcelona mira al Mediterráneo; la cultura catalana y la arquitectura modernista dan forma a su carácter creativo."
+      "巴塞罗那面向地中海，加泰罗尼亚文化与现代主义建筑让城市拥有鲜明的个性。高迪建筑里的曲线、彩色陶片与独特屋顶，是认识它的一条线索；从历史街区到开阔海岸，又能看到建筑与滨海生活相接的景象。",
+      "Barcelona faces the Mediterranean, shaped by Catalan culture and Modernista architecture. Gaudí’s curves, colourful mosaics and distinctive roofs offer one way into the city; historic quarters and the open seafront connect that architecture with coastal life.",
+      "Barcelone s’ouvre sur la Méditerranée, marquée par la culture catalane et l’architecture moderniste. Courbes, mosaïques et toits de Gaudí en sont des repères ; quartiers historiques et front de mer relient ce patrimoine à la vie d’une ville côtière.",
+      "Barcelona mira al Mediterráneo, marcada por la cultura catalana y el modernismo. Las curvas, los mosaicos y los tejados de Gaudí permiten reconocerla; los barrios históricos y el frente marítimo conectan ese patrimonio con la vida junto al mar."
     ],
     "source": {
       "url": "https://thisisbarcelona.com/"
@@ -3534,9 +3696,9 @@
       "España"
     ],
     "image": {
-      "src": "images/atlas/barcelona.webp",
-      "width": 779,
-      "height": 960,
+      "src": "images/atlas/editorial-barcelona-31b89314.webp",
+      "width": 960,
+      "height": 480,
       "alt": [
         "巴塞罗那 · 地点实景图",
         "Barcelona · place photograph",
@@ -3545,12 +3707,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "ChristianSchd",
-        "url": "https://commons.wikimedia.org/wiki/File:Casa_Batllo_Overview_Barcelona_Spain_cut.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_the_entrance_to_the_Park_G%C3%BCell._Barcelona,_Catalonia,_Spain.jpg",
+        "author": "Mstyslav Chernov",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "巴塞罗那 · 古埃尔公园入口全景",
+        "Barcelona · entrance to Park Güell",
+        "Barcelone · entrée du parc Güell",
+        "Barcelona · entrada al parque Güell"
+      ]
     },
     "summary": [
       "巴塞罗那面向地中海，加泰罗尼亚文化与现代主义建筑，为街道和城市生活带来鲜明的创造力。",
@@ -3567,10 +3735,10 @@
       "Roma"
     ],
     "intro": [
-      "罗马把古代遗迹、广场与今天的街头生活放在一起，斗兽场只是这座层层叠叠的城市的一扇入口。",
-      "Rome brings ancient ruins, piazzas and present-day street life together. The Colosseum is one doorway into its many historical layers.",
-      "Rome mêle vestiges antiques, places et vie quotidienne. Le Colisée est une porte d’entrée vers ses nombreuses couches d’histoire.",
-      "Roma reúne ruinas antiguas, plazas y vida cotidiana. El Coliseo es una puerta de entrada a sus muchas capas de historia."
+      "罗马的古代遗迹、历史广场与今天的街头生活紧密相邻，斗兽场是其中最鲜明的地标之一。石砌拱廊与古老建筑之间，仍是行人往来、咖啡馆和街巷日常；这座城市的魅力，也在于历史并没有远离现在。",
+      "Rome places ancient remains and historic squares beside present-day street life, with the Colosseum among its clearest landmarks. Between stone arches and old buildings, pedestrians, cafés and everyday streets keep the city’s past close to the present.",
+      "À Rome, vestiges antiques et places historiques côtoient la vie actuelle, autour de repères comme le Colisée. Entre arcades de pierre et vieux bâtiments, passants, cafés et rues animées gardent le passé de la ville au contact du présent.",
+      "Roma sitúa ruinas antiguas y plazas históricas junto a la vida actual, con el Coliseo como uno de sus hitos más claros. Entre arcos de piedra y edificios antiguos, peatones, cafés y calles cotidianas mantienen cerca el pasado y el presente."
     ],
     "source": {
       "url": "https://www.turismoroma.it/en"
@@ -3604,6 +3772,37 @@
       "Italia"
     ],
     "image": {
+      "src": "images/atlas/editorial-rome-9a9bb7cf.webp",
+      "width": 1280,
+      "height": 751,
+      "alt": [
+        "罗马 · 地点实景图",
+        "Rome · place photograph",
+        "Rome · photo du lieu",
+        "Roma · foto del lugar"
+      ],
+      "kind": "reference",
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
+        "author": "Diliff",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      },
+      "position": "50% 50%",
+      "caption": [
+        "罗马 · 斗兽场蓝调夜景",
+        "Rome · Colosseum at blue hour",
+        "Rome · Colisée à l’heure bleue",
+        "Roma · Coliseo en la hora azul"
+      ]
+    },
+    "summary": [
+      "罗马把古代遗迹、广场与今天的街头生活放在一起，斗兽场只是这座层层叠叠的城市的一扇入口。",
+      "Rome brings ancient ruins, piazzas and present-day street life together.",
+      "Rome mêle vestiges antiques, places et vie quotidienne.",
+      "Roma reúne ruinas antiguas, plazas y vida cotidiana."
+    ],
+    "personalImage": {
       "src": "images/web/8bd883eb83b8-800.webp",
       "width": 800,
       "height": 676,
@@ -3620,13 +3819,7 @@
         "license": "Personal collection"
       },
       "position": "50% 50%"
-    },
-    "summary": [
-      "罗马把古代遗迹、广场与今天的街头生活放在一起，斗兽场只是这座层层叠叠的城市的一扇入口。",
-      "Rome brings ancient ruins, piazzas and present-day street life together.",
-      "Rome mêle vestiges antiques, places et vie quotidienne.",
-      "Roma reúne ruinas antiguas, plazas y vida cotidiana."
-    ]
+    }
   },
   "Genoa": {
     "names": [
@@ -3636,10 +3829,10 @@
       "Génova"
     ],
     "intro": [
-      "热那亚是一座利古里亚港口城市，狭窄老街与宫殿建筑，记录着它长期与海洋相连的历史。",
-      "Genoa is a Ligurian port city whose narrow old streets and palaces reflect a long history tied to the sea.",
-      "Gênes est une ville portuaire ligure ; ses ruelles anciennes et ses palais racontent une longue histoire maritime.",
-      "Génova es una ciudad portuaria de Liguria; sus callejones y palacios reflejan una larga historia ligada al mar."
+      "热那亚面向利古里亚海，港口、沿海街区与狭窄老街共同记录着城市的海洋历史。宫殿建筑藏在密集街巷之间，海边则能看见彩色住宅与岸线相接；从老城走向水边，也是在看一座港口城市的不同面貌。",
+      "Genoa faces the Ligurian Sea, its maritime history visible in the port, coastal districts and narrow old-town lanes. Palaces stand among dense streets, while colourful waterfront houses meet the shore, revealing different sides of the same harbour city.",
+      "Gênes fait face à la mer Ligure ; port, quartiers côtiers et ruelles anciennes racontent son histoire maritime. Des palais se cachent dans les rues denses, tandis que les maisons colorées du littoral révèlent un autre visage de cette ville portuaire.",
+      "Génova mira al mar de Liguria: el puerto, los barrios costeros y las callejuelas hablan de su historia marítima. Los palacios aparecen entre calles densas, mientras las casas de colores junto al agua muestran otra cara de esta ciudad portuaria."
     ],
     "source": {
       "url": "https://www.visitgenoa.it/en"
@@ -3706,10 +3899,10 @@
       "Ciudad del Vaticano"
     ],
     "intro": [
-      "梵蒂冈的圣彼得大教堂、广场与艺术收藏，构成了具有深厚宗教与艺术意义的历史空间。",
-      "Vatican City’s St Peter’s Basilica, square and art collections form a historic setting of profound religious and artistic significance.",
-      "La basilique Saint-Pierre, sa place et les collections d’art font du Vatican un espace historique de grande portée religieuse et artistique.",
-      "La basílica de San Pedro, su plaza y las colecciones artísticas forman en el Vaticano un espacio de gran significado religioso y artístico."
+      "梵蒂冈把圣彼得大教堂、广场柱廊与重要的艺术收藏集中在一片历史空间里。广场的轴线与环抱式柱廊形成鲜明地标，教堂建筑和馆藏则把宗教、绘画与雕塑联系起来，呈现出深厚的欧洲艺术与宗教传统。",
+      "Vatican City brings together St Peter’s Basilica, the square’s colonnades and major art collections. The square’s axis and enclosing columns create a distinctive landmark, while architecture, paintings and sculpture connect European religious and artistic traditions.",
+      "Le Vatican rassemble Saint-Pierre, les colonnades de la place et d’importantes collections d’art. L’axe de la place et les colonnes dessinent un ensemble reconnaissable ; architecture, peinture et sculpture y relient traditions religieuses et artistiques européennes.",
+      "El Vaticano reúne la basílica de San Pedro, las columnatas de la plaza y grandes colecciones de arte. El eje de la plaza y sus columnas forman un conjunto reconocible; arquitectura, pintura y escultura enlazan las tradiciones religiosas y artísticas europeas."
     ],
     "source": {
       "url": "https://whc.unesco.org/en/list/286/"
@@ -3743,9 +3936,9 @@
       "Vaticano"
     ],
     "image": {
-      "src": "images/atlas/vatican.webp",
-      "width": 960,
-      "height": 639,
+      "src": "images/atlas/editorial-vatican-0a098b2a.webp",
+      "width": 1280,
+      "height": 719,
       "alt": [
         "梵蒂冈 · 地点实景图",
         "Vatican City · place photograph",
@@ -3754,12 +3947,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Randi Hausken from Bærum, Norway",
-        "url": "https://commons.wikimedia.org/wiki/File:St._Peters_Basilica_(8074909787).jpg",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "url": "https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg",
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "梵蒂冈 · 圣彼得广场全景",
+        "Vatican City · St Peter’s Square",
+        "Vatican · place Saint-Pierre",
+        "Vaticano · plaza de San Pedro"
+      ]
     },
     "personalImage": {
       "src": "images/web/7968408f6875-800.webp",
@@ -3800,10 +3999,10 @@
       "La Haya"
     ],
     "intro": [
-      "海牙结合了荷兰的政治生活、国际司法机构与北海岸线，城市生活与海边风景在这里相邻。",
-      "The Hague combines Dutch political life, international courts and the North Sea coast, bringing civic life and seaside landscapes together.",
-      "La Haye associe vie politique néerlandaise, justice internationale et littoral de la mer du Nord.",
-      "La Haya reúne la vida política neerlandesa, la justicia internacional y la costa del mar del Norte."
+      "海牙把荷兰的政治生活、国际司法机构与北海岸线放在同一座城市里。霍夫湖畔的内庭建筑群展现出历史与公共事务的一面，城市街区向海边延伸，又让这座行政与司法之城拥有开阔的滨海风景。",
+      "The Hague combines Dutch political life, international courts and the North Sea coast. The Binnenhof beside the Hofvijver reflects its historic public role, while the city’s neighbourhoods extend towards the sea, giving this political and judicial centre a coastal setting.",
+      "La Haye réunit vie politique néerlandaise, justice internationale et littoral de la mer du Nord. Le Binnenhof au bord du Hofvijver incarne son rôle historique ; les quartiers qui s’étendent vers la mer donnent à ce centre institutionnel un cadre côtier.",
+      "La Haya reúne la vida política neerlandesa, la justicia internacional y la costa del mar del Norte. El Binnenhof junto al Hofvijver refleja su función histórica; los barrios que se extienden hacia el mar dan a esta ciudad institucional un paisaje costero."
     ],
     "source": {
       "url": "https://denhaag.com/en"
@@ -3837,9 +4036,9 @@
       "Países Bajos"
     ],
     "image": {
-      "src": "images/atlas/the-hague.webp",
-      "width": 960,
-      "height": 662,
+      "src": "images/atlas/editorial-the-hague-53f4e516.webp",
+      "width": 1280,
+      "height": 960,
       "alt": [
         "海牙 · 地点实景图",
         "The Hague · place photograph",
@@ -3848,12 +4047,18 @@
       ],
       "kind": "reference",
       "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Den_Haag,_het_Binnenhof_diverse_RM_met_de_Hofvijver_op_de_voorgrond_foto8_2015-08-05_18.56.jpg",
         "author": "Michielverbeek",
-        "url": "https://commons.wikimedia.org/wiki/File:Den_Haag,_het_Mauritshuis_RM17650_foto5_2015-08-05_19.06.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "海牙 · 霍夫湖与内庭建筑群",
+        "The Hague · Hofvijver and Binnenhof",
+        "La Haye · Hofvijver et Binnenhof",
+        "La Haya · Hofvijver y Binnenhof"
+      ]
     },
     "summary": [
       "海牙结合了荷兰的政治生活、国际司法机构与北海岸线，城市生活与海边风景在这里相邻。",
@@ -3870,10 +4075,10 @@
       "Ámsterdam"
     ],
     "intro": [
-      "阿姆斯特丹的运河、沿水街屋与博物馆，让这座城市可以在步行与骑行之间慢慢展开。",
-      "Amsterdam unfolds through canals, waterside houses and museums, with streets best explored at a walking or cycling pace.",
-      "Amsterdam se découvre au fil des canaux, maisons au bord de l’eau et musées, à pied ou à vélo.",
-      "Ámsterdam se descubre entre canales, casas junto al agua y museos, a pie o en bicicleta."
+      "阿姆斯特丹的运河把沿水街屋、桥梁与不同街区连接起来，细窄山墙是最鲜明的城市表情。白天适合沿河步行或骑行，夜里桥灯与街屋倒映在水面；博物馆与日常街道，则让这座水城兼有艺术与生活气息。",
+      "Amsterdam’s canals connect waterfront houses, bridges and neighbourhoods, with narrow gabled façades as a signature. Walks and cycling follow the water by day; bridge lights reflect after dark, while museums and everyday streets bring art and local life together.",
+      "Les canaux d’Amsterdam relient maisons à pignons, ponts et quartiers. On les longe à pied ou à vélo le jour ; le soir, les lumières se reflètent sur l’eau. Musées et rues du quotidien font de cette ville de canaux un lieu d’art autant que de vie.",
+      "Los canales de Ámsterdam unen casas de frontones estrechos, puentes y barrios. De día se recorren a pie o en bicicleta; de noche, las luces se reflejan en el agua. Museos y calles cotidianas dan a esta ciudad de canales tanto arte como vida local."
     ],
     "source": {
       "url": "https://www.iamsterdam.com/en"
@@ -3907,9 +4112,9 @@
       "Países Bajos"
     ],
     "image": {
-      "src": "images/atlas/amsterdam.webp",
-      "width": 655,
-      "height": 960,
+      "src": "images/atlas/editorial-amsterdam-94afa213.webp",
+      "width": 1280,
+      "height": 853,
       "alt": [
         "阿姆斯特丹 · 地点实景图",
         "Amsterdam · place photograph",
@@ -3918,12 +4123,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "acediscovery",
-        "url": "https://commons.wikimedia.org/wiki/File:Keizergracht-Leidsegracht-Canal-Amsterdam-Dawn.jpg",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "url": "https://commons.wikimedia.org/wiki/File:KeizersgrachtReguliersgrachtAmsterdam.jpg",
+        "author": "Massimo Catarinella",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "阿姆斯特丹 · 凯泽运河与雷古里尔运河交汇处",
+        "Amsterdam · Keizersgracht and Reguliersgracht",
+        "Amsterdam · Keizersgracht et Reguliersgracht",
+        "Ámsterdam · Keizersgracht y Reguliersgracht"
+      ]
     },
     "personalImage": {
       "src": "images/web/be48c97a5125-800.webp",
@@ -3964,10 +4175,10 @@
       "Zaanse Schans"
     ],
     "intro": [
-      "桑斯安斯保留了风车、传统工艺与历史建筑，让荷兰的生产技艺以具体而可见的方式呈现。",
-      "Zaanse Schans brings together windmills, traditional crafts and historic buildings, making Dutch working heritage visible.",
-      "Zaanse Schans réunit moulins, artisanat traditionnel et bâtiments historiques, donnant à voir le patrimoine de travail néerlandais.",
-      "Zaanse Schans reúne molinos, oficios tradicionales y edificios históricos, mostrando el patrimonio productivo neerlandés."
+      "桑斯安斯以风车、木构建筑和传统工艺展现荷兰的历史风景。河岸与草地之间排列着风车和色彩鲜明的房屋，工艺展示则让这些建筑不只是观景背景，也让人看到当地生产技艺与日常生活之间的联系。",
+      "Zaanse Schans presents Dutch heritage through windmills, timber buildings and traditional crafts. Windmills and colourful houses stand between the river and meadows, while craft demonstrations show how this architecture relates to working skills and everyday life.",
+      "Zaanse Schans présente le patrimoine néerlandais par ses moulins, maisons en bois et savoir-faire. Entre rivière et prairies, bâtiments colorés et démonstrations artisanales relient le paysage historique aux techniques de production et à la vie quotidienne.",
+      "Zaanse Schans muestra el patrimonio neerlandés mediante molinos, edificios de madera y oficios tradicionales. Entre el río y las praderas, las casas de colores y las demostraciones artesanales relacionan el paisaje histórico con el trabajo y la vida diaria."
     ],
     "source": {
       "url": "https://www.dezaanseschans.nl/en/"
@@ -4034,10 +4245,10 @@
       "Praga"
     ],
     "intro": [
-      "布拉格沿伏尔塔瓦河展开，城堡、桥梁与老城广场，把不同年代的建筑连成了一幅城市风景。",
-      "Prague unfolds along the Vltava, where a castle, bridges and old-town squares bring architecture from different eras into one cityscape.",
-      "Prague se déploie sur la Vltava, entre château, ponts et places anciennes qui relient différentes époques architecturales.",
-      "Praga se extiende junto al Moldava; castillo, puentes y plazas antiguas reúnen arquitecturas de distintas épocas."
+      "布拉格沿伏尔塔瓦河展开，查理大桥把两岸的城堡、塔楼与老城街区连接起来。石桥、屋顶和历史广场构成连续的城市风景，不同年代的建筑在步行途中彼此相遇，也让河流成为认识这座城市的清楚线索。",
+      "Prague follows the Vltava, with Charles Bridge linking views of the castle, towers and old-town quarters. Stone bridges, rooftops and historic squares form a continuous cityscape, bringing architecture from different periods together along the river.",
+      "Prague se déploie le long de la Vltava, autour du pont Charles, du château et des tours de la vieille ville. Ponts de pierre, toits et places historiques composent un paysage continu où les architectures de plusieurs époques se rencontrent au fil de l’eau.",
+      "Praga se extiende junto al Moldava, con el Puente de Carlos entre el castillo, las torres y los barrios antiguos. Puentes de piedra, tejados y plazas históricas forman un paisaje continuo, donde edificios de distintas épocas se encuentran junto al río."
     ],
     "source": {
       "url": "https://prague.eu/en/"
@@ -4104,10 +4315,10 @@
       "Český Krumlov"
     ],
     "intro": [
-      "捷克克鲁姆洛夫的老城顺着伏尔塔瓦河弯展开，城堡与历史街道构成了一座紧凑的波希米亚小城。",
-      "Český Krumlov’s old town follows a bend in the Vltava, with its castle and historic streets forming a compact Bohemian townscape.",
-      "La vieille ville de Český Krumlov suit une boucle de la Vltava, entre château et rues historiques de cette cité de Bohême.",
-      "El casco antiguo de Český Krumlov sigue un meandro del Moldava, entre castillo y calles históricas de esta ciudad de Bohemia."
+      "克鲁姆洛夫的老城顺着伏尔塔瓦河弯展开，城堡与高塔是这座波希米亚小城最醒目的地标。红瓦屋顶、彩色立面与狭窄街道紧密相连，从河岸或高处看去，都能清楚看到小城如何依着河流形成自己的轮廓。",
+      "Český Krumlov’s old town follows a bend of the Vltava, marked by its castle and tall tower. Red roofs, colourful façades and narrow streets form a compact Bohemian town whose relationship with the river is clear from both the banks and higher viewpoints.",
+      "La vieille ville de Český Krumlov suit une boucle de la Vltava, dominée par le château et sa tour. Toits rouges, façades colorées et rues étroites composent une cité bohémienne compacte, dont le lien avec la rivière se lit depuis les rives comme en hauteur.",
+      "El casco antiguo de Český Krumlov sigue un meandro del Moldava, marcado por el castillo y su torre. Tejados rojos, fachadas de colores y calles estrechas forman una pequeña ciudad bohemia cuya relación con el río se aprecia desde las orillas y desde lo alto."
     ],
     "source": {
       "url": "https://www.ckrumlov.info/en/cesky-krumlov/"
@@ -4141,9 +4352,9 @@
       "Chequia"
     ],
     "image": {
-      "src": "images/atlas/krumlov.webp",
-      "width": 960,
-      "height": 723,
+      "src": "images/atlas/editorial-krumlov-02b5ab21.webp",
+      "width": 1200,
+      "height": 560,
       "alt": [
         "捷克克鲁姆洛夫 · 地点实景图",
         "Český Krumlov · place photograph",
@@ -4152,12 +4363,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "DominikCK1999",
-        "url": "https://commons.wikimedia.org/wiki/File:Blick_auf_das_Stadtzentrum_von_Krumau_(2026).jpg",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "url": "https://commons.wikimedia.org/wiki/File:Panorama-of-cesky-krumlov-tower-castle-old-town-and-latran.jpg",
+        "author": "Danijel Mihajlovic",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "克鲁姆洛夫 · 老城与城堡塔楼",
+        "Český Krumlov · old town and castle tower",
+        "Český Krumlov · vieille ville et tour du château",
+        "Český Krumlov · casco antiguo y torre del castillo"
+      ]
     },
     "summary": [
       "捷克克鲁姆洛夫的老城顺着伏尔塔瓦河弯展开，城堡与历史街道构成了一座紧凑的波希米亚小城。",
@@ -4174,10 +4391,10 @@
       "Viena"
     ],
     "intro": [
-      "维也纳的宫殿、音乐传统与咖啡馆文化，共同形成了这座城市优雅而日常的一面。",
-      "Vienna’s palaces, musical traditions and coffeehouse culture bring grandeur and everyday life into the same city.",
-      "Palais, traditions musicales et cafés donnent à Vienne une allure à la fois majestueuse et quotidienne.",
-      "Los palacios, la tradición musical y los cafés de Viena unen grandeza y vida cotidiana en una misma ciudad."
+      "维也纳的宫殿、花园与城市街区，保留着鲜明的历史建筑面貌。美泉宫的建筑与花园展示出规整的宫廷格局，音乐传统和咖啡馆文化则进入日常生活；宏大的公共空间与细致的城市习惯，在这里自然相接。",
+      "Vienna’s palaces, gardens and neighbourhoods retain a distinctive historic character. Schönbrunn’s buildings and gardens reveal a formal palace setting, while music and coffeehouse traditions bring that heritage into the everyday life of the city.",
+      "Palais, jardins et quartiers donnent à Vienne son caractère historique. L’architecture et les jardins de Schönbrunn montrent l’ordonnance d’un ensemble impérial ; traditions musicales et cafés prolongent ce patrimoine dans la vie quotidienne de la ville.",
+      "Los palacios, jardines y barrios dan a Viena su carácter histórico. Los edificios y jardines de Schönbrunn muestran el orden de un conjunto palaciego; las tradiciones musicales y los cafés llevan ese patrimonio a la vida cotidiana de la ciudad."
     ],
     "source": {
       "url": "https://www.wien.info/en"
@@ -4244,10 +4461,10 @@
       "Budapest"
     ],
     "intro": [
-      "布达佩斯横跨多瑙河，布达城堡区与河岸建筑群，记录着这座城市丰富的历史层次。",
-      "Budapest spans the Danube, with the Buda Castle Quarter and riverside architecture preserving the city’s historical layers.",
-      "Budapest s’étend de part et d’autre du Danube ; le quartier du château de Buda et les rives conservent ses couches d’histoire.",
-      "Budapest se extiende a ambos lados del Danubio; el barrio del castillo de Buda y sus riberas conservan las capas de su historia."
+      "布达佩斯横跨多瑙河，布达城堡区与河岸建筑群共同塑造了城市的主要风景。议会大厦、桥梁和沿河立面在水面两侧相互呼应，白天能读出建筑细节，入夜后灯光与倒影又让河流成为城市最鲜明的景观。",
+      "Budapest spans the Danube, framed by Buda Castle and the riverfront buildings. Parliament, bridges and waterfront façades face one another across the water; daylight reveals their details, while evening lights and reflections turn the river into a defining city view.",
+      "Budapest s’étend sur les deux rives du Danube, entre château de Buda et bâtiments riverains. Parlement, ponts et façades se répondent de part et d’autre ; les détails visibles le jour laissent place, le soir, aux lumières et reflets qui marquent le paysage urbain.",
+      "Budapest ocupa ambas orillas del Danubio, entre el castillo de Buda y los edificios ribereños. El Parlamento, los puentes y las fachadas se miran sobre el agua; de día destacan sus detalles y, al anochecer, las luces y los reflejos definen el paisaje urbano."
     ],
     "source": {
       "url": "https://whc.unesco.org/en/list/400/"
@@ -4281,6 +4498,37 @@
       "Hungría"
     ],
     "image": {
+      "src": "images/atlas/editorial-budapest-a0a7fee5.webp",
+      "width": 1280,
+      "height": 720,
+      "alt": [
+        "布达佩斯 · 地点实景图",
+        "Budapest · place photograph",
+        "Budapest · photo du lieu",
+        "Budapest · foto del lugar"
+      ],
+      "kind": "reference",
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:HUN-2015-Budapest-Hungarian_Parliament_(Budapest)_2015-02.jpg",
+        "author": "Godot13",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "position": "50% 50%",
+      "caption": [
+        "布达佩斯 · 议会大厦与多瑙河",
+        "Budapest · Parliament and Danube",
+        "Budapest · Parlement et Danube",
+        "Budapest · Parlamento y Danubio"
+      ]
+    },
+    "summary": [
+      "布达佩斯横跨多瑙河，布达城堡区与河岸建筑群，记录着这座城市丰富的历史层次。",
+      "Budapest spans the Danube, with the Buda Castle Quarter and riverside architecture preserving the city’s historical layers.",
+      "Budapest s’étend de part et d’autre du Danube ; le quartier du château de Buda et les rives conservent ses couches d’histoire.",
+      "Budapest se extiende a ambos lados del Danubio; el barrio del castillo de Buda y sus riberas conservan las capas de su historia."
+    ],
+    "personalImage": {
       "src": "images/web/4a99a3dd6722-800.webp",
       "width": 800,
       "height": 600,
@@ -4297,13 +4545,7 @@
         "license": "Personal collection"
       },
       "position": "50% 50%"
-    },
-    "summary": [
-      "布达佩斯横跨多瑙河，布达城堡区与河岸建筑群，记录着这座城市丰富的历史层次。",
-      "Budapest spans the Danube, with the Buda Castle Quarter and riverside architecture preserving the city’s historical layers.",
-      "Budapest s’étend de part et d’autre du Danube ; le quartier du château de Buda et les rives conservent ses couches d’histoire.",
-      "Budapest se extiende a ambos lados del Danubio; el barrio del castillo de Buda y sus riberas conservan las capas de su historia."
-    ]
+    }
   },
   "Tromsø": {
     "names": [
@@ -4313,10 +4555,10 @@
       "Tromsø"
     ],
     "intro": [
-      "特罗姆瑟位于挪威北部，城市与峡湾、山地相邻，季节性的极昼和极夜让这里拥有不同的时间感。",
-      "Tromsø lies in northern Norway beside fjords and mountains, where seasonal midnight sun and polar night give time a different rhythm.",
-      "Au nord de la Norvège, Tromsø côtoie fjords et montagnes ; soleil de minuit et nuit polaire changent le rythme des saisons.",
-      "Tromsø está en el norte de Noruega, junto a fiordos y montañas; el sol de medianoche y la noche polar cambian el ritmo de las estaciones."
+      "特罗姆瑟位于挪威北部，城市街区被峡湾、山地与开阔水面环绕。沿岸建筑与远处群山共同形成鲜明的北方城市风景，季节性的极昼和极夜又改变着光线与生活节奏，使这里拥有与欧洲许多城市不同的日常。",
+      "Tromsø lies in northern Norway, surrounded by fjords, mountains and open water. Waterfront buildings meet distant peaks in a distinctive northern cityscape, while seasonal midnight sun and polar night change the light and the rhythm of everyday life.",
+      "Tromsø se situe dans le nord de la Norvège, entre fjords, montagnes et grandes étendues d’eau. Bâtiments côtiers et sommets dessinent son paysage ; soleil de minuit et nuit polaire transforment, selon la saison, la lumière et le rythme quotidien.",
+      "Tromsø está en el norte de Noruega, rodeada de fiordos, montañas y agua abierta. Los edificios costeros y las cumbres forman un paisaje urbano septentrional; el sol de medianoche y la noche polar cambian la luz y el ritmo cotidiano según la estación."
     ],
     "source": {
       "url": "https://www.visittromso.no/"
@@ -4407,10 +4649,10 @@
       "Helsinki"
     ],
     "intro": [
-      "赫尔辛基面向波罗的海，设计文化与海边公共空间，让芬兰首都保留了亲近自然的尺度。",
-      "Helsinki faces the Baltic Sea, with design culture and waterfront public spaces keeping Finland’s capital close to nature.",
-      "Helsinki, tournée vers la Baltique, rapproche culture du design, espaces publics littoraux et nature.",
-      "Helsinki mira al Báltico; la cultura del diseño y los espacios públicos costeros mantienen la capital finlandesa cerca de la naturaleza."
+      "赫尔辛基面向波罗的海，港湾、岸边街区和公共空间让芬兰首都始终与海相连。白色大教堂与沿岸建筑构成鲜明的城市轮廓，设计文化和步行可达的海边空间，则让历史建筑与现代生活保持亲近的关系。",
+      "Helsinki faces the Baltic, with harbours, waterfront districts and public spaces keeping the Finnish capital close to the sea. Its white cathedral and coastal buildings define the skyline, while design culture and accessible shores link historic architecture with modern life.",
+      "Helsinki regarde la Baltique ; ports, quartiers riverains et espaces publics relient la capitale finlandaise à la mer. Cathédrale blanche et bâtiments côtiers dessinent son profil ; culture du design et promenades associent patrimoine et vie contemporaine.",
+      "Helsinki mira al Báltico: puertos, barrios costeros y espacios públicos unen la capital finlandesa con el mar. La catedral blanca y los edificios de la orilla dibujan su perfil, mientras el diseño y los paseos costeros enlazan patrimonio y vida moderna."
     ],
     "source": {
       "url": "https://www.myhelsinki.fi/"
@@ -4444,9 +4686,9 @@
       "Finlandia"
     ],
     "image": {
-      "src": "images/atlas/helsinki.webp",
-      "width": 960,
-      "height": 677,
+      "src": "images/atlas/editorial-helsinki-0c0f95fc.webp",
+      "width": 1280,
+      "height": 779,
       "alt": [
         "赫尔辛基 · 地点实景图",
         "Helsinki · place photograph",
@@ -4455,12 +4697,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Manster323",
-        "url": "https://commons.wikimedia.org/wiki/File:Kirkko3.png",
-        "license": "CC0",
-        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "url": "https://commons.wikimedia.org/wiki/File:Ferry_terminal_South_Harbour._Helsinki,_Finland.jpg",
+        "author": "Ввласенко",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "赫尔辛基 · 南港与大教堂",
+        "Helsinki · South Harbour and cathedral",
+        "Helsinki · port du Sud et cathédrale",
+        "Helsinki · puerto Sur y catedral"
+      ]
     },
     "summary": [
       "赫尔辛基面向波罗的海，设计文化与海边公共空间，让芬兰首都保留了亲近自然的尺度。",
@@ -4477,10 +4725,10 @@
       "Bratislava"
     ],
     "intro": [
-      "布拉迪斯拉发坐落在多瑙河畔，城堡与步行老城，让斯洛伐克首都呈现出紧凑而亲切的城市尺度。",
-      "Bratislava sits on the Danube, with a castle and walkable old town giving Slovakia’s capital a compact, approachable scale.",
-      "Sur le Danube, Bratislava réunit château et centre ancien piéton, donnant à la capitale slovaque une échelle accessible.",
-      "Bratislava está junto al Danubio; su castillo y casco antiguo peatonal dan a la capital eslovaca una escala cercana."
+      "布拉迪斯拉发坐落在多瑙河畔，城堡高地与步行老城形成清楚的城市骨架。城堡的白色外墙、红色屋顶和河岸风景彼此相邻，老城里的广场与街巷则让斯洛伐克首都呈现出紧凑、便于步行探索的一面。",
+      "Bratislava stands on the Danube, with its hilltop castle and pedestrian old town as clear landmarks. White castle walls, red roofs and the riverfront sit close together; squares and lanes give the Slovak capital a compact centre that is easy to explore on foot.",
+      "Bratislava borde le Danube, entre château sur les hauteurs et vieille ville piétonne. Murs blancs, toits rouges et rives du fleuve sont proches les uns des autres ; places et ruelles dessinent un centre compact, agréable à découvrir à pied.",
+      "Bratislava se sitúa junto al Danubio, entre el castillo elevado y el casco antiguo peatonal. Murallas blancas, tejados rojos y vistas del río quedan cerca; las plazas y callejuelas forman un centro compacto que invita a recorrer a pie la capital eslovaca."
     ],
     "source": {
       "url": "https://www.visitbratislava.com/"
@@ -4547,10 +4795,10 @@
       "Ciudad de Luxemburgo"
     ],
     "intro": [
-      "卢森堡市的高地、山谷与历史防御遗迹彼此交错，使城市风景拥有鲜明的高低层次。",
-      "Luxembourg City weaves together uplands, valleys and historic fortifications, giving its cityscape a distinctive layered terrain.",
-      "Luxembourg-ville mêle plateaux, vallées et fortifications historiques, qui donnent au paysage urbain un relief singulier.",
-      "La ciudad de Luxemburgo combina alturas, valles y fortificaciones históricas, creando un paisaje urbano de relieve singular."
+      "卢森堡市的高地、河谷与历史防御遗迹彼此交错，城市建筑随着地形展开。格伦德区的低处街屋与上方历史城区形成鲜明对照，桥梁、岩壁和绿地把两者联系起来，让老城风景既有坚实建筑，也有开阔自然。",
+      "Luxembourg City unfolds across heights, valleys and historic fortifications. The lower houses of the Grund contrast with the old town above; bridges, rock faces and green spaces connect them, bringing strong architecture and open landscape into the same city view.",
+      "Luxembourg se déploie entre hauteurs, vallées et fortifications historiques. Les maisons du Grund contrastent avec la vieille ville qui les domine ; ponts, falaises et espaces verts les relient dans un paysage associant architecture et nature.",
+      "Luxemburgo se extiende entre alturas, valles y fortificaciones históricas. Las casas bajas del Grund contrastan con el casco antiguo superior; puentes, paredes rocosas y zonas verdes los conectan en un paisaje que reúne arquitectura y naturaleza."
     ],
     "source": {
       "url": "https://www.luxembourg-city.com/en"
@@ -4584,9 +4832,9 @@
       "Luxemburgo"
     ],
     "image": {
-      "src": "images/atlas/luxembourg.webp",
-      "width": 960,
-      "height": 507,
+      "src": "images/atlas/editorial-luxembourg-e39184d8.webp",
+      "width": 1280,
+      "height": 887,
       "alt": [
         "卢森堡市 · 地点实景图",
         "Luxembourg City · place photograph",
@@ -4595,12 +4843,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Benh LIEU SONG",
-        "url": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_Night_Wikimedia_Commons.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Luxembourg_Grund_from_Verlorenkost_01.jpg",
+        "author": "Cayambe",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "卢森堡 · 格伦德区河谷",
+        "Luxembourg · Grund valley",
+        "Luxembourg · vallée du Grund",
+        "Luxemburgo · valle del Grund"
+      ]
     },
     "summary": [
       "卢森堡市的高地、山谷与历史防御遗迹彼此交错，使城市风景拥有鲜明的高低层次。",
@@ -4617,10 +4871,10 @@
       "Monte Saint-Michel"
     ],
     "intro": [
-      "圣米歇尔山是一处海湾中的修道院胜地，修道院、聚落与潮汐景观共同构成了这片独特的地方。",
-      "Mont-Saint-Michel is an abbey destination in a tidal bay, where the monastery, village and shifting seascape form one distinctive place.",
-      "Le Mont-Saint-Michel réunit abbaye, village et paysages de marée dans une baie, formant un lieu singulier.",
-      "El Monte Saint-Michel reúne abadía, pueblo y paisaje de mareas en una bahía, formando un lugar singular."
+      "圣米歇尔山的修道院立在海湾中的岩石高处，环山聚落与城墙沿坡层层展开。涨落潮不断改变周围海水与沙洲的分布，使山顶建筑、狭窄街巷和开阔海湾共同构成这里独特而完整的风景。",
+      "Mont-Saint-Michel’s abbey rises on a rocky height in the bay, above a village and walls following the slope. The tides continually reshape the surrounding water and sandbanks, bringing together the hilltop buildings, narrow streets and wide coastal landscape.",
+      "L’abbaye du Mont-Saint-Michel domine un rocher de la baie, au-dessus d’un village et de remparts qui suivent la pente. Les marées modifient sans cesse la place de l’eau et des bancs de sable, reliant les bâtiments du sommet, les ruelles et le vaste paysage maritime.",
+      "La abadía del Mont-Saint-Michel se eleva sobre una roca de la bahía, por encima de un pueblo y unas murallas que siguen la pendiente. Las mareas cambian el agua y los bancos de arena circundantes, uniendo los edificios de la cima, las calles estrechas y el amplio paisaje costero."
     ],
     "source": {
       "url": "https://www.ot-montsaintmichel.com/en/"

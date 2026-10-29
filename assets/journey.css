@@ -39,32 +39,32 @@
 #journey .leaflet-control-zoom { border:1px solid var(--border-s); border-radius:8px; overflow:hidden; box-shadow:none; margin:14px; }
 #journey .leaflet-control-zoom a { width:30px; height:30px; line-height:30px; background:var(--surface); color:var(--text); border-color:var(--border-s); }
 #journey .leaflet-control-attribution { font-size:.5rem; background:var(--bg); }
-/* A compact postcard stays aligned with the map. Full stories open in a reader. */
-.atlas-explorer { --atlas-panel-height:550px;align-items:stretch;grid-template-columns:minmax(0,1.9fr) minmax(280px,1fr);scroll-margin-top:100px; }
-.atlas-frame { display:flex;flex-direction:column;height:var(--atlas-panel-height);min-width:0; }
+/* Full place descriptions remain readable beside photographs selected for the location. */
+.atlas-explorer { --atlas-panel-height:590px;align-items:stretch;grid-template-columns:minmax(0,1.3fr) minmax(350px,1fr);gap:24px;scroll-margin-top:100px; }
+.atlas-frame { display:flex;flex-direction:column;height:auto;min-height:var(--atlas-panel-height);min-width:0; }
 .atlas-heading,.atlas-legend { flex:none; }
 .atlas-canvas { flex:1;min-height:0; }
 #journey-atlas { height:100%; }
-#journey .atlas-postcard { box-sizing:border-box;display:flex;flex-direction:column;height:var(--atlas-panel-height);min-width:0;overflow:hidden;border:1px solid var(--border-s);border-radius:17px;background:var(--card); }
-#journey .atlas-card-art { position:relative;flex:none;display:grid;place-items:center;height:200px;overflow:hidden;background:var(--surface); }
+#journey .atlas-postcard { box-sizing:border-box;display:flex;flex-direction:column;height:auto;min-height:var(--atlas-panel-height);min-width:0;overflow:hidden;border:1px solid var(--border-s);border-radius:17px;background:var(--card); }
+#journey .atlas-card-art { position:relative;flex:none;display:grid;place-items:center;height:auto;aspect-ratio:2/1;overflow:hidden;background:var(--surface); }
 #journey .atlas-card-art>span:not(.atlas-photo-kind) { font-size:3rem; }
 #journey .atlas-card-art img { position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in; }
 #journey .atlas-photo-kind { position:absolute;left:12px;bottom:11px;padding:4px 7px;border:1px solid #ffffff25;border-radius:4px;background:#142229ba;color:#f0f5f0;font:500 9px/1.4 var(--sans);backdrop-filter:blur(8px); }
 #journey .atlas-photo-open { position:absolute;right:11px;top:11px;width:36px;height:36px;padding:0;border:1px solid #ffffff50;border-radius:50%;background:#17232c99;color:#fff;font:20px/1 var(--sans);cursor:zoom-in;backdrop-filter:blur(8px); }
-#journey .atlas-card-copy { flex:1;min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:9px;padding:18px 20px; }
-#journey .atlas-card-kicker { flex:none;margin:0;color:var(--sage);font:500 10px/1.4 var(--sans);letter-spacing:.04em; }
-#journey .atlas-card-copy h3 { flex:none;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin:0;color:var(--text);font:650 21px/1.25 var(--sans);letter-spacing:-.025em;overflow-wrap:anywhere; }
-#journey .atlas-card-intro { flex:none;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin:0;color:var(--text);font:400 13px/1.75 var(--sans); }
+#journey .atlas-card-copy { flex:1;min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:23px 25px; }
+#journey .atlas-card-kicker { flex:none;margin:0;color:var(--sage);font:500 11px/1.5 var(--sans);letter-spacing:.04em; }
+#journey .atlas-card-copy h3 { flex:none;display:block;margin:0;color:var(--text);font:650 25px/1.3 var(--sans);letter-spacing:-.025em;overflow-wrap:anywhere; }
+#journey .atlas-card-intro { flex:none;display:block;margin:0;color:var(--text);font:400 14px/1.85 var(--sans);text-wrap:pretty; }
 #journey .atlas-card-memory { flex:none;margin:0;padding:0 0 0 10px;border-left:2px solid color-mix(in srgb,var(--sage) 40%,transparent); }
-#journey .atlas-card-note { display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin:0;color:var(--muted);font:400 12px/1.7 var(--sans); }
-#journey .atlas-photo-caption { flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0;color:var(--muted);font:400 10px/1.5 var(--sans); }
+#journey .atlas-card-note { display:block;margin:0;color:var(--muted);font:400 13px/1.75 var(--sans); }
+#journey .atlas-photo-caption { flex:none;white-space:normal;margin:0;color:var(--muted);font:400 11px/1.5 var(--sans); }
 #journey .atlas-photo-choices { display:flex;flex:none;gap:5px;margin:0; }
 #journey .atlas-photo-choices button { min-height:28px;padding:4px 8px;border:1px solid var(--border-s);border-radius:5px;background:transparent;color:var(--muted);font:500 10px/1.5 var(--sans);cursor:pointer; }
 #journey .atlas-photo-choices button[aria-pressed=true] { color:var(--gold);border-color:var(--gold);background:color-mix(in srgb,var(--gold) 7%,transparent); }
 #journey .atlas-card-footer { display:flex;flex:none;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:11px;border-top:1px solid var(--border-s); }
-#journey .atlas-card-more { min-height:32px;max-width:calc(100% - 54px);padding:3px 0;border:0;background:transparent;color:var(--text);font:600 12px/1.45 var(--sans);text-align:left;cursor:pointer; }
+#journey .atlas-card-more { min-height:32px;max-width:calc(100% - 54px);padding:3px 0;border:0;background:transparent;color:var(--text);font:600 13px/1.45 var(--sans);text-align:left;cursor:pointer; }
 #journey .atlas-card-more:hover { color:var(--gold); }
-#journey .atlas-image-credit { flex:none;margin:0;color:var(--muted);font:400 9px/1.5 var(--sans);text-decoration:none; }
+#journey .atlas-image-credit { flex:none;margin:0;color:var(--muted);font:400 10px/1.5 var(--sans);text-decoration:none; }
 #journey .atlas-card-copy [hidden] { display:none; }
 .atlas-photo-dialog { box-sizing:border-box;width:min(960px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:22px;border:1px solid var(--border-s);border-radius:15px;background:var(--surface);color:var(--text);overflow:auto;overscroll-behavior:contain;box-shadow:0 30px 100px #0007; }
 .atlas-photo-dialog::backdrop { background:#050912d9;backdrop-filter:blur(9px); }
@@ -98,6 +98,11 @@
 .atlas-place-index button:hover,.atlas-place-index button[aria-pressed="true"] { color:var(--gold); border-color:var(--gold); }
 @media(max-width:1000px) { .atlas-intro { gap:30px;grid-template-columns:1fr 1fr; }.atlas-explorer { grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr); }.atlas-stops { grid-template-columns:repeat(2,minmax(0,1fr)); }.atlas-hint { margin-left:0;width:100%; }#journey .atlas-card-copy { padding:17px; } }
 @media(min-width:701px) { #journey.sf { padding-top:48px; }#journey .atlas-intro .s-title { font-size:clamp(2.1rem,3vw,2.6rem);line-height:1.18; }.atlas-intro { margin-bottom:25px; }.atlas-intro>p { font-size:.83rem;line-height:1.75; } }
-@media(max-width:700px) { .atlas-intro { display:block;margin-bottom:25px; }.atlas-intro>p { margin-top:22px;font-size:.83rem; }.atlas-toolbar { gap:12px; }.atlas-stats { gap:20px; }#journey .map-tab-btn { padding:8px 12px;font-size:.74rem; }.atlas-explorer { grid-template-columns:1fr; }.atlas-frame { height:auto; }.atlas-canvas { flex:none;height:320px; }.atlas-heading { padding:13px; }.atlas-heading small { font-size:.47rem; }.atlas-heading strong { font-size:.64rem; }#journey .atlas-postcard { height:auto; }#journey .atlas-card-art { height:auto;aspect-ratio:16/9; }#journey .atlas-card-copy { gap:12px;padding:21px; }#journey .atlas-card-copy h3 { font-size:23px; }#journey .atlas-card-intro { font-size:14px; }#journey .atlas-card-note { font-size:13px; }#journey .atlas-card-footer { margin-top:5px; }#journey .atlas-card-more { min-height:40px;font-size:13px; }#journey .atlas-photo-choices button { min-height:36px;padding:7px 11px;font-size:11px; }#journey .atlas-photo-open { width:42px;height:42px; }.atlas-stops button { padding:10px;font-size:.68rem; }.atlas-photo-dialog { padding:18px; }.atlas-photo-dialog h2 { font-size:19px; }.atlas-photo-dialog.with-details .atlas-place-layout { grid-template-columns:1fr;gap:20px; }.atlas-photo-dialog.with-details img { max-height:38dvh; }.atlas-place-details { font-size:14px; } }
+@media(max-width:700px) { .atlas-intro { display:block;margin-bottom:25px; }.atlas-intro>p { margin-top:22px;font-size:.83rem; }.atlas-toolbar { gap:12px; }.atlas-stats { gap:20px; }#journey .map-tab-btn { padding:8px 12px;font-size:.74rem; }.atlas-explorer { grid-template-columns:1fr; }.atlas-frame { height:auto;min-height:0; }.atlas-canvas { flex:none;height:320px; }.atlas-heading { padding:13px; }.atlas-heading small { font-size:.47rem; }.atlas-heading strong { font-size:.64rem; }#journey .atlas-postcard { height:auto;min-height:0; }#journey .atlas-card-art { height:auto;aspect-ratio:16/9; }#journey .atlas-card-copy { gap:12px;padding:21px; }#journey .atlas-card-copy h3 { font-size:23px; }#journey .atlas-card-intro { font-size:14px; }#journey .atlas-card-note { font-size:13px; }#journey .atlas-card-footer { margin-top:5px; }#journey .atlas-card-more { min-height:40px;font-size:13px; }#journey .atlas-photo-choices button { min-height:36px;padding:7px 11px;font-size:11px; }#journey .atlas-photo-open { width:42px;height:42px; }.atlas-stops button { padding:10px;font-size:.68rem; }.atlas-photo-dialog { padding:18px; }.atlas-photo-dialog h2 { font-size:19px; }.atlas-photo-dialog.with-details .atlas-place-layout { grid-template-columns:1fr;gap:20px; }.atlas-photo-dialog.with-details img { max-height:38dvh; }.atlas-place-details { font-size:14px; } }
 @media(max-width:380px) { .atlas-stops button>span:first-child { display:none; } }
 @media(prefers-reduced-motion:reduce) { .atlas-route { animation:none; }.atlas-marker i { transition:none; } }
+
+@media (min-width:701px) and (max-width:1000px) { .atlas-explorer { grid-template-columns:1fr; }.atlas-frame { min-height:0;height:430px; }#journey .atlas-postcard { min-height:0; }#journey .atlas-card-art { aspect-ratio:2.6/1; }#journey .atlas-card-copy { padding:25px 28px; } }
+#journey .atlas-card-highlights { flex:none;margin:0;gap:6px; }
+#journey .atlas-card-highlights li { font-size:11px;line-height:1.5;padding:4px 7px; }
+@media (max-width:700px) { #journey .atlas-card-intro { font-size:14px;line-height:1.9; }#journey .atlas-card-art { aspect-ratio:16/10; } }
