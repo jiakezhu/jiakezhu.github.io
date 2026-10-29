@@ -21,7 +21,7 @@
     'Rigi':{image:'images/web/2f7469959f73-400.webp',names:['瑞士 · 瑞吉山','Switzerland · Rigi','Suisse · Rigi','Suiza · Rigi'],captions:['把目光放远一点','Let the view open up','Laisser le regard s’élargir','Dejar que se abra la mirada'],notes:['瑞士的山间，是欧洲旅行的一部分。语言让路上的交流变得容易，也让我更愿意走进陌生的地方。','The Swiss mountains were part of my European travels. Languages made encounters easier and encouraged me to step into unfamiliar places.','Les montagnes suisses font partie de mes voyages européens. Les langues facilitent les rencontres et donnent envie d’entrer dans des lieux inconnus.','Las montañas suizas fueron parte de mis viajes europeos. Los idiomas facilitaron los encuentros y me animaron a entrar en lugares desconocidos.']},
     'Tromsø':{image:'images/web/a11f415b67d3-400.webp',names:['挪威 · 特罗姆瑟','Norway · Tromsø','Norvège · Tromsø','Noruega · Tromsø'],captions:['地图上的更北方','Further north on the map','Plus au nord sur la carte','Más al norte en el mapa'],notes:['从宁波海边，到欧洲更北的地方。每走到一站，我都更确信：世界仍然有很多值得亲眼看看的东西。','From Ningbo’s coast to the north of Europe. Every stop makes me more certain that there is still so much worth seeing for myself.','De la côte de Ningbo au nord de l’Europe. Chaque étape me rappelle tout ce qui mérite encore d’être vu de mes propres yeux.','De la costa de Ningbo al norte de Europa. Cada parada me recuerda cuánto queda todavía por ver con mis propios ojos.']}
   };
-  let map,geometry,provinces,pinLayer,routeLayer,gridLayer,data,ready,view='world',selected='Xianxiang · Ningbo';
+  let map,geometry,provinces,pinLayer,routeLayer,gridLayer,data,ready,view='world',selected='Xianxiang · Ningbo',photoVariant='place';
   const pins=new Map();
   const language=()=>['zh','en','fr','es'].includes(document.documentElement.lang)?document.documentElement.lang:'en';
   const localIndex=()=>['zh','en','fr','es'].indexOf(language());
@@ -33,22 +33,53 @@
     return point.label;
   }
   function allPoints(){return data?Object.entries(data.places).flatMap(([region,p])=>[...p.milestones.map(point=>({...point,region,milestone:true})),...p.cities.map(point=>({...point,region}))]):Object.keys(stories).map(label=>({label}));}
+  const currentImage=guide=>photoVariant==='personal'&&guide?.personalImage?guide.personalImage:guide?.image;
+  const photoCopy={
+    zh:{open:'放大照片',close:'关闭照片',personal:'我的旅行照片',reference:'地点参考图',credit:'影像'},
+    en:{open:'Enlarge photo',close:'Close photo',personal:'My travel photo',reference:'Place photograph',credit:'Photo'},
+    fr:{open:'Agrandir la photo',close:'Fermer la photo',personal:'Ma photo de voyage',reference:'Photo du lieu',credit:'Photo'},
+    es:{open:'Ampliar foto',close:'Cerrar foto',personal:'Mi foto de viaje',reference:'Foto del lugar',credit:'Foto'}
+  };
+  const photoDialog=document.createElement('dialog');photoDialog.className='atlas-photo-dialog';photoDialog.setAttribute('aria-labelledby','atlas-photo-title');
+  photoDialog.innerHTML='<header><h2 id="atlas-photo-title"></h2><button type="button">×</button></header><figure><img alt=""><figcaption></figcaption></figure><a target="_blank" rel="noopener"></a>';
+  document.body.append(photoDialog);
+  function creditText(media){const t=photoCopy[language()];return media.kind==='personal'?t.personal:t.credit+': '+media.credit.author+' · '+media.credit.license;}
+  function showPhoto(){
+    const guide=data?.guide[selected],media=currentImage(guide);if(!media)return;
+    const i=localIndex(),img=photoDialog.querySelector('img');img.src=media.src;img.alt=media.alt[i];img.width=media.width;img.height=media.height;
+    photoDialog.querySelector('h2').textContent=placeName({label:selected});photoDialog.querySelector('button').setAttribute('aria-label',photoCopy[language()].close);
+    photoDialog.querySelector('figcaption').textContent=media.caption?.[i]||guide.names[i];
+    const source=photoDialog.querySelector('a');source.href=media.credit.url;source.textContent=creditText(media)+' ↗';
+    if(!photoDialog.open)photoDialog.showModal();
+  }
+  photoDialog.querySelector('button').addEventListener('click',()=>photoDialog.close());
+  photoDialog.addEventListener('click',event=>{if(event.target===photoDialog){const r=photoDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)photoDialog.close();}});
+  photoDialog.addEventListener('close',()=>section.querySelector('[data-atlas-photo]')?.focus({preventScroll:true}));
+  section.querySelector('[data-atlas-art]').addEventListener('click',showPhoto);
   function postcard(){
     const i=localIndex(),t=copy[language()],story=stories[selected],guide=data?.guide[selected],point=allPoints().find(p=>p.label===selected)||{label:selected};
-    const art=section.querySelector('[data-atlas-art]');art.replaceChildren();art.classList.toggle('is-academic',Boolean(story?.academic));
-    if(story?.image){const img=new Image();img.src=story.image;img.alt=story.names[i];img.loading='lazy';img.decoding='async';art.append(img);}
+    const media=currentImage(guide),art=section.querySelector('[data-atlas-art]');art.replaceChildren();art.classList.toggle('is-academic',Boolean(!media&&story?.academic));art.classList.toggle('has-photo',Boolean(media));
+    if(media||story?.image){const img=new Image();img.src=media?.src||story.image;img.alt=media?.alt[i]||story.names[i];img.loading='lazy';img.decoding='async';if(media){img.width=media.width;img.height=media.height;img.style.objectPosition=media.position;}
+      art.append(img);if(media){const open=document.createElement('button');open.type='button';open.dataset.atlasPhoto='';open.className='atlas-photo-open';open.setAttribute('aria-label',photoCopy[language()].open+' · '+placeName(point));open.textContent='↗';
+        const kind=document.createElement('span');kind.className='atlas-photo-kind';kind.textContent=photoCopy[language()][media.kind];art.append(kind,open);}}
     else {const icon=document.createElement('span');icon.textContent=story?.icon||'🧭';icon.setAttribute('aria-hidden','true');art.append(icon);}
-    section.querySelector('[data-atlas-kicker]').textContent=story?.period||t.place;
+    const imageCredit=section.querySelector('[data-atlas-image-credit]');imageCredit.hidden=!media;
+    if(media){imageCredit.href=media.credit.url;imageCredit.textContent=creditText(media)+' ↗';imageCredit.title=creditText(media);}
+    const imageCaption=section.querySelector('[data-atlas-photo-caption]');imageCaption.textContent=media?.caption?.[i]||'';imageCaption.hidden=!media?.caption;
+    const choices=section.querySelector('[data-atlas-photo-choices]');choices.hidden=!guide?.personalImage;choices.replaceChildren();
+    if(guide?.personalImage){const names=[['地方实景','我的照片'],['The place','My photo'],['Le lieu','Ma photo'],['El lugar','Mi foto']][i];['place','personal'].forEach((value,n)=>{const b=document.createElement('button');b.type='button';b.dataset.atlasPhotoVariant=value;b.textContent=names[n];b.setAttribute('aria-pressed',String(photoVariant===value));choices.append(b);});}
+    section.querySelector('[data-atlas-kicker]').textContent=story?.period?(story.period+(guide?.country[i]?' · '+guide.country[i]:'')):(guide?.country[i]||t.place);
     section.querySelector('[data-atlas-place]').textContent=placeName(point);
     const caption=section.querySelector('[data-atlas-caption]');caption.textContent=story?.captions[i]||'';caption.hidden=!story;
     section.querySelector('[data-atlas-intro]').textContent=guide?.intro[i]||'';
+    section.querySelector('[data-atlas-highlights]').replaceChildren(...(guide?.highlights[i]||[]).map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
     const source=section.querySelector('[data-atlas-source]');source.hidden=!guide;
     if(guide){source.href=guide.source.url;source.textContent=['了解这个地方 ↗','About this place ↗','Découvrir ce lieu ↗','Conocer este lugar ↗'][i];}
     const memory=section.querySelector('[data-atlas-memory]');memory.hidden=!story;
     section.querySelector('[data-atlas-memory-label]').textContent=['我的这一站','My stop here','Mon passage ici','Mi paso por aquí'][i];
     section.querySelector('[data-atlas-note]').textContent=story?.notes[i]||'';
-    const link=section.querySelector('[data-atlas-story]');link.hidden=!story;
-    if(story){const url=new URL(story.href,location.href);url.searchParams.set('lang',language());link.href=url.href;link.textContent=t.story;}
+    const link=section.querySelector('[data-atlas-story]');link.hidden=!story?.href;
+    if(story?.href){const url=new URL(story.href,location.href);url.searchParams.set('lang',language());link.href=url.href;link.textContent=t.story;}
     section.querySelector('.atlas-postcard').classList.toggle('is-place-only',!story);
     section.querySelector('.atlas-postcard').setAttribute('aria-label',placeName(point));
     section.querySelectorAll('[data-atlas-stop]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.atlasStop===selected)));
@@ -58,10 +89,11 @@
     pins.forEach(({point,pin})=>{pin.setTooltipContent(placeName(point));const element=pin.getElement();element?.setAttribute('aria-label',placeName(point));element?.setAttribute('title',placeName(point));});
     section.querySelectorAll('[data-atlas-index] [data-atlas-stop]').forEach(b=>{const point=allPoints().find(p=>p.label===b.dataset.atlasStop);if(point)b.textContent=placeName(point);});
     postcard();
+    if(photoDialog.open)showPhoto();
   }
   function loadData(){
     if(window.JIAKE_ATLAS_DATA)return Promise.resolve(window.JIAKE_ATLAS_DATA);
-    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=2',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
+    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=3',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
   }
   function styleCountry(feature){const p=palette(),seen=visited.has(feature.properties.iso)||feature.properties.iso==='TWN';return {color:seen?p.sage:p.muted,weight:seen?1.1:.55,opacity:seen?.85:.3,fillColor:seen?p.sage:p.muted,fillOpacity:seen?.3:.07};}
   function styleProvince(){return {color:palette().sage,weight:.7,opacity:.35,fillOpacity:0};}
@@ -82,26 +114,28 @@
   async function init(){
     if(map)return map;if(ready)return ready;
     ready=(async()=>{try{
-      if(!window.L)throw new Error('Map library unavailable');data=await loadData();
+      data=await loadData();
+      const index=section.querySelector('[data-atlas-index]');if(!index.children.length)allPoints().forEach(point=>{const b=document.createElement('button');b.type='button';b.dataset.atlasStop=point.label;b.textContent=placeName(point);b.setAttribute('aria-pressed',String(point.label===selected));index.append(b);});
+      updateLabels();if(!window.L)throw new Error('Map library unavailable');
       map=L.map(container,{zoomControl:false,scrollWheelZoom:false,minZoom:1.5,maxZoom:9,zoomSnap:.25,worldCopyJump:true}).setView([33,55],2);
       map.attributionControl.setPrefix(false);map.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>');L.control.zoom({position:'bottomright'}).addTo(map);
       geometry=L.geoJSON(data.countries,{style:styleCountry,interactive:false}).addTo(map);
       provinces=L.geoJSON(data.provinces,{style:styleProvince,interactive:false});if(view==='china')provinces.addTo(map);
       pinLayer=L.layerGroup().addTo(map);routeLayer=L.layerGroup().addTo(map);gridLayer=L.layerGroup().addTo(map);
       const p=palette();for(let lon=-180;lon<=180;lon+=20)L.polyline([[-80,lon],[80,lon]],{color:p.muted,weight:.5,opacity:.1,interactive:false}).addTo(gridLayer);for(let lat=-60;lat<=80;lat+=20)L.polyline([[lat,-180],[lat,180]],{color:p.muted,weight:.5,opacity:.1,interactive:false}).addTo(gridLayer);
-      const index=section.querySelector('[data-atlas-index]');allPoints().forEach(point=>{const b=document.createElement('button');b.type='button';b.dataset.atlasStop=point.label;b.textContent=placeName(point);b.setAttribute('aria-pressed',String(point.label===selected));index.append(b);});
       map.on('move',()=>{const c=map.getCenter();section.querySelector('.atlas-position').textContent=`${Math.abs(c.lat).toFixed(3)}° ${c.lat>=0?'N':'S'} · ${Math.abs(c.lng).toFixed(3)}° ${c.lng>=0?'E':'W'}`;});
       section.querySelector('[data-atlas-loading]').hidden=true;redrawPins();reset();updateLabels();return map;
     }catch(error){section.querySelector('[data-atlas-loading]').textContent=copy[language()].error;ready=null;return null;}})();return ready;
   }
   async function select(name,zoom=true){
-    selected=name;postcard();await init();const item=pins.get(name)||allPoints().find(p=>p.label===name);
+    if(name!==selected)photoVariant='place';selected=name;postcard();await init();const item=pins.get(name)||allPoints().find(p=>p.label===name);
     if(map&&item){const point=item.point||item;if(view!=='world'&&point.region!==view)await switchView(point.region);if(zoom)map.flyTo([point.lat,point.lng],point.milestone?5:6,{animate:!reduced.matches,duration:.8});pins.forEach(({pin},label)=>{pin.getElement()?.classList.toggle('is-selected',label===name);if(label!==name)pin.closeTooltip();});pins.get(name)?.pin.openTooltip();}
     postcard();
   }
   async function switchView(next){if(!['world','china','europe'].includes(next))return;view=next;section.querySelectorAll('.map-tab-btn').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-pressed',String(b.dataset.view===view));});updateLabels();await init();if(provinces&&map){if(view==='china')provinces.addTo(map);else map.removeLayer(provinces);}redrawPins();reset();}
   section.querySelectorAll('.map-tab-btn').forEach(b=>b.addEventListener('click',()=>switchView(b.dataset.view)));
   section.querySelector('[data-atlas-reset]').addEventListener('click',reset);
+  section.addEventListener('click',event=>{const choice=event.target.closest('[data-atlas-photo-variant]');if(choice){photoVariant=choice.dataset.atlasPhotoVariant;postcard();section.querySelector('[data-atlas-photo-variant="'+photoVariant+'"]')?.focus({preventScroll:true});}});
   section.addEventListener('click',event=>{
     const button=event.target.closest('[data-atlas-stop]');if(!button)return;
     select(button.dataset.atlasStop).then(()=>{

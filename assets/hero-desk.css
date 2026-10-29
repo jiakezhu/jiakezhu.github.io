@@ -59,3 +59,7 @@
 .dk-workflow-step { display:flex; align-items:center; gap:6px; position:relative; min-height:19px; color:#ccd9e7; font:10px/1.35 system-ui,sans-serif; }
 .dk-workflow-step i { display:flex; align-items:center; justify-content:center; width:14px; height:14px; flex:none; border:1px solid #54718d; border-radius:4px; color:#a5c6df; font:9px/1 ui-monospace,monospace; font-style:normal; }
 .dk-workflow-step:not(:last-child)::after { content:''; position:absolute; left:7px; top:19px; width:1px; height:9px; background:#3d566c; }
+
+/* Only the mug face uses the cleaned artwork; all other illustration pixels remain original. */
+.dk-mug-cleanup { position:absolute;inset:0;z-index:4;width:1024px;height:1024px;pointer-events:none;mask-image:radial-gradient(ellipse 30px 32px at 886px 711px,#000 0 62%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 30px 32px at 886px 711px,#000 0 62%,transparent 100%); }
+.dk-mug-cleanup[hidden] { display:none; }

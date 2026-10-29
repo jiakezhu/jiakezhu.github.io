@@ -16,9 +16,23 @@ test('every travel stop has a sourced introduction in all four site languages',(
     for(const text of guide[label].intro)assert(text.trim().length>30,`${label}: meaningful introduction`);
     for(const text of guide[label].names)assert(text.trim(),`${label}: translated place name`);
     assert.equal(new URL(guide[label].source.url).protocol,'https:');
+    assert.equal(guide[label].country.length,4,label);
+    assert.equal(guide[label].highlights.length,4,label);
+    for(const items of guide[label].highlights){assert.equal(items.length,3,label);for(const text of items)assert(text.trim(),label);}
+    const image=guide[label].image;
+    assert(['personal','reference'].includes(image.kind),label);
+    assert.equal(image.alt.length,4,label);for(const text of image.alt)assert(text.trim(),label);
+    assert(image.width>=400&&image.height>=300,label);
+    const bytes=fs.readFileSync(path.join(root,image.src));
+    assert.equal(bytes.subarray(0,4).toString(),'RIFF',label);assert.equal(bytes.subarray(8,12).toString(),'WEBP',label);
+    assert(image.credit.author.trim()&&image.credit.license.trim(),label);
+    assert.equal(new URL(image.credit.url).protocol,'https:',label);
+    if(image.kind==='reference')assert(/CC|Public domain|Attribution|FAL/i.test(image.credit.license),label);
   }
   const bundle=JSON.parse(fs.readFileSync(path.join(root,'assets/maps/atlas-data.js'),'utf8').replace('window.JIAKE_ATLAS_DATA=','').replace(/;\s*$/,''));
   assert.deepEqual(bundle.guide,guide,'the lazy bundle contains current introductions');
+  assert.equal(new Set(Object.values(guide).map(item=>item.image.src)).size,65,'each stop has a distinct relevant photo');
+  for(const label of ['Amsterdam','Rome','Rigi','Tromsø','Vatican','Budapest'])assert.equal((guide[label].personalImage||guide[label].image).kind,'personal',label);
 });
 
 test('the historical snapshot remains byte-for-byte identical to its captured manifest',()=>{
