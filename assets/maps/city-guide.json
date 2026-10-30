@@ -44,28 +44,28 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/iconic-xianxiang-ningbo-9883c04d.webp",
-      "width": 1280,
-      "height": 504,
+      "src": "images/atlas/scene-xianxiang-ningbo-e873c753.webp",
+      "width": 1600,
+      "height": 771,
       "alt": [
-        "宁波三江口城市夜景，作为家乡城市参考",
-        "Night panorama of Ningbo, a reference view of the hometown city",
-        "Panorama nocturne de Ningbo, vue de référence de la ville natale",
-        "Panorámica nocturna de Ningbo, referencia de la ciudad natal"
+        "咸祥象山港北岸的渔船、蓝色海湾与潮汐滩涂",
+        "Fishing boats, blue water and tidal flats on the Xianxiang shore of Xiangshan Bay",
+        "Bateaux de pêche, baie bleue et vasière sur le rivage de Xianxiang",
+        "Barcos pesqueros, bahía azul y marisma en la costa de Xianxiang"
       ],
       "kind": "reference",
       "credit": {
-        "author": "inyucho",
-        "url": "https://commons.wikimedia.org/wiki/File:Ningbo_Rivers_Panorama_at_Night.jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Cz4523",
+        "url": "https://commons.wikimedia.org/wiki/File:Xiangshan_Harbor_Bridge_(Line_12,_Ningbo_Rail_Transit),_2026-10-18_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "35% 50%",
+      "position": "0% 50%",
       "caption": [
-        "宁波 · 三江口夜景（家乡城市参考）",
-        "Ningbo · river confluence at night (hometown city reference)",
-        "Ningbo · confluence de nuit (vue de la ville natale)",
-        "Ningbo · confluencia nocturna (referencia de la ciudad natal)"
+        "咸祥 · 象山港北岸的渔船与潮汐海岸",
+        "Xianxiang · fishing boats and tidal shore on northern Xiangshan Bay",
+        "Xianxiang · bateaux de pêche et rivage à marée au nord de la baie de Xiangshan",
+        "Xianxiang · barcos pesqueros y costa de mareas al norte de la bahía de Xiangshan"
       ]
     },
     "summary": [
@@ -196,28 +196,28 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/swufe-chengdu.webp",
-      "width": 960,
-      "height": 480,
+      "src": "images/atlas/scene-swufe-chengdu-7c923454.webp",
+      "width": 1200,
+      "height": 1800,
       "alt": [
-        "成都 · 西南财经大学 · 地点实景图",
-        "Chengdu · SWUFE · place photograph",
-        "Chengdu · SWUFE · photo du lieu",
-        "Chengdu · SWUFE · foto del lugar"
+        "成都交子金融城双子塔的完整蓝白灯光夜景",
+        "Complete blue and white illuminated Jiaozi Financial City Twin Towers in Chengdu",
+        "Les deux tours complètes de Jiaozi Financial City à Chengdu, éclairées en bleu et blanc",
+        "Las dos torres completas de Jiaozi Financial City en Chengdu, iluminadas en azul y blanco"
       ],
       "kind": "reference",
       "credit": {
-        "author": "Daniel Lu (User:dllu)",
-        "url": "https://commons.wikimedia.org/wiki/File:Anshun_Bridge_Jin_River_Chengdu_night_2026_dllu.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "kev1n Z",
+        "url": "https://unsplash.com/photos/city-skyline-during-night-time-794u6VhyNws",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%",
+      "position": "50% 20%",
       "caption": [
-        "成都 · 安顺廊桥",
-        "Chengdu · Anshun Bridge",
-        "Chengdu · pont Anshun",
-        "Chengdu · puente Anshun"
+        "成都 · 交子金融城双子塔夜景",
+        "Chengdu · Jiaozi Financial City Twin Towers at night",
+        "Chengdu · tours jumelles de Jiaozi Financial City de nuit",
+        "Chengdu · torres gemelas de Jiaozi Financial City de noche"
       ]
     },
     "summary": [
@@ -1628,28 +1628,28 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/iconic-paris-1-panth-on-9fc4278a.webp",
+      "src": "images/atlas/scene-paris-1-panth-on-a07da4f0.webp",
       "width": 1600,
-      "height": 505,
+      "height": 904,
       "alt": [
-        "巴黎 · 巴黎第一大学 · 地点实景图",
-        "Paris · Panthéon-Sorbonne · place photograph",
-        "Paris · Panthéon-Sorbonne · photo du lieu",
-        "París · Panthéon-Sorbonne · foto del lugar"
+        "金色夕阳下的巴黎塞纳河、亚历山大三世桥与远处埃菲尔铁塔",
+        "The Seine, Pont Alexandre III and distant Eiffel Tower in warm Paris sunset light",
+        "La Seine, le pont Alexandre-III et la tour Eiffel au loin dans la lumière dorée du soir",
+        "El Sena, el puente Alejandro III y la Torre Eiffel lejana bajo la luz dorada del atardecer"
       ],
       "kind": "reference",
       "credit": {
-        "author": "Benh LIEU SONG",
-        "url": "https://commons.wikimedia.org/wiki/File:Paris_Night.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Miraxh Tereziu",
+        "url": "https://unsplash.com/photos/sunset-over-the-seine-river-in-paris-with-eiffel-tower-70lErRRyNKE",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "65% 50%",
+      "position": "0% 50%",
       "caption": [
-        "巴黎 · 蓝调时分的埃菲尔铁塔与城市全景",
-        "Paris · Eiffel Tower and city panorama at blue hour",
-        "Paris · tour Eiffel et panorama à l’heure bleue",
-        "París · Torre Eiffel y panorama urbano en la hora azul"
+        "巴黎 · 塞纳河与亚历山大三世桥的金色夕阳",
+        "Paris · golden sunset on the Seine and Pont Alexandre III",
+        "Paris · coucher de soleil doré sur la Seine et le pont Alexandre-III",
+        "París · atardecer dorado en el Sena y el puente Alejandro III"
       ]
     },
     "summary": [
@@ -4646,23 +4646,29 @@
       "Noruega"
     ],
     "image": {
-      "src": "images/atlas/troms.webp",
-      "width": 960,
-      "height": 337,
+      "src": "images/atlas/scene-troms-b18719a8.webp",
+      "width": 2400,
+      "height": 559,
       "alt": [
-        "特罗姆瑟 · 地点实景图",
-        "Tromsø · place photograph",
-        "Tromsø · photo du lieu",
-        "Tromsø · foto del lugar"
+        "特罗姆瑟的积雪城区、跨海大桥与白色群山",
+        "Snow-covered Tromsø, its bridge and white Arctic mountains",
+        "Tromsø enneigée, son pont et les montagnes arctiques blanches",
+        "Tromsø nevada, su puente y las montañas árticas blancas"
       ],
       "kind": "reference",
       "credit": {
-        "author": "Happy Discover",
-        "url": "https://commons.wikimedia.org/wiki/File:Panorama_Troms%C3%B8_from_Fjellheisen.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Lukasz Szramuk",
+        "url": "https://unsplash.com/photos/a-snow-covered-mountain-with-a-lake-in-the-middle-p6plKYEnx1g",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "白雪覆盖的特罗姆瑟两岸与峡湾全景",
+        "Snow-covered Tromsø and its Arctic fjord",
+        "Panorama de Tromsø et de son fjord sous la neige",
+        "Panorámica de Tromsø y su fiordo cubiertos de nieve"
+      ]
     },
     "personalImage": {
       "src": "images/web/a11f415b67d3-800.webp",

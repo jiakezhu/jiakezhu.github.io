@@ -563,3 +563,15 @@ Selected photographs are resized and converted to WebP without changing their co
 | The Hague | `images/atlas/iconic-the-hague-88807215.webp` | Samuel Girven | [Unsplash License](https://unsplash.com/license) | [Original photograph](https://unsplash.com/photos/the-peace-palace-glows-at-dusk-in-the-hague-wAaDzrEvYts) |
 | Helsinki | `images/atlas/iconic-helsinki-c733fbaf.webp` | Schölla Schwarz | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) | [Original photograph](https://commons.wikimedia.org/wiki/File:Dome_Square_Panorama_-_panoramio.jpg) |
 | Luxembourg | `images/atlas/iconic-luxembourg-629dea2a.webp` | Denise Hastert | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Original photograph](https://commons.wikimedia.org/wiki/File:Adolphe_Bridge_post_2017_renovation_works_-_7_August_2018.jpg) |
+
+
+## Four scene refinements — 2026-10-30
+
+Selected to match the coastal hometown, twin towers, relaxed Seine riverside and snowy Arctic setting. Photos are resized and converted to WebP without color changes. The Xianxiang photograph is cropped toward the fishing boats and bay; the Paris photograph is cropped toward the river and bridge. Responsive card framing is also applied. Original photographs remain available through their source links.
+
+| Place | Local file | Photographer | License | Source |
+|---|---|---|---|---|
+| SWUFE · Chengdu | `images/atlas/scene-swufe-chengdu-7c923454.webp` | kev1n Z | [Unsplash License](https://unsplash.com/license) | [Original photograph](https://unsplash.com/photos/city-skyline-during-night-time-794u6VhyNws) |
+| Tromsø | `images/atlas/scene-troms-b18719a8.webp` | Lukasz Szramuk | [Unsplash License](https://unsplash.com/license) | [Original photograph](https://unsplash.com/photos/a-snow-covered-mountain-with-a-lake-in-the-middle-p6plKYEnx1g) |
+| Paris 1 Panthéon | `images/atlas/scene-paris-1-panth-on-a07da4f0.webp` | Miraxh Tereziu | [Unsplash License](https://unsplash.com/license) | [Original photograph](https://unsplash.com/photos/sunset-over-the-seine-river-in-paris-with-eiffel-tower-70lErRRyNKE) |
+| Xianxiang · Ningbo | `images/atlas/scene-xianxiang-ningbo-e873c753.webp` | Cz4523 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Original photograph](https://commons.wikimedia.org/wiki/File:Xiangshan_Harbor_Bridge_(Line_12,_Ningbo_Rail_Transit),_2026-10-18_02.jpg) |
