@@ -29,7 +29,13 @@ test('every travel stop has a sourced introduction in all four site languages',(
     assert.equal(bytes.subarray(0,4).toString(),'RIFF',label);assert.equal(bytes.subarray(8,12).toString(),'WEBP',label);
     assert(image.credit.author.trim()&&image.credit.license.trim(),label);
     assert.equal(new URL(image.credit.url).protocol,'https:',label);
-    if(image.kind==='reference')assert(/CC|Public domain|Attribution|FAL/i.test(image.credit.license),label);
+    if(image.kind==='reference'){
+      const credit=image.credit,host=new URL(credit.url).hostname;
+      const openLicense=/CC|Public domain|Attribution|FAL/i.test(credit.license);
+      const unsplash=credit.license==='Unsplash License'&&host==='unsplash.com'&&credit.licenseUrl==='https://unsplash.com/license';
+      const pexels=credit.license==='Pexels License'&&['pexels.com','www.pexels.com'].includes(host)&&credit.licenseUrl==='https://www.pexels.com/license/';
+      assert(openLicense||unsplash||pexels,`${label}: verified photo source and license`);
+    }
   }
   const bundle=JSON.parse(fs.readFileSync(path.join(root,'assets/maps/atlas-data.js'),'utf8').replace('window.JIAKE_ATLAS_DATA=','').replace(/;\s*$/,''));
   assert.deepEqual(bundle.guide,guide,'the lazy bundle contains current introductions');

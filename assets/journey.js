@@ -116,7 +116,7 @@
   }
   function loadData(){
     if(window.JIAKE_ATLAS_DATA)return Promise.resolve(window.JIAKE_ATLAS_DATA);
-    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=5',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
+    return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=new URL('maps/atlas-data.js?v=6',baseURL).href;script.async=true;script.onload=()=>window.JIAKE_ATLAS_DATA?resolve(window.JIAKE_ATLAS_DATA):reject(new Error('Atlas data missing'));script.onerror=()=>reject(new Error('Atlas data unavailable'));document.head.append(script);});
   }
   function styleCountry(feature){const p=palette(),seen=visited.has(feature.properties.iso)||feature.properties.iso==='TWN';return {color:seen?p.sage:p.muted,weight:seen?1.1:.55,opacity:seen?.85:.3,fillColor:seen?p.sage:p.muted,fillOpacity:seen?.3:.07};}
   function styleProvince(){return {color:palette().sage,weight:.7,opacity:.35,fillOpacity:0};}

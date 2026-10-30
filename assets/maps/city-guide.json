@@ -44,28 +44,28 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-xianxiang-ningbo-95b007f8.webp",
+      "src": "images/atlas/iconic-xianxiang-ningbo-9883c04d.webp",
       "width": 1280,
-      "height": 960,
+      "height": 504,
       "alt": [
-        "咸祥 · 宁波 · 地点实景图",
-        "Xianxiang · Ningbo · place photograph",
-        "Xianxiang · Ningbo · photo du lieu",
-        "Xianxiang · Ningbo · foto del lugar"
+        "宁波三江口城市夜景，作为家乡城市参考",
+        "Night panorama of Ningbo, a reference view of the hometown city",
+        "Panorama nocturne de Ningbo, vue de référence de la ville natale",
+        "Panorámica nocturna de Ningbo, referencia de la ciudad natal"
       ],
       "kind": "reference",
       "credit": {
-        "author": "Cz4523",
-        "url": "https://commons.wikimedia.org/wiki/File:Xiangshan_Harbor_Bridge_(Line_12,_Ningbo_Rail_Transit),_2026-10-18_04.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "inyucho",
+        "url": "https://commons.wikimedia.org/wiki/File:Ningbo_Rivers_Panorama_at_Night.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       },
-      "position": "50% 50%",
+      "position": "35% 50%",
       "caption": [
-        "象山港海岸与跨海桥（区域参考）",
-        "Xiangshan Bay coast and bridge (regional reference)",
-        "Baie de Xiangshan et pont (vue régionale de référence)",
-        "Costa y puente de la bahía de Xiangshan (referencia regional)"
+        "宁波 · 三江口夜景（家乡城市参考）",
+        "Ningbo · river confluence at night (hometown city reference)",
+        "Ningbo · confluence de nuit (vue de la ville natale)",
+        "Ningbo · confluencia nocturna (referencia de la ciudad natal)"
       ]
     },
     "summary": [
@@ -120,9 +120,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-zjsu-hangzhou-5e7ea70b.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-zjsu-hangzhou-8bab6f15.webp",
+      "width": 1600,
+      "height": 459,
       "alt": [
         "杭州 · 浙江工商大学 · 地点实景图",
         "Hangzhou · ZJSU · place photograph",
@@ -131,17 +131,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Bjoertvedt",
-        "url": "https://commons.wikimedia.org/wiki/File:West_Lake_IMG_8793_leifeng_pagoda.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Fung Martin",
+        "url": "https://unsplash.com/photos/city-skyline-across-body-of-water-during-night-time-lttHbW0FAD4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%",
+      "position": "52% 50%",
       "caption": [
-        "杭州 · 西湖与雷峰塔（城市风景）",
-        "Hangzhou · West Lake and Leifeng Pagoda (city view)",
-        "Hangzhou · lac de l’Ouest et pagode Leifeng (vue de la ville)",
-        "Hangzhou · Lago del Oeste y pagoda Leifeng (vista urbana)"
+        "杭州 · 钱江新城与钱塘江夜景（城市风景）",
+        "Hangzhou · Qianjiang New Town and the Qiantang River at night (city view)",
+        "Hangzhou · Qianjiang New Town et le Qiantang de nuit (paysage urbain)",
+        "Hangzhou · Qianjiang New Town y el río Qiantang de noche (vista urbana)"
       ]
     },
     "summary": [
@@ -424,9 +424,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-nanjing-3bc592c3.webp",
-      "width": 1280,
-      "height": 853,
+      "src": "images/atlas/iconic-nanjing-5c966dff.webp",
+      "width": 1600,
+      "height": 1129,
       "alt": [
         "南京 · 地点实景图",
         "Nanjing · place photograph",
@@ -435,17 +435,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Windmemories",
-        "url": "https://commons.wikimedia.org/wiki/File:20260803_Xuanwu_Lake,_Jiming_Temple_and_Nanjing_City_Wall.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "余鑫磊",
+        "url": "https://www.pexels.com/photo/vibrant-night-skyline-of-nanjing-cityscape-31133706/",
+        "license": "Pexels License",
+        "licenseUrl": "https://www.pexels.com/license/"
       },
-      "position": "50% 50%",
+      "position": "50% 25%",
       "caption": [
-        "南京 · 玄武湖与鸡鸣寺",
-        "Nanjing · Xuanwu Lake and Jiming Temple",
-        "Nankin · lac Xuanwu et temple Jiming",
-        "Nankín · lago Xuanwu y templo Jiming"
+        "南京 · 紫峰大厦与城市夜景",
+        "Nanjing · Zifeng Tower and the city at night",
+        "Nanjing · tour Zifeng et ville de nuit",
+        "Nanjing · torre Zifeng y ciudad de noche"
       ]
     },
     "summary": [
@@ -646,9 +646,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-jiaxing-aa168ff4.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-jiaxing-7d964383.webp",
+      "width": 1600,
+      "height": 1200,
       "alt": [
         "嘉兴 · 地点实景图",
         "Jiaxing · place photograph",
@@ -657,17 +657,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "钉钉",
-        "url": "https://commons.wikimedia.org/wiki/File:South_Lake_(Jiaxing).jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "·˙·ChinaUli2010·.·",
+        "url": "https://commons.wikimedia.org/wiki/File:%C2%B7%CB%99%C2%B7ChinaUli2010%C2%B7.%C2%B7_Wuzhen_-_by_night_-_panoramio_(2).jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
       },
-      "position": "50% 50%",
+      "position": "50% 52%",
       "caption": [
-        "嘉兴 · 南湖桥景",
-        "Jiaxing · bridge at South Lake",
-        "Jiaxing · pont du lac du Sud",
-        "Jiaxing · puente del Lago del Sur"
+        "嘉兴 · 桐乡乌镇蓝调水乡（区域参考）",
+        "Jiaxing · Wuzhen water town, Tongxiang, at blue hour (regional reference)",
+        "Jiaxing · village d’eau de Wuzhen, Tongxiang, à l’heure bleue (vue régionale de référence)",
+        "Jiaxing · pueblo acuático de Wuzhen, Tongxiang, en la hora azul (referencia regional)"
       ]
     },
     "summary": [
@@ -722,9 +722,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-ningbo-c0322abe.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-ningbo-b6b51ca2.webp",
+      "width": 1600,
+      "height": 1068,
       "alt": [
         "宁波 · 地点实景图",
         "Ningbo · place photograph",
@@ -733,17 +733,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "钉钉",
-        "url": "https://commons.wikimedia.org/wiki/File:Tianyi_Pavilion_Museum_Garden_3.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Letian Zhang",
+        "url": "https://unsplash.com/photos/an-aerial-view-of-a-city-with-a-river-running-through-it-CccYZrSWnmk",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%",
+      "position": "50% 55%",
       "caption": [
-        "宁波 · 天一阁庭园",
-        "Ningbo · Tianyi Pavilion garden",
-        "Ningbo · jardin du pavillon Tianyi",
-        "Ningbo · jardín del pabellón Tianyi"
+        "宁波 · 三江口高位全景",
+        "Ningbo · elevated panorama of the river confluence",
+        "Ningbo · panorama en hauteur de la confluence",
+        "Ningbo · panorámica elevada de la confluencia"
       ]
     },
     "summary": [
@@ -798,9 +798,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/huangshan.webp",
-      "width": 960,
-      "height": 562,
+      "src": "images/atlas/iconic-huangshan-120fbe39.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "黄山 · 地点实景图",
         "Huangshan · place photograph",
@@ -809,12 +809,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Chi King",
-        "url": "https://commons.wikimedia.org/wiki/File:Huangshan_pic_4.jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Miguel Baixauli",
+        "url": "https://unsplash.com/photos/black-and-white-mountains-under-white-clouds-during-daytime-z8mmW-01Ats",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%"
+      "position": "50% 56%",
+      "caption": [
+        "黄山 · 日出云海与群峰",
+        "Huangshan · peaks and a sea of clouds at sunrise",
+        "Huangshan · sommets et mer de nuages au lever du soleil",
+        "Huangshan · cumbres y mar de nubes al amanecer"
+      ]
     },
     "summary": [
       "黄山以花岗岩峰林、奇松与云海著称。",
@@ -938,9 +944,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/w-sichuan.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/iconic-w-sichuan-9d2e87c1.webp",
+      "width": 1600,
+      "height": 1200,
       "alt": [
         "川西 · 地点实景图",
         "Western Sichuan · place photograph",
@@ -949,17 +955,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Johannes Böckh",
-        "url": "https://commons.wikimedia.org/wiki/File:Mount_Siguniang_2.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Sebastian S",
+        "url": "https://unsplash.com/photos/snow-capped-mountain-peak-illuminated-by-sunrise-vZE7cOEV1LI",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%",
+      "position": "50% 70%",
       "caption": [
-        "四姑娘山 · 川西山地风景参考",
-        "Mount Siguniang · western Sichuan landscape",
-        "Mont Siguniang · paysage de l’ouest du Sichuan",
-        "Monte Siguniang · paisaje de Sichuan occidental"
+        "川西 · 贡嘎山群峰晚照（地区参考）",
+        "Western Sichuan · alpenglow on the Gongga mountains (regional reference)",
+        "Sichuan occidental · sommets du Gongga au couchant (vue régionale de référence)",
+        "Sichuan occidental · luz del atardecer en los montes Gongga (referencia regional)"
       ]
     },
     "summary": [
@@ -1014,9 +1020,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-changsha-7e692f87.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-changsha-b3c88999.webp",
+      "width": 1600,
+      "height": 976,
       "alt": [
         "长沙 · 地点实景图",
         "Changsha · place photograph",
@@ -1025,17 +1031,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "JULIANISME",
-        "url": "https://commons.wikimedia.org/wiki/File:Xiang_River_and_Orange_Isle,_Changsha.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "yx b",
+        "url": "https://www.pexels.com/photo/xiangjiang-juzizhou-bridge-in-changsha-12841259/",
+        "license": "Pexels License",
+        "licenseUrl": "https://www.pexels.com/license/"
       },
-      "position": "50% 50%",
+      "position": "50% 49%",
       "caption": [
-        "长沙 · 湘江与橘子洲",
-        "Changsha · Xiang River and Orange Isle",
-        "Changsha · rivière Xiang et île aux Orangers",
-        "Changsha · río Xiang e Isla de las Naranjas"
+        "长沙 · 橘子洲大桥与湘江暮色",
+        "Changsha · Juzizhou Bridge and the Xiang River at dusk",
+        "Changsha · pont Juzizhou et Xiangjiang au crépuscule",
+        "Changsha · puente Juzizhou y río Xiang al anochecer"
       ]
     },
     "summary": [
@@ -1318,9 +1324,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/shenzhen.webp",
-      "width": 960,
-      "height": 640,
+      "src": "images/atlas/iconic-shenzhen-de3d65c2.webp",
+      "width": 1600,
+      "height": 1069,
       "alt": [
         "深圳 · 地点实景图",
         "Shenzhen · place photograph",
@@ -1329,12 +1335,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Charlie fong",
-        "url": "https://commons.wikimedia.org/wiki/File:Commercial_area_of_futian_to_east2020.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "ダモ リ",
+        "url": "https://unsplash.com/photos/city-skyline-during-night-time-oewW6C664gw",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 8%"
+      "position": "50% 63%",
+      "caption": [
+        "深圳 · 市民中心与福田蓝调天际线",
+        "Shenzhen · Civic Center and Futian skyline at blue hour",
+        "Shenzhen · centre civique et skyline de Futian à l’heure bleue",
+        "Shenzhen · Centro Cívico y perfil de Futian en la hora azul"
+      ]
     },
     "summary": [
       "深圳的科技产业与滨海空间彼此相邻，从华强北到海边绿道，城市展示着快速生长的活力。",
@@ -1388,9 +1400,9 @@
       "China"
     ],
     "image": {
-      "src": "images/atlas/editorial-guangzhou-b5c16363.webp",
-      "width": 1280,
-      "height": 883,
+      "src": "images/atlas/iconic-guangzhou-5234dfb8.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "广州 · 地点实景图",
         "Guangzhou · place photograph",
@@ -1399,17 +1411,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "jo.sau",
-        "url": "https://commons.wikimedia.org/wiki/File:Guangzhou_skyline.jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Loeng Lig",
+        "url": "https://unsplash.com/photos/city-buildings-under-blue-sky-during-daytime-v5TwMWDaHDI",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 15%",
+      "position": "50% 58%",
       "caption": [
-        "广州 · 城市天际线",
-        "Guangzhou · city skyline",
-        "Guangzhou · silhouette urbaine",
-        "Guangzhou · perfil urbano"
+        "广州 · 珠江新城高位全景",
+        "Guangzhou · elevated panorama of Zhujiang New Town",
+        "Guangzhou · panorama en hauteur de Zhujiang New Town",
+        "Guangzhou · panorámica elevada de Zhujiang New Town"
       ]
     },
     "summary": [
@@ -1616,9 +1628,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-paris-1-panth-on-fc782514.webp",
-      "width": 1280,
-      "height": 853,
+      "src": "images/atlas/iconic-paris-1-panth-on-9fc4278a.webp",
+      "width": 1600,
+      "height": 505,
       "alt": [
         "巴黎 · 巴黎第一大学 · 地点实景图",
         "Paris · Panthéon-Sorbonne · place photograph",
@@ -1627,17 +1639,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Juanedc from Zaragoza, España",
-        "url": "https://commons.wikimedia.org/wiki/File:Panth%C3%A9on_and_Rue_Soufflot,_Paris_2011.jpg",
-        "license": "CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "author": "Benh LIEU SONG",
+        "url": "https://commons.wikimedia.org/wiki/File:Paris_Night.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 20%",
+      "position": "65% 50%",
       "caption": [
-        "巴黎 · 先贤祠与苏弗洛街",
-        "Paris · Panthéon and Rue Soufflot",
-        "Paris · Panthéon et rue Soufflot",
-        "París · Panteón y rue Soufflot"
+        "巴黎 · 蓝调时分的埃菲尔铁塔与城市全景",
+        "Paris · Eiffel Tower and city panorama at blue hour",
+        "Paris · tour Eiffel et panorama à l’heure bleue",
+        "París · Torre Eiffel y panorama urbano en la hora azul"
       ]
     },
     "summary": [
@@ -1692,9 +1704,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-marseille-6ffbefbc.webp",
+      "src": "images/atlas/iconic-marseille-2134fdad.webp",
       "width": 1280,
-      "height": 458,
+      "height": 351,
       "alt": [
         "马赛 · 地点实景图",
         "Marseille · place photograph",
@@ -1703,17 +1715,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Chensiyuan",
-        "url": "https://commons.wikimedia.org/wiki/File:1_marseille_vieux_port_pano.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Benh LIEU SONG",
+        "url": "https://commons.wikimedia.org/wiki/File:Marseille_Vieux_Port_Night.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%",
+      "position": "70% 50%",
       "caption": [
-        "马赛 · 老港全景",
-        "Marseille · Old Port panorama",
-        "Marseille · panorama du Vieux-Port",
-        "Marsella · panorámica del Puerto Viejo"
+        "马赛 · 圣让堡与老港蓝调夜景",
+        "Marseille · Fort Saint-Jean and the Old Port at blue hour",
+        "Marseille · fort Saint-Jean et Vieux-Port à l’heure bleue",
+        "Marsella · Fuerte Saint-Jean y Puerto Viejo en la hora azul"
       ]
     },
     "summary": [
@@ -1768,9 +1780,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/strasbourg.webp",
-      "width": 960,
-      "height": 640,
+      "src": "images/atlas/iconic-strasbourg-939b403b.webp",
+      "width": 1600,
+      "height": 681,
       "alt": [
         "斯特拉斯堡 · 地点实景图",
         "Strasbourg · place photograph",
@@ -1779,12 +1791,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Photo Claude TRUONG-NGOC",
-        "url": "https://commons.wikimedia.org/wiki/File:Strasbourg_Petite-France_place_Benjamin-Zix_septembre_2015.jpg",
+        "author": "Aloïs Peiffer",
+        "url": "https://commons.wikimedia.org/wiki/File:Strasbourg_Ponts_couverts_au_coucher_du_soleil.jpg",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "斯特拉斯堡 · 夕阳中的廊桥、古塔与河面倒影",
+        "Strasbourg · Covered Bridges, towers and reflections at sunset",
+        "Strasbourg · Ponts Couverts, tours et reflets au couchant",
+        "Estrasburgo · Puentes Cubiertos, torres y reflejos al atardecer"
+      ]
     },
     "summary": [
       "斯特拉斯堡的运河与木筋屋记录着阿尔萨斯文化，也让这座欧洲城市保留了亲切的街区尺度。",
@@ -1984,9 +2002,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-rennes-95c5c5f2.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-rennes-831e1814.webp",
+      "width": 1600,
+      "height": 978,
       "alt": [
         "雷恩 · 地点实景图",
         "Rennes · place photograph",
@@ -1995,17 +2013,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Sokoljan",
-        "url": "https://commons.wikimedia.org/wiki/File:Rennes_pl_Ch-Jacquet_DSCN1770.jpg",
+        "author": "Avaalonn",
+        "url": "https://commons.wikimedia.org/wiki/File:Parlement_de_Bretagne_(Rennes-France).jpg",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 20%",
+      "position": "50% 50%",
       "caption": [
-        "雷恩 · 尚雅凯广场",
-        "Rennes · Place du Champ-Jacquet",
-        "Rennes · place du Champ-Jacquet",
-        "Rennes · plaza del Champ-Jacquet"
+        "雷恩 · 布列塔尼议会宫蓝调夜景",
+        "Rennes · Parlement de Bretagne at blue hour",
+        "Rennes · Parlement de Bretagne à l’heure bleue",
+        "Rennes · Parlamento de Bretaña en la hora azul"
       ]
     },
     "summary": [
@@ -2060,9 +2078,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-tours-5d9fba3b.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-tours-2d4f056d.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "图尔 · 地点实景图",
         "Tours · place photograph",
@@ -2071,17 +2089,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Benjamin Smith",
-        "url": "https://commons.wikimedia.org/wiki/File:Tours_-_Place_Plumereau_-_1.jpg",
+        "author": "DOGr",
+        "url": "https://commons.wikimedia.org/wiki/File:Inside_view_of_the_Saint-Gatien_Cathedral.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 15%",
+      "position": "45% 25%",
       "caption": [
-        "图尔 · 普吕姆罗广场",
-        "Tours · Place Plumereau",
-        "Tours · place Plumereau",
-        "Tours · plaza Plumereau"
+        "图尔 · 圣加蒂安大教堂内景",
+        "Tours · interior of Saint-Gatien Cathedral",
+        "Tours · intérieur de la cathédrale Saint-Gatien",
+        "Tours · interior de la catedral de Saint-Gatien"
       ]
     },
     "summary": [
@@ -2206,9 +2224,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/antibes.webp",
-      "width": 960,
-      "height": 697,
+      "src": "images/atlas/iconic-antibes-e5abe918.webp",
+      "width": 1600,
+      "height": 1200,
       "alt": [
         "昂蒂布 · 地点实景图",
         "Antibes · place photograph",
@@ -2217,12 +2235,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Gilbert Bochenek",
-        "url": "https://commons.wikimedia.org/wiki/File:Antibesbordmer.JPG",
-        "license": "CC BY 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "author": "Abxbay",
+        "url": "https://commons.wikimedia.org/wiki/File:ANTIBES_-_Vieille_ville_-_vue_004.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 45%",
+      "caption": [
+        "昂蒂布 · 老城城墙、地中海与远处雪山",
+        "Antibes · old-town ramparts, Mediterranean and distant snowy Alps",
+        "Antibes · remparts, Méditerranée et Alpes enneigées au loin",
+        "Antibes · murallas, Mediterráneo y Alpes nevados al fondo"
+      ]
     },
     "summary": [
       "昂蒂布的城墙面向地中海，老城、港口与毕加索博物馆，让历史和艺术在海边相遇。",
@@ -2352,9 +2376,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/nantes.webp",
-      "width": 954,
-      "height": 626,
+      "src": "images/atlas/iconic-nantes-71a3d5bf.webp",
+      "width": 1600,
+      "height": 923,
       "alt": [
         "南特 · 地点实景图",
         "Nantes · place photograph",
@@ -2363,12 +2387,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Jibi44, avec l'aimable autorisation de LP de Nantes",
-        "url": "https://commons.wikimedia.org/wiki/File:Nantes_a%C3%A9rien_ch%C3%A2teau3.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "François de Dijon",
+        "url": "https://commons.wikimedia.org/wiki/File:Nantes_-_Passage_Pommeraye_2017_-_01.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "南特 · 波默海拱廊的玻璃穹顶与中央阶梯",
+        "Nantes · glass roof and central staircase of Passage Pommeraye",
+        "Nantes · verrière et escalier central du passage Pommeraye",
+        "Nantes · cubierta de vidrio y escalera del Passage Pommeraye"
+      ]
     },
     "summary": [
       "南特沿卢瓦尔河展开，港口历史与公共艺术相互交织，机械岛也为城市留下了富有想象力的景观。",
@@ -2422,9 +2452,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-bordeaux-3228a4e5.webp",
-      "width": 1280,
-      "height": 853,
+      "src": "images/atlas/iconic-bordeaux-944424ff.webp",
+      "width": 1600,
+      "height": 862,
       "alt": [
         "波尔多 · 地点实景图",
         "Bordeaux · place photograph",
@@ -2433,17 +2463,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Patrick Despoix",
-        "url": "https://commons.wikimedia.org/wiki/File:139_-_Place_de_la_Bourse_et_le_miroir_d%27eau_-_Bordeaux.jpg",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Hervé P",
+        "url": "https://commons.wikimedia.org/wiki/File:Miroir_d%27Eau.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
       "position": "50% 50%",
       "caption": [
-        "波尔多 · 交易所广场与水镜",
-        "Bordeaux · Place de la Bourse and Water Mirror",
-        "Bordeaux · place de la Bourse et Miroir d’eau",
-        "Burdeos · plaza de la Bolsa y Espejo de Agua"
+        "波尔多 · 交易所广场与水镜蓝调倒影",
+        "Bordeaux · Place de la Bourse reflected in the Water Mirror",
+        "Bordeaux · place de la Bourse et reflets du Miroir d’eau",
+        "Burdeos · Plaza de la Bolsa reflejada en el Espejo de Agua"
       ]
     },
     "summary": [
@@ -2498,9 +2528,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-lyon-0524e78a.webp",
-      "width": 1280,
-      "height": 881,
+      "src": "images/atlas/iconic-lyon-416f94e7.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "里昂 · 地点实景图",
         "Lyon · place photograph",
@@ -2509,17 +2539,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Tournasol7",
-        "url": "https://commons.wikimedia.org/wiki/File:View_of_Lyon_(6).jpg",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "author": "Radek Kucharski from Warsaw, Poland",
+        "url": "https://commons.wikimedia.org/wiki/File:Lyon_Blue_Hour_(52151428962).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
       },
-      "position": "50% 50%",
+      "position": "50% 35%",
       "caption": [
-        "里昂 · 圣让主教座堂与老城",
-        "Lyon · Saint-Jean Cathedral and old town",
-        "Lyon · cathédrale Saint-Jean et vieille ville",
-        "Lyon · catedral de Saint-Jean y casco antiguo"
+        "里昂 · 蓝调夜色中的富维耶圣母院",
+        "Lyon · Notre-Dame de Fourvière at blue hour",
+        "Lyon · Notre-Dame de Fourvière à l’heure bleue",
+        "Lyon · Notre-Dame de Fourvière en la hora azul"
       ]
     },
     "summary": [
@@ -2574,9 +2604,9 @@
       "Francia"
     ],
     "image": {
-      "src": "images/atlas/editorial-toulouse-047ddd44.webp",
-      "width": 1280,
-      "height": 761,
+      "src": "images/atlas/iconic-toulouse-2f10ec9f.webp",
+      "width": 1600,
+      "height": 962,
       "alt": [
         "图卢兹 · 地点实景图",
         "Toulouse · place photograph",
@@ -2585,17 +2615,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Frédéric Neupont",
-        "url": "https://commons.wikimedia.org/wiki/File:Capitole-27.jpg",
-        "license": "CC0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "author": "Benh LIEU SONG",
+        "url": "https://commons.wikimedia.org/wiki/File:Toulouse_Capitole_Night_Wikimedia_Commons.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       },
-      "position": "50% 20%",
+      "position": "50% 50%",
       "caption": [
-        "图卢兹 · 市政厅广场",
-        "Toulouse · Capitole and square",
-        "Toulouse · Capitole et sa place",
-        "Toulouse · Capitole y su plaza"
+        "图卢兹 · 蓝调卡皮托勒市政厅与奥克十字广场",
+        "Toulouse · Capitole and Occitan cross at blue hour",
+        "Toulouse · Capitole et croix occitane à l’heure bleue",
+        "Toulouse · Capitolio y cruz occitana en la hora azul"
       ]
     },
     "summary": [
@@ -2650,9 +2680,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/z-rich.webp",
-      "width": 960,
-      "height": 524,
+      "src": "images/atlas/iconic-z-rich-e47df924.webp",
+      "width": 1280,
+      "height": 720,
       "alt": [
         "苏黎世 · 地点实景图",
         "Zurich · place photograph",
@@ -2661,12 +2691,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Thomas Wolf, www.foto-tw.de",
-        "url": "https://commons.wikimedia.org/wiki/File:Altstadt_Z%C3%BCrich_2015.jpg",
-        "license": "CC BY-SA 3.0 de",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+        "author": "Kuhnmi",
+        "url": "https://commons.wikimedia.org/wiki/File:Zurich_skyline_blue_hour.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 20%",
+      "caption": [
+        "苏黎世 · 利马特河与老城教堂蓝调全景",
+        "Zürich · Limmat and old-town churches at blue hour",
+        "Zurich · Limmat et églises de la vieille ville à l’heure bleue",
+        "Zúrich · Limmat e iglesias del casco antiguo en la hora azul"
+      ]
     },
     "summary": [
       "苏黎世围绕湖泊与利马特河展开，老城街道与现代城市生活紧密相连。",
@@ -2790,9 +2826,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/interlaken.webp",
-      "width": 960,
-      "height": 709,
+      "src": "images/atlas/iconic-interlaken-392fc925.webp",
+      "width": 1600,
+      "height": 900,
       "alt": [
         "因特拉肯 · 地点实景图",
         "Interlaken · place photograph",
@@ -2801,12 +2837,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Rectilinium",
-        "url": "https://commons.wikimedia.org/wiki/File:Goldswil-Viadukt_Panorama_mit_Interlaken_im_Hintergrund_2.jpg",
-        "license": "CC0",
-        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "author": "Giles Laurent",
+        "url": "https://commons.wikimedia.org/wiki/File:14_Harder_Kulm_Lac_Thoune_Photo_by_Giles_Laurent.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 40%",
+      "caption": [
+        "因特拉肯 · 哈德山远眺图恩湖与阿尔卑斯群峰",
+        "Interlaken · Lake Thun and the Alps from Harder Kulm",
+        "Interlaken · lac de Thoune et Alpes depuis Harder Kulm",
+        "Interlaken · lago de Thun y Alpes desde Harder Kulm"
+      ]
     },
     "summary": [
       "因特拉肯位于图恩湖与布里恩茨湖之间，是走向伯尔尼高地山岳风景的一处门户。",
@@ -2860,9 +2902,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/editorial-thun-b0666bf5.webp",
-      "width": 1280,
-      "height": 957,
+      "src": "images/atlas/iconic-thun-1afba222.webp",
+      "width": 1600,
+      "height": 900,
       "alt": [
         "图恩 · 地点实景图",
         "Thun · place photograph",
@@ -2871,17 +2913,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Thun_Ferries_Wheel_and_Aare_River.jpg",
-        "author": "Fabi Fuu 76",
-        "license": "CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "author": "Bob Tan",
+        "url": "https://commons.wikimedia.org/wiki/File:Thun_Castle_(Schloss_Thun)_from_above_130622.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%",
+      "position": "50% 45%",
       "caption": [
-        "图恩 · 阿勒河与老城",
-        "Thun · Aare and old town",
-        "Thoune · Aar et vieille ville",
-        "Thun · río Aare y casco antiguo"
+        "图恩 · 城堡、老城与图恩湖航拍全景",
+        "Thun · aerial view of the castle, old town and lake",
+        "Thoune · vue aérienne du château, de la vieille ville et du lac",
+        "Thun · vista aérea del castillo, el casco antiguo y el lago"
       ]
     },
     "summary": [
@@ -2936,9 +2978,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/editorial-spiez-be8109f9.webp",
-      "width": 1280,
-      "height": 853,
+      "src": "images/atlas/iconic-spiez-059d3a69.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "施皮茨 · 地点实景图",
         "Spiez · place photograph",
@@ -2947,17 +2989,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Schloss_Spiez_und_Hafen_Spiez.jpg",
-        "author": "Christian David",
+        "author": "JoachimKohler-HB",
+        "url": "https://commons.wikimedia.org/wiki/File:Blick_auf_Schloss_Spiez_und_Thunersee.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 72%",
+      "position": "50% 10%",
       "caption": [
-        "施皮茨 · 城堡、港湾与图恩湖",
-        "Spiez · castle, harbour and Lake Thun",
-        "Spiez · château, port et lac de Thoune",
-        "Spiez · castillo, puerto y lago de Thun"
+        "施皮茨 · 图恩湖前的城堡与葡萄园",
+        "Spiez · castle and vineyards above Lake Thun",
+        "Spiez · château et vignobles au-dessus du lac de Thoune",
+        "Spiez · castillo y viñedos sobre el lago de Thun"
       ]
     },
     "summary": [
@@ -3012,9 +3054,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/lungern.webp",
-      "width": 960,
-      "height": 720,
+      "src": "images/atlas/iconic-lungern-b31d9571.webp",
+      "width": 1600,
+      "height": 645,
       "alt": [
         "龙疆 · 地点实景图",
         "Lungern · place photograph",
@@ -3023,12 +3065,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Timo Newton-Syms from Chalfont St Giles, Bucks, UK",
-        "url": "https://commons.wikimedia.org/wiki/File:Lungerersee_from_Br%C3%BCnigpass.jpg",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "author": "Bob Tan",
+        "url": "https://commons.wikimedia.org/wiki/File:Lake_Lungern_Panorama_1.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%"
+      "position": "50% 50%",
+      "caption": [
+        "龙疆 · 湖湾、村落与瑞士山地全景",
+        "Lungern · lake, village and Alpine panorama",
+        "Lungern · panorama du lac, du village et des Alpes",
+        "Lungern · panorama del lago, el pueblo y los Alpes"
+      ]
     },
     "summary": [
       "龙疆位于卢塞恩与因特拉肯之间，湖水与周围山地为小村庄围出一片清透的风景。",
@@ -3334,9 +3382,9 @@
       "Suiza"
     ],
     "image": {
-      "src": "images/atlas/lauterbrunnen.webp",
-      "width": 960,
-      "height": 645,
+      "src": "images/atlas/iconic-lauterbrunnen-72ad566a.webp",
+      "width": 1600,
+      "height": 1200,
       "alt": [
         "劳特布龙嫩 · 地点实景图",
         "Lauterbrunnen · place photograph",
@@ -3345,12 +3393,18 @@
       ],
       "kind": "reference",
       "credit": {
-        "author": "Chensiyuan",
-        "url": "https://commons.wikimedia.org/wiki/File:1_lauterbrunnen_valley_wengen_2022.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Robin Ulrich",
+        "url": "https://unsplash.com/photos/green-mountains-and-houses-during-daytime-bvSLu1Lew3Y",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%"
+      "position": "50% 25%",
+      "caption": [
+        "劳特布龙嫩 · 村庄、施陶巴赫瀑布与巨大岩壁",
+        "Lauterbrunnen · village, Staubbach Falls and valley cliffs",
+        "Lauterbrunnen · village, chute du Staubbach et falaises",
+        "Lauterbrunnen · pueblo, cascada Staubbach y acantilados"
+      ]
     },
     "summary": [
       "劳特布龙嫩位于陡峭岩壁围成的山谷中，瀑布与村庄让阿尔卑斯风景有了鲜明的纵深。",
@@ -3544,9 +3598,9 @@
       "Alemania"
     ],
     "image": {
-      "src": "images/atlas/editorial-t-bingen-d55ffe1b.webp",
-      "width": 1280,
-      "height": 853,
+      "src": "images/atlas/iconic-t-bingen-c9266596.webp",
+      "width": 1600,
+      "height": 1028,
       "alt": [
         "图宾根 · 地点实景图",
         "Tübingen · place photograph",
@@ -3555,17 +3609,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Eberhardsbr%C3%BCcke_.jpeg",
-        "author": "Subramaniam.kv",
+        "author": "Roman Eisele",
+        "url": "https://commons.wikimedia.org/wiki/File:T%C3%BCbingen_-_Altstadt_-_Neckarfront_-_Ansicht_von_Neckarinsel_in_blauer_Stunde_(1).jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%",
+      "position": "50% 20%",
       "caption": [
-        "图宾根 · 内卡河畔彩色街屋",
-        "Tübingen · colourful houses on the Neckar",
-        "Tübingen · maisons colorées du Neckar",
-        "Tubinga · casas de colores junto al Neckar"
+        "图宾根 · 内卡河畔老城蓝调倒影",
+        "Tübingen · old-town reflections on the Neckar at blue hour",
+        "Tübingen · reflets de la vieille ville sur le Neckar à l’heure bleue",
+        "Tubinga · reflejos del casco antiguo en el Neckar en la hora azul"
       ]
     },
     "summary": [
@@ -3696,9 +3750,9 @@
       "España"
     ],
     "image": {
-      "src": "images/atlas/editorial-barcelona-31b89314.webp",
-      "width": 960,
-      "height": 480,
+      "src": "images/atlas/iconic-barcelona-de1a4548.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "巴塞罗那 · 地点实景图",
         "Barcelona · place photograph",
@@ -3707,17 +3761,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_the_entrance_to_the_Park_G%C3%BCell._Barcelona,_Catalonia,_Spain.jpg",
-        "author": "Mstyslav Chernov",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Logan Armstrong",
+        "url": "https://unsplash.com/photos/aerial-photography-of-city-buildings-during-daytime-hVhfqhDYciU",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
       "position": "50% 50%",
       "caption": [
-        "巴塞罗那 · 古埃尔公园入口全景",
-        "Barcelona · entrance to Park Güell",
-        "Barcelone · entrée du parc Güell",
-        "Barcelona · entrada al parque Güell"
+        "巴塞罗那 · 圣家堂与扩展区街区航拍",
+        "Barcelona · Sagrada Família and Eixample from above",
+        "Barcelone · Sagrada Família et Eixample vus du ciel",
+        "Barcelona · Sagrada Família y Eixample desde el aire"
       ]
     },
     "summary": [
@@ -4036,9 +4090,9 @@
       "Países Bajos"
     ],
     "image": {
-      "src": "images/atlas/editorial-the-hague-53f4e516.webp",
-      "width": 1280,
-      "height": 960,
+      "src": "images/atlas/iconic-the-hague-88807215.webp",
+      "width": 1600,
+      "height": 1067,
       "alt": [
         "海牙 · 地点实景图",
         "The Hague · place photograph",
@@ -4047,17 +4101,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Den_Haag,_het_Binnenhof_diverse_RM_met_de_Hofvijver_op_de_voorgrond_foto8_2015-08-05_18.56.jpg",
-        "author": "Michielverbeek",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "author": "Samuel Girven",
+        "url": "https://unsplash.com/photos/the-peace-palace-glows-at-dusk-in-the-hague-wAaDzrEvYts",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
       },
-      "position": "50% 50%",
+      "position": "50% 0%",
       "caption": [
-        "海牙 · 霍夫湖与内庭建筑群",
-        "The Hague · Hofvijver and Binnenhof",
-        "La Haye · Hofvijver et Binnenhof",
-        "La Haya · Hofvijver y Binnenhof"
+        "海牙 · 和平宫蓝调完整主体",
+        "The Hague · Peace Palace at blue hour",
+        "La Haye · palais de la Paix à l’heure bleue",
+        "La Haya · Palacio de la Paz en la hora azul"
       ]
     },
     "summary": [
@@ -4686,9 +4740,9 @@
       "Finlandia"
     ],
     "image": {
-      "src": "images/atlas/editorial-helsinki-0c0f95fc.webp",
-      "width": 1280,
-      "height": 779,
+      "src": "images/atlas/iconic-helsinki-c733fbaf.webp",
+      "width": 1600,
+      "height": 415,
       "alt": [
         "赫尔辛基 · 地点实景图",
         "Helsinki · place photograph",
@@ -4697,17 +4751,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Ferry_terminal_South_Harbour._Helsinki,_Finland.jpg",
-        "author": "Ввласенко",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Schölla Schwarz",
+        "url": "https://commons.wikimedia.org/wiki/File:Dome_Square_Panorama_-_panoramio.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
       },
       "position": "50% 50%",
       "caption": [
-        "赫尔辛基 · 南港与大教堂",
-        "Helsinki · South Harbour and cathedral",
-        "Helsinki · port du Sud et cathédrale",
-        "Helsinki · puerto Sur y catedral"
+        "赫尔辛基 · 大教堂与参议院广场全景",
+        "Helsinki · cathedral and Senate Square panorama",
+        "Helsinki · panorama de la cathédrale et de la place du Sénat",
+        "Helsinki · panorama de la catedral y la plaza del Senado"
       ]
     },
     "summary": [
@@ -4832,9 +4886,9 @@
       "Luxemburgo"
     ],
     "image": {
-      "src": "images/atlas/editorial-luxembourg-e39184d8.webp",
-      "width": 1280,
-      "height": 887,
+      "src": "images/atlas/iconic-luxembourg-629dea2a.webp",
+      "width": 960,
+      "height": 479,
       "alt": [
         "卢森堡市 · 地点实景图",
         "Luxembourg City · place photograph",
@@ -4843,17 +4897,17 @@
       ],
       "kind": "reference",
       "credit": {
-        "url": "https://commons.wikimedia.org/wiki/File:Luxembourg_Grund_from_Verlorenkost_01.jpg",
-        "author": "Cayambe",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "author": "Denise Hastert",
+        "url": "https://commons.wikimedia.org/wiki/File:Adolphe_Bridge_post_2017_renovation_works_-_7_August_2018.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       },
-      "position": "50% 50%",
+      "position": "50% 35%",
       "caption": [
-        "卢森堡 · 格伦德区河谷",
-        "Luxembourg · Grund valley",
-        "Luxembourg · vallée du Grund",
-        "Luxemburgo · valle del Grund"
+        "卢森堡 · 阿道夫桥全景",
+        "Luxembourg · Adolphe Bridge panorama",
+        "Luxembourg · panorama du pont Adolphe",
+        "Luxemburgo · panorama del puente Adolfo"
       ]
     },
     "summary": [

@@ -46,7 +46,7 @@
 .atlas-canvas { flex:1;min-height:0; }
 #journey-atlas { height:100%; }
 #journey .atlas-postcard { box-sizing:border-box;display:flex;flex-direction:column;height:auto;min-height:var(--atlas-panel-height);min-width:0;overflow:hidden;border:1px solid var(--border-s);border-radius:17px;background:var(--card); }
-#journey .atlas-card-art { position:relative;flex:none;display:grid;place-items:center;height:auto;aspect-ratio:2/1;overflow:hidden;background:var(--surface); }
+#journey .atlas-card-art { position:relative;flex:none;display:grid;place-items:center;height:auto;aspect-ratio:16/9;overflow:hidden;background:var(--surface); }
 #journey .atlas-card-art>span:not(.atlas-photo-kind) { font-size:3rem; }
 #journey .atlas-card-art img { position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in; }
 #journey .atlas-photo-kind { position:absolute;left:12px;bottom:11px;padding:4px 7px;border:1px solid #ffffff25;border-radius:4px;background:#142229ba;color:#f0f5f0;font:500 9px/1.4 var(--sans);backdrop-filter:blur(8px); }
@@ -102,7 +102,7 @@
 @media(max-width:380px) { .atlas-stops button>span:first-child { display:none; } }
 @media(prefers-reduced-motion:reduce) { .atlas-route { animation:none; }.atlas-marker i { transition:none; } }
 
-@media (min-width:701px) and (max-width:1000px) { .atlas-explorer { grid-template-columns:1fr; }.atlas-frame { min-height:0;height:430px; }#journey .atlas-postcard { min-height:0; }#journey .atlas-card-art { aspect-ratio:2.6/1; }#journey .atlas-card-copy { padding:25px 28px; } }
+@media (min-width:701px) and (max-width:1000px) { .atlas-explorer { grid-template-columns:1fr; }.atlas-frame { min-height:0;height:430px; }#journey .atlas-postcard { min-height:0; }#journey .atlas-card-art { aspect-ratio:2/1; }#journey .atlas-card-copy { padding:25px 28px; } }
 #journey .atlas-card-highlights { flex:none;margin:0;gap:6px; }
 #journey .atlas-card-highlights li { font-size:11px;line-height:1.5;padding:4px 7px; }
 @media (max-width:700px) { #journey .atlas-card-intro { font-size:14px;line-height:1.9; }#journey .atlas-card-art { aspect-ratio:16/10; } }
