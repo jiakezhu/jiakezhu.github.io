@@ -30,7 +30,7 @@
 .comic-arrow:hover:not(:disabled) { border-color:var(--sage); background:var(--card); }
 .comic-arrow:disabled { opacity:.28; cursor:default!important; }
 .comic-progress { height:2px; background:var(--border-s); }
-.comic-progress>span { display:block; height:100%; width:6.25%; background:var(--sage); transition:width .2s; }
+.comic-progress>span { display:block; height:100%; width:0; background:var(--sage); transition:width .2s; }
 .comic-chapter-nav { max-width:920px; margin:20px auto 0; padding:0 28px; display:flex; gap:8px; flex-wrap:wrap; }
 .comic-chapter-nav a { padding:7px 12px; border-radius:25px; border:1px solid var(--border-s); font-size:.7rem; color:var(--muted); }
 .comic-chapter-nav a:hover,.comic-chapter-nav a[aria-current="true"] { color:var(--text); border-color:var(--sage); background:color-mix(in srgb,var(--sage) 8%,var(--bg)); }
@@ -48,6 +48,13 @@
 .comic-caption { margin:0; padding:17px 21px 19px; font-size:1rem; line-height:1.7; font-weight:550; }
 .comic-caption p { margin:0; }
 .comic-caption p+p { margin-top:10px; }
+.comic-artwork-link { display:block; cursor:zoom-in; background:#e9e4d9; }
+.comic-artwork-link picture { display:block; }
+.comic-artwork-link img { display:block; width:100%; height:auto; max-width:100%; }
+.comic-artwork-link:focus-visible { outline:3px solid var(--sage); outline-offset:-3px; }
+.comic-panel--composed .comic-narration { padding:25px 28px 29px; }
+.comic-narration p { max-width:66ch; margin-inline:auto; }
+.comic-narration p+p { margin-top:15px; }
 .comic-caption .comic-key-line { font-size:clamp(1.14rem,2.5vw,1.45rem); font-weight:800; line-height:1.5; letter-spacing:-.025em; }
 .comic-page-turn { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:29px 0; margin-top:8px; border-bottom:1px solid var(--border-s); }
 .comic-page-turn a { display:flex; flex-direction:column; gap:4px; font-size:.87rem; font-weight:750; max-width:44%; }
@@ -85,6 +92,7 @@
   .comic-panels { gap:16px; }
   .comic-panel { border-radius:8px; }
   .comic-caption { padding:15px 17px 17px; font-size:1rem; line-height:1.7; }
+  .comic-panel--composed .comic-narration { padding:20px 18px 23px; }
   .comic-page-turn { padding:24px 0; }
   .comic-page-turn a { font-size:.8rem; }
   .comic-footer { padding-inline:20px; font-size:.66rem; }

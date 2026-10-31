@@ -2,8 +2,8 @@
   "ui": {
     "en": {
       "eyebrow": "Life, frame by frame · A personal memoir",
-      "intro": "From a coastal village in Ningbo to Paris, teaching, and building with AI. The moments that shaped me, told in sixteen illustrated chapters.",
-      "description": "A personal story in sixteen illustrated chapters: growing up on the coast, finding confidence, learning languages, teaching, Paris and building with AI.",
+      "intro": "A year in Paris would delay graduation. Before that choice came a truck window, difficult school years, family beside me and a voice I began to share.",
+      "description": "An illustrated personal memoir about leaving home, facing setbacks, family, language, teaching and choosing to go.",
       "skip": "Skip to the comic",
       "navLabel": "Main navigation",
       "myStory": "← My story",
@@ -32,18 +32,18 @@
       "entryLabel": "Life in frames",
       "entryLead": "I wanted to see",
       "entryAccent": "the world.",
-      "entryIntro": "A coastal village, the long road to confidence, and the languages that opened my world. Sixteen illustrated chapters, from childhood to what I am building today.",
-      "entryCount": "16 chapters",
+      "entryIntro": "Going to Paris meant graduating a year later. A story about how I came to make that choice, and the people and languages that helped me along the way.",
+      "entryCount": "8 pages",
       "entryCoverRead": "Read my story",
       "entryReadAria": "Read I Wanted to See the World",
-      "entryCoverAlt": "A cargo truck leaving a coastal village in Ningbo",
+      "entryCoverAlt": "A young man pauses before a year-long exchange, with his travel bag by the window.",
       "entryReadAtPace": "Read in your language · At your own pace.",
       "range": "Pages {start}–{end} ↗"
     },
     "zh": {
       "eyebrow": "一格一格，画下成长 · 我的故事",
-      "intro": "从宁波的沿海村庄，到巴黎、教书和用AI构建。用十六个图画章节，讲述那些塑造我的片刻。",
-      "description": "十六个图画章节里的成长故事：海边童年、找回自信、学习语言、教书、巴黎与用AI构建。",
+      "intro": "去巴黎，就要晚一年毕业。那个选择之前，有一扇货车车窗，有过不去的心结，也有人一直陪着。",
+      "description": "从一次真实选择展开的成长漫画：海边童年、求学受挫、家人陪伴、语言与持续教学。",
       "skip": "跳到漫画",
       "navLabel": "主导航",
       "myStory": "← 我的故事",
@@ -70,20 +70,20 @@
       "darkTheme": "切换深色主题",
       "lightTheme": "切换浅色主题",
       "entryLabel": "成长漫画",
-      "entryLead": "我想去看看",
-      "entryAccent": "更大的世界。",
-      "entryIntro": "从沿海村庄出发，走过找回自信的漫长旅程，用语言打开世界。十六个图画章节，讲述从童年到今天的成长。",
-      "entryCount": "16个章节",
+      "entryLead": "我想出去",
+      "entryAccent": "看看。",
+      "entryIntro": "去巴黎，就要晚一年毕业。关于我怎样走到这个选择，以及一路陪着我的人和语言。",
+      "entryCount": "8页",
       "entryCoverRead": "翻开我的故事",
-      "entryReadAria": "阅读《我想去看看世界》",
-      "entryCoverAlt": "一辆货车驶离宁波的沿海村庄",
+      "entryReadAria": "阅读《我想出去看看》",
+      "entryCoverAlt": "青年在交换出发前停顿，旅行袋放在窗边。",
       "entryReadAtPace": "用你的语言，慢慢读。",
       "range": "第{start}–{end}页 ↗"
     },
     "fr": {
       "eyebrow": "La vie, case par case · Un récit personnel",
-      "intro": "D’un village côtier de Ningbo à Paris, à l’enseignement et à la création avec l’IA. Les moments qui m’ont façonné, en seize chapitres illustrés.",
-      "description": "Un récit personnel en seize chapitres illustrés : l’enfance sur la côte, la confiance retrouvée, les langues, l’enseignement, Paris et la création avec l’IA.",
+      "intro": "Partir à Paris repoussait mon diplôme d’un an. Avant ce choix, il y avait une vitre de camion, des années difficiles, ma famille et une voix à partager.",
+      "description": "Un récit personnel illustré : l’enfance sur la côte, les épreuves, la famille, les langues, l’enseignement et le choix de partir.",
       "skip": "Aller à la bande dessinée",
       "navLabel": "Navigation principale",
       "myStory": "← Mon histoire",
@@ -112,18 +112,18 @@
       "entryLabel": "La vie en images",
       "entryLead": "Je voulais découvrir",
       "entryAccent": "le monde.",
-      "entryIntro": "Un village côtier, le long chemin vers la confiance et les langues qui ont ouvert mon monde. Seize chapitres illustrés, de l’enfance à mes projets d’aujourd’hui.",
-      "entryCount": "16 chapitres",
+      "entryIntro": "Partir à Paris signifiait obtenir mon diplôme un an plus tard. Comment ce choix a pris forme, avec les personnes et les langues qui m’ont accompagné.",
+      "entryCount": "8 pages",
       "entryCoverRead": "Ouvrir mon histoire",
       "entryReadAria": "Lire Je voulais découvrir le monde",
-      "entryCoverAlt": "Un camion quitte un village côtier de Ningbo",
+      "entryCoverAlt": "Un jeune homme marque une pause avant son échange ; son sac est près de la fenêtre.",
       "entryReadAtPace": "Dans votre langue, à votre rythme.",
       "range": "Pages {start}–{end} ↗"
     },
     "es": {
       "eyebrow": "La vida, viñeta a viñeta · Un relato personal",
-      "intro": "De un pueblo costero de Ningbo a París, a la enseñanza y a crear con IA. Los momentos que me marcaron, en dieciséis capítulos ilustrados.",
-      "description": "Una historia personal en dieciséis capítulos ilustrados: crecer en la costa, recuperar la confianza, aprender idiomas, enseñar, París y crear con IA.",
+      "intro": "Ir a París retrasaba mi graduación un año. Antes de esa decisión hubo una ventanilla de camión, años difíciles, mi familia y una voz que compartir.",
+      "description": "Un relato personal ilustrado sobre la infancia costera, los tropiezos, la familia, los idiomas, la enseñanza y la decisión de partir.",
       "skip": "Ir al cómic",
       "navLabel": "Navegación principal",
       "myStory": "← Mi historia",
@@ -152,260 +152,112 @@
       "entryLabel": "La vida en viñetas",
       "entryLead": "Quería conocer",
       "entryAccent": "el mundo.",
-      "entryIntro": "Un pueblo costero, el largo camino hacia la confianza y los idiomas que abrieron mi mundo. Dieciséis capítulos ilustrados, desde la infancia hasta lo que construyo hoy.",
-      "entryCount": "16 capítulos",
+      "entryIntro": "Ir a París significaba graduarme un año más tarde. Cómo llegué a esa decisión, con las personas y los idiomas que me acompañaron.",
+      "entryCount": "8 páginas",
       "entryCoverRead": "Abrir mi historia",
       "entryReadAria": "Leer Quería conocer el mundo",
-      "entryCoverAlt": "Un camión sale de un pueblo costero de Ningbo",
+      "entryCoverAlt": "Un joven se detiene antes del intercambio; su bolsa está junto a la ventana.",
       "entryReadAtPace": "En tu idioma, a tu ritmo.",
       "range": "Páginas {start}–{end} ↗"
     }
   },
   "locales": {
     "zh": {
-      "title": "我想去看看世界",
+      "title": "我想出去看看",
       "chapters": [
-        "从海边出发",
-        "寻找自己的路",
-        "人生的转折",
-        "更大的世界"
+        "要不要出发",
+        "来路",
+        "找回声音",
+        "把窗打开"
       ],
       "pages": [
         [
-          "最早的远行",
+          "选择的代价",
           [
-            "我在宁波咸祥镇的一个沿海村庄长大。",
-            "小时候，我经常住在爸爸的货车上，跟着他一起运货。",
-            "那是我最早看见家乡之外的世界的方式。"
-          ],
-          [
-            "货车行驶在宁波沿海村庄的道路上。",
-            "男孩坐在货车驾驶室里，身旁是开车的父亲。",
-            "男孩望向货车窗外，看着远处的道路。"
-          ]
-        ],
-        [
-          "家乡之外的世界",
-          [
-            "每年过年去亲戚家，是我见识城市生活的机会。",
-            "姐姐会带我出去玩，那些是我最温暖的童年记忆之一。",
-            "我逐渐相信，好好读书是我走出去的路。",
-            "考上一所好大学，就能打开更多可能。"
-          ],
-          [
-            "一家人在春节期间去探望亲戚。",
-            "姐姐陪弟弟一起玩耍。",
-            "男孩在家里的书桌前读书。",
-            "男孩从书本中抬起头，望向窗外。"
-          ]
-        ],
-        [
-          "跑步、跳高与篮球",
-          [
-            "小学四年级，我代表咸祥镇参加比赛，拿到了鄞州区跳高第一名。",
-            "同一次比赛，我还拿到了800米第四名。",
-            "我一直坚持训练。到了初中，我经常在学校400米和800米比赛中拿第一。",
-            "我从三年级开始打篮球，六年级就能做胯下上篮。"
-          ],
-          [
-            "小学生在跳高比赛中越过横杆。",
-            "男孩参加800米赛跑。",
-            "初中生冲过学校赛跑的终点线。",
-            "男孩在篮球场上完成上篮。"
-          ]
-        ],
-        [
-          "差一点打开的门",
-          [
-            "初一、初二时，我的成绩不太均衡，有些偏科。",
-            "到了初三，我终于追了上来。",
-            "我获得了一所省重点高中的保送考试资格。",
-            "但最后，我没有达到考试的最低分数。"
-          ],
-          [
-            "初中生面对不同学科的课本。",
-            "学生越来越专注地复习。",
-            "学生满怀期待地面对升学机会。",
-            "得知考试结果后，学生安静地失落着。"
-          ]
-        ],
-        [
-          "重新回到书桌前",
-          [
-            "那次失利对我打击很大，它的阴影在此后很多年都没有散去。",
-            "带着巨大的压力，我重新开始准备中考。",
-            "最终，我考到了班级第一。",
-            "我进入了宁波市正始中学，但与自己原来的期待仍有距离。"
-          ],
-          [
-            "考试失利后，学生独自坐着。",
-            "学生重新投入中考复习。",
-            "学生拿着自己的班级成绩。",
-            "学生走进宁波的一所高中校园。"
-          ]
-        ],
-        [
-          "在别人的目光里",
-          [
-            "进入高中后，随着发育，我的地包天越来越严重。",
-            "我被取了伤人的外号，也遭到过嘲笑。",
-            "我越来越在意别人怎么看我，慢慢失去了自信。",
-            "和别人相处，也渐渐变成一件有压力的事。"
-          ],
-          [
-            "高中生在镜子里看见自己明显的下颌特征。",
-            "学生在学校走廊里感到局促。",
-            "学生与人群保持着距离。",
-            "学生独自走向宿舍。"
-          ]
-        ],
-        [
-          "夜里的那盏灯",
-          [
-            "有些夜晚，我躲在宿舍的厕所里哭。",
-            null,
-            "我很早起床，很晚才睡，把大部分时间都投入了学习。",
-            "高二、高三时，我经常考到年级第一。英语一直是我很自然就能学好的科目。"
-          ],
-          [
-            "安静的宿舍走廊，学生站在厕所门口。",
-            "学生擦去眼泪，术前的下颌特征清晰可见。",
-            "学生在夜里借着温暖的台灯学习。",
-            "学生专注地读着英语课本。"
-          ]
-        ],
-        [
-          "学习，也开始教书",
-          [
-            "高考的结果，没有达到我的预期。",
-            "我放弃了省外的一所211高校，选择了浙江工商大学。",
-            "高中毕业后，我开始教英语，也一直教到了现在。",
-            "我喜欢语言，也相信自己能学好，所以选择了法语专业。",
-            "大学让我更自由了，但下颌带来的心理困扰仍然没有消失。"
-          ],
-          [
-            "高中毕业生思考自己的高考成绩。",
-            "毕业生权衡大学选择。",
-            "年轻人开始教英语。",
-            "大学生翻开法语课本。",
-            "术前的大学生走在校园里。"
-          ]
-        ],
-        [
-          "家人在我身边",
-          [
-            "家人带我去上海第九人民医院面诊。",
-            "我决定接受正颌手术。",
-            "在手术之前，我需要先做正畸治疗。",
-            "这段过程持续了两年多，比我预想的长得多。"
-          ],
-          [
-            "年轻人与家人在医院候诊。",
-            "一家人听医生介绍治疗方案。",
-            "正颌手术前的一次正畸就诊。",
-            "翻过的日历页暗示着漫长的治疗等待。"
-          ]
-        ],
-        [
-          "漫长等待之后",
-          [
-            "治疗期间，地包天变得更加明显，心理压力也越来越重。",
-            "我减少了社交，全身心投入学习，专业成绩和综合排名一直保持第一。",
-            "大三下学期，我终于接受了手术。",
+            "去巴黎第一大学交换一学年，就意味着晚一年毕业。我想了很久。",
             null
           ],
           [
-            "大学生在正畸治疗期间独自坐着。",
-            "大学生认真学习，术前的下颌特征清晰可见。",
-            "手术前，年轻人与家人坐在一起。",
-            "手术后，年轻人在医院窗边休息。"
+            "青年站在安静的大学房间里；下方特写中，手停在普通旅行资料旁。"
           ]
         ],
         [
-          "明亮起来的日子",
+          "爸爸身边的世界",
           [
-            "手术改变了我的外貌，我开始重新找回面对日常生活的自信。",
-            "两个月后，我成功保研到西南财经大学国际商学院。",
-            "我也拿到了国家奖学金。经历了那么多压力和等待，那是人生里一个很明亮的时刻。"
+            "我在宁波咸祥的沿海村庄长大。最早的远行，是跟着爸爸的货车一起运货。",
+            "我常住在他的货车里。过年去亲戚家，姐姐带我出去玩，城里的生活才离我近了一点。",
+            "小学四年级，我拿过鄞州区跳高第一。后来，跑道和篮球场也一直有我的身影。"
           ],
           [
-            "术后的大学生走在校园里。",
-            "学生收到研究生推免录取的消息。",
-            "学生拿着文件夹，站在温暖的校园阳光下。"
+            "货车沿宁波海岸行驶；孩子坐在父亲身边；同一个少年越过跳高横杆。"
           ]
         ],
         [
-          "走进工作的世界",
+          "差一点",
           [
-            "保研之后，我去杭州的一家芬兰企业Mingle Advisors实习。",
-            "毕业后，我到宁波凯越集团做法语海外销售，促成了近100万美元的订单。",
-            "然后，我去成都读研究生。",
-            "成都是一段幸福的日子。我一边读书，一边在成都法语联盟实习，也继续教英语。"
+            "初三，我拿到了省重点中学的保送考试资格，却没达到最低分数。那次失利，压了我很久。",
+            "重新备考后，我以班级第一进入正始中学。成绩追上来了，心里那个“差一点”还在。",
+            "高考后，我放弃省外的211，选择浙江工商大学。下一段路，从这里开始。"
           ],
           [
-            "在杭州一家公司的办公室里实习。",
-            "在宁波从事海外销售工作。",
-            "抵达成都，开始研究生生活。",
-            "在成都学习并准备语言课程。"
+            "手握着没有具体分数的结果纸；学生独自在高中走廊；稍年长的青年穿过大学庭院。"
           ]
         ],
         [
-          "选择出发",
+          "有人陪着",
           [
-            "后来，我又面临一个选择：要不要出国交换？",
-            "如果去，就意味着要延毕。",
-            "我想了很久。从小到大，我都想去看看世界。",
-            "我选择去巴黎第一大学交换一学年。"
+            "高中以后，严重地包天越来越明显。外号、嘲笑，让我害怕别人的目光。有些夜晚，我躲在宿舍厕所里哭。",
+            null,
+            "后来，家人陪我去上海九院面诊。我决定接受正颌手术。",
+            "术前正畸持续了两年多。等待的日子，比我想象中漫长。"
           ],
           [
-            "阅读海外交换项目的资料。",
-            "在出国交换和延迟毕业之间权衡。",
-            "望向窗外的场景，呼应着童年在货车上的远行。",
-            "准备交换申请材料与行李。"
+            "青年自然侧面明确呈现术前严重地包天；安静的厕所门口、家人陪伴的候诊室和复诊物件表现漫长等待。"
           ]
         ],
         [
-          "新的方向",
+          "声音有了去处",
           [
-            "出发前，我在成都的字节跳动做了四个月海外人才引进实习。",
-            "我支持字节Seed AI团队在北美招募顶尖人才。",
-            "这段经历带我走进了AI领域，也让我不断深入学习。",
-            "带着正在形成的新方向，我飞往巴黎。"
+            "大学里，我读法语。还有一件事，也一直穿过这些年：教英语。",
+            "教学从高中毕业后就开始了，陪我走过求学、治疗和后来的生活。",
+            "大三下学期，我终于做了手术，开始慢慢找回面对生活的信心。",
+            "此前，我的专业成绩和综合表现一直保持第一。两个月后，保研西南财大和国家奖学金接连而来。"
           ],
           [
-            "在成都进行海外人才招聘实习。",
-            "参与一次远程人才沟通。",
-            "通过书本与笔记学习AI。",
-            "在前往巴黎的飞机上望向窗外。"
+            "法语学习与站立授课同治疗时期并行；之后是克制的恢复静景与开阔校园，不出现医疗操作或虚构颁奖。"
           ]
         ],
         [
-          "我世界的边界",
+          "这一次，我选择出发",
           [
-            "在巴黎的那一年，我还学习了一年的西班牙语。",
-            "我一直热爱语言，也走过巴黎、法国和欧洲的其他地方。",
-            "语言的边界，就是我世界的边界。"
+            "回到那个选择，我最终决定去巴黎。",
+            "出发前，在字节跳动支持Seed团队海外人才寻访的四个月，让我开始认真走近AI。",
+            "带着新的方向，我出发了。"
           ],
           [
-            "交换生在巴黎的西班牙语课堂上做笔记。",
-            "学生背着包，探索欧洲的街道。",
-            "学生走在阳光下的巴黎街头。"
-          ],
-          "那个想去看看世界的小孩，终于走到了这里。"
+            "手整理行李；背后宽景表现不含候选人隐私的人才寻访支持；远处旅人穿过航站通道。"
+          ]
         ],
         [
-          "仍在探索",
+          "能说出的世界",
           [
-            "从巴黎回国后，我来到腾讯云做直客销售实习。",
-            "对AI的了解帮我找到了方向。我继续用AI构建，也不断深入学习云计算。",
-            "从高中毕业起，我就一直在教英语。多年的经验，让我对教学的热情越来越深。",
-            "语言打开了我的世界，而我还有很多地方想去探索。"
+            "在巴黎第一大学交换的那一年，我也学了一年西班牙语。",
+            null,
+            "语言的边界，就是我世界的边界。那个坐在货车里想出去看看的孩子，真的走到了这里。"
           ],
           [
-            "开始从事云计算销售工作。",
-            "在电脑上用AI构建与学习。",
-            "充满自信与热情地教英语。",
-            "窗边放着书和电脑，年轻人望向远处。"
+            "巴黎的西语学习、从容的街角与塞纳河边的全身行走镜头，为故事留下呼吸。"
+          ]
+        ],
+        [
+          "窗外，还有新的世界",
+          [
+            "回国后，我来到腾讯云做直客销售实习，继续学习云计算，也继续用AI做东西。",
+            "英语也还在教。从高中毕业到现在，这件事一直没停。",
+            "走出去以后，又有了想探索的新世界。"
+          ],
+          [
+            "宽景工作沟通、投入的英语教学与开阔海岸回应童年的车窗，不以摆拍式成功合影收场。"
           ]
         ]
       ]
@@ -413,247 +265,99 @@
     "fr": {
       "title": "Je voulais découvrir le monde",
       "chapters": [
-        "Depuis la côte",
-        "Trouver ma voie",
-        "Un tournant",
-        "Un monde plus vaste"
+        "Le choix",
+        "Avant le voyage",
+        "Trouver ma voix",
+        "Ouvrir la fenêtre"
       ],
       "pages": [
         [
-          "Les premiers voyages",
+          "Le prix du départ",
           [
-            "J’ai grandi dans un village côtier de Xianxiang, à Ningbo.",
-            "Enfant, je vivais souvent dans le camion de mon père et l’accompagnais pendant ses livraisons.",
-            "C’était ma première fenêtre sur le monde au-delà de chez moi."
-          ],
-          [
-            "Un camion de marchandises traverse un village côtier de Ningbo.",
-            "Un garçon voyage dans la cabine du camion, à côté de son père.",
-            "Le garçon regarde la route au loin par la fenêtre du camion."
-          ]
-        ],
-        [
-          "Au-delà de chez moi",
-          [
-            "Les visites chez des proches pour le Nouvel An chinois me permettaient de découvrir la vie en ville.",
-            "Ma sœur m’emmenait jouer. Ce sont parmi mes souvenirs d’enfance les plus chaleureux.",
-            "J’ai fini par croire que les études étaient ma chance de partir.",
-            "Une bonne université pourrait m’ouvrir davantage de possibilités."
-          ],
-          [
-            "Une famille rend visite à des proches pour le Nouvel An chinois.",
-            "Une grande sœur joue avec son petit frère.",
-            "Le garçon étudie à son bureau, chez lui.",
-            "Le garçon lève les yeux de son livre vers la fenêtre."
-          ]
-        ],
-        [
-          "Courir, sauter, jouer",
-          [
-            "En quatrième année de primaire, j’ai représenté Xianxiang et remporté le concours de saut en hauteur du district de Yinzhou.",
-            "J’ai aussi terminé quatrième du 800 mètres.",
-            "J’ai continué à m’entraîner. Au collège, je remportais souvent les courses de 400 et 800 mètres de l’établissement.",
-            "J’ai commencé le basket en troisième année de primaire. En sixième année, je savais déjà faire un lay-up en passant le ballon entre mes jambes."
-          ],
-          [
-            "Un écolier franchit la barre lors d’un concours de saut en hauteur.",
-            "Le garçon court un 800 mètres.",
-            "Un collégien franchit la ligne d’arrivée.",
-            "Un garçon réalise un lay-up sur un terrain de basket."
-          ]
-        ],
-        [
-          "La porte presque ouverte",
-          [
-            "Mes résultats étaient inégaux pendant mes deux premières années de collège.",
-            "En dernière année, j’ai rattrapé mon retard.",
-            "J’ai obtenu le droit de passer un examen d’admission spécial dans un lycée d’excellence de la province.",
-            "Mais je n’ai pas atteint la note minimale."
-          ],
-          [
-            "Un collégien face aux manuels de plusieurs matières.",
-            "L’élève révise avec une concentration croissante.",
-            "L’élève envisage une possibilité d’admission avec espoir.",
-            "L’élève reçoit ses résultats avec une déception silencieuse."
-          ]
-        ],
-        [
-          "Retour au bureau",
-          [
-            "Cet échec m’a profondément marqué. Son ombre m’a accompagné pendant des années.",
-            "Sous une immense pression, j’ai repris la préparation de l’examen ordinaire d’entrée au lycée.",
-            "J’ai finalement terminé premier de ma classe.",
-            "Je suis entré au lycée Zhengshi, à Ningbo, encore loin de ce que j’avais espéré."
-          ],
-          [
-            "Un élève assis seul après un examen décevant.",
-            "L’élève reprend ses révisions pour l’entrée au lycée.",
-            "L’élève tient ses résultats de classe.",
-            "L’élève entre dans un lycée de Ningbo."
-          ]
-        ],
-        [
-          "Sous le regard des autres",
-          [
-            "En grandissant au lycée, ma mâchoire inférieure s’est avancée de façon très marquée.",
-            "On m’a donné des surnoms blessants et on s’est moqué de moi.",
-            "Le regard des autres est devenu douloureusement présent. Ma confiance s’est effacée.",
-            "Être avec les autres est peu à peu devenu une source de stress."
-          ],
-          [
-            "Un lycéen observe sa mâchoire inférieure avancée dans le miroir.",
-            "L’élève se sent mal à l’aise dans un couloir du lycée.",
-            "L’élève reste à l’écart d’un groupe.",
-            "L’élève marche seul vers son dortoir."
-          ]
-        ],
-        [
-          "Une lumière dans la nuit",
-          [
-            "Certaines nuits, je me cachais dans les toilettes du dortoir pour pleurer.",
-            null,
-            "Je me levais tôt, me couchais tard et consacrais une grande partie de mon temps aux études.",
-            "Pendant mes deux dernières années de lycée, j’étais souvent premier de ma promotion. L’anglais m’avait toujours semblé naturel."
-          ],
-          [
-            "Un couloir de dortoir silencieux et un élève à la porte des toilettes.",
-            "L’élève essuie ses larmes ; sa mâchoire avant l’opération reste bien visible.",
-            "L’élève étudie la nuit sous une lampe de bureau chaleureuse.",
-            "L’élève se concentre sur un manuel d’anglais."
-          ]
-        ],
-        [
-          "Apprendre et enseigner",
-          [
-            "Mon examen d’entrée à l’université ne s’est pas aussi bien passé que je l’espérais.",
-            "J’ai choisi l’Université Zhejiang Gongshang plutôt qu’une université du programme 211 située hors du Zhejiang.",
-            "Après le lycée, j’ai commencé à enseigner l’anglais. Je n’ai jamais cessé depuis.",
-            "J’aimais les langues et je croyais en ma capacité à les apprendre ; j’ai donc choisi le français comme spécialité.",
-            "L’université m’a donné plus de liberté, mais la souffrance liée à ma mâchoire persistait."
-          ],
-          [
-            "Un bachelier réfléchit à ses résultats d’entrée à l’université.",
-            "Le jeune diplômé compare ses choix universitaires.",
-            "Le jeune homme commence à enseigner l’anglais.",
-            "Un étudiant ouvre un manuel de français.",
-            "L’étudiant traverse le campus avant son opération de la mâchoire."
-          ]
-        ],
-        [
-          "Ma famille à mes côtés",
-          [
-            "Ma famille m’a accompagné au Neuvième Hôpital du Peuple de Shanghai pour une consultation.",
-            "J’ai décidé de subir une chirurgie corrective des mâchoires.",
-            "Avant l’opération, je devais suivre un traitement orthodontique.",
-            "Il a duré plus de deux ans, bien plus longtemps que prévu."
-          ],
-          [
-            "Un jeune homme et sa famille dans une salle d’attente de l’hôpital.",
-            "La famille écoute le médecin pendant une consultation.",
-            "Un rendez-vous d’orthodontie avant la chirurgie des mâchoires.",
-            "Des pages de calendrier évoquent la longue attente du traitement."
-          ]
-        ],
-        [
-          "Après la longue attente",
-          [
-            "Pendant le traitement, le décalage de ma mâchoire s’est accentué et la souffrance psychologique a grandi.",
-            "Je me suis retiré de la vie sociale pour me concentrer sur les études. Je suis resté premier de ma spécialité, tant pour les résultats que pour le classement global.",
-            "Au second semestre de ma troisième année, j’ai enfin été opéré.",
+            "Une année d’échange à Paris 1 signifiait obtenir mon diplôme un an plus tard. J’ai longuement réfléchi à ce choix.",
             null
           ],
           [
-            "Un étudiant assis seul pendant son traitement orthodontique.",
-            "L’étudiant travaille ; sa mâchoire avant l’opération est bien visible.",
-            "Le jeune homme avec un membre de sa famille avant l’opération.",
-            "Le jeune homme se repose près d’une fenêtre à l’hôpital après l’opération."
+            "Un jeune homme dans une chambre universitaire calme ; sa main reste immobile près de documents de voyage sans texte."
           ]
         ],
         [
-          "Un chapitre plus lumineux",
+          "Le monde à côté de papa",
           [
-            "L’opération a changé mon apparence. J’ai commencé à retrouver la confiance nécessaire pour vivre mon quotidien.",
-            "Deux mois plus tard, j’ai été admis sur recommandation en master à l’École de commerce international de l’Université de finance et d’économie du Sud-Ouest.",
-            "J’ai aussi reçu la bourse nationale. Après tant de pression et d’attente, ce fut un moment lumineux de ma vie."
+            "J’ai grandi dans un village côtier de Xianxiang, à Ningbo. Mes premiers voyages se faisaient dans le camion de livraison de mon père.",
+            "J’y restais souvent avec lui. Au Nouvel An, les visites à la famille et les sorties avec ma sœur rapprochaient un peu la vie en ville.",
+            "À l’école primaire, j’ai remporté le saut en hauteur du district. La course et le basket ont aussi accompagné mes années d’école."
           ],
           [
-            "Un étudiant marche sur le campus après son opération de la mâchoire.",
-            "L’étudiant apprend son admission en master.",
-            "L’étudiant tient un dossier dans la lumière chaleureuse du campus."
+            "Un camion longe la côte de Ningbo ; un enfant voyage avec son père ; le même garçon franchit une barre de saut en hauteur."
           ]
         ],
         [
-          "Entrer dans le monde du travail",
+          "Tout près du seuil",
           [
-            "Après avoir obtenu ma place en master, j’ai fait un stage chez Mingle Advisors, une entreprise finlandaise à Hangzhou.",
-            "Après mon diplôme, j’ai travaillé dans la vente à l’export vers les marchés francophones chez Market Union, à Ningbo, et contribué à conclure près d’un million de dollars de commandes.",
-            "Puis je suis parti à Chengdu pour mon master.",
-            "Chengdu a été un chapitre heureux. J’y étudiais, faisais un stage à l’Alliance Française et continuais à enseigner l’anglais."
+            "J’ai pu passer l’examen d’admission spécial d’un grand lycée, sans atteindre le score minimum. Cet échec m’a longtemps pesé.",
+            "J’ai repris les révisions, fini premier de ma classe et intégré le lycée Zhengshi. Cela restait loin de ce que j’avais espéré.",
+            "Le concours d’entrée à l’université n’a pas non plus répondu à mes attentes. J’ai choisi l’Université Gongshang du Zhejiang plutôt qu’une université du programme 211 hors de la province."
           ],
           [
-            "Un stage dans les bureaux d’une entreprise à Hangzhou.",
-            "Un travail de vente à l’export à Ningbo.",
-            "L’arrivée à Chengdu pour des études de master.",
-            "Étudier et préparer des cours de langues à Chengdu."
+            "Une main tient un résultat sans score lisible ; un élève est seul dans un couloir ; plus âgé, il traverse une cour universitaire."
           ]
         ],
         [
-          "Choisir de partir",
+          "Quelqu’un à mes côtés",
           [
-            "Une autre décision s’est alors présentée : devais-je partir en échange à l’étranger ?",
-            "Partir signifiait retarder l’obtention de mon diplôme.",
-            "J’y ai longtemps réfléchi. Depuis l’enfance, je voulais découvrir le monde.",
-            "J’ai choisi un échange d’une année à l’Université Paris 1 Panthéon-Sorbonne."
+            "Mon prognathisme s’accentuait. Surnoms et moqueries m’ont rendu le regard des autres difficile à supporter. Certaines nuits, je me cachais dans les toilettes du dortoir pour pleurer.",
+            null,
+            "Ma famille m’a accompagné à l’hôpital du Peuple n° 9 de Shanghai. J’ai décidé de subir une chirurgie corrective de la mâchoire.",
+            "Il fallait d’abord un traitement orthodontique. Il a duré plus de deux ans, bien plus longtemps que je ne l’avais imaginé."
           ],
           [
-            "Lecture des informations sur un programme d’échange à l’étranger.",
-            "Réflexion entre un échange et une fin d’études plus tardive.",
-            "Une scène à la fenêtre fait écho aux voyages en camion de l’enfance.",
-            "Préparation du dossier d’échange et des bagages."
+            "Le profil préopératoire du jeune homme montre son prognathisme avec respect ; une porte calme, sa famille en salle d’attente et des objets de suivi évoquent le temps."
           ]
         ],
         [
-          "Une nouvelle direction",
+          "Trouver ma voix",
           [
-            "Avant de partir, j’ai effectué quatre mois de stage en recrutement international chez ByteDance, à Chengdu.",
-            "J’ai aidé l’équipe Seed AI de ByteDance à recruter des talents de premier plan en Amérique du Nord.",
-            "Cette expérience m’a fait entrer dans l’univers de l’IA et m’a poussé à approfondir mes connaissances.",
-            "Avec cette nouvelle direction qui se dessinait, je suis parti pour Paris."
+            "À l’université, j’étudiais le français. Un autre fil traversait ces années : enseigner l’anglais.",
+            "J’avais commencé après le lycée. J’ai continué à enseigner pendant mes études, mon traitement et la suite de mon parcours.",
+            "Au second semestre de ma troisième année, l’opération a enfin eu lieu. Ensuite, j’ai commencé à retrouver confiance dans la vie quotidienne.",
+            "J’étais régulièrement premier de ma spécialité. Deux mois après l’opération sont venus mon admission recommandée à SWUFE et la bourse nationale."
           ],
           [
-            "Un stage en recrutement international à Chengdu.",
-            "Participation à un échange à distance avec des talents.",
-            "Découverte de l’IA à travers des livres et des notes.",
-            "Regard par le hublot d’un avion en route pour Paris."
+            "Études de français et cours d’anglais accompagnent le traitement ; suivent un repos discret et un campus ouvert, sans opération ni cérémonie inventée."
           ]
         ],
         [
-          "Les limites de mon monde",
+          "Cette fois, j’ai choisi",
           [
-            "Pendant mon année à Paris, j’ai aussi appris l’espagnol pendant un an.",
-            "J’ai toujours aimé les langues. J’ai exploré Paris, la France et d’autres régions d’Europe.",
-            "Les limites de ma langue sont les limites de mon monde."
+            "Pour revenir à ce choix : j’ai finalement décidé de partir à Paris.",
+            "Avant le départ, quatre mois de soutien au recrutement international de l’équipe Seed de ByteDance m’ont rapproché de l’IA.",
+            "Je suis parti avec une nouvelle direction qui se dessinait."
           ],
           [
-            "Un étudiant en échange prend des notes dans un cours d’espagnol à Paris.",
-            "L’étudiant explore une rue européenne avec son sac.",
-            "L’étudiant marche dans une rue parisienne ensoleillée."
-          ],
-          "L’enfant qui voulait découvrir le monde y était enfin arrivé."
+            "Des mains préparent un sac ; une vue de dos évoque le recrutement sans données de candidats ; un voyageur traverse un passage d’aéroport."
+          ]
         ],
         [
-          "Toujours en exploration",
+          "Un monde à qui parler",
           [
-            "À mon retour de Paris, j’ai rejoint Tencent Cloud comme stagiaire commercial auprès des clients directs.",
-            "Mon expérience de l’IA m’a aidé à trouver ma direction. Je continue à créer avec l’IA et à approfondir le cloud computing.",
-            "J’enseigne l’anglais depuis la fin du lycée. Ces années d’expérience n’ont fait que renforcer ma passion pour l’enseignement.",
-            "Les langues ont ouvert mon monde. Et il me reste tant de choses à explorer."
+            "Pendant mon année à Paris 1, j’ai aussi appris l’espagnol pendant un an.",
+            null,
+            "Les limites de ma langue sont les limites de mon monde. L’enfant qui voulait voir au-delà de la vitre du camion était enfin arrivé jusque-là."
           ],
           [
-            "Les débuts dans la vente de solutions cloud.",
-            "Créer et apprendre avec l’IA sur un ordinateur portable.",
-            "Enseigner l’anglais avec confiance et enthousiasme.",
-            "Regarder par la fenêtre, avec des livres et un ordinateur à proximité."
+            "Apprendre l’espagnol à Paris, une rue paisible et une promenade en pied au bord de la Seine laissent respirer le récit."
+          ]
+        ],
+        [
+          "D’autres mondes derrière la fenêtre",
+          [
+            "Après Paris, j’ai rejoint Tencent Cloud en stage de vente directe. J’ai continué à apprendre le cloud et à créer avec l’IA.",
+            "J’enseigne toujours l’anglais. Ce fil ne s’est pas interrompu depuis la fin du lycée.",
+            "Partir découvrir le monde m’a donné d’autres mondes à explorer."
+          ],
+          [
+            "Une conversation professionnelle en plan large, un cours d’anglais vivant et une côte ouverte répondent à la fenêtre de l’enfance, sans pose triomphale."
           ]
         ]
       ]
@@ -661,247 +365,99 @@
     "es": {
       "title": "Quería conocer el mundo",
       "chapters": [
-        "Desde la costa",
-        "Encontrar mi camino",
-        "Un punto de inflexión",
-        "Un mundo más amplio"
+        "La decisión",
+        "Antes del viaje",
+        "Encontrar mi voz",
+        "Abrir la ventana"
       ],
       "pages": [
         [
-          "Los primeros viajes",
+          "El precio de partir",
           [
-            "Crecí en un pueblo costero de Xianxiang, en Ningbo.",
-            "De niño, a menudo vivía en el camión de mi padre y lo acompañaba en sus entregas.",
-            "Aquella fue mi primera ventana al mundo más allá de casa."
-          ],
-          [
-            "Un camión de mercancías recorre un pueblo costero de Ningbo.",
-            "Un niño viaja en la cabina del camión junto a su padre.",
-            "El niño mira la carretera a lo lejos por la ventanilla del camión."
-          ]
-        ],
-        [
-          "Más allá de casa",
-          [
-            "Las visitas a familiares durante el Año Nuevo chino eran mi oportunidad de conocer la vida en la ciudad.",
-            "Mi hermana me llevaba a jugar. Son algunos de mis recuerdos más cálidos de la infancia.",
-            "Llegué a creer que estudiar era mi camino para salir de allí.",
-            "Una buena universidad podía abrirme más posibilidades."
-          ],
-          [
-            "Una familia visita a sus parientes durante el Año Nuevo chino.",
-            "Una hermana mayor juega con su hermano pequeño.",
-            "El niño estudia en su escritorio en casa.",
-            "El niño levanta la mirada de un libro hacia la ventana."
-          ]
-        ],
-        [
-          "Correr, saltar y jugar",
-          [
-            "En cuarto de primaria, representé a Xianxiang y gané la competición de salto de altura del distrito de Yinzhou.",
-            "También quedé cuarto en los 800 metros.",
-            "Seguí entrenando. En la secundaria, ganaba a menudo las carreras de 400 y 800 metros de mi centro.",
-            "Empecé a jugar al baloncesto en tercero de primaria. En sexto ya podía hacer una entrada pasando el balón entre las piernas."
-          ],
-          [
-            "Un escolar supera el listón en una competición de salto de altura.",
-            "El niño corre una carrera de 800 metros.",
-            "Un estudiante cruza la meta en una carrera escolar.",
-            "Un niño realiza una entrada a canasta."
-          ]
-        ],
-        [
-          "La puerta que casi alcancé",
-          [
-            "Mis notas eran desiguales durante los dos primeros años de secundaria.",
-            "En el último año, logré ponerme al día.",
-            "Conseguí una plaza para presentarme al examen especial de admisión de un destacado instituto de la provincia.",
-            "Pero no alcancé la nota mínima."
-          ],
-          [
-            "Un estudiante ante libros de varias asignaturas.",
-            "El estudiante repasa con una concentración cada vez mayor.",
-            "El estudiante contempla una oportunidad de admisión con ilusión.",
-            "El estudiante recibe los resultados con una decepción silenciosa."
-          ]
-        ],
-        [
-          "Volver al escritorio",
-          [
-            "Aquel revés me golpeó con fuerza. Su sombra me acompañó durante años.",
-            "Bajo una enorme presión, volví a preparar el examen ordinario de acceso al bachillerato.",
-            "Al final, terminé primero de mi clase.",
-            "Entré en el Instituto Zhengshi de Ningbo, todavía lejos de lo que había esperado."
-          ],
-          [
-            "Un estudiante se sienta solo tras un examen decepcionante.",
-            "El estudiante vuelve a preparar el examen de acceso.",
-            "El estudiante sostiene sus resultados de clase.",
-            "El estudiante entra en un instituto de Ningbo."
-          ]
-        ],
-        [
-          "Bajo la mirada de los demás",
-          [
-            "Durante el bachillerato, mi mandíbula inferior empezó a sobresalir de forma muy marcada.",
-            "Me pusieron apodos hirientes y se burlaron de mí.",
-            "Cada vez me afectaba más cómo me veían los demás. Mi confianza se fue apagando.",
-            "Estar con otras personas se convirtió poco a poco en una fuente de estrés."
-          ],
-          [
-            "Un estudiante observa en el espejo su mandíbula inferior adelantada.",
-            "El estudiante se siente incómodo en un pasillo del instituto.",
-            "El estudiante permanece apartado de un grupo.",
-            "El estudiante camina solo hacia su residencia."
-          ]
-        ],
-        [
-          "Una luz en la noche",
-          [
-            "Algunas noches me escondía en el baño de la residencia para llorar.",
-            null,
-            "Me levantaba temprano, me acostaba tarde y dedicaba gran parte de mi tiempo a estudiar.",
-            "En mis dos últimos años de bachillerato, a menudo quedaba primero de mi curso. El inglés siempre se me había dado de forma natural."
-          ],
-          [
-            "Un pasillo silencioso de la residencia y un estudiante en la puerta del baño.",
-            "El estudiante se seca las lágrimas; se aprecia la mandíbula antes de la operación.",
-            "El estudiante estudia de noche bajo una cálida lámpara de escritorio.",
-            "El estudiante se concentra en un libro de inglés."
-          ]
-        ],
-        [
-          "Aprender y enseñar",
-          [
-            "Mi examen de acceso a la universidad no salió tan bien como esperaba.",
-            "Elegí la Universidad Zhejiang Gongshang en lugar de una universidad del programa 211 fuera de Zhejiang.",
-            "Al terminar el bachillerato, empecé a enseñar inglés. Desde entonces, nunca he dejado de hacerlo.",
-            "Me encantaban los idiomas y confiaba en mi capacidad para aprenderlos, así que elegí especializarme en francés.",
-            "La universidad me dio más libertad, pero el malestar por mi mandíbula seguía ahí."
-          ],
-          [
-            "Un recién graduado de bachillerato reflexiona sobre sus resultados de acceso.",
-            "El joven compara sus opciones universitarias.",
-            "El joven empieza a enseñar inglés.",
-            "Un universitario abre un manual de francés.",
-            "El universitario camina por el campus antes de la operación de mandíbula."
-          ]
-        ],
-        [
-          "Mi familia a mi lado",
-          [
-            "Mi familia me acompañó al Noveno Hospital del Pueblo de Shanghái para una consulta.",
-            "Decidí someterme a una cirugía correctiva de los maxilares.",
-            "Antes de la operación, necesitaba un tratamiento de ortodoncia.",
-            "Duró más de dos años, mucho más de lo que había previsto."
-          ],
-          [
-            "Un joven y su familia en una sala de espera del hospital.",
-            "La familia escucha al médico durante una consulta.",
-            "Una cita de ortodoncia antes de la cirugía de los maxilares.",
-            "Las hojas del calendario evocan la larga espera del tratamiento."
-          ]
-        ],
-        [
-          "Después de la larga espera",
-          [
-            "Durante el tratamiento, mi mandíbula sobresalía aún más y la carga emocional fue creciendo.",
-            "Reduje mi vida social y me concentré en estudiar. Me mantuve primero de mi especialidad, tanto en notas como en la clasificación general.",
-            "En el segundo semestre de mi tercer año, por fin me operaron.",
+            "Un año de intercambio en París 1 significaba graduarme un año más tarde. Pensé mucho en esa decisión.",
             null
           ],
           [
-            "Un universitario se sienta solo durante el tratamiento de ortodoncia.",
-            "El universitario estudia; se aprecia claramente su mandíbula antes de la operación.",
-            "El joven con un familiar antes de la cirugía.",
-            "El joven descansa junto a una ventana del hospital después de la operación."
+            "Un joven en una habitación universitaria tranquila; su mano se detiene junto a documentos de viaje sin texto."
           ]
         ],
         [
-          "Un capítulo más luminoso",
+          "El mundo junto a papá",
           [
-            "La operación cambió mi aspecto. Empecé a recuperar la confianza para afrontar la vida cotidiana.",
-            "Dos meses después, conseguí la admisión por recomendación a un máster en la Escuela de Negocios Internacionales de la Universidad de Finanzas y Economía del Suroeste.",
-            "También recibí la Beca Nacional. Después de tanta presión y espera, fue un momento luminoso en mi vida."
+            "Crecí en un pueblo costero de Xianxiang, en Ningbo. Mis primeros viajes fueron en el camión de reparto de mi padre.",
+            "A menudo me quedaba con él en el camión. En Año Nuevo, las visitas a familiares y las salidas con mi hermana acercaban un poco la vida de la ciudad.",
+            "En primaria gané el salto de altura del distrito. Correr y jugar al baloncesto también formaron parte de mis años de colegio."
           ],
           [
-            "Un universitario camina por el campus tras la operación de mandíbula.",
-            "El estudiante recibe la noticia de su admisión al máster.",
-            "El estudiante sostiene una carpeta bajo la cálida luz del campus."
+            "Un camión recorre la costa de Ningbo; un niño viaja junto a su padre; el mismo chico supera una barra de salto de altura."
           ]
         ],
         [
-          "Entrar en el mundo laboral",
+          "A un paso",
           [
-            "Tras asegurar mi plaza de máster, hice prácticas en Mingle Advisors, una empresa finlandesa de Hangzhou.",
-            "Después de graduarme, trabajé en ventas internacionales para mercados francófonos en Market Union, en Ningbo, y ayudé a cerrar pedidos por casi un millón de dólares.",
-            "Luego me trasladé a Chengdu para estudiar el máster.",
-            "Chengdu fue un capítulo feliz. Estudiaba, hacía prácticas en la Alliance Française y seguía enseñando inglés."
+            "Pude presentarme al examen especial de un instituto destacado, pero no alcancé la nota mínima. Aquel tropiezo me pesó durante mucho tiempo.",
+            "Volví a prepararme, quedé primero de mi clase y entré en el instituto Zhengshi. Aún sentía la distancia respecto a lo que había esperado.",
+            "El examen de acceso a la universidad tampoco salió como esperaba. Elegí la Universidad Gongshang de Zhejiang frente a una universidad del Proyecto 211 fuera de la provincia."
           ],
           [
-            "Unas prácticas en las oficinas de una empresa de Hangzhou.",
-            "Un trabajo de ventas internacionales en Ningbo.",
-            "La llegada a Chengdu para estudiar un máster.",
-            "Estudiar y preparar clases de idiomas en Chengdu."
+            "Una mano sostiene un resultado sin notas legibles; un alumno está solo en un pasillo; ya mayor, atraviesa un patio universitario."
           ]
         ],
         [
-          "Elegir partir",
+          "Alguien a mi lado",
           [
-            "Entonces llegó otra decisión: ¿debía irme de intercambio al extranjero?",
-            "Irme significaba retrasar la graduación.",
-            "Lo pensé durante mucho tiempo. Desde niño había querido conocer el mundo.",
-            "Elegí un intercambio de un año en la Universidad París 1 Panthéon-Sorbonne."
+            "Mi prognatismo se hizo más marcado. Los apodos y las burlas me llevaron a temer la mirada ajena. Algunas noches me escondía en el baño de la residencia para llorar.",
+            null,
+            "Mi familia me acompañó al Noveno Hospital del Pueblo de Shanghái. Decidí someterme a una cirugía correctora de mandíbula.",
+            "Primero vino la ortodoncia. Duró más de dos años, mucho más de lo que había imaginado."
           ],
           [
-            "Lectura de información sobre un programa de intercambio en el extranjero.",
-            "Reflexión entre el intercambio y una graduación más tardía.",
-            "Una escena junto a la ventana recuerda los viajes en camión de la infancia.",
-            "Preparación de los documentos del intercambio y del equipaje."
+            "El perfil del joven muestra con respeto el prognatismo previo a la operación; una puerta silenciosa, su familia en una sala de espera y objetos de seguimiento evocan la larga espera."
           ]
         ],
         [
-          "Una nueva dirección",
+          "Una voz propia",
           [
-            "Antes de partir, hice cuatro meses de prácticas en captación internacional de talento en ByteDance, en Chengdu.",
-            "Ayudé al equipo Seed AI de ByteDance a contratar talento de primer nivel en Norteamérica.",
-            "Aquella experiencia me acercó a la IA y me impulsó a seguir aprendiendo.",
-            "Con una nueva dirección que empezaba a tomar forma, salí hacia París."
+            "En la universidad estudiaba francés. Otro hilo recorría aquellos años: enseñar inglés.",
+            "Había empezado después del instituto. Seguí enseñando durante los estudios, el tratamiento y todo lo que vino después.",
+            "En el segundo semestre de mi tercer año llegó por fin la operación. Después empecé a recuperar la confianza en la vida cotidiana.",
+            "Había mantenido el primer puesto de mi especialidad. Dos meses después de la operación llegaron la admisión recomendada a SWUFE y la Beca Nacional."
           ],
           [
-            "Unas prácticas de captación internacional de talento en Chengdu.",
-            "Participación en una conversación remota con profesionales.",
-            "Aprender sobre IA mediante libros y apuntes.",
-            "Mirar por la ventanilla de un avión de camino a París."
+            "El estudio del francés y las clases de inglés acompañan el tratamiento; después hay reposo y un campus abierto, sin procedimientos ni ceremonias inventadas."
           ]
         ],
         [
-          "Los límites de mi mundo",
+          "Esta vez, elegí",
           [
-            "Durante mi año en París, también dediqué un año a aprender español.",
-            "Siempre me han apasionado los idiomas. Recorrí París, Francia y otras partes de Europa.",
-            "Los límites de mi lenguaje son los límites de mi mundo."
+            "Volviendo a aquella decisión: al final elegí ir a París.",
+            "Antes de partir, cuatro meses apoyando la búsqueda de talento internacional para el equipo Seed de ByteDance me acercaron a la IA.",
+            "Partí mientras una nueva dirección empezaba a tomar forma."
           ],
           [
-            "Un estudiante de intercambio toma apuntes en una clase de español en París.",
-            "El estudiante explora una calle europea con su mochila.",
-            "El estudiante camina por una calle soleada de París."
-          ],
-          "El niño que quería conocer el mundo por fin había llegado hasta allí."
+            "Unas manos preparan una bolsa; una vista posterior muestra apoyo al reclutamiento sin datos privados; un viajero cruza un pasillo de aeropuerto."
+          ]
         ],
         [
-          "Sigo explorando",
+          "Un mundo al que hablar",
           [
-            "Al regresar de París, me incorporé a Tencent Cloud como becario de ventas a clientes directos.",
-            "Mi experiencia con la IA me ayudó a encontrar mi rumbo. Sigo creando con IA y profundizando en la computación en la nube.",
-            "Enseño inglés desde que terminé el bachillerato. Los años de experiencia solo han reforzado mi entusiasmo por enseñar.",
-            "Los idiomas me abrieron el mundo. Y aún me queda mucho por explorar."
+            "Durante mi año en París 1 también estudié español durante un año.",
+            null,
+            "Los límites de mi lenguaje son los límites de mi mundo. El niño que quería ver más allá de la ventanilla del camión había llegado hasta allí."
           ],
           [
-            "Los comienzos en la venta de soluciones en la nube.",
-            "Crear y aprender con IA en un ordenador portátil.",
-            "Enseñar inglés con confianza y entusiasmo.",
-            "Mirar por la ventana, con libros y un ordenador cerca."
+            "Una escena de aprendizaje de español en París, una calle tranquila y un paseo de cuerpo entero junto al Sena dan espacio al relato."
+          ]
+        ],
+        [
+          "Más mundo tras la ventana",
+          [
+            "Después de París entré en Tencent Cloud como becario de ventas directas. Seguí aprendiendo computación en la nube y creando con IA.",
+            "Sigo enseñando inglés. Ese hilo no se ha interrumpido desde que terminé el instituto.",
+            "Salir a conocer el mundo me ha dado nuevos mundos que explorar."
+          ],
+          [
+            "Una conversación profesional en plano amplio, una clase de inglés y una costa abierta recuerdan la ventanilla de la infancia, sin una pose triunfal."
           ]
         ]
       ]
