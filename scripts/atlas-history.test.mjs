@@ -43,11 +43,20 @@ test('every travel stop has a sourced introduction in all four site languages',(
   for(const label of ['Amsterdam','Rome','Rigi','Tromsø','Vatican','Budapest'])assert.equal((guide[label].personalImage||guide[label].image).kind,'personal',label);
 });
 
-test('the historical snapshot remains byte-for-byte identical to its captured manifest',()=>{
+test('the historical snapshot keeps strict integrity with one explicit certificate privacy exception',()=>{
   const archive=path.join(root,'history/2026-08-26');
   const manifest=JSON.parse(fs.readFileSync(path.join(archive,'snapshot.json'),'utf8'));
   assert.equal(manifest.commit,'6a98c9919e5b3316fd119eaddaf90409b32d0aec');
   assert.equal(manifest.files.length,64);assert.equal(manifest.liveHomepageMatched,true);
+  assert.equal(manifest.privacyExceptions.length,1,'only the certificate image has a privacy exception');
+  const exception=manifest.privacyExceptions[0];
+  assert.equal(exception.path,'site/images/bytedance1.jpeg');
+  assert.equal(exception.type,'opaque-id-redaction');
+  assert.equal(exception.appliedOn,'2026-11-01');
+  assert.deepEqual(exception.captured,{bytes:180248,sha256:'e30aba495e79a43d75d08619b0550d80531b190d71b7ee7ef02fb8dc56dc5ad8'});
+  const redacted=manifest.files.find(entry=>entry.path===exception.path);
+  assert.deepEqual(exception.redacted,{bytes:redacted.bytes,sha256:redacted.sha256});
+  assert.notEqual(redacted.sha256,exception.captured.sha256,'record the actual safe replacement');
   for(const entry of manifest.files){
     assert(entry.path.startsWith('site/')&&!entry.path.includes('..'));
     const bytes=fs.readFileSync(path.join(archive,entry.path));

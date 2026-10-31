@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "id": "bytedance-recommendation",
+      "redactedOn": "2026-11-01",
+      "fullSize": "images/bytedance1-redacted.png",
+      "width": 876,
+      "height": 1280,
+      "color": "#000000",
+      "regions": [
+        {
+          "x": 328,
+          "y": 260,
+          "width": 128,
+          "height": 25
+        },
+        {
+          "x": 516,
+          "y": 597,
+          "width": 132,
+          "height": 25
+        }
+      ],
+      "assets": [
+        {
+          "src": "images/bytedance1.jpeg",
+          "width": 876,
+          "height": 1280,
+          "bytes": 402322,
+          "sha256": "8517705e749526b594b22dcf7764b6b1efde6cf04a49ca339bd647c4fd5c5174"
+        },
+        {
+          "src": "history/2026-08-26/site/images/bytedance1.jpeg",
+          "width": 876,
+          "height": 1280,
+          "bytes": 402322,
+          "sha256": "8517705e749526b594b22dcf7764b6b1efde6cf04a49ca339bd647c4fd5c5174"
+        },
+        {
+          "src": "images/web/64132b292ab9-400.webp",
+          "width": 400,
+          "height": 584,
+          "bytes": 38040,
+          "sha256": "24d10ba241a00be17df5ddff32b4620b33e6cb273990486185045ad235c61460"
+        },
+        {
+          "src": "images/web/64132b292ab9-800.webp",
+          "width": 800,
+          "height": 1169,
+          "bytes": 123220,
+          "sha256": "edc66aad40e63b826ef7ba8be97aae39e25f1920663b266861205f328383d8ab"
+        },
+        {
+          "src": "images/web/64132b292ab9-876.webp",
+          "width": 876,
+          "height": 1280,
+          "bytes": 148472,
+          "sha256": "bea9e9ce8030934aa9cfc0ab3af556e9a6f79b551370988956ae9c5b5480770a"
+        },
+        {
+          "src": "images/bytedance1-redacted.png",
+          "width": 876,
+          "height": 1280,
+          "bytes": 662630,
+          "sha256": "636380feb1479ab1ca0007dafa970735ffb0d2c664679106fb103dabddfc7883"
+        },
+        {
+          "src": "images/web/eaa0c11a3d93-400.webp",
+          "width": 400,
+          "height": 584,
+          "bytes": 38040,
+          "sha256": "24d10ba241a00be17df5ddff32b4620b33e6cb273990486185045ad235c61460"
+        },
+        {
+          "src": "images/web/eaa0c11a3d93-800.webp",
+          "width": 800,
+          "height": 1169,
+          "bytes": 123220,
+          "sha256": "edc66aad40e63b826ef7ba8be97aae39e25f1920663b266861205f328383d8ab"
+        },
+        {
+          "src": "images/web/eaa0c11a3d93-876.webp",
+          "width": 876,
+          "height": 1280,
+          "bytes": 148472,
+          "sha256": "bea9e9ce8030934aa9cfc0ab3af556e9a6f79b551370988956ae9c5b5480770a"
+        }
+      ]
+    }
+  ]
+}

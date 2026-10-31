@@ -149,28 +149,28 @@
         }
       ]
     },
-    "images/bytedance1.jpeg": {
+    "images/bytedance1-redacted.png": {
       "width": 876,
       "height": 1280,
-      "originalBytes": 180248,
+      "originalBytes": 662630,
       "variants": [
         {
-          "src": "images/web/64132b292ab9-400.webp",
+          "src": "images/web/eaa0c11a3d93-400.webp",
           "width": 400,
           "height": 584,
-          "bytes": 38414
+          "bytes": 38040
         },
         {
-          "src": "images/web/64132b292ab9-800.webp",
+          "src": "images/web/eaa0c11a3d93-800.webp",
           "width": 800,
           "height": 1169,
-          "bytes": 124658
+          "bytes": 123220
         },
         {
-          "src": "images/web/64132b292ab9-876.webp",
+          "src": "images/web/eaa0c11a3d93-876.webp",
           "width": 876,
           "height": 1280,
-          "bytes": 150584
+          "bytes": 148472
         }
       ]
     },

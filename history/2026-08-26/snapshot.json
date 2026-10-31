@@ -49,8 +49,8 @@
     },
     {
       "path": "site/images/bytedance1.jpeg",
-      "bytes": 180248,
-      "sha256": "e30aba495e79a43d75d08619b0550d80531b190d71b7ee7ef02fb8dc56dc5ad8"
+      "bytes": 402322,
+      "sha256": "8517705e749526b594b22dcf7764b6b1efde6cf04a49ca339bd647c4fd5c5174"
     },
     {
       "path": "site/images/campusfrance.png",
@@ -326,6 +326,22 @@
       "path": "site/sales-buddy.html",
       "bytes": 41296,
       "sha256": "faa9d67fb41164fd59c4632277617f3d616cde24b2ab6a01906732c71998ada2"
+    }
+  ],
+  "privacyExceptions": [
+    {
+      "path": "site/images/bytedance1.jpeg",
+      "type": "opaque-id-redaction",
+      "appliedOn": "2026-11-01",
+      "reason": "Citizen ID masked in both Chinese and English lines; all other certificate content retained.",
+      "captured": {
+        "bytes": 180248,
+        "sha256": "e30aba495e79a43d75d08619b0550d80531b190d71b7ee7ef02fb8dc56dc5ad8"
+      },
+      "redacted": {
+        "bytes": 402322,
+        "sha256": "8517705e749526b594b22dcf7764b6b1efde6cf04a49ca339bd647c4fd5c5174"
+      }
     }
   ]
 }
