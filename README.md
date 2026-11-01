@@ -187,15 +187,15 @@ draft: false
 
 成长漫画《I Wanted to See the World》由作者在本次对话中提供的口述经历制作，包括高中毕业后持续教英语、巴黎一年的西班牙语学习，以及作者已确认的五阶段人物形象。高中至大学术前保留严重地包天的视觉特征；当前人物采用作者确认的漫画化便装形象。场景为根据口述设计的插画，不声称复原真实旧照片、证书或病历。
 
-`story/` 的成长漫画标签接入四个章节入口；`story/comic/` 是第二版八页电影式成长故事，`story/comic/transcript.html` 是完整文字版。以赴巴黎交换需要晚一年毕业的选择开场，再回到童年、求学、家人陪伴与语言教学。漫画入口、旁白、标题、章节导航、替代文字与文字版均支持中、英、法、西四种语言。链接里的有效 `lang` 参数优先于已保存的语言；切换语言同步更新分享地址与站内阅读链接，保留当前页和原始图片地址。每页完整构图只展示一次，旁白为可复制、检索和由屏幕阅读器读取的 HTML。图片不包含旁白。禁用 JavaScript 时可阅读完整英文文字版。
+`story/` 的成长漫画标签接入四个章节入口；`story/comic/` 当前公开原版16页、62格成长漫画，`story/comic/transcript.html` 是完整文字版。漫画入口、旁白、标题、章节导航、替代文字与文字版均支持中、英、法、西四种语言。链接里的有效 `lang` 参数优先于已保存的语言；切换语言同步更新分享地址与站内阅读链接，保留当前页和原始图片地址。旁白为可复制、检索和由屏幕阅读器读取的 HTML。禁用 JavaScript 时可阅读完整英文文字版。
 
-`content/story/comic-manifest.json` 保存英文原文、章节、整页构图与旧版页码迁移表；`content/story/comic-translations.json` 保存其余三种语言的完整翻译及四语言控件。`scripts/build-comic.mjs` 与 `scripts/localize-comic.mjs` 生成静态阅读页和语言字典，并同步更新 Story 入口及贩卖机里的漫画卡片，保留其他项目、日志和公众号内容；缺失翻译会阻止生成不完整页面。`assets/growth-comic-language.js` 接入全站语言偏好。仅重建漫画运行 `node scripts/build-comic.mjs`；`npm run build` 还会重建日志与地图。新版以 `?edition=2#page-07` 标识新页码，未带版本的旧 `#page-15` 会迁移至新版对应场景，旧阅读进度也会迁移。只有当前页会设置图片地址，不提前加载其余画稿。
+`content/story/comic-manifest.json` 保存英文原文、章节和画格边界；`content/story/comic-translations.json` 保存其余三种语言的完整翻译及四语言控件。`scripts/build-comic.mjs` 与 `scripts/localize-comic.mjs` 生成静态阅读页和语言字典，并同步更新 Story 入口及贩卖机里的漫画卡片，保留其他项目、日志和公众号内容；缺失翻译会阻止生成不完整页面。`assets/growth-comic-language.js` 接入全站语言偏好。仅重建漫画运行 `node scripts/build-comic.mjs`；`npm run build` 还会重建日志与地图。原版 `#page-01` 至 `#page-16` 保持兼容；已分享的八页试稿 `?edition=2#page-NN` 会映射到原版对应场景。只有当前页会设置图片地址，不提前加载其余画稿。
 
-新版图片位于 `images/comic/v2/`，完整 WebP 限制在1600×1800以内，较小的响应式版本限制在800×900以内，均保持原始比例。PNG原稿与完整生成提示词保存在网站 checkout 外，不参与网页加载。需要重新编码时，安装 Pillow 后运行 `python3 scripts/prepare-comic-images.py --source-dir /path/to/selected-art`，输入目录应包含 `page-01.png` 至当前末页；正常构建直接使用仓库里的 WebP。旧折叠封面、中文试画与第一版图片保留为设计参考。浏览器不调用图像模型，也不需要公开 API Key。
+图片位于 `images/comic/`，保持原始比例并提供桌面与手机响应式版本。PNG原稿与完整生成提示词保存在网站 checkout 外，不参与网页加载。需要重新编码时，安装 Pillow 后运行 `python3 scripts/prepare-comic-images.py --source-dir /path/to/selected-art`，输入目录应包含 `page-01.png` 至当前末页；正常构建直接使用仓库里的 WebP。设计试稿独立保留，不作为当前公开正文。浏览器不调用图像模型，也不需要公开 API Key。
 
 `assets/intro.js` / `assets/intro.css` 使用真实素材组成爆开式开场：36 种语言的问候组成 168 个文字片段铺满首帧，姓名位于最前层并保持清晰；照片、学校与公司标识、项目截图在姓名后方交叠，约 1.7 秒时同时向四周爆开，围住同屏的 Always Day One 和 Pragmatic Romantism；约 4.3 秒时再次向外飞出，背景随之退去，主页在下方同步入场。桌面共 18 张，手机保留 12 张，均来自作者现有本地素材。理念仍使用居中海报排版，首字母大写；配合扩散光圈、椭圆轨迹和播放进度。每个浏览器会话首次进入首页时播放，约 5.4 秒结束；可点击跳过、按 Escape 退出或通过首页“重播开场”再次体验。深链接进入时跳过开场，系统开启减少动态效果时不播放。动画异常时也会自动结束，避免遮挡页面。
 
-本轮成长漫画重制与推荐信证件号打码已按作者要求发布到 `main`，沿用现有 GitHub Pages。后续修改仍须依据作者的具体授权范围发布。
+原版成长漫画已恢复公开，推荐信证件号打码和语言链接修复继续有效，沿用现有 GitHub Pages。新的故事与视觉重制先保留为本地样稿，由作者看过具体效果后再替换公开正文。
 
 首页右上角、主题切换旁的 `assets/music.js` / `assets/music.css` 已使用作者提供的完整 Sunflower MP3，保存为 `assets/audio/sunflower.mp3`（约3.7 MiB，约162秒）。首页脚本的 `data-audio-src` 指向仓库内音频；默认在开场时尝试播放，浏览器阻止有声自动播放时，在首次真实点击、触摸或按键后继续。开场结束后，右上角出现音乐提示：播放时可关闭，关闭时可开启，浏览器阻止播放时可点击播放。即使之前记住了关闭偏好，也显示开启入口；12秒后自动收起。支持单曲循环、关闭偏好与音量记忆、真实进度及四语言控件；主动关闭后不会在后续点击或刷新时重新开启。已经移除 SoundCloud 试听及 Widget API。切换语言不会重载音频，进入另一个静态页面会停止当前页的播放。
 

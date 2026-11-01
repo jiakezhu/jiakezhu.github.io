@@ -80,14 +80,14 @@
   {
     "id": "7",
     "title": "Life in Frames",
-    "image": "../images/comic/v2/page-01-small.webp",
-    "href": "./comic/index.html?edition=2",
-    "tags": "8 pages · 4 languages",
+    "image": "../images/comic/page-01-small.webp",
+    "href": "./comic/index.html",
+    "tags": "16 pages · 4 languages",
     "description": {
-      "en": "Going to Paris meant graduating a year later. A story about how I came to make that choice, and the people and languages that helped me along the way.",
-      "zh": "去巴黎，就要晚一年毕业。关于我怎样走到这个选择，以及一路陪着我的人和语言。",
-      "fr": "Partir à Paris signifiait obtenir mon diplôme un an plus tard. Comment ce choix a pris forme, avec les personnes et les langues qui m’ont accompagné.",
-      "es": "Ir a París significaba graduarme un año más tarde. Cómo llegué a esa decisión, con las personas y los idiomas que me acompañaron."
+      "en": "A coastal village, the long road to confidence, and the languages that opened my world. Sixteen illustrated chapters, from childhood to what I am building today.",
+      "zh": "从沿海村庄出发，走过找回自信的漫长旅程，用语言打开世界。十六个图画章节，讲述从童年到今天的成长。",
+      "fr": "Un village côtier, le long chemin vers la confiance et les langues qui ont ouvert mon monde. Seize chapitres illustrés, de l’enfance à mes projets d’aujourd’hui.",
+      "es": "Un pueblo costero, el largo camino hacia la confianza y los idiomas que abrieron mi mundo. Dieciséis capítulos ilustrados, desde la infancia hasta lo que construyo hoy."
     }
   },
   {

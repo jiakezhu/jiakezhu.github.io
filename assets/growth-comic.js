@@ -3,6 +3,7 @@
   const pages=[...document.querySelectorAll('[data-comic-page]')];
   const total=pages.length || Number(document.body.dataset.comicTotal)||1;
   const legacyPages=[2,2,2,3,3,4,4,5,4,5,5,8,6,6,7,8];
+  const restoredPages=[13,1,4,6,8,14,15,16];
   const lastPageKey=edition===2 ? 'jiake-comic-v2-last-page' : 'jiake-comic-last-page';
   const bound=value=>Math.max(1,Math.min(total,Number(value)||1));
   const pageHash=number=>`page-${String(number).padStart(2,'0')}`;
@@ -11,11 +12,16 @@
     const match=/^#page-?(\d+)$/.exec(url.hash);
     const original=match ? Number(match[1]) : 1;
     const legacy=edition===2 && url.searchParams.get('edition')!=='2';
-    const number=bound(legacy && match && original>=1 && original<=legacyPages.length ? legacyPages[original-1] : original);
+    const restored=edition===1 && url.searchParams.get('edition')==='2';
+    const number=bound(restored && match && original>=1 && original<=restoredPages.length ? restoredPages[original-1] : legacy && match && original>=1 && original<=legacyPages.length ? legacyPages[original-1] : original);
     if(edition===2) {
       url.searchParams.set('edition','2');
       if(match) url.hash=pageHash(number);
       if(url.href!==location.href) history.replaceState(null,'',url);
+    } else if(restored) {
+      url.searchParams.delete('edition');
+      if(match) url.hash=pageHash(number);
+      history.replaceState(null,'',url);
     }
     return number;
   }

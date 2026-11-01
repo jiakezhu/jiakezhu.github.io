@@ -141,9 +141,9 @@ class Element {
   set src(value) {this.setAttribute('src',value);} set srcset(value) {this.setAttribute('srcset',value);}
   focus() {this.focused=true;} scrollIntoView() {this.scrolled=true;}
 }
-function runtime({url='https://example.test/story/comic/?edition=2',stored={},edition=2,transcript=false}={}) {
+function runtime({url='https://example.test/story/comic/?edition=2',stored={},edition=2,transcript=false,count=8}={}) {
   const windowEvents={},documentEvents={},storage=new Map(Object.entries(stored));let currentURL=new URL(url);
-  const pages=Array.from({length:8},(_,index)=>{
+  const pages=Array.from({length:count},(_,index)=>{
     const page=new Element({'data-comic-page':index+1}),source=new Element({'data-srcset':`page-${index+1}-small.webp 640w, page-${index+1}.webp 1024w`}),image=new Element({'data-src':`page-${index+1}.webp`}),heading=new Element();heading.textContent=`Title ${index+1}`;
     page.source=source;page.image=image;page.heading=heading;
     page.querySelector=()=>heading;
@@ -156,9 +156,9 @@ function runtime({url='https://example.test/story/comic/?edition=2',stored={},ed
   const select=new Element(),counter=new Element(),progress=new Element(),resume=new Element(),status=new Element();resume.hidden=true;
   const arrows=['previous','next'].map(direction=>new Element({'data-comic-direction':direction}));
   const links=pages.map((_,index)=>new Element({'data-comic-go':index+1}));
-  const chapter=new Element({'data-start':1,'data-end':8});
+  const chapter=new Element({'data-start':1,'data-end':count});
   const copy={language:'en',text(key){return `${this.language}:${key}`;},format(key,variables){return `${this.language}:${key}:${Object.values(variables).join('|')}`;}};
-  const document={body:{dataset:{comicEdition:String(edition),comicTotal:'8'}},querySelectorAll:selector=>({'[data-comic-page]':transcript?[]:pages,'[data-comic-direction]':arrows,'[data-comic-chapter]':[chapter],'[data-comic-go]':links}[selector]||[]),querySelector:()=>progress,getElementById:id=>({'comic-page-select':select,'comic-counter':counter,'comic-resume':resume,'comic-status':status}[id] || pages[Number(id.slice(5))-1]),addEventListener:(type,listener)=>{documentEvents[type]=listener;}};
+  const document={body:{dataset:{comicEdition:String(edition),comicTotal:String(count)}},querySelectorAll:selector=>({'[data-comic-page]':transcript?[]:pages,'[data-comic-direction]':arrows,'[data-comic-chapter]':[chapter],'[data-comic-go]':links}[selector]||[]),querySelector:()=>progress,getElementById:id=>({'comic-page-select':select,'comic-counter':counter,'comic-resume':resume,'comic-status':status}[id] || pages[Number(id.slice(5))-1]),addEventListener:(type,listener)=>{documentEvents[type]=listener;}};
   const window={COMIC_LANGUAGE:copy,addEventListener:(type,listener)=>{windowEvents[type]=listener;}};
   const location={get href(){return currentURL.href;},get hash(){return currentURL.hash;}};
   const history={replaceState(_,__,url){currentURL=new URL(url,currentURL);},pushState(_,__,url){currentURL=new URL(url,currentURL);}};
@@ -213,7 +213,7 @@ test('the vending-machine comic card follows the built edition and preserves eve
   assert.equal(fs.readFileSync(path.join(base,'assets/story-projects.json'),'utf8'),once);
 }));
 
-function languageRuntime({url='https://example.test/story/comic/?edition=2#page-07',saved='zh',blocked=false}={}) {
+function languageRuntime({url='https://example.test/story/comic/?edition=2#page-07',saved='zh',blocked=false,edition=2}={}) {
   let currentURL=new URL(url);
   const storage=new Map(saved===null?[]:[['jiake-language',saved]]),events={};
   const heading=new Element({'data-comic-i18n':'bookTitle'}),meta=new Element();
@@ -223,7 +223,7 @@ function languageRuntime({url='https://example.test/story/comic/?edition=2#page-
     {href:'https://example.test/images/comic/v2/page-07.webp'},
     {href:'https://other.test/story/'}];
   const copies=Object.fromEntries(['en','zh','fr','es'].map(value=>[value,{bookTitle:`Title ${value}`,wordsTitle:`Words ${value}`,description:`Description ${value}`} ]));
-  const document={documentElement:{dataset:{},lang:''},body:{dataset:{comicView:'reader'}},readyState:'complete',
+  const document={documentElement:{dataset:{},lang:''},body:{dataset:{comicView:'reader',comicEdition:String(edition)}},readyState:'complete',
     querySelectorAll:selector=>({'[data-comic-i18n]':[heading],'[data-language]':buttons,'a[href]':links}[selector]||[]),
     querySelector:selector=>selector==='meta[name="description"]'?meta:null,
     addEventListener(){},dispatchEvent(){}};
@@ -258,4 +258,27 @@ test('browser Back restores the language encoded in the older comic URL',()=>{
   app.back('https://example.test/story/comic/?edition=2&lang=fr#page-02');
   assert.equal(app.document.documentElement.lang,'fr');assert.equal(app.url.hash,'#page-02');
   assert.equal(new URL(app.links[0].href).searchParams.get('lang'),'fr');
+});
+
+
+test('restoring the original edition keeps its 16 existing page addresses unchanged',()=>{
+  for(const page of [1,8,13,16]) {
+    const app=runtime({edition:1,count:16,url:`https://example.test/story/comic/?lang=fr#page-${String(page).padStart(2,'0')}`});
+    assert.equal(app.select.value,String(page));assert.equal(app.url.searchParams.get('lang'),'fr');
+  }
+});
+test('links from the withdrawn eight-page edition open the corresponding restored scene',()=>{
+  const mapping=[13,1,4,6,8,14,15,16];
+  mapping.forEach((expected,index)=>{
+    const app=runtime({edition:1,count:16,url:`https://example.test/story/comic/?edition=2&lang=zh#page-${String(index+1).padStart(2,'0')}`});
+    assert.equal(app.select.value,String(expected));assert.equal(app.url.searchParams.has('edition'),false);
+    assert.equal(app.url.searchParams.get('lang'),'zh');assert.equal(app.url.hash,`#page-${String(expected).padStart(2,'0')}`);
+  });
+});
+
+test('restored reader links do not inherit the withdrawn edition marker from an incoming URL',()=>{
+  const app=languageRuntime({edition:1,url:'https://example.test/story/comic/?edition=2&lang=fr#page-07'});
+  assert.equal(app.url.searchParams.get('edition'),'2','Reader migration still needs the incoming marker');
+  assert.equal(new URL(app.links[1].href).searchParams.has('edition'),false);
+  assert.equal(new URL(app.links[1].href).searchParams.get('lang'),'fr');
 });

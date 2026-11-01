@@ -26,6 +26,7 @@
     document.querySelectorAll('a[href]').forEach(link=>{
       const target=new URL(link.href,location.href);
       if(target.origin!==location.origin || !/\.html$|\/$/.test(target.pathname)) return;
+      if(document.body.dataset.comicEdition==='1') target.searchParams.delete('edition');
       target.searchParams.set('lang',language);
       link.href=target.href;
     });

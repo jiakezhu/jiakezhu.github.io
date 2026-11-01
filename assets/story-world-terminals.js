@@ -2,7 +2,8 @@ import * as T from './vendor/three.module.min.js';
 
 // Device interfaces retain the source Ramen-Shop screens; only personal content is replaced.
 export async function createStoryTerminals({renderer,camera,canvas,objects,materials,sourceTextures,onExit,onRead,onEffect,reduced}) {
-  const projects=await fetch(new URL('./story-projects.json?v=2',import.meta.url)).then(r=>r.json());
+  const projects=await fetch(new URL('./story-projects.json?v=3',import.meta.url)).then(r=>r.json());
+  const comicHref=projects.find(project=>/^(?:\.\/)?comic\/index\.html(?:[?#].*)?$/.test(project.href || ''))?.href || './comic/index.html';
   const images=await Promise.all(projects.map(project=>new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>resolve(null);image.src=new URL(project.image,document.baseURI).href;})));
   const lang=()=>['zh','en','fr','es'].includes(document.documentElement.lang)?document.documentElement.lang:'en';
   const labels={zh:{back:'返回',menu:'返回作品',open:'进入作品',choose:'选一瓶，开始探索',about:'关于我',skills:'语言与工具',experience:'我的经历',read:'阅读成长漫画',essays:'小朱还在想'},en:{back:'Go Back',menu:'Go Back',open:'Open Project',choose:'Choose a bottle to get started …',about:'About',skills:'Skills',experience:'Experience',read:'Read my illustrated story',essays:'WeChat essays'},fr:{back:'Retour',menu:'Retour',open:'Ouvrir',choose:'Choisissez une bouteille …',about:'À propos',skills:'Compétences',experience:'Parcours',read:'Lire mon récit illustré',essays:'Essais WeChat'},es:{back:'Volver',menu:'Volver',open:'Abrir',choose:'Elige una botella …',about:'Sobre mí',skills:'Habilidades',experience:'Trayectoria',read:'Leer mi historia ilustrada',essays:'Ensayos WeChat'}};
@@ -105,7 +106,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     profileClose.setAttribute('aria-label',copy.close);profileTabs.setAttribute('aria-label',labels[lang()].about);
     readableTabs.forEach(({id,button})=>{button.textContent=labels[lang()][id];button.setAttribute('aria-pressed',String(id===tab));});
     profileTitle.textContent=text[0];profileBody.replaceChildren(...text[1].split('\n\n').map(part=>{const p=document.createElement('p');p.textContent=part;return p;}));
-    profileComic.hidden=tab!=='experience';profileComic.textContent=labels[lang()].read+' ↗';profileComic.href=localizedHref('./comic/index.html?edition=2');
+    profileComic.hidden=tab!=='experience';profileComic.textContent=labels[lang()].read+' ↗';profileComic.href=localizedHref(comicHref);
   }
   profileOpen.addEventListener('click',()=>{onEffect?.('bloop');profileReader.showModal();});
   profileClose.addEventListener('click',()=>profileReader.close());
@@ -122,7 +123,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     const items=[{rect:[.025,.02,.23,.09],label:labels[lang()].back,action:'back',run:()=>onExit?.()},...['about','skills','experience'].map((id,i)=>({rect:[.92,.09+i*.25,.07,.23],label:labels[lang()][id],action:id,run:()=>about(id)}))];
     const socialLinks=['https://x.com/jkzhusolo','https://www.linkedin.com/in/Jack-zhujiake-career/','https://github.com/jiakezhu',null,'mailto:zjksolo@foxmail.com'];
     socialLinks.forEach((href,i)=>items.push({rect:[.15+i*.047,.88,.04,.075],label:['X','LinkedIn','GitHub',labels[lang()].essays,'Email'][i],action:'social-'+i,...(href?{href}:{run:()=>onRead?.('wechat')})}));
-    if(tab==='experience')items.push({rect:[.13,.78,.69,.085],label:labels[lang()].read,action:'comic',href:localizedHref('./comic/index.html?edition=2')});setButtons(items,profile[lang()][tab].join(' '));
+    if(tab==='experience')items.push({rect:[.13,.78,.69,.085],label:labels[lang()].read,action:'comic',href:localizedHref(comicHref)});setButtons(items,profile[lang()][tab].join(' '));
   }
   function essays() {
     device='wechat';page='essays';document.body.dataset.terminal='essays';display('arcadeScreen','essays',()=>essayCanvas());
