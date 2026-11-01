@@ -6,7 +6,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {buildComic} from './build-comic.mjs';
-import {comicDictionaries} from './localize-comic.mjs';
+import {COMIC_ASSET_VERSION,comicDictionaries} from './localize-comic.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const baseline=path.resolve(root,'../baseline');
@@ -113,7 +113,7 @@ test('the Story patch preserves all unrelated panels, credits, dialogs and scrip
   buildComic(base);const story=fs.readFileSync(path.join(base,'story/index.html'),'utf8');
   const strip=html=>html.replace(/<section id="growth"[\s\S]*?<\/section>/,'GROWTH').replace(/growth-comic\.css\?v=\d+/g,'growth-comic.css').replace(/growth-comic-entry-i18n\.js\?v=\d+/g,'growth-comic-entry-i18n.js');
   assert.equal(strip(story),strip(initialStory));
-  assert.match(story,/comic\/index.html\?edition=2/);assert.match(story,/growth-comic.css\?v=6/);
+  assert.match(story,/comic\/index.html\?edition=2/);assert.ok(story.includes(`growth-comic.css?v=${COMIC_ASSET_VERSION}`));
   const firstReader=output(base);buildComic(base);assert.equal(fs.readFileSync(path.join(base,'story/index.html'),'utf8'),story);assert.equal(output(base),firstReader);
 }));
 test('empty, unordered and uncovered pages fail before any outputs are written',()=>{
@@ -196,4 +196,66 @@ test('document skip anchors do not reset the current page while page hash change
   const app=runtime({url:'https://example.test/story/comic/?edition=2#page-04'});
   app.history('https://example.test/story/comic/?edition=2#comic-pages','hashchange');assert.equal(app.select.value,'4');
   app.history('https://example.test/story/comic/?edition=2#page-08','hashchange');assert.equal(app.select.value,'8');
+});
+
+test('the vending-machine comic card follows the built edition and preserves every other project',()=>withFixture({count:3},({base,data})=>{
+  const projects=[{id:'keep',title:'Existing AI project',href:'https://example.test/app',description:{en:'Keep this text.'},image:'keep.webp'},
+    {id:'comic',title:'Life in Frames',href:'./comic/index.html',image:'../images/comic/old.webp',tags:'16 pages · 4 languages',description:{en:'Old edition'}}];
+  fs.mkdirSync(path.join(base,'assets'),{recursive:true});
+  fs.writeFileSync(path.join(base,'assets/story-projects.json'),JSON.stringify(projects));
+  buildComic(base);const next=read(base,'assets/story-projects.json');
+  assert.deepEqual(next[0],projects[0]);assert.equal(next[1].title,projects[1].title);
+  assert.equal(next[1].tags,'3 pages · 4 languages');assert.equal(next[1].href,'./comic/index.html?edition=2');
+  assert.equal(next[1].image,`../images/comic/${data.pages[0].smallImage}`);
+  const copies=comicDictionaries(base,data);
+  for(const language of ['en','zh','fr','es']) assert.equal(next[1].description[language],copies[language].entryIntro);
+  const once=fs.readFileSync(path.join(base,'assets/story-projects.json'),'utf8');buildComic(base);
+  assert.equal(fs.readFileSync(path.join(base,'assets/story-projects.json'),'utf8'),once);
+}));
+
+function languageRuntime({url='https://example.test/story/comic/?edition=2#page-07',saved='zh',blocked=false}={}) {
+  let currentURL=new URL(url);
+  const storage=new Map(saved===null?[]:[['jiake-language',saved]]),events={};
+  const heading=new Element({'data-comic-i18n':'bookTitle'}),meta=new Element();
+  const buttons=['en','zh','fr','es'].map(value=>new Element({'data-language':value}));
+  const links=[{href:'https://example.test/story/index.html#growth'},
+    {href:'https://example.test/story/comic/transcript.html?edition=2#page-07'},
+    {href:'https://example.test/images/comic/v2/page-07.webp'},
+    {href:'https://other.test/story/'}];
+  const copies=Object.fromEntries(['en','zh','fr','es'].map(value=>[value,{bookTitle:`Title ${value}`,wordsTitle:`Words ${value}`,description:`Description ${value}`} ]));
+  const document={documentElement:{dataset:{},lang:''},body:{dataset:{comicView:'reader'}},readyState:'complete',
+    querySelectorAll:selector=>({'[data-comic-i18n]':[heading],'[data-language]':buttons,'a[href]':links}[selector]||[]),
+    querySelector:selector=>selector==='meta[name="description"]'?meta:null,
+    addEventListener(){},dispatchEvent(){}};
+  const context={COMIC_I18N:copies,document,navigator:{language:'zh-CN'},URL,URLSearchParams,
+    location:{get href(){return currentURL.href;},get origin(){return currentURL.origin;},get search(){return currentURL.search;}},
+    history:{replaceState(_,__,value){currentURL=new URL(value,currentURL);}},
+    localStorage:{getItem(key){if(blocked)throw new Error('blocked');return storage.get(key)??null;},setItem(key,value){if(blocked)throw new Error('blocked');storage.set(key,value);}},
+    addEventListener:(name,listener)=>{events[name]=listener;},MutationObserver:class{observe(){}},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}}};
+  context.window=context;
+  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/growth-comic-language.js'),'utf8'),context);
+  return {document,heading,meta,links,storage,get url(){return currentURL;},choose(value){buttons.find(b=>b.dataset.language===value).emit('click');},back(value){currentURL=new URL(value);events.popstate?.();}};
+}
+test('a shared comic language link overrides the visitor’s remembered language, even without storage',()=>{
+  for(const blocked of [false,true]) {
+    const app=languageRuntime({url:'https://example.test/story/comic/?edition=2&lang=fr#page-07',saved:'zh',blocked});
+    assert.equal(app.document.documentElement.lang,'fr');assert.equal(app.heading.textContent,'Title fr');
+    assert.equal(app.meta.getAttribute('content'),'Description fr');assert.equal(app.url.hash,'#page-07');
+    assert.equal(app.url.searchParams.get('edition'),'2');
+  }
+  assert.equal(languageRuntime({url:'https://example.test/story/comic/?lang=invalid',saved:'es'}).document.documentElement.lang,'es');
+});
+test('changing comic language updates share links and reading links while preserving artwork and external URLs',()=>{
+  const app=languageRuntime();app.choose('es');
+  assert.equal(app.url.searchParams.get('lang'),'es');assert.equal(app.url.searchParams.get('edition'),'2');assert.equal(app.url.hash,'#page-07');
+  assert.equal(app.storage.get('jiake-language'),'es');assert.equal(app.heading.textContent,'Title es');
+  for(const link of app.links.slice(0,2)) assert.equal(new URL(link.href).searchParams.get('lang'),'es');
+  assert.equal(new URL(app.links[1].href).searchParams.get('edition'),'2');
+  assert.equal(app.links[2].href,'https://example.test/images/comic/v2/page-07.webp');assert.equal(app.links[3].href,'https://other.test/story/');
+});
+test('browser Back restores the language encoded in the older comic URL',()=>{
+  const app=languageRuntime();app.choose('es');
+  app.back('https://example.test/story/comic/?edition=2&lang=fr#page-02');
+  assert.equal(app.document.documentElement.lang,'fr');assert.equal(app.url.hash,'#page-02');
+  assert.equal(new URL(app.links[0].href).searchParams.get('lang'),'fr');
 });

@@ -80,14 +80,14 @@
   {
     "id": "7",
     "title": "Life in Frames",
-    "image": "../images/comic/page-01-small.webp",
-    "href": "./comic/index.html",
-    "tags": "16 pages · 4 languages",
+    "image": "../images/comic/v2/page-01-small.webp",
+    "href": "./comic/index.html?edition=2",
+    "tags": "8 pages · 4 languages",
     "description": {
-      "zh": "从宁波的海边村庄，到杭州、成都和巴黎。十六页成长漫画，记录语言、学习和走向世界的故事。",
-      "en": "Sixteen illustrated chapters, from a coastal village in Ningbo to Hangzhou, Chengdu and Paris. Languages, learning and a life in the making.",
-      "fr": "Seize chapitres illustrés, d’un village côtier de Ningbo à Hangzhou, Chengdu et Paris. Langues, apprentissage et parcours personnel.",
-      "es": "Dieciséis capítulos ilustrados, desde un pueblo costero de Ningbo hasta Hangzhou, Chengdu y París. Idiomas, aprendizaje y una vida en construcción."
+      "en": "Going to Paris meant graduating a year later. A story about how I came to make that choice, and the people and languages that helped me along the way.",
+      "zh": "去巴黎，就要晚一年毕业。关于我怎样走到这个选择，以及一路陪着我的人和语言。",
+      "fr": "Partir à Paris signifiait obtenir mon diplôme un an plus tard. Comment ce choix a pris forme, avec les personnes et les langues qui m’ont accompagné.",
+      "es": "Ir a París significaba graduarme un año más tarde. Cómo llegué a esa decisión, con las personas y los idiomas que me acompañaron."
     }
   },
   {

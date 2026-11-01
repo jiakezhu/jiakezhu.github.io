@@ -1,4 +1,4 @@
-import { createStoryTerminals } from './story-world-terminals.js?v=8';
+import { createStoryTerminals } from './story-world-terminals.js?v=9';
 import * as T from './vendor/three.module.min.js';
 import { RoundedBoxGeometry } from './vendor/RoundedBoxGeometry.js';
 import { OrbitControls } from './story-vendor/controls/OrbitControls.js';

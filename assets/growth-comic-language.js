@@ -23,15 +23,30 @@
     document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
     document.title=(document.body.dataset.comicView==='transcript'?text('wordsTitle'):text('bookTitle'))+' · Jiake Zhu';
     document.querySelector('meta[name="description"]')?.setAttribute('content',text('description'));
+    document.querySelectorAll('a[href]').forEach(link=>{
+      const target=new URL(link.href,location.href);
+      if(target.origin!==location.origin || !/\.html$|\/$/.test(target.pathname)) return;
+      target.searchParams.set('lang',language);
+      link.href=target.href;
+    });
+    const url=new URL(location.href);
+    url.searchParams.set('lang',language);
+    history.replaceState(null,'',url);
     updateThemeLabel();
     try { localStorage.setItem('jiake-language',language); } catch {}
     document.dispatchEvent(new CustomEvent('jiake:languagechange',{detail:{language}}));
   }
   document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
   window.addEventListener('storage',event=>{if(event.key==='jiake-language') setLanguage(event.newValue);});
+  window.addEventListener('popstate',()=>{
+    const requested=new URLSearchParams(location.search).get('lang');
+    if(supported.includes(requested) && requested!==language) setLanguage(requested);
+  });
   new MutationObserver(updateThemeLabel).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   if(document.readyState!=='complete') document.addEventListener('DOMContentLoaded',updateThemeLabel,{once:true});
   let initial=navigator.language.startsWith('zh')?'zh':'en';
   try {initial=localStorage.getItem('jiake-language')||initial;} catch {}
+  const requested=new URLSearchParams(location.search).get('lang');
+  if(supported.includes(requested)) initial=requested;
   setLanguage(initial);
 })();

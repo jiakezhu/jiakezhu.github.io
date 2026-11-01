@@ -106,11 +106,26 @@ export function buildComic(base=root) {
       story=/<script\b[^>]*src="\.\.\/assets\/reading-pages\.js/.test(story) ? story.replace(/<script\b[^>]*src="\.\.\/assets\/reading-pages\.js[^>]*>/,script+'$&') : story.replace('</body>',script+'</body>');
     }
   }
+  // Keep the vending-machine card on the same edition as the reader and Story cover.
+  const projectsFile=path.join(base,'assets/story-projects.json');
+  let projects;
+  if(fs.existsSync(projectsFile)) {
+    projects=JSON.parse(fs.readFileSync(projectsFile,'utf8'));
+    if(!Array.isArray(projects)) throw new Error('Invalid Story project collection');
+    for(const project of projects) {
+      if(!/^(?:\.\/)?comic\/index\.html(?:[?#].*)?$/.test(project.href || '')) continue;
+      project.image=`../images/comic/${data.pages[0].smallImage}`;
+      project.href=`./comic/index.html${query}`;
+      project.tags=`${total} pages · 4 languages`;
+      project.description=Object.fromEntries(Object.entries(dictionaries).map(([language,copy])=>[language,copy.entryIntro]));
+    }
+  }
   const directory=path.join(base,'story/comic');
   fs.mkdirSync(directory,{recursive:true});
   fs.writeFileSync(path.join(directory,'index.html'),reader);
   fs.writeFileSync(path.join(directory,'transcript.html'),transcript);
   if(story!==undefined) fs.writeFileSync(storyFile,story);
+  if(projects) fs.writeFileSync(projectsFile,JSON.stringify(projects,null,2)+'\n');
   localizeComic(base,data,dictionaries);
   console.log(`Comic built: ${total} pages, ${data.pages.filter(page=>page.layout==='composed').length} composed artworks, 4 languages.`);
   return data;
