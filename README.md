@@ -244,3 +244,12 @@ Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Dow
 当前首页照片与缩略图使用 `images/web/` 内的 WebP 衍生文件。`assets/web-image-sources.json` 记录原图和生成尺寸，`scripts/prepare-web-images.py` 在带 Pillow 的 Python 环境中生成图片及 `assets/web-images.json` 清单；常规 Node 构建直接使用提交后的文件，不要求 Python。原图和历史网站保留。首页照片提供 400 / 800 / 1082 像素版本，响应式预加载与图片的 srcset、sizes 一致。开场拼贴仅在首次播放或重播时请求；弹窗图片仅在打开该弹窗时请求；其余图片使用浏览器延迟加载。图片设置固有尺寸，保持既有显示比例。
 
 原首页立即加载的 50 种图片共 16,797,129 字节；优化后的首屏与开场在选择最大响应式版本时约 430 KB，其余分段加载。这是图片资源预算，不是页面实测耗时。自动检查限制首屏与开场图片预算低于 450 KB，并验证 WebP 文件、资源路径与预加载一致性。
+
+
+## 访问统计
+
+当前站点使用 Cloudflare Web Analytics，仍由 GitHub Pages 托管。登录 [Cloudflare Web Analytics](https://dash.cloudflare.com/?to=/:account/web-analytics)，选择 `jiakezhu.github.io` 查看浏览次数、访问趋势、页面路径、来源、国家和设备类型。PV与Visits沿用Cloudflare的定义，不等同于实名访客人数。
+
+`assets/analytics.js` 是统一入口，读取 `assets/analytics-config.json` 中的公开站点标识后加载官方 beacon。仅在正式域名的顶层HTTPS页面运行；本地预览和嵌入式项目预览不会上报。关闭SPA测量，翻漫画、切换语言不当作新的文档访问。统计服务不可用时不影响正常阅读。
+
+当前接入首页、Story、漫画、公开日志文章和Sales Buddy展示页；写作台、跳转页、素材演示和历史站点快照保持原样。日志和漫画的构建脚本会自动保留统计入口；其他新增公开页可运行 `node scripts/install-analytics.mjs` 同步。统计从接入后开始，历史未采集的数据无法补录。

@@ -51,6 +51,7 @@ const writeData=({base,data})=>fs.writeFileSync(path.join(base,'content/story/co
 
 test('composed pages render each complete artwork once with all real HTML narration',()=>withFixture(({base,data})=>{
   buildComic(base);const reader=output(base),transcript=output(base,'transcript.html');
+  for(const html of [reader,transcript]) assert.match(html,/data-site-analytics src="\.\.\/\.\.\/assets\/analytics\.js/);
   assert.equal((reader.match(/data-comic-page=/g)||[]).length,data.pages.length);
   assert.equal((reader.match(/<picture>/g)||[]).length,data.pages.length);
   assert.equal((reader.match(/class="comic-artwork-link"/g)||[]).length,data.pages.length);

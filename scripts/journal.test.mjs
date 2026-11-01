@@ -31,6 +31,7 @@ test('build generates searchable static pages and removes withdrawn posts everyw
     fs.writeFileSync(path.join(dir,'content/post-translations/example.json'),JSON.stringify(Object.fromEntries(['en','fr','es'].map(language => [language,{title:`${language} title`,summary:`${language} summary`,body:`## ${language} section\n\nA translated explanation with [a source](https://example.org).`}]))));
     assert.equal(build(dir).length,1);
     const article=fs.readFileSync(path.join(dir,'journal/posts/example/index.html'),'utf8');
+    assert.match(article,/data-site-analytics src="\.\.\/\.\.\/\.\.\/assets\/analytics\.js/);
     assert(article.includes('<h1 class="article-title">一篇记录</h1>'));
     for(const language of ['zh','en','fr','es']) {
       assert(article.includes(`data-article-version="${language}"`));
