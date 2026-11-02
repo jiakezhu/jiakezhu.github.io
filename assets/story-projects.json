@@ -78,19 +78,6 @@
     "tags": "Student-budget routes"
   },
   {
-    "id": "7",
-    "title": "Life in Frames",
-    "image": "../images/comic/page-01-small.webp",
-    "href": "./comic/index.html",
-    "tags": "16 pages · 4 languages",
-    "description": {
-      "en": "A coastal village, the long road to confidence, and the languages that opened my world. Sixteen illustrated chapters, from childhood to what I am building today.",
-      "zh": "从沿海村庄出发，走过找回自信的漫长旅程，用语言打开世界。十六个图画章节，讲述从童年到今天的成长。",
-      "fr": "Un village côtier, le long chemin vers la confiance et les langues qui ont ouvert mon monde. Seize chapitres illustrés, de l’enfance à mes projets d’aujourd’hui.",
-      "es": "Un pueblo costero, el largo camino hacia la confianza y los idiomas que abrieron mi mundo. Dieciséis capítulos ilustrados, desde la infancia hasta lo que construyo hoy."
-    }
-  },
-  {
     "id": "8",
     "title": "Projects & Notes",
     "image": "../images/web/63878dfe7d00-384.webp",

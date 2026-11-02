@@ -48,8 +48,8 @@ export function buildComic(base=root) {
   const dictionaries=comicDictionaries(base,data);
   const english=dictionaries.en;
   const total=data.pages.length;
-  const edition=Number(data.version)>=2 ? 2 : 1;
-  const query=edition===2 ? '?edition=2' : '';
+  const edition=Math.max(1,Math.floor(Number(data.version)||1));
+  const query=edition>=2 ? `?edition=${edition}` : '';
   const pageLink=number=>`${query}#page-${pad(number)}`;
   const t=(key,tag='span',attributes='')=>`<${tag}${attributes} data-comic-i18n="${key}">${escape(english[key])}</${tag}>`;
   const aria=key=>`aria-label="${escape(english[key])}" data-comic-i18n-aria="${key}"`;

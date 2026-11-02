@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const COMIC_ASSET_VERSION = 9;
+export const COMIC_ASSET_VERSION = 10;
 const languages = ['en','zh','fr','es'];
 const pad = number => String(number).padStart(2,'0');
 const present = value => typeof value === 'string' && value.trim().length > 0;

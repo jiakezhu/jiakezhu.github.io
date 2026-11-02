@@ -141,3 +141,52 @@ html[data-theme=light] .story-world-page .world-reader { --world-panel:#f0f1edeF
   .story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools { top:220px; }
   .story-world-page.world-terminal-open .world-profile-open:not([hidden]) { display:block;position:fixed;right:21px;bottom:23px;z-index:50;max-width:calc(100vw - 180px);min-height:40px;padding:8px 16px;border:1px solid #9de7d95c;border-radius:999px;background:#102823eF;color:#d8fff1;font:12px/1.5 var(--sans);box-shadow:0 3px 20px #0004; }
 }
+
+
+/* ── The overlay borrows the shop's toy-like signage: chunky letters, flat neon fills, hard dark outlines. ── */
+.story-world-page { --sign-ink:#0a0b12;--sign-red:#ff2e63;--sign-pink:#ff3dcb;--sign-cyan:#19d3ff; }
+.story-world-page .world-copy { left:40px;top:92px;max-width:none; }
+.story-world-page .world-open { display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;padding:5px 12px 5px 10px;border:1px solid #ff3dcb5c;border-radius:999px;background:#ff3dcb10;color:#ffd5f4;font:800 10px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-shadow:0 0 9px #ff3dcbaa; }
+.story-world-page .world-open i { width:6px;height:6px;border-radius:50%;background:var(--sign-pink);box-shadow:0 0 6px var(--sign-pink),0 0 14px var(--sign-pink);animation:signBuzz 6s steps(1,end) infinite; }
+.story-world-page .world-clock { padding-left:10px;border-left:1px solid #ffffff1f;color:#9de7e5;font-family:'SF Mono',ui-monospace,Menlo,Consolas,monospace;font-weight:500;letter-spacing:.08em;text-shadow:0 0 8px #9de7e566;font-variant-numeric:tabular-nums; }
+.story-world-page .world-script { position:absolute;left:calc(100% - 26px);top:calc(100% - 8px);color:#a6f3f0;font:italic 400 32px/1 'Instrument Serif',Georgia,serif;letter-spacing:0;white-space:nowrap;transform:rotate(-8deg);text-shadow:0 0 2px #e6ffff,0 0 12px #29c6ffcc,0 0 30px #29c6ff77;animation:signIgnite 1.6s .5s steps(1,end) both; }
+.story-world-page.world-list-mode .world-open,.story-world-page.world-list-mode .world-script { display:none; }
+@font-face { font-family:'Instrument Serif'; font-style:italic; font-weight:400; font-display:swap; src:url('fonts/instrument-serif-italic.woff2') format('woff2'); }
+@keyframes signIgnite { 0% { opacity:0; } 8% { opacity:.8; } 14% { opacity:.1; } 26% { opacity:1; } 31% { opacity:.35; } 40%,100% { opacity:1; } }
+@keyframes signBuzz { 0%,91%,95%,100% { opacity:1; } 93%,97% { opacity:.25; } }
+@media(prefers-reduced-motion:reduce) { .story-world-page .world-open i,.story-world-page .world-script { animation:none; } }
+.story-world-page .world-copy h1.world-title { position:relative;width:max-content;margin:0;color:#fff8e8;font:900 38px/1.05 var(--sans);letter-spacing:-.02em;text-shadow:0 3px 0 #65c0cd,0 0 22px #19d3ff40; }
+.story-world-page .world-instructions { display:none; }
+/* Three signposts: the same colours as projects / articles / about me in the scene. */
+.story-world-page:not(.world-list-mode) .story-tabs { bottom:26px;width:auto;max-width:none;gap:12px;padding:0;border:0;border-radius:0;background:none;backdrop-filter:none;box-shadow:none; }
+.story-world-page:not(.world-list-mode) .story-tabs button { --c:var(--sign-red);flex:none;min-width:128px;padding:11px 22px;border:3px solid var(--sign-ink);border-radius:9px;background:var(--c);color:var(--sign-ink);box-shadow:0 4px 0 var(--sign-ink),0 0 26px color-mix(in srgb,var(--c) 38%,transparent);transition:transform .15s,box-shadow .15s,filter .2s; }
+.story-world-page:not(.world-list-mode) .story-tabs button:nth-child(2) { --c:var(--sign-pink); }
+.story-world-page:not(.world-list-mode) .story-tabs button:nth-child(3) { --c:var(--sign-cyan); }
+.story-world-page:not(.world-list-mode) .story-tabs button:hover,.story-world-page:not(.world-list-mode) .story-tabs button[aria-pressed=true] { transform:translateY(-3px);box-shadow:0 7px 0 var(--sign-ink),0 0 36px color-mix(in srgb,var(--c) 60%,transparent);filter:brightness(1.08); }
+.story-world-page:not(.world-list-mode) .story-tabs button:active { transform:translateY(2px);box-shadow:0 2px 0 var(--sign-ink); }
+.story-world-page:not(.world-list-mode) .story-tabs button:focus-visible { outline:2px solid #fff;outline-offset:4px; }
+.story-world-page:not(.world-list-mode) .story-tab-number { display:none; }
+.story-world-page:not(.world-list-mode) .story-tab-copy strong { color:inherit;font:900 14px/1.2 var(--sans);letter-spacing:.01em; }
+/* View tools: quiet round icons; the text label returns in list mode and on the device screens. */
+.story-world-page .world-view-tools svg { width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none; }
+.story-world-page .world-view-tools button { display:inline-flex;align-items:center;gap:7px; }
+.story-world-page [data-world-audio]:not([data-audio-state=running]) .tool-wave { opacity:.25; }
+.story-world-page [data-world-audio][data-audio-state=running]::before { display:none; }
+.story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools { top:auto;bottom:84px;left:32px;flex-direction:row;gap:8px; }
+.story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools button { width:38px;height:38px;justify-content:center;padding:0;border:1px solid #b3cbe52e;border-radius:50%;background:#0b1220b8;color:#b4c3d6;backdrop-filter:blur(10px);transition:color .2s,border-color .2s; }
+.story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools button:hover { color:#e6fffd;border-color:#9de7e580; }
+.story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools button span,.story-world-page.world-terminal-open .world-view-tools svg { display:none; }
+.story-world-page.world-list-mode .world-view-tools svg { display:none; }
+.story-world-page.world-list-mode .world-copy h1.world-title { font-size:42px;color:var(--text);text-shadow:none; }
+@media(max-width:700px) {
+  .story-world-page .world-copy { top:78px;left:20px; }
+  .story-world-page .world-copy h1.world-title { font-size:28px; }
+  .story-world-page .world-open { margin-bottom:12px;font-size:9px; }
+  .story-world-page .world-script { font-size:24px;left:calc(100% - 18px); }
+  .story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools { top:128px; }
+  .story-world-page:not(.world-list-mode) .story-tabs { bottom:66px;width:calc(100vw - 28px);gap:8px; }
+  .story-world-page:not(.world-list-mode) .story-tabs button { flex:1;min-width:0;padding:10px 6px; }
+  .story-world-page:not(.world-list-mode) .story-tab-copy strong { font-size:12px;white-space:nowrap; }
+  .story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools { top:78px;bottom:auto;left:auto;right:16px;gap:6px; }
+  .story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools button { width:34px;height:34px; }
+}

@@ -49,6 +49,15 @@ function withFixture(options,callback) {
 const output=(base,file='index.html')=>fs.readFileSync(path.join(base,'story/comic',file),'utf8');
 const writeData=({base,data})=>fs.writeFileSync(path.join(base,'content/story/comic-manifest.json'),JSON.stringify(data));
 
+test('the ink memoir retains every original story item exactly once',()=>{
+  const data=read(root,'content/story/comic-manifest.json');
+  if(data.version!==3) return;
+  const counts=[3,4,4,4,4,4,4,5,4,4,3,4,4,4,3,4];
+  const original=counts.flatMap((count,index)=>Array.from({length:count},(_,frame)=>`p${String(index+1).padStart(2,'0')}.${frame}`));
+  original.push('p15.closing');
+  const used=data.pages.flatMap(page=>page.sourceIds||[]);
+  assert.equal(used.length,63);assert.equal(new Set(used).size,63);assert.deepEqual([...used].sort(),original.sort());
+});
 test('composed pages render each complete artwork once with all real HTML narration',()=>withFixture(({base,data})=>{
   buildComic(base);const reader=output(base),transcript=output(base,'transcript.html');
   for(const html of [reader,transcript]) assert.match(html,/data-site-analytics src="\.\.\/\.\.\/assets\/analytics\.js/);
@@ -192,6 +201,25 @@ test('language changes keep the selected page and keyboard navigation respects i
 });
 test('legacy transcript anchors are mapped too, without attempting reader controls or image loading',()=>{
   const app=runtime({url:'https://example.test/story/comic/transcript.html#page-13',transcript:true});assert.equal(app.url.hash,'#page-06');assert.equal(app.url.searchParams.get('edition'),'2');assert.equal(app.pages[5].scrolled,true);assert.ok(app.pages.every(page=>page.image.getAttribute('src')===null));
+});
+test('the ink edition keeps bookmarks from both earlier editions on the matching life stage',()=>{
+  const original=[1,2,4,6,7,9,10,11,14,15,17,18,21,22,24,26];
+  const second=[21,1,6,9,11,22,24,26];
+  for(const [edition,mapping] of [['',original],['?edition=2',second]]) mapping.forEach((expected,index)=>{
+    const app=runtime({edition:3,count:28,url:`https://example.test/story/comic/${edition}#page-${String(index+1).padStart(2,'0')}`});
+    assert.equal(app.select.value,String(expected));assert.equal(app.url.searchParams.get('edition'),'3');assert.equal(app.url.hash,`#page-${String(expected).padStart(2,'0')}`);
+  });
+  const current=runtime({edition:3,count:28,url:'https://example.test/story/comic/?edition=3#page-23'});assert.equal(current.select.value,'23');
+});
+test('ink edition offers the prior reading position without overwriting it',()=>{
+  const app=runtime({edition:3,count:28,url:'https://example.test/story/comic/',stored:{'jiake-comic-v2-last-page':'6','jiake-comic-last-page':'14'}});
+  assert.equal(app.select.value,'1');assert.equal(app.storage.get('jiake-comic-v3-last-page'),'22');assert.equal(app.storage.get('jiake-comic-v2-last-page'),'6');assert.match(app.resume.textContent,/22/);
+  app.resume.emit('click');assert.equal(app.select.value,'22');assert.equal(app.url.searchParams.get('edition'),'3');
+  const original=runtime({edition:3,count:28,url:'https://example.test/story/comic/',stored:{'jiake-comic-last-page':'15'}});assert.match(original.resume.textContent,/24/);
+});
+test('ink transcript translates an older bookmarked scene without loading artwork',()=>{
+  const app=runtime({edition:3,count:28,url:'https://example.test/story/comic/transcript.html?edition=2#page-06',transcript:true});
+  assert.equal(app.url.searchParams.get('edition'),'3');assert.equal(app.url.hash,'#page-22');assert.equal(app.pages[21].scrolled,true);assert.ok(app.pages.every(page=>page.image.getAttribute('src')===null));
 });
 test('document skip anchors do not reset the current page while page hash changes still navigate',()=>{
   const app=runtime({url:'https://example.test/story/comic/?edition=2#page-04'});

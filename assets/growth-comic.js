@@ -4,21 +4,27 @@
   const total=pages.length || Number(document.body.dataset.comicTotal)||1;
   const legacyPages=[2,2,2,3,3,4,4,5,4,5,5,8,6,6,7,8];
   const restoredPages=[13,1,4,6,8,14,15,16];
-  const lastPageKey=edition===2 ? 'jiake-comic-v2-last-page' : 'jiake-comic-last-page';
+  const originalToInk=[1,2,4,6,7,9,10,11,14,15,17,18,21,22,24,26];
+  const secondToInk=[21,1,6,9,11,22,24,26];
+  const lastPageKey=edition===3 ? 'jiake-comic-v3-last-page' : edition===2 ? 'jiake-comic-v2-last-page' : 'jiake-comic-last-page';
   const bound=value=>Math.max(1,Math.min(total,Number(value)||1));
   const pageHash=number=>`page-${String(number).padStart(2,'0')}`;
   function fromLocation() {
     const url=new URL(location.href);
     const match=/^#page-?(\d+)$/.exec(url.hash);
     const original=match ? Number(match[1]) : 1;
-    const legacy=edition===2 && url.searchParams.get('edition')!=='2';
-    const restored=edition===1 && url.searchParams.get('edition')==='2';
-    const number=bound(restored && match && original>=1 && original<=restoredPages.length ? restoredPages[original-1] : legacy && match && original>=1 && original<=legacyPages.length ? legacyPages[original-1] : original);
-    if(edition===2) {
-      url.searchParams.set('edition','2');
+    const sourceEdition=Number(url.searchParams.get('edition'))||1;
+    let number=original;
+    if(match && edition===3 && sourceEdition===1 && original>=1 && original<=originalToInk.length) number=originalToInk[original-1];
+    else if(match && edition===3 && sourceEdition===2 && original>=1 && original<=secondToInk.length) number=secondToInk[original-1];
+    else if(match && edition===2 && sourceEdition!==2 && original>=1 && original<=legacyPages.length) number=legacyPages[original-1];
+    else if(match && edition===1 && sourceEdition===2 && original>=1 && original<=restoredPages.length) number=restoredPages[original-1];
+    number=bound(number);
+    if(edition>=2) {
+      url.searchParams.set('edition',String(edition));
       if(match) url.hash=pageHash(number);
       if(url.href!==location.href) history.replaceState(null,'',url);
-    } else if(restored) {
+    } else if(sourceEdition===2) {
       url.searchParams.delete('edition');
       if(match) url.hash=pageHash(number);
       history.replaceState(null,'',url);
@@ -85,7 +91,7 @@
     });
     if(navigate) {
       const next=new URL(location.href);
-      if(edition===2) next.searchParams.set('edition','2');
+      if(edition>=2) next.searchParams.set('edition',String(edition));
       next.hash=pageHash(current);
       if(next.href!==location.href) history.pushState(null,'',next);
     }
@@ -118,7 +124,13 @@
   try {
     const stored=Number(localStorage.getItem(lastPageKey));
     if(Number.isInteger(stored) && stored>=1 && stored<=total) saved=stored;
-    else if(edition===2 && !location.hash) {
+    else if(edition===3 && !location.hash) {
+      const second=Number(localStorage.getItem('jiake-comic-v2-last-page'));
+      const original=Number(localStorage.getItem('jiake-comic-last-page'));
+      if(Number.isInteger(second) && second>=1 && second<=secondToInk.length) saved=bound(secondToInk[second-1]);
+      else if(Number.isInteger(original) && original>=1 && original<=originalToInk.length) saved=bound(originalToInk[original-1]);
+      if(saved>1) localStorage.setItem(lastPageKey,String(saved));
+    } else if(edition===2 && !location.hash) {
       const legacy=Number(localStorage.getItem('jiake-comic-last-page'));
       if(Number.isInteger(legacy) && legacy>=1 && legacy<=legacyPages.length) {
         saved=bound(legacyPages[legacy-1]);

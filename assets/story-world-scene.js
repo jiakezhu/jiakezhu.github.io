@@ -1,4 +1,4 @@
-import { createStoryTerminals } from './story-world-terminals.js?v=10';
+import { createStoryTerminals } from './story-world-terminals.js?v=11';
 import * as T from './vendor/three.module.min.js';
 import { RoundedBoxGeometry } from './vendor/RoundedBoxGeometry.js';
 import { OrbitControls } from './story-vendor/controls/OrbitControls.js';
@@ -17,7 +17,7 @@ import { FontLoader } from './story-vendor/loaders-FontLoader.js';
 
 // Complete scene and baked art from Jesse Zhou's Ramen-Shop, adapted locally for Jiake's Story.
 // Source attribution and asset provenance: images/story-ramen/ATTRIBUTION.md.
-export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect,onVisits,onExit,onRead,reduced}) {
+export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect,onVisits,onComic,onExit,onRead,reduced}) {
   const base=new URL('../images/story-ramen/',document.baseURI);
   const asset=path=>new URL(path,base).href;
   const vendor=path=>new URL('./story-vendor/'+path,import.meta.url).href;
@@ -100,9 +100,6 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
     const line=new T.Mesh(geometry,material);line.position.set(-1.475,y,.008);line.userData.section='growth';identity.add(line);
   }
   floorLine('JIAKE ZHU',.31,.38,signFont,floorInk);
-  floorLine('Tencent Cloud | Technology, Product & Business',.105,.08);
-  floorLine('AI tools for sales, languages and everyday life',.105,-.10);
-  floorLine('Chinese / English / French / Spanish',.105,-.28);
   const identityHit=new T.Mesh(new T.PlaneGeometry(3.12,1.22),basic('#000000'));identityHit.position.set(0,.24,0);identityHit.visible=false;identityHit.userData.section='growth';identity.add(identityHit);
   const makeCanvas=(ratio,draw)=>{
     const c=document.createElement('canvas');c.width=1024;c.height=Math.round(1024/ratio);draw(c.getContext('2d'),c.width,c.height);
@@ -132,8 +129,27 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   // White lamp cores with a separate pink halo avoid flat, saturated magenta globes.
   objects.poleLight.material=basic('#fff3fc');objects.poleLight.userData.bloomMaterial=basic('#e85cc4');
   objects.jZhouBlack.visible=false;
-  const badge=makeCanvas(1,(ctx,w,h)=>{ctx.fillStyle='#ff2fd5';ctx.fillRect(0,0,w,h);ctx.fillStyle='#10131b';for(let i=0;i<23;i++){if(i%4!==1)ctx.fillRect(115+i*35,140,9+(i%3)*5,365);}ctx.font='700 93px Nunito,sans-serif';ctx.textAlign='center';ctx.fillText('JIAKE ZHU',w/2,735);});badge.flipY=true;
-  const badgeMesh=new T.Mesh(new T.PlaneGeometry(.65,.65),new T.MeshBasicMaterial({map:badge}));badgeMesh.rotation.y=-Math.PI/2;badgeMesh.position.x=-.043;badgeMesh.userData.section='growth';objects.jZhouPink.add(badgeMesh);
+  const pixelAlphabet={
+    v:['00000','00000','11011','11011','11011','01010','00100','00000'],
+    i:['01100','00000','11100','01100','01100','01100','11110','00000'],
+    s:['00000','00000','01111','11000','01110','00011','11110','00000'],
+    t:['01100','01100','11111','01100','01100','01101','00110','00000'],
+    l:['11100','01100','01100','01100','01100','01100','11110','00000'],
+    o:['00000','00000','01110','11011','11011','11011','01110','00000'],
+    g:['00000','00000','01111','11011','01111','00011','11011','01110'],
+    c:['00000','00000','01111','11000','11000','11000','01111','00000'],
+    m:['00000','00000','11010','11111','10101','10101','10101','00000']
+  };
+  // The pink poster on the pole is the growth comic: its cover, labelled in the signposts' pixel lettering.
+  const comicCover=await new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>resolve(null);image.src=new URL('../images/comic/v3/page-01-small.webp',document.baseURI).href;});
+  const badge=makeCanvas(1,(ctx,w,h)=>{
+    ctx.fillStyle='#ff2fd5';ctx.fillRect(0,0,w,h);
+    const x=78,y=72,iw=w-156,ih=620;ctx.fillStyle='#10131b';ctx.fillRect(x-14,y-14,iw+28,ih+28);
+    if(comicCover){const scale=Math.max(iw/comicCover.width,ih/comicCover.height),sw=iw/scale,sh=ih/scale;ctx.drawImage(comicCover,(comicCover.width-sw)/2,0,sw,sh,x,y,iw,ih);}
+    const text='comic',cell=26,textWidth=[...text].length*6-1;let cursor=(w/cell-textWidth)/2;ctx.fillStyle='#10131b';
+    for(const char of text){pixelAlphabet[char].forEach((row,ry)=>[...row].forEach((on,rx)=>{if(on==='1')ctx.fillRect(Math.round((cursor+rx)*cell),778+ry*cell,cell,cell);}));cursor+=6;}
+  });badge.flipY=true;
+  const badgeMesh=new T.Mesh(new T.PlaneGeometry(.65,.65),new T.MeshBasicMaterial({map:badge}));badgeMesh.rotation.y=-Math.PI/2;badgeMesh.position.x=-.043;badgeMesh.userData.section='comic';objects.jZhouPink.add(badgeMesh);
   // Reuse the existing orange sign and replace only its owner-credit lettering.
   // The source credit remains available in the separate scene credits dialog.
   objects.creditsBlack.visible=false;
@@ -146,32 +162,27 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   creditsFace.translate((creditsFaceBounds.min.x+creditsFaceBounds.max.x)/2,(creditsFaceBounds.min.y+creditsFaceBounds.max.y)/2,(creditsFaceBounds.min.z+creditsFaceBounds.max.z)/2);
   objects.creditsOrange.geometry=creditsFace;
   // Vector pixel glyphs match the other wayfinding signs without blurred textures.
-  const visitAlphabet={
-    v:['00000','00000','11011','11011','11011','01010','00100','00000'],
-    i:['01100','00000','11100','01100','01100','01100','11110','00000'],
-    s:['00000','00000','01111','11000','01110','00011','11110','00000'],
-    t:['01100','01100','11111','01100','01100','01101','00110','00000'],
-    l:['11100','01100','01100','01100','01100','01100','11110','00000'],
-    o:['00000','00000','01110','11011','11011','11011','01110','00000'],
-    g:['00000','00000','01111','11011','01111','00011','11011','01110']
-  };
-  const visitText='visit log',pixelWidth=[...visitText].reduce((n,c)=>n+(c===' '?3:6),0)-1;
-  const pixelSize=Math.min(.66/pixelWidth,.104/8),vertices=[];
-  let cursor=0;
-  for(const char of visitText){
-    if(char===' '){cursor+=3;continue;}
-    visitAlphabet[char].forEach((row,y)=>[...row].forEach((cell,x)=>{
-      if(cell!=='1')return;
-      const left=(cursor+x-pixelWidth/2)*pixelSize,right=left+pixelSize;
-      const bottom=(3-y)*pixelSize,top=bottom+pixelSize;
-      vertices.push(left,bottom,0,right,bottom,0,right,top,0,left,bottom,0,right,top,0,left,top,0);
-    }));
-    cursor+=6;
+  function pixelLetters(text,section){
+    const pixelWidth=[...text].reduce((n,c)=>n+(c===' '?3:6),0)-1;
+    const pixelSize=Math.min(.66/pixelWidth,.104/8),vertices=[];
+    let cursor=0;
+    for(const char of text){
+      if(char===' '){cursor+=3;continue;}
+      pixelAlphabet[char].forEach((row,y)=>[...row].forEach((cell,x)=>{
+        if(cell!=='1')return;
+        const left=(cursor+x-pixelWidth/2)*pixelSize,right=left+pixelSize;
+        const bottom=(3-y)*pixelSize,top=bottom+pixelSize;
+        vertices.push(left,bottom,0,right,bottom,0,right,top,0,left,bottom,0,right,top,0,left,top,0);
+      }));
+      cursor+=6;
+    }
+    const geometry=new T.BufferGeometry();
+    geometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));
+    const letters=new T.Mesh(geometry,basic('#090b09'));
+    letters.rotation.y=-Math.PI/2;letters.position.set(-.008,0,0);letters.userData.section=section;
+    return letters;
   }
-  const visitsGeometry=new T.BufferGeometry();
-  visitsGeometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));
-  const visitsSign=new T.Mesh(visitsGeometry,basic('#090b09'));
-  visitsSign.rotation.y=-Math.PI/2;visitsSign.position.set(-.008,0,0);visitsSign.userData.section='visits';
+  const visitsSign=pixelLetters('visit log','visits');
   objects.creditsOrange.add(visitsSign);objects.visitsSign=visitsSign;
   const signCanvas=(title,subtitle,color='#a4eefd',ratio=1.63)=>makeCanvas(ratio,(ctx,w,h)=>{
     ctx.fillStyle='#04141d';ctx.fillRect(0,0,w,h);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.strokeRect(25,25,w-50,h-50);
@@ -253,7 +264,7 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   const sectionNames={journal:['projectsRed','projectsWhite','vendingMachineScreen','smallScreen1','smallScreen2'],wechat:['articlesRed','articlesWhite','arcadeScreen','sideScreen'],growth:['aboutMeBlack','aboutMeBlue','bigScreen','tvScreen','littleTVScreen','tallScreen','smallScreen3','smallScreen4','smallScreen5']};
   const hoverLetters=['projectsWhite','articlesWhite','aboutMeBlack','visitsSign'];for(const name of hoverLetters)objects[name].material=objects[name].material.clone();
   for(const [id,names] of Object.entries(sectionNames))for(const name of names)objects[name].userData.section=id;
-  identity.userData.section='growth';objects.jZhouBlack.userData.section='growth';objects.jZhouPink.userData.section='growth';objects.creditsBlack.userData.section='visits';objects.creditsOrange.userData.section='visits';
+  identity.userData.section='growth';objects.jZhouBlack.userData.section='comic';objects.jZhouPink.userData.section='comic';objects.creditsBlack.userData.section='visits';objects.creditsOrange.userData.section='visits';
   const hitTargets=[];
   function hitbox(x,y,z,w,h,d,id){const box=new T.Mesh(new T.BoxGeometry(w,h,d),new T.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));box.position.set(x,y,z);box.userData.section=id;box.userData.hitbox=true;box.visible=false;scene.add(box);hitTargets.push(box);}
   hitbox(1.15,-1.1,2.1,1.6,3.1,1.6,'journal');hitbox(-.58,-1.5,2.25,1.3,2.9,1.8,'wechat');
@@ -271,7 +282,7 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   function updateHover(id){hover=id;onHover(id==='hologram'?null:id);for(const name of hoverLetters){objects[name].material.color.set(id===objects[name].userData.section?'#f6ef9b':name==='aboutMeBlack'||name==='visitsSign'?'#000000':'#ffffff');}canvas.style.setProperty('cursor',id?'pointer':'grab','important');dirty=true;}
   updateHover(null);
   canvas.addEventListener('pointerdown',event=>{down={x:event.clientX,y:event.clientY};});
-  canvas.addEventListener('pointerup',event=>{if(down&&Math.hypot(event.clientX-down.x,event.clientY-down.y)<7){const id=pick(event);if(id==='hologram'){burst=performance.now();onEffect?.('hologram');}else if(id==='visits'){onEffect?.('click');onVisits?.();}else if(id&&id!==focused)onPick(id);}down=null;});
+  canvas.addEventListener('pointerup',event=>{if(down&&Math.hypot(event.clientX-down.x,event.clientY-down.y)<7){const id=pick(event);if(id==='hologram'){burst=performance.now();onEffect?.('hologram');}else if(id==='visits'){onEffect?.('click');onVisits?.();}else if(id==='comic'){onEffect?.('click');onComic?.();}else if(id&&id!==focused)onPick(id);}down=null;});
   canvas.addEventListener('pointercancel',()=>{down=null;});canvas.addEventListener('pointermove',event=>{if(down)return;const id=pick(event);if(id!==hover)updateHover(id);});canvas.addEventListener('pointerleave',()=>updateHover(null));controls.addEventListener('change',()=>{dirty=true;});
   const terminals=await createStoryTerminals({renderer,camera,canvas,objects,materials:screenMaterials,sourceTextures:textures.slice(9),onExit,onRead,onEffect,reduced});
   const initialHolo=hologramGeometry.attributes.position.array.slice();

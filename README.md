@@ -205,7 +205,7 @@ draft: false
 
 首页四语言使用一致的标题字阶。`assets/home-language-layout.js` 在当前屏宽与字体下预先测量四种语言，为正文、卡片与按钮保留最长译文所需的空间；切换时保留当前阅读位置、作品筛选和展开状态。导航链接按当前译文宽度排列。字体加载、窗口变化或展开内容时会重新测量，正常切换不重新测量整页，也不会持久保存测量过程中的临时语言。
 
-`assets/book-transition.js` / `assets/book-transition.css` 的书本过场包含三章目录、LingoVibe 项目手记、罗马旅行照片、语言短句及成长漫画首页插画，内页文字随网站语言切换。沿用本地素材，翻页后短暂停留，总时长约 2.1 秒；支持跳过、Escape 与浏览器返回，系统减少动态效果时直接进入故事页。
+`assets/book-transition.js` / `assets/book-transition.css` 是从主页进入故事页的过场：画面沉入故事页的夜色，霓虹拉面碗与「JIAKE ZHU · STORY CORNER」招牌闪烁亮起，再向前推近「走进」小店；结尾的青色加载线与文案与故事页 `.world-loading` 一致，衔接无跳变。文案随网站语言切换，总时长约 1.9 秒；支持跳过、Escape 与浏览器返回，系统减少动态效果时直接进入故事页。
 
 ### 足迹地图和 Sales Buddy 素材
 

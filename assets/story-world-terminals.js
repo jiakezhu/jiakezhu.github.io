@@ -2,11 +2,12 @@ import * as T from './vendor/three.module.min.js';
 
 // Device interfaces retain the source Ramen-Shop screens; only personal content is replaced.
 export async function createStoryTerminals({renderer,camera,canvas,objects,materials,sourceTextures,onExit,onRead,onEffect,reduced}) {
-  const projects=await fetch(new URL('./story-projects.json?v=3',import.meta.url)).then(r=>r.json());
-  const comicHref=projects.find(project=>/^(?:\.\/)?comic\/index\.html(?:[?#].*)?$/.test(project.href || ''))?.href || './comic/index.html';
+  const projects=await fetch(new URL('./story-projects.json?v=4',import.meta.url)).then(r=>r.json());
+  // The comic lives behind About me, not in the vending machine; its edition link comes from the Story cover.
+  const comicHref=document.querySelector('#growth .story-cover')?.getAttribute('href') || './comic/index.html';
   const images=await Promise.all(projects.map(project=>new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>resolve(null);image.src=new URL(project.image,document.baseURI).href;})));
   const lang=()=>['zh','en','fr','es'].includes(document.documentElement.lang)?document.documentElement.lang:'en';
-  const labels={zh:{back:'返回',menu:'返回作品',open:'进入作品',choose:'选一瓶，开始探索',about:'关于我',skills:'语言与工具',experience:'我的经历',read:'阅读成长漫画',essays:'小朱还在想'},en:{back:'Go Back',menu:'Go Back',open:'Open Project',choose:'Choose a bottle to get started …',about:'About',skills:'Skills',experience:'Experience',read:'Read my illustrated story',essays:'WeChat essays'},fr:{back:'Retour',menu:'Retour',open:'Ouvrir',choose:'Choisissez une bouteille …',about:'À propos',skills:'Compétences',experience:'Parcours',read:'Lire mon récit illustré',essays:'Essais WeChat'},es:{back:'Volver',menu:'Volver',open:'Abrir',choose:'Elige una botella …',about:'Sobre mí',skills:'Habilidades',experience:'Trayectoria',read:'Leer mi historia ilustrada',essays:'Ensayos WeChat'}};
+  const labels={zh:{back:'返回',menu:'返回作品',open:'进入作品',choose:'选一瓶，开始探索',about:'关于我',skills:'语言与工具',experience:'我的经历',read:'阅读成长漫画',soon:'下一瓶 · 研发中',essays:'小朱还在想'},en:{back:'Go Back',menu:'Go Back',open:'Open Project',choose:'Choose a bottle to get started …',about:'About',skills:'Skills',experience:'Experience',read:'Read my illustrated story',essays:'WeChat essays',soon:'Next build · soon'},fr:{back:'Retour',menu:'Retour',open:'Ouvrir',choose:'Choisissez une bouteille …',about:'À propos',skills:'Compétences',experience:'Parcours',read:'Lire mon récit illustré',essays:'Essais WeChat',soon:'Bientôt · en cours'},es:{back:'Volver',menu:'Volver',open:'Abrir',choose:'Elige una botella …',about:'Sobre mí',skills:'Habilidades',experience:'Trayectoria',read:'Leer mi historia ilustrada',essays:'Ensayos WeChat',soon:'Próximamente'}};
   const profile={
     zh:{about:['你好，我是朱佳科。','我在腾讯云担任技术—产品—商务管培生，关注传媒 AIGC 和 AI Native 客户。此前在字节跳动参与 AI 人才招募，也做过法语外贸、中法文化交流和中芬项目。\n\n本科读法语与跨境电商，硕士读国际商务，也在巴黎一大交流学习国际法。现在把语言、商业和技术连在一起，构建销售、语言学习与效率工具。Always Day One.'],skills:['语言，也是工具。','中文是母语。英语 IELTS 7.5，法语 DALF C1，西班牙语 A2–B1。\n\n我用 AI 构建销售、语言学习、教育和效率工具。贩卖机里收集了 Sales Buddy、LingoVibe、Jiake Orbit，以及我制作的几个 Agent。'],experience:['走过不同的行业。','腾讯云 · 技术 / 产品 / 商务方向\n字节跳动 / TikTok · 全球人才招募\n成都法盟 · 中法文化交流\nMarket Union · 法语外贸\nMingle Advisors · 中芬项目\n\n宁波 → 杭州 → 成都 → 巴黎，故事还在继续。']},
     en:{about:["Hi, I’m Jiake.",'I am a Technology–Product–Business Trainee at Tencent Cloud, focusing on media AIGC and AI Native teams. Previously, I recruited AI talent at ByteDance and worked in French-speaking trade, Sino-French cultural exchange and Sino-Finnish projects.\n\nI studied French and Cross-border E-commerce, then International Business, and spent an exchange year studying International Law at Paris 1. Today I connect languages, business and technology by building AI tools. Always Day One.'],skills:['Languages & tools.','Chinese · Native\nEnglish · IELTS 7.5\nFrench · DALF C1\nSpanish · A2–B1\n\nI build AI tools for sales, language learning, education and daily life. Explore six of them in the vending machine.'],experience:['Across industries.','Tencent Cloud · Technology / Product / Business\nByteDance / TikTok · Global Talent Acquisition\nAlliance Française · Cultural exchange\nMarket Union · French-speaking export sales\nMingle Advisors · Sino-Finnish projects\n\nNingbo → Hangzhou → Chengdu → Paris.']},
@@ -43,12 +44,14 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
   function menuCanvas() {
     const c=makeCanvas(1024,1200),ctx=c.getContext('2d');ctx.drawImage(menuBase,0,0);
     for(const {project,rect:[x,y,w]} of cardRects){sampleFill(ctx,menuBase,x+.012,y+.216,w-.024,indexHeight(project),x+.016,y+.213);ctx.fillStyle='#153a2b';font(ctx,22,700);wrapped(ctx,project.title,(x+.018)*1024,(y+.238)*1200,(w-.035)*1024,24,4);}
+    // Unfilled slots keep their bottle but read as the next build, not as someone else's label.
+    for(let i=projects.length;i<8;i++){const x=.07+(i%4)*.22,y=.075+Math.floor(i/4)*.365,w=.20;sampleFill(ctx,menuBase,x+.012,y+.216,w-.024,.074,x+.016,y+.213);ctx.fillStyle='#4d7a66';font(ctx,20,700);wrapped(ctx,labels[lang()].soon,(x+.018)*1024,(y+.238)*1200,(w-.035)*1024,24,2);}
     return c;
   }
-  const ownMenu=menuCanvas();
+  const menus={},ownMenu=()=>menus[lang()]??=menuCanvas();
   function detailCanvas(index) {
     const project=projects[index],c=makeCanvas(1024,1200),ctx=c.getContext('2d');ctx.drawImage(detailBase,0,0);
-    const r=cardRects[index].rect;ctx.drawImage(ownMenu,r[0]*1024,r[1]*1200,r[2]*1024,r[3]*1200,.07*1024,.075*1200,.20*1024,.31*1200);
+    const r=cardRects[index].rect;ctx.drawImage(ownMenu(),r[0]*1024,r[1]*1200,r[2]*1024,r[3]*1200,.07*1024,.075*1200,.20*1024,.31*1200);
     ctx.fillStyle='#10272a';ctx.fillRect(332,116,575,317);const image=images[index];if(image){const ratio=Math.min(575/image.width,317/image.height),w=image.width*ratio,h=image.height*ratio;ctx.drawImage(image,332+(575-w)/2,116+(317-h)/2,w,h);}
     sampleFill(ctx,detailBase,.112,.465,.77,.252,.115,.45);ctx.fillStyle='#183b30';font(ctx,32,700);ctx.fillText(project.title,123,593,770);font(ctx,25);wrapped(ctx,project.description[lang()]||project.description.en,123,644,760,31,8);
     sampleFill(ctx,detailBase,.55,.803,.325,.091,.56,.802);ctx.fillStyle='#fff';font(ctx,31,700);ctx.fillText(labels[lang()].open,565,1005,320);font(ctx,23);ctx.fillText(project.action?'Read the collection':'Open link',565,1040,320);
@@ -114,7 +117,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
   profileReader.addEventListener('close',()=>{if(!profileOpen.hidden)profileOpen.focus({preventScroll:true});});
   function vending(index=null) {
     device='journal';page=index===null?'menu':'detail';selected=index??0;document.body.dataset.terminal=index===null?'vending-menu':'vending-'+projects[index].id;
-    if(index===null){display('vendingMachineScreen','vending-menu',()=>ownMenu);setButtons([...cardRects.map(({project,rect},i)=>({rect,label:project.title,project:project.id,action:'project-'+project.id,run:()=>vending(i)})),{rect:backRect,label:labels[lang()].back,action:'back',run:()=>onExit?.()}]);}
+    if(index===null){display('vendingMachineScreen','vending-menu',()=>ownMenu());setButtons([...cardRects.map(({project,rect},i)=>({rect,label:project.title,project:project.id,action:'project-'+project.id,run:()=>vending(i)})),{rect:backRect,label:labels[lang()].back,action:'back',run:()=>onExit?.()}]);}
     else {const project=projects[index];display('vendingMachineScreen','vending-'+index,()=>detailCanvas(index));setButtons([{rect:backRect,label:labels[lang()].menu,action:'back',run:()=>vending()},{rect:enterRect,label:labels[lang()].open+' · '+project.title,action:'enter',...(project.href?{href:localizedHref(project.href)}:{run:()=>onRead?.('journal')})}],project.title+' — '+(project.description[lang()]||project.description.en));}
   }
   function about(tab='about') {
