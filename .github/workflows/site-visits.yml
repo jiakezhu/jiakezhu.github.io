@@ -1,0 +1,29 @@
+name: Refresh public visit statistics
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: public-visit-statistics
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.repository == 'jiakezhu/jiakezhu.github.io'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Refresh aggregate snapshot
+        env:
+          CF_WEB_ANALYTICS_TOKEN: ${{ secrets.CF_WEB_ANALYTICS_TOKEN }}
+          CF_ACCOUNT_ID: '6d797eec30890bda389f7a5d32732aa9'
+          CF_SITE_TAG: 'e1d871314817484a8e3e9108f1708d07'
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/sync-site-visits.mjs

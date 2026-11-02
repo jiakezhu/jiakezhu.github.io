@@ -253,3 +253,16 @@ Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Dow
 `assets/analytics.js` 是统一入口，读取 `assets/analytics-config.json` 中的公开站点标识后加载官方 beacon。仅在正式域名的顶层HTTPS页面运行；本地预览和嵌入式项目预览不会上报。关闭SPA测量，翻漫画、切换语言不当作新的文档访问。统计服务不可用时不影响正常阅读。
 
 当前接入首页、Story、漫画、公开日志文章和Sales Buddy展示页；写作台、跳转页、素材演示和历史站点快照保持原样。日志和漫画的构建脚本会自动保留统计入口；其他新增公开页可运行 `node scripts/install-analytics.mjs` 同步。统计从接入后开始，历史未采集的数据无法补录。
+
+
+### Story public visit log
+
+Story adds a small “Visit log” button opening a keyboard-accessible panel with total page views, today, and a seven-day chart. It follows all four Story languages and leaves the 3D scene unchanged. Counts are Cloudflare Web Analytics page views, not unique people or concurrent users. Tracking begins 2026-11-01; no historical traffic is invented.
+
+The public snapshot is `visits.json` on the dedicated `site-analytics` branch. The browser reads that aggregate via raw.githubusercontent.com; this avoids rebuilding the website for each counter update. The only published data is the hostname, date coverage, update timestamp, and daily page-view totals. No visitor paths, location, identifiers or API credentials are published.
+
+`.github/workflows/site-visits.yml` refreshes at minute 17 every three hours (UTC), or on manual dispatch. It uses the `CF_WEB_ANALYTICS_TOKEN` Actions secret, scoped to this Cloudflare account with **Account Analytics Read** only. The initial token expires 2027-11-02; renew that secret before expiry. GitHub scheduled jobs may be delayed or disabled after 60 days without repository activity; the panel warns when its snapshot is over 12 hours old.
+
+`scripts/sync-site-visits.mjs` recomputes the last seven Shanghai calendar days, fills any newer missing days, and retains older daily buckets so cumulative counts survive API retention. Daily windows are half-open and end five minutes behind retrieval. Refreshes replace buckets instead of incrementing totals. API/authentication/validation errors retain the last good snapshot; gaps over 30 days require manual recovery instead of silently undercounting.
+
+Bootstrap the `site-analytics` branch and its initial `visits.json` once before enabling the job. The workflow updates only this file on this branch, using the built-in repository token; it does not update `main` or the site content. Never place the read token in HTML, frontend JS, logs, or repository files. Public beacon tokens in `assets/analytics-config.json` are separate from the secret read token.
