@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "provider": "Cloudflare Web Analytics",
+  "hostname": "jiakezhu.github.io",
+  "startDate": "2026-11-01",
+  "timeZone": "Asia/Shanghai",
+  "updatedAt": "2026-11-02T03:17:25.275Z",
+  "daily": [
+    {
+      "date": "2026-11-01",
+      "pageViews": 10
+    },
+    {
+      "date": "2026-11-02",
+      "pageViews": 1
+    }
+  ]
+}
