@@ -137,15 +137,41 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   // Reuse the existing orange sign and replace only its owner-credit lettering.
   // The source credit remains available in the separate scene credits dialog.
   objects.creditsBlack.visible=false;
-  // Solid glyph geometry stays crisp as the scene is rotated and zoomed.
-  const visitsGeometry=new TextGeometry('visit log',{font:signFont,size:.12,depth:.001,curveSegments:10,bevelEnabled:false});
-  visitsGeometry.computeBoundingBox();
-  const visitsBounds=visitsGeometry.boundingBox;
-  const visitsScale=Math.min(.66/(visitsBounds.max.x-visitsBounds.min.x),.088/(visitsBounds.max.y-visitsBounds.min.y));
-  visitsGeometry.translate(-(visitsBounds.min.x+visitsBounds.max.x)/2,-(visitsBounds.min.y+visitsBounds.max.y)/2,0);
-  visitsGeometry.scale(visitsScale,visitsScale,1);
+  // The original orange face contains cut-out Credits glyphs. Replace the
+  // perforated face with a solid plane matching its original outer bounds.
+  objects.creditsOrange.geometry.computeBoundingBox();
+  const creditsFaceBounds=objects.creditsOrange.geometry.boundingBox;
+  const creditsFace=new T.PlaneGeometry(creditsFaceBounds.max.z-creditsFaceBounds.min.z,creditsFaceBounds.max.y-creditsFaceBounds.min.y);
+  creditsFace.rotateY(-Math.PI/2);
+  creditsFace.translate((creditsFaceBounds.min.x+creditsFaceBounds.max.x)/2,(creditsFaceBounds.min.y+creditsFaceBounds.max.y)/2,(creditsFaceBounds.min.z+creditsFaceBounds.max.z)/2);
+  objects.creditsOrange.geometry=creditsFace;
+  // Vector pixel glyphs match the other wayfinding signs without blurred textures.
+  const visitAlphabet={
+    v:['00000','00000','11011','11011','11011','01010','00100','00000'],
+    i:['01100','00000','11100','01100','01100','01100','11110','00000'],
+    s:['00000','00000','01111','11000','01110','00011','11110','00000'],
+    t:['01100','01100','11111','01100','01100','01101','00110','00000'],
+    l:['11100','01100','01100','01100','01100','01100','11110','00000'],
+    o:['00000','00000','01110','11011','11011','11011','01110','00000'],
+    g:['00000','00000','01111','11011','01111','00011','11011','01110']
+  };
+  const visitText='visit log',pixelWidth=[...visitText].reduce((n,c)=>n+(c===' '?3:6),0)-1;
+  const pixelSize=Math.min(.66/pixelWidth,.104/8),vertices=[];
+  let cursor=0;
+  for(const char of visitText){
+    if(char===' '){cursor+=3;continue;}
+    visitAlphabet[char].forEach((row,y)=>[...row].forEach((cell,x)=>{
+      if(cell!=='1')return;
+      const left=(cursor+x-pixelWidth/2)*pixelSize,right=left+pixelSize;
+      const bottom=(3-y)*pixelSize,top=bottom+pixelSize;
+      vertices.push(left,bottom,0,right,bottom,0,right,top,0,left,bottom,0,right,top,0,left,top,0);
+    }));
+    cursor+=6;
+  }
+  const visitsGeometry=new T.BufferGeometry();
+  visitsGeometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));
   const visitsSign=new T.Mesh(visitsGeometry,basic('#090b09'));
-  visitsSign.rotation.y=-Math.PI/2;visitsSign.position.set(-.008,.00335,-.10645);visitsSign.userData.section='visits';
+  visitsSign.rotation.y=-Math.PI/2;visitsSign.position.set(-.008,0,0);visitsSign.userData.section='visits';
   objects.creditsOrange.add(visitsSign);objects.visitsSign=visitsSign;
   const signCanvas=(title,subtitle,color='#a4eefd',ratio=1.63)=>makeCanvas(ratio,(ctx,w,h)=>{
     ctx.fillStyle='#04141d';ctx.fillRect(0,0,w,h);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.strokeRect(25,25,w-50,h-50);
