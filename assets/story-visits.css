@@ -6,3 +6,5 @@
 @media(max-width:1000px){.story-world-page .visits-open{left:20px;padding:7px 10px;gap:8px}.story-world-page .visits-open svg{display:none}.story-world-page.world-list-mode .visits-open{right:24px}}
 @media(max-width:700px){.story-world-page .visits-open{bottom:14px;left:17px;padding:5px 10px;min-height:34px;font-size:9px;gap:8px}.visits-open strong{font-size:12px}.visits-open .visits-open-arrow{margin-left:0}.story-world-page .visits-dialog{padding:23px;border-radius:16px}.visits-dialog h2{font-size:22px}.visits-scope{margin-bottom:20px}.visits-secondary{margin:18px 0 22px}.visits-chart{gap:8px}.visits-day-track{height:64px}.visits-dialog footer{margin-top:20px}.story-world-page.world-list-mode .visits-open{top:148px;right:23px;left:auto}}
 @media(prefers-reduced-motion:reduce){.visits-open{transition:none}}
+
+.story-world-page.world-list-mode .visits-open strong{color:var(--text)}.story-world-page.world-list-mode .visits-open-arrow{color:var(--muted)}.story-world-page.world-list-mode .visits-open:hover{background:var(--border-s);border-color:var(--muted)}
