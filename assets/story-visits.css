@@ -11,3 +11,56 @@
 @media(max-width:700px){.story-world-page .visits-open{bottom:14px;left:17px;padding:5px 10px;min-height:34px;font-size:9px;gap:8px}.visits-open strong{font-size:12px}.visits-open .visits-open-arrow{margin-left:0}.story-world-page .visits-dialog{padding:23px;border-radius:16px}.visits-dialog header{top:-23px;margin:-23px -23px 0;padding:20px 23px 11px}.visits-dialog h2{font-size:22px}.visits-scope{margin:11px 0 17px}.visits-layout{grid-template-columns:1fr;gap:30px}.visits-secondary{margin:17px 0 23px}.visits-chart{gap:8px}.visits-day-track{height:64px}.visits-breakdowns{gap:8px}.visits-card{padding:12px}.visits-card:first-child,.visits-card:last-child{grid-column:1/-1}.story-world-page .visits-dialog footer{margin-top:20px}.story-world-page.world-list-mode .visits-open{top:148px;right:23px;left:auto}}
 @media(max-width:350px){.visits-breakdowns{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.visits-open{transition:none}}
+
+/* Keep small statistics and the sign entry readable at normal zoom. */
+.story-world-page .visits-open{font-size:13px;background:#102126;backdrop-filter:none}
+.visits-open strong{font-size:16px}
+.story-world-page .visits-dialog{width:min(1050px,calc(100vw - 32px));font-size:14px;color:#f2f8f2}
+.visits-dialog::backdrop{background:#030b0ddb;backdrop-filter:none}
+.visits-dialog header{background:#132327;backdrop-filter:none}
+.visits-dialog header p,.visits-insights-heading p{font-size:10px;color:#b3d3c4}
+.visits-dialog h2{font-size:26px;line-height:1.35}
+.visits-scope{font-size:13px;color:#bdcfc3}
+.visits-total dt{font-size:14px;color:#d5e7d9}
+.visits-secondary dt{min-height:34px;font-size:12px;color:#bdd2c2}
+.visits-secondary dd{font-size:25px;color:#edf7e9}
+.visits-chart-head h3{font-size:14px;color:#dae9dc}
+.visits-chart-head span,.visits-insights-heading>span{font-size:11px;color:#b3c9b9}
+.visits-day-value{font-size:12px;color:#d3e6d5}
+.visits-day time{font-size:11px;color:#aec6b5}
+.visits-insights-heading h3{font-size:18px;color:#f0f8ee}
+.visits-card{padding:15px;border-color:#a8cab43d;background:#ffffff09}
+.visits-card-heading span{font-size:10px;color:#afcdbb}
+.visits-card-heading h4{font-size:15px;font-weight:600;color:#eff8ee}
+.visits-card-heading small{font-size:11px;color:#b6cebd}
+.visits-card ol{gap:9px}
+.visits-row{font-size:14px;color:#e1f0e1}
+.visits-row strong{font-size:14px;font-weight:600;color:#f3f9e9}
+.visits-row-meter{height:4px}
+.visits-card .visits-no-data{font-size:12px;color:#b2cabb}
+.visits-source-hint{margin:13px 0 0;color:#b8d0bd;font-size:12px;line-height:1.5}
+.visits-dates{font-size:11px;color:#bfd4c3}
+.visits-note{font-size:12px;color:#b9d0c0;line-height:1.6}
+.visits-provider{font-size:10px;color:#9ab6a3}
+.visits-status{font-size:12px}
+@media(max-width:700px){
+ .story-world-page .visits-open{font-size:11px;min-height:38px}
+ .visits-open strong{font-size:14px}
+ .story-world-page .visits-dialog{width:calc(100vw - 20px);padding:20px}
+ .visits-dialog header{top:-20px;margin:-20px -20px 0;padding:18px 20px 11px}
+ .visits-dialog h2{font-size:24px}
+ .visits-scope{font-size:12px}
+ .visits-secondary dt{font-size:12px}
+ .visits-card{padding:14px}
+ .visits-source-hint{font-size:12px}
+}
+@media(min-width:701px){
+ .visits-dialog header{padding:20px 30px 10px}
+ .visits-scope{margin:8px 0 12px}
+ .visits-insights-heading{margin-bottom:10px}
+ .visits-card{padding:13px 15px}
+ .visits-card-heading{margin-bottom:10px}
+ .visits-card ol{gap:7px}
+ .visits-source-hint{margin-top:9px}
+ .story-world-page .visits-dialog footer{margin-top:14px;padding-top:12px}
+}

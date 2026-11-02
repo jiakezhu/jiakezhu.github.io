@@ -137,13 +137,14 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   // Reuse the existing orange sign and replace only its owner-credit lettering.
   // The source credit remains available in the separate scene credits dialog.
   objects.creditsBlack.visible=false;
-  const visitsSignTexture=makeCanvas(5.2,(ctx,w,h)=>{
-    ctx.clearRect(0,0,w,h);ctx.fillStyle='#fff';ctx.textAlign='center';ctx.textBaseline='middle';
-    ctx.font='900 145px ui-monospace, "Courier New", monospace';
-    ctx.fillText('visit log',w/2,h/2,w*.94);
-  });
-  visitsSignTexture.flipY=true;
-  const visitsSign=new T.Mesh(new T.PlaneGeometry(.67,.13),new T.MeshBasicMaterial({map:visitsSignTexture,color:'#11120f',transparent:true,depthWrite:false,side:T.FrontSide}));
+  // Solid glyph geometry stays crisp as the scene is rotated and zoomed.
+  const visitsGeometry=new TextGeometry('visit log',{font:signFont,size:.12,depth:.001,curveSegments:10,bevelEnabled:false});
+  visitsGeometry.computeBoundingBox();
+  const visitsBounds=visitsGeometry.boundingBox;
+  const visitsScale=Math.min(.66/(visitsBounds.max.x-visitsBounds.min.x),.088/(visitsBounds.max.y-visitsBounds.min.y));
+  visitsGeometry.translate(-(visitsBounds.min.x+visitsBounds.max.x)/2,-(visitsBounds.min.y+visitsBounds.max.y)/2,0);
+  visitsGeometry.scale(visitsScale,visitsScale,1);
+  const visitsSign=new T.Mesh(visitsGeometry,basic('#090b09'));
   visitsSign.rotation.y=-Math.PI/2;visitsSign.position.set(-.008,.00335,-.10645);visitsSign.userData.section='visits';
   objects.creditsOrange.add(visitsSign);objects.visitsSign=visitsSign;
   const signCanvas=(title,subtitle,color='#a4eefd',ratio=1.63)=>makeCanvas(ratio,(ctx,w,h)=>{
