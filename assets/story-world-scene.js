@@ -17,7 +17,7 @@ import { FontLoader } from './story-vendor/loaders-FontLoader.js';
 
 // Complete scene and baked art from Jesse Zhou's Ramen-Shop, adapted locally for Jiake's Story.
 // Source attribution and asset provenance: images/story-ramen/ATTRIBUTION.md.
-export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect,onCredits,onExit,onRead,reduced}) {
+export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect,onVisits,onExit,onRead,reduced}) {
   const base=new URL('../images/story-ramen/',document.baseURI);
   const asset=path=>new URL(path,base).href;
   const vendor=path=>new URL('./story-vendor/'+path,import.meta.url).href;
@@ -134,6 +134,18 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   objects.jZhouBlack.visible=false;
   const badge=makeCanvas(1,(ctx,w,h)=>{ctx.fillStyle='#ff2fd5';ctx.fillRect(0,0,w,h);ctx.fillStyle='#10131b';for(let i=0;i<23;i++){if(i%4!==1)ctx.fillRect(115+i*35,140,9+(i%3)*5,365);}ctx.font='700 93px Nunito,sans-serif';ctx.textAlign='center';ctx.fillText('JIAKE ZHU',w/2,735);});badge.flipY=true;
   const badgeMesh=new T.Mesh(new T.PlaneGeometry(.65,.65),new T.MeshBasicMaterial({map:badge}));badgeMesh.rotation.y=-Math.PI/2;badgeMesh.position.x=-.043;badgeMesh.userData.section='growth';objects.jZhouPink.add(badgeMesh);
+  // Reuse the existing orange sign and replace only its owner-credit lettering.
+  // The source credit remains available in the separate scene credits dialog.
+  objects.creditsBlack.visible=false;
+  const visitsSignTexture=makeCanvas(5.2,(ctx,w,h)=>{
+    ctx.clearRect(0,0,w,h);ctx.fillStyle='#fff';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.font='900 145px ui-monospace, "Courier New", monospace';
+    ctx.fillText('visit log',w/2,h/2,w*.94);
+  });
+  visitsSignTexture.flipY=true;
+  const visitsSign=new T.Mesh(new T.PlaneGeometry(.67,.13),new T.MeshBasicMaterial({map:visitsSignTexture,color:'#11120f',transparent:true,depthWrite:false,side:T.FrontSide}));
+  visitsSign.rotation.y=-Math.PI/2;visitsSign.position.set(-.008,.00335,-.10645);visitsSign.userData.section='visits';
+  objects.creditsOrange.add(visitsSign);objects.visitsSign=visitsSign;
   const signCanvas=(title,subtitle,color='#a4eefd',ratio=1.63)=>makeCanvas(ratio,(ctx,w,h)=>{
     ctx.fillStyle='#04141d';ctx.fillRect(0,0,w,h);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.strokeRect(25,25,w-50,h-50);
     ctx.fillStyle=color;let size=74;ctx.font=`600 ${size}px "Jiake Rounded","PingFang SC",sans-serif`;while(ctx.measureText(title).width>w*.85){size-=2;ctx.font=`600 ${size}px "Jiake Rounded","PingFang SC",sans-serif`;}
@@ -212,9 +224,9 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
     bloomComposer.render();for(const [mesh,material] of saved)mesh.material=material;saved.clear();mirror.visible=true;composer.render();
   }
   const sectionNames={journal:['projectsRed','projectsWhite','vendingMachineScreen','smallScreen1','smallScreen2'],wechat:['articlesRed','articlesWhite','arcadeScreen','sideScreen'],growth:['aboutMeBlack','aboutMeBlue','bigScreen','tvScreen','littleTVScreen','tallScreen','smallScreen3','smallScreen4','smallScreen5']};
-  const hoverLetters=['projectsWhite','articlesWhite','aboutMeBlack'];for(const name of hoverLetters)objects[name].material=objects[name].material.clone();
+  const hoverLetters=['projectsWhite','articlesWhite','aboutMeBlack','visitsSign'];for(const name of hoverLetters)objects[name].material=objects[name].material.clone();
   for(const [id,names] of Object.entries(sectionNames))for(const name of names)objects[name].userData.section=id;
-  identity.userData.section='growth';objects.jZhouBlack.userData.section='growth';objects.jZhouPink.userData.section='growth';objects.creditsBlack.userData.section='credits';objects.creditsOrange.userData.section='credits';
+  identity.userData.section='growth';objects.jZhouBlack.userData.section='growth';objects.jZhouPink.userData.section='growth';objects.creditsBlack.userData.section='visits';objects.creditsOrange.userData.section='visits';
   const hitTargets=[];
   function hitbox(x,y,z,w,h,d,id){const box=new T.Mesh(new T.BoxGeometry(w,h,d),new T.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));box.position.set(x,y,z);box.userData.section=id;box.userData.hitbox=true;box.visible=false;scene.add(box);hitTargets.push(box);}
   hitbox(1.15,-1.1,2.1,1.6,3.1,1.6,'journal');hitbox(-.58,-1.5,2.25,1.3,2.9,1.8,'wechat');
@@ -229,10 +241,10 @@ export async function createStoryWorld(canvas,{onPick,onHover,onFailure,onEffect
   function pick(event){const bounds=canvas.getBoundingClientRect();pointer.set((event.clientX-bounds.left)/bounds.width*2-1,-(event.clientY-bounds.top)/bounds.height*2+1);ray.setFromCamera(pointer,camera);
     const hits=ray.intersectObjects([...model.children,identity,...hitTargets],true);return hits[0]?.object.userData.section||null;
   }
-  function updateHover(id){hover=id;onHover(['hologram','credits'].includes(id)?null:id);for(const name of hoverLetters){objects[name].material.color.set(id===objects[name].userData.section?'#f6ef9b':name==='aboutMeBlack'?'#000000':'#ffffff');}canvas.style.setProperty('cursor',id?'pointer':'grab','important');dirty=true;}
+  function updateHover(id){hover=id;onHover(id==='hologram'?null:id);for(const name of hoverLetters){objects[name].material.color.set(id===objects[name].userData.section?'#f6ef9b':name==='aboutMeBlack'||name==='visitsSign'?'#000000':'#ffffff');}canvas.style.setProperty('cursor',id?'pointer':'grab','important');dirty=true;}
   updateHover(null);
   canvas.addEventListener('pointerdown',event=>{down={x:event.clientX,y:event.clientY};});
-  canvas.addEventListener('pointerup',event=>{if(down&&Math.hypot(event.clientX-down.x,event.clientY-down.y)<7){const id=pick(event);if(id==='hologram'){burst=performance.now();onEffect?.('hologram');}else if(id==='credits'){onEffect?.('click');onCredits?.();}else if(id&&id!==focused)onPick(id);}down=null;});
+  canvas.addEventListener('pointerup',event=>{if(down&&Math.hypot(event.clientX-down.x,event.clientY-down.y)<7){const id=pick(event);if(id==='hologram'){burst=performance.now();onEffect?.('hologram');}else if(id==='visits'){onEffect?.('click');onVisits?.();}else if(id&&id!==focused)onPick(id);}down=null;});
   canvas.addEventListener('pointercancel',()=>{down=null;});canvas.addEventListener('pointermove',event=>{if(down)return;const id=pick(event);if(id!==hover)updateHover(id);});canvas.addEventListener('pointerleave',()=>updateHover(null));controls.addEventListener('change',()=>{dirty=true;});
   const terminals=await createStoryTerminals({renderer,camera,canvas,objects,materials:screenMaterials,sourceTextures:textures.slice(9),onExit,onRead,onEffect,reduced});
   const initialHolo=hologramGeometry.attributes.position.array.slice();

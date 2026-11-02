@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { emptyState, validateState, queryDays, pageViewsQuery, parsePageViews, mergeDays, DATA_BRANCH, DATA_PATH } from './site-visits.mjs';
+import { emptyState, validateState, queryDays, pageViewsQuery, parsePageViews, mergeDays, detailsWindow, detailsQuery, parseDetails, DATA_BRANCH, DATA_PATH } from './site-visits.mjs';
+import { publicAnalyticsPages } from './install-analytics.mjs';
 export async function syncVisits({state, account, siteTag, token, now=Date.now(), fetchImpl=fetch}) {
   // Leave five minutes for beacon processing. This is a periodically refreshed snapshot.
   const asOf=now-5*60000;
@@ -10,7 +11,11 @@ export async function syncVisits({state, account, siteTag, token, now=Date.now()
     if(!response.ok)throw new Error(`Cloudflare analytics HTTP ${response.status}; previous totals retained`);
     rows.push({date:day.date,pageViews:parsePageViews(await response.json())});
   }
-  return mergeDays(state,rows,asOf);
+  const window=detailsWindow(asOf);
+  const detailsResponse=await fetchImpl('https://api.cloudflare.com/client/v4/graphql', {method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({query:detailsQuery(account,siteTag,window)}),signal:AbortSignal.timeout(30000)});
+  if(!detailsResponse.ok)throw new Error(`Cloudflare details HTTP ${detailsResponse.status}; previous statistics retained`);
+  const detail=parseDetails(await detailsResponse.json(),window,publicAnalyticsPages());
+  return { ...mergeDays(state,rows,asOf), detail };
 }
 async function main() {
   const token=process.env.CF_WEB_ANALYTICS_TOKEN;

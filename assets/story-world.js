@@ -4,10 +4,10 @@ const tabs=[...document.querySelectorAll('[data-story-tab]')],panels=[...documen
 const reader=document.querySelector('.world-reader'),closeButton=document.querySelector('.world-reader-close'),canvas=document.querySelector('.world-canvas');
 const listButton=document.querySelector('[data-world-list]'),resetButton=document.querySelector('[data-world-reset]'),tooltip=document.querySelector('.world-tooltip');
 const copy={
-  zh:{loading:'小店正在亮灯…',hint:'拖动环顾 · 滚轮缩放 · 点击招牌打开故事',list:'阅读目录',scene:'返回小店',reset:'环顾整间小店',close:'返回场景',credits:'来源与署名',journal:'项目与日常',wechat:'小朱还在想',growth:'关于我',label:'朱佳科 · 腾讯云\n技术—产品—商务管培生\nAI 产品构建 · 英 / 法 / 西语'},
-  en:{loading:'Opening the corner…',hint:'Drag to explore · Scroll to zoom · Click a sign to read',list:'Read the collection',scene:'Back to the corner',reset:'Look around',close:'Back to the scene',credits:'Source & credits',journal:'Projects & notes',wechat:'WeChat essays',growth:'About me',label:'Jiake Zhu · Tencent Cloud\nTech / Product / Business Trainee\nAI builder · EN / FR / ES'},
-  fr:{loading:'Le coin s’illumine…',hint:'Glisser · Zoomer · Choisir une enseigne pour lire',list:'Lire la collection',scene:'Retour à la boutique',reset:'Vue d’ensemble',close:'Retour à la scène',credits:'Sources & crédits',journal:'Projets & notes',wechat:'Essais WeChat',growth:'À propos',label:'Jiake Zhu · Tencent Cloud\nTechnologie · Produit · Business\nOutils IA · EN / FR / ES'},
-  es:{loading:'Abriendo el rincón…',hint:'Arrastra · Acerca · Toca un letrero para leer',list:'Leer la colección',scene:'Volver al rincón',reset:'Vista general',close:'Volver a la escena',credits:'Fuentes y créditos',journal:'Proyectos y notas',wechat:'Ensayos WeChat',growth:'Sobre mí',label:'Jiake Zhu · Tencent Cloud\nTecnología · Producto · Negocio\nHerramientas IA · EN / FR / ES'}
+  zh:{loading:'小店正在亮灯…',hint:'拖动环顾 · 滚轮缩放 · 点击招牌打开故事',list:'阅读目录',scene:'返回小店',reset:'环顾整间小店',close:'返回场景',credits:'来源与署名',visits:'来访记录',journal:'项目与日常',wechat:'小朱还在想',growth:'关于我',label:'朱佳科 · 腾讯云\n技术—产品—商务管培生\nAI 产品构建 · 英 / 法 / 西语'},
+  en:{loading:'Opening the corner…',hint:'Drag to explore · Scroll to zoom · Click a sign to read',list:'Read the collection',scene:'Back to the corner',reset:'Look around',close:'Back to the scene',credits:'Source & credits',visits:'Visit log',journal:'Projects & notes',wechat:'WeChat essays',growth:'About me',label:'Jiake Zhu · Tencent Cloud\nTech / Product / Business Trainee\nAI builder · EN / FR / ES'},
+  fr:{loading:'Le coin s’illumine…',hint:'Glisser · Zoomer · Choisir une enseigne pour lire',list:'Lire la collection',scene:'Retour à la boutique',reset:'Vue d’ensemble',close:'Retour à la scène',credits:'Sources & crédits',visits:'Les visites',journal:'Projets & notes',wechat:'Essais WeChat',growth:'À propos',label:'Jiake Zhu · Tencent Cloud\nTechnologie · Produit · Business\nOutils IA · EN / FR / ES'},
+  es:{loading:'Abriendo el rincón…',hint:'Arrastra · Acerca · Toca un letrero para leer',list:'Leer la colección',scene:'Volver al rincón',reset:'Vista general',close:'Volver a la escena',credits:'Fuentes y créditos',visits:'Las visitas',journal:'Proyectos y notas',wechat:'Ensayos WeChat',growth:'Sobre mí',label:'Jiake Zhu · Tencent Cloud\nTecnología · Producto · Negocio\nHerramientas IA · EN / FR / ES'}
 };
 let world=null,active=null,listMode=false,available=false,hovered=null,focusBefore=null,sound;
 const currentCopy=()=>copy[root.lang]||copy.en;
@@ -34,8 +34,8 @@ function failure(){body.classList.add('world-unavailable');available=false;docum
 sound=createStoryAudio(document.querySelector('[data-world-audio]'),()=>updateLabels());
 closeReader({navigate:false,focus:false});restore();updateLabels();
 try{
-  const {createStoryWorld}=await import('./story-world-scene.js?v=10');
-  world=await createStoryWorld(canvas,{reduced,onExit:()=>closeReader(),onRead:id=>{setListMode(true);showSection(id);},onCredits:()=>credits.showModal(),onEffect:name=>sound?.effect(name),onPick:id=>showSection(id),onHover:id=>{hovered=id;tooltip.hidden=!id;if(id){tooltip.textContent=currentCopy()[id]+' ↗';sound?.hover(id);}},onFailure:failure});
+  const {createStoryWorld}=await import('./story-world-scene.js?v=12');
+  world=await createStoryWorld(canvas,{reduced,onExit:()=>closeReader(),onRead:id=>{setListMode(true);showSection(id);},onVisits:()=>document.querySelector('[data-visits-open]')?.click(),onEffect:name=>sound?.effect(name),onPick:id=>showSection(id),onHover:id=>{hovered=id;tooltip.hidden=!id;if(id){tooltip.textContent=currentCopy()[id]+' ↗';sound?.hover(id);}},onFailure:failure});
   available=true;body.classList.add('world-ready');document.querySelector('.world-loading').hidden=true;restore();
   new ResizeObserver(()=>world?.resize()).observe(canvas);
   document.addEventListener('visibilitychange',()=>world?.setActive(!document.hidden&&!listMode));

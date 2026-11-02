@@ -257,9 +257,9 @@ Sales Buddy 的正式标识与新增截图来自作者指定的 `/Users/jake/Dow
 
 ### Story public visit log
 
-Story adds a small “Visit log” button opening a keyboard-accessible panel with total page views, today, and a seven-day chart. It follows all four Story languages and leaves the 3D scene unchanged. Counts are Cloudflare Web Analytics page views, not unique people or concurrent users. Tracking begins 2026-11-01; no historical traffic is invented.
+Story adds a small “Visit log” button opening a keyboard-accessible panel with total and recent page views, a seven-day chart, and 30-day page, region, device and source breakdowns. The floating button and orange 3D Visit Log sign both open it; the scene credits remain accessible separately. It follows all four Story languages and distinguishes page views from Cloudflare visits; neither represents unique people or concurrent users. Tracking begins 2026-11-01; no historical traffic is invented.
 
-The public snapshot is `visits.json` on the dedicated `site-analytics` branch. The browser reads that aggregate via raw.githubusercontent.com; this avoids rebuilding the website for each counter update. The only published data is the hostname, date coverage, update timestamp, and daily page-view totals. No visitor paths, location, identifiers or API credentials are published.
+The public snapshot is `visits.json` on the dedicated `site-analytics` branch. The browser reads it via raw.githubusercontent.com without rebuilding the website for every update. It contains daily totals and independent 30-day aggregates for published pages, country or region, device type, and referring hostname. Unknown or untracked paths and invalid hosts are grouped as other. No IP addresses, query strings, referrer paths, per-person records or API credentials are published. Page, region and device totals are page views; sources are Cloudflare visits (direct or external entries), not unique people.
 
 `.github/workflows/site-visits.yml` refreshes at minute 17 every three hours (UTC), or on manual dispatch. It uses the `CF_WEB_ANALYTICS_TOKEN` Actions secret, scoped to this Cloudflare account with **Account Analytics Read** only. The initial token expires 2027-11-02; renew that secret before expiry. GitHub scheduled jobs may be delayed or disabled after 60 days without repository activity; the panel warns when its snapshot is over 12 hours old.
 
