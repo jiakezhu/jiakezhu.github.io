@@ -134,6 +134,9 @@ html[data-theme=light] .story-world-page .world-reader { --world-panel:#f0f1edeF
 .story-world-page .world-profile-body p:last-child { margin-bottom:0; }
 .story-world-page .world-profile-comic { display:inline-block;margin-top:20px;color:#a5eadd;text-decoration:none; }
 .story-world-page .world-profile-comic[hidden] { display:none; }
+.story-world-page .world-profile-socials { display:flex;flex-wrap:wrap;gap:8px;margin-top:23px;padding-top:18px;border-top:1px solid #a9d6ca25; }
+.story-world-page .world-profile-socials a,.story-world-page .world-profile-socials button { display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 13px;border:1px solid #a9d6ca36;border-radius:8px;background:#ffffff08;color:#d9eee6;font:600 12px/1.4 var(--sans);text-decoration:none;cursor:pointer; }
+.story-world-page .world-profile-socials a:hover,.story-world-page .world-profile-socials button:hover { border-color:#9de7d980;background:#9de7d915; }
 .story-world-page .world-profile-reader :focus-visible,.story-world-page .world-profile-open:focus-visible { outline:2px solid #b1eee4;outline-offset:3px; }
 .story-world-page:not(.world-list-mode):not(.world-terminal-open) .world-view-tools { top:320px; }
 @media(max-width:700px) {

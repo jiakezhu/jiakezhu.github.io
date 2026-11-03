@@ -42,7 +42,7 @@ function failure(){body.classList.add('world-unavailable');available=false;docum
 sound=createStoryAudio(document.querySelector('[data-world-audio]'),()=>updateLabels());
 closeReader({navigate:false,focus:false});restore();updateLabels();
 try{
-  const {createStoryWorld}=await import('./story-world-scene.js?v=26');
+  const {createStoryWorld}=await import('./story-world-scene.js?v=27');
   world=await createStoryWorld(canvas,{reduced,onExit:()=>closeReader(),onRead:id=>{setListMode(true);showSection(id);},onVisits:()=>document.querySelector('[data-visits-open]')?.click(),onComic:openComic,onEffect:name=>sound?.effect(name),onPick:id=>showSection(id),onHover:id=>{hovered=id;tooltip.hidden=!id;if(id){tooltip.textContent=currentCopy()[id]+' ↗';sound?.hover(id);}},onFailure:failure});
   available=true;body.classList.add('world-ready');document.querySelector('.world-loading').hidden=true;restore();
   new ResizeObserver(()=>world?.resize()).observe(canvas);

@@ -15,6 +15,31 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     es:{about:['Hola, soy Jiake.','Trabajo entre tecnología, producto y negocio en Tencent Cloud, con atención al AIGC y a los equipos AI Native. Antes participé en la contratación de talento de IA en ByteDance y trabajé en comercio francófono e intercambios sino-franceses y sino-finlandeses.\n\nEstudié francés, comercio electrónico transfronterizo y negocios internacionales, además de Derecho Internacional en un intercambio en París 1. Hoy conecto idiomas, negocio y tecnología para crear herramientas de IA. Always Day One.'],skills:['Idiomas y herramientas.','Chino · Lengua materna\nInglés · IELTS 7.5\nFrancés · DALF C1\nEspañol · A2–B1\n\nCreo herramientas de IA para ventas, idiomas, educación y vida cotidiana. Seis proyectos están en la máquina expendedora.'],experience:['Entre industrias.','Tencent Cloud · Tecnología / Producto / Negocio\nByteDance / TikTok · Talento internacional\nAlliance Française · Intercambio cultural\nMarket Union · Comercio francófono\nMingle Advisors · Proyectos sino-finlandeses\n\nNingbo → Hangzhou → Chengdu → París.']}
   };
   const makeCanvas=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c;};
+  // Use the same geometry for the artwork and the transparent interactive controls.
+  const socialRect=i=>[.15+i*.047,.88,.04,.075];
+  const socialLinks=['https://x.com/jkzhusolo','https://www.linkedin.com/in/Jack-zhujiake-career/','https://github.com/jiakezhu',null,'mailto:zjksolo@foxmail.com'];
+  const socialIcons=[
+    new Path2D('M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z'),
+    new Path2D('M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM6 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z'),
+    new Path2D('M12 .297C5.37.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.931 0-1.31.465-2.381 1.235-3.221-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.405c1.02.005 2.047.138 3.003.405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.61-2.805 5.625-5.475 5.921.435.375.81 1.096.81 2.221 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z')
+  ];
+  function drawSocialIcon(ctx,index) {
+    const [x,y,w,h]=socialRect(index),size=39;
+    ctx.save();ctx.translate((x+w/2)*1536-size/2,(y+h/2)*945-size/2);ctx.scale(size/24,size/24);
+    ctx.fillStyle='#f7faf9';ctx.strokeStyle='#f7faf9';ctx.lineJoin='round';ctx.lineCap='round';
+    if(index<3)ctx.fill(socialIcons[index]);
+    else if(index===3){
+      // Two speech bubbles remain distinct at the size used on the 3D screen.
+      ctx.beginPath();ctx.ellipse(9.3,9.5,8.3,6.8,0,0,Math.PI*2);ctx.fill();
+      ctx.beginPath();ctx.moveTo(3.3,14);ctx.lineTo(2.7,17.3);ctx.lineTo(7.2,15);ctx.closePath();ctx.fill();
+      ctx.strokeStyle='#101010';ctx.lineWidth=1.1;ctx.beginPath();ctx.ellipse(15.8,15,7.1,5.9,0,0,Math.PI*2);ctx.fill();ctx.stroke();
+      ctx.beginPath();ctx.moveTo(19.7,19.1);ctx.lineTo(21.1,21.7);ctx.lineTo(16.7,20.6);ctx.closePath();ctx.fill();
+      ctx.fillStyle='#101010';for(const [cx,cy] of [[6.4,8.5],[11.3,8.5],[13.5,14.2],[17.9,14.2]]){ctx.beginPath();ctx.arc(cx,cy,.85,0,Math.PI*2);ctx.fill();}
+    }else{
+      ctx.lineWidth=1.9;ctx.stroke(new Path2D('M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-.5 1 9.5 7 9.5-7'));
+    }
+    ctx.restore();
+  }
   function decodeScreen(texture,w,h,map) {
     const target=new T.WebGLRenderTarget(w,h);target.texture.colorSpace=T.SRGBColorSpace;
     const geometry=new T.PlaneGeometry(2,2),uv=geometry.attributes.uv;for(let i=0;i<uv.count;i++){const result=map(uv.getX(i),1-uv.getY(i));uv.setXY(i,...result);}
@@ -64,7 +89,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     let bodySize=35,leading=43,lineLimit=8;
     for(;bodySize>=25;bodySize--){font(ctx,bodySize);leading=Math.ceil(bodySize*1.19);lineLimit=Math.floor(313/leading)+1;if(wrapped(ctx,content[1],215,362,1050,leading,100,false)<=lineLimit)break;}
     font(ctx,bodySize);wrapped(ctx,content[1],215,362,1050,leading,lineLimit);
-    const socials=['X','in','GH','微','@'];font(ctx,38,700);socials.forEach((text,i)=>ctx.fillText(text,245+i*72,887));
+    for(let i=0;i<5;i++)drawSocialIcon(ctx,i);
     if(tab==='experience'){ctx.fillStyle='#91ece8';font(ctx,28,600);ctx.fillText(labels[lang()].read+' ↗',215,788,1000);}
     return c;
   }
@@ -78,7 +103,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
   function display(name,key,draw) {contentDirty=true;const material=materials[name],next=texture(lang()+key,draw);transitions=transitions.filter(t=>t.material!==material);if(reduced.matches){material.uniforms.imageA.value=next;material.uniforms.imageB.value=next;material.uniforms.progress.value=0;}else{material.uniforms.imageB.value=next;material.uniforms.progress.value=0;transitions.push({material,start:performance.now()});}}
   function setButtons(items,description='') {
     buttons=items;overlay.replaceChildren();if(description){const text=document.createElement('p');text.className='world-device-transcript';text.textContent=description;overlay.append(text);}
-    for(const item of items){const el=document.createElement(item.href?'a':'button');if(item.href){el.href=item.href;el.target='_blank';el.rel='noopener';}else el.type='button';el.className='world-device-hit';el.setAttribute('aria-label',item.label);el.textContent=item.label;el.dataset.terminalAction=item.action||item.label;if(item.project)el.dataset.projectId=item.project;
+    for(const item of items){const el=document.createElement(item.href?'a':'button');if(item.href){el.href=item.href;el.target='_blank';el.rel='noopener';}else el.type='button';el.className='world-device-hit';el.setAttribute('aria-label',item.label);if(item.title)el.title=item.title;el.textContent=item.label;el.dataset.terminalAction=item.action||item.label;if(item.project)el.dataset.projectId=item.project;
       Object.assign(el.style,{left:item.rect[0]*100+'%',top:item.rect[1]*100+'%',width:item.rect[2]*100+'%',height:item.rect[3]*100+'%'});
       el.addEventListener('pointerenter',()=>onEffect?.('click'));el.addEventListener('click',event=>{if(!item.href)event.preventDefault();onEffect?.('bloop');item.run?.();});overlay.append(el);}
   }
@@ -86,10 +111,10 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
   const localizedHref=href=>{const url=new URL(href,document.baseURI);if(url.origin===location.origin&&/\/story\/comic\//.test(url.pathname))url.searchParams.set('lang',lang());return url.href;};
   // The physical screen stays intact; a text view makes the same profile readable on a phone.
   const profileReaderCopy={
-    zh:{read:'阅读简介',close:'返回小店屏幕',name:'朱佳科'},
-    en:{read:'Read profile',close:'Back to the screen',name:'Jiake Zhu'},
-    fr:{read:'Lire le profil',close:'Retour à l’écran',name:'Jiake Zhu'},
-    es:{read:'Leer perfil',close:'Volver a la pantalla',name:'Jiake Zhu'}
+    zh:{read:'阅读简介',close:'返回小店屏幕',name:'朱佳科',socials:'联系方式与公众号',wechat:'公众号 · 小朱还在想',email:'邮件'},
+    en:{read:'Read profile',close:'Back to the screen',name:'Jiake Zhu',socials:'Contact and writing',wechat:'WeChat essays',email:'Email'},
+    fr:{read:'Lire le profil',close:'Retour à l’écran',name:'Jiake Zhu',socials:'Contact et écrits',wechat:'Essais WeChat',email:'E-mail'},
+    es:{read:'Leer perfil',close:'Volver a la pantalla',name:'Jiake Zhu',socials:'Contacto y escritura',wechat:'Ensayos WeChat',email:'Correo'}
   };
   const profileOpen=document.createElement('button');profileOpen.type='button';profileOpen.className='world-profile-open';profileOpen.hidden=true;
   profileOpen.setAttribute('aria-haspopup','dialog');profileOpen.setAttribute('aria-controls','world-profile-reader');document.body.append(profileOpen);
@@ -100,7 +125,13 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
   const profileTitle=document.createElement('h2');profileTitle.id='world-profile-title';
   const profileBody=document.createElement('div');profileBody.className='world-profile-body';
   const profileComic=document.createElement('a');profileComic.className='world-profile-comic';
-  profileReader.append(profileHeader,profileTabs,profileTitle,profileBody,profileComic);document.body.append(profileReader);
+  const profileSocials=document.createElement('nav');profileSocials.className='world-profile-socials';
+  const profileSocialItems=socialLinks.map((href,i)=>{
+    const el=document.createElement(href?'a':'button');
+    if(href){el.href=href;el.target='_blank';el.rel='noopener';}else{el.type='button';el.addEventListener('click',()=>{profileReader.close();onRead?.('wechat');});}
+    profileSocials.append(el);return el;
+  });
+  profileReader.append(profileHeader,profileTabs,profileTitle,profileBody,profileComic,profileSocials);document.body.append(profileReader);
   const readableTabs=['about','skills','experience'].map(id=>{
     const button=document.createElement('button');button.type='button';button.addEventListener('click',()=>{onEffect?.('bloop');about(id);});profileTabs.append(button);return {id,button};
   });
@@ -110,6 +141,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     readableTabs.forEach(({id,button})=>{button.textContent=labels[lang()][id];button.setAttribute('aria-pressed',String(id===tab));});
     profileTitle.textContent=text[0];profileBody.replaceChildren(...text[1].split('\n\n').map(part=>{const p=document.createElement('p');p.textContent=part;return p;}));
     profileComic.hidden=tab!=='experience';profileComic.textContent=labels[lang()].read+' ↗';profileComic.href=localizedHref(comicHref);
+    profileSocials.setAttribute('aria-label',copy.socials);profileSocialItems.forEach((el,i)=>{el.textContent=['X','LinkedIn','GitHub',copy.wechat,copy.email][i];});
   }
   profileOpen.addEventListener('click',()=>{onEffect?.('bloop');profileReader.showModal();});
   profileClose.addEventListener('click',()=>profileReader.close());
@@ -124,8 +156,7 @@ export async function createStoryTerminals({renderer,camera,canvas,objects,mater
     device='growth';page=tab;document.body.dataset.terminal='about-'+tab;display('bigScreen','about-'+tab,()=>aboutCanvas(tab));
     profileOpen.hidden=false;readableProfile(tab);
     const items=[{rect:[.025,.02,.23,.09],label:labels[lang()].back,action:'back',run:()=>onExit?.()},...['about','skills','experience'].map((id,i)=>({rect:[.92,.09+i*.25,.07,.23],label:labels[lang()][id],action:id,run:()=>about(id)}))];
-    const socialLinks=['https://x.com/jkzhusolo','https://www.linkedin.com/in/Jack-zhujiake-career/','https://github.com/jiakezhu',null,'mailto:zjksolo@foxmail.com'];
-    socialLinks.forEach((href,i)=>items.push({rect:[.15+i*.047,.88,.04,.075],label:['X','LinkedIn','GitHub',labels[lang()].essays,'Email'][i],action:'social-'+i,...(href?{href}:{run:()=>onRead?.('wechat')})}));
+    socialLinks.forEach((href,i)=>{const label=['X','LinkedIn','GitHub',labels[lang()].essays,'Email'][i];items.push({rect:socialRect(i),label,title:label,action:'social-'+i,...(href?{href}:{run:()=>onRead?.('wechat')})});});
     if(tab==='experience')items.push({rect:[.13,.78,.69,.085],label:labels[lang()].read,action:'comic',href:localizedHref(comicHref)});setButtons(items,profile[lang()][tab].join(' '));
   }
   function essays() {
