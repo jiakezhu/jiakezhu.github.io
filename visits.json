@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-03T10:41:15.537Z",
+  "updatedAt": "2026-11-03T19:23:35.587Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -16,50 +16,62 @@
     },
     {
       "date": "2026-11-03",
-      "pageViews": 18
+      "pageViews": 31
+    },
+    {
+      "date": "2026-11-04",
+      "pageViews": 3
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-03T10:41:15.537Z",
-    "pageViews": 57,
-    "visits": 29,
+    "until": "2026-11-03T19:23:35.587Z",
+    "pageViews": 73,
+    "visits": 40,
     "pages": [
       {
         "key": "/",
-        "pageViews": 24
+        "pageViews": 35
       },
       {
         "key": "/story/",
-        "pageViews": 24
+        "pageViews": 27
       },
       {
         "key": "/story/comic/",
-        "pageViews": 8
+        "pageViews": 9
       },
       {
         "key": "/journal/posts/lessonfold-workflow/",
+        "pageViews": 1
+      },
+      {
+        "key": "/journal/posts/personal-website-redesign/",
         "pageViews": 1
       }
     ],
     "countries": [
       {
+        "key": "CN",
+        "pageViews": 29
+      },
+      {
         "key": "HK",
         "pageViews": 29
       },
       {
-        "key": "CN",
-        "pageViews": 16
-      },
-      {
         "key": "US",
         "pageViews": 12
+      },
+      {
+        "key": "TW",
+        "pageViews": 3
       }
     ],
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 55
+        "pageViews": 71
       },
       {
         "key": "mobile",
@@ -69,10 +81,14 @@
     "sources": [
       {
         "key": "direct",
-        "visits": 28
+        "visits": 38
       },
       {
         "key": "bing.com",
+        "visits": 1
+      },
+      {
+        "key": "www.google.com",
         "visits": 1
       }
     ]
