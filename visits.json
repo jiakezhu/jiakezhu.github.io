@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-04T01:14:22.121Z",
+  "updatedAt": "2026-11-04T10:43:44.683Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -20,26 +20,26 @@
     },
     {
       "date": "2026-11-04",
-      "pageViews": 3
+      "pageViews": 13
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-04T01:14:22.121Z",
-    "pageViews": 73,
-    "visits": 40,
+    "until": "2026-11-04T10:43:44.683Z",
+    "pageViews": 83,
+    "visits": 44,
     "pages": [
       {
         "key": "/",
-        "pageViews": 35
+        "pageViews": 40
       },
       {
         "key": "/story/",
-        "pageViews": 27
+        "pageViews": 31
       },
       {
         "key": "/story/comic/",
-        "pageViews": 9
+        "pageViews": 10
       },
       {
         "key": "/journal/posts/lessonfold-workflow/",
@@ -52,16 +52,16 @@
     ],
     "countries": [
       {
+        "key": "HK",
+        "pageViews": 36
+      },
+      {
         "key": "CN",
         "pageViews": 29
       },
       {
-        "key": "HK",
-        "pageViews": 29
-      },
-      {
         "key": "US",
-        "pageViews": 12
+        "pageViews": 15
       },
       {
         "key": "TW",
@@ -71,7 +71,7 @@
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 71
+        "pageViews": 81
       },
       {
         "key": "mobile",
@@ -81,14 +81,14 @@
     "sources": [
       {
         "key": "direct",
-        "visits": 38
-      },
-      {
-        "key": "bing.com",
-        "visits": 1
+        "visits": 40
       },
       {
         "key": "www.google.com",
+        "visits": 3
+      },
+      {
+        "key": "bing.com",
         "visits": 1
       }
     ]
