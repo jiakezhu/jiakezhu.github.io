@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-05T10:42:19.427Z",
+  "updatedAt": "2026-11-05T19:49:11.410Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -25,21 +25,25 @@
     {
       "date": "2026-11-05",
       "pageViews": 0
+    },
+    {
+      "date": "2026-11-06",
+      "pageViews": 4
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-05T10:42:19.427Z",
-    "pageViews": 83,
-    "visits": 44,
+    "until": "2026-11-05T19:49:11.410Z",
+    "pageViews": 87,
+    "visits": 46,
     "pages": [
       {
         "key": "/",
-        "pageViews": 40
+        "pageViews": 43
       },
       {
         "key": "/story/",
-        "pageViews": 31
+        "pageViews": 32
       },
       {
         "key": "/story/comic/",
@@ -61,7 +65,7 @@
       },
       {
         "key": "CN",
-        "pageViews": 29
+        "pageViews": 33
       },
       {
         "key": "US",
@@ -75,17 +79,17 @@
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 81
+        "pageViews": 84
       },
       {
         "key": "mobile",
-        "pageViews": 2
+        "pageViews": 3
       }
     ],
     "sources": [
       {
         "key": "direct",
-        "visits": 40
+        "visits": 42
       },
       {
         "key": "www.google.com",
