@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-08T05:50:25.101Z",
+  "updatedAt": "2026-11-08T13:11:49.338Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -36,22 +36,22 @@
     },
     {
       "date": "2026-11-08",
-      "pageViews": 0
+      "pageViews": 2
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-08T05:50:25.101Z",
-    "pageViews": 90,
-    "visits": 49,
+    "until": "2026-11-08T13:11:49.338Z",
+    "pageViews": 92,
+    "visits": 50,
     "pages": [
       {
         "key": "/",
-        "pageViews": 46
+        "pageViews": 47
       },
       {
         "key": "/story/",
-        "pageViews": 32
+        "pageViews": 33
       },
       {
         "key": "/story/comic/",
@@ -68,12 +68,12 @@
     ],
     "countries": [
       {
-        "key": "HK",
+        "key": "CN",
         "pageViews": 37
       },
       {
-        "key": "CN",
-        "pageViews": 35
+        "key": "HK",
+        "pageViews": 37
       },
       {
         "key": "US",
@@ -87,7 +87,7 @@
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 86
+        "pageViews": 88
       },
       {
         "key": "mobile",
@@ -105,6 +105,10 @@
       },
       {
         "key": "bing.com",
+        "visits": 1
+      },
+      {
+        "key": "www.linkedin.com",
         "visits": 1
       }
     ]
