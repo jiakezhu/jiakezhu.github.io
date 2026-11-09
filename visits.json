@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-09T11:18:50.451Z",
+  "updatedAt": "2026-11-09T22:11:57.759Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -41,11 +41,15 @@
     {
       "date": "2026-11-09",
       "pageViews": 0
+    },
+    {
+      "date": "2026-11-10",
+      "pageViews": 0
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-09T11:18:50.451Z",
+    "until": "2026-11-09T22:11:57.759Z",
     "pageViews": 130,
     "visits": 80,
     "pages": [
