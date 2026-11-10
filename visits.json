@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-10T07:05:59.157Z",
+  "updatedAt": "2026-11-10T16:54:58.082Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -44,14 +44,18 @@
     },
     {
       "date": "2026-11-10",
+      "pageViews": 6
+    },
+    {
+      "date": "2026-11-11",
       "pageViews": 0
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-10T07:05:59.157Z",
-    "pageViews": 130,
-    "visits": 80,
+    "until": "2026-11-10T16:54:58.082Z",
+    "pageViews": 0,
+    "visits": 0,
     "pages": [
       {
         "key": "/",
@@ -66,39 +70,8 @@
         "pageViews": 10
       }
     ],
-    "countries": [
-      {
-        "key": "HK",
-        "pageViews": 70
-      },
-      {
-        "key": "US",
-        "pageViews": 30
-      },
-      {
-        "key": "CN",
-        "pageViews": 20
-      },
-      {
-        "key": "TW",
-        "pageViews": 10
-      }
-    ],
-    "devices": [
-      {
-        "key": "desktop",
-        "pageViews": 130
-      }
-    ],
-    "sources": [
-      {
-        "key": "direct",
-        "visits": 70
-      },
-      {
-        "key": "www.google.com",
-        "visits": 10
-      }
-    ]
+    "countries": [],
+    "devices": [],
+    "sources": []
   }
 }
