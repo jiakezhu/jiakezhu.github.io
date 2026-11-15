@@ -26,15 +26,16 @@ test('web derivatives are genuine WebP files with complete, accurate size metada
 
 test('first-screen images including the intro stay below 450 KB at the largest responsive size',()=>{
   const files=new Set();
+  const inline=new Set([...homepage.matchAll(/data:image\/(?:png|webp);base64,([A-Za-z0-9+/=]+)/g)].map(m=>m[1]));
   for(const tag of tags) {
     if(attribute(tag,'data-intro-src')) files.add(attribute(tag,'data-intro-src'));
-    else if(attribute(tag,'src')&&attribute(tag,'loading')!=='lazy') {
+    else if(attribute(tag,'src')?.startsWith('images/')&&attribute(tag,'loading')!=='lazy') {
       const srcset=attribute(tag,'srcset');
       files.add(srcset?srcset.split(',').at(-1).trim().split(/\s+/)[0]:attribute(tag,'src'));
     }
   }
   for(const match of homepage.matchAll(/url\('(images\/web\/[^']+)'\)/g))files.add(match[1]);
-  const bytes=[...files].reduce((total,file)=>total+fs.statSync(path.join(root,file)).size,0);
+  const bytes=[...files].reduce((total,file)=>total+fs.statSync(path.join(root,file)).size,0)+[...inline].reduce((n,data)=>n+Buffer.from(data,'base64').length,0);
   assert(bytes<450*1024,`${bytes} bytes exceeds the first-screen image budget`);
   assert(bytes<manifest.baseline.homepageEagerUniqueBytes*.03,'retain at least a 97% reduction in upfront image bytes');
 });
@@ -71,4 +72,28 @@ test('all desk lighting and pose assets are genuine WebP and together stay under
     bytes+=data.length;
   }
   assert(bytes<400*1024,bytes+' bytes exceeds the complete desk asset budget');
+});
+
+test('the homepage Chinese font subsets retain their format and stay below 600 KB together',()=>{
+  let bytes=0,originalBytes=0;
+  for(const style of ['regular','medium']) {
+    const data=fs.readFileSync(path.join(root,`assets/fonts/jiake-home-${style}.woff2`));
+    assert.equal(data.subarray(0,4).toString(),'wOF2');
+    bytes+=data.length;
+    originalBytes+=fs.statSync(path.join(root,`assets/fonts/jiake-rounded-${style}.woff2`)).size;
+  }
+  assert(bytes<600*1024,`${bytes} bytes exceeds the homepage font budget`);
+  assert(bytes<originalBytes*.3,'retain at least a 70% reduction in Chinese font bytes');
+});
+
+test('intro photos share a small atlas instead of making separate mobile requests',()=>{
+  for(const [mode,budget] of [['mobile',90*1024],['desktop',130*1024]]) {
+    const data=fs.readFileSync(path.join(root,`images/web/intro/${mode}.webp`));
+    assert.equal(data.subarray(0,4).toString(),'RIFF');
+    assert.equal(data.subarray(8,12).toString(),'WEBP');
+    assert(data.length<budget,`${mode} atlas exceeds its ${budget} byte budget`);
+  }
+  const mobile=tags.filter(tag=>attribute(tag,'data-intro-mobile-src'));
+  assert.equal(mobile.length,6);
+  assert.equal(new Set(mobile.map(tag=>attribute(tag,'data-intro-mobile-src'))).size,1);
 });

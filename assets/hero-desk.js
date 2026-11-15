@@ -92,15 +92,21 @@
   const copy=()=>COPY[root.lang]||COPY.en;
   const project=()=>PROJECTS[projectIndex];
   function preload(src){
-    if(!cache.has(src))cache.set(src,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(src);image.onerror=()=>{cache.delete(src);resolve(null);};image.src=src;}));
+    if(!cache.has(src))cache.set(src,window.JIAKE_HOME_MEDIA?window.JIAKE_HOME_MEDIA.load(src).then(value=>{if(!value)cache.delete(src);return value;}):new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(src);image.onerror=()=>{cache.delete(src);resolve(null);};image.src=src;}));
     return cache.get(src);
   }
   async function syncTheme(){
     const own=++themeTicket,theme=root.dataset.theme==='light'?'day':'night';
     if(theme===activeTheme&&cat.getAttribute('src')&&greeting.getAttribute('src')&&props?.dataset.ready)return;
-    const [background,eyes,head,personal]=await Promise.all([preload(base+theme+'.webp'),preload(base+'cat-'+theme+'.webp?v=2'),preload(base+'wave-'+theme+'.webp?v=2'),preload(base+'personal-'+theme+'.webp')]);
+    const backgrounds=preload(base+theme+'.webp');
+    const details=Promise.all([preload(base+'cat-'+theme+'.webp?v=2'),preload(base+'wave-'+theme+'.webp?v=2'),preload(base+'personal-'+theme+'.webp')]);
+    const background=await backgrounds;
     if(own!==themeTicket||!background)return;
-    await rig?.setSources({room:background,cat:eyes,wave:head});
+    // The main illustration appears without waiting for cat, greeting, or prop textures.
+    room.src=background;activeTheme=theme;scene.dataset.theme=theme;
+    const [eyes,head,personal]=await details;
+    if(own!==themeTicket)return;
+    if(eyes&&head)await rig?.setSources({room:background,cat:eyes,wave:head});
     if(own!==themeTicket)return;
     room.src=background;if(props){props.hidden=!personal;if(personal){props.querySelectorAll('img').forEach(img=>img.src=personal);props.dataset.ready='true';}}if(eyes)cat.src=eyes;if(head)greeting.src=head;
     activeTheme=theme;scene.dataset.theme=theme;
@@ -168,7 +174,7 @@
     if(now>nextBlink){blink();nextBlink=now+9000+Math.random()*6000;}
   }
   function wake(){
-    clearInterval(timer);timer=0;const active=visible&&!document.hidden&&!motion.matches&&!wrap.classList.contains('is-real');
+    clearInterval(timer);timer=0;const active=visible&&!document.hidden&&!motion.matches&&!wrap.classList.contains('is-real')&&!root.classList.contains('intro-playing');
     scene.classList.toggle('is-active',active);rig?.setActive(active);if(active)timer=setInterval(tick,70);
   }
   function projectScreen(points){
@@ -180,12 +186,18 @@
   screen.addEventListener('click',nextProject);screen.addEventListener('pointerenter',()=>{hoverScreen=true;});screen.addEventListener('pointerleave',()=>{hoverScreen=false;});screen.addEventListener('focus',()=>{hoverScreen=true;});screen.addEventListener('blur',()=>{hoverScreen=false;});
   const hello=$('.dk-wave-hit');hello.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse')sayHello();});hello.addEventListener('click',sayHello);hello.addEventListener('focus',()=>{if(hello.matches(':focus-visible'))sayHello();});
   $('.dk-cat-hit').addEventListener('click',blink);$('.dk-flower-hit').addEventListener('click',lightFlower);
-  toggle?.addEventListener('click',()=>{
-    if(photo?.dataset.src){photo.srcset=photo.dataset.srcset||'';photo.src=photo.dataset.src;delete photo.dataset.src;}
+  toggle?.addEventListener('click',async()=>{
+    if(!wrap.classList.contains('is-real')&&photo?.dataset.src&&window.JIAKE_HOME_MEDIA){
+      toggle.disabled=true;
+      const loaded=await window.JIAKE_HOME_MEDIA.load(photo.dataset.src);
+      toggle.disabled=false;
+      if(!loaded)return;
+      photo.src=loaded;delete photo.dataset.src;
+    }else if(photo?.dataset.src){photo.srcset=photo.dataset.srcset||'';photo.src=photo.dataset.src;delete photo.dataset.src;}
     const real=wrap.classList.toggle('is-real');toggle.setAttribute('aria-pressed',String(real));photo?.setAttribute('aria-hidden',String(!real));scene.inert=real;setTurned(false);labels();wake();
   });
   new MutationObserver(records=>{if(records.some(record=>record.attributeName==='data-theme'))syncTheme();labels();}).observe(root,{attributes:true,attributeFilter:['lang','data-theme']});
   new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;wake();}).observe(scene);
-  document.addEventListener('visibilitychange',wake);motion.addEventListener('change',()=>{clearTimeout(blinkTimer);scene.classList.remove('is-blinking');rig?.setState({blinking:false,typing:false});if(motion.matches){typed=project().script.length;paintCode();}wake();});
+  document.addEventListener('visibilitychange',wake);document.addEventListener('jiake:introstart',wake);document.addEventListener('jiake:introend',wake);motion.addEventListener('change',()=>{clearTimeout(blinkTimer);scene.classList.remove('is-blinking');rig?.setState({blinking:false,typing:false});if(motion.matches){typed=project().script.length;paintCode();}wake();});
   showProject();syncTheme();wake();
 })();
