@@ -23,7 +23,7 @@
   const slider=dock.querySelector('input'),output=dock.querySelector('output');
   let language=document.documentElement.lang,state='idle',audio,timer,noticeTimer,pending,attempt=0;
   let duration=0,position=0,volume=18,wanted=true,awaitingGesture=false;
-  let introPlaying=Boolean(document.getElementById('site-intro')?.open);
+  let introPlaying=Boolean(document.getElementById('site-intro')?.open),gestureAllowed=false;
   try{
     wanted=localStorage.getItem('jiake-music-enabled')!=='off';
     const value=localStorage.getItem('jiake-music-volume');
@@ -62,6 +62,7 @@
   }
   function resume(event){
     if(!awaitingGesture||!wanted||event.target.closest?.('.music-dock')||['Shift','Control','Alt','Meta','Escape'].includes(event.key))return;
+    if(!event.isTrusted)return;gestureAllowed=true;
     startPlayback(true);
   }
   function fail(automatic=false){clearTimeout(timer);removeGesture();setState('error');if(automatic)showNotice();else {hideNotice();expand(true);}}
@@ -82,7 +83,11 @@
     audio.addEventListener('error',()=>fail(true));audio.src=source;
   }
   function startPlayback(automatic=false){
-    if(!wanted||pending)return;ensureAudio();if(!audio.paused)return;
+    if(!wanted||pending)return;
+    // Mobile autoplay is usually rejected: do not download the track before a tap.
+    if(!automatic)gestureAllowed=true;
+    if(automatic&&matchMedia('(pointer: coarse)').matches&&!gestureAllowed){setState('blocked');waitForGesture();showNotice();return;}
+    ensureAudio();if(!audio.paused)return;
     if(state==='error')audio.load();const token=++attempt;setState('loading');
     clearTimeout(timer);timer=setTimeout(()=>fail(automatic),20000);
     const request=audio.play();pending=request;

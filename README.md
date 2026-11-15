@@ -78,6 +78,8 @@ No install required. Clone and open.
 
 无需安装任何依赖，克隆后直接打开即可。
 
+The homepage serves its existing styles as a generated bundle to reduce mobile requests. After editing a homepage stylesheet, run `node scripts/build-home-css.mjs`; verify it with `node scripts/build-home-css.mjs --check`. Keep `assets/intro.css` separate so the welcome screen can render while the rest of the page downloads. Intro photos share a mobile or desktop atlas: rebuild it with `node scripts/build-intro-atlas.mjs` (requires `sharp`). After adding Chinese copy, rebuild the small homepage font subsets with `python3 scripts/build-home-fonts.py` (requires `fonttools[woff]`) and rebuild the CSS bundle. Full fonts remain available to the other pages; uncommon new characters fall back to the system font until rebuilt.
+
 ```bash
 git clone https://github.com/jiakezhu/jiakezhu.github.io.git
 cd jiakezhu.github.io

@@ -92,10 +92,11 @@
     });
     stage.append(canvas);
     let active=false,ready=false,raf=0,last=0,ticket=0,keyIndex=0;
+    const mobile=matchMedia('(pointer: coarse)');
     const state={typing:false,turned:false,blinking:false,theme:'night',beat:0,beatAt:0};
     const presses=[-Infinity,-Infinity,-Infinity,-Infinity], sequence=[0,1,2,1,0,3,2,1];
     function resize() {
-      const resolution=Math.min(1024,Math.max(512,Math.ceil(scene.clientWidth*Math.min(devicePixelRatio||1,1.5))));
+      const resolution=mobile.matches?512:Math.min(1024,Math.max(512,Math.ceil(scene.clientWidth*Math.min(devicePixelRatio||1,1.5))));
       if(canvas.width!==resolution){canvas.width=resolution;canvas.height=resolution;gl.viewport(0,0,resolution,resolution);}
     }
     function render(now) {
@@ -112,7 +113,7 @@
     }
     function frame(now) {
       raf=0;if(!active||!ready)return;
-      if(now-last>=32){last=now;render(now);}
+      if(now-last>=(mobile.matches?50:32)){last=now;render(now);}
       raf=requestAnimationFrame(frame);
     }
     function start() {if(active&&ready&&!raf)raf=requestAnimationFrame(frame);}

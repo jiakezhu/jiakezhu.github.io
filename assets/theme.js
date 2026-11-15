@@ -9,10 +9,14 @@
     stylesheet.addEventListener('load',() => {const script=document.createElement('script');script.src=new URL('cute-cursor.js?v=3',assets).href;document.head.append(script);},{once:true});
     document.head.append(stylesheet);
   }
-  loadCursor();desktop.addEventListener('change',loadCursor);
-  // Site-wide Spider-Verse extras: the web-slinger buddy, cobwebs, misprints and easter eggs.
-  const verseStyle=document.createElement('link');verseStyle.rel='stylesheet';verseStyle.href=new URL('verse.css?v=3',assets).href;document.head.append(verseStyle);
-  const verseScript=document.createElement('script');verseScript.src=new URL('verse.js?v=5',assets).href;document.head.append(verseScript);
+  function loadExtras() {
+    loadCursor();desktop.addEventListener('change',loadCursor);
+    // Decorations must not compete with the intro collage on a cold mobile visit.
+    const verseStyle=document.createElement('link');verseStyle.rel='stylesheet';verseStyle.href=new URL('verse.css?v=3',assets).href;document.head.append(verseStyle);
+    const verseScript=document.createElement('script');verseScript.src=new URL('verse.js?v=5',assets).href;document.head.append(verseScript);
+  }
+  if(window.JIAKE_HOME_BOOT) window.JIAKE_HOME_BOOT.afterIntro(loadExtras);
+  else loadExtras();
   try { document.documentElement.dataset.theme = localStorage.getItem('jiake-theme') === 'light' ? 'light' : 'dark'; } catch { document.documentElement.dataset.theme = 'dark'; }
   document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');

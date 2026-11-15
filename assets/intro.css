@@ -1,10 +1,14 @@
 /* Real moments gather, burst outward, then fly clear to reveal the homepage. */
+@font-face { font-family:'Nunito'; font-style:normal; font-weight:200 1000; font-display:swap; src:url('fonts/nunito-variable.woff2') format('woff2'); }
 .site-intro {
   position:fixed; inset:0; width:100vw; max-width:none; height:100dvh; max-height:none;
   margin:0; padding:0; border:0; background:transparent; color:#f3f0e9; overflow:hidden;
   font-family:var(--sans);
 }
 .site-intro[open] { display:grid; place-items:center; }
+.site-intro:not(.is-ready) *,.site-intro:not(.is-ready) *::before,.site-intro:not(.is-ready) *::after { animation:none!important; }
+.site-intro:not(.is-ready) :is(.intro-collage,.intro-credo,.intro-hellos,.intro-orbit,.intro-shockwave,.intro-progress) { visibility:hidden; }
+.intro-fragment:not([data-image-ready="true"]) { visibility:hidden; }
 .site-intro::backdrop { background:transparent; }
 html.intro-playing { overflow:hidden; }
 .intro-backdrop { position:absolute; inset:0; display:grid; place-items:center; background:#151719; }
@@ -15,7 +19,7 @@ html.intro-playing { overflow:hidden; }
 .intro-orbit::after { content:""; position:absolute; top:50%; left:-3px; width:5px; height:5px; border-radius:50%; background:#d7ed8b; box-shadow:0 0 20px #d7ed8b40; }
 /* Decorative greetings fill the viewport while the name remains in front. */
 .intro-hellos { position:absolute; z-index:1; inset:-8% -18%; display:grid; grid-template-rows:repeat(14,minmax(0,1fr)); overflow:hidden; transform:rotate(-8deg); pointer-events:none; animation:introHelloFade .45s 1.5s both; mask-image:radial-gradient(ellipse at 50% 49%,#0004 9%,#000 45%); }
-.intro-hello-row { display:flex; align-items:center; gap:clamp(26px,3.5vw,70px); width:max-content; white-space:nowrap; font:750 clamp(1.65rem,3.1vw,3.2rem)/1.1 var(--sans); letter-spacing:-.03em; color:#f3f0e950; animation:introHelloDrift 2s linear both; }
+.intro-hello-row { display:flex; align-items:center; gap:clamp(26px,3.5vw,70px); width:max-content; white-space:nowrap; font:750 clamp(1.65rem,3.1vw,3.2rem)/1.1 'Nunito',system-ui,sans-serif; letter-spacing:-.03em; color:#f3f0e950; animation:introHelloDrift 2s linear both; }
 .intro-hello-row:nth-child(even) { margin-left:-5vw; --hello-shift:28px; }
 .intro-hello-row:nth-child(odd) { --hello-shift:-28px; }
 .intro-hello-row:nth-child(3n) { font-size:clamp(1.5rem,2.8vw,2.9rem); }
@@ -76,6 +80,8 @@ html.intro-playing { overflow:hidden; }
 .intro-fragment--alliance { --x:95cqw; --y:9cqh; --w:min(66px,5.7cqw); --r:12deg; --z:9; --delay:.07s; }
 .intro-fragment--feishu { --x:47cqw; --y:90cqh; --w:min(65px,5.7cqw); --r:-9deg; --z:9; --delay:.09s; }
 .intro-fragment--travel { --x:54cqw; --y:4cqh; --w:min(62px,5.4cqw); --r:10deg; --z:9; --delay:.095s; }
+.intro-sprite { position:relative; display:block; width:100%; overflow:hidden; aspect-ratio:var(--intro-ratio,1.5); contain:paint; }
+.intro-fragment .intro-sprite img { position:absolute; left:calc(var(--intro-col) * -100%); top:calc(var(--intro-row) * -100%); width:400%; max-width:none; height:200%; aspect-ratio:auto; object-fit:fill; }
 .intro-credo { position:absolute; z-index:20; pointer-events:none; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; text-align:center; }
 .intro-manifesto { min-width:0; width:100%; }
 .intro-manifesto p { margin:0; font:800 clamp(4.8rem,7.7vw,7.4rem)/1.02 var(--sans); letter-spacing:-.055em; }

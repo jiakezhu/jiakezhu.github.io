@@ -72,3 +72,27 @@ test('all desk lighting and pose assets are genuine WebP and together stay under
   }
   assert(bytes<400*1024,bytes+' bytes exceeds the complete desk asset budget');
 });
+
+test('the homepage Chinese font subsets retain their format and stay below 600 KB together',()=>{
+  let bytes=0,originalBytes=0;
+  for(const style of ['regular','medium']) {
+    const data=fs.readFileSync(path.join(root,`assets/fonts/jiake-home-${style}.woff2`));
+    assert.equal(data.subarray(0,4).toString(),'wOF2');
+    bytes+=data.length;
+    originalBytes+=fs.statSync(path.join(root,`assets/fonts/jiake-rounded-${style}.woff2`)).size;
+  }
+  assert(bytes<600*1024,`${bytes} bytes exceeds the homepage font budget`);
+  assert(bytes<originalBytes*.3,'retain at least a 70% reduction in Chinese font bytes');
+});
+
+test('intro photos share a small atlas instead of making separate mobile requests',()=>{
+  for(const [mode,budget] of [['mobile',90*1024],['desktop',130*1024]]) {
+    const data=fs.readFileSync(path.join(root,`images/web/intro/${mode}.webp`));
+    assert.equal(data.subarray(0,4).toString(),'RIFF');
+    assert.equal(data.subarray(8,12).toString(),'WEBP');
+    assert(data.length<budget,`${mode} atlas exceeds its ${budget} byte budget`);
+  }
+  const mobile=tags.filter(tag=>attribute(tag,'data-intro-mobile-src'));
+  assert.equal(mobile.length,6);
+  assert.equal(new Set(mobile.map(tag=>attribute(tag,'data-intro-mobile-src'))).size,1);
+});

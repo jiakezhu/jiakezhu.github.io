@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root { --sans:'Nunito',system-ui,sans-serif; --ease:cubic-bezier(.2,.7,.2,1); }
     html.intro-pending { overflow:hidden; background:#151719; }
     html.intro-pending::before { content:""; position:fixed; inset:0; z-index:2147483646; background:#151719; }
     html.intro-pending::after { content:"Jiake ZHU."; position:fixed; inset:0; z-index:2147483646; display:grid; place-items:center; color:#f3f0e9; font:800 clamp(3rem,8vw,7rem)/1 system-ui,sans-serif; letter-spacing:-.055em; }
@@ -21,10 +22,19 @@
       try { seen=sessionStorage.getItem('jiake-intro-seen-v9')==='1'; } catch {}
       const introPending=!seen&&!location.hash&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&typeof HTMLDialogElement!=='undefined'&&'showModal' in HTMLDialogElement.prototype;
       let timer;
+      const enhancements=[];
+      const schedule=callback => {
+        if ('requestIdleCallback' in window) requestIdleCallback(callback,{timeout:1000});
+        else setTimeout(callback,0);
+      };
       const boot=window.JIAKE_HOME_BOOT={language,introPending,releaseIntro(){
         clearTimeout(timer);
         boot.introPending=false;
         root.classList.remove('intro-pending');
+        if(!root.classList.contains('intro-playing')) enhancements.splice(0).forEach(schedule);
+      },afterIntro(callback){
+        if(boot.introPending||root.classList.contains('intro-playing')) enhancements.push(callback);
+        else schedule(callback);
       }};
       if(introPending) {
         root.classList.add('intro-pending');
@@ -32,6 +42,13 @@
         timer=setTimeout(boot.releaseIntro,5000);
       }
     })();
+  </script>
+  <script>
+    if(window.JIAKE_HOME_BOOT.introPending) {
+      const collage=document.createElement('link');collage.rel='preload';collage.as='image';collage.fetchPriority='high';
+      collage.href=matchMedia('(max-width: 700px)').matches?'images/web/intro/mobile.webp':'images/web/intro/desktop.webp';
+      document.head.append(collage);
+    }
   </script>
   <template id="__bundler_thumbnail" data-bg-color="#151719">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -48,6 +65,7 @@
   <meta name="description" content="个人主页：AI 作品、跨文化经历与公开日志。Jiake Zhu — AI builder, multilingual explorer.">
   <link rel="alternate" type="application/rss+xml" title="Jiake Zhu · 日志" href="journal/feed.xml">
   <link rel="preload" href="assets/fonts/nunito-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/intro.js?v=13" as="script">
   <style>
     :root {
       --bg: #121110;
@@ -699,14 +717,12 @@
       .jp-tag { padding: 5px 11px; font-size: 0.75rem; }
     }
   </style>
-  <link rel="stylesheet" href="assets/vendor/leaflet.css"/>
-  <script src="assets/theme.js?v=10"></script>
-  <link rel="stylesheet" href="assets/refinement.css?v=5">
-  <link rel="stylesheet" href="assets/journal.css">
-  <link rel="stylesheet" href="assets/intro.css?v=9">
-  <link rel="stylesheet" href="assets/story.css?v=3"><link rel="stylesheet" href="assets/book-transition.css?v=6"><link rel="stylesheet" href="assets/home-v3.css?v=23"><link rel="stylesheet" href="assets/journey.css?v=12"><link rel="stylesheet" href="assets/story-entrance.css?v=1">
+  <script src="assets/theme.js?v=11"></script>
+  <link rel="stylesheet" href="assets/intro.css?v=10">
+  <link id="home-styles" rel="stylesheet" href="assets/home.css?v=1" media="print" onload="this.media='all'">
+  <script>if(!window.JIAKE_HOME_BOOT.introPending) document.getElementById('home-styles').media='all';</script>
+  <noscript><link rel="stylesheet" href="assets/home.css?v=1"></noscript>
   <link rel="preload" as="image" href="images/web/desk/night.webp" fetchpriority="high">
-  <link rel="stylesheet" href="assets/music.css?v=7"><link rel="stylesheet" href="assets/hero-desk.css?v=8"><link rel="stylesheet" href="assets/home-classic.css?v=7">
 </head>
 <body class="portfolio-page">
 <a class="skip-link" href="#about">Skip to content · 跳到正文</a>
@@ -737,20 +753,20 @@
       </div>
     </div>
     <div class="intro-collage" aria-hidden="true">
-        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><img alt="" data-intro-src="images/web/be48c97a5125-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><img alt="" data-intro-src="images/web/cd8312dc7864-400.webp" width="400" height="225" decoding="async" loading="eager"><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><img alt="" data-intro-src="images/web/a11f415b67d3-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><img alt="" data-intro-src="images/web/66c4a64eea45-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>LIFE / ON THE COURT</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><img alt="" data-intro-src="images/web/2f7469959f73-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><img alt="" data-intro-src="images/web/8bd883eb83b8-400.webp" width="400" height="338" decoding="async" loading="eager"><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--amsterdam intro-fragment--photo"><span class="intro-sprite" style="--intro-col:0;--intro-row:0"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>AMSTERDAM / ON THE ROAD</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--sales intro-fragment--screen"><span class="intro-sprite" style="--intro-col:1;--intro-row:0;--intro-ratio:1.77777778"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>SALES BUDDY / BUILDING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--norway intro-fragment--photo"><span class="intro-sprite" style="--intro-col:2;--intro-row:0"><img alt="" data-intro-src="images/web/intro/desktop.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>NORWAY / A LITTLE WONDER</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--basketball intro-fragment--photo"><span class="intro-sprite" style="--intro-col:3;--intro-row:0"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>LIFE / ON THE COURT</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--swiss intro-fragment--photo"><span class="intro-sprite" style="--intro-col:0;--intro-row:1"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>SWITZERLAND / KEEP EXPLORING</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--rome intro-fragment--photo"><span class="intro-sprite" style="--intro-col:1;--intro-row:1;--intro-ratio:.75"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>ROME / A MOMENT OUTSIDE</figcaption></figure>
         <figure class="intro-fragment intro-fragment--paris intro-fragment--badge"><img alt="" data-intro-src="images/web/e787c9d9f92e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--swufe intro-fragment--badge"><img alt="" data-intro-src="images/web/f7cdd3926a9e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--zjsu intro-fragment--badge"><img alt="" data-intro-src="images/web/2cfe86fe3b56-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--tencent intro-fragment--wordmark"><img alt="" data-intro-src="images/web/4bd9c7b576d1-160.webp" width="160" height="48" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--lingo intro-fragment--app"><img alt="" data-intro-src="images/web/ae9c3e3303cb-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--orbit intro-fragment--app"><img alt="" data-intro-src="images/web/8646e4f7ea6c-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
-        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><img alt="" data-intro-src="images/web/95f482e7a80e-400.webp" width="400" height="533" decoding="async" loading="eager"><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
-        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><img alt="" data-intro-src="images/web/4a99a3dd6722-400.webp" width="400" height="300" decoding="async" loading="eager"><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--prague intro-fragment--photo"><span class="intro-sprite" style="--intro-col:2;--intro-row:1;--intro-ratio:.75"><img alt="" data-intro-src="images/web/intro/desktop.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>PRAGUE / CITY WALKS</figcaption></figure>
+        <figure class="intro-fragment intro-fragment--budapest intro-fragment--photo"><span class="intro-sprite" style="--intro-col:3;--intro-row:1"><img alt="" data-intro-src="images/web/intro/desktop.webp" data-intro-mobile-src="images/web/intro/mobile.webp" width="1280" height="640" decoding="async" loading="eager"></span><figcaption>BUDAPEST / AFTER DARK</figcaption></figure>
         <figure class="intro-fragment intro-fragment--bytedance intro-fragment--badge"><img alt="" data-intro-src="images/web/61246f8f85b6-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--alliance intro-fragment--badge"><img alt="" data-intro-src="images/web/f2c33593ae7e-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
         <figure class="intro-fragment intro-fragment--feishu intro-fragment--app"><img alt="" data-intro-src="images/web/4a98ccad9a72-160.webp" width="160" height="160" decoding="async" loading="eager"></figure>
@@ -764,7 +780,7 @@
   <div class="intro-progress" aria-hidden="true"><i></i></div>
   <div class="intro-bottom"><p><span class="il en show">A little of my world.</span><span class="il fr">Un peu de mon univers.</span><span class="il es">Un poco de mi mundo.</span><span class="il zh">欢迎来到，我的世界。</span></p><button class="intro-skip" type="button"><span class="il en show">Skip intro ↗</span><span class="il fr">Passer ↗</span><span class="il es">Saltar ↗</span><span class="il zh">跳过开场 ↗</span></button></div>
 </dialog>
-<script src="assets/intro.js?v=12"></script>
+<script src="assets/intro.js?v=13"></script>
 
 <!-- NAV -->
 <nav id="nav">
@@ -1706,19 +1722,12 @@
 
 </script>
 <script src="assets/navigation.js?v=4"></script>
-<script src="assets/sunflower-envelope.js" defer></script>
-<script src="assets/verse-figure.js?v=5" defer></script>
-<script src="assets/verse-city.js?v=2" defer></script>
-<script src="assets/hero-scene.js?v=9" defer></script>
-<script src="assets/hero-desk-motion.js?v=2" defer></script>
-<script src="assets/hero-desk.js?v=8" defer></script>
+<script src="assets/home-startup.js?v=1" defer></script>
 <script src="assets/interactions.js?v=4"></script>
 <script src="assets/home-personality.js?v=10"></script>
 <script src="assets/home-language-layout.js?v=6"></script>
-<script src="assets/vendor/leaflet.js"></script>
-<script src="assets/journey.js?v=19"></script>
 <script src="assets/home-motion.js?v=3"></script>
 <script src="assets/book-transition.js?v=9"></script>
-<script src="assets/music.js?v=12" data-audio-src="assets/audio/sunflower.mp3"></script>
+<script src="assets/music.js?v=13" data-audio-src="assets/audio/sunflower.mp3"></script>
 <script defer data-site-analytics src="assets/analytics.js?v=1"></script></body>
 </html>

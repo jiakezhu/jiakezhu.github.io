@@ -168,7 +168,7 @@
     if(now>nextBlink){blink();nextBlink=now+9000+Math.random()*6000;}
   }
   function wake(){
-    clearInterval(timer);timer=0;const active=visible&&!document.hidden&&!motion.matches&&!wrap.classList.contains('is-real');
+    clearInterval(timer);timer=0;const active=visible&&!document.hidden&&!motion.matches&&!wrap.classList.contains('is-real')&&!root.classList.contains('intro-playing');
     scene.classList.toggle('is-active',active);rig?.setActive(active);if(active)timer=setInterval(tick,70);
   }
   function projectScreen(points){
@@ -186,6 +186,6 @@
   });
   new MutationObserver(records=>{if(records.some(record=>record.attributeName==='data-theme'))syncTheme();labels();}).observe(root,{attributes:true,attributeFilter:['lang','data-theme']});
   new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;wake();}).observe(scene);
-  document.addEventListener('visibilitychange',wake);motion.addEventListener('change',()=>{clearTimeout(blinkTimer);scene.classList.remove('is-blinking');rig?.setState({blinking:false,typing:false});if(motion.matches){typed=project().script.length;paintCode();}wake();});
+  document.addEventListener('visibilitychange',wake);document.addEventListener('jiake:introstart',wake);document.addEventListener('jiake:introend',wake);motion.addEventListener('change',()=>{clearTimeout(blinkTimer);scene.classList.remove('is-blinking');rig?.setState({blinking:false,typing:false});if(motion.matches){typed=project().script.length;paintCode();}wake();});
   showProject();syncTheme();wake();
 })();

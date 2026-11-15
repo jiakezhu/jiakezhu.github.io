@@ -46,7 +46,7 @@
 
   function measure() {
     const r = hero.getBoundingClientRect();
-    width = r.width; height = r.height; dpr = Math.min(devicePixelRatio || 1, 2); pageTop = r.top + scrollY;
+    width = r.width; height = r.height; dpr = Math.min(devicePixelRatio || 1, finePointer.matches ? 2 : 1); pageTop = r.top + scrollY;
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     // On stacked mobile layouts the hero is taller than the screen; keep the scene in the first view.
@@ -404,13 +404,13 @@
   let animation = 0, visible = true, lastPaint = 0;
   function frame(now) {
     animation = 0;
-    if (!visible || document.hidden || motion.matches) return;
-    if (now - lastPaint >= 30) { lastPaint = now; paint(now); }
+    if (!visible || document.hidden || motion.matches || root.classList.contains('intro-playing')) return;
+    if (now - lastPaint >= (finePointer.matches ? 30 : 50)) { lastPaint = now; paint(now); }
     animation = requestAnimationFrame(frame);
   }
   function restart() {
     cancelAnimationFrame(animation); animation = 0; lastNow = 0;
-    if (visible && !document.hidden && !motion.matches) animation = requestAnimationFrame(frame);
+    if (visible && !document.hidden && !motion.matches && !root.classList.contains('intro-playing')) animation = requestAnimationFrame(frame);
     else { ctx.clearRect(0, 0, width, height); cta?.classList.remove('verse-tug'); }
   }
   function reset() { measure(); build(); queue = []; seg = null; last = null; blend = null; planAt = Math.ceil(beats); }
@@ -418,7 +418,7 @@
   new ResizeObserver(() => { reset(); restart(); }).observe(hero);
   new IntersectionObserver(entries => { visible = entries[0].isIntersecting; restart(); }).observe(hero);
   new MutationObserver(() => { build(); }).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
-  document.addEventListener('visibilitychange', restart); motion.addEventListener('change', restart);
+  document.addEventListener('visibilitychange', restart);document.addEventListener('jiake:introstart',restart);document.addEventListener('jiake:introend',restart); motion.addEventListener('change', restart);
   reset(); restart();
   // Late-night visitors get the moon; it counts as finding that easter egg.
   if (moon) setTimeout(() => document.dispatchEvent(new CustomEvent('verse:egg', { detail: { id: 'moon' } })), 1500);
