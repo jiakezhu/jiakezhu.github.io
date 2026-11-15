@@ -1,11 +1,9 @@
 import fs from 'node:fs';
-import vm from 'node:vm';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 const require = createRequire(import.meta.url);
 const sharp = require('sharp');
-const { createCanvas } = require('@napi-rs/canvas');
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = file => fs.readFileSync(path.join(root,file),'utf8');
 const manifest = JSON.parse(read('assets/web-images.json'));
@@ -39,25 +37,7 @@ for (const src of Object.keys(fallbacks)) {
   fallbacks[src] = dest;
 }
 
-const document = { documentElement:{dataset:{}}, createElement:()=>createCanvas(1,1) };
-const context = vm.createContext({window:{},document,Math});
-vm.runInContext(read('assets/verse-city.js'),context);
-const City = context.window.VerseCity;
 const styles = [];
-for(const theme of ['dark','light']) {
-  document.documentElement.dataset.theme=theme;
-  const width=640,height=960,sky=height,unit=.7,pal=City.palette();
-  const canvas=createCanvas(width,height),g=canvas.getContext('2d');
-  City.haze(g,pal,0,0,width,height);
-  const sun=City.sun(170,pal,1,false);
-  g.drawImage(sun.canvas,width*.73-sun.size/2,height*.44-sun.size/2,sun.size,sun.size);
-  for(let index=0;index<3;index++) {
-    const layer=City.strip({index,width,tileH:height,ground:height,sky,unit,dpr:1,pal});
-    g.drawImage(layer.body,0,0);g.globalAlpha=pal.glass?.9:.4+index*.15;g.drawImage(layer.lights,0,0);g.globalAlpha=1;
-  }
-  const poster=await sharp(canvas.toBuffer('image/png')).resize(384).flatten({background:theme==='dark'?'#151719':'#f2f1eb'}).webp({quality:58,effort:6}).toBuffer();
-  styles.push(`--home-sky-${theme}:url("data:image/webp;base64,${poster.toString('base64')}")`);
-}
 for(const theme of ['day','night']) {
   const preview=await sharp(path.join(root,`images/web/desk/${theme}.webp`)).resize(192).webp({quality:45,effort:6}).toBuffer();
   styles.push(`--home-desk-${theme}:url("data:image/webp;base64,${preview.toString('base64')}")`);
@@ -81,4 +61,4 @@ html=html.replace(/<img\b[^>]*>/g,tag=>{
   return result;
 });
 fs.writeFileSync(path.join(root,'index.html'),html);
-console.log(`Inlined ${inline.size} original logos; prepared ${Object.keys(fallbacks).length} image fallbacks and static scene previews.`);
+console.log(`Inlined ${inline.size} original logos; prepared ${Object.keys(fallbacks).length} image fallbacks and desk previews.`);

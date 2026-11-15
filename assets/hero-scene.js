@@ -69,7 +69,8 @@
   }
   function build() {
     palette = City.palette({ moon });
-    layers = [0, 1, 2].map(index => City.strip({ index, width, tileH: Math.ceil(height), ground, sky, unit, dpr, pal: palette }));
+    // Touch screens keep a separate, once-painted skyline; no unused full-height strips.
+    layers = finePointer.matches ? [0, 1, 2].map(index => City.strip({ index, width, tileH: Math.ceil(height), ground, sky, unit, dpr, pal: palette })) : [];
     sun = City.sun(Math.min(width, sky) * .2, palette, dpr, moon);
     const rand = mulberry(11);
     stars = Array.from({ length: Math.round(width / 26) }, () => ({ x: rand() * width, y: top + rand() * sky * .5, r: .5 + rand() * 1.1, phase: rand() * TAU }));
@@ -420,6 +421,7 @@
   new IntersectionObserver(entries => { visible = entries[0].isIntersecting; restart(); }).observe(hero);
   new MutationObserver(() => { build(); }).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
   document.addEventListener('visibilitychange', restart);document.addEventListener('jiake:introstart',restart);document.addEventListener('jiake:introend',restart); motion.addEventListener('change', restart);
+  finePointer.addEventListener('change', () => { reset(); restart(); });
   reset(); restart();
   // Late-night visitors get the moon; it counts as finding that easter egg.
   if (moon) setTimeout(() => document.dispatchEvent(new CustomEvent('verse:egg', { detail: { id: 'moon' } })), 1500);
