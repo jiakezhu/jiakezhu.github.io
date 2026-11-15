@@ -2,9 +2,11 @@
 @font-face { font-family:'Jiake Rounded Home'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/jiake-home-regular.woff2') format('woff2'); unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FF00-FFEF; }
 @font-face { font-family:'Jiake Rounded Home'; font-style:normal; font-weight:500 800; font-display:swap; src:url('fonts/jiake-home-medium.woff2') format('woff2'); unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FF00-FFEF; }
 body.portfolio-page { --sans:'Nunito','Jiake Rounded Home','PingFang SC','Noto Sans SC','Microsoft YaHei',system-ui,sans-serif; }
-#hero { background-image:var(--home-sky-dark),linear-gradient(160deg,#151719 15%,#302b45 58%,#673f31); background-repeat:no-repeat; background-position:center; background-size:100% 100%; }
-:root[data-theme="light"] #hero { background-image:var(--home-sky-light),linear-gradient(160deg,#f2f1eb 15%,#dce8f4 58%,#f8d4ac); }
+#hero { background-image:radial-gradient(ellipse at 90% 45%,rgba(184,111,76,.12),transparent 58%),radial-gradient(ellipse at 5% 60%,rgba(91,89,146,.1),transparent 60%); background-repeat:no-repeat; }
+:root[data-theme="light"] #hero { background-image:radial-gradient(ellipse at 90% 45%,rgba(247,193,138,.18),transparent 58%),radial-gradient(ellipse at 5% 60%,rgba(155,192,226,.16),transparent 60%); }
 @media (hover:hover) and (pointer:fine) { #hero.hero-scene-ready { background-image:none; } }
+.hero-skyline { position:absolute; left:0; top:0; z-index:-1; width:100%; pointer-events:none; opacity:.85; -webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 70%,transparent); mask-image:linear-gradient(180deg,transparent,#000 20%,#000 70%,transparent); }
+.hero-skyline[hidden] { display:none; }
 .desk-scene { background-image:var(--home-desk-night); background-size:cover; background-position:center; }
 :root[data-theme="light"] .desk-scene { background-image:var(--home-desk-day); }
 @media (hover:none) and (pointer:coarse) { body.portfolio-page::after { display:none; } }
