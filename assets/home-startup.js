@@ -15,8 +15,9 @@
   afterIntro(() => {
     // async=false preserves dependency order while the downloads run in parallel.
     Promise.all([
+      'hero-desk-motion.js?v=3', 'hero-desk.js?v=10',
       'sunflower-envelope.js', 'verse-figure.js?v=5', 'verse-city.js?v=2',
-      'hero-scene.js?v=10', 'hero-desk-motion.js?v=3', 'hero-desk.js?v=9'
+      'hero-scene.js?v=11'
     ].map(loadScript)).catch(error => console.warn(error.message));
   });
 

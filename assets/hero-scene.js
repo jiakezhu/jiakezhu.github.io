@@ -395,7 +395,8 @@
     look += (targetLook - look) * Math.min(1, dt * 8);
 
     ctx.clearRect(0, 0, width, height);
-    paintBackdrop(time);
+    if (finePointer.matches) paintBackdrop(time);
+    hero.classList.add('hero-scene-ready');
     paintWebs(current, beats);
     paintFigure(current, beats, dt);
     paintPetals(time, dt);
@@ -411,7 +412,7 @@
   function restart() {
     cancelAnimationFrame(animation); animation = 0; lastNow = 0;
     if (visible && !document.hidden && !motion.matches && !root.classList.contains('intro-playing')) animation = requestAnimationFrame(frame);
-    else { ctx.clearRect(0, 0, width, height); cta?.classList.remove('verse-tug'); }
+    else { hero.classList.remove('hero-scene-ready');ctx.clearRect(0, 0, width, height); cta?.classList.remove('verse-tug'); }
   }
   function reset() { measure(); build(); queue = []; seg = null; last = null; blend = null; planAt = Math.ceil(beats); }
 

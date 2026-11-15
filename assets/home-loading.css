@@ -2,4 +2,9 @@
 @font-face { font-family:'Jiake Rounded Home'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/jiake-home-regular.woff2') format('woff2'); unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FF00-FFEF; }
 @font-face { font-family:'Jiake Rounded Home'; font-style:normal; font-weight:500 800; font-display:swap; src:url('fonts/jiake-home-medium.woff2') format('woff2'); unicode-range:U+2E80-9FFF,U+F900-FAFF,U+FF00-FFEF; }
 body.portfolio-page { --sans:'Nunito','Jiake Rounded Home','PingFang SC','Noto Sans SC','Microsoft YaHei',system-ui,sans-serif; }
+#hero { background-image:var(--home-sky-dark),linear-gradient(160deg,#151719 15%,#302b45 58%,#673f31); background-repeat:no-repeat; background-position:center; background-size:100% 100%; }
+:root[data-theme="light"] #hero { background-image:var(--home-sky-light),linear-gradient(160deg,#f2f1eb 15%,#dce8f4 58%,#f8d4ac); }
+@media (hover:hover) and (pointer:fine) { #hero.hero-scene-ready { background-image:none; } }
+.desk-scene { background-image:var(--home-desk-night); background-size:cover; background-position:center; }
+:root[data-theme="light"] .desk-scene { background-image:var(--home-desk-day); }
 @media (hover:none) and (pointer:coarse) { body.portfolio-page::after { display:none; } }

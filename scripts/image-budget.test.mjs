@@ -26,15 +26,16 @@ test('web derivatives are genuine WebP files with complete, accurate size metada
 
 test('first-screen images including the intro stay below 450 KB at the largest responsive size',()=>{
   const files=new Set();
+  const inline=new Set([...homepage.matchAll(/data:image\/(?:png|webp);base64,([A-Za-z0-9+/=]+)/g)].map(m=>m[1]));
   for(const tag of tags) {
     if(attribute(tag,'data-intro-src')) files.add(attribute(tag,'data-intro-src'));
-    else if(attribute(tag,'src')&&attribute(tag,'loading')!=='lazy') {
+    else if(attribute(tag,'src')?.startsWith('images/')&&attribute(tag,'loading')!=='lazy') {
       const srcset=attribute(tag,'srcset');
       files.add(srcset?srcset.split(',').at(-1).trim().split(/\s+/)[0]:attribute(tag,'src'));
     }
   }
   for(const match of homepage.matchAll(/url\('(images\/web\/[^']+)'\)/g))files.add(match[1]);
-  const bytes=[...files].reduce((total,file)=>total+fs.statSync(path.join(root,file)).size,0);
+  const bytes=[...files].reduce((total,file)=>total+fs.statSync(path.join(root,file)).size,0)+[...inline].reduce((n,data)=>n+Buffer.from(data,'base64').length,0);
   assert(bytes<450*1024,`${bytes} bytes exceeds the first-screen image budget`);
   assert(bytes<manifest.baseline.homepageEagerUniqueBytes*.03,'retain at least a 97% reduction in upfront image bytes');
 });
