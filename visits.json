@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-19T02:26:04.072Z",
+  "updatedAt": "2026-11-19T11:26:33.198Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -80,79 +80,67 @@
     },
     {
       "date": "2026-11-19",
-      "pageViews": 0
+      "pageViews": 2
     }
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-19T02:26:04.072Z",
-    "pageViews": 170,
-    "visits": 70,
+    "until": "2026-11-19T11:26:33.198Z",
+    "pageViews": 140,
+    "visits": 90,
     "pages": [
       {
-        "key": "/story/",
+        "key": "/",
         "pageViews": 80
       },
       {
-        "key": "/",
+        "key": "/story/",
         "pageViews": 50
       },
       {
         "key": "/story/comic/",
-        "pageViews": 20
-      },
-      {
-        "key": "/journal/posts/personal-website-redesign/",
-        "pageViews": 10
-      },
-      {
-        "key": "/sales-buddy-deck/",
         "pageViews": 10
       }
     ],
     "countries": [
       {
         "key": "HK",
-        "pageViews": 60
-      },
-      {
-        "key": "CN",
-        "pageViews": 50
-      },
-      {
-        "key": "JP",
-        "pageViews": 20
+        "pageViews": 70
       },
       {
         "key": "US",
+        "pageViews": 30
+      },
+      {
+        "key": "CN",
         "pageViews": 20
       },
       {
-        "key": "TW",
+        "key": "JP",
         "pageViews": 10
       },
       {
-        "key": "other",
+        "key": "TW",
         "pageViews": 10
       }
     ],
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 150
-      },
-      {
-        "key": "mobile",
-        "pageViews": 20
+        "pageViews": 140
       }
     ],
     "sources": [
       {
         "key": "direct",
-        "visits": 60
+        "visits": 70
       },
       {
         "key": "github.com",
+        "visits": 10
+      },
+      {
+        "key": "www.google.com",
         "visits": 10
       }
     ]
