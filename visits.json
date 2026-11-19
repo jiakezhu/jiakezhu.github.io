@@ -4,7 +4,7 @@
   "hostname": "jiakezhu.github.io",
   "startDate": "2026-11-01",
   "timeZone": "Asia/Shanghai",
-  "updatedAt": "2026-11-18T20:21:24.453Z",
+  "updatedAt": "2026-11-19T02:26:04.072Z",
   "daily": [
     {
       "date": "2026-11-01",
@@ -85,62 +85,74 @@
   ],
   "detail": {
     "since": "2026-10-31T16:00:00.000Z",
-    "until": "2026-11-18T20:21:24.453Z",
-    "pageViews": 140,
-    "visits": 90,
+    "until": "2026-11-19T02:26:04.072Z",
+    "pageViews": 170,
+    "visits": 70,
     "pages": [
       {
-        "key": "/",
+        "key": "/story/",
         "pageViews": 80
       },
       {
-        "key": "/story/",
+        "key": "/",
         "pageViews": 50
       },
       {
         "key": "/story/comic/",
+        "pageViews": 20
+      },
+      {
+        "key": "/journal/posts/personal-website-redesign/",
+        "pageViews": 10
+      },
+      {
+        "key": "/sales-buddy-deck/",
         "pageViews": 10
       }
     ],
     "countries": [
       {
         "key": "HK",
-        "pageViews": 70
-      },
-      {
-        "key": "US",
-        "pageViews": 30
+        "pageViews": 60
       },
       {
         "key": "CN",
-        "pageViews": 20
+        "pageViews": 50
       },
       {
         "key": "JP",
-        "pageViews": 10
+        "pageViews": 20
+      },
+      {
+        "key": "US",
+        "pageViews": 20
       },
       {
         "key": "TW",
+        "pageViews": 10
+      },
+      {
+        "key": "other",
         "pageViews": 10
       }
     ],
     "devices": [
       {
         "key": "desktop",
-        "pageViews": 140
+        "pageViews": 150
+      },
+      {
+        "key": "mobile",
+        "pageViews": 20
       }
     ],
     "sources": [
       {
         "key": "direct",
-        "visits": 70
+        "visits": 60
       },
       {
         "key": "github.com",
-        "visits": 10
-      },
-      {
-        "key": "www.google.com",
         "visits": 10
       }
     ]
